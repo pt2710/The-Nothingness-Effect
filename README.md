@@ -15,19 +15,34 @@ This repository contains the representative codebase for The Nothingness Effect 
 
 The repository tracks source code, tests, framework notes, static figures, and compact reproducible result files. Local caches, IDE state, agent state, secrets, backup archives, frame dumps, videos, animations, and other large generated artifacts are excluded through `.gitignore`.
 
+The root ZIP archives (`equations.zip`, `fields_of_physics_in_dev.zip`, and `tne_concepts.zip`) are intentionally ignored because they duplicate files that are already tracked in their corresponding directories.
+
 Large generated artifacts can be regenerated from the simulation scripts. If future work requires versioning videos, large archives, or datasets over normal GitHub limits, use Git LFS or an external artifact store.
+
+## Environment
+
+The current repository baseline is documented against Python 3.14.3. The `.python-version` file records that local interpreter version for pyenv-compatible tooling.
+
+Install the project dependencies with:
+
+```bash
+python -m pip install -r requirements-dev.txt
+```
+
+Interactive/OpenGL observation simulations have additional GUI dependencies:
+
+```bash
+python -m pip install -r requirements-interactive.txt
+```
+
+On Windows with Python 3.14, `pygame` may require either a compatible published wheel or a local C/C++ build toolchain.
 
 ## Validation
 
 Tests are organized mostly as `test_*.py` files under each model directory. From the repository root, run:
 
-```powershell
-$env:MPLBACKEND = "Agg"
+```bash
 python -m pytest
 ```
 
-```bash
-MPLBACKEND=Agg python -m pytest
-```
-
-Some simulations may require scientific Python packages such as NumPy, pandas, matplotlib, SciPy, Plotly, and tqdm. Feather export tests require `pyarrow`; the experimental gravitational-curvature test path requires `numba`.
+The repository-level `conftest.py` sets Matplotlib to the headless `Agg` backend during pytest runs, which avoids GUI/Tk dependencies in figure-generating tests.

@@ -1,0 +1,7 @@
+-r requirements.txt
+
+# Optional interactive/OpenGL observation simulations.
+# On Windows, pygame may require a Python version with a published wheel
+# or a local C/C++ build toolchain.
+pygame>=2.5
+PyOpenGL>=3.1

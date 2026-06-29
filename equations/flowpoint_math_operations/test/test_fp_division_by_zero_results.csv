@@ -1,0 +1,2 @@
+Operation,Input1,Input2,Result,Expected
+division_by_zero,10,0,Error,Error

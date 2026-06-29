@@ -1,0 +1,1 @@
+from ..entanglement.particle_model import FPParticleModel

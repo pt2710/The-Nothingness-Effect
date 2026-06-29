@@ -1,0 +1,76 @@
+# Python runtime/cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments and local package state
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+*.egg-info/
+
+# Local editor, OS, and agent state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.agents/
+.codex/
+
+# Local config, credentials, and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+credentials.json
+token.json
+secrets/
+secrets.*
+
+# Build and temporary outputs
+build/
+dist/
+site/
+*.log
+*.tmp
+*.temp
+*.bak
+~$*
+
+# Heavy generated archives/backups
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Generated animations, videos, and frame dumps
+*.gif
+*.mp4
+**/frames*/
+**/frame_*.png
+**/*_frame_*.png
+
+# Generated interactive visualization exports
+**/simulation/*.html
+**/simulation.html
+**/*_plot.html
+
+# Regenerable binary data tables
+*.feather

@@ -1,0 +1,1 @@
+from .duality import duality_equation

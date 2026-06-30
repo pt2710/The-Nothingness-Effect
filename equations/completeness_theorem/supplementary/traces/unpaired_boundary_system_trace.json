@@ -1,0 +1,299 @@
+{
+  "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+  "final_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "context",
+        "g",
+        "finite boundary relation"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "unpaired_boundary_system",
+    "nodes": {
+      "context": {
+        "dual_id": "context_dual",
+        "id": "context",
+        "label": "Finite context node",
+        "metadata": {},
+        "status": "closed"
+      },
+      "context_dual": {
+        "dual_id": "context",
+        "id": "context_dual",
+        "label": "Represented context dual",
+        "metadata": {},
+        "status": "closed"
+      },
+      "g": {
+        "dual_id": "not_g",
+        "id": "g",
+        "label": "Boundary-like unpaired statement",
+        "metadata": {
+          "boundary_like": true,
+          "failure_modes": [
+            "missing_dual",
+            "unpaired_boundary"
+          ],
+          "interpretation": "boundary classification remains distinct from proof"
+        },
+        "status": "paradox_boundary"
+      }
+    },
+    "rules": []
+  },
+  "final_status": "incomplete_finite_dual_representation",
+  "fixed_point_type": "stable_incomplete_fixed_point",
+  "initial_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "context",
+        "g",
+        "finite boundary relation"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "unpaired_boundary_system",
+    "nodes": {
+      "context": {
+        "dual_id": "context_dual",
+        "id": "context",
+        "label": "Finite context node",
+        "metadata": {},
+        "status": "provable"
+      },
+      "context_dual": {
+        "dual_id": "context",
+        "id": "context_dual",
+        "label": "Represented context dual",
+        "metadata": {},
+        "status": "dual_complement"
+      },
+      "g": {
+        "dual_id": "not_g",
+        "id": "g",
+        "label": "Boundary-like unpaired statement",
+        "metadata": {
+          "boundary_like": true,
+          "interpretation": "boundary classification remains distinct from proof"
+        },
+        "status": "unprovable_within_system"
+      }
+    },
+    "rules": []
+  },
+  "metrics": [
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 1,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 0,
+      "system_name": "unpaired_boundary_system",
+      "unresolved_count": 1,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 1,
+      "changed_count": 3,
+      "changed_nodes": [
+        "context",
+        "context_dual",
+        "g"
+      ],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual",
+        "unpaired_boundary"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 1,
+      "system_name": "unpaired_boundary_system",
+      "unresolved_count": 2,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 1,
+      "changed_count": 2,
+      "changed_nodes": [
+        "context",
+        "context_dual"
+      ],
+      "closed_count": 2,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual",
+        "unpaired_boundary"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 2,
+      "system_name": "unpaired_boundary_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 1,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 2,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual",
+        "unpaired_boundary"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 3,
+      "system_name": "unpaired_boundary_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 66.67
+    }
+  ],
+  "steps": [
+    {
+      "changed_nodes": [
+        "context",
+        "context_dual",
+        "g"
+      ],
+      "metrics": {
+        "boundary_count": 1,
+        "changed_count": 3,
+        "changed_nodes": [
+          "context",
+          "context_dual",
+          "g"
+        ],
+        "closed_count": 0,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual",
+          "unpaired_boundary"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 1,
+        "system_name": "unpaired_boundary_system",
+        "unresolved_count": 2,
+        "verified_dual_percent": 66.67
+      },
+      "step": 1,
+      "updates": [
+        {
+          "after": "unprovable_within_system",
+          "before": "unprovable_within_system",
+          "node_id": "g",
+          "reason": "flagged missing_dual in finite toy closure trace"
+        },
+        {
+          "after": "unprovable_within_system",
+          "before": "unprovable_within_system",
+          "node_id": "g",
+          "reason": "flagged unpaired_boundary in finite toy closure trace"
+        },
+        {
+          "after": "paradox_boundary",
+          "before": "unprovable_within_system",
+          "node_id": "g",
+          "reason": "unpaired boundary-like node remains a boundary classification"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "provable",
+          "node_id": "context",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "dual_complement",
+          "node_id": "context_dual",
+          "reason": "represented dual counterpart is present"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [
+        "context",
+        "context_dual"
+      ],
+      "metrics": {
+        "boundary_count": 1,
+        "changed_count": 2,
+        "changed_nodes": [
+          "context",
+          "context_dual"
+        ],
+        "closed_count": 2,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual",
+          "unpaired_boundary"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 2,
+        "system_name": "unpaired_boundary_system",
+        "unresolved_count": 0,
+        "verified_dual_percent": 66.67
+      },
+      "step": 2,
+      "updates": [
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "context",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "context_dual",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [],
+      "metrics": {
+        "boundary_count": 1,
+        "changed_count": 0,
+        "changed_nodes": [],
+        "closed_count": 2,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual",
+          "unpaired_boundary"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 3,
+        "system_name": "unpaired_boundary_system",
+        "unresolved_count": 0,
+        "verified_dual_percent": 66.67
+      },
+      "step": 3,
+      "updates": []
+    }
+  ],
+  "system_name": "unpaired_boundary_system"
+}

@@ -1,0 +1,2 @@
+system_name,fixed_point_type,final_status,step_count,closed_count,unresolved_count,boundary_count,contradiction_count,verified_dual_percent,scope_note
+godel_boundary,stable_incomplete_fixed_point,incomplete_finite_dual_representation,3,4,1,1,0,66.67,finite illustrative model; computational support artifact; not a formal proof substitute

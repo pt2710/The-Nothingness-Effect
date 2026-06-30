@@ -1,0 +1,291 @@
+{
+  "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+  "final_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "not_p",
+        "dual"
+      ],
+      [
+        "q",
+        "not_q",
+        "missing dual"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "missing_dual_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Represented dual of p",
+        "metadata": {},
+        "status": "closed"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Statement p",
+        "metadata": {},
+        "status": "closed"
+      },
+      "q": {
+        "dual_id": "not_q",
+        "id": "q",
+        "label": "Statement q lacking represented dual",
+        "metadata": {
+          "failure_modes": [
+            "missing_dual"
+          ]
+        },
+        "status": "unresolved"
+      }
+    },
+    "rules": []
+  },
+  "final_status": "incomplete_finite_dual_representation",
+  "fixed_point_type": "stable_incomplete_fixed_point",
+  "initial_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "not_p",
+        "dual"
+      ],
+      [
+        "q",
+        "not_q",
+        "missing dual"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "missing_dual_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Represented dual of p",
+        "metadata": {},
+        "status": "open"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Statement p",
+        "metadata": {},
+        "status": "open"
+      },
+      "q": {
+        "dual_id": "not_q",
+        "id": "q",
+        "label": "Statement q lacking represented dual",
+        "metadata": {},
+        "status": "open"
+      }
+    },
+    "rules": []
+  },
+  "metrics": [
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 0,
+      "system_name": "missing_dual_system",
+      "unresolved_count": 3,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 3,
+      "changed_nodes": [
+        "not_p",
+        "p",
+        "q"
+      ],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 1,
+      "system_name": "missing_dual_system",
+      "unresolved_count": 3,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 2,
+      "changed_nodes": [
+        "not_p",
+        "p"
+      ],
+      "closed_count": 2,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 2,
+      "system_name": "missing_dual_system",
+      "unresolved_count": 1,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 2,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 3,
+      "system_name": "missing_dual_system",
+      "unresolved_count": 1,
+      "verified_dual_percent": 66.67
+    }
+  ],
+  "steps": [
+    {
+      "changed_nodes": [
+        "not_p",
+        "p",
+        "q"
+      ],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 3,
+        "changed_nodes": [
+          "not_p",
+          "p",
+          "q"
+        ],
+        "closed_count": 0,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 1,
+        "system_name": "missing_dual_system",
+        "unresolved_count": 3,
+        "verified_dual_percent": 66.67
+      },
+      "step": 1,
+      "updates": [
+        {
+          "after": "open",
+          "before": "open",
+          "node_id": "q",
+          "reason": "flagged missing_dual in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "open",
+          "node_id": "q",
+          "reason": "missing represented dual counterpart prevents closure"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "open",
+          "node_id": "not_p",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "open",
+          "node_id": "p",
+          "reason": "represented dual counterpart is present"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [
+        "not_p",
+        "p"
+      ],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 2,
+        "changed_nodes": [
+          "not_p",
+          "p"
+        ],
+        "closed_count": 2,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 2,
+        "system_name": "missing_dual_system",
+        "unresolved_count": 1,
+        "verified_dual_percent": 66.67
+      },
+      "step": 2,
+      "updates": [
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "not_p",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "p",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 0,
+        "changed_nodes": [],
+        "closed_count": 2,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 3,
+        "system_name": "missing_dual_system",
+        "unresolved_count": 1,
+        "verified_dual_percent": 66.67
+      },
+      "step": 3,
+      "updates": []
+    }
+  ],
+  "system_name": "missing_dual_system"
+}

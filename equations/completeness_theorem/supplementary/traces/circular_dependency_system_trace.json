@@ -1,0 +1,363 @@
+{
+  "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+  "final_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "q",
+        "requires closed"
+      ],
+      [
+        "q",
+        "p",
+        "requires closed"
+      ],
+      [
+        "not_p",
+        "not_q",
+        "requires closed"
+      ],
+      [
+        "not_q",
+        "not_p",
+        "requires closed"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "circular_dependency_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Represented dual of p requiring not_q closure",
+        "metadata": {
+          "failure_modes": [
+            "circular_dependency",
+            "unresolved_dependency"
+          ],
+          "requires_closed": [
+            "not_q"
+          ]
+        },
+        "status": "unresolved"
+      },
+      "not_q": {
+        "dual_id": "q",
+        "id": "not_q",
+        "label": "Represented dual of q requiring not_p closure",
+        "metadata": {
+          "failure_modes": [
+            "circular_dependency",
+            "unresolved_dependency"
+          ],
+          "requires_closed": [
+            "not_p"
+          ]
+        },
+        "status": "unresolved"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Statement p requiring q closure",
+        "metadata": {
+          "failure_modes": [
+            "circular_dependency",
+            "unresolved_dependency"
+          ],
+          "requires_closed": [
+            "q"
+          ]
+        },
+        "status": "unresolved"
+      },
+      "q": {
+        "dual_id": "not_q",
+        "id": "q",
+        "label": "Statement q requiring p closure",
+        "metadata": {
+          "failure_modes": [
+            "circular_dependency",
+            "unresolved_dependency"
+          ],
+          "requires_closed": [
+            "p"
+          ]
+        },
+        "status": "unresolved"
+      }
+    },
+    "rules": []
+  },
+  "final_status": "circular_dependency_flagged",
+  "fixed_point_type": "stable_incomplete_fixed_point",
+  "initial_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "q",
+        "requires closed"
+      ],
+      [
+        "q",
+        "p",
+        "requires closed"
+      ],
+      [
+        "not_p",
+        "not_q",
+        "requires closed"
+      ],
+      [
+        "not_q",
+        "not_p",
+        "requires closed"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "circular_dependency_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Represented dual of p requiring not_q closure",
+        "metadata": {
+          "requires_closed": [
+            "not_q"
+          ]
+        },
+        "status": "open"
+      },
+      "not_q": {
+        "dual_id": "q",
+        "id": "not_q",
+        "label": "Represented dual of q requiring not_p closure",
+        "metadata": {
+          "requires_closed": [
+            "not_p"
+          ]
+        },
+        "status": "open"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Statement p requiring q closure",
+        "metadata": {
+          "requires_closed": [
+            "q"
+          ]
+        },
+        "status": "open"
+      },
+      "q": {
+        "dual_id": "not_q",
+        "id": "q",
+        "label": "Statement q requiring p closure",
+        "metadata": {
+          "requires_closed": [
+            "p"
+          ]
+        },
+        "status": "open"
+      }
+    },
+    "rules": []
+  },
+  "metrics": [
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 0,
+      "system_name": "circular_dependency_system",
+      "unresolved_count": 4,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 4,
+      "changed_nodes": [
+        "not_p",
+        "not_q",
+        "p",
+        "q"
+      ],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "circular_dependency",
+        "unresolved_dependency"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 1,
+      "system_name": "circular_dependency_system",
+      "unresolved_count": 4,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "circular_dependency",
+        "unresolved_dependency"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 2,
+      "system_name": "circular_dependency_system",
+      "unresolved_count": 4,
+      "verified_dual_percent": 100.0
+    }
+  ],
+  "steps": [
+    {
+      "changed_nodes": [
+        "not_p",
+        "not_q",
+        "p",
+        "q"
+      ],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 4,
+        "changed_nodes": [
+          "not_p",
+          "not_q",
+          "p",
+          "q"
+        ],
+        "closed_count": 0,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "circular_dependency",
+          "unresolved_dependency"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 1,
+        "system_name": "circular_dependency_system",
+        "unresolved_count": 4,
+        "verified_dual_percent": 100.0
+      },
+      "step": 1,
+      "updates": [
+        {
+          "after": "open",
+          "before": "open",
+          "node_id": "p",
+          "reason": "flagged circular_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "open",
+          "node_id": "p",
+          "reason": "circular closure dependency prevents stable closed classification"
+        },
+        {
+          "after": "open",
+          "before": "open",
+          "node_id": "not_p",
+          "reason": "flagged circular_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "open",
+          "node_id": "not_p",
+          "reason": "circular closure dependency prevents stable closed classification"
+        },
+        {
+          "after": "open",
+          "before": "open",
+          "node_id": "q",
+          "reason": "flagged circular_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "open",
+          "node_id": "q",
+          "reason": "circular closure dependency prevents stable closed classification"
+        },
+        {
+          "after": "open",
+          "before": "open",
+          "node_id": "not_q",
+          "reason": "flagged circular_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "open",
+          "node_id": "not_q",
+          "reason": "circular closure dependency prevents stable closed classification"
+        },
+        {
+          "after": "unresolved",
+          "before": "unresolved",
+          "node_id": "not_p",
+          "reason": "flagged unresolved_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "unresolved",
+          "node_id": "p",
+          "reason": "flagged unresolved_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "unresolved",
+          "node_id": "not_q",
+          "reason": "flagged unresolved_dependency in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "unresolved",
+          "node_id": "q",
+          "reason": "flagged unresolved_dependency in finite toy closure trace"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 0,
+        "changed_nodes": [],
+        "closed_count": 0,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "circular_dependency",
+          "unresolved_dependency"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 2,
+        "system_name": "circular_dependency_system",
+        "unresolved_count": 4,
+        "verified_dual_percent": 100.0
+      },
+      "step": 2,
+      "updates": []
+    }
+  ],
+  "system_name": "circular_dependency_system"
+}

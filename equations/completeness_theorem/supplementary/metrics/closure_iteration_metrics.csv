@@ -1,0 +1,5 @@
+system_name,step,changed_count,changed_nodes,closed_count,unresolved_count,boundary_count,contradiction_count,provable_count,formally_proved_count,verified_dual_percent,failure_modes,scope_note
+godel_boundary,0,0,,0,2,1,0,1,0,66.67,,finite illustrative model; computational support artifact; not a formal proof substitute
+godel_boundary,1,6,axiom_base|axiom_base_dual|godel_like_statement|open_context|paradox_boundary_marker|represented_dual_statement,0,5,1,0,0,0,66.67,missing_dual|unpaired_boundary,finite illustrative model; computational support artifact; not a formal proof substitute
+godel_boundary,2,4,axiom_base|axiom_base_dual|godel_like_statement|represented_dual_statement,4,1,1,0,0,0,66.67,missing_dual|unpaired_boundary,finite illustrative model; computational support artifact; not a formal proof substitute
+godel_boundary,3,0,,4,1,1,0,0,0,66.67,missing_dual|unpaired_boundary,finite illustrative model; computational support artifact; not a formal proof substitute

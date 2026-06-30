@@ -1,0 +1,221 @@
+{
+  "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+  "final_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "not_p",
+        "contradiction boundary"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "contradiction_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Provable anti-statement in naive closure",
+        "metadata": {
+          "contradicts": [
+            "p"
+          ],
+          "failure_modes": [
+            "contradiction"
+          ]
+        },
+        "status": "contradiction"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Provable statement p in finite toy system",
+        "metadata": {
+          "contradicts": [
+            "not_p"
+          ],
+          "failure_modes": [
+            "contradiction"
+          ]
+        },
+        "status": "contradiction"
+      }
+    },
+    "rules": []
+  },
+  "final_status": "contradiction_or_paradox_boundary_flagged",
+  "fixed_point_type": "stable_incomplete_fixed_point",
+  "initial_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "not_p",
+        "contradiction boundary"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "contradiction_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Provable anti-statement in naive closure",
+        "metadata": {
+          "contradicts": [
+            "p"
+          ]
+        },
+        "status": "provable"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Provable statement p in finite toy system",
+        "metadata": {
+          "contradicts": [
+            "not_p"
+          ]
+        },
+        "status": "provable"
+      }
+    },
+    "rules": []
+  },
+  "metrics": [
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 2,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 0,
+      "system_name": "contradiction_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 2,
+      "changed_nodes": [
+        "not_p",
+        "p"
+      ],
+      "closed_count": 0,
+      "contradiction_count": 2,
+      "failure_modes": [
+        "contradiction"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 1,
+      "system_name": "contradiction_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 2,
+      "failure_modes": [
+        "contradiction"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 2,
+      "system_name": "contradiction_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 100.0
+    }
+  ],
+  "steps": [
+    {
+      "changed_nodes": [
+        "not_p",
+        "p"
+      ],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 2,
+        "changed_nodes": [
+          "not_p",
+          "p"
+        ],
+        "closed_count": 0,
+        "contradiction_count": 2,
+        "failure_modes": [
+          "contradiction"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 1,
+        "system_name": "contradiction_system",
+        "unresolved_count": 0,
+        "verified_dual_percent": 100.0
+      },
+      "step": 1,
+      "updates": [
+        {
+          "after": "provable",
+          "before": "provable",
+          "node_id": "p",
+          "reason": "flagged contradiction in finite toy closure trace"
+        },
+        {
+          "after": "provable",
+          "before": "provable",
+          "node_id": "not_p",
+          "reason": "flagged contradiction in finite toy closure trace"
+        },
+        {
+          "after": "contradiction",
+          "before": "provable",
+          "node_id": "p",
+          "reason": "assertive statement and represented anti-statement conflict"
+        },
+        {
+          "after": "contradiction",
+          "before": "provable",
+          "node_id": "not_p",
+          "reason": "assertive statement and represented anti-statement conflict"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 0,
+        "changed_nodes": [],
+        "closed_count": 0,
+        "contradiction_count": 2,
+        "failure_modes": [
+          "contradiction"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 2,
+        "system_name": "contradiction_system",
+        "unresolved_count": 0,
+        "verified_dual_percent": 100.0
+      },
+      "step": 2,
+      "updates": []
+    }
+  ],
+  "system_name": "contradiction_system"
+}

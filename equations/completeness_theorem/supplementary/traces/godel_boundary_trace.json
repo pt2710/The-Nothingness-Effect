@@ -1,0 +1,426 @@
+{
+  "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+  "final_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "axiom_base",
+        "godel_like_statement",
+        "derivation frontier"
+      ],
+      [
+        "godel_like_statement",
+        "paradox_boundary_marker",
+        "boundary flag"
+      ],
+      [
+        "godel_like_statement",
+        "represented_dual_statement",
+        "represented dual"
+      ],
+      [
+        "open_context",
+        "godel_like_statement",
+        "finite context"
+      ]
+    ],
+    "metadata": {
+      "description": "Finite illustrative dual-closure boundary graph for manuscript computational support artifacts.",
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "godel_boundary",
+    "nodes": {
+      "axiom_base": {
+        "dual_id": "axiom_base_dual",
+        "id": "axiom_base",
+        "label": "Finite toy axiom base",
+        "metadata": {},
+        "status": "closed"
+      },
+      "axiom_base_dual": {
+        "dual_id": "axiom_base",
+        "id": "axiom_base_dual",
+        "label": "Represented dual of axiom base",
+        "metadata": {},
+        "status": "closed"
+      },
+      "godel_like_statement": {
+        "dual_id": "represented_dual_statement",
+        "id": "godel_like_statement",
+        "label": "Boundary-like undecidable statement",
+        "metadata": {
+          "boundary_like": true,
+          "interpretation": "unprovable_within_system is not treated as false"
+        },
+        "status": "closed"
+      },
+      "open_context": {
+        "dual_id": null,
+        "id": "open_context",
+        "label": "Open finite context node",
+        "metadata": {
+          "failure_modes": [
+            "missing_dual"
+          ]
+        },
+        "status": "unresolved"
+      },
+      "paradox_boundary_marker": {
+        "dual_id": null,
+        "id": "paradox_boundary_marker",
+        "label": "Boundary classification marker",
+        "metadata": {
+          "boundary_like": true,
+          "failure_modes": [
+            "missing_dual",
+            "unpaired_boundary"
+          ]
+        },
+        "status": "paradox_boundary"
+      },
+      "represented_dual_statement": {
+        "dual_id": "godel_like_statement",
+        "id": "represented_dual_statement",
+        "label": "Represented dual counterpart",
+        "metadata": {},
+        "status": "closed"
+      }
+    },
+    "rules": []
+  },
+  "final_status": "incomplete_finite_dual_representation",
+  "fixed_point_type": "stable_incomplete_fixed_point",
+  "initial_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "axiom_base",
+        "godel_like_statement",
+        "derivation frontier"
+      ],
+      [
+        "godel_like_statement",
+        "paradox_boundary_marker",
+        "boundary flag"
+      ],
+      [
+        "godel_like_statement",
+        "represented_dual_statement",
+        "represented dual"
+      ],
+      [
+        "open_context",
+        "godel_like_statement",
+        "finite context"
+      ]
+    ],
+    "metadata": {
+      "description": "Finite illustrative dual-closure boundary graph for manuscript computational support artifacts.",
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "godel_boundary",
+    "nodes": {
+      "axiom_base": {
+        "dual_id": "axiom_base_dual",
+        "id": "axiom_base",
+        "label": "Finite toy axiom base",
+        "metadata": {},
+        "status": "provable"
+      },
+      "axiom_base_dual": {
+        "dual_id": "axiom_base",
+        "id": "axiom_base_dual",
+        "label": "Represented dual of axiom base",
+        "metadata": {},
+        "status": "dual_complement"
+      },
+      "godel_like_statement": {
+        "dual_id": "represented_dual_statement",
+        "id": "godel_like_statement",
+        "label": "Boundary-like undecidable statement",
+        "metadata": {
+          "boundary_like": true,
+          "interpretation": "unprovable_within_system is not treated as false"
+        },
+        "status": "unprovable_within_system"
+      },
+      "open_context": {
+        "dual_id": null,
+        "id": "open_context",
+        "label": "Open finite context node",
+        "metadata": {},
+        "status": "open"
+      },
+      "paradox_boundary_marker": {
+        "dual_id": null,
+        "id": "paradox_boundary_marker",
+        "label": "Boundary classification marker",
+        "metadata": {
+          "boundary_like": true
+        },
+        "status": "paradox_boundary"
+      },
+      "represented_dual_statement": {
+        "dual_id": "godel_like_statement",
+        "id": "represented_dual_statement",
+        "label": "Represented dual counterpart",
+        "metadata": {},
+        "status": "dual_complement"
+      }
+    },
+    "rules": []
+  },
+  "metrics": [
+    {
+      "boundary_count": 1,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 1,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 0,
+      "system_name": "godel_boundary",
+      "unresolved_count": 2,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 1,
+      "changed_count": 6,
+      "changed_nodes": [
+        "axiom_base",
+        "axiom_base_dual",
+        "godel_like_statement",
+        "open_context",
+        "paradox_boundary_marker",
+        "represented_dual_statement"
+      ],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual",
+        "unpaired_boundary"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 1,
+      "system_name": "godel_boundary",
+      "unresolved_count": 5,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 1,
+      "changed_count": 4,
+      "changed_nodes": [
+        "axiom_base",
+        "axiom_base_dual",
+        "godel_like_statement",
+        "represented_dual_statement"
+      ],
+      "closed_count": 4,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual",
+        "unpaired_boundary"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 2,
+      "system_name": "godel_boundary",
+      "unresolved_count": 1,
+      "verified_dual_percent": 66.67
+    },
+    {
+      "boundary_count": 1,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 4,
+      "contradiction_count": 0,
+      "failure_modes": [
+        "missing_dual",
+        "unpaired_boundary"
+      ],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 3,
+      "system_name": "godel_boundary",
+      "unresolved_count": 1,
+      "verified_dual_percent": 66.67
+    }
+  ],
+  "steps": [
+    {
+      "changed_nodes": [
+        "axiom_base",
+        "axiom_base_dual",
+        "godel_like_statement",
+        "open_context",
+        "paradox_boundary_marker",
+        "represented_dual_statement"
+      ],
+      "metrics": {
+        "boundary_count": 1,
+        "changed_count": 6,
+        "changed_nodes": [
+          "axiom_base",
+          "axiom_base_dual",
+          "godel_like_statement",
+          "open_context",
+          "paradox_boundary_marker",
+          "represented_dual_statement"
+        ],
+        "closed_count": 0,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual",
+          "unpaired_boundary"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 1,
+        "system_name": "godel_boundary",
+        "unresolved_count": 5,
+        "verified_dual_percent": 66.67
+      },
+      "step": 1,
+      "updates": [
+        {
+          "after": "paradox_boundary",
+          "before": "paradox_boundary",
+          "node_id": "paradox_boundary_marker",
+          "reason": "flagged missing_dual in finite toy closure trace"
+        },
+        {
+          "after": "paradox_boundary",
+          "before": "paradox_boundary",
+          "node_id": "paradox_boundary_marker",
+          "reason": "flagged unpaired_boundary in finite toy closure trace"
+        },
+        {
+          "after": "open",
+          "before": "open",
+          "node_id": "open_context",
+          "reason": "flagged missing_dual in finite toy closure trace"
+        },
+        {
+          "after": "unresolved",
+          "before": "open",
+          "node_id": "open_context",
+          "reason": "missing represented dual counterpart prevents closure"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "provable",
+          "node_id": "axiom_base",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "dual_complement",
+          "node_id": "axiom_base_dual",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "unprovable_within_system",
+          "node_id": "godel_like_statement",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "dual_complement",
+          "node_id": "represented_dual_statement",
+          "reason": "represented dual counterpart is present"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [
+        "axiom_base",
+        "axiom_base_dual",
+        "godel_like_statement",
+        "represented_dual_statement"
+      ],
+      "metrics": {
+        "boundary_count": 1,
+        "changed_count": 4,
+        "changed_nodes": [
+          "axiom_base",
+          "axiom_base_dual",
+          "godel_like_statement",
+          "represented_dual_statement"
+        ],
+        "closed_count": 4,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual",
+          "unpaired_boundary"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 2,
+        "system_name": "godel_boundary",
+        "unresolved_count": 1,
+        "verified_dual_percent": 66.67
+      },
+      "step": 2,
+      "updates": [
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "axiom_base",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "axiom_base_dual",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "godel_like_statement",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "represented_dual_statement",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [],
+      "metrics": {
+        "boundary_count": 1,
+        "changed_count": 0,
+        "changed_nodes": [],
+        "closed_count": 4,
+        "contradiction_count": 0,
+        "failure_modes": [
+          "missing_dual",
+          "unpaired_boundary"
+        ],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 3,
+        "system_name": "godel_boundary",
+        "unresolved_count": 1,
+        "verified_dual_percent": 66.67
+      },
+      "step": 3,
+      "updates": []
+    }
+  ],
+  "system_name": "godel_boundary"
+}

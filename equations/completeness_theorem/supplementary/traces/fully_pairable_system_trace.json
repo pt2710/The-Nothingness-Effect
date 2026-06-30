@@ -1,0 +1,310 @@
+{
+  "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+  "final_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "not_p",
+        "dual"
+      ],
+      [
+        "q",
+        "not_q",
+        "dual"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "fully_pairable_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Represented dual of p",
+        "metadata": {},
+        "status": "closed"
+      },
+      "not_q": {
+        "dual_id": "q",
+        "id": "not_q",
+        "label": "Represented dual of q",
+        "metadata": {},
+        "status": "closed"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Statement p",
+        "metadata": {},
+        "status": "closed"
+      },
+      "q": {
+        "dual_id": "not_q",
+        "id": "q",
+        "label": "Statement q",
+        "metadata": {},
+        "status": "closed"
+      }
+    },
+    "rules": []
+  },
+  "final_status": "closed_finite_dual_representation",
+  "fixed_point_type": "stable_closed_fixed_point",
+  "initial_state": {
+    "claim_boundary": "finite illustrative model; computational support artifact; not a formal proof substitute",
+    "edges": [
+      [
+        "p",
+        "not_p",
+        "dual"
+      ],
+      [
+        "q",
+        "not_q",
+        "dual"
+      ]
+    ],
+    "metadata": {
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute"
+    },
+    "name": "fully_pairable_system",
+    "nodes": {
+      "not_p": {
+        "dual_id": "p",
+        "id": "not_p",
+        "label": "Represented dual of p",
+        "metadata": {},
+        "status": "open"
+      },
+      "not_q": {
+        "dual_id": "q",
+        "id": "not_q",
+        "label": "Represented dual of q",
+        "metadata": {},
+        "status": "open"
+      },
+      "p": {
+        "dual_id": "not_p",
+        "id": "p",
+        "label": "Statement p",
+        "metadata": {},
+        "status": "open"
+      },
+      "q": {
+        "dual_id": "not_q",
+        "id": "q",
+        "label": "Statement q",
+        "metadata": {},
+        "status": "open"
+      }
+    },
+    "rules": []
+  },
+  "metrics": [
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 0,
+      "system_name": "fully_pairable_system",
+      "unresolved_count": 4,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 4,
+      "changed_nodes": [
+        "not_p",
+        "not_q",
+        "p",
+        "q"
+      ],
+      "closed_count": 0,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 1,
+      "system_name": "fully_pairable_system",
+      "unresolved_count": 4,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 4,
+      "changed_nodes": [
+        "not_p",
+        "not_q",
+        "p",
+        "q"
+      ],
+      "closed_count": 4,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 2,
+      "system_name": "fully_pairable_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 100.0
+    },
+    {
+      "boundary_count": 0,
+      "changed_count": 0,
+      "changed_nodes": [],
+      "closed_count": 4,
+      "contradiction_count": 0,
+      "failure_modes": [],
+      "formally_proved_count": 0,
+      "provable_count": 0,
+      "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+      "step": 3,
+      "system_name": "fully_pairable_system",
+      "unresolved_count": 0,
+      "verified_dual_percent": 100.0
+    }
+  ],
+  "steps": [
+    {
+      "changed_nodes": [
+        "not_p",
+        "not_q",
+        "p",
+        "q"
+      ],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 4,
+        "changed_nodes": [
+          "not_p",
+          "not_q",
+          "p",
+          "q"
+        ],
+        "closed_count": 0,
+        "contradiction_count": 0,
+        "failure_modes": [],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 1,
+        "system_name": "fully_pairable_system",
+        "unresolved_count": 4,
+        "verified_dual_percent": 100.0
+      },
+      "step": 1,
+      "updates": [
+        {
+          "after": "closure_candidate",
+          "before": "open",
+          "node_id": "not_p",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "open",
+          "node_id": "p",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "open",
+          "node_id": "not_q",
+          "reason": "represented dual counterpart is present"
+        },
+        {
+          "after": "closure_candidate",
+          "before": "open",
+          "node_id": "q",
+          "reason": "represented dual counterpart is present"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [
+        "not_p",
+        "not_q",
+        "p",
+        "q"
+      ],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 4,
+        "changed_nodes": [
+          "not_p",
+          "not_q",
+          "p",
+          "q"
+        ],
+        "closed_count": 4,
+        "contradiction_count": 0,
+        "failure_modes": [],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 2,
+        "system_name": "fully_pairable_system",
+        "unresolved_count": 0,
+        "verified_dual_percent": 100.0
+      },
+      "step": 2,
+      "updates": [
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "not_p",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "p",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "not_q",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        },
+        {
+          "after": "closed",
+          "before": "closure_candidate",
+          "node_id": "q",
+          "reason": "represented dual pair satisfies finite closure criteria"
+        }
+      ]
+    },
+    {
+      "changed_nodes": [],
+      "metrics": {
+        "boundary_count": 0,
+        "changed_count": 0,
+        "changed_nodes": [],
+        "closed_count": 4,
+        "contradiction_count": 0,
+        "failure_modes": [],
+        "formally_proved_count": 0,
+        "provable_count": 0,
+        "scope_note": "finite illustrative model; computational support artifact; not a formal proof substitute",
+        "step": 3,
+        "system_name": "fully_pairable_system",
+        "unresolved_count": 0,
+        "verified_dual_percent": 100.0
+      },
+      "step": 3,
+      "updates": []
+    }
+  ],
+  "system_name": "fully_pairable_system"
+}

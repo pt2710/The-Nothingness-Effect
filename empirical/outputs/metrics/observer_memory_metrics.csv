@@ -1,0 +1,2 @@
+RMSE,MAE,normalized_RMSE,R2,chi_square,AIC,BIC,residual_mean,residual_std,passed_validation,data_status,baseline_model,model,empirical_dataset,fixture_status
+0.34071780589780903,0.2687447083920366,0.23497779717074072,0.09152457854021567,696.5317395349024,-30.301020789776615,-29.592970588674405,0.05842315201699944,0.3356715039502395,True,fixture_only,none,black_hole_dynamics,observer_memory_fixture,fixture_only

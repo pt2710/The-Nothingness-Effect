@@ -1,0 +1,89 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "registry": {
+    "eht_observables": {
+      "access_method": "offline_fixture",
+      "citation_note": "Replace with published EHT summary observables in a network-enabled run.",
+      "dataset_name": "eht_observables",
+      "expected_file_type": "csv",
+      "last_attempted": "offline_fixture_run4",
+      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "output_paths": [
+        "empirical/fixtures/eht_observable_fixture.csv"
+      ],
+      "preferred_source": "Event Horizon Telescope published observables",
+      "source_url": "https://eventhorizontelescope.org/",
+      "status": "fixture_only"
+    },
+    "galaxy_rotation": {
+      "access_method": "offline_fixture",
+      "citation_note": "Replace with SPARC or equivalent citation in a network-enabled run.",
+      "dataset_name": "galaxy_rotation",
+      "expected_file_type": "csv",
+      "last_attempted": "offline_fixture_run4",
+      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "output_paths": [
+        "empirical/fixtures/galaxy_rotation_fixture.csv"
+      ],
+      "preferred_source": "SPARC-style rotation-curve catalog",
+      "source_url": "http://astroweb.cwru.edu/SPARC/",
+      "status": "fixture_only"
+    },
+    "hawking_analogue_or_limits": {
+      "access_method": "offline_fixture",
+      "citation_note": "Replace with analogue/limit reference in a later run.",
+      "dataset_name": "hawking_analogue_or_limits",
+      "expected_file_type": "csv",
+      "last_attempted": "offline_fixture_run4",
+      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "output_paths": [
+        "empirical/fixtures/hawking_flux_fixture.csv"
+      ],
+      "preferred_source": "Published analogue Hawking or upper-limit literature",
+      "source_url": "https://arxiv.org/",
+      "status": "fixture_only"
+    },
+    "ligo_ringdown": {
+      "access_method": "offline_fixture",
+      "citation_note": "Replace with event-specific ringdown extract in a later run.",
+      "dataset_name": "ligo_ringdown",
+      "expected_file_type": "csv",
+      "last_attempted": "offline_fixture_run4",
+      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "output_paths": [
+        "empirical/fixtures/ligo_ringdown_fixture.csv"
+      ],
+      "preferred_source": "GWOSC ringdown-ready event extract",
+      "source_url": "https://www.gwosc.org/",
+      "status": "fixture_only"
+    },
+    "ligo_waveforms": {
+      "access_method": "offline_fixture",
+      "citation_note": "Replace with GWOSC waveform citation in a network-enabled run.",
+      "dataset_name": "ligo_waveforms",
+      "expected_file_type": "csv",
+      "last_attempted": "offline_fixture_run4",
+      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "output_paths": [
+        "empirical/fixtures/ligo_ringdown_fixture.csv"
+      ],
+      "preferred_source": "GWOSC waveform archive",
+      "source_url": "https://www.gwosc.org/",
+      "status": "fixture_only"
+    },
+    "redshift_clock": {
+      "access_method": "offline_fixture",
+      "citation_note": "Replace with real literature citation in a network-enabled run.",
+      "dataset_name": "redshift_clock",
+      "expected_file_type": "csv",
+      "last_attempted": "offline_fixture_run4",
+      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "output_paths": [
+        "empirical/fixtures/redshift_clock_fixture.csv"
+      ],
+      "preferred_source": "Published redshift/gravitational-clock literature",
+      "source_url": "https://lambda.gsfc.nasa.gov/",
+      "status": "fixture_only"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison": "dubler_redshift",
+  "data_status": "fixture_only",
+  "fitted_parameters": {
+    "K_D": 1.0,
+    "beta": 0.3533613445378151,
+    "score": 0.003285905304331986
+  },
+  "limitations": "Synthetic/curated fixture only; not an empirical validation claim.",
+  "output_paths": {
+    "data": "empirical/outputs/data/dubler_redshift_comparison.csv",
+    "figure": "empirical/outputs/figures/dubler_redshift_comparison.png",
+    "manifest": "empirical/outputs/manifests/dubler_redshift_manifest.json",
+    "metrics": "empirical/outputs/metrics/dubler_redshift_metrics.csv",
+    "report": "empirical/outputs/reports/dubler_redshift_report.md"
+  }
+}

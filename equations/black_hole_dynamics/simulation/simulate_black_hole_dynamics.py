@@ -10,6 +10,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
 from equations.black_hole_dynamics.black_hole_dynamics import BlackHoleParams, simulate_black_hole_dynamics
@@ -26,15 +27,22 @@ def _metadata_path(path: Path) -> str:
 
 
 def _horizon_figure(result):
-    fig, ax = plt.subplots(figsize=(7, 5), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(8.2, 5.2), constrained_layout=True)
     r = result["r"]
     pi_time = result["pi_E_time"]
     horizon = result["horizon_radius"]
-    ax.plot(r, pi_time[0], label="initial pi_E")
-    ax.plot(r, pi_time[len(pi_time) // 2], label="mid pi_E")
-    ax.plot(r, pi_time[-1], label="final pi_E")
-    ax.axvline(horizon[0], color="#e45756", linestyle="--", label="initial horizon proxy")
-    ax.set_title("Section 18: Elastic-pi entropic horizon proxy")
+    threshold = float(np.nanmean(pi_time[:, 0]) * 0.0 + 0.36)
+    colors = ["#4c78a8", "#72b7b2", "#f58518"]
+    labels = ["initial", "mid", "final"]
+    indices = [0, len(pi_time) // 2, len(pi_time) - 1]
+    for color, label, index in zip(colors, labels, indices):
+        ax.plot(r, pi_time[index], color=color, linewidth=2, label=f"{label} pi_E(r)")
+        if np.isfinite(horizon[index]):
+            y_value = np.interp(horizon[index], r, pi_time[index])
+            ax.scatter([horizon[index]], [y_value], color=color, s=35, zorder=4)
+            ax.axvline(horizon[index], color=color, linestyle="--", linewidth=1.1, alpha=0.7)
+    ax.axhline(threshold, color="#b279a2", linestyle=":", linewidth=1.6, label="threshold")
+    ax.set_title("Section 18: Finite illustrative entropic horizon crossing")
     ax.set_xlabel("radial coordinate r")
     ax.set_ylabel("normalized Elastic-pi profile")
     ax.grid(True, alpha=0.25)
@@ -43,38 +51,71 @@ def _horizon_figure(result):
 
 
 def _radiation_figure(result):
-    fig, ax = plt.subplots(figsize=(7, 5), constrained_layout=True)
-    ax.plot(result["time"], result["temperature_proxy"], label="temperature proxy")
-    ax.plot(result["time"], result["flux_proxy"], label="flux proxy")
-    ax.set_title("Section 18: Hawking-like entropic radiation proxy")
-    ax.set_xlabel("normalized time")
-    ax.set_ylabel("finite proxy value")
-    ax.grid(True, alpha=0.25)
-    ax.legend()
+    fig, ax_left = plt.subplots(figsize=(8.2, 5.2), constrained_layout=True)
+    ax_right = ax_left.twinx()
+    line_temp = ax_left.plot(
+        result["time"],
+        result["temperature_proxy"],
+        color="#4c78a8",
+        linewidth=2,
+        label="temperature proxy",
+    )[0]
+    line_flux = ax_right.plot(
+        result["time"],
+        result["flux_proxy"],
+        color="#f58518",
+        linewidth=2,
+        label="flux proxy",
+    )[0]
+    ax_left.set_title("Section 18: Hawking-like entropic radiation proxy")
+    ax_left.set_xlabel("normalized time")
+    ax_left.set_ylabel("temperature proxy", color=line_temp.get_color())
+    ax_right.set_ylabel("flux proxy", color=line_flux.get_color())
+    ax_left.grid(True, alpha=0.25)
+    ax_left.legend([line_temp, line_flux], [line_temp.get_label(), line_flux.get_label()], loc="upper right")
     return fig
 
 
 def _memory_figure(result):
-    fig, ax = plt.subplots(figsize=(7, 5), constrained_layout=True)
-    ax.plot(result["time"], result["observer_distance"], label="observer-to-horizon distance")
-    ax.plot(result["time"], result["memory"], label="memory proxy")
-    ax.set_title("Section 18: Observer horizon and memory trace")
-    ax.set_xlabel("normalized time")
-    ax.set_ylabel("finite proxy value")
-    ax.grid(True, alpha=0.25)
-    ax.legend()
+    fig, ax_left = plt.subplots(figsize=(8.2, 5.2), constrained_layout=True)
+    ax_right = ax_left.twinx()
+    line_distance = ax_left.plot(
+        result["time"],
+        result["observer_distance"],
+        color="#54a24b",
+        linewidth=2,
+        label="observer-to-horizon distance",
+    )[0]
+    line_memory = ax_right.plot(
+        result["time"],
+        result["memory"],
+        color="#e45756",
+        linewidth=2,
+        label="memory proxy",
+    )[0]
+    ax_left.set_title("Section 18: Observer horizon and memory trace")
+    ax_left.set_xlabel("normalized time")
+    ax_left.set_ylabel("observer distance", color=line_distance.get_color())
+    ax_right.set_ylabel("memory proxy", color=line_memory.get_color())
+    ax_left.grid(True, alpha=0.25)
+    ax_left.legend([line_distance, line_memory], [line_distance.get_label(), line_memory.get_label()], loc="upper right")
     return fig
 
 
 def _feasibility_figure(result):
     metrics = result["metrics"]
-    labels = ["grid", "steps", "max T", "max flux", "final memory"]
-    values = [metrics["grid_size"], metrics["steps"], metrics["max_temperature_proxy"], metrics["max_flux_proxy"], metrics["final_memory"]]
-    fig, ax = plt.subplots(figsize=(7, 5), constrained_layout=True)
-    ax.bar(labels, values, color="#4c78a8")
-    ax.set_title("Section 18: Computational feasibility metrics")
-    ax.set_ylabel("metric value")
-    ax.tick_params(axis="x", rotation=20)
+    fig, axes = plt.subplots(1, 2, figsize=(10.2, 4.6), constrained_layout=True)
+    comp_labels = ["grid", "steps"]
+    comp_values = [metrics["grid_size"], metrics["steps"]]
+    proxy_labels = ["max T", "max flux", "final memory"]
+    proxy_values = [metrics["max_temperature_proxy"], metrics["max_flux_proxy"], metrics["final_memory"]]
+    axes[0].bar(comp_labels, comp_values, color="#4c78a8")
+    axes[0].set_title("Computational scale")
+    axes[0].set_ylabel("count")
+    axes[1].bar(proxy_labels, proxy_values, color=["#72b7b2", "#f58518", "#e45756"])
+    axes[1].set_title("Proxy metrics")
+    axes[1].set_ylabel("finite proxy value")
+    fig.suptitle("Section 18: Computational feasibility summary", fontsize=12)
     return fig
 
 

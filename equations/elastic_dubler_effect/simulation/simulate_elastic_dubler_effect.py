@@ -11,6 +11,7 @@ matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.colors import SymLogNorm
 
 from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
 from equations.elastic_dubler_effect.elastic_dubler_effect import compute_dubler_grid
@@ -28,12 +29,17 @@ def _metadata_path(path: Path) -> str:
 
 def create_figure(grid: dict[str, np.ndarray]):
     delta_s = grid["delta_s"]
-    fig, (ax_curve, ax_heat) = plt.subplots(1, 2, figsize=(12, 5), constrained_layout=True)
+    fig = plt.figure(figsize=(13.2, 5.2), constrained_layout=True)
+    subfig = fig.subfigures(1, 2, width_ratios=[1.05, 1.0], wspace=0.04)
+    ax_curve = subfig[0].subplots()
+    heat_axes = subfig[1].subplots(2, 1, height_ratios=[1.0, 0.62])
+    ax_heat, ax_ratio = heat_axes
     for kd, shift in zip(grid["K_D"], grid["dubler_shift"]):
         ax_curve.plot(delta_s, shift, label=f"K_D={kd:g}", linewidth=2)
     ax_curve.axhline(0.0, color="black", linestyle="--", linewidth=0.8)
+    ax_curve.set_yscale("symlog", linthresh=0.25)
     ax_curve.set_title("Figure 31: Dubler shift vs entropy gradient")
-    ax_curve.set_xlabel("Entropy gradient delta S")
+    ax_curve.set_xlabel("Entropy gradient ΔS")
     ax_curve.set_ylabel("Dubler shift f_A/f_B - 1")
     ax_curve.grid(True, alpha=0.25)
     ax_curve.legend()
@@ -43,13 +49,19 @@ def create_figure(grid: dict[str, np.ndarray]):
         origin="lower",
         extent=[float(delta_s.min()), float(delta_s.max()), 0, len(grid["K_D"]) - 1],
         cmap="coolwarm",
+        norm=SymLogNorm(linthresh=0.2, linscale=1.0, vmin=float(np.min(grid["dubler_shift"])), vmax=float(np.max(grid["dubler_shift"]))),
     )
     ax_heat.set_yticks(range(len(grid["K_D"])), [f"{kd:g}" for kd in grid["K_D"]])
     ax_heat.set_title("Finite illustrative shift grid")
-    ax_heat.set_xlabel("Entropy gradient delta S")
+    ax_heat.set_xlabel("Entropy gradient ΔS")
     ax_heat.set_ylabel("K_D")
-    fig.colorbar(image, ax=ax_heat, label="Dubler shift")
-    fig.suptitle(f"Repository-linked computational artifact; {CLAIM_BOUNDARY}", fontsize=9)
+    fig.colorbar(image, ax=ax_heat, label="Dubler shift f_A/f_B - 1")
+    for kd, ratio in zip(grid["K_D"], grid["frequency_ratio"]):
+        ax_ratio.plot(delta_s, np.log10(np.maximum(ratio, 1e-12)), label=f"K_D={kd:g}", linewidth=1.5)
+    ax_ratio.set_title("log10 frequency ratio")
+    ax_ratio.set_xlabel("Entropy gradient ΔS")
+    ax_ratio.set_ylabel("log10(f_A/f_B)")
+    ax_ratio.grid(True, alpha=0.25)
     return fig
 
 

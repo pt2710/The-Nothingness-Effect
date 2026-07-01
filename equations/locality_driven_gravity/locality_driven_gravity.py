@@ -57,11 +57,14 @@ def initialize_spiral_particles(
     radial_scale: float,
 ) -> dict[str, np.ndarray]:
     rng = np.random.default_rng(seed)
-    angles = rng.uniform(0.0, 2.0 * np.pi, n)
+    base_angles = rng.uniform(0.0, 2.0 * np.pi, n)
     radii = radial_scale * np.sqrt(rng.uniform(0.05, 1.0, n))
+    arm_phase = 1.35 * (radii / radial_scale) * 2.0 * np.pi
+    arm_selector = rng.integers(0, 2, n) * np.pi
+    angles = base_angles + arm_phase + arm_selector + rng.normal(0.0, 0.12, n)
     positions = np.column_stack([radii * np.cos(angles), radii * np.sin(angles)])
     tangent = np.column_stack([-np.sin(angles), np.cos(angles)])
-    velocities = 0.08 * tangent + rng.normal(0.0, 0.015, size=(n, 2))
+    velocities = 0.11 * tangent + rng.normal(0.0, 0.01, size=(n, 2))
     return {"positions": positions, "velocities": velocities}
 
 

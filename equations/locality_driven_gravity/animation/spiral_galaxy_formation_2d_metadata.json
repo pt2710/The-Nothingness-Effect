@@ -1,0 +1,27 @@
+{
+  "animation_name": "spiral_galaxy_formation_2d",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "fallback_mode": "mp4",
+  "fps": 12,
+  "frame_count": 61,
+  "output_files": [
+    "spiral_galaxy_formation_2d.mp4",
+    "spiral_galaxy_formation_2d_frame_strip.png",
+    "spiral_galaxy_formation_2d_data.npz"
+  ],
+  "parameters": {
+    "G_eff": 0.25,
+    "damping": 0.995,
+    "dt": 0.035,
+    "eps": 0.08,
+    "n_particles": 120,
+    "radial_scale": 3.0,
+    "shear": 0.18,
+    "sigma": 2.2,
+    "steps": 60
+  },
+  "random_seed": 2710,
+  "section": "16.4",
+  "source_equation_module": "equations.locality_driven_gravity.locality_driven_gravity",
+  "source_simulation_function": "simulate_locality_spiral"
+}

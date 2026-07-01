@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison": "elastic_pi_ringdown",
+  "data_status": "fixture_only",
+  "fitted_parameters": {
+    "baseline": {
+      "amplitude": -0.9466465703425292,
+      "frequency": 2.4000000000000004,
+      "phase": 3.141592653589793,
+      "score": 0.04512057908767955,
+      "tau": 0.3190909090909091
+    },
+    "tne": {
+      "amplitude": 0.12517906639403253,
+      "score": 0.3535136636281646,
+      "time_scale": 0.7
+    }
+  },
+  "limitations": "Uses offline ringdown fixture only.",
+  "output_paths": {
+    "data": "empirical/outputs/data/elastic_pi_ringdown_comparison.csv",
+    "figure": "empirical/outputs/figures/elastic_pi_ringdown_comparison.png",
+    "manifest": "empirical/outputs/manifests/elastic_pi_ringdown_manifest.json",
+    "metrics": "empirical/outputs/metrics/elastic_pi_ringdown_metrics.csv",
+    "report": "empirical/outputs/reports/elastic_pi_ringdown_report.md",
+    "residual_figure": "empirical/outputs/figures/elastic_pi_ringdown_residuals.png"
+  }
+}

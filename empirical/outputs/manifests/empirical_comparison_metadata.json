@@ -1,0 +1,186 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison_outputs": {
+    "dubler_redshift": {
+      "metrics": {
+        "AIC": -53.18113068435416,
+        "BIC": -53.96225485948596,
+        "MAE": 0.002606350396523888,
+        "R2": 0.999432308539629,
+        "RMSE": 0.003285905304331986,
+        "TNE_vs_baseline_note": "Fixture-backed residual comparison only.",
+        "baseline_AIC": -26.18604263175212,
+        "baseline_BIC": -26.57660471931802,
+        "baseline_MAE": 0.05440000000000002,
+        "baseline_RMSE": 0.059689195002110736,
+        "baseline_model": "fixture_baseline_shift",
+        "chi_square": 0.2905133641166889,
+        "data_status": "fixture_only",
+        "normalized_RMSE": 0.008624423370927458,
+        "passed_validation": true,
+        "residual_mean": -9.99166069370283e-05,
+        "residual_std": 0.0032843858391935735
+      },
+      "paths": {
+        "data": "empirical/outputs/data/dubler_redshift_comparison.csv",
+        "figure": "empirical/outputs/figures/dubler_redshift_comparison.png",
+        "manifest": "empirical/outputs/manifests/dubler_redshift_manifest.json",
+        "metrics": "empirical/outputs/metrics/dubler_redshift_metrics.csv",
+        "report": "empirical/outputs/reports/dubler_redshift_report.md"
+      }
+    },
+    "eht_horizon": {
+      "metrics": {
+        "AIC": 20.015148392790035,
+        "BIC": 19.401442753909926,
+        "MAE": 8.235119198579415,
+        "R2": 0.40741362637500167,
+        "RMSE": 9.505718350013863,
+        "baseline_model": "none",
+        "chi_square": 99.66731223957234,
+        "data_status": "fixture_only",
+        "normalized_RMSE": 0.30862721915628427,
+        "passed_validation": true,
+        "residual_mean": -8.235119198579415,
+        "residual_std": 4.747788236113635,
+        "ring_contrast_proxy": 0.6493109150987901
+      },
+      "paths": {
+        "data": "empirical/outputs/data/eht_horizon_comparison.csv",
+        "figure": "empirical/outputs/figures/eht_horizon_comparison.png",
+        "manifest": "empirical/outputs/manifests/eht_horizon_manifest.json",
+        "metrics": "empirical/outputs/metrics/eht_horizon_metrics.csv",
+        "report": "empirical/outputs/reports/eht_horizon_report.md"
+      }
+    },
+    "elastic_pi_ringdown": {
+      "metrics": {
+        "AIC": -27.19499425936249,
+        "BIC": -25.778893857158067,
+        "MAE": 0.2656063269700192,
+        "R2": 0.022006586334696654,
+        "RMSE": 0.3535136636281646,
+        "TNE_vs_baseline_note": "Preliminary fixture-backed comparison only.",
+        "baseline_AIC": -84.95250512404778,
+        "baseline_BIC": -82.12030431963893,
+        "baseline_MAE": 0.03892701073230361,
+        "baseline_RMSE": 0.04512057908767957,
+        "baseline_model": "damped_sinusoid_baseline",
+        "chi_square": 749.8314622308425,
+        "data_status": "fixture_only",
+        "normalized_RMSE": 0.24380252663994537,
+        "passed_validation": true,
+        "residual_mean": 0.017662475255930912,
+        "residual_std": 0.35307215599596736
+      },
+      "paths": {
+        "data": "empirical/outputs/data/elastic_pi_ringdown_comparison.csv",
+        "figure": "empirical/outputs/figures/elastic_pi_ringdown_comparison.png",
+        "manifest": "empirical/outputs/manifests/elastic_pi_ringdown_manifest.json",
+        "metrics": "empirical/outputs/metrics/elastic_pi_ringdown_metrics.csv",
+        "report": "empirical/outputs/reports/elastic_pi_ringdown_report.md",
+        "residual_figure": "empirical/outputs/figures/elastic_pi_ringdown_residuals.png"
+      }
+    },
+    "hawking_like_flux": {
+      "metrics": {
+        "AIC": -14.426409890649971,
+        "BIC": -14.634650421421917,
+        "MAE": 0.2220454449566637,
+        "R2": -0.11709031640110079,
+        "RMSE": 0.2543949010171072,
+        "baseline_AIC": -50.20753972034784,
+        "baseline_BIC": -50.62402078189173,
+        "baseline_MAE": 0.007806490164886705,
+        "baseline_RMSE": 0.01091851859796831,
+        "baseline_model": "exponential_decay_baseline",
+        "chi_square": 155.32023759240906,
+        "data_status": "fixture_only",
+        "normalized_RMSE": 0.36868826234309937,
+        "passed_validation": true,
+        "residual_mean": -0.005859062383840236,
+        "residual_std": 0.25432742095866506
+      },
+      "paths": {
+        "data": "empirical/outputs/data/hawking_like_flux_comparison.csv",
+        "figure": "empirical/outputs/figures/hawking_like_flux_comparison.png",
+        "manifest": "empirical/outputs/manifests/hawking_like_flux_manifest.json",
+        "metrics": "empirical/outputs/metrics/hawking_like_flux_metrics.csv",
+        "report": "empirical/outputs/reports/hawking_like_flux_report.md"
+      }
+    },
+    "observer_memory": {
+      "metrics": {
+        "AIC": -30.301020789776615,
+        "BIC": -29.592970588674405,
+        "MAE": 0.2687447083920366,
+        "R2": 0.09152457854021567,
+        "RMSE": 0.34071780589780903,
+        "baseline_model": "none",
+        "chi_square": 696.5317395349024,
+        "data_status": "fixture_only",
+        "normalized_RMSE": 0.23497779717074072,
+        "passed_validation": true,
+        "residual_mean": 0.05842315201699944,
+        "residual_std": 0.3356715039502395
+      },
+      "paths": {
+        "data": "empirical/outputs/data/observer_memory_comparison.csv",
+        "figure": "empirical/outputs/figures/observer_memory_comparison.png",
+        "manifest": "empirical/outputs/manifests/observer_memory_manifest.json",
+        "metrics": "empirical/outputs/metrics/observer_memory_metrics.csv",
+        "report": "empirical/outputs/reports/observer_memory_report.md"
+      }
+    },
+    "spiral_rotation": {
+      "metrics": {
+        "AIC": -21.941198982331706,
+        "BIC": -22.357680043875597,
+        "MAE": 0.08125676796022142,
+        "R2": -0.012536350787401007,
+        "RMSE": 0.11512156961845735,
+        "baseline_AIC": -27.16906607206019,
+        "baseline_BIC": -27.58554713360408,
+        "baseline_MAE": 0.06555555555555559,
+        "baseline_RMSE": 0.07446528966625571,
+        "baseline_model": "linear_rotation_baseline",
+        "chi_square": 43.41633142291569,
+        "data_status": "fixture_only",
+        "normalized_RMSE": 0.3488532412669954,
+        "passed_validation": true,
+        "residual_mean": -0.0009481241985090741,
+        "residual_std": 0.11511766524700509,
+        "spiral_order_parameter": 0.04917740461869573,
+        "velocity_smoothness_proxy": 0.9180136224052399
+      },
+      "paths": {
+        "data": "empirical/outputs/data/spiral_rotation_comparison.csv",
+        "figure": "empirical/outputs/figures/spiral_rotation_comparison.png",
+        "manifest": "empirical/outputs/manifests/spiral_rotation_manifest.json",
+        "metrics": "empirical/outputs/metrics/spiral_rotation_metrics.csv",
+        "morphology_figure": "empirical/outputs/figures/spiral_morphology_comparison.png",
+        "report": "empirical/outputs/reports/spiral_rotation_report.md"
+      }
+    }
+  },
+  "limitations": "Offline fixture-backed comparison pipeline only. No real empirical acquisition occurs in this run.",
+  "registry_status": {
+    "eht_observables": "fixture_only",
+    "galaxy_rotation": "fixture_only",
+    "hawking_analogue_or_limits": "fixture_only",
+    "ligo_ringdown": "fixture_only",
+    "ligo_waveforms": "fixture_only",
+    "redshift_clock": "fixture_only"
+  },
+  "run_mode": {
+    "dataset": "all",
+    "offline": true,
+    "quick": false,
+    "use_fixtures": true
+  },
+  "summary_outputs": {
+    "manifest": "empirical/outputs/manifests/empirical_comparison_metadata.json",
+    "metrics": "empirical/outputs/metrics/empirical_comparison_summary.csv",
+    "report": "empirical/outputs/reports/empirical_comparison_summary.md"
+  }
+}

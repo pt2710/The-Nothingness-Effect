@@ -34,17 +34,16 @@ def create_figure(result):
     fig, (ax_wave, ax_heat) = plt.subplots(1, 2, figsize=(13, 5), constrained_layout=True)
     for index in indices:
         ax_wave.plot(x, history[index], label=f"t={time[index]:.2f}")
-    ax_wave.set_title("Figure 7: Elastic-pi ripple after ringdown")
+    ax_wave.set_title("Figure 7: Elastic-π ripple after ringdown")
     ax_wave.set_xlabel("x")
-    ax_wave.set_ylabel("ripple amplitude")
+    ax_wave.set_ylabel("elastic-π amplitude")
     ax_wave.grid(True, alpha=0.25)
     ax_wave.legend()
     image = ax_heat.imshow(history, aspect="auto", origin="lower", extent=[float(x.min()), float(x.max()), float(time.min()), float(time.max())], cmap="RdBu_r")
-    ax_heat.set_title(f"Late-time Xi distortion proxy={metrics['late_time_distortion_proxy']:.3f}")
+    ax_heat.set_title(f"Late-time Ξ distortion proxy={metrics['late_time_distortion_proxy']:.3f}")
     ax_heat.set_xlabel("x")
     ax_heat.set_ylabel("time")
-    fig.colorbar(image, ax=ax_heat, label="amplitude")
-    fig.suptitle(f"Finite illustrative wavefront; {CLAIM_BOUNDARY}", fontsize=9)
+    fig.colorbar(image, ax=ax_heat, label="elastic-π amplitude")
     return fig
 
 

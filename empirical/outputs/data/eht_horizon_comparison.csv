@@ -1,0 +1,3 @@
+source,ring_diameter_observed,ring_diameter_predicted,shadow_radius_observed,shadow_radius_predicted,ring_residual,shadow_residual,source_status
+M87*_fixture,42.0,35.91984106856078,21.0,17.95992053428039,-6.080158931439222,-3.040079465719611,fixture_only
+SgrA*_fixture,51.8,35.91984106856078,25.9,17.95992053428039,-15.880158931439219,-7.940079465719609,fixture_only

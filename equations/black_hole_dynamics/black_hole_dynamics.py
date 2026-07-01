@@ -47,11 +47,29 @@ def elastic_pi_profile(entropy: np.ndarray, K_D: float) -> np.ndarray:
     return pi_e / np.pi
 
 
+def detect_threshold_crossing(
+    r: np.ndarray,
+    field: np.ndarray,
+    threshold: float,
+) -> float:
+    radius = np.asarray(r, dtype=float)
+    values = np.asarray(field, dtype=float)
+    crossing = np.where((values[:-1] < threshold) & (threshold <= values[1:]))[0]
+    if crossing.size == 0:
+        return float("nan")
+    idx = int(crossing[0])
+    left_r = float(radius[idx])
+    right_r = float(radius[idx + 1])
+    left_v = float(values[idx])
+    right_v = float(values[idx + 1])
+    if right_v == left_v:
+        return left_r
+    weight = (threshold - left_v) / (right_v - left_v)
+    return left_r + weight * (right_r - left_r)
+
+
 def horizon_indicator(r: np.ndarray, pi_E: np.ndarray, threshold: float) -> float:
-    mask = np.asarray(pi_E) <= threshold
-    if not np.any(mask):
-        return float(np.asarray(r)[0])
-    return float(np.asarray(r)[np.argmax(mask)])
+    return detect_threshold_crossing(r, pi_E, threshold)
 
 
 def surface_gradient(r: np.ndarray, field: np.ndarray) -> np.ndarray:

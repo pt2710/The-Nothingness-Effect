@@ -49,8 +49,8 @@ def test_elastic_pi_positive():
 
 def test_horizon_indicator_detects_threshold():
     r = np.array([1.0, 2.0, 3.0])
-    pi_E = np.array([0.8, 0.3, 0.2])
-    assert horizon_indicator(r, pi_E, threshold=0.5) == 2.0
+    pi_E = np.array([0.3, 0.6, 0.8])
+    assert np.isclose(horizon_indicator(r, pi_E, threshold=0.5), 1.6666666666666667)
 
 
 def test_hawking_temperature_nonnegative():

@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison": "spiral_rotation",
+  "data_status": "fixture_only",
+  "fitted_parameters": {
+    "radius_scale": 1.3680545516828748,
+    "velocity_scale": 1.9819690906514729
+  },
+  "limitations": "Fixture rotation curve only; no direct morphology observable in this run.",
+  "output_paths": {
+    "data": "empirical/outputs/data/spiral_rotation_comparison.csv",
+    "figure": "empirical/outputs/figures/spiral_rotation_comparison.png",
+    "manifest": "empirical/outputs/manifests/spiral_rotation_manifest.json",
+    "metrics": "empirical/outputs/metrics/spiral_rotation_metrics.csv",
+    "morphology_figure": "empirical/outputs/figures/spiral_morphology_comparison.png",
+    "report": "empirical/outputs/reports/spiral_rotation_report.md"
+  }
+}

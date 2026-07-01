@@ -5,5 +5,5 @@ stable,True,finite illustrative simulation; repository-linked computational arti
 max_temperature_proxy,0.06935614579085558,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
 max_flux_proxy,3.0182227441764055e-05,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
 final_memory,3.0013321390840436e-05,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
-horizon_radius_initial,0.2,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
-horizon_radius_final,0.2,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
+horizon_radius_initial,4.365858543091713,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
+horizon_radius_final,3.9374155611518598,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute

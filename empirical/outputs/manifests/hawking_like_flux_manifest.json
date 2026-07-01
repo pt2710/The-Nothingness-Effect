@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison": "hawking_like_flux",
+  "data_status": "fixture_only",
+  "fitted_parameters": {
+    "amplitude_scale": 20658.246249714623,
+    "baseline_amplitude": 1.0202500719246248,
+    "baseline_decay": 1.190321112692867
+  },
+  "limitations": "Synthetic proxy fixture only.",
+  "output_paths": {
+    "data": "empirical/outputs/data/hawking_like_flux_comparison.csv",
+    "figure": "empirical/outputs/figures/hawking_like_flux_comparison.png",
+    "manifest": "empirical/outputs/manifests/hawking_like_flux_manifest.json",
+    "metrics": "empirical/outputs/metrics/hawking_like_flux_metrics.csv",
+    "report": "empirical/outputs/reports/hawking_like_flux_report.md"
+  }
+}

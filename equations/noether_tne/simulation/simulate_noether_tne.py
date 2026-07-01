@@ -10,6 +10,8 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.colors import TwoSlopeNorm
 
 from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
 from equations.noether_tne.noether_tne import (
@@ -34,14 +36,20 @@ def _flux_figure(flux_result):
     time = flux_result["time"]
     rx = flux_result["rx"]
     metrics = flux_result["metrics"]
-    fig, ax = plt.subplots(figsize=(7, 5), constrained_layout=True)
-    ax.plot(time, rx, label="Rx(t)", linewidth=2)
-    ax.axhline(rx[0], color="black", linestyle="--", label="Rx(0)")
-    ax.set_title(f"Figure 48: KD flux Rx(t) under fp phase shift\nmax deviation={metrics['rx_max_deviation']:.3e}")
-    ax.set_xlabel("time")
-    ax.set_ylabel("KD flux Rx")
-    ax.grid(True, alpha=0.25)
-    ax.legend()
+    residual = np.abs(rx - rx[0])
+    fig, (ax_top, ax_bottom) = plt.subplots(2, 1, figsize=(7.5, 6.2), constrained_layout=True, sharex=True)
+    ax_top.plot(time, rx, label="Rx(t)", linewidth=2, color="#4c78a8")
+    ax_top.axhline(rx[0], color="black", linestyle="--", label="Rx(0)")
+    ax_top.set_title("Figure 48: KD flux Rx(t) under fp phase shift")
+    ax_top.set_ylabel("KD flux Rx")
+    ax_top.grid(True, alpha=0.25)
+    ax_top.legend()
+    ax_bottom.plot(time, residual, color="#e45756", linewidth=1.8)
+    ax_bottom.set_yscale("log")
+    ax_bottom.set_xlabel("time")
+    ax_bottom.set_ylabel("|Rx(t)-Rx(0)|")
+    ax_bottom.grid(True, alpha=0.25)
+    ax_bottom.text(0.98, 0.9, f"max deviation={metrics['rx_max_deviation']:.3e}", transform=ax_bottom.transAxes, ha="right", fontsize=9)
     return fig
 
 
@@ -49,11 +57,12 @@ def _gauss_figure(gauss_result):
     residual = gauss_result["residual"]
     metrics = gauss_result["metrics"]
     fig, ax = plt.subplots(figsize=(6, 5), constrained_layout=True)
-    image = ax.imshow(residual, origin="lower", cmap="magma")
-    ax.set_title(f"Figure 49: fp-Gauss identity check on 128^2 grid\ninf norm={metrics['gauss_residual_inf_norm']:.3e}")
+    norm = TwoSlopeNorm(vcenter=0.0, vmin=float(np.min(residual)), vmax=float(np.max(residual)))
+    image = ax.imshow(residual, origin="lower", cmap="RdBu_r", norm=norm)
+    ax.set_title(f"Figure 49: fp-Gauss residual on a 128×128 grid\ninf norm={metrics['gauss_residual_inf_norm']:.3e}")
     ax.set_xlabel("grid x")
     ax.set_ylabel("grid y")
-    fig.colorbar(image, ax=ax, label="residual")
+    fig.colorbar(image, ax=ax, label="div(π_E ∇θ)")
     return fig
 
 

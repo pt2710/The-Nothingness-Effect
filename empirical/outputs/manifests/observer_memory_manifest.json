@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison": "observer_memory",
+  "data_status": "fixture_only",
+  "fitted_parameters": {
+    "amplitude_scale": -0.09318228110852331
+  },
+  "limitations": "Uses a ringdown-style fixture as a memory-like proxy.",
+  "output_paths": {
+    "data": "empirical/outputs/data/observer_memory_comparison.csv",
+    "figure": "empirical/outputs/figures/observer_memory_comparison.png",
+    "manifest": "empirical/outputs/manifests/observer_memory_manifest.json",
+    "metrics": "empirical/outputs/metrics/observer_memory_metrics.csv",
+    "report": "empirical/outputs/reports/observer_memory_report.md"
+  }
+}

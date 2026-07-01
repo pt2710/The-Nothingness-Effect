@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "comparison": "eht_horizon",
+  "data_status": "fixture_only",
+  "fitted_parameters": {
+    "alpha": 4.542315616610749,
+    "horizon_reference": 3.953912948849907
+  },
+  "limitations": "Angular observables are fixture-backed only.",
+  "output_paths": {
+    "data": "empirical/outputs/data/eht_horizon_comparison.csv",
+    "figure": "empirical/outputs/figures/eht_horizon_comparison.png",
+    "manifest": "empirical/outputs/manifests/eht_horizon_manifest.json",
+    "metrics": "empirical/outputs/metrics/eht_horizon_metrics.csv",
+    "report": "empirical/outputs/reports/eht_horizon_report.md"
+  }
+}

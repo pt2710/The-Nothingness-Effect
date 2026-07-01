@@ -10,6 +10,7 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
 from equations.locality_driven_gravity.locality_driven_gravity import (
@@ -32,26 +33,37 @@ def _metadata_path(path: Path) -> str:
 def create_figure(history, metrics):
     initial = history[0]
     final = history[-1]
-    fig, axes = plt.subplots(1, 3, figsize=(14, 4.8), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(14.5, 4.8), constrained_layout=True)
     axes[0].scatter(initial[:, 0], initial[:, 1], s=10, alpha=0.75, color="#4c78a8")
     axes[0].set_title("Initial finite particle field")
-    axes[1].scatter(final[:, 0], final[:, 1], s=10, alpha=0.8, color="#f58518")
-    axes[1].set_title("Final locality-weighted state")
+    density = axes[1].hexbin(final[:, 0], final[:, 1], gridsize=24, cmap="magma", mincnt=1)
+    axes[1].scatter(final[:, 0], final[:, 1], s=5, alpha=0.25, color="white")
+    axes[1].set_title("Final spiral-like density field")
+    fig.colorbar(density, ax=axes[1], label="particle count")
     stride = max(1, history.shape[1] // 80)
     for particle_path in history[:, ::stride, :].transpose(1, 0, 2):
-        axes[2].plot(particle_path[:, 0], particle_path[:, 1], linewidth=0.5, alpha=0.35)
+        axes[2].plot(particle_path[:, 0], particle_path[:, 1], linewidth=0.55, alpha=0.4)
     axes[2].scatter(final[:, 0], final[:, 1], s=6, color="#54a24b", alpha=0.65)
-    axes[2].set_title("Trajectory traces")
+    axes[2].set_title("Spiral-like trajectory winding")
     for ax in axes:
         ax.set_aspect("equal", adjustable="box")
         ax.set_xlabel("x")
         ax.set_ylabel("y")
         ax.grid(True, alpha=0.2)
-    fig.suptitle(
-        "Figure 6: Locality-driven spiral finite toy simulation\n"
-        f"spiral order={metrics['spiral_order_parameter']:.3f}; {CLAIM_BOUNDARY}",
-        fontsize=10,
+    radius = np.linalg.norm(final, axis=1)
+    theta = np.unwrap(np.arctan2(final[:, 1], final[:, 0]))
+    axes[0].text(
+        0.03,
+        0.04,
+        f"spiral order diagnostic={metrics['spiral_order_parameter']:.3f}\n"
+        f"mean radius={np.mean(radius):.2f}",
+        transform=axes[0].transAxes,
+        fontsize=8,
+        bbox={"boxstyle": "round,pad=0.25", "facecolor": "white", "alpha": 0.85, "edgecolor": "none"},
     )
+    axes[2].plot([], [], alpha=0.0, label=f"phase span={np.ptp(theta):.2f} rad")
+    axes[2].legend(loc="upper left", frameon=True)
+    fig.suptitle("Figure 6: Locality-driven spiral-like trajectory emergence", fontsize=12)
     return fig
 
 
@@ -62,7 +74,12 @@ def run(
     quick: bool = False,
 ) -> dict[str, Path | bool]:
     root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
-    params = LocalityGravityParams(n_particles=120 if quick else 240, steps=60 if quick else (steps or 180))
+    params = LocalityGravityParams(
+        n_particles=120 if quick else 240,
+        steps=60 if quick else (steps or 220),
+        shear=0.18,
+        damping=0.995,
+    )
     result = simulate_locality_spiral(params=params, seed=seed)
     metrics = compute_spiral_metrics(result["history"])
     figure_path = root / "figure6_locality_driven_spiral.png"

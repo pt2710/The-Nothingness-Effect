@@ -1,0 +1,7 @@
+radius,velocity,velocity_uncertainty,galaxy_id,source_status
+0.5,0.72,0.04,fixture_galaxy_a,fixture_only
+1.0,0.94,0.04,fixture_galaxy_a,fixture_only
+1.5,1.02,0.05,fixture_galaxy_a,fixture_only
+2.0,1.05,0.05,fixture_galaxy_a,fixture_only
+2.5,1.04,0.05,fixture_galaxy_a,fixture_only
+3.0,1.01,0.06,fixture_galaxy_a,fixture_only

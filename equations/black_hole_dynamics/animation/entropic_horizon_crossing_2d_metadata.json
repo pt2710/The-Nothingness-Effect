@@ -1,0 +1,28 @@
+{
+  "animation_name": "entropic_horizon_crossing_2d",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "fallback_mode": "mp4",
+  "fps": 12,
+  "frame_count": 18,
+  "output_files": [
+    "entropic_horizon_crossing_2d.mp4",
+    "entropic_horizon_crossing_2d_frame_strip.png",
+    "entropic_horizon_crossing_2d_data.npz"
+  ],
+  "parameters": {
+    "K_D": 2.0,
+    "entropy_scale": 2.0,
+    "grid_size": 96,
+    "mass_proxy": 4.0,
+    "memory_decay": 0.92,
+    "r_max": 12.0,
+    "r_min": 0.2,
+    "steps": 18,
+    "threshold": 0.36,
+    "width": 1.5
+  },
+  "random_seed": null,
+  "section": "18.6",
+  "source_equation_module": "equations.black_hole_dynamics.black_hole_dynamics",
+  "source_simulation_function": "simulate_black_hole_dynamics"
+}

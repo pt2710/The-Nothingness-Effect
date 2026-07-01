@@ -17,7 +17,6 @@ def test_source_registry_manifest_is_fixture_only(tmp_path):
         "redshift_clock",
         "galaxy_rotation",
         "eht_observables",
-        "hawking_analogue_or_limits",
         "ligo_waveforms",
         "ligo_ringdown",
     }

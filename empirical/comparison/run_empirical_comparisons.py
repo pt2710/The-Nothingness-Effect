@@ -6,11 +6,11 @@ import argparse
 from pathlib import Path
 from typing import Any, Callable
 
+from empirical.audit.empirical_audit import generate_empirical_audit
 from empirical.comparison import (
     compare_dubler_redshift,
     compare_elastic_pi_ringdown,
     compare_entropic_horizon_eht,
-    compare_hawking_like_flux,
     compare_observer_memory,
     compare_spiral_rotation,
 )
@@ -19,13 +19,12 @@ from empirical.data_acquisition.source_registry import build_source_registry
 from empirical.io import repo_relative, save_rows, summary_paths, write_manifest, write_report
 
 
-ComparisonRunner = Callable[[str | Path | None, bool, bool], dict[str, object]]
+ComparisonRunner = Callable[..., dict[str, object]]
 
 COMPARISON_RUNNERS: dict[str, tuple[str, ComparisonRunner]] = {
     "redshift": ("dubler_redshift", compare_dubler_redshift.run),
     "galaxy": ("spiral_rotation", compare_spiral_rotation.run),
     "eht": ("eht_horizon", compare_entropic_horizon_eht.run),
-    "hawking": ("hawking_like_flux", compare_hawking_like_flux.run),
     "memory": ("observer_memory", compare_observer_memory.run),
     "ringdown": ("elastic_pi_ringdown", compare_elastic_pi_ringdown.run),
 }
@@ -53,6 +52,9 @@ def run_empirical_comparisons(
     offline: bool = False,
     use_fixtures: bool = True,
     quick: bool = False,
+    audit: bool = False,
+    improve: bool = False,
+    parameter_sweep_level: str = "standard",
 ) -> dict[str, Any]:
     if fetch:
         run_fetch_all(
@@ -70,7 +72,12 @@ def run_empirical_comparisons(
 
     for dataset_key in _selected_datasets(dataset):
         slug, runner = COMPARISON_RUNNERS[dataset_key]
-        result = runner(output_dir=output_dir, use_fixtures=use_fixtures, quick=quick)
+        result = runner(
+            output_dir=output_dir,
+            use_fixtures=use_fixtures,
+            quick=quick,
+            parameter_sweep_level=parameter_sweep_level,
+        )
         summaries.append(dict(result["summary"]))
         outputs[slug] = {
             "paths": {name: repo_relative(path) for name, path in dict(result["paths"]).items()},
@@ -92,11 +99,15 @@ def run_empirical_comparisons(
                 f"- offline: {offline}",
                 f"- fixture fallback enabled: {use_fixtures}",
                 f"- selected_datasets: {', '.join(_selected_datasets(dataset))}",
+                f"- audit enabled: {audit}",
+                f"- improve flag: {improve}",
+                f"- parameter_sweep_level: {parameter_sweep_level}",
                 "",
                 "Claim boundary:",
                 "- preliminary comparison only",
                 "- not an empirical validation claim",
                 "- not a formal proof substitute",
+                "- Hawking is handled separately as a theoretical benchmark",
                 "",
                 "Summary rows:",
                 *[
@@ -120,6 +131,9 @@ def run_empirical_comparisons(
                 "offline": offline,
                 "use_fixtures": use_fixtures,
                 "quick": quick,
+                "audit": audit,
+                "improve": improve,
+                "parameter_sweep_level": parameter_sweep_level,
                 "dataset": dataset,
             },
             "registry_status": {key: value["status"] for key, value in registry.items()},
@@ -139,11 +153,13 @@ def run_empirical_comparisons(
         f"Generated empirical comparison artifacts for {len(summaries)} dataset(s) "
         f"at {repo_relative(Path(output_dir) if output_dir is not None else Path('empirical/outputs'))}."
     )
+    audit_result = generate_empirical_audit(summaries, output_dir=output_dir) if audit else None
     return {
         "registry": registry,
         "summaries": summaries,
         "outputs": outputs,
         "summary_paths": paths,
+        "audit_paths": audit_result,
     }
 
 
@@ -158,11 +174,19 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--quick", action="store_true", help="Use the lightweight comparison execution path.")
     parser.add_argument("--offline", action="store_true", help="Do not attempt network access; use cached or fixture data.")
     parser.add_argument("--use-fixtures", action="store_true", help="Allow deterministic fixture fallback when public data are unavailable.")
+    parser.add_argument("--audit", action="store_true", help="Write the Run 6 empirical audit report and machine-readable audit summary.")
+    parser.add_argument("--improve", action="store_true", help="Record that the Run 6 mapping-improvement pass is requested.")
+    parser.add_argument(
+        "--parameter-sweep-level",
+        default="standard",
+        choices=["quick", "standard", "extended"],
+        help="Control bounded sweep sizes for mapping-improvement comparisons.",
+    )
     parser.add_argument("--output-dir", default=None, help="Override the empirical outputs directory.")
     parser.add_argument(
         "--dataset",
         default="all",
-        choices=["redshift", "galaxy", "eht", "hawking", "memory", "ringdown", "all"],
+        choices=["redshift", "galaxy", "eht", "memory", "ringdown", "all"],
         help="Select which comparison to run.",
     )
     return parser
@@ -177,6 +201,9 @@ def main(argv: list[str] | None = None) -> int:
         offline=args.offline,
         use_fixtures=True,
         quick=args.quick,
+        audit=args.audit,
+        improve=args.improve,
+        parameter_sweep_level="quick" if args.quick else args.parameter_sweep_level,
     )
     return 0
 

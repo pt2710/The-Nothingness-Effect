@@ -6,7 +6,7 @@ import argparse
 from pathlib import Path
 
 from empirical.comparison.common import resolve_input_dataset
-from empirical.io import comparison_paths, repo_relative, save_rows, write_manifest, write_report
+from empirical.io import comparison_paths, named_figure_path, repo_relative, save_rows, write_manifest, write_report
 from empirical.mappings import dubler_redshift_mapping as mapping
 
 
@@ -15,7 +15,9 @@ def run(
     use_fixtures: bool = True,
     quick: bool = False,
     dataset_path: str | Path | None = None,
+    parameter_sweep_level: str = "standard",
 ) -> dict[str, object]:
+    del quick, parameter_sweep_level
     selection = (
         {
             "path": Path(dataset_path),
@@ -33,19 +35,26 @@ def run(
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
     metrics["data_status"] = selection["status"]
     paths = comparison_paths("dubler_redshift", output_dir)
+    residual_path = named_figure_path("dubler_redshift", "residuals", output_dir)
 
     rows = []
     for idx, case_id in enumerate(empirical["case_id"]):
         rows.append(
             {
                 "case_id": case_id,
+                "reference_label": empirical["reference_label"][idx],
                 "observable_x": float(empirical["observable_x"][idx]),
+                "observable_label": empirical["observable_label"],
+                "observable_units": empirical["observable_units"],
+                "sign_convention": empirical["sign_convention"],
                 "observed_shift": float(empirical["observed_shift"][idx]),
                 "observed_uncertainty": float(empirical["observed_uncertainty"][idx]),
                 "baseline_shift": float(prediction["baseline_prediction"][idx]),
                 "tne_prediction": float(prediction["tne_prediction"][idx]),
                 "tne_residual": float(residuals["tne_residual"][idx]),
                 "baseline_residual": float(residuals["baseline_residual"][idx]),
+                "raw_observed_shift": float(empirical["raw_observed_shift"][idx]),
+                "raw_baseline_shift": float(empirical["raw_baseline_shift"][idx]),
                 "source_status": empirical["source_status"][idx],
             }
         )
@@ -62,23 +71,22 @@ def run(
             }
         ],
     )
-    mapping.plot_comparison(empirical, prediction, paths["figure"])
-    write_report(
-        paths["report"],
-        "\n".join(
-            [
-                "# Dubler Redshift Report",
-                "",
-                f"- data status: {selection['status']}",
-                f"- fitted beta: {fitted['beta']:.6f}",
-                f"- fitted K_D: {fitted['K_D']:.6f}",
-                f"- RMSE: {metrics['RMSE']:.6f}",
-                f"- baseline RMSE: {metrics['baseline_RMSE']:.6f}",
-                "",
-                "Interpretation: preliminary comparison only; not an empirical validation claim.",
-            ]
-        ),
-    )
+    mapping.plot_comparison(empirical, prediction, {"curve": paths["figure"], "residual": residual_path})
+    report_lines = [
+        "# Dubler Redshift Report",
+        "",
+        f"- data status: {selection['status']}",
+        f"- fitted beta: {fitted['beta']:.6f}",
+        f"- fitted K_D: {fitted['K_D']:.6f}",
+        f"- formula: {fitted['formula']}",
+        f"- sign convention: {empirical['sign_convention']}",
+        f"- observable interpretation: {empirical['observable_label']} ({empirical['observable_units']})",
+        f"- RMSE: {metrics['RMSE']:.6f}",
+        f"- baseline RMSE: {metrics['baseline_RMSE']:.6f}",
+        "",
+        "Interpretation: preliminary benchmark comparison only. The strong fit on this small curated/cached benchmark does not establish empirical validation.",
+    ]
+    write_report(paths["report"], "\n".join(report_lines))
     write_manifest(
         paths["manifest"],
         {
@@ -86,13 +94,25 @@ def run(
             "data_status": selection["status"],
             "input_dataset_path": repo_relative(selection["path"]),
             "fitted_parameters": fitted,
-            "output_paths": {name: repo_relative(path) for name, path in paths.items()},
+            "observable_metadata": {
+                "label": empirical["observable_label"],
+                "units": empirical["observable_units"],
+                "sign_convention": empirical["sign_convention"],
+            },
+            "output_paths": {
+                "data": repo_relative(paths["data"]),
+                "metrics": repo_relative(paths["metrics"]),
+                "figure": repo_relative(paths["figure"]),
+                "residual_figure": repo_relative(residual_path),
+                "report": repo_relative(paths["report"]),
+                "manifest": repo_relative(paths["manifest"]),
+            },
             "source_manifest": selection["manifest"],
-            "limitations": "Observable mapping adapter only; not a formal proof substitute.",
+            "limitations": "Small benchmark table only; not an empirical validation claim and not a replacement for formal weak-field analysis.",
         },
     )
     return {
-        "paths": paths,
+        "paths": {**paths, "residual_figure": residual_path},
         "metrics": metrics,
         "summary": {
             "model": "elastic_dubler_effect",
@@ -108,7 +128,7 @@ def run(
             "BIC": metrics["BIC"],
             "baseline_model": "published_or_fixture_baseline_shift",
             "TNE_vs_baseline_note": metrics["TNE_vs_baseline_note"],
-            "limitations": "Preliminary comparison only",
+            "limitations": "Small benchmark comparison only",
             "passed_validation": metrics["passed_validation"],
         },
     }
@@ -121,12 +141,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--use-fixtures", action="store_true")
     parser.add_argument("--dataset-path", default=None)
     args = parser.parse_args(argv)
-    run(
-        output_dir=args.output_dir,
-        use_fixtures=True,
-        quick=args.quick,
-        dataset_path=args.dataset_path,
-    )
+    run(output_dir=args.output_dir, use_fixtures=True, quick=args.quick, dataset_path=args.dataset_path)
     return 0
 
 

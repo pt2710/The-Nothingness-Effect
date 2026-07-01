@@ -9,7 +9,6 @@ from typing import Any, Callable
 from empirical.data_acquisition import (
     fetch_eht_observables,
     fetch_galaxy_rotation_data,
-    fetch_hawking_analogue_or_limits,
     fetch_ligo_waveforms,
     fetch_redshift_clock_data,
 )
@@ -23,7 +22,6 @@ FETCH_RUNNERS: dict[str, FetchRunner] = {
     "redshift": fetch_redshift_clock_data.run,
     "galaxy": fetch_galaxy_rotation_data.run,
     "eht": fetch_eht_observables.run,
-    "hawking": fetch_hawking_analogue_or_limits.run,
     "ligo": fetch_ligo_waveforms.run,
 }
 
@@ -94,7 +92,7 @@ def run_fetch_all(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Fetch public empirical datasets with fixture-safe fallback handling.")
-    parser.add_argument("--dataset", default="all", choices=["redshift", "galaxy", "eht", "hawking", "ligo", "all"])
+    parser.add_argument("--dataset", default="all", choices=["redshift", "galaxy", "eht", "ligo", "all"])
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--force", action="store_true")

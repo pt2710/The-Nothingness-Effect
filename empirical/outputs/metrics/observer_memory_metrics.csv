@@ -1,2 +1,2 @@
-RMSE,MAE,normalized_RMSE,R2,chi_square,AIC,BIC,residual_mean,residual_std,passed_validation,data_status,baseline_model,model,empirical_dataset
-0.4208616701023922,0.34641789391695615,0.2132793252815966,0.00032519527649821356,26.131942952782893,-110.50863960320494,-108.33425233330931,-0.004116297549555739,0.4208415396035168,True,fetched,none,black_hole_dynamics,ligo_waveforms
+RMSE,MAE,normalized_RMSE,R2,chi_square,weighted_RMSE,AIC,BIC,residual_mean,residual_std,passed_validation,data_status,baseline_model,residual_envelope_mean,TNE_vs_baseline_note,model,empirical_dataset
+0.4206216300949059,0.345753407128193,0.21315768063093307,0.0014652065108782253,26.102142553291383,0.633696633963595,-110.58280673596282,-108.40841946606719,-0.011569278592201934,0.42046249237780037,True,fetched,none,0.4055689482418678,Weak explanatory power remains possible even when residual envelopes are smoother.,black_hole_dynamics,ligo_waveforms

@@ -26,10 +26,6 @@ COMPARISON_DATASETS: dict[str, dict[str, str]] = {
         "registry_key": "eht_observables",
         "fixture_filename": "eht_observable_fixture.csv",
     },
-    "hawking": {
-        "registry_key": "hawking_analogue_or_limits",
-        "fixture_filename": "hawking_flux_fixture.csv",
-    },
     "memory": {
         "registry_key": "ligo_waveforms",
         "fixture_filename": "ligo_ringdown_fixture.csv",

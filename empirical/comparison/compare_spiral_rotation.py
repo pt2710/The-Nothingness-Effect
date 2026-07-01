@@ -6,7 +6,15 @@ import argparse
 from pathlib import Path
 
 from empirical.comparison.common import resolve_input_dataset
-from empirical.io import comparison_paths, morphology_figure_path, repo_relative, save_rows, write_manifest, write_report
+from empirical.io import (
+    comparison_paths,
+    morphology_figure_path,
+    named_figure_path,
+    repo_relative,
+    save_rows,
+    write_manifest,
+    write_report,
+)
 from empirical.mappings import spiral_galaxy_mapping as mapping
 
 
@@ -15,6 +23,7 @@ def run(
     use_fixtures: bool = True,
     quick: bool = False,
     dataset_path: str | Path | None = None,
+    parameter_sweep_level: str = "standard",
 ) -> dict[str, object]:
     selection = (
         {
@@ -26,24 +35,33 @@ def run(
         if dataset_path is not None
         else resolve_input_dataset("galaxy", output_dir=output_dir, use_fixtures=use_fixtures)
     )
+    sweep_level = "quick" if quick else parameter_sweep_level
     empirical = mapping.prepare_empirical_observable(selection["path"])
-    fitted = mapping.fit_parameters(empirical)
+    fitted = mapping.fit_parameters(empirical, parameter_sweep_level=sweep_level)
+    fitted["parameter_sweep_level"] = sweep_level
     prediction = mapping.prepare_model_prediction(empirical, fitted)
     residuals = mapping.compute_residuals(empirical, prediction)
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
     metrics["data_status"] = selection["status"]
     paths = comparison_paths("spiral_rotation", output_dir)
     morphology_path = morphology_figure_path("spiral", output_dir)
+    residual_path = named_figure_path("spiral_rotation", "residuals", output_dir)
 
     rows = []
     for idx, radius in enumerate(empirical["radius"]):
         rows.append(
             {
                 "radius": float(radius),
+                "radius_kpc": float(empirical["radius_kpc"][idx]),
                 "observed_velocity": float(empirical["velocity"][idx]),
+                "observed_velocity_kms": float(empirical["velocity_kms"][idx]),
                 "velocity_uncertainty": float(empirical["velocity_uncertainty"][idx]),
+                "velocity_uncertainty_kms": float(empirical["velocity_uncertainty_kms"][idx]),
                 "tne_prediction": float(prediction["tne_prediction"][idx]),
                 "baseline_prediction": float(prediction["baseline_prediction"][idx]),
+                "flat_baseline_prediction": float(prediction["flat_baseline_prediction"][idx]),
+                "linear_baseline_prediction": float(prediction["linear_baseline_prediction"][idx]),
+                "smoothed_empirical_reference": float(prediction["smoothed_empirical_reference"][idx]),
                 "tne_residual": float(residuals["tne_residual"][idx]),
                 "baseline_residual": float(residuals["baseline_residual"][idx]),
                 "galaxy_id": empirical["galaxy_id"][idx],
@@ -63,23 +81,28 @@ def run(
             }
         ],
     )
-    mapping.plot_comparison(empirical, prediction, {"curve": paths["figure"], "morphology": morphology_path})
-    write_report(
-        paths["report"],
-        "\n".join(
-            [
-                "# Spiral Rotation Report",
-                "",
-                f"- data status: {selection['status']}",
-                f"- radius scale: {prediction['fitted_parameters']['radius_scale']:.6f}",
-                f"- velocity scale: {prediction['fitted_parameters']['velocity_scale']:.6f}",
-                f"- spiral order parameter: {prediction['spiral_order_parameter']:.6f}",
-                f"- RMSE: {metrics['RMSE']:.6f}",
-                "",
-                "Interpretation: preliminary comparison only; not a full astrophysical validation claim.",
-            ]
-        ),
+    mapping.plot_comparison(
+        empirical,
+        prediction,
+        {"curve": paths["figure"], "residual": residual_path, "morphology": morphology_path},
     )
+    report_lines = [
+        "# Spiral Rotation Report",
+        "",
+        f"- data status: {selection['status']}",
+        f"- parameter sweep level: {sweep_level}",
+        f"- radius scale: {prediction['fitted_parameters']['radius_scale']:.6f}",
+        f"- velocity scale: {prediction['fitted_parameters']['velocity_scale']:.6f}",
+        f"- aggregation mix (mean vs median): {prediction['fitted_parameters']['aggregation_mix']:.6f}",
+        f"- spiral order parameter: {prediction['spiral_order_parameter']:.6f}",
+        f"- pitch-angle proxy: {prediction['pitch_angle_proxy']:.6f}",
+        f"- RMSE: {metrics['RMSE']:.6f}",
+        f"- selected baseline RMSE: {metrics['baseline_RMSE']:.6f}",
+        f"- flat / linear baseline RMSE: {metrics['flat_baseline_RMSE']:.6f} / {metrics['linear_baseline_RMSE']:.6f}",
+        "",
+        "Interpretation: finite illustrative rotation-curve comparison only. Any fit improvement is a preliminary residual result under the implemented proxy mapping and does not replace full astrophysical modeling.",
+    ]
+    write_report(paths["report"], "\n".join(report_lines))
     write_manifest(
         paths["manifest"],
         {
@@ -91,16 +114,17 @@ def run(
                 "data": repo_relative(paths["data"]),
                 "metrics": repo_relative(paths["metrics"]),
                 "figure": repo_relative(paths["figure"]),
+                "residual_figure": repo_relative(residual_path),
                 "morphology_figure": repo_relative(morphology_path),
                 "report": repo_relative(paths["report"]),
                 "manifest": repo_relative(paths["manifest"]),
             },
             "source_manifest": selection["manifest"],
-            "limitations": "Finite toy-model mapping only; not a full galaxy simulation.",
+            "limitations": "Finite toy-model mapping only; not a dark-matter replacement claim and not a full astrophysical simulation.",
         },
     )
     return {
-        "paths": {**paths, "morphology_figure": morphology_path},
+        "paths": {**paths, "morphology_figure": morphology_path, "residual_figure": residual_path},
         "metrics": metrics,
         "summary": {
             "model": "locality_driven_gravity",
@@ -114,8 +138,8 @@ def run(
             "chi_square": metrics["chi_square"],
             "AIC": metrics["AIC"],
             "BIC": metrics["BIC"],
-            "baseline_model": "linear_rotation_baseline",
-            "TNE_vs_baseline_note": "Preliminary comparison only",
+            "baseline_model": metrics["baseline_model"],
+            "TNE_vs_baseline_note": metrics["TNE_vs_baseline_note"],
             "limitations": "Not a full astrophysical interpretation",
             "passed_validation": metrics["passed_validation"],
         },
@@ -128,12 +152,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--use-fixtures", action="store_true")
     parser.add_argument("--dataset-path", default=None)
+    parser.add_argument("--parameter-sweep-level", default="standard", choices=["quick", "standard", "extended"])
     args = parser.parse_args(argv)
     run(
         output_dir=args.output_dir,
         use_fixtures=True,
         quick=args.quick,
         dataset_path=args.dataset_path,
+        parameter_sweep_level="quick" if args.quick else args.parameter_sweep_level,
     )
     return 0
 

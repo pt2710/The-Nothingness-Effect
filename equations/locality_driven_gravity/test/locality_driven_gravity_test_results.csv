@@ -1,2 +1,2 @@
-initial_mean_radius,final_mean_radius,radial_concentration,spiral_order_parameter,finite_energy_proxy,max_abs_position,nan_count,claim_boundary
-1.9493707183266373,1.9411666015784887,0.008204116748148582,0.3076466722015882,1.9477991517455068e-05,2.9164563971118285,0,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
+initial_mean_radius,final_mean_radius,radial_concentration,spiral_order_parameter,pitch_angle_proxy,finite_energy_proxy,max_abs_position,nan_count,claim_boundary
+1.9493707183266373,1.9411666015784887,0.008204116748148582,0.3076466722015882,2.3384306045902465,1.9477991517455068e-05,2.9164563971118285,0,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute

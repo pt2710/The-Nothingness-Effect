@@ -60,6 +60,15 @@ def chi_square(observed: np.ndarray, predicted: np.ndarray, uncertainty: np.ndar
     return float(np.sum(((pred - obs) / unc) ** 2))
 
 
+def weighted_rmse(observed: np.ndarray, predicted: np.ndarray, uncertainty: np.ndarray | None) -> float:
+    if uncertainty is None:
+        return float("nan")
+    obs, pred, unc = _aligned_arrays(observed, predicted, uncertainty)
+    if unc is None or len(unc) == 0:
+        return float("nan")
+    return float(np.sqrt(np.mean(((pred - obs) / unc) ** 2)))
+
+
 def residual_summary(observed: np.ndarray, predicted: np.ndarray) -> dict[str, float]:
     obs, pred, _ = _aligned_arrays(observed, predicted)
     residuals = pred - obs
@@ -94,6 +103,7 @@ def metric_bundle(
         "normalized_RMSE": normalized_rmse(observed, predicted),
         "R2": r_squared(observed, predicted),
         "chi_square": chi_square(observed, predicted, uncertainty),
+        "weighted_RMSE": weighted_rmse(observed, predicted, uncertainty),
     }
     aic_value, bic_value = aic_bic(observed, predicted, n_params=n_params)
     metrics["AIC"] = aic_value
@@ -103,6 +113,9 @@ def metric_bundle(
         baseline_aic, baseline_bic = aic_bic(observed, baseline, n_params=baseline_params)
         metrics["baseline_RMSE"] = rmse(observed, baseline)
         metrics["baseline_MAE"] = mae(observed, baseline)
+        metrics["baseline_R2"] = r_squared(observed, baseline)
+        metrics["baseline_chi_square"] = chi_square(observed, baseline, uncertainty)
+        metrics["baseline_weighted_RMSE"] = weighted_rmse(observed, baseline, uncertainty)
         metrics["baseline_AIC"] = baseline_aic
         metrics["baseline_BIC"] = baseline_bic
     numeric_values = [

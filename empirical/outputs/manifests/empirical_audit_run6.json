@@ -1,0 +1,113 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "classification_groups": {
+    "empirical_comparisons": [
+      "redshift_clock",
+      "galaxy_rotation",
+      "eht_observables",
+      "ligo_waveforms",
+      "ligo_ringdown"
+    ],
+    "internal_consistency_diagnostics": [
+      "noether_tne",
+      "fp_gauss"
+    ],
+    "theoretical_benchmarks": [
+      "hawking_theoretical_benchmark"
+    ]
+  },
+  "limitations": "Audit diagnoses preliminary model-to-observable alignment only; it is not an empirical validation layer.",
+  "rows": [
+    {
+      "AIC": -14.740775772248174,
+      "BIC": -17.354481411128283,
+      "MAE": 0.00895960694857892,
+      "R2": 0.9996591548038047,
+      "RMSE": 0.00923094413395547,
+      "baseline_model": "published_or_fixture_baseline_shift",
+      "chi_square": 405133141.38148963,
+      "classification": "empirical_comparison",
+      "comparison_type": "redshift benchmark comparison",
+      "data_status": "cached",
+      "deferred_improvements": "Additional holdout analysis is not meaningful with only two benchmark rows.",
+      "diagnosis": "Small-sample benchmark with strong residual fit, but unit/sign interpretation and baseline provenance remain the main risks.",
+      "empirical_dataset": "redshift_clock",
+      "implemented_improvements": "Explicit sign-convention metadata, bounded fit metadata, residual diagnostics, and report-level formula documentation.",
+      "limitations": "Small benchmark comparison only",
+      "model": "elastic_dubler_effect"
+    },
+    {
+      "AIC": -308.6570652023527,
+      "BIC": -297.20476799661077,
+      "MAE": 0.07770124675070662,
+      "R2": 0.659454181678438,
+      "RMSE": 0.11274996191604787,
+      "baseline_model": "linear_rotation_baseline",
+      "chi_square": 14691.425520798175,
+      "classification": "empirical_comparison",
+      "comparison_type": "rotation-curve comparison",
+      "data_status": "fetched",
+      "deferred_improvements": "Full multi-galaxy catalog support and stronger astrophysical calibration remain future work.",
+      "diagnosis": "The main weakness is observable mapping and parameter regime selection, not raw data availability. Rotation-curve proxy quality depends strongly on radial binning and bounded parameter sweeps.",
+      "empirical_dataset": "galaxy_rotation",
+      "implemented_improvements": "Tangential-velocity extraction, bounded deterministic parameter sweep, simple baseline family, and morphology diagnostics.",
+      "limitations": "Not a full astrophysical interpretation",
+      "model": "locality_driven_gravity"
+    },
+    {
+      "AIC": 21.10019491390315,
+      "BIC": 20.48648927502304,
+      "MAE": 8.350784034173449,
+      "R2": 0.22275293644952154,
+      "RMSE": 10.886509522726792,
+      "baseline_model": "none",
+      "chi_square": 87.92096429583383,
+      "classification": "empirical_comparison",
+      "comparison_type": "horizon/shadow proxy comparison",
+      "data_status": "cached",
+      "deferred_improvements": "No GRMHD image reconstruction or instrument forward model is included.",
+      "diagnosis": "The limiting factor is summary-observable mapping and angular scaling rather than missing raw imaging products. Shared-scale fits remain coarse; per-source scaling is diagnostic only.",
+      "empirical_dataset": "eht_observables",
+      "implemented_improvements": "Threshold-crossing proxy audit, weighted residuals, shared-scale vs per-source diagnostics, and residual plots.",
+      "limitations": "Published summary observables only",
+      "model": "black_hole_dynamics"
+    },
+    {
+      "AIC": -110.58280673596282,
+      "BIC": -108.40841946606719,
+      "MAE": 0.345753407128193,
+      "R2": 0.0014652065108782253,
+      "RMSE": 0.4206216300949059,
+      "baseline_model": "none",
+      "chi_square": 26.102142553291383,
+      "classification": "empirical_comparison",
+      "comparison_type": "memory-trace comparison",
+      "data_status": "fetched",
+      "deferred_improvements": "A richer waveform-adapter family would be needed for stronger proxy alignment.",
+      "diagnosis": "Observer-memory proxy alignment remains weak. The main issue is model sufficiency relative to waveform morphology, not dataset access.",
+      "empirical_dataset": "ligo_waveforms",
+      "implemented_improvements": "Residual-envelope diagnostics and clearer weak-fit documentation.",
+      "limitations": "Memory proxy uses waveform-style comparison data",
+      "model": "black_hole_dynamics"
+    },
+    {
+      "AIC": -88.63193742792713,
+      "BIC": -76.37362982091983,
+      "MAE": 0.33604209904506366,
+      "R2": 0.008838163152038891,
+      "RMSE": 0.41364949539630996,
+      "baseline_model": "damped_sinusoid_baseline",
+      "chi_square": 22.103561238348234,
+      "classification": "empirical_comparison",
+      "comparison_type": "ringdown residual comparison",
+      "data_status": "fetched",
+      "deferred_improvements": "A stronger reduced-order TNE waveform family would be required to outperform the damped-sinusoid baseline consistently.",
+      "diagnosis": "Ringdown alignment is limited by proxy projection quality and short noisy segment selection. The baseline remains competitive or better under the same window.",
+      "empirical_dataset": "ligo_ringdown",
+      "implemented_improvements": "Window alignment, raw/normalized strain columns, bounded TNE projection search, holdout diagnostics, and residual-envelope outputs.",
+      "limitations": "Finite toy-model ringdown comparison only",
+      "model": "elastic_pi_ripples"
+    }
+  ],
+  "run": "run6_empirical_audit"
+}

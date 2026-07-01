@@ -14,4 +14,5 @@ def empirical_fixture_run(tmp_path_factory: pytest.TempPathFactory):
         offline=True,
         use_fixtures=True,
         quick=True,
+        audit=True,
     )

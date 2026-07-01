@@ -3,7 +3,10 @@
   "comparison": "observer_memory",
   "data_status": "fetched",
   "fitted_parameters": {
-    "amplitude_scale": 0.002965240373265065
+    "amplitude_scale": 0.011850288282259768,
+    "derivative_weight": 0.2,
+    "score": 0.4206216300949059,
+    "time_shift": 0.010000000000000002
   },
   "input_dataset_path": "empirical/outputs/data/ligo_gw150914_ringdown.csv",
   "limitations": "Memory proxy alignment only; not a direct observational memory measurement.",
@@ -15,7 +18,7 @@
     "report": "empirical/outputs/reports/observer_memory_report.md"
   },
   "source_manifest": {
-    "access_date": "2026-07-01T08:32:32+00:00",
+    "access_date": "2026-07-01T14:19:23+00:00",
     "access_method": "public_hdf5_download",
     "citation_note": "Derived single-detector GW150914 ringdown segment from the H1 public strain file.",
     "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
@@ -29,7 +32,8 @@
     "preprocessing_steps": [
       "Downloaded the public GWOSC H1 strain HDF5 for the O1 interval containing GW150914.",
       "Applied a simple 35-350 Hz Butterworth bandpass filter.",
-      "Selected a short post-merger ringdown window and normalized the strain amplitude for lightweight comparison use."
+      "Selected a short post-merger ringdown window.",
+      "Stored both raw and normalized strain columns for fair residual comparison use."
     ],
     "raw_file_path": "empirical/cache/raw/ligo_waveforms/H-H1_LOSC_4_V1-1126256640-4096.hdf5",
     "script_used": "fetch_ligo_waveforms.py",

@@ -6,7 +6,7 @@ import argparse
 from pathlib import Path
 
 from empirical.comparison.common import resolve_input_dataset
-from empirical.io import comparison_paths, repo_relative, save_rows, write_manifest, write_report
+from empirical.io import comparison_paths, named_figure_path, repo_relative, save_rows, write_manifest, write_report
 from empirical.mappings import horizon_eht_mapping as mapping
 
 
@@ -15,7 +15,9 @@ def run(
     use_fixtures: bool = True,
     quick: bool = False,
     dataset_path: str | Path | None = None,
+    parameter_sweep_level: str = "standard",
 ) -> dict[str, object]:
+    del quick, parameter_sweep_level
     selection = (
         {
             "path": Path(dataset_path),
@@ -33,6 +35,7 @@ def run(
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
     metrics["data_status"] = selection["status"]
     paths = comparison_paths("eht_horizon", output_dir)
+    residual_path = named_figure_path("eht_horizon", "residuals", output_dir)
 
     rows = []
     for idx, source in enumerate(empirical["source"]):
@@ -40,11 +43,17 @@ def run(
             {
                 "source": source,
                 "ring_diameter_observed": float(empirical["ring_diameter"][idx]),
-                "ring_diameter_predicted": float(prediction["ring_prediction"][idx]),
+                "ring_diameter_predicted_shared": float(prediction["ring_prediction"][idx]),
+                "ring_diameter_predicted_source_specific": float(prediction["ring_prediction_source_specific"][idx]),
                 "shadow_radius_observed": float(empirical["shadow_radius"][idx]),
-                "shadow_radius_predicted": float(prediction["shadow_prediction"][idx]),
-                "ring_residual": float(residuals["ring_residual"][idx]),
-                "shadow_residual": float(residuals["shadow_residual"][idx]),
+                "shadow_radius_predicted_shared": float(prediction["shadow_prediction"][idx]),
+                "shadow_radius_predicted_source_specific": float(prediction["shadow_prediction_source_specific"][idx]),
+                "ring_residual_shared": float(residuals["ring_residual"][idx]),
+                "shadow_residual_shared": float(residuals["shadow_residual"][idx]),
+                "ring_residual_source_specific": float(residuals["ring_residual_source_specific"][idx]),
+                "shadow_residual_source_specific": float(residuals["shadow_residual_source_specific"][idx]),
+                "ring_normalized_residual": float(residuals["ring_normalized_residual"][idx]),
+                "shadow_normalized_residual": float(residuals["shadow_normalized_residual"][idx]),
                 "source_status": empirical["source_status"][idx],
             }
         )
@@ -61,22 +70,22 @@ def run(
             }
         ],
     )
-    mapping.plot_comparison(empirical, prediction, paths["figure"])
-    write_report(
-        paths["report"],
-        "\n".join(
-            [
-                "# EHT Horizon Report",
-                "",
-                f"- data status: {selection['status']}",
-                f"- fitted angular scale alpha: {fitted['alpha']:.6f}",
-                f"- ring contrast proxy: {prediction['ring_contrast_proxy']:.6f}",
-                f"- RMSE: {metrics['RMSE']:.6f}",
-                "",
-                "Interpretation: published summary observables only; not GRMHD reconstruction and not an empirical validation claim.",
-            ]
-        ),
-    )
+    mapping.plot_comparison(empirical, prediction, {"curve": paths["figure"], "residual": residual_path})
+    report_lines = [
+        "# EHT Horizon Report",
+        "",
+        f"- data status: {selection['status']}",
+        f"- shared scale: {fitted['shared_scale']:.6f}",
+        f"- source scales: {fitted['source_scales']}",
+        f"- threshold contour radius proxy: {fitted['threshold_contour_radius']:.6f}",
+        f"- horizon radius proxy: {fitted['horizon_radius_proxy']:.6f}",
+        f"- shared-scale RMSE: {metrics['RMSE']:.6f}",
+        f"- shared-scale weighted RMSE: {metrics['weighted_RMSE']:.6f}",
+        f"- per-source diagnostic RMSE: {metrics['source_specific_RMSE']:.6f}",
+        "",
+        "Interpretation: published summary observables only. Per-source scaling is a diagnostic interpolation aid, not an independent validation result and not a GRMHD reconstruction claim.",
+    ]
+    write_report(paths["report"], "\n".join(report_lines))
     write_manifest(
         paths["manifest"],
         {
@@ -84,13 +93,20 @@ def run(
             "data_status": selection["status"],
             "input_dataset_path": repo_relative(selection["path"]),
             "fitted_parameters": fitted,
-            "output_paths": {name: repo_relative(path) for name, path in paths.items()},
+            "output_paths": {
+                "data": repo_relative(paths["data"]),
+                "metrics": repo_relative(paths["metrics"]),
+                "figure": repo_relative(paths["figure"]),
+                "residual_figure": repo_relative(residual_path),
+                "report": repo_relative(paths["report"]),
+                "manifest": repo_relative(paths["manifest"]),
+            },
             "source_manifest": selection["manifest"],
-            "limitations": "Published summary observables only; not raw EHT imaging products.",
+            "limitations": "Published summary observables only; not raw EHT image products and not full GRMHD.",
         },
     )
     return {
-        "paths": paths,
+        "paths": {**paths, "residual_figure": residual_path},
         "metrics": metrics,
         "summary": {
             "model": "black_hole_dynamics",
@@ -105,8 +121,8 @@ def run(
             "AIC": metrics["AIC"],
             "BIC": metrics["BIC"],
             "baseline_model": "none",
-            "TNE_vs_baseline_note": "Preliminary proxy scaling only",
-            "limitations": "No EHT image reconstruction in this run",
+            "TNE_vs_baseline_note": metrics["TNE_vs_baseline_note"],
+            "limitations": "Published summary observables only",
             "passed_validation": metrics["passed_validation"],
         },
     }

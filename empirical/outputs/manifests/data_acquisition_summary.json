@@ -4,7 +4,7 @@
   "force": false,
   "manifests": {
     "eht": {
-      "access_date": "2026-07-01T08:32:08+00:00",
+      "access_date": "2026-07-01T14:19:20+00:00",
       "access_method": "curated_published_summary",
       "citation_note": "Derived from published M87* and Sgr A* summary observables.",
       "dataset_name": "eht_observables",
@@ -32,7 +32,7 @@
       "status": "cached"
     },
     "galaxy": {
-      "access_date": "2026-07-01T08:32:07+00:00",
+      "access_date": "2026-07-01T14:19:20+00:00",
       "access_method": "public_zip_download",
       "citation_note": "Compact NGC2403 rotation curve derived from the SPARC public archive.",
       "dataset_name": "galaxy_rotation",
@@ -53,32 +53,8 @@
       "source_url": "https://astroweb.case.edu/SPARC/Rotmod_LTG.zip",
       "status": "fetched"
     },
-    "hawking": {
-      "access_date": "2026-07-01T08:32:08+00:00",
-      "access_method": "manual_curation_required",
-      "citation_note": "Use an analogue-Hawking or PBH-limit publication-specific dataset in a later manual pass.",
-      "dataset_name": "hawking_analogue_or_limits",
-      "derived_file_path": "",
-      "expected_file_type": "csv",
-      "fixture_fallback_path": "empirical/fixtures/hawking_flux_fixture.csv",
-      "license_note": "No public compact dataset is bundled in this run.",
-      "limitations": "Reliable lightweight public tables were not automatically acquired in this run.",
-      "preprocessing_steps": [
-        "Recorded the public source family.",
-        "Did not fabricate or infer a lightweight dataset when a reliable compact public table was not guaranteed."
-      ],
-      "raw_file_path": "",
-      "script_used": "fetch_hawking_analogue_or_limits.py",
-      "source_name": "Analogue Hawking or PBH limit literature",
-      "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/",
-      "source_urls": [
-        "https://fermi.gsfc.nasa.gov/ssc/data/",
-        "https://arxiv.org/"
-      ],
-      "status": "manual_required"
-    },
     "ligo": {
-      "access_date": "2026-07-01T08:32:32+00:00",
+      "access_date": "2026-07-01T14:19:23+00:00",
       "access_method": "public_hdf5_download",
       "citation_note": "Derived single-detector GW150914 ringdown segment from the H1 public strain file.",
       "dataset_name": "ligo_waveforms",
@@ -91,7 +67,8 @@
       "preprocessing_steps": [
         "Downloaded the public GWOSC H1 strain HDF5 for the O1 interval containing GW150914.",
         "Applied a simple 35-350 Hz Butterworth bandpass filter.",
-        "Selected a short post-merger ringdown window and normalized the strain amplitude for lightweight comparison use."
+        "Selected a short post-merger ringdown window.",
+        "Stored both raw and normalized strain columns for fair residual comparison use."
       ],
       "raw_file_path": "empirical/cache/raw/ligo_waveforms/H-H1_LOSC_4_V1-1126256640-4096.hdf5",
       "script_used": "fetch_ligo_waveforms.py",
@@ -100,7 +77,7 @@
       "status": "fetched"
     },
     "redshift": {
-      "access_date": "2026-07-01T08:32:06+00:00",
+      "access_date": "2026-07-01T14:19:20+00:00",
       "access_method": "curated_published_summary",
       "citation_note": "Includes Pound-Rebka and Gravity Probe A published benchmark values.",
       "dataset_name": "redshift_clock",

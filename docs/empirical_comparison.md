@@ -21,11 +21,12 @@ Unavailable sources are not silently treated as evidence. They either remain `ma
 - Dubler redshift / clock benchmark comparison
 - Spiral galaxy rotation curve comparison
 - EHT ring / shadow observable comparison
-- Hawking-like analogue or limit-style proxy comparison
 - Observer memory waveform-style comparison
 - Elastic-pi ringdown comparison
 
 Noether and fp-Gauss outputs remain internal consistency diagnostics rather than direct empirical comparisons.
+
+Hawking-radiation is not treated as a direct empirical fetched-data target in this layer. It is handled separately under `theoretical_benchmarks/hawking/`.
 
 ## Directory Layout
 
@@ -74,6 +75,7 @@ python -m empirical.comparison.run_empirical_comparisons --fetch --dataset all
 - `fixture_only`: deterministic fixture fallback data are being used.
 - `manual_required`: the source family is known, but safe automated compact acquisition was not completed in this run.
 - `unavailable`: acquisition was attempted but no usable derived dataset was produced.
+- `theoretical_benchmark`: used outside this empirical layer for Hawking benchmark artifacts.
 
 Default tests do not require network. Fixture mode remains available even when public acquisition fails.
 
@@ -82,7 +84,6 @@ Default tests do not require network. Fixture mode remains available even when p
 - `fetch_redshift_clock_data.py`
 - `fetch_galaxy_rotation_data.py`
 - `fetch_eht_observables.py`
-- `fetch_hawking_analogue_or_limits.py`
 - `fetch_ligo_waveforms.py`
 - `fetch_all_empirical_data.py`
 
@@ -96,8 +97,6 @@ Each acquisition script writes a provenance manifest under `empirical/outputs/ma
   derived compact CSV from the public SPARC `Rotmod_LTG.zip` archive.
 - EHT:
   compact published summary observables for M87* and Sgr A*, not raw imaging products.
-- Hawking analogue or PBH limits:
-  source family recorded, but automatic compact dataset generation may remain manual.
 - LIGO / GWOSC:
   lightweight GW150914-derived ringdown segment from public strain data when the optional HDF5 reader is available.
 
@@ -106,15 +105,13 @@ Each acquisition script writes a provenance manifest under `empirical/outputs/ma
 - `dubler_redshift_mapping.py`: maps Dubler-shift outputs to a redshift benchmark adapter.
 - `spiral_galaxy_mapping.py`: maps locality-driven particle dynamics to radial rotation-curve observables.
 - `horizon_eht_mapping.py`: maps horizon-radius proxies to ring/shadow observables through a fitted angular scale.
-- `hawking_flux_mapping.py`: maps flux proxies to analogue/limit-style comparison curves.
 - `observer_memory_mapping.py`: maps black-hole memory-like traces to waveform-style comparison data.
 - `ripple_ringdown_mapping.py`: maps elastic-pi ringdown traces against a damped-sinusoid baseline and waveform-style comparison data.
 
 ## Baseline Models
 
 - Published or fixture baseline shift for Dubler redshift
-- Linear rotation baseline for spiral rotation
-- Exponential decay baseline for Hawking-like flux
+- Flat or linear simple baselines for spiral rotation
 - Damped sinusoid baseline for elastic-pi ringdown
 - No explicit baseline for EHT horizon and observer-memory proxy runs
 
@@ -133,6 +130,64 @@ Aggregate outputs:
 - `empirical/outputs/metrics/empirical_comparison_summary.csv`
 - `empirical/outputs/reports/empirical_comparison_summary.md`
 - `empirical/outputs/manifests/empirical_comparison_metadata.json`
+- `empirical/outputs/reports/empirical_audit_run6.md`
+- `empirical/outputs/metrics/empirical_audit_run6.csv`
+- `empirical/outputs/manifests/empirical_audit_run6.json`
+
+## Run 6 Empirical Audit and Mapping Improvements
+
+Run 6 audits the empirical outputs and improves observable mappings and residual diagnostics while preserving fixture/offline/fetched/cached support.
+
+What was audited:
+
+- aggregate empirical summary, per-comparison manifests, and per-comparison reports
+- redshift, galaxy, EHT, observer-memory, and ringdown mapping modules
+- source-registry and fetch-all behavior
+- `fields_of_physics_in_dev/` reuse candidates
+
+What was improved:
+
+- Dubler redshift:
+  explicit sign convention, bounded fit metadata, residual diagnostics
+- Spiral rotation:
+  tangential-velocity extraction, bounded deterministic parameter sweep, simple baseline family, morphology diagnostics
+- EHT horizon:
+  threshold-crossing proxy audit, uncertainty-aware residuals, shared-scale vs per-source diagnostics
+- Observer memory:
+  time-shift and residual-envelope diagnostics with explicit weak-fit reporting
+- Elastic-pi ringdown:
+  aligned ringdown window, raw and normalized strain columns, explicit TNE projection, residual-envelope plots, and holdout diagnostics
+
+Current best empirical candidate:
+
+- Dubler redshift remains the strongest small-benchmark residual fit, but it is a tiny curated/cached benchmark and must not be overstated.
+
+Current weakest empirical comparisons:
+
+- observer memory remains weak
+- ringdown remains difficult and the damped-sinusoid baseline may still be stronger
+- spiral rotation remains a finite toy rotation-curve proxy rather than a full astrophysical model
+
+Metric interpretation:
+
+- RMSE / MAE measure residual size under the implemented proxy mapping
+- R2 is descriptive only and can be weak even when a qualitative trend is visible
+- weighted RMSE and chi-square use the available uncertainty columns when present
+- AIC / BIC remain lightweight model-comparison diagnostics, not validation criteria
+
+Residual comparison is not validation:
+
+- improved residuals do not prove TNE
+- fetched public data remain preliminary comparison inputs
+- these outputs are not full GR, QFT, GRMHD, or full astrophysical simulation
+
+How to run the Run 6 audit mode:
+
+```bash
+python -m empirical.comparison.run_empirical_comparisons --offline --use-fixtures --dataset all --audit
+python -m empirical.comparison.run_empirical_comparisons --dataset all --audit
+python -m empirical.audit.run_fields_of_physics_in_dev_audit
+```
 
 ## Interpretation Guide
 
@@ -141,11 +196,11 @@ Aggregate outputs:
 - Residuals, fits, and scalings are derived comparison metrics, not direct confirmation.
 - Fixture fallback remains valid for reproducibility when public data are unavailable.
 - These outputs are suitable as repository-linked supplementary computational artifacts for later manuscript references.
+- Hawking benchmark outputs belong under `theoretical_benchmarks/hawking/` and should be cited as theoretical consistency artifacts rather than empirical comparisons.
 
 ## Known Limitations
 
 - Some sources are summary-observable or curated-benchmark inputs rather than raw instrument products.
-- Hawking-related public compact datasets may require manual follow-up curation.
 - The LIGO-derived ringdown product in this run is a lightweight single-detector proxy, not a full collaboration-grade inference result.
 - The galaxy rotation output in this run stores a compact representative curve rather than the full catalog.
 - None of these outputs should be described as empirical proof, proof-by-simulation, full-GR/QFT validation, or full astrophysical confirmation.

@@ -1,4 +1,8 @@
-"""Attempt public Hawking-analogue or PBH-limit acquisition without fabricating data."""
+"""Deprecated compatibility shim for the Hawking empirical-fetch slot.
+
+No direct astrophysical empirical Hawking-radiation dataset is fetched here.
+Use the Hawking theoretical benchmark runner instead.
+"""
 
 from __future__ import annotations
 
@@ -17,25 +21,22 @@ def run(
 ) -> dict[str, object]:
     payload = provenance_manifest(
         dataset_name="hawking_analogue_or_limits",
-        source_name="Analogue Hawking or PBH limit literature",
-        source_url="https://fermi.gsfc.nasa.gov/ssc/data/",
+        source_name="Hawking theoretical benchmark",
+        source_url="theoretical_benchmarks/hawking",
         script_name=Path(__file__).name,
-        status="fixture_only" if offline else "manual_required",
+        status="theoretical_benchmark",
         output_dir=str(output_dir) if output_dir is not None else None,
-        access_method="manual_curation_required",
+        access_method="deprecated_empirical_fetch_slot",
         expected_file_type="csv",
-        license_note="No public compact dataset is bundled in this run.",
-        citation_note="Use an analogue-Hawking or PBH-limit publication-specific dataset in a later manual pass.",
+        license_note="No empirical Hawking-radiation dataset is bundled because this slot is now theoretical-benchmark only.",
+        citation_note="No direct astrophysical empirical Hawking-radiation dataset is fetched. Use the Hawking theoretical benchmark instead.",
         preprocessing_steps=[
-            "Recorded the public source family.",
-            "Did not fabricate or infer a lightweight dataset when a reliable compact public table was not guaranteed.",
+            "Deprecated the empirical Hawking fetch slot.",
+            "Redirected users to the repository-local Hawking theoretical benchmark artifacts.",
         ],
-        limitations="Reliable lightweight public tables were not automatically acquired in this run.",
+        limitations="Hawking-radiation is handled as a theoretical benchmark, not a direct empirical fetched-data target.",
         extra={
-            "source_urls": [
-                "https://fermi.gsfc.nasa.gov/ssc/data/",
-                "https://arxiv.org/",
-            ]
+            "theoretical_benchmark_runner": "python -m theoretical_benchmarks.hawking.compare_tne_hawking_like_flux",
         },
     )
     write_dataset_manifest("hawking_analogue_or_limits_manifest.json", payload, str(output_dir) if output_dir is not None else None)
@@ -43,7 +44,7 @@ def run(
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Attempt public Hawking analogue or PBH-limit acquisition.")
+    parser = argparse.ArgumentParser(description="Deprecated Hawking empirical-fetch shim. Use the theoretical benchmark runner instead.")
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--force", action="store_true")

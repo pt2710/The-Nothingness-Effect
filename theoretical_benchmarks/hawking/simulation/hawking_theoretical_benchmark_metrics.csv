@@ -1,0 +1,2 @@
+benchmark_name,data_status,slope_temperature,slope_power,slope_evaporation,temperature_slope_error,power_slope_error,evaporation_slope_error,passed_benchmark_checks
+hawking_theoretical_benchmark,theoretical_benchmark,-1.0,-2.0000000000000004,3.0,0.0,-4.440892098500626e-16,0.0,True

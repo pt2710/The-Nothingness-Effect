@@ -117,6 +117,11 @@ def morphology_figure_path(slug: str, base: str | Path | None = None) -> Path:
     return tree["figures"] / f"{slug}_morphology_comparison.png"
 
 
+def named_figure_path(slug: str, suffix: str, base: str | Path | None = None) -> Path:
+    tree = ensure_output_tree(base)
+    return tree["figures"] / f"{slug}_{suffix}.png"
+
+
 def registry_output_path(base: str | Path | None = None) -> Path:
     return ensure_output_tree(base)["manifests"] / "source_registry.json"
 
@@ -143,6 +148,15 @@ def acquisition_summary_paths(base: str | Path | None = None) -> dict[str, Path]
     return {
         "metrics": tree["metrics"] / "data_acquisition_summary.csv",
         "manifest": tree["manifests"] / "data_acquisition_summary.json",
+    }
+
+
+def audit_paths(base: str | Path | None = None) -> dict[str, Path]:
+    tree = ensure_output_tree(base)
+    return {
+        "metrics": tree["metrics"] / "empirical_audit_run6.csv",
+        "report": tree["reports"] / "empirical_audit_run6.md",
+        "manifest": tree["manifests"] / "empirical_audit_run6.json",
     }
 
 

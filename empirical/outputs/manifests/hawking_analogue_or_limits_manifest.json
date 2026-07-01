@@ -1,25 +1,22 @@
 {
-  "access_date": "2026-07-01T08:32:08+00:00",
-  "access_method": "manual_curation_required",
-  "citation_note": "Use an analogue-Hawking or PBH-limit publication-specific dataset in a later manual pass.",
+  "access_date": "2026-07-01T14:19:33+00:00",
+  "access_method": "deprecated_empirical_fetch_slot",
+  "citation_note": "No direct astrophysical empirical Hawking-radiation dataset is fetched. Use the Hawking theoretical benchmark instead.",
   "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
   "dataset_name": "hawking_analogue_or_limits",
   "derived_file_path": "",
   "expected_file_type": "csv",
   "fixture_fallback_path": "empirical/fixtures/hawking_flux_fixture.csv",
-  "license_note": "No public compact dataset is bundled in this run.",
-  "limitations": "Reliable lightweight public tables were not automatically acquired in this run.",
+  "license_note": "No empirical Hawking-radiation dataset is bundled because this slot is now theoretical-benchmark only.",
+  "limitations": "Hawking-radiation is handled as a theoretical benchmark, not a direct empirical fetched-data target.",
   "preprocessing_steps": [
-    "Recorded the public source family.",
-    "Did not fabricate or infer a lightweight dataset when a reliable compact public table was not guaranteed."
+    "Deprecated the empirical Hawking fetch slot.",
+    "Redirected users to the repository-local Hawking theoretical benchmark artifacts."
   ],
   "raw_file_path": "",
   "script_used": "fetch_hawking_analogue_or_limits.py",
-  "source_name": "Analogue Hawking or PBH limit literature",
-  "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/",
-  "source_urls": [
-    "https://fermi.gsfc.nasa.gov/ssc/data/",
-    "https://arxiv.org/"
-  ],
-  "status": "manual_required"
+  "source_name": "Hawking theoretical benchmark",
+  "source_url": "theoretical_benchmarks/hawking",
+  "status": "theoretical_benchmark",
+  "theoretical_benchmark_runner": "python -m theoretical_benchmarks.hawking.compare_tne_hawking_like_flux"
 }

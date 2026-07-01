@@ -6,6 +6,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
+from equations.elastic_pi_ripples.wave_adapters import radial_wave_interference
+
 
 @dataclass(frozen=True)
 class RippleParams:
@@ -100,4 +102,71 @@ def compute_ripple_metrics(history: np.ndarray, dx: float = 1.0) -> dict[str, fl
         "max_abs_skew_proxy": float(np.max(np.abs(skew_proxy))),
         "late_time_distortion_proxy": distortion,
         "nan_count": int(np.isnan(values).sum()),
+    }
+
+
+def _normalize_series(values: np.ndarray) -> np.ndarray:
+    data = np.asarray(values, dtype=float)
+    centered = data - float(np.mean(data))
+    scale = float(np.max(np.abs(centered))) + 1e-12
+    return centered / scale
+
+
+def dominant_mode_projection(
+    history: np.ndarray,
+    x: np.ndarray,
+    *,
+    mode_number: int = 1,
+) -> np.ndarray:
+    values = np.asarray(history, dtype=float)
+    coordinates = np.asarray(x, dtype=float)
+    span = float(coordinates.max() - coordinates.min())
+    basis = np.sin(mode_number * np.pi * (coordinates - coordinates.min()) / max(span, 1e-12))
+    projection = values @ basis / (float(np.dot(basis, basis)) + 1e-12)
+    return np.asarray(projection, dtype=float)
+
+
+def energy_envelope(history: np.ndarray, x: np.ndarray) -> np.ndarray:
+    values = np.asarray(history, dtype=float)
+    coordinates = np.asarray(x, dtype=float)
+    gradients = np.gradient(values, coordinates, axis=1)
+    energy = np.trapezoid(values**2 + 0.25 * gradients**2, coordinates, axis=1)
+    return np.sqrt(np.maximum(energy, 0.0))
+
+
+def interference_mode_projection(history: np.ndarray, x: np.ndarray) -> np.ndarray:
+    basis = radial_wave_interference(x, time=0.0)
+    values = np.asarray(history, dtype=float)
+    projection = values @ basis / (float(np.dot(basis, basis)) + 1e-12)
+    return np.asarray(projection, dtype=float)
+
+
+def prepare_tne_ringdown_projection(
+    params: RippleParams | None = None,
+) -> dict[str, np.ndarray | dict[str, float]]:
+    result = simulate_elastic_pi_ripple(params)
+    x = np.asarray(result["x"], dtype=float)
+    history = np.asarray(result["history"], dtype=float)
+    centerline = history[:, len(x) // 2]
+    mode_1 = dominant_mode_projection(history, x, mode_number=1)
+    mode_2 = dominant_mode_projection(history, x, mode_number=2)
+    energy = energy_envelope(history, x)
+    interference = interference_mode_projection(history, x)
+    composite = (
+        0.45 * _normalize_series(centerline)
+        + 0.25 * _normalize_series(mode_1)
+        + 0.15 * _normalize_series(mode_2)
+        + 0.15 * _normalize_series(interference)
+    )
+    return {
+        "time": np.asarray(result["time"], dtype=float),
+        "x": x,
+        "centerline": np.asarray(centerline, dtype=float),
+        "dominant_mode_1": np.asarray(mode_1, dtype=float),
+        "dominant_mode_2": np.asarray(mode_2, dtype=float),
+        "energy_envelope": np.asarray(energy, dtype=float),
+        "interference_projection": np.asarray(interference, dtype=float),
+        "composite_projection": np.asarray(composite, dtype=float),
+        "metrics": result["metrics"],
+        "params": params.__dict__ if params is not None else RippleParams().__dict__,
     }

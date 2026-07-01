@@ -6,17 +6,20 @@ Run mode:
 - fetch attempted: False
 - offline: False
 - fixture fallback enabled: True
-- selected_datasets: redshift, galaxy, eht, hawking, memory, ringdown
+- selected_datasets: redshift, galaxy, eht, memory, ringdown
+- audit enabled: True
+- improve flag: False
+- parameter_sweep_level: standard
 
 Claim boundary:
 - preliminary comparison only
 - not an empirical validation claim
 - not a formal proof substitute
+- Hawking is handled separately as a theoretical benchmark
 
 Summary rows:
-- redshift_clock: RMSE=0.095749, MAE=0.069910, status=cached, passed_validation=True
-- galaxy_rotation: RMSE=0.189057, MAE=0.153404, status=fetched, passed_validation=True
-- eht_observables: RMSE=9.505718, MAE=8.235119, status=cached, passed_validation=True
-- hawking_analogue_or_limits: RMSE=0.254395, MAE=0.222045, status=fixture_only, passed_validation=True
-- ligo_waveforms: RMSE=0.420862, MAE=0.346418, status=fetched, passed_validation=True
-- ligo_ringdown: RMSE=0.420912, MAE=0.346635, status=fetched, passed_validation=True
+- redshift_clock: RMSE=0.009231, MAE=0.008960, status=cached, passed_validation=True
+- galaxy_rotation: RMSE=0.112750, MAE=0.077701, status=fetched, passed_validation=True
+- eht_observables: RMSE=10.886510, MAE=8.350784, status=cached, passed_validation=True
+- ligo_waveforms: RMSE=0.420622, MAE=0.345753, status=fetched, passed_validation=True
+- ligo_ringdown: RMSE=0.413649, MAE=0.336042, status=fetched, passed_validation=True

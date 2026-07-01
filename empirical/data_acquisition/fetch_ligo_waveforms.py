@@ -59,7 +59,10 @@ def _read_ringdown_rows(hdf5_path: Path) -> list[dict[str, float | str]]:
             {
                 "time": float(t_value),
                 "strain": float(s_value),
+                "strain_normalized": float(s_value),
+                "strain_raw": float(segment_strain[len(rows)]),
                 "strain_uncertainty": noise_sigma,
+                "strain_uncertainty_raw": float(np.std(filtered[noise_mask])) if np.any(noise_mask) else noise_sigma * amplitude_scale,
                 "event_id": "GW150914_H1_public",
                 "detector": "H1",
                 "source_status": "fetched",
@@ -153,7 +156,8 @@ def run(
         preprocessing_steps=[
             "Downloaded the public GWOSC H1 strain HDF5 for the O1 interval containing GW150914.",
             "Applied a simple 35-350 Hz Butterworth bandpass filter.",
-            "Selected a short post-merger ringdown window and normalized the strain amplitude for lightweight comparison use.",
+            "Selected a short post-merger ringdown window.",
+            "Stored both raw and normalized strain columns for fair residual comparison use.",
         ],
         limitations="Single-detector derived ringdown proxy only; not a full LIGO parameter-estimation product.",
         extra={"event_id": "GW150914_H1_public"},

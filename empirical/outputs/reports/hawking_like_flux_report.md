@@ -1,8 +1,7 @@
-# Hawking-like Flux Report
+# Hawking-like Flux Compatibility Note
 
-- data status: fixture_only
-- amplitude scale: 20658.246250
-- exponential baseline decay: 1.190321
-- RMSE: 0.254395
+This empirical entrypoint is deprecated.
+No direct astrophysical empirical Hawking-radiation dataset is fetched here.
+Use the Hawking theoretical benchmark artifacts under `theoretical_benchmarks/hawking/`.
 
-Interpretation: analogue/proxy or fixture-based comparison only; no astrophysical Hawking-radiation claim is made here.
+This is a theoretical consistency comparison, not empirical validation.

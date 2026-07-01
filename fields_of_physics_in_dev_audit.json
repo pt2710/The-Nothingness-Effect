@@ -1,0 +1,125 @@
+{
+  "recommended_actions": [
+    "add_simulation_script",
+    "add_tests",
+    "archive",
+    "integrate_later",
+    "integrate_now",
+    "keep_experimental",
+    "migrate_to_equations",
+    "no_action",
+    "remove_duplicate"
+  ],
+  "rows": [
+    {
+      "category": "general_relativity",
+      "has_simulation_output": true,
+      "has_tests": true,
+      "notes": "Interesting curvature/galaxy ideas, but current module depends on legacy root imports and contains heavy ad hoc simulation code. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/general_relativity/gravitational_curvature",
+      "recommended_action": "integrate_later",
+      "reusable_for": "black_hole_dynamics|locality_driven_gravity|eht_mapping",
+      "risk_level": "high",
+      "status": "prototype"
+    },
+    {
+      "category": "general_relativity",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Separate prototype; no direct Run 6 dependency. Primary module exists without obvious import-time side effects.",
+      "path": "fields_of_physics_in_dev/general_relativity/three_body_problem",
+      "recommended_action": "keep_experimental",
+      "reusable_for": "future_dynamics_work",
+      "risk_level": "medium",
+      "status": "module_present"
+    },
+    {
+      "category": "quantum_mechanics",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "No direct dependency on current empirical mappings; keep isolated until a dedicated quantum module is specified. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/entanglement",
+      "recommended_action": "keep_experimental",
+      "reusable_for": "future_quantum_module",
+      "risk_level": "high",
+      "status": "prototype"
+    },
+    {
+      "category": "quantum_mechanics",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Not directly useful for Run 6 empirical or Hawking work. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/fp_particle_models",
+      "recommended_action": "keep_experimental",
+      "reusable_for": "future_particle_models",
+      "risk_level": "medium",
+      "status": "prototype"
+    },
+    {
+      "category": "quantum_mechanics",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Framework text only; no direct code integration target. No primary implementation module found at folder root.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/quantum_uncertainty",
+      "recommended_action": "no_action",
+      "reusable_for": "future_framework_text",
+      "risk_level": "low",
+      "status": "support_only"
+    },
+    {
+      "category": "wave_functionality",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Core fp_pi wave concept was selectively integrated into equations/elastic_pi_ripples/wave_adapters.py with tests. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_pi_wave",
+      "recommended_action": "integrate_now",
+      "reusable_for": "elastic_pi_ripples|ringdown_projection|hawking_spectrum_proxy",
+      "risk_level": "medium",
+      "status": "prototype"
+    },
+    {
+      "category": "wave_functionality",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Sine-wave helper concept was selectively integrated into equations/elastic_pi_ripples/wave_adapters.py with tests. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_sine_wave",
+      "recommended_action": "integrate_now",
+      "reusable_for": "ringdown_projection|wave_helpers",
+      "risk_level": "medium",
+      "status": "prototype"
+    },
+    {
+      "category": "wave_functionality",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Interference concept was selectively integrated into equations/elastic_pi_ripples/wave_adapters.py with tests. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_wave_Interference",
+      "recommended_action": "integrate_now",
+      "reusable_for": "elastic_pi_ripples|ringdown_projection|observer_memory_wavefronts",
+      "risk_level": "medium",
+      "status": "prototype"
+    },
+    {
+      "category": "wave_functionality",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Useful visual ideas, but current module executes plotting at import time and is not directly wired into Run 6. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_waves",
+      "recommended_action": "integrate_later",
+      "reusable_for": "future_wave_visuals",
+      "risk_level": "medium",
+      "status": "prototype"
+    },
+    {
+      "category": "thermodynamics",
+      "has_simulation_output": false,
+      "has_tests": false,
+      "notes": "Not directly required for current empirical comparison work. Primary module executes side effects at import time.",
+      "path": "fields_of_physics_in_dev/thermodynamics",
+      "recommended_action": "keep_experimental",
+      "reusable_for": "future_entropic_modules",
+      "risk_level": "medium",
+      "status": "prototype"
+    }
+  ]
+}

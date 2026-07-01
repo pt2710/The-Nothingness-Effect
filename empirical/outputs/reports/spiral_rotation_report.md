@@ -1,9 +1,14 @@
 # Spiral Rotation Report
 
 - data status: fetched
-- radius scale: 0.433406
-- velocity scale: 1.650380
-- spiral order parameter: 0.049177
-- RMSE: 0.189057
+- parameter sweep level: standard
+- radius scale: 1.071719
+- velocity scale: 2.004635
+- aggregation mix (mean vs median): 0.000000
+- spiral order parameter: 0.004409
+- pitch-angle proxy: 2.376930
+- RMSE: 0.112750
+- selected baseline RMSE: 0.117708
+- flat / linear baseline RMSE: 0.193210 / 0.117708
 
-Interpretation: preliminary comparison only; not a full astrophysical validation claim.
+Interpretation: finite illustrative rotation-curve comparison only. Any fit improvement is a preliminary residual result under the implemented proxy mapping and does not replace full astrophysical modeling.

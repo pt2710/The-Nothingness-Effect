@@ -15,7 +15,9 @@ def run(
     use_fixtures: bool = True,
     quick: bool = False,
     dataset_path: str | Path | None = None,
+    parameter_sweep_level: str = "standard",
 ) -> dict[str, object]:
+    del quick, parameter_sweep_level
     selection = (
         {
             "path": Path(dataset_path),
@@ -43,6 +45,7 @@ def run(
                 "strain_uncertainty": float(empirical["strain_uncertainty"][idx]),
                 "tne_prediction": float(prediction["tne_prediction"][idx]),
                 "tne_residual": float(residuals["tne_residual"][idx]),
+                "residual_envelope": float(residuals["residual_envelope"][idx]),
                 "memory_derivative_proxy": float(prediction["memory_derivative_proxy"][idx]),
                 "cumulative_memory_proxy": float(prediction["cumulative_memory_proxy"][idx]),
                 "source_status": empirical["source_status"][idx],
@@ -70,9 +73,12 @@ def run(
                 "",
                 f"- data status: {selection['status']}",
                 f"- amplitude scale: {fitted['amplitude_scale']:.6f}",
+                f"- time shift: {fitted['time_shift']:.6f}",
+                f"- derivative weight: {fitted['derivative_weight']:.6f}",
                 f"- RMSE: {metrics['RMSE']:.6f}",
+                f"- mean residual envelope: {metrics['residual_envelope_mean']:.6f}",
                 "",
-                "Interpretation: preliminary memory-like proxy comparison only; not an empirical validation claim.",
+                "Interpretation: preliminary memory-like proxy comparison only. Weak explanatory power should be expected unless this toy proxy matches waveform envelopes more cleanly.",
             ]
         ),
     )

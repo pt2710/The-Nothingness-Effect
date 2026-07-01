@@ -2,5 +2,4 @@ dataset_name,status,source_url,raw_file_path,derived_file_path,limitations
 redshift_clock,cached,https://physics.aps.org/story/v16/st1,,empirical/outputs/data/redshift_clock_public_or_curated.csv,Structured raw public benchmark tables are not guaranteed for these experiments.
 galaxy_rotation,fetched,https://astroweb.case.edu/SPARC/Rotmod_LTG.zip,empirical/cache/raw/galaxy_rotation/Rotmod_LTG.zip,empirical/outputs/data/galaxy_rotation_public.csv,A single lightweight representative galaxy curve is stored in this run.
 eht_observables,cached,https://arxiv.org/abs/1906.11241,,empirical/outputs/data/eht_public_observables.csv,Published summary observables only; no raw imaging products are stored.
-hawking_analogue_or_limits,manual_required,https://fermi.gsfc.nasa.gov/ssc/data/,,,Reliable lightweight public tables were not automatically acquired in this run.
 ligo_waveforms,fetched,https://gwosc.org/api/v2/strain-files/H1-1126259446-4kHz,empirical/cache/raw/ligo_waveforms/H-H1_LOSC_4_V1-1126256640-4096.hdf5,empirical/outputs/data/ligo_gw150914_ringdown.csv,Single-detector derived ringdown proxy only; not a full LIGO parameter-estimation product.

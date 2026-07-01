@@ -87,6 +87,49 @@ def hawking_like_flux(temperature: np.ndarray) -> np.ndarray:
     return temp**4
 
 
+def interpolate_profile_value(r: np.ndarray, profile: np.ndarray, radius: float) -> float:
+    coordinates = np.asarray(r, dtype=float)
+    values = np.asarray(profile, dtype=float)
+    if not np.isfinite(radius):
+        return float("nan")
+    return float(np.interp(radius, coordinates, values, left=values[0], right=values[-1]))
+
+
+def black_hole_snapshot(
+    mass_proxy: float,
+    params: BlackHoleParams | None = None,
+) -> dict[str, np.ndarray | float]:
+    sim_params = params or BlackHoleParams()
+    r = np.linspace(sim_params.r_min, sim_params.r_max, sim_params.grid_size)
+    entropy = entropy_profile_radial(
+        r,
+        mass_proxy=mass_proxy,
+        entropy_scale=sim_params.entropy_scale,
+        width=sim_params.width,
+    )
+    pi_E = elastic_pi_profile(entropy, sim_params.K_D)
+    gradient = surface_gradient(r, pi_E)
+    temperature_profile = hawking_like_temperature(gradient, sim_params.K_D)
+    flux_profile = hawking_like_flux(temperature_profile)
+    horizon_radius = horizon_indicator(r, pi_E, sim_params.threshold)
+    threshold_contour_radius = detect_threshold_crossing(r, pi_E, sim_params.threshold * 0.85)
+    return {
+        "r": r,
+        "entropy": entropy,
+        "pi_E": pi_E,
+        "surface_gradient": gradient,
+        "temperature_profile": temperature_profile,
+        "flux_profile": flux_profile,
+        "horizon_radius": horizon_radius,
+        "threshold_contour_radius": threshold_contour_radius,
+        "temperature_at_horizon": interpolate_profile_value(r, temperature_profile, horizon_radius),
+        "flux_at_horizon": interpolate_profile_value(r, flux_profile, horizon_radius),
+        "integrated_flux_proxy": float(np.trapezoid(flux_profile, r)),
+        "central_depression_proxy": float(np.min(pi_E)),
+        "ring_contrast_proxy": float(np.max(pi_E) - np.min(pi_E)),
+    }
+
+
 def observer_horizon_trace(
     r_grid: np.ndarray,
     pi_E_time: np.ndarray,
@@ -113,29 +156,20 @@ def simulate_black_hole_dynamics(
     sim_params = params or BlackHoleParams()
     r = np.linspace(sim_params.r_min, sim_params.r_max, sim_params.grid_size)
     time = np.linspace(0.0, 1.0, sim_params.steps)
+    mass_history = sim_params.mass_proxy * (1.0 - 0.08 * time)
     entropy_time = []
     pi_time = []
     horizon_radius = []
     temperature_proxy = []
     flux_proxy = []
 
-    for t in time:
-        mass_t = sim_params.mass_proxy * (1.0 - 0.08 * t)
-        entropy = entropy_profile_radial(
-            r,
-            mass_proxy=mass_t,
-            entropy_scale=sim_params.entropy_scale,
-            width=sim_params.width,
-        )
-        pi_E = elastic_pi_profile(entropy, sim_params.K_D)
-        grad = surface_gradient(r, pi_E)
-        temp = hawking_like_temperature(grad, sim_params.K_D)
-        flux = hawking_like_flux(temp)
-        entropy_time.append(entropy)
-        pi_time.append(pi_E)
-        horizon_radius.append(horizon_indicator(r, pi_E, sim_params.threshold))
-        temperature_proxy.append(np.max(temp))
-        flux_proxy.append(np.trapezoid(flux, r))
+    for mass_t in mass_history:
+        snapshot = black_hole_snapshot(float(mass_t), sim_params)
+        entropy_time.append(snapshot["entropy"])
+        pi_time.append(snapshot["pi_E"])
+        horizon_radius.append(snapshot["horizon_radius"])
+        temperature_proxy.append(snapshot["temperature_at_horizon"])
+        flux_proxy.append(snapshot["integrated_flux_proxy"])
 
     entropy_arr = np.asarray(entropy_time)
     pi_arr = np.asarray(pi_time)
@@ -158,6 +192,7 @@ def simulate_black_hole_dynamics(
     return {
         "r": r,
         "time": time,
+        "mass_history": mass_history,
         "entropy_time": entropy_arr,
         "pi_E_time": pi_arr,
         "horizon_radius": horizon_arr,

@@ -105,6 +105,58 @@ def simulate_locality_spiral(
     }
 
 
+def radial_velocity_profile(
+    positions: np.ndarray,
+    velocities: np.ndarray,
+    *,
+    n_bins: int = 10,
+) -> dict[str, np.ndarray]:
+    pos = np.asarray(positions, dtype=float)
+    vel = np.asarray(velocities, dtype=float)
+    radii = np.linalg.norm(pos, axis=1)
+    tangent = np.column_stack([-pos[:, 1], pos[:, 0]])
+    tangent /= np.linalg.norm(tangent, axis=1, keepdims=True) + 1e-12
+    tangential_velocity = np.sum(vel * tangent, axis=1)
+    bins = np.linspace(max(1e-6, float(radii.min())), float(radii.max()), n_bins + 1)
+    centers: list[float] = []
+    mean_velocity: list[float] = []
+    median_velocity: list[float] = []
+    std_velocity: list[float] = []
+    density_profile: list[float] = []
+    counts: list[int] = []
+    for index in range(len(bins) - 1):
+        mask = (radii >= bins[index]) & (radii < bins[index + 1] if index < len(bins) - 2 else radii <= bins[index + 1])
+        if np.count_nonzero(mask) < 3:
+            continue
+        centers.append(float(np.mean(radii[mask])))
+        tangential = tangential_velocity[mask]
+        mean_velocity.append(float(np.mean(np.abs(tangential))))
+        median_velocity.append(float(np.median(np.abs(tangential))))
+        std_velocity.append(float(np.std(tangential)))
+        density_profile.append(float(np.count_nonzero(mask) / max(bins[index + 1] - bins[index], 1e-12)))
+        counts.append(int(np.count_nonzero(mask)))
+    return {
+        "radial_centers": np.asarray(centers, dtype=float),
+        "mean_tangential_velocity": np.asarray(mean_velocity, dtype=float),
+        "median_tangential_velocity": np.asarray(median_velocity, dtype=float),
+        "tangential_velocity_std": np.asarray(std_velocity, dtype=float),
+        "density_profile": np.asarray(density_profile, dtype=float),
+        "counts": np.asarray(counts, dtype=int),
+    }
+
+
+def spiral_pitch_proxy(positions: np.ndarray) -> float:
+    pos = np.asarray(positions, dtype=float)
+    radii = np.linalg.norm(pos, axis=1)
+    mask = radii > 1e-6
+    if np.count_nonzero(mask) < 3:
+        return float("nan")
+    theta = np.unwrap(np.arctan2(pos[mask, 1], pos[mask, 0]))
+    log_radius = np.log(radii[mask])
+    slope, _ = np.polyfit(log_radius, theta, deg=1)
+    return float(np.arctan2(1.0, slope))
+
+
 def compute_spiral_metrics(history: np.ndarray) -> dict[str, float]:
     positions = np.asarray(history, dtype=float)
     final = positions[-1]
@@ -121,6 +173,7 @@ def compute_spiral_metrics(history: np.ndarray) -> dict[str, float]:
         "final_mean_radius": float(np.mean(radius_final)),
         "radial_concentration": float(np.mean(radius_initial) - np.mean(radius_final)),
         "spiral_order_parameter": float(coherence),
+        "pitch_angle_proxy": spiral_pitch_proxy(final),
         "finite_energy_proxy": finite_energy_proxy,
         "max_abs_position": float(np.max(np.abs(positions))),
         "nan_count": int(np.isnan(positions).sum()),

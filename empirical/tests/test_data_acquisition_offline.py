@@ -20,7 +20,6 @@ def test_offline_fetch_summary_is_written(tmp_path):
         "redshift_clock",
         "galaxy_rotation",
         "eht_observables",
-        "hawking_analogue_or_limits",
         "ligo_waveforms",
     }
     assert all(status in {"fixture_only", "cached"} for status in statuses.values())

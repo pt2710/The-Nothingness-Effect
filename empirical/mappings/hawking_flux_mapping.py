@@ -1,4 +1,8 @@
-"""Observable mapping for fixture-backed Hawking-like flux comparisons."""
+"""Deprecated mapping module for the former Hawking empirical-comparison slot.
+
+Hawking-radiation is now handled as a theoretical benchmark rather than a
+direct empirical fetched-data target.
+"""
 
 from __future__ import annotations
 

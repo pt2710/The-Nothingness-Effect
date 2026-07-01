@@ -24,6 +24,12 @@ def _normalize_signal(values: np.ndarray) -> np.ndarray:
     return centered / (float(np.max(np.abs(centered))) + 1e-12)
 
 
+def _residual_envelope(values: np.ndarray, window: int = 5) -> np.ndarray:
+    data = np.asarray(values, dtype=float)
+    weights = np.ones(window, dtype=float) / float(window)
+    return np.sqrt(np.convolve(data**2, weights, mode="same"))
+
+
 def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, Any]:
     rows = read_csv_rows(path or fixture_path("ligo_ringdown_fixture.csv"))
     return {
@@ -41,10 +47,23 @@ def fit_parameters(empirical: dict[str, Any]) -> dict[str, float]:
     model_time = np.linspace(float(np.min(time)), float(np.max(time)), len(result["memory"]))
     memory = _normalize_signal(result["memory"])
     distance = _normalize_signal(result["observer_distance"])
-    proxy = memory + 0.45 * np.gradient(distance, model_time)
-    proxy_interp = np.interp(time, model_time, proxy)
-    amplitude = float(np.dot(empirical["strain"], proxy_interp) / (np.dot(proxy_interp, proxy_interp) + 1e-12))
-    return {"amplitude_scale": amplitude}
+    best = {"amplitude_scale": 1.0, "time_shift": 0.0, "derivative_weight": 0.45, "score": float("inf")}
+    for time_shift in np.linspace(-0.04, 0.04, 9):
+        shifted_time = time - time_shift
+        for derivative_weight in np.linspace(0.2, 0.6, 9):
+            proxy = memory + derivative_weight * np.gradient(distance, model_time)
+            proxy_interp = np.interp(shifted_time, model_time, proxy, left=proxy[0], right=proxy[-1])
+            amplitude = float(np.dot(empirical["strain"], proxy_interp) / (np.dot(proxy_interp, proxy_interp) + 1e-12))
+            prediction = amplitude * proxy_interp
+            score = float(np.sqrt(np.mean((prediction - empirical["strain"]) ** 2)))
+            if score < best["score"]:
+                best = {
+                    "amplitude_scale": amplitude,
+                    "time_shift": float(time_shift),
+                    "derivative_weight": float(derivative_weight),
+                    "score": score,
+                }
+    return best
 
 
 def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[str, float] | None = None) -> dict[str, Any]:
@@ -54,8 +73,8 @@ def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[
     model_time = np.linspace(float(np.min(time)), float(np.max(time)), len(result["memory"]))
     memory = _normalize_signal(result["memory"])
     distance = _normalize_signal(result["observer_distance"])
-    proxy = memory + 0.45 * np.gradient(distance, model_time)
-    prediction = fit["amplitude_scale"] * np.interp(time, model_time, proxy)
+    proxy = memory + fit["derivative_weight"] * np.gradient(distance, model_time)
+    prediction = fit["amplitude_scale"] * np.interp(time - fit["time_shift"], model_time, proxy, left=proxy[0], right=proxy[-1])
     return {
         "tne_prediction": prediction,
         "memory_derivative_proxy": np.interp(time, model_time, np.gradient(memory, model_time)),
@@ -66,7 +85,11 @@ def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[
 
 def compute_residuals(empirical: dict[str, Any], prediction: dict[str, Any]) -> dict[str, np.ndarray]:
     observed = np.asarray(empirical["strain"], dtype=float)
-    return {"tne_residual": np.asarray(prediction["tne_prediction"], dtype=float) - observed}
+    residual = np.asarray(prediction["tne_prediction"], dtype=float) - observed
+    return {
+        "tne_residual": residual,
+        "residual_envelope": _residual_envelope(residual),
+    }
 
 
 def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], residuals: dict[str, np.ndarray]) -> dict[str, Any]:
@@ -79,6 +102,8 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
     metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "none"
+    metrics["residual_envelope_mean"] = float(np.mean(residuals["residual_envelope"]))
+    metrics["TNE_vs_baseline_note"] = "Weak explanatory power remains possible even when residual envelopes are smoother."
     return metrics
 
 

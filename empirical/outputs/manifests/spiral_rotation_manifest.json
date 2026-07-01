@@ -3,21 +3,39 @@
   "comparison": "spiral_rotation",
   "data_status": "fetched",
   "fitted_parameters": {
-    "radius_scale": 0.43340571196564903,
-    "velocity_scale": 1.650380222720076
+    "aggregation_mix": 0.0,
+    "baseline_scores": {
+      "flat_RMSE": 0.19320956732920677,
+      "linear_RMSE": 0.11770833143319084
+    },
+    "parameter_sweep_level": "standard",
+    "radius_scale": 1.071719382814575,
+    "simulation_params": {
+      "G_eff": 0.32,
+      "damping": 0.986,
+      "dt": 0.035,
+      "eps": 0.08,
+      "n_particles": 240,
+      "radial_scale": 2.4,
+      "shear": 0.12,
+      "sigma": 3.4,
+      "steps": 260
+    },
+    "velocity_scale": 2.0046348962314178
   },
   "input_dataset_path": "empirical/outputs/data/galaxy_rotation_public.csv",
-  "limitations": "Finite toy-model mapping only; not a full galaxy simulation.",
+  "limitations": "Finite toy-model mapping only; not a dark-matter replacement claim and not a full astrophysical simulation.",
   "output_paths": {
     "data": "empirical/outputs/data/spiral_rotation_comparison.csv",
     "figure": "empirical/outputs/figures/spiral_rotation_comparison.png",
     "manifest": "empirical/outputs/manifests/spiral_rotation_manifest.json",
     "metrics": "empirical/outputs/metrics/spiral_rotation_metrics.csv",
     "morphology_figure": "empirical/outputs/figures/spiral_morphology_comparison.png",
-    "report": "empirical/outputs/reports/spiral_rotation_report.md"
+    "report": "empirical/outputs/reports/spiral_rotation_report.md",
+    "residual_figure": "empirical/outputs/figures/spiral_rotation_residuals.png"
   },
   "source_manifest": {
-    "access_date": "2026-07-01T08:32:07+00:00",
+    "access_date": "2026-07-01T14:19:20+00:00",
     "access_method": "public_zip_download",
     "citation_note": "Compact NGC2403 rotation curve derived from the SPARC public archive.",
     "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",

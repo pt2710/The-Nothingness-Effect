@@ -49,17 +49,6 @@ SOURCE_SPECS: dict[str, dict[str, Any]] = {
         "citation_note": "Compact derived observables from published EHT summary results.",
         "license_note": "Derived summary values only; no raw image products are stored here.",
     },
-    "hawking_analogue_or_limits": {
-        "dataset_name": "hawking_analogue_or_limits",
-        "preferred_source": "Published analogue Hawking or PBH limit literature",
-        "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/",
-        "expected_file_type": "csv",
-        "fixture_filename": "hawking_flux_fixture.csv",
-        "derived_filename": "hawking_analogue_or_limits.csv",
-        "manifest_filename": "hawking_analogue_or_limits_manifest.json",
-        "citation_note": "Manual curation may be required because lightweight public tables are not guaranteed.",
-        "license_note": "No astrophysical Hawking-radiation claim is implied by this dataset slot.",
-    },
     "ligo_waveforms": {
         "dataset_name": "ligo_waveforms",
         "preferred_source": "GWOSC public strain archive",

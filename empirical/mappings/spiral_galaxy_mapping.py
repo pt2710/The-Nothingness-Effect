@@ -127,7 +127,8 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         baseline_params=2,
     )
-    metrics["data_status"] = "fixture_only"
+    source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
+    metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "linear_rotation_baseline"
     metrics["spiral_order_parameter"] = float(prediction["spiral_order_parameter"])
     metrics["velocity_smoothness_proxy"] = float(prediction["velocity_smoothness_proxy"])
@@ -148,7 +149,7 @@ def plot_comparison(empirical: dict[str, Any], prediction: dict[str, Any], outpu
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["velocity_uncertainty"], dtype=float),
         output_path=curve_path,
-        title="Fixture-backed spiral rotation comparison",
+        title="Spiral rotation comparison",
         xlabel="radius",
         ylabel="velocity",
         baseline_label="linear baseline",

@@ -1,0 +1,23 @@
+{
+  "access_date": "2026-07-01T08:32:07+00:00",
+  "access_method": "public_zip_download",
+  "citation_note": "Compact NGC2403 rotation curve derived from the SPARC public archive.",
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "dataset_name": "galaxy_rotation",
+  "derived_file_path": "empirical/outputs/data/galaxy_rotation_public.csv",
+  "expected_file_type": "csv",
+  "fixture_fallback_path": "empirical/fixtures/galaxy_rotation_fixture.csv",
+  "license_note": "Derived compact CSV from SPARC public rotation curves.",
+  "limitations": "A single lightweight representative galaxy curve is stored in this run.",
+  "preprocessing_steps": [
+    "Downloaded the public Rotmod_LTG.zip archive.",
+    "Parsed NGC2403_rotmod.dat.",
+    "Normalized radius and velocity columns for the repository comparison adapter while retaining raw columns."
+  ],
+  "raw_file_path": "empirical/cache/raw/galaxy_rotation/Rotmod_LTG.zip",
+  "script_used": "fetch_galaxy_rotation_data.py",
+  "selected_galaxy": "NGC2403",
+  "source_name": "SPARC rotation-curve catalog",
+  "source_url": "https://astroweb.case.edu/SPARC/Rotmod_LTG.zip",
+  "status": "fetched"
+}

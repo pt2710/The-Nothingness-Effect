@@ -2,88 +2,102 @@
   "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
   "registry": {
     "eht_observables": {
-      "access_method": "offline_fixture",
-      "citation_note": "Replace with published EHT summary observables in a network-enabled run.",
+      "access_method": "curated_published_summary",
+      "citation_note": "Derived from published M87* and Sgr A* summary observables.",
       "dataset_name": "eht_observables",
       "expected_file_type": "csv",
-      "last_attempted": "offline_fixture_run4",
-      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "last_attempted": "2026-07-01T08:32:08+00:00",
+      "license_note": "Compact derived observables only.",
+      "limitations": "Published summary observables only; no raw imaging products are stored.",
       "output_paths": [
+        "empirical/outputs/data/eht_public_observables.csv",
         "empirical/fixtures/eht_observable_fixture.csv"
       ],
-      "preferred_source": "Event Horizon Telescope published observables",
-      "source_url": "https://eventhorizontelescope.org/",
-      "status": "fixture_only"
+      "preferred_source": "Published Event Horizon Telescope summary observables",
+      "source_url": "https://arxiv.org/abs/1906.11241",
+      "status": "cached"
     },
     "galaxy_rotation": {
-      "access_method": "offline_fixture",
-      "citation_note": "Replace with SPARC or equivalent citation in a network-enabled run.",
+      "access_method": "public_zip_download",
+      "citation_note": "Compact NGC2403 rotation curve derived from the SPARC public archive.",
       "dataset_name": "galaxy_rotation",
       "expected_file_type": "csv",
-      "last_attempted": "offline_fixture_run4",
-      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "last_attempted": "2026-07-01T08:32:07+00:00",
+      "license_note": "Derived compact CSV from SPARC public rotation curves.",
+      "limitations": "A single lightweight representative galaxy curve is stored in this run.",
       "output_paths": [
+        "empirical/cache/raw/galaxy_rotation/Rotmod_LTG.zip",
+        "empirical/outputs/data/galaxy_rotation_public.csv",
         "empirical/fixtures/galaxy_rotation_fixture.csv"
       ],
-      "preferred_source": "SPARC-style rotation-curve catalog",
-      "source_url": "http://astroweb.cwru.edu/SPARC/",
-      "status": "fixture_only"
+      "preferred_source": "SPARC rotation-curve catalog",
+      "source_url": "https://astroweb.case.edu/SPARC/Rotmod_LTG.zip",
+      "status": "fetched"
     },
     "hawking_analogue_or_limits": {
-      "access_method": "offline_fixture",
-      "citation_note": "Replace with analogue/limit reference in a later run.",
+      "access_method": "manual_curation_required",
+      "citation_note": "Use an analogue-Hawking or PBH-limit publication-specific dataset in a later manual pass.",
       "dataset_name": "hawking_analogue_or_limits",
       "expected_file_type": "csv",
-      "last_attempted": "offline_fixture_run4",
-      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "last_attempted": "2026-07-01T08:32:08+00:00",
+      "license_note": "No public compact dataset is bundled in this run.",
+      "limitations": "Reliable lightweight public tables were not automatically acquired in this run.",
       "output_paths": [
         "empirical/fixtures/hawking_flux_fixture.csv"
       ],
-      "preferred_source": "Published analogue Hawking or upper-limit literature",
-      "source_url": "https://arxiv.org/",
-      "status": "fixture_only"
+      "preferred_source": "Analogue Hawking or PBH limit literature",
+      "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/",
+      "status": "manual_required"
     },
     "ligo_ringdown": {
-      "access_method": "offline_fixture",
-      "citation_note": "Replace with event-specific ringdown extract in a later run.",
-      "dataset_name": "ligo_ringdown",
-      "expected_file_type": "csv",
-      "last_attempted": "offline_fixture_run4",
-      "license_note": "Fixture-only synthetic/curated test data in this run.",
-      "output_paths": [
-        "empirical/fixtures/ligo_ringdown_fixture.csv"
-      ],
-      "preferred_source": "GWOSC ringdown-ready event extract",
-      "source_url": "https://www.gwosc.org/",
-      "status": "fixture_only"
-    },
-    "ligo_waveforms": {
-      "access_method": "offline_fixture",
-      "citation_note": "Replace with GWOSC waveform citation in a network-enabled run.",
+      "access_method": "public_hdf5_download",
+      "citation_note": "Derived single-detector GW150914 ringdown segment from the H1 public strain file.",
       "dataset_name": "ligo_waveforms",
       "expected_file_type": "csv",
-      "last_attempted": "offline_fixture_run4",
-      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "last_attempted": "2026-07-01T08:32:32+00:00",
+      "license_note": "Derived lightweight ringdown segment from GWOSC public strain data.",
+      "limitations": "Single-detector derived ringdown proxy only; not a full LIGO parameter-estimation product.",
       "output_paths": [
+        "empirical/cache/raw/ligo_waveforms/H-H1_LOSC_4_V1-1126256640-4096.hdf5",
+        "empirical/outputs/data/ligo_gw150914_ringdown.csv",
         "empirical/fixtures/ligo_ringdown_fixture.csv"
       ],
-      "preferred_source": "GWOSC waveform archive",
-      "source_url": "https://www.gwosc.org/",
-      "status": "fixture_only"
+      "preferred_source": "GWOSC public strain archive",
+      "source_url": "https://gwosc.org/api/v2/strain-files/H1-1126259446-4kHz",
+      "status": "fetched"
+    },
+    "ligo_waveforms": {
+      "access_method": "public_hdf5_download",
+      "citation_note": "Derived single-detector GW150914 ringdown segment from the H1 public strain file.",
+      "dataset_name": "ligo_waveforms",
+      "expected_file_type": "csv",
+      "last_attempted": "2026-07-01T08:32:32+00:00",
+      "license_note": "Derived lightweight ringdown segment from GWOSC public strain data.",
+      "limitations": "Single-detector derived ringdown proxy only; not a full LIGO parameter-estimation product.",
+      "output_paths": [
+        "empirical/cache/raw/ligo_waveforms/H-H1_LOSC_4_V1-1126256640-4096.hdf5",
+        "empirical/outputs/data/ligo_gw150914_ringdown.csv",
+        "empirical/fixtures/ligo_ringdown_fixture.csv"
+      ],
+      "preferred_source": "GWOSC public strain archive",
+      "source_url": "https://gwosc.org/api/v2/strain-files/H1-1126259446-4kHz",
+      "status": "fetched"
     },
     "redshift_clock": {
-      "access_method": "offline_fixture",
-      "citation_note": "Replace with real literature citation in a network-enabled run.",
+      "access_method": "curated_published_summary",
+      "citation_note": "Includes Pound-Rebka and Gravity Probe A published benchmark values.",
       "dataset_name": "redshift_clock",
       "expected_file_type": "csv",
-      "last_attempted": "offline_fixture_run4",
-      "license_note": "Fixture-only synthetic/curated test data in this run.",
+      "last_attempted": "2026-07-01T08:32:06+00:00",
+      "license_note": "Compact derived benchmark table for repository-linked comparison use.",
+      "limitations": "Structured raw public benchmark tables are not guaranteed for these experiments.",
       "output_paths": [
+        "empirical/outputs/data/redshift_clock_public_or_curated.csv",
         "empirical/fixtures/redshift_clock_fixture.csv"
       ],
-      "preferred_source": "Published redshift/gravitational-clock literature",
-      "source_url": "https://lambda.gsfc.nasa.gov/",
-      "status": "fixture_only"
+      "preferred_source": "Published redshift benchmark literature",
+      "source_url": "https://physics.aps.org/story/v16/st1",
+      "status": "cached"
     }
   }
 }

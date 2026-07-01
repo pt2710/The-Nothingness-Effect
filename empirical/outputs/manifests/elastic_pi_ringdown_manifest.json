@@ -1,22 +1,23 @@
 {
   "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
   "comparison": "elastic_pi_ringdown",
-  "data_status": "fixture_only",
+  "data_status": "fetched",
   "fitted_parameters": {
     "baseline": {
-      "amplitude": -0.9466465703425292,
-      "frequency": 2.4000000000000004,
-      "phase": 3.141592653589793,
-      "score": 0.04512057908767955,
-      "tau": 0.3190909090909091
+      "amplitude": -0.2729915365213747,
+      "frequency": 0.8,
+      "phase": 1.0471975511965976,
+      "score": 0.41868682226903114,
+      "tau": 0.12
     },
     "tne": {
-      "amplitude": 0.12517906639403253,
-      "score": 0.3535136636281646,
+      "amplitude": -0.008144183152270898,
+      "score": 0.4209118721763324,
       "time_scale": 0.7
     }
   },
-  "limitations": "Uses offline ringdown fixture only.",
+  "input_dataset_path": "empirical/outputs/data/ligo_gw150914_ringdown.csv",
+  "limitations": "Preliminary ringdown comparison only; not a formal proof substitute.",
   "output_paths": {
     "data": "empirical/outputs/data/elastic_pi_ringdown_comparison.csv",
     "figure": "empirical/outputs/figures/elastic_pi_ringdown_comparison.png",
@@ -24,5 +25,28 @@
     "metrics": "empirical/outputs/metrics/elastic_pi_ringdown_metrics.csv",
     "report": "empirical/outputs/reports/elastic_pi_ringdown_report.md",
     "residual_figure": "empirical/outputs/figures/elastic_pi_ringdown_residuals.png"
+  },
+  "source_manifest": {
+    "access_date": "2026-07-01T08:32:32+00:00",
+    "access_method": "public_hdf5_download",
+    "citation_note": "Derived single-detector GW150914 ringdown segment from the H1 public strain file.",
+    "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+    "dataset_name": "ligo_waveforms",
+    "derived_file_path": "empirical/outputs/data/ligo_gw150914_ringdown.csv",
+    "event_id": "GW150914_H1_public",
+    "expected_file_type": "csv",
+    "fixture_fallback_path": "empirical/fixtures/ligo_ringdown_fixture.csv",
+    "license_note": "Derived lightweight ringdown segment from GWOSC public strain data.",
+    "limitations": "Single-detector derived ringdown proxy only; not a full LIGO parameter-estimation product.",
+    "preprocessing_steps": [
+      "Downloaded the public GWOSC H1 strain HDF5 for the O1 interval containing GW150914.",
+      "Applied a simple 35-350 Hz Butterworth bandpass filter.",
+      "Selected a short post-merger ringdown window and normalized the strain amplitude for lightweight comparison use."
+    ],
+    "raw_file_path": "empirical/cache/raw/ligo_waveforms/H-H1_LOSC_4_V1-1126256640-4096.hdf5",
+    "script_used": "fetch_ligo_waveforms.py",
+    "source_name": "GWOSC public strain archive",
+    "source_url": "https://gwosc.org/api/v2/strain-files/H1-1126259446-4kHz",
+    "status": "fetched"
   }
 }

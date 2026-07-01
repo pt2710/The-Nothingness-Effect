@@ -1,2 +1,2 @@
-RMSE,MAE,normalized_RMSE,R2,chi_square,AIC,BIC,residual_mean,residual_std,passed_validation,data_status,baseline_model,ring_contrast_proxy,model,empirical_dataset,fixture_status
-9.505718350013863,8.235119198579415,0.30862721915628427,0.40741362637500167,99.66731223957234,20.015148392790035,19.401442753909926,-8.235119198579415,4.747788236113635,True,fixture_only,none,0.6493109150987901,black_hole_dynamics,eht_observable_fixture,fixture_only
+RMSE,MAE,normalized_RMSE,R2,chi_square,AIC,BIC,residual_mean,residual_std,passed_validation,data_status,baseline_model,ring_contrast_proxy,model,empirical_dataset
+9.505718350013863,8.235119198579415,0.30862721915628427,0.40741362637500167,99.66731223957234,20.015148392790035,19.401442753909926,-8.235119198579415,4.747788236113635,True,cached,none,0.6493109150987901,black_hole_dynamics,eht_observables

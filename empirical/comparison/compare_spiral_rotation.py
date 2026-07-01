@@ -1,21 +1,40 @@
-"""Run a fixture-backed spiral rotation comparison."""
+"""Run a spiral rotation comparison with fetched, cached, or fixture fallback data."""
 
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
+from empirical.comparison.common import resolve_input_dataset
 from empirical.io import comparison_paths, morphology_figure_path, repo_relative, save_rows, write_manifest, write_report
 from empirical.mappings import spiral_galaxy_mapping as mapping
 
 
-def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: bool = False) -> dict[str, object]:
-    empirical = mapping.prepare_empirical_observable()
+def run(
+    output_dir: str | Path | None = None,
+    use_fixtures: bool = True,
+    quick: bool = False,
+    dataset_path: str | Path | None = None,
+) -> dict[str, object]:
+    selection = (
+        {
+            "path": Path(dataset_path),
+            "status": "cached",
+            "manifest": {},
+            "dataset_name": "galaxy_rotation",
+        }
+        if dataset_path is not None
+        else resolve_input_dataset("galaxy", output_dir=output_dir, use_fixtures=use_fixtures)
+    )
+    empirical = mapping.prepare_empirical_observable(selection["path"])
     fitted = mapping.fit_parameters(empirical)
     prediction = mapping.prepare_model_prediction(empirical, fitted)
     residuals = mapping.compute_residuals(empirical, prediction)
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
+    metrics["data_status"] = selection["status"]
     paths = comparison_paths("spiral_rotation", output_dir)
     morphology_path = morphology_figure_path("spiral", output_dir)
+
     rows = []
     for idx, radius in enumerate(empirical["radius"]):
         rows.append(
@@ -31,8 +50,19 @@ def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: 
                 "source_status": empirical["source_status"][idx],
             }
         )
+
     save_rows(paths["data"], rows)
-    save_rows(paths["metrics"], [{**metrics, "model": "locality_driven_gravity", "empirical_dataset": "galaxy_rotation_fixture", "fixture_status": "fixture_only"}])
+    save_rows(
+        paths["metrics"],
+        [
+            {
+                **metrics,
+                "model": "locality_driven_gravity",
+                "empirical_dataset": selection["dataset_name"],
+                "data_status": selection["status"],
+            }
+        ],
+    )
     mapping.plot_comparison(empirical, prediction, {"curve": paths["figure"], "morphology": morphology_path})
     write_report(
         paths["report"],
@@ -40,13 +70,13 @@ def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: 
             [
                 "# Spiral Rotation Report",
                 "",
-                "This is a fixture-backed rotation-curve comparison.",
-                f"- radius scale: {prediction['fitted_parameters']['radius_scale']:.4f}",
-                f"- velocity scale: {prediction['fitted_parameters']['velocity_scale']:.4f}",
-                f"- spiral order parameter: {prediction['spiral_order_parameter']:.4f}",
+                f"- data status: {selection['status']}",
+                f"- radius scale: {prediction['fitted_parameters']['radius_scale']:.6f}",
+                f"- velocity scale: {prediction['fitted_parameters']['velocity_scale']:.6f}",
+                f"- spiral order parameter: {prediction['spiral_order_parameter']:.6f}",
                 f"- RMSE: {metrics['RMSE']:.6f}",
                 "",
-                "Interpretation: locality-driven spiral formation remains a toy model, not a full astrophysical simulation.",
+                "Interpretation: preliminary comparison only; not a full astrophysical validation claim.",
             ]
         ),
     )
@@ -54,7 +84,8 @@ def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: 
         paths["manifest"],
         {
             "comparison": "spiral_rotation",
-            "data_status": "fixture_only",
+            "data_status": selection["status"],
+            "input_dataset_path": repo_relative(selection["path"]),
             "fitted_parameters": prediction["fitted_parameters"],
             "output_paths": {
                 "data": repo_relative(paths["data"]),
@@ -64,7 +95,8 @@ def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: 
                 "report": repo_relative(paths["report"]),
                 "manifest": repo_relative(paths["manifest"]),
             },
-            "limitations": "Fixture rotation curve only; no direct morphology observable in this run.",
+            "source_manifest": selection["manifest"],
+            "limitations": "Finite toy-model mapping only; not a full galaxy simulation.",
         },
     )
     return {
@@ -73,7 +105,7 @@ def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: 
         "summary": {
             "model": "locality_driven_gravity",
             "empirical_dataset": "galaxy_rotation",
-            "data_status": "fixture_only",
+            "data_status": selection["status"],
             "comparison_type": "rotation-curve comparison",
             "fitted_parameters": prediction["fitted_parameters"],
             "RMSE": metrics["RMSE"],
@@ -83,8 +115,28 @@ def run(output_dir: str | Path | None = None, use_fixtures: bool = True, quick: 
             "AIC": metrics["AIC"],
             "BIC": metrics["BIC"],
             "baseline_model": "linear_rotation_baseline",
-            "TNE_vs_baseline_note": "Fixture-backed only",
-            "limitations": "No full astrophysical interpretation",
+            "TNE_vs_baseline_note": "Preliminary comparison only",
+            "limitations": "Not a full astrophysical interpretation",
             "passed_validation": metrics["passed_validation"],
         },
     }
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Run the spiral rotation comparison without claiming empirical validation.")
+    parser.add_argument("--output-dir", default=None)
+    parser.add_argument("--quick", action="store_true")
+    parser.add_argument("--use-fixtures", action="store_true")
+    parser.add_argument("--dataset-path", default=None)
+    args = parser.parse_args(argv)
+    run(
+        output_dir=args.output_dir,
+        use_fixtures=True,
+        quick=args.quick,
+        dataset_path=args.dataset_path,
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

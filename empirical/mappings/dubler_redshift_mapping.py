@@ -68,9 +68,10 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         baseline_params=1,
     )
-    metrics["data_status"] = "fixture_only"
+    source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
+    metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "fixture_baseline_shift"
-    metrics["TNE_vs_baseline_note"] = "Fixture-backed residual comparison only."
+    metrics["TNE_vs_baseline_note"] = "Preliminary residual comparison only."
     return metrics
 
 
@@ -83,7 +84,7 @@ def plot_comparison(empirical: dict[str, Any], prediction: dict[str, Any], outpu
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["observed_uncertainty"], dtype=float),
         output_path=output_path,
-        title="Fixture-backed Dubler redshift comparison",
+        title="Dubler redshift comparison",
         xlabel="observable X",
         ylabel="shift",
         baseline_label="fixture baseline shift",

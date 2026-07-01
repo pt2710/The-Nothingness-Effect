@@ -1,9 +1,9 @@
 # Dubler Redshift Report
 
-This is a fixture-backed comparison only.
-- fitted beta: 0.3534
-- fitted K_D: 1.0000
-- RMSE: 0.003286
-- baseline RMSE: 0.059689
+- data status: cached
+- fitted beta: 1.000000
+- fitted K_D: 0.500000
+- RMSE: 0.095749
+- baseline RMSE: 0.000049
 
-Interpretation: this run provides an offline observable-mapping adapter, not empirical validation.
+Interpretation: preliminary comparison only; not an empirical validation claim.

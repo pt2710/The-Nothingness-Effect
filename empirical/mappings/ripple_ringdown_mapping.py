@@ -112,9 +112,10 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         baseline_params=4,
     )
-    metrics["data_status"] = "fixture_only"
+    source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
+    metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "damped_sinusoid_baseline"
-    metrics["TNE_vs_baseline_note"] = "Preliminary fixture-backed comparison only."
+    metrics["TNE_vs_baseline_note"] = "Preliminary residual comparison only."
     return metrics
 
 
@@ -132,7 +133,7 @@ def plot_comparison(empirical: dict[str, Any], prediction: dict[str, Any], outpu
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["strain_uncertainty"], dtype=float),
         output_path=curve_path,
-        title="Fixture-backed elastic-π ringdown comparison",
+        title="Elastic-pi ringdown comparison",
         xlabel="time",
         ylabel="strain / proxy",
         baseline_label="damped sinusoid baseline",

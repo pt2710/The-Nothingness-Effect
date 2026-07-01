@@ -59,6 +59,10 @@ site/
 *.tgz
 *.7z
 *.rar
+*.hdf5
+*.h5
+*.gwf
+empirical/cache/
 
 # Generated animations, videos, and frame dumps
 *.gif

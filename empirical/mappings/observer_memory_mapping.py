@@ -76,7 +76,8 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         uncertainty=np.asarray(empirical["strain_uncertainty"], dtype=float),
         n_params=1,
     )
-    metrics["data_status"] = "fixture_only"
+    source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
+    metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "none"
     return metrics
 
@@ -88,7 +89,7 @@ def plot_comparison(empirical: dict[str, Any], prediction: dict[str, Any], outpu
         predicted=np.asarray(prediction["tne_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["strain_uncertainty"], dtype=float),
         output_path=output_path,
-        title="Fixture-backed observer-memory comparison",
+        title="Observer-memory comparison",
         xlabel="time",
         ylabel="strain / proxy",
         predicted_label="observer-memory proxy",

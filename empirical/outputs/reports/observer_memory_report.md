@@ -1,7 +1,7 @@
 # Observer Memory Report
 
-This is a fixture-backed comparison only.
-- amplitude scale: -0.0932
-- RMSE: 0.340718
+- data status: fetched
+- amplitude scale: 0.002965
+- RMSE: 0.420862
 
-Interpretation: memory-like proxy alignment remains preliminary and is not an empirical validation claim.
+Interpretation: preliminary memory-like proxy comparison only; not an empirical validation claim.

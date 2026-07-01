@@ -82,7 +82,8 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         baseline_params=2,
     )
-    metrics["data_status"] = "fixture_only"
+    source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
+    metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "exponential_decay_baseline"
     return metrics
 
@@ -95,7 +96,7 @@ def plot_comparison(empirical: dict[str, Any], prediction: dict[str, Any], outpu
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["flux_uncertainty"], dtype=float),
         output_path=output_path,
-        title="Fixture-backed Hawking-like flux comparison",
+        title="Hawking-like flux comparison",
         xlabel="normalized coordinate",
         ylabel="flux",
         baseline_label="exponential baseline",

@@ -73,7 +73,8 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     predicted = np.concatenate([prediction["ring_prediction"], prediction["shadow_prediction"]])
     uncertainty = np.concatenate([empirical["ring_diameter_uncertainty"], empirical["shadow_radius_uncertainty"]])
     metrics = metric_bundle(observed=observed, predicted=predicted, uncertainty=uncertainty, n_params=1)
-    metrics["data_status"] = "fixture_only"
+    source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
+    metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
     metrics["baseline_model"] = "none"
     metrics["ring_contrast_proxy"] = float(prediction["ring_contrast_proxy"])
     return metrics
@@ -88,6 +89,6 @@ def plot_comparison(empirical: dict[str, Any], prediction: dict[str, Any], outpu
         observed=observed,
         predicted=predicted,
         output_path=output_path,
-        title="Fixture-backed EHT horizon/shadow comparison",
+        title="EHT horizon/shadow comparison",
         ylabel="angular observable",
     )

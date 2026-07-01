@@ -1,0 +1,29 @@
+{
+  "access_date": "2026-07-01T08:32:08+00:00",
+  "access_method": "curated_published_summary",
+  "citation_note": "Derived from published M87* and Sgr A* summary observables.",
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "dataset_name": "eht_observables",
+  "derived_file_path": "empirical/outputs/data/eht_public_observables.csv",
+  "expected_file_type": "csv",
+  "fixture_fallback_path": "empirical/fixtures/eht_observable_fixture.csv",
+  "license_note": "Compact derived observables only.",
+  "limitations": "Published summary observables only; no raw imaging products are stored.",
+  "preprocessing_steps": [
+    "Retrieved lightweight public abstract pages where accessible.",
+    "Stored a compact derived table of published ring and shadow observables."
+  ],
+  "raw_file_path": "",
+  "raw_supporting_files": [
+    "empirical/cache/text/eht_observables/source_1.html",
+    "empirical/cache/text/eht_observables/source_2.html"
+  ],
+  "script_used": "fetch_eht_observables.py",
+  "source_name": "Published Event Horizon Telescope summary observables",
+  "source_url": "https://arxiv.org/abs/1906.11241",
+  "source_urls": [
+    "https://arxiv.org/abs/1906.11241",
+    "https://arxiv.org/abs/2311.09484"
+  ],
+  "status": "cached"
+}

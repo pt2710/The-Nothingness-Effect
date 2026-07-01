@@ -1,4 +1,4 @@
-"""Shared IO helpers for offline empirical-comparison artifacts."""
+"""Shared IO helpers for empirical-comparison artifacts."""
 
 from __future__ import annotations
 
@@ -28,6 +28,11 @@ def outputs_root(base: str | Path | None = None) -> Path:
     return Path(base) if base is not None else empirical_root() / "outputs"
 
 
+def cache_root(base: str | Path | None = None) -> Path:
+    root = outputs_root(base)
+    return root.parent / "cache"
+
+
 def ensure_output_tree(base: str | Path | None = None) -> dict[str, Path]:
     root = outputs_root(base)
     return {
@@ -37,6 +42,15 @@ def ensure_output_tree(base: str | Path | None = None) -> dict[str, Path]:
         "figures": ensure_dir(root / "figures"),
         "reports": ensure_dir(root / "reports"),
         "manifests": ensure_dir(root / "manifests"),
+    }
+
+
+def ensure_cache_tree(base: str | Path | None = None) -> dict[str, Path]:
+    root = cache_root(base)
+    return {
+        "root": ensure_dir(root),
+        "raw": ensure_dir(root / "raw"),
+        "text": ensure_dir(root / "text"),
     }
 
 
@@ -58,6 +72,20 @@ def write_report(path: str | Path, text: str) -> Path:
 
 def write_manifest(path: str | Path, payload: dict[str, Any]) -> Path:
     return save_json(path, {"claim_boundary": EMPIRICAL_CLAIM_BOUNDARY, **payload})
+
+
+def read_json(path: str | Path, default: Any | None = None) -> Any:
+    file_path = Path(path)
+    if not file_path.exists():
+        return default
+    return json.loads(file_path.read_text(encoding="utf-8"))
+
+
+def write_text(path: str | Path, text: str) -> Path:
+    output_path = Path(path)
+    ensure_dir(output_path.parent)
+    output_path.write_text(text, encoding="utf-8")
+    return output_path
 
 
 def repo_relative(path: str | Path) -> str:
@@ -93,12 +121,28 @@ def registry_output_path(base: str | Path | None = None) -> Path:
     return ensure_output_tree(base)["manifests"] / "source_registry.json"
 
 
+def manifest_output_path(filename: str, base: str | Path | None = None) -> Path:
+    return ensure_output_tree(base)["manifests"] / filename
+
+
+def public_data_path(filename: str, base: str | Path | None = None) -> Path:
+    return ensure_output_tree(base)["data"] / filename
+
+
 def summary_paths(base: str | Path | None = None) -> dict[str, Path]:
     tree = ensure_output_tree(base)
     return {
         "metrics": tree["metrics"] / "empirical_comparison_summary.csv",
         "report": tree["reports"] / "empirical_comparison_summary.md",
         "manifest": tree["manifests"] / "empirical_comparison_metadata.json",
+    }
+
+
+def acquisition_summary_paths(base: str | Path | None = None) -> dict[str, Path]:
+    tree = ensure_output_tree(base)
+    return {
+        "metrics": tree["metrics"] / "data_acquisition_summary.csv",
+        "manifest": tree["manifests"] / "data_acquisition_summary.json",
     }
 
 

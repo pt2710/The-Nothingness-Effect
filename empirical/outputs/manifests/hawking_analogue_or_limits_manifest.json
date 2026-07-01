@@ -1,0 +1,25 @@
+{
+  "access_date": "2026-07-01T08:32:08+00:00",
+  "access_method": "manual_curation_required",
+  "citation_note": "Use an analogue-Hawking or PBH-limit publication-specific dataset in a later manual pass.",
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "dataset_name": "hawking_analogue_or_limits",
+  "derived_file_path": "",
+  "expected_file_type": "csv",
+  "fixture_fallback_path": "empirical/fixtures/hawking_flux_fixture.csv",
+  "license_note": "No public compact dataset is bundled in this run.",
+  "limitations": "Reliable lightweight public tables were not automatically acquired in this run.",
+  "preprocessing_steps": [
+    "Recorded the public source family.",
+    "Did not fabricate or infer a lightweight dataset when a reliable compact public table was not guaranteed."
+  ],
+  "raw_file_path": "",
+  "script_used": "fetch_hawking_analogue_or_limits.py",
+  "source_name": "Analogue Hawking or PBH limit literature",
+  "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/",
+  "source_urls": [
+    "https://fermi.gsfc.nasa.gov/ssc/data/",
+    "https://arxiv.org/"
+  ],
+  "status": "manual_required"
+}

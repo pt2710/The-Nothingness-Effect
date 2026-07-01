@@ -94,6 +94,8 @@ def run(
         f"- radius scale: {prediction['fitted_parameters']['radius_scale']:.6f}",
         f"- velocity scale: {prediction['fitted_parameters']['velocity_scale']:.6f}",
         f"- aggregation mix (mean vs median): {prediction['fitted_parameters']['aggregation_mix']:.6f}",
+        f"- galaxy count: {int(metrics['galaxy_count'])}",
+        f"- per-galaxy baseline family: {prediction['fitted_parameters']['selected_baselines']}",
         f"- spiral order parameter: {prediction['spiral_order_parameter']:.6f}",
         f"- pitch-angle proxy: {prediction['pitch_angle_proxy']:.6f}",
         f"- RMSE: {metrics['RMSE']:.6f}",

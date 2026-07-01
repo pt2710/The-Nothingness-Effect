@@ -78,6 +78,14 @@ def _baseline_family(radius: np.ndarray, velocity: np.ndarray) -> dict[str, np.n
     }
 
 
+def _galaxy_slices(galaxy_ids: list[str]) -> list[tuple[str, np.ndarray]]:
+    slices: list[tuple[str, np.ndarray]] = []
+    for galaxy_id in dict.fromkeys(galaxy_ids):
+        mask = np.asarray([item == galaxy_id for item in galaxy_ids], dtype=bool)
+        slices.append((galaxy_id, mask))
+    return slices
+
+
 @lru_cache(maxsize=256)
 def _profile_for_params(
     shear: float,
@@ -124,15 +132,65 @@ def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, An
     }
 
 
+def _best_local_galaxy_fit(
+    observed_r: np.ndarray,
+    observed_v: np.ndarray,
+    profile: dict[str, np.ndarray],
+    grid: dict[str, list[float] | list[int]],
+) -> dict[str, Any]:
+    base_radius_scale = float(np.max(observed_r) / (np.max(profile["radial_centers"]) + 1e-12))
+    best_local: dict[str, Any] | None = None
+    for aggregation_mix in grid["aggregation_mix"]:
+        combined_velocity = (
+            float(aggregation_mix) * profile["mean_tangential_velocity"]
+            + (1.0 - float(aggregation_mix)) * profile["median_tangential_velocity"]
+        )
+        for radius_factor in grid["radius_scale_factor"]:
+            radius_scale_fit = base_radius_scale * float(radius_factor)
+            scaled_radius = profile["radial_centers"] * radius_scale_fit
+            interp = np.interp(observed_r, scaled_radius, combined_velocity, left=combined_velocity[0], right=combined_velocity[-1])
+            velocity_scale = float(np.dot(observed_v, interp) / (np.dot(interp, interp) + 1e-12))
+            predicted = velocity_scale * interp
+            score = rmse(observed_v, predicted)
+            candidate = {
+                "radius_scale": float(radius_scale_fit),
+                "velocity_scale": float(velocity_scale),
+                "aggregation_mix": float(aggregation_mix),
+                "predicted": predicted,
+                "score": float(score),
+            }
+            if best_local is None or candidate["score"] < best_local["score"]:
+                best_local = candidate
+    assert best_local is not None
+    return best_local
+
+
 def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "standard", seed: int = 2710) -> dict[str, Any]:
-    del seed  # deterministic seed is internal to the model helper
+    del seed
     grid = SWEEP_LEVELS[parameter_sweep_level]
     observed_r = np.asarray(empirical["radius"], dtype=float)
     observed_v = np.asarray(empirical["velocity"], dtype=float)
-    baselines = _baseline_family(observed_r, observed_v)
-    flat_score = rmse(observed_v, baselines["flat"])
-    linear_score = rmse(observed_v, baselines["linear"])
-    selected_baseline = "flat_rotation_baseline" if flat_score < linear_score else "linear_rotation_baseline"
+    galaxy_slices = _galaxy_slices(empirical["galaxy_id"])
+    baselines: dict[str, dict[str, np.ndarray]] = {}
+    selected_baselines: dict[str, str] = {}
+    baseline_prediction = np.zeros_like(observed_v)
+    flat_prediction = np.zeros_like(observed_v)
+    linear_prediction = np.zeros_like(observed_v)
+    smoothed_prediction = np.zeros_like(observed_v)
+    baseline_scores: dict[str, dict[str, float]] = {}
+    for galaxy_id, mask in galaxy_slices:
+        local_baselines = _baseline_family(observed_r[mask], observed_v[mask])
+        baselines[galaxy_id] = local_baselines
+        flat_score = rmse(observed_v[mask], local_baselines["flat"])
+        linear_score = rmse(observed_v[mask], local_baselines["linear"])
+        selected = "flat_rotation_baseline" if flat_score < linear_score else "linear_rotation_baseline"
+        selected_baselines[galaxy_id] = selected
+        baseline_scores[galaxy_id] = {"flat_RMSE": float(flat_score), "linear_RMSE": float(linear_score)}
+        baseline_prediction[mask] = local_baselines["flat"] if selected.startswith("flat") else local_baselines["linear"]
+        flat_prediction[mask] = local_baselines["flat"]
+        linear_prediction[mask] = local_baselines["linear"]
+        smoothed_prediction[mask] = local_baselines["smoothed_reference"]
+
     best: dict[str, Any] | None = None
     for shear in grid["shear"]:
         for sigma in grid["sigma"]:
@@ -144,73 +202,99 @@ def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "stan
                             profile = bundle["profile"]
                             if len(profile["radial_centers"]) < 3:
                                 continue
-                            base_radius_scale = float(np.max(observed_r) / (np.max(profile["radial_centers"]) + 1e-12))
-                            for aggregation_mix in grid["aggregation_mix"]:
-                                combined_velocity = (
-                                    aggregation_mix * profile["mean_tangential_velocity"]
-                                    + (1.0 - aggregation_mix) * profile["median_tangential_velocity"]
-                                )
-                                for radius_factor in grid["radius_scale_factor"]:
-                                    radius_scale_fit = base_radius_scale * float(radius_factor)
-                                    scaled_radius = profile["radial_centers"] * radius_scale_fit
-                                    interp = np.interp(observed_r, scaled_radius, combined_velocity, left=combined_velocity[0], right=combined_velocity[-1])
-                                    velocity_scale = float(np.dot(observed_v, interp) / (np.dot(interp, interp) + 1e-12))
-                                    predicted = velocity_scale * interp
-                                    score = rmse(observed_v, predicted)
-                                    candidate = {
-                                        "radius_scale": float(radius_scale_fit),
-                                        "velocity_scale": float(velocity_scale),
-                                        "aggregation_mix": float(aggregation_mix),
-                                        "score": float(score),
-                                        "selected_baseline": selected_baseline,
-                                        "baseline_scores": {
-                                            "flat_RMSE": float(flat_score),
-                                            "linear_RMSE": float(linear_score),
-                                        },
-                                        "profile": bundle,
-                                    }
-                                    if best is None or candidate["score"] < best["score"]:
-                                        best = candidate
+                            combined_prediction = np.zeros_like(observed_v)
+                            per_galaxy: dict[str, dict[str, float]] = {}
+                            for galaxy_id, mask in galaxy_slices:
+                                local_fit = _best_local_galaxy_fit(observed_r[mask], observed_v[mask], profile, grid)
+                                combined_prediction[mask] = local_fit["predicted"]
+                                per_galaxy[galaxy_id] = {
+                                    "radius_scale": float(local_fit["radius_scale"]),
+                                    "velocity_scale": float(local_fit["velocity_scale"]),
+                                    "aggregation_mix": float(local_fit["aggregation_mix"]),
+                                    "score": float(local_fit["score"]),
+                                }
+                            score = rmse(observed_v, combined_prediction)
+                            candidate = {
+                                "score": float(score),
+                                "profile": bundle,
+                                "per_galaxy": per_galaxy,
+                            }
+                            if best is None or candidate["score"] < best["score"]:
+                                best = candidate
     assert best is not None
     best["baselines"] = baselines
+    best["selected_baselines"] = selected_baselines
+    best["baseline_scores"] = baseline_scores
+    best["baseline_prediction"] = baseline_prediction
+    best["flat_prediction"] = flat_prediction
+    best["linear_prediction"] = linear_prediction
+    best["smoothed_prediction"] = smoothed_prediction
+    best["parameter_sweep_level"] = parameter_sweep_level
     return best
 
 
 def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[str, Any] | None = None) -> dict[str, Any]:
     fit = fitted_parameters or fit_parameters(empirical)
     profile = fit["profile"]["profile"]
-    combined_velocity = (
-        fit["aggregation_mix"] * profile["mean_tangential_velocity"]
-        + (1.0 - fit["aggregation_mix"]) * profile["median_tangential_velocity"]
-    )
-    scaled_radius = profile["radial_centers"] * fit["radius_scale"]
+    galaxy_slices = _galaxy_slices(empirical["galaxy_id"])
     observed_r = np.asarray(empirical["radius"], dtype=float)
-    predicted_velocity = np.interp(observed_r, scaled_radius, combined_velocity * fit["velocity_scale"], left=combined_velocity[0] * fit["velocity_scale"], right=combined_velocity[-1] * fit["velocity_scale"])
-    baselines = fit["baselines"]
-    selected_baseline_key = "flat" if fit["selected_baseline"].startswith("flat") else "linear"
+    predicted_velocity = np.zeros_like(observed_r)
+    aggregation_mix_mean = 0.0
+    radius_scale_mean = 0.0
+    velocity_scale_mean = 0.0
+    per_galaxy_prediction: dict[str, dict[str, Any]] = {}
+    for galaxy_id, mask in galaxy_slices:
+        local_fit = fit["per_galaxy"][galaxy_id]
+        combined_velocity = (
+            local_fit["aggregation_mix"] * profile["mean_tangential_velocity"]
+            + (1.0 - local_fit["aggregation_mix"]) * profile["median_tangential_velocity"]
+        )
+        scaled_radius = profile["radial_centers"] * local_fit["radius_scale"]
+        local_prediction = np.interp(
+            observed_r[mask],
+            scaled_radius,
+            combined_velocity * local_fit["velocity_scale"],
+            left=combined_velocity[0] * local_fit["velocity_scale"],
+            right=combined_velocity[-1] * local_fit["velocity_scale"],
+        )
+        predicted_velocity[mask] = local_prediction
+        aggregation_mix_mean += local_fit["aggregation_mix"]
+        radius_scale_mean += local_fit["radius_scale"]
+        velocity_scale_mean += local_fit["velocity_scale"]
+        per_galaxy_prediction[galaxy_id] = {
+            "scaled_radius_profile": np.asarray(scaled_radius, dtype=float),
+            "scaled_velocity_profile": np.asarray(combined_velocity * local_fit["velocity_scale"], dtype=float),
+            "prediction": np.asarray(local_prediction, dtype=float),
+            "radius_scale": float(local_fit["radius_scale"]),
+            "velocity_scale": float(local_fit["velocity_scale"]),
+            "aggregation_mix": float(local_fit["aggregation_mix"]),
+            "selected_baseline": fit["selected_baselines"][galaxy_id],
+        }
+    galaxy_count = max(len(galaxy_slices), 1)
     return {
         "tne_prediction": predicted_velocity,
-        "baseline_prediction": np.asarray(baselines[selected_baseline_key], dtype=float),
-        "flat_baseline_prediction": np.asarray(baselines["flat"], dtype=float),
-        "linear_baseline_prediction": np.asarray(baselines["linear"], dtype=float),
-        "smoothed_empirical_reference": np.asarray(baselines["smoothed_reference"], dtype=float),
-        "scaled_radius_profile": np.asarray(scaled_radius, dtype=float),
-        "scaled_velocity_profile": np.asarray(combined_velocity * fit["velocity_scale"], dtype=float),
+        "baseline_prediction": np.asarray(fit["baseline_prediction"], dtype=float),
+        "flat_baseline_prediction": np.asarray(fit["flat_prediction"], dtype=float),
+        "linear_baseline_prediction": np.asarray(fit["linear_prediction"], dtype=float),
+        "smoothed_empirical_reference": np.asarray(fit["smoothed_prediction"], dtype=float),
         "density_profile": np.asarray(profile["density_profile"], dtype=float),
         "profile_std": np.asarray(profile["tangential_velocity_std"], dtype=float),
         "profile_counts": np.asarray(profile["counts"], dtype=int),
         "spiral_order_parameter": float(fit["profile"]["spiral_metrics"]["spiral_order_parameter"]),
         "pitch_angle_proxy": float(fit["profile"]["spiral_metrics"]["pitch_angle_proxy"]),
         "radial_concentration": float(fit["profile"]["spiral_metrics"]["radial_concentration"]),
+        "per_galaxy_prediction": per_galaxy_prediction,
         "fitted_parameters": {
-            "radius_scale": float(fit["radius_scale"]),
-            "velocity_scale": float(fit["velocity_scale"]),
-            "aggregation_mix": float(fit["aggregation_mix"]),
+            "radius_scale": float(radius_scale_mean / galaxy_count),
+            "velocity_scale": float(velocity_scale_mean / galaxy_count),
+            "aggregation_mix": float(aggregation_mix_mean / galaxy_count),
             "simulation_params": fit["profile"]["params"],
             "parameter_sweep_level": fit.get("parameter_sweep_level", "standard"),
             "baseline_scores": fit["baseline_scores"],
+            "selected_baselines": fit["selected_baselines"],
+            "per_galaxy": fit["per_galaxy"],
         },
-        "selected_baseline": fit["selected_baseline"],
+        "selected_baseline": "multi_galaxy_baseline_family",
     }
 
 
@@ -229,9 +313,9 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         observed=np.asarray(empirical["velocity"], dtype=float),
         predicted=np.asarray(prediction["tne_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["velocity_uncertainty"], dtype=float),
-        n_params=5,
+        n_params=8,
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
-        baseline_params=2 if prediction["selected_baseline"].startswith("linear") else 1,
+        baseline_params=2,
     )
     source_status = sorted(set(empirical.get("source_status", ["fixture_only"])))
     metrics["data_status"] = source_status[0] if len(source_status) == 1 else "mixed"
@@ -241,10 +325,11 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["spiral_order_parameter"] = float(prediction["spiral_order_parameter"])
     metrics["pitch_angle_proxy"] = float(prediction["pitch_angle_proxy"])
     metrics["radial_concentration"] = float(prediction["radial_concentration"])
+    metrics["galaxy_count"] = float(len(prediction["per_galaxy_prediction"]))
     metrics["TNE_vs_baseline_note"] = (
-        "Improved preliminary residual fit under the implemented proxy mapping."
+        "Improved preliminary residual fit under the implemented multi-galaxy proxy mapping."
         if metrics["RMSE"] < metrics["baseline_RMSE"]
-        else "Simple baseline remains better or comparable under the implemented proxy mapping."
+        else "Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping."
     )
     return metrics
 
@@ -263,73 +348,68 @@ def plot_comparison(
         residual_path = curve_path.with_name("spiral_rotation_residuals.png")
         morphology_path = curve_path.with_name("spiral_morphology_comparison.png")
 
-    radius = np.asarray(empirical["radius"], dtype=float)
-    observed = np.asarray(empirical["velocity"], dtype=float)
-    uncertainty = np.asarray(empirical["velocity_uncertainty"], dtype=float)
-    tne = np.asarray(prediction["tne_prediction"], dtype=float)
-    baseline = np.asarray(prediction["baseline_prediction"], dtype=float)
-
-    fig, axes = plt.subplots(2, 1, figsize=(8.0, 6.6), constrained_layout=True, sharex=True)
-    axes[0].errorbar(radius, observed, yerr=uncertainty, color="#1f77b4", linewidth=1.8, marker="o", label="empirical rotation curve")
-    axes[0].plot(radius, tne, color="#d62728", linewidth=2.0, marker="s", label="TNE best-fit curve")
-    axes[0].plot(radius, baseline, color="#2ca02c", linewidth=1.8, linestyle="--", label=prediction["selected_baseline"])
-    axes[0].plot(radius, prediction["smoothed_empirical_reference"], color="#7f7f7f", linewidth=1.4, linestyle=":", label="smoothed empirical reference")
-    axes[0].set_title("Finite illustrative spiral rotation comparison")
-    axes[0].set_ylabel("normalized velocity")
-    axes[0].grid(True, alpha=0.25)
-    axes[0].legend(loc="best")
-    axes[0].text(
-        0.02,
-        0.03,
-        (
-            f"spiral_order={prediction['spiral_order_parameter']:.3f}\n"
-            f"pitch_proxy={prediction['pitch_angle_proxy']:.3f}\n"
-            f"radial_concentration={prediction['radial_concentration']:.3f}"
-        ),
-        transform=axes[0].transAxes,
-        fontsize=9,
-        bbox={"facecolor": "white", "alpha": 0.75, "edgecolor": "#cccccc"},
-    )
-    axes[1].axhline(0.0, color="black", linewidth=0.8, linestyle="--")
-    axes[1].plot(radius, tne - observed, color="#d62728", linewidth=2.0, label="TNE residual")
-    axes[1].plot(radius, baseline - observed, color="#2ca02c", linewidth=1.8, linestyle="--", label="baseline residual")
-    axes[1].set_xlabel("normalized radius")
-    axes[1].set_ylabel("residual")
-    axes[1].grid(True, alpha=0.25)
-    axes[1].legend(loc="best")
+    galaxy_slices = _galaxy_slices(empirical["galaxy_id"])
+    n_galaxies = len(galaxy_slices)
+    fig, axes = plt.subplots(n_galaxies, 1, figsize=(8.4, 3.0 * n_galaxies), constrained_layout=True, sharex=False)
+    axes = np.atleast_1d(axes)
+    for ax, (galaxy_id, mask) in zip(axes, galaxy_slices, strict=True):
+        radius = np.asarray(empirical["radius"], dtype=float)[mask]
+        observed = np.asarray(empirical["velocity"], dtype=float)[mask]
+        uncertainty = np.asarray(empirical["velocity_uncertainty"], dtype=float)[mask]
+        tne = np.asarray(prediction["tne_prediction"], dtype=float)[mask]
+        baseline = np.asarray(prediction["baseline_prediction"], dtype=float)[mask]
+        ax.errorbar(radius, observed, yerr=uncertainty, color="#1f77b4", linewidth=1.8, marker="o", label=f"{galaxy_id} empirical")
+        ax.plot(radius, tne, color="#d62728", linewidth=2.0, marker="s", label="TNE best-fit curve")
+        ax.plot(radius, baseline, color="#2ca02c", linewidth=1.8, linestyle="--", label="local baseline")
+        ax.plot(radius, np.asarray(prediction["smoothed_empirical_reference"], dtype=float)[mask], color="#7f7f7f", linewidth=1.4, linestyle=":", label="smoothed reference")
+        local = prediction["per_galaxy_prediction"][galaxy_id]
+        ax.set_title(f"Finite illustrative spiral rotation comparison: {galaxy_id}")
+        ax.set_ylabel("normalized velocity")
+        ax.grid(True, alpha=0.25)
+        ax.legend(loc="best")
+        ax.text(
+            0.02,
+            0.03,
+            (
+                f"radius_scale={local['radius_scale']:.3f}\n"
+                f"velocity_scale={local['velocity_scale']:.3f}\n"
+                f"aggregation_mix={local['aggregation_mix']:.3f}"
+            ),
+            transform=ax.transAxes,
+            fontsize=8,
+            bbox={"facecolor": "white", "alpha": 0.75, "edgecolor": "#cccccc"},
+        )
+        ax.set_xlabel("normalized radius")
     save_figure(fig, curve_path, dpi=220)
     plt.close(fig)
 
-    fig, ax = plt.subplots(figsize=(8.0, 4.4), constrained_layout=True)
-    ax.axhline(0.0, color="black", linewidth=0.8, linestyle="--")
-    ax.plot(radius, prediction["flat_baseline_prediction"] - observed, color="#9467bd", linewidth=1.6, label="flat baseline residual")
-    ax.plot(radius, prediction["linear_baseline_prediction"] - observed, color="#2ca02c", linewidth=1.6, linestyle="--", label="linear baseline residual")
-    ax.plot(radius, tne - observed, color="#d62728", linewidth=2.0, label="TNE residual")
-    ax.set_title("Spiral rotation residual diagnostics")
-    ax.set_xlabel("normalized radius")
-    ax.set_ylabel("residual")
-    ax.grid(True, alpha=0.25)
-    ax.legend(loc="best")
+    fig, axes = plt.subplots(n_galaxies, 1, figsize=(8.4, 2.6 * n_galaxies), constrained_layout=True, sharex=False)
+    axes = np.atleast_1d(axes)
+    for ax, (galaxy_id, mask) in zip(axes, galaxy_slices, strict=True):
+        radius = np.asarray(empirical["radius"], dtype=float)[mask]
+        observed = np.asarray(empirical["velocity"], dtype=float)[mask]
+        ax.axhline(0.0, color="black", linewidth=0.8, linestyle="--")
+        ax.plot(radius, np.asarray(prediction["flat_baseline_prediction"], dtype=float)[mask] - observed, color="#9467bd", linewidth=1.6, label="flat baseline residual")
+        ax.plot(radius, np.asarray(prediction["linear_baseline_prediction"], dtype=float)[mask] - observed, color="#2ca02c", linewidth=1.6, linestyle="--", label="linear baseline residual")
+        ax.plot(radius, np.asarray(prediction["tne_prediction"], dtype=float)[mask] - observed, color="#d62728", linewidth=2.0, label="TNE residual")
+        ax.set_title(f"Spiral rotation residual diagnostics: {galaxy_id}")
+        ax.set_xlabel("normalized radius")
+        ax.set_ylabel("residual")
+        ax.grid(True, alpha=0.25)
+        ax.legend(loc="best")
     save_figure(fig, residual_path, dpi=220)
     plt.close(fig)
 
     fig, axes = plt.subplots(2, 1, figsize=(8.0, 6.2), constrained_layout=True)
-    axes[0].plot(prediction["scaled_radius_profile"], prediction["scaled_velocity_profile"], color="#d62728", linewidth=2.0, marker="o", label="TNE profile")
-    axes[0].fill_between(
-        prediction["scaled_radius_profile"],
-        prediction["scaled_velocity_profile"] - prediction["profile_std"],
-        prediction["scaled_velocity_profile"] + prediction["profile_std"],
-        color="#d62728",
-        alpha=0.18,
-        label="profile std",
-    )
-    axes[0].set_title("Tangential-velocity toy profile")
+    for galaxy_id, local in prediction["per_galaxy_prediction"].items():
+        axes[0].plot(local["scaled_radius_profile"], local["scaled_velocity_profile"], linewidth=1.8, marker="o", label=f"{galaxy_id} TNE profile")
+    axes[0].set_title("Tangential-velocity toy profiles")
     axes[0].set_ylabel("velocity")
     axes[0].grid(True, alpha=0.25)
     axes[0].legend(loc="best")
-    axes[1].plot(prediction["scaled_radius_profile"], prediction["density_profile"], color="#1f77b4", linewidth=2.0, marker="s")
-    axes[1].set_title("Radial density profile")
-    axes[1].set_xlabel("scaled radius")
+    axes[1].plot(np.arange(len(prediction["density_profile"])), prediction["density_profile"], color="#1f77b4", linewidth=2.0, marker="s")
+    axes[1].set_title("Shared radial density profile")
+    axes[1].set_xlabel("profile bin")
     axes[1].set_ylabel("density proxy")
     axes[1].grid(True, alpha=0.25)
     save_figure(fig, morphology_path, dpi=220)

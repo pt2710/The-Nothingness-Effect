@@ -3,15 +3,20 @@
   "comparison": "eht_horizon",
   "data_status": "cached",
   "fitted_parameters": {
+    "angular_factor": [
+      0.3869047619047389,
+      0.487804877989292
+    ],
     "central_depression_proxy": 0.09375393008753712,
     "horizon_radius_proxy": 4.365858543091713,
     "ring_contrast_proxy": 0.6498129758355458,
     "ring_proxy": 5.605569904914189,
+    "ring_scale": 19.057494648351135,
     "shadow_proxy": 4.365858543091713,
-    "shared_scale": 5.824284146921702,
-    "source_scales": {
-      "M87*": 5.592944700913278,
-      "SgrA*": 6.957180098008882
+    "shadow_scale": 12.239120674808033,
+    "source_specific_scale": {
+      "M87*": 15.898742292514108,
+      "SgrA*": 15.55253456294255
     },
     "threshold_contour_radius": 2.8027849524570945
   },
@@ -26,7 +31,7 @@
     "residual_figure": "empirical/outputs/figures/eht_horizon_residuals.png"
   },
   "source_manifest": {
-    "access_date": "2026-07-01T14:19:20+00:00",
+    "access_date": "2026-07-01T14:50:19+00:00",
     "access_method": "curated_published_summary",
     "citation_note": "Derived from published M87* and Sgr A* summary observables.",
     "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
@@ -38,7 +43,8 @@
     "limitations": "Published summary observables only; no raw imaging products are stored.",
     "preprocessing_steps": [
       "Retrieved lightweight public abstract pages where accessible.",
-      "Stored a compact derived table of published ring and shadow observables."
+      "Stored a compact derived table of published ring and shadow observables.",
+      "Added source mass and distance summary metadata for a finite angular-size proxy."
     ],
     "raw_file_path": "",
     "raw_supporting_files": [

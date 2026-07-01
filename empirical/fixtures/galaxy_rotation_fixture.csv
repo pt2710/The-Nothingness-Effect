@@ -5,3 +5,15 @@ radius,velocity,velocity_uncertainty,galaxy_id,source_status
 2.0,1.05,0.05,fixture_galaxy_a,fixture_only
 2.5,1.04,0.05,fixture_galaxy_a,fixture_only
 3.0,1.01,0.06,fixture_galaxy_a,fixture_only
+0.45,0.56,0.04,fixture_galaxy_b,fixture_only
+0.9,0.74,0.05,fixture_galaxy_b,fixture_only
+1.35,0.88,0.05,fixture_galaxy_b,fixture_only
+1.8,0.96,0.05,fixture_galaxy_b,fixture_only
+2.25,1.00,0.06,fixture_galaxy_b,fixture_only
+2.7,1.01,0.06,fixture_galaxy_b,fixture_only
+0.55,0.62,0.04,fixture_galaxy_c,fixture_only
+1.1,0.83,0.05,fixture_galaxy_c,fixture_only
+1.65,0.95,0.05,fixture_galaxy_c,fixture_only
+2.2,1.00,0.05,fixture_galaxy_c,fixture_only
+2.75,0.99,0.06,fixture_galaxy_c,fixture_only
+3.3,0.96,0.06,fixture_galaxy_c,fixture_only

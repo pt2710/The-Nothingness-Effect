@@ -29,7 +29,6 @@ PARAMETER_SWEEP_LEVELS: dict[str, dict[str, list[float]]] = {
         "width": [0.8, 1.1],
         "time_scale": [0.6, 1.0, 1.4],
         "time_shift": [0.0, 0.01],
-        "envelope_weight": [0.15, 0.3],
     },
     "standard": {
         "c_E": [0.85, 1.0, 1.2],
@@ -38,7 +37,6 @@ PARAMETER_SWEEP_LEVELS: dict[str, dict[str, list[float]]] = {
         "width": [0.6, 0.9, 1.2],
         "time_scale": [0.5, 0.8, 1.1, 1.4, 1.7],
         "time_shift": [-0.01, 0.0, 0.01, 0.02],
-        "envelope_weight": [0.0, 0.15, 0.3],
     },
     "extended": {
         "c_E": [0.75, 0.9, 1.05, 1.2, 1.35],
@@ -47,9 +45,17 @@ PARAMETER_SWEEP_LEVELS: dict[str, dict[str, list[float]]] = {
         "width": [0.5, 0.8, 1.1, 1.4],
         "time_scale": [0.45, 0.65, 0.85, 1.05, 1.25, 1.45, 1.65, 1.85],
         "time_shift": [-0.015, -0.005, 0.0, 0.01, 0.02, 0.03],
-        "envelope_weight": [0.0, 0.1, 0.2, 0.3, 0.4],
     },
 }
+
+REDUCED_BASIS_NAMES = [
+    "centerline",
+    "dominant_mode_1",
+    "dominant_mode_2",
+    "interference_projection",
+    "energy_envelope",
+    "centerline_velocity",
+]
 
 
 def _normalize(values: np.ndarray) -> np.ndarray:
@@ -115,14 +121,26 @@ def _fit_damped_sinusoid(time: np.ndarray, observed: np.ndarray) -> dict[str, fl
 def _projection_for_params(c_E: float, gamma: float, xi: float, width: float) -> dict[str, Any]:
     params = RippleParams(n=240, steps=420, dt=0.003, c_E=c_E, gamma=gamma, xi=xi, width=width, amplitude=0.9)
     projection = prepare_tne_ringdown_projection(params)
+    centerline = np.asarray(projection["centerline"], dtype=float)
     return {
         "time": np.asarray(projection["time"], dtype=float),
-        "composite_projection": _normalize(np.asarray(projection["composite_projection"], dtype=float)),
-        "energy_envelope": _normalize(np.asarray(projection["energy_envelope"], dtype=float)),
-        "centerline": _normalize(np.asarray(projection["centerline"], dtype=float)),
+        "centerline": _normalize(centerline),
         "dominant_mode_1": _normalize(np.asarray(projection["dominant_mode_1"], dtype=float)),
+        "dominant_mode_2": _normalize(np.asarray(projection["dominant_mode_2"], dtype=float)),
+        "energy_envelope": _normalize(np.asarray(projection["energy_envelope"], dtype=float)),
+        "interference_projection": _normalize(np.asarray(projection["interference_projection"], dtype=float)),
+        "centerline_velocity": _normalize(np.gradient(centerline, np.asarray(projection["time"], dtype=float))),
         "params": projection["params"],
     }
+
+
+def _basis_matrix(projection: dict[str, Any], mapped_time: np.ndarray) -> np.ndarray:
+    columns = []
+    for name in REDUCED_BASIS_NAMES:
+        base = np.asarray(projection[name], dtype=float)
+        column = np.interp(mapped_time, projection["time"], base, left=base[0], right=base[-1])
+        columns.append(_normalize(column))
+    return np.column_stack(columns)
 
 
 def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, Any]:
@@ -163,6 +181,30 @@ def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, An
     }
 
 
+def _fit_reduced_basis_signal(time: np.ndarray, observed: np.ndarray, projection: dict[str, Any], time_scale: float, time_shift: float) -> dict[str, Any]:
+    mapped_time = (time - time_shift) / time_scale
+    basis = _basis_matrix(projection, mapped_time)
+    regularization = np.sqrt(0.05) * np.eye(basis.shape[1], dtype=float)
+    response = np.concatenate([observed, np.zeros(basis.shape[1], dtype=float)])
+
+    def residual(coefficients: np.ndarray) -> np.ndarray:
+        return np.concatenate([basis @ coefficients, regularization @ coefficients]) - response
+
+    result = least_squares(
+        residual,
+        x0=np.zeros(basis.shape[1], dtype=float),
+        bounds=(-1.5 * np.ones(basis.shape[1], dtype=float), 1.5 * np.ones(basis.shape[1], dtype=float)),
+        max_nfev=400,
+    )
+    coefficients = np.asarray(result.x, dtype=float)
+    prediction = basis @ coefficients
+    return {
+        "prediction": prediction,
+        "coefficients": coefficients,
+        "score": float(rmse(observed, prediction)),
+    }
+
+
 def _fit_tne_projection(time: np.ndarray, observed: np.ndarray, parameter_sweep_level: str) -> dict[str, Any]:
     grid = PARAMETER_SWEEP_LEVELS[parameter_sweep_level]
     best: dict[str, Any] | None = None
@@ -173,46 +215,26 @@ def _fit_tne_projection(time: np.ndarray, observed: np.ndarray, parameter_sweep_
                     projection = _projection_for_params(c_E, gamma, xi, width)
                     for time_scale in grid["time_scale"]:
                         for time_shift in grid["time_shift"]:
-                            mapped_time = (time - time_shift) / time_scale
-                            composite = np.interp(
-                                mapped_time,
-                                projection["time"],
-                                projection["composite_projection"],
-                                left=projection["composite_projection"][0],
-                                right=projection["composite_projection"][-1],
-                            )
-                            envelope = np.interp(
-                                mapped_time,
-                                projection["time"],
-                                projection["energy_envelope"],
-                                left=projection["energy_envelope"][0],
-                                right=projection["energy_envelope"][-1],
-                            )
-                            for envelope_weight in grid["envelope_weight"]:
-                                signal = _normalize((1.0 - envelope_weight) * composite + envelope_weight * envelope)
-                                amplitude = float(np.dot(observed, signal) / (np.dot(signal, signal) + 1e-12))
-                                prediction = amplitude * signal
-                                score = rmse(observed, prediction)
-                                candidate = {
-                                    "projection_name": "composite_projection",
-                                    "simulation_params": projection["params"],
-                                    "time_scale": float(time_scale),
-                                    "time_shift": float(time_shift),
-                                    "envelope_weight": float(envelope_weight),
-                                    "amplitude_scale": amplitude,
-                                    "score": float(score),
-                                    "parameter_bounds": {
-                                        "c_E": [min(grid["c_E"]), max(grid["c_E"])],
-                                        "gamma": [min(grid["gamma"]), max(grid["gamma"])],
-                                        "xi": [min(grid["xi"]), max(grid["xi"])],
-                                        "width": [min(grid["width"]), max(grid["width"])],
-                                        "time_scale": [min(grid["time_scale"]), max(grid["time_scale"])],
-                                        "time_shift": [min(grid["time_shift"]), max(grid["time_shift"])],
-                                        "envelope_weight": [min(grid["envelope_weight"]), max(grid["envelope_weight"])],
-                                    },
-                                }
-                                if best is None or candidate["score"] < best["score"]:
-                                    best = candidate
+                            basis_fit = _fit_reduced_basis_signal(time, observed, projection, float(time_scale), float(time_shift))
+                            candidate = {
+                                "projection_name": "reduced_tne_basis",
+                                "basis_names": REDUCED_BASIS_NAMES,
+                                "basis_coefficients": basis_fit["coefficients"].tolist(),
+                                "simulation_params": projection["params"],
+                                "time_scale": float(time_scale),
+                                "time_shift": float(time_shift),
+                                "score": float(basis_fit["score"]),
+                                "parameter_bounds": {
+                                    "c_E": [min(grid["c_E"]), max(grid["c_E"])],
+                                    "gamma": [min(grid["gamma"]), max(grid["gamma"])],
+                                    "xi": [min(grid["xi"]), max(grid["xi"])],
+                                    "width": [min(grid["width"]), max(grid["width"])],
+                                    "time_scale": [min(grid["time_scale"]), max(grid["time_scale"])],
+                                    "time_shift": [min(grid["time_shift"]), max(grid["time_shift"])],
+                                },
+                            }
+                            if best is None or candidate["score"] < best["score"]:
+                                best = candidate
     assert best is not None
     return best
 
@@ -221,22 +243,9 @@ def _tne_prediction(time: np.ndarray, fitted_parameters: dict[str, Any]) -> np.n
     params = fitted_parameters["simulation_params"]
     projection = _projection_for_params(params["c_E"], params["gamma"], params["xi"], params["width"])
     mapped_time = (time - fitted_parameters["time_shift"]) / fitted_parameters["time_scale"]
-    composite = np.interp(
-        mapped_time,
-        projection["time"],
-        projection["composite_projection"],
-        left=projection["composite_projection"][0],
-        right=projection["composite_projection"][-1],
-    )
-    envelope = np.interp(
-        mapped_time,
-        projection["time"],
-        projection["energy_envelope"],
-        left=projection["energy_envelope"][0],
-        right=projection["energy_envelope"][-1],
-    )
-    signal = _normalize((1.0 - fitted_parameters["envelope_weight"]) * composite + fitted_parameters["envelope_weight"] * envelope)
-    return fitted_parameters["amplitude_scale"] * signal
+    basis = _basis_matrix(projection, mapped_time)
+    coefficients = np.asarray(fitted_parameters["basis_coefficients"], dtype=float)
+    return basis @ coefficients
 
 
 def _holdout_metrics(time: np.ndarray, observed: np.ndarray, parameter_sweep_level: str) -> dict[str, float]:
@@ -343,7 +352,7 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
         observed=np.asarray(empirical["strain"], dtype=float),
         predicted=np.asarray(prediction["tne_prediction"], dtype=float),
         uncertainty=np.asarray(empirical["strain_uncertainty"], dtype=float),
-        n_params=6,
+        n_params=8,
         baseline=np.asarray(prediction["baseline_prediction"], dtype=float),
         baseline_params=4,
     )
@@ -354,9 +363,10 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["window_start_time_raw"] = float(empirical["window_start_time_raw"])
     metrics["window_duration"] = float(empirical["time"][-1] - empirical["time"][0]) if len(empirical["time"]) else 0.0
     metrics["projection_name"] = prediction["fitted_parameters"]["tne"]["projection_name"]
+    metrics["basis_component_count"] = float(len(prediction["fitted_parameters"]["tne"]["basis_names"]))
     metrics.update(prediction["fitted_parameters"]["holdout"])
     metrics["TNE_vs_baseline_note"] = (
-        "Improved preliminary residual fit under the implemented proxy mapping."
+        "Improved preliminary residual fit under the reduced-basis proxy mapping."
         if metrics["RMSE"] < metrics["baseline_RMSE"]
         else "Baseline remains better or comparable under the same aligned ringdown window."
     )
@@ -389,7 +399,7 @@ def plot_comparison(
         label="aligned uncertainty",
     )
     axes[1].plot(empirical["time"], empirical["strain"], color="#1f77b4", linewidth=2.0, marker="o", label="observed normalized strain")
-    axes[1].plot(empirical["time"], prediction["tne_prediction"], color="#d62728", linewidth=2.0, marker="s", label="TNE projection")
+    axes[1].plot(empirical["time"], prediction["tne_prediction"], color="#d62728", linewidth=2.0, marker="s", label="TNE reduced basis")
     axes[1].plot(empirical["time"], prediction["baseline_prediction"], color="#2ca02c", linewidth=1.8, linestyle="--", label="damped-sinusoid baseline")
     axes[1].set_title("Toy-model ringdown comparison (not a formal proof substitute)")
     axes[1].set_xlabel("aligned time")
@@ -404,7 +414,7 @@ def plot_comparison(
     ax.plot(empirical["time"], residuals := prediction["tne_prediction"] - empirical["strain"], color="#d62728", linewidth=2.0, label="TNE residual")
     ax.plot(empirical["time"], prediction["baseline_prediction"] - empirical["strain"], color="#2ca02c", linewidth=1.8, label="baseline residual")
     ax.plot(empirical["time"], _rolling_rms(residuals), color="#9467bd", linewidth=1.6, linestyle=":", label="TNE residual envelope")
-    ax.set_title("Elastic-π ringdown residual diagnostics")
+    ax.set_title("Elastic-pi ringdown residual diagnostics")
     ax.set_xlabel("aligned time")
     ax.set_ylabel("residual")
     ax.grid(True, alpha=0.25)
@@ -414,9 +424,9 @@ def plot_comparison(
 
     fig, ax = plt.subplots(figsize=(8.0, 4.6), constrained_layout=True)
     ax.plot(empirical["time"], prediction["observed_envelope"], color="#1f77b4", linewidth=2.0, label="observed envelope")
-    ax.plot(empirical["time"], prediction["tne_envelope"], color="#d62728", linewidth=2.0, label="TNE envelope")
+    ax.plot(empirical["time"], prediction["tne_envelope"], color="#d62728", linewidth=2.0, label="TNE reduced-basis envelope")
     ax.plot(empirical["time"], prediction["baseline_envelope"], color="#2ca02c", linewidth=1.8, linestyle="--", label="baseline envelope")
-    ax.set_title("Elastic-π ringdown envelope comparison")
+    ax.set_title("Elastic-pi ringdown envelope comparison")
     ax.set_xlabel("aligned time")
     ax.set_ylabel("analytic-signal envelope")
     ax.grid(True, alpha=0.25)

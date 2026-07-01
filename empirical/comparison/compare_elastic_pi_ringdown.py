@@ -103,7 +103,7 @@ def run(
         f"- aligned window start (raw time): {empirical['window_start_time_raw']:.6f}",
         f"- TNE time scale: {prediction['fitted_parameters']['tne']['time_scale']:.6f}",
         f"- TNE time shift: {prediction['fitted_parameters']['tne']['time_shift']:.6f}",
-        f"- TNE envelope weight: {prediction['fitted_parameters']['tne']['envelope_weight']:.6f}",
+        f"- TNE basis components: {prediction['fitted_parameters']['tne']['basis_names']}",
         f"- baseline tau: {prediction['fitted_parameters']['baseline']['tau']:.6f}",
         f"- RMSE: {metrics['RMSE']:.6f}",
         f"- baseline RMSE: {metrics['baseline_RMSE']:.6f}",

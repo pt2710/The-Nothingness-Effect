@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import io
 from pathlib import Path
 import zipfile
 
@@ -14,6 +13,10 @@ from empirical.data_acquisition.fetch_utils import (
     write_dataset_manifest,
 )
 from empirical.io import public_data_path, save_rows
+
+
+SELECTED_GALAXIES = ["NGC2403", "NGC3198", "NGC6503"]
+MAX_ROWS_PER_GALAXY = 24
 
 
 def _parse_rotation_rows(raw_text: str, galaxy_id: str) -> list[dict[str, float | str]]:
@@ -43,6 +46,14 @@ def _parse_rotation_rows(raw_text: str, galaxy_id: str) -> list[dict[str, float 
             }
         )
     return rows
+
+
+def _downsample_rows(rows: list[dict[str, float | str]], max_rows: int = MAX_ROWS_PER_GALAXY) -> list[dict[str, float | str]]:
+    if len(rows) <= max_rows:
+        return rows
+    step = (len(rows) - 1) / float(max_rows - 1)
+    selected_indices = sorted({int(round(index * step)) for index in range(max_rows)})
+    return [rows[index] for index in selected_indices]
 
 
 def run(
@@ -96,11 +107,18 @@ def run(
     raw_zip_path = cache_raw_path("galaxy_rotation", "Rotmod_LTG.zip", str(output_dir) if output_dir is not None else None)
     download_to_cache(zip_url, raw_zip_path, force=force)
     with zipfile.ZipFile(raw_zip_path, "r") as archive:
-        filename = "NGC2403_rotmod.dat"
-        if filename not in archive.namelist():
-            filename = archive.namelist()[0]
-        raw_text = archive.read(filename).decode("utf-8", errors="replace")
-    rows = _parse_rotation_rows(raw_text, filename.replace("_rotmod.dat", ""))
+        archive_names = set(archive.namelist())
+        filenames = [
+            f"{galaxy_id}_rotmod.dat"
+            for galaxy_id in SELECTED_GALAXIES
+            if f"{galaxy_id}_rotmod.dat" in archive_names
+        ]
+        if not filenames:
+            filenames = sorted(name for name in archive.namelist() if name.endswith("_rotmod.dat"))[:3]
+        rows: list[dict[str, float | str]] = []
+        for filename in filenames:
+            raw_text = archive.read(filename).decode("utf-8", errors="replace")
+            rows.extend(_downsample_rows(_parse_rotation_rows(raw_text, filename.replace("_rotmod.dat", ""))))
     save_rows(derived_path, rows)
     payload = provenance_manifest(
         dataset_name="galaxy_rotation",
@@ -114,14 +132,15 @@ def run(
         access_method="public_zip_download",
         expected_file_type="csv",
         license_note="Derived compact CSV from SPARC public rotation curves.",
-        citation_note="Compact NGC2403 rotation curve derived from the SPARC public archive.",
+        citation_note="Compact multi-galaxy SPARC rotation curves derived from the public archive.",
         preprocessing_steps=[
             "Downloaded the public Rotmod_LTG.zip archive.",
-            f"Parsed {filename}.",
-            "Normalized radius and velocity columns for the repository comparison adapter while retaining raw columns.",
+            f"Parsed {len(filenames)} deterministic representative galaxy files.",
+            "Normalized radius and velocity columns per galaxy for the repository comparison adapter while retaining raw columns.",
+            f"Downsampled each galaxy to at most {MAX_ROWS_PER_GALAXY} rows to keep the repository artifact lightweight and reproducible.",
         ],
-        limitations="A single lightweight representative galaxy curve is stored in this run.",
-        extra={"selected_galaxy": filename.replace("_rotmod.dat", "")},
+        limitations="A small deterministic representative subset of SPARC rotation curves is stored in this run.",
+        extra={"selected_galaxies": [filename.replace("_rotmod.dat", "") for filename in filenames]},
     )
     write_dataset_manifest(manifest_name, payload, str(output_dir) if output_dir is not None else None)
     return payload

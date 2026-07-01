@@ -59,6 +59,7 @@ def test_ringdown_mapping_emits_alignment_and_holdout_metadata():
     assert "train_RMSE" in metrics
     assert "test_RMSE" in metrics
     assert "tne_residual_envelope" in residuals
+    assert metrics["basis_component_count"] >= 4
 
 
 def test_galaxy_mapping_emits_baseline_family_and_profiles():
@@ -72,6 +73,9 @@ def test_galaxy_mapping_emits_baseline_family_and_profiles():
     assert "linear_baseline_prediction" in prediction
     assert "density_profile" in prediction
     assert "pitch_angle_proxy" in prediction
+    assert len(set(empirical["galaxy_id"])) >= 2
+    metrics = mapping.compute_metrics(empirical, prediction, mapping.compute_residuals(empirical, prediction))
+    assert metrics["galaxy_count"] >= 2
 
 
 def test_eht_mapping_reports_source_specific_diagnostics():
@@ -86,6 +90,8 @@ def test_eht_mapping_reports_source_specific_diagnostics():
     assert "ring_prediction_source_specific" in prediction
     assert "source_specific_RMSE" in metrics
     assert "ring_normalized_residual" in residuals
+    assert "angular_factor" in prediction
+    assert all(value > 0.0 for value in prediction["angular_factor"])
 
 
 def test_dubler_mapping_reports_formula_and_sign_metadata():

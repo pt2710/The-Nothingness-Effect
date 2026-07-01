@@ -1,5 +1,5 @@
 {
-  "access_date": "2026-07-01T14:19:20+00:00",
+  "access_date": "2026-07-01T14:50:19+00:00",
   "access_method": "curated_published_summary",
   "citation_note": "Derived from published M87* and Sgr A* summary observables.",
   "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
@@ -11,7 +11,8 @@
   "limitations": "Published summary observables only; no raw imaging products are stored.",
   "preprocessing_steps": [
     "Retrieved lightweight public abstract pages where accessible.",
-    "Stored a compact derived table of published ring and shadow observables."
+    "Stored a compact derived table of published ring and shadow observables.",
+    "Added source mass and distance summary metadata for a finite angular-size proxy."
   ],
   "raw_file_path": "",
   "raw_supporting_files": [

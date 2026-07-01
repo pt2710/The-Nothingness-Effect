@@ -6,7 +6,7 @@
       "citation_note": "Derived from published M87* and Sgr A* summary observables.",
       "dataset_name": "eht_observables",
       "expected_file_type": "csv",
-      "last_attempted": "2026-07-01T14:19:20+00:00",
+      "last_attempted": "2026-07-01T14:50:19+00:00",
       "license_note": "Compact derived observables only.",
       "limitations": "Published summary observables only; no raw imaging products are stored.",
       "output_paths": [
@@ -19,12 +19,12 @@
     },
     "galaxy_rotation": {
       "access_method": "public_zip_download",
-      "citation_note": "Compact NGC2403 rotation curve derived from the SPARC public archive.",
+      "citation_note": "Compact multi-galaxy SPARC rotation curves derived from the public archive.",
       "dataset_name": "galaxy_rotation",
       "expected_file_type": "csv",
-      "last_attempted": "2026-07-01T14:19:20+00:00",
+      "last_attempted": "2026-07-01T14:50:19+00:00",
       "license_note": "Derived compact CSV from SPARC public rotation curves.",
-      "limitations": "A single lightweight representative galaxy curve is stored in this run.",
+      "limitations": "A small deterministic representative subset of SPARC rotation curves is stored in this run.",
       "output_paths": [
         "empirical/cache/raw/galaxy_rotation/Rotmod_LTG.zip",
         "empirical/outputs/data/galaxy_rotation_public.csv",

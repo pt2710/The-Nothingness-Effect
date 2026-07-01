@@ -3,13 +3,48 @@
   "comparison": "spiral_rotation",
   "data_status": "fetched",
   "fitted_parameters": {
-    "aggregation_mix": 0.0,
+    "aggregation_mix": 0.8333333333333334,
     "baseline_scores": {
-      "flat_RMSE": 0.19320956732920677,
-      "linear_RMSE": 0.11770833143319084
+      "NGC2403": {
+        "flat_RMSE": 0.2088623617580955,
+        "linear_RMSE": 0.132721409374773
+      },
+      "NGC3198": {
+        "flat_RMSE": 0.23591585664129716,
+        "linear_RMSE": 0.18888849089777288
+      },
+      "NGC6503": {
+        "flat_RMSE": 0.07071144951439547,
+        "linear_RMSE": 0.06634440756724387
+      }
     },
     "parameter_sweep_level": "standard",
-    "radius_scale": 1.071719382814575,
+    "per_galaxy": {
+      "NGC2403": {
+        "aggregation_mix": 1.0,
+        "radius_scale": 1.4631072161966678,
+        "score": 0.13844255067548547,
+        "velocity_scale": 2.3881002555759374
+      },
+      "NGC3198": {
+        "aggregation_mix": 1.0,
+        "radius_scale": 1.4631072161966678,
+        "score": 0.17221000808602843,
+        "velocity_scale": 2.436498654173327
+      },
+      "NGC6503": {
+        "aggregation_mix": 0.5,
+        "radius_scale": 1.4631072161966678,
+        "score": 0.08709344027502634,
+        "velocity_scale": 2.623145085754238
+      }
+    },
+    "radius_scale": 1.4631072161966678,
+    "selected_baselines": {
+      "NGC2403": "linear_rotation_baseline",
+      "NGC3198": "linear_rotation_baseline",
+      "NGC6503": "linear_rotation_baseline"
+    },
     "simulation_params": {
       "G_eff": 0.32,
       "damping": 0.986,
@@ -17,11 +52,11 @@
       "eps": 0.08,
       "n_particles": 240,
       "radial_scale": 2.4,
-      "shear": 0.12,
-      "sigma": 3.4,
+      "shear": 0.08,
+      "sigma": 2.8,
       "steps": 260
     },
-    "velocity_scale": 2.0046348962314178
+    "velocity_scale": 2.482581331834501
   },
   "input_dataset_path": "empirical/outputs/data/galaxy_rotation_public.csv",
   "limitations": "Finite toy-model mapping only; not a dark-matter replacement claim and not a full astrophysical simulation.",
@@ -35,24 +70,29 @@
     "residual_figure": "empirical/outputs/figures/spiral_rotation_residuals.png"
   },
   "source_manifest": {
-    "access_date": "2026-07-01T14:19:20+00:00",
+    "access_date": "2026-07-01T14:50:19+00:00",
     "access_method": "public_zip_download",
-    "citation_note": "Compact NGC2403 rotation curve derived from the SPARC public archive.",
+    "citation_note": "Compact multi-galaxy SPARC rotation curves derived from the public archive.",
     "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
     "dataset_name": "galaxy_rotation",
     "derived_file_path": "empirical/outputs/data/galaxy_rotation_public.csv",
     "expected_file_type": "csv",
     "fixture_fallback_path": "empirical/fixtures/galaxy_rotation_fixture.csv",
     "license_note": "Derived compact CSV from SPARC public rotation curves.",
-    "limitations": "A single lightweight representative galaxy curve is stored in this run.",
+    "limitations": "A small deterministic representative subset of SPARC rotation curves is stored in this run.",
     "preprocessing_steps": [
       "Downloaded the public Rotmod_LTG.zip archive.",
-      "Parsed NGC2403_rotmod.dat.",
-      "Normalized radius and velocity columns for the repository comparison adapter while retaining raw columns."
+      "Parsed 3 deterministic representative galaxy files.",
+      "Normalized radius and velocity columns per galaxy for the repository comparison adapter while retaining raw columns.",
+      "Downsampled each galaxy to at most 24 rows to keep the repository artifact lightweight and reproducible."
     ],
     "raw_file_path": "empirical/cache/raw/galaxy_rotation/Rotmod_LTG.zip",
     "script_used": "fetch_galaxy_rotation_data.py",
-    "selected_galaxy": "NGC2403",
+    "selected_galaxies": [
+      "NGC2403",
+      "NGC3198",
+      "NGC6503"
+    ],
     "source_name": "SPARC rotation-curve catalog",
     "source_url": "https://astroweb.case.edu/SPARC/Rotmod_LTG.zip",
     "status": "fetched"

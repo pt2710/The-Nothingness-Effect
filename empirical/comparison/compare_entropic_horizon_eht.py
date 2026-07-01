@@ -42,6 +42,9 @@ def run(
         rows.append(
             {
                 "source": source,
+                "mass_billion_solar": float(empirical["mass_billion_solar"][idx]),
+                "distance_mpc": float(empirical["distance_mpc"][idx]),
+                "angular_factor": float(prediction["angular_factor"][idx]),
                 "ring_diameter_observed": float(empirical["ring_diameter"][idx]),
                 "ring_diameter_predicted_shared": float(prediction["ring_prediction"][idx]),
                 "ring_diameter_predicted_source_specific": float(prediction["ring_prediction_source_specific"][idx]),
@@ -75,15 +78,16 @@ def run(
         "# EHT Horizon Report",
         "",
         f"- data status: {selection['status']}",
-        f"- shared scale: {fitted['shared_scale']:.6f}",
-        f"- source scales: {fitted['source_scales']}",
+        f"- ring angular scale: {fitted['ring_scale']:.6f}",
+        f"- shadow angular scale: {fitted['shadow_scale']:.6f}",
+        f"- source-specific diagnostic scales: {fitted['source_specific_scale']}",
         f"- threshold contour radius proxy: {fitted['threshold_contour_radius']:.6f}",
         f"- horizon radius proxy: {fitted['horizon_radius_proxy']:.6f}",
-        f"- shared-scale RMSE: {metrics['RMSE']:.6f}",
-        f"- shared-scale weighted RMSE: {metrics['weighted_RMSE']:.6f}",
+        f"- angular-proxy RMSE: {metrics['RMSE']:.6f}",
+        f"- angular-proxy weighted RMSE: {metrics['weighted_RMSE']:.6f}",
         f"- per-source diagnostic RMSE: {metrics['source_specific_RMSE']:.6f}",
         "",
-        "Interpretation: published summary observables only. Per-source scaling is a diagnostic interpolation aid, not an independent validation result and not a GRMHD reconstruction claim.",
+        "Interpretation: published summary observables only. The mass-distance angular mapping is a finite illustrative proxy, not a GRMHD reconstruction claim and not an independent validation result.",
     ]
     write_report(paths["report"], "\n".join(report_lines))
     write_manifest(

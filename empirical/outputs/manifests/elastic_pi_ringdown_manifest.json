@@ -31,21 +31,31 @@
     "holdout": {
       "baseline_test_RMSE": 0.3714620119574305,
       "baseline_train_RMSE": 0.41389863184221204,
-      "test_RMSE": 0.37220196351474777,
-      "train_RMSE": 0.44277567457402617
+      "test_RMSE": 0.3918719724960643,
+      "train_RMSE": 0.36544862896967484
     },
     "parameter_sweep_level": "standard",
     "tne": {
-      "amplitude_scale": -0.08384295449908778,
-      "envelope_weight": 0.0,
+      "basis_coefficients": [
+        0.33984084496486094,
+        0.3535965865149769,
+        -1.4406577228946515,
+        0.33550068511761466,
+        0.32627673027233234,
+        -0.35822829473729156
+      ],
+      "basis_names": [
+        "centerline",
+        "dominant_mode_1",
+        "dominant_mode_2",
+        "interference_projection",
+        "energy_envelope",
+        "centerline_velocity"
+      ],
       "parameter_bounds": {
         "c_E": [
           0.85,
           1.2
-        ],
-        "envelope_weight": [
-          0.0,
-          0.3
         ],
         "gamma": [
           0.04,
@@ -68,22 +78,22 @@
           -0.04
         ]
       },
-      "projection_name": "composite_projection",
-      "score": 0.41364949539630996,
+      "projection_name": "reduced_tne_basis",
+      "score": 0.37959874289836565,
       "simulation_params": {
         "amplitude": 0.9,
-        "c_E": 0.85,
+        "c_E": 1.2,
         "center": 0.0,
         "dt": 0.003,
-        "gamma": 0.04,
+        "gamma": 0.08,
         "length": 20.0,
         "n": 240,
         "steps": 420,
         "width": 1.2,
-        "xi": -0.04
+        "xi": -0.12
       },
       "time_scale": 1.7,
-      "time_shift": -0.01
+      "time_shift": 0.01
     }
   },
   "input_dataset_path": "empirical/outputs/data/ligo_gw150914_ringdown.csv",

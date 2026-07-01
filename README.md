@@ -49,13 +49,10 @@ The repository-level `conftest.py` sets Matplotlib to the headless `Agg` backend
 
 ## Missing Paper Figure Artifacts
 
-The repository also contains a deterministic pipeline for manuscript-linked
-computational support artifacts under `simulations/`, `visualizations/`,
-`outputs/`, and `docs/missing_paper_figures.md`. Generate the full set with:
-
-```bash
-python -m simulations.run_missing_paper_figures
-```
+The repository also contains deterministic manuscript-linked computational
+support artifacts under the relevant `equations/<component>/test` and
+`equations/<component>/simulation` folders. See
+`docs/missing_paper_figures.md` for exact commands and generated paths.
 
 These outputs are finite illustrative simulations and numerical support
 figures, not formal proof substitutes.

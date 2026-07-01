@@ -1,0 +1,21 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "equations_module": "equations.black_hole_dynamics.black_hole_dynamics",
+  "output_directory": "equations/black_hole_dynamics/simulation",
+  "paper_caption_target": "Elastic-pi horizon, Hawking-like entropic radiation, observer horizon memory, and computational feasibility support artifacts.",
+  "parameters": {
+    "K_D": 2.0,
+    "entropy_scale": 2.0,
+    "grid_size": 256,
+    "mass_proxy": 4.0,
+    "memory_decay": 0.92,
+    "r_max": 12.0,
+    "r_min": 0.2,
+    "steps": 120,
+    "threshold": 0.36,
+    "width": 1.5
+  },
+  "random_seed": null,
+  "script": "equations.black_hole_dynamics.simulation.simulate_black_hole_dynamics",
+  "section": "18.6 and 18.13"
+}

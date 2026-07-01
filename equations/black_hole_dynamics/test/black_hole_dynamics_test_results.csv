@@ -1,0 +1,2 @@
+grid_size,steps,stable,max_temperature_proxy,max_flux_proxy,final_memory,horizon_radius_initial,horizon_radius_final,claim_boundary
+64,16,True,0.06995464753412112,3.0024222051790725e-05,2.157584862461074e-05,0.2,0.2,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute

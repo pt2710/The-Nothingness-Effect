@@ -1,0 +1,21 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "equations_module": "equations.locality_driven_gravity.locality_driven_gravity",
+  "figure": "6",
+  "output_directory": "equations/locality_driven_gravity/simulation",
+  "paper_caption_target": "Simulation of spiral structure emergence under locality-driven gravity.",
+  "parameters": {
+    "G_eff": 0.25,
+    "damping": 0.992,
+    "dt": 0.035,
+    "eps": 0.08,
+    "n_particles": 240,
+    "radial_scale": 3.0,
+    "shear": 0.12,
+    "sigma": 2.2,
+    "steps": 180
+  },
+  "random_seed": 2710,
+  "script": "equations.locality_driven_gravity.simulation.simulate_locality_driven_gravity",
+  "section": "16.4"
+}

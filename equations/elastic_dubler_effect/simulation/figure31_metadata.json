@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "equations_module": "equations.elastic_dubler_effect.elastic_dubler_effect",
+  "figure": "31",
+  "output_directory": "equations/elastic_dubler_effect/simulation",
+  "paper_caption_target": "Dubler shift as a function of entropy gradient for varying KD.",
+  "parameters": {
+    "K_D": [
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "delta_s_max": 5.0,
+    "delta_s_min": -5.0
+  },
+  "random_seed": null,
+  "script": "equations.elastic_dubler_effect.simulation.simulate_elastic_dubler_effect",
+  "section": "15.4"
+}

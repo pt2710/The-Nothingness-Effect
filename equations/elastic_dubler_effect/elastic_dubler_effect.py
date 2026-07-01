@@ -1,151 +1,97 @@
-import sys, os
+"""Elastic Dubler-effect helpers.
+
+This module is the canonical Dubler-effect implementation in the repository.
+It computes Dubler ratios from Elastic-pi profiles and keeps the numerical
+artifact wording conservative: finite illustrative simulation, not a formal
+proof substitute.
+"""
+
+from __future__ import annotations
+
 import numpy as np
-import matplotlib.pyplot as plt
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-
-from equations.dynamic_fluctuation_index.dfi import DynamicFluctuationIndex
 from equations.elastic_pi.elastic_pi import ElasticPi
 
-PLANCK_H = 6.62607015e-34
-BOLTZMANN_K = 1.380649e-23
-SOUND_KD = 0.1
 
-regimes = [
-    r"Light: Planck ($\mathcal{K}_D=h$)",
-    r"Thermodynamics: Boltzmann ($\mathcal{K}_D=k_B$)",
-    r"Sound: Acoustic Doppler ($\mathcal{K}_D=0.1$)"
-]
-K_D_values = [PLANCK_H, BOLTZMANN_K, SOUND_KD]
-colors = ['#B22222', '#228B22', '#E66100']
+def validate_kd(k_d: float | np.ndarray) -> np.ndarray:
+    values = np.asarray(k_d, dtype=float)
+    if np.any(values <= 0):
+        raise ValueError("K_D must be positive for the Elastic Dubler-effect model.")
+    return values
 
-# --------------------------------------
-# 1) GENERATE NONLINEAR DATA FOR DFI
-# --------------------------------------
-np.random.seed(42)
-n_samples = 240
-t = np.linspace(-2, 2, n_samples)
 
-# Feature A: sigmoid S-curve
-featA = 1 / (1 + np.exp(-3 * t))
-# Feature B: Gaussian bump
-featB = np.exp(- (t**2) / 1.5)
+def normalize_zero_one(values: np.ndarray) -> np.ndarray:
+    data = np.asarray(values, dtype=float)
+    span = float(np.max(data) - np.min(data))
+    if span == 0.0:
+        return np.zeros_like(data)
+    return (data - np.min(data)) / span
 
-all_X = np.column_stack([featA, featB])
 
-# tiny noise to avoid exact ties
-all_X += np.random.normal(scale=1e-3, size=all_X.shape)
+def scale_entropy(values: np.ndarray, scale: float = 5.0) -> np.ndarray:
+    data = np.asarray(values, dtype=float)
+    centered = data - np.mean(data)
+    return centered / (np.max(np.abs(centered)) + 1e-12) * scale
 
-# normalize each column into [0,1]
-def normalize_zero_one(x):
-    lo, hi = x.min(), x.max()
-    return (x - lo) / (hi - lo) if hi > lo else np.zeros_like(x)
 
-all_X[:,0] = normalize_zero_one(all_X[:,0])
-all_X[:,1] = normalize_zero_one(all_X[:,1])
+def elastic_pi_ratio(delta_s: float | np.ndarray, K_D: float | np.ndarray) -> np.ndarray:
+    """Return the normalized Elastic-pi ratio exp(-delta_s / K_D)."""
 
-# ---------------------------
-# 2) COMPUTE DFI
-# ---------------------------
-dfi_engine = DynamicFluctuationIndex()
-soi = 100
-entropies = dfi_engine.dfi(all_X, soi=soi)
+    kd = validate_kd(K_D)
+    values = np.asarray(delta_s, dtype=float)
+    if kd.ndim == 0:
+        values_1d = np.atleast_1d(values)
+        _, pi_e, _ = ElasticPi(float(kd)).compute_piE_and_laplacian(values_1d, K_D=float(kd))
+        ratio = pi_e / np.pi
+        return ratio[0] if values.ndim == 0 else ratio.reshape(values.shape)
+    exponent = np.clip(-values / kd, -700, 700)
+    return np.exp(exponent)
 
-S_A_raw = entropies[0]['Relative_Entropy']
-S_B_raw = entropies[1]['Relative_Entropy']
 
-elastic_pi = ElasticPi()
+def dubler_frequency_ratio(delta_s: float | np.ndarray, K_D: float | np.ndarray) -> np.ndarray:
+    return elastic_pi_ratio(delta_s, K_D)
 
-def scale_entropy(S):
-    S = S - np.mean(S)
-    return S / (np.max(np.abs(S)) + 1e-12) * 5
 
-# ---------------------------
-# 3) PLOTTING (unchanged)
-# ---------------------------
-fig, axes = plt.subplots(2, 3, figsize=(16, 8), gridspec_kw={'height_ratios': [1.1, 1]})
-plt.subplots_adjust(hspace=0.28, wspace=0.23)
+def dubler_shift(delta_s: float | np.ndarray, K_D: float | np.ndarray) -> np.ndarray:
+    return dubler_frequency_ratio(delta_s, K_D) - 1.0
 
-for i, (K_D, color, label) in enumerate(zip(K_D_values, colors, regimes)):
-    S_A = scale_entropy(S_A_raw)
-    S_B = scale_entropy(S_B_raw)
-    entropy_gradient = S_A - S_B
-    idx_sort = np.argsort(entropy_gradient)
-    _, pi_A, _ = elastic_pi.compute_piE_and_laplacian(S_A, K_D=K_D)
-    _, pi_B, _ = elastic_pi.compute_piE_and_laplacian(S_B, K_D=K_D)
-    with np.errstate(divide='ignore', invalid='ignore', over='ignore'):
-        pi_B_safe = np.where(pi_B == 0, 1e-300, pi_B)
-        dubler_shift = pi_A / pi_B_safe
-        dubler_shift[~np.isfinite(dubler_shift)] = np.nan
 
-    # Top row: Dubler line plot
-    ax1 = axes[0, i]
-    ax1.plot(entropy_gradient[idx_sort], dubler_shift[idx_sort], '-', color=color, lw=2)
-    ax1.axhline(1.0, color='gray', lw=1, ls='--')
-    ax1.set_xlabel(r'Entropy Gradient $S_A - S_B$ (DFI)')
-    ax1.set_title(label, fontsize=13)
-    ax1.grid(True, alpha=0.25)
-    if i == 0:
-        ax1.set_ylabel(r'Dubler Shift $\frac{\pi_{\mathcal{E}}(A)}{\pi_{\mathcal{E}}(B)}$')
-    ax1.set_xlim(-10, 10)
-    finite_yvals = dubler_shift[np.isfinite(dubler_shift)]
-    if finite_yvals.size == 0:
-        ax1.set_ylim(0, 1)
-    else:
-        y0, y1 = np.nanmin(finite_yvals), np.nanmax(finite_yvals)
-        if y0 == y1: y0, y1 = 0, y1 + 1
-        ax1.set_ylim(y0 * 0.95, y1 * 1.05)
+def entropy_gradient_path_integral(gradient_values: np.ndarray, path_spacing: float) -> float:
+    if path_spacing <= 0:
+        raise ValueError("path_spacing must be positive.")
+    return float(np.trapezoid(np.asarray(gradient_values, dtype=float), dx=path_spacing))
 
-    # Bottom row: regime-specific interpretables
-    ax2 = axes[1, i]
-    if np.all(np.isnan(dubler_shift)):
-        ax2.text(0.5, 0.5, "No data", ha='center', va='center')
-        continue
 
-    if label.startswith("Light"):
-        normed = (dubler_shift - np.nanmin(dubler_shift)) / (np.nanmax(dubler_shift) - np.nanmin(dubler_shift) + 1e-12)
-        wavelengths = 400 + normed * (700-400)
-        rgb = plt.cm.jet((wavelengths-400)/300)
-        for j in range(len(entropy_gradient)-1):
-            ax2.axvspan(entropy_gradient[idx_sort][j], entropy_gradient[idx_sort][j+1],
-                        color=rgb[idx_sort][j], ec=None)
-        ax2.set_xlim(ax1.get_xlim()); ax2.set_ylim(0,1)
-        ax2.set_yticks([]); ax2.set_ylabel("Color Map")
-        ax2.set_xlabel(r'Entropy Gradient $S_A - S_B$ (DFI)')
-        ax2.set_title("Visible Color Shift", fontsize=10)
+def compute_dubler_grid(
+    delta_s_values: np.ndarray,
+    K_D_values: np.ndarray,
+) -> dict[str, np.ndarray]:
+    delta_s = np.asarray(delta_s_values, dtype=float)
+    kd_values = validate_kd(K_D_values)
+    ratios = np.vstack([dubler_frequency_ratio(delta_s, kd) for kd in kd_values])
+    shifts = ratios - 1.0
+    return {
+        "delta_s": delta_s,
+        "K_D": kd_values,
+        "frequency_ratio": ratios,
+        "dubler_shift": shifts,
+    }
 
-    elif label.startswith("Sound"):
-        n_wave = len(dubler_shift)
-        t_wave = np.linspace(0, 2*np.pi, n_wave)
-        freq = 200 + 1800 * (1 - np.abs(entropy_gradient) /
-                             (np.max(np.abs(entropy_gradient)) + 1e-8))
-        wave = np.sin(2 * np.pi * freq * (t_wave / (2*np.pi)))
-        amp_env = 0.5 + 0.5 * (dubler_shift - np.nanmin(dubler_shift)) / \
-                  (np.nanmax(dubler_shift) - np.nanmin(dubler_shift) + 1e-12)
-        ax2.plot(t_wave, wave * amp_env, color=color, lw=1.5)
-        ax2.set_xlabel("Time (arbitrary)"); ax2.set_ylabel("Sound Waveform")
-        ax2.set_title("Doppler-like Frequency Shift", fontsize=10)
-        ax2.set_yticks([]); ax2.set_xticks([])
 
-    elif label.startswith("Thermo"):
-        normed = (dubler_shift - np.nanmin(dubler_shift)) / \
-                 (np.nanmax(dubler_shift) - np.nanmin(dubler_shift) + 1e-12)
-        heat_colors = plt.cm.hot(normed)
-        for j in range(len(entropy_gradient)-1):
-            ax2.axvspan(entropy_gradient[idx_sort][j], entropy_gradient[idx_sort][j+1],
-                        color=heat_colors[idx_sort][j], ec=None)
-        ax2.set_xlim(ax1.get_xlim()); ax2.set_ylim(0,1)
-        ax2.set_yticks([]); ax2.set_ylabel("Heat Map")
-        ax2.set_xlabel(r'Entropy Gradient $S_A - S_B$ (DFI)')
-        ax2.set_title("Thermal Shift (Heat Color)", fontsize=10)
+def synthetic_entropy_pair(seed: int = 42, n_samples: int = 240) -> dict[str, np.ndarray]:
+    """Return deterministic entropy-like paired features for Dubler artifacts."""
 
-fig.suptitle(r"Dubler Shift: DFI + Elastic $\pi$ (Light, Sound, Thermo; unique regime plots below lines)",
-             fontsize=14)
-fig.tight_layout(rect=[0, 0, 1, 0.95])
-
-os.makedirs("figures", exist_ok=True)
-fig.savefig("figures/dubler_shift_three_scenarios_interpretables.pdf")
-fig.savefig("figures/dubler_shift_three_scenarios_interpretables.png", dpi=300)
-plt.show()
+    rng = np.random.default_rng(seed)
+    t = np.linspace(-2.0, 2.0, n_samples)
+    feature_a = 1.0 / (1.0 + np.exp(-3.0 * t))
+    feature_b = np.exp(-(t**2) / 1.5)
+    feature_a = normalize_zero_one(feature_a + rng.normal(scale=1e-3, size=t.shape))
+    feature_b = normalize_zero_one(feature_b + rng.normal(scale=1e-3, size=t.shape))
+    entropy_a = scale_entropy(feature_a)
+    entropy_b = scale_entropy(feature_b)
+    return {
+        "t": t,
+        "entropy_a": entropy_a,
+        "entropy_b": entropy_b,
+        "entropy_gradient": entropy_a - entropy_b,
+    }

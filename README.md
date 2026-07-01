@@ -46,3 +46,16 @@ python -m pytest
 ```
 
 The repository-level `conftest.py` sets Matplotlib to the headless `Agg` backend during pytest runs, which avoids GUI/Tk dependencies in figure-generating tests.
+
+## Missing Paper Figure Artifacts
+
+The repository also contains a deterministic pipeline for manuscript-linked
+computational support artifacts under `simulations/`, `visualizations/`,
+`outputs/`, and `docs/missing_paper_figures.md`. Generate the full set with:
+
+```bash
+python -m simulations.run_missing_paper_figures
+```
+
+These outputs are finite illustrative simulations and numerical support
+figures, not formal proof substitutes.

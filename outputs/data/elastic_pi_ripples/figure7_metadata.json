@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "equations_module": "equations.elastic_pi_ripples",
+  "figure": "7",
+  "output_files": {
+    "data": "outputs/data/elastic_pi_ripples/figure7_ripple_history.npz",
+    "figure": "outputs/figures/section19/figure7_elastic_pi_ripple_ringdown.png",
+    "metrics": "outputs/metrics/section19/figure7_ripple_metrics.csv"
+  },
+  "paper_caption_target": "Propagation and attenuation of an elastic-pi ripple after black-hole ringdown. Waveform distortion/nonlinear term Xi visible at late times.",
+  "parameters": {
+    "amplitude": 0.8,
+    "c_E": 1.0,
+    "center": 0.0,
+    "dt": 0.02,
+    "gamma": 0.08,
+    "length": 20.0,
+    "n": 320,
+    "steps": 260,
+    "width": 0.9,
+    "xi": -0.08
+  },
+  "random_seed": null,
+  "script": "simulations.run_elastic_pi_ripple_figure7",
+  "section": "19.4"
+}

@@ -11,6 +11,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
+from equations.elastic_pi.elastic_pi import ElasticPi
+
 
 @dataclass(frozen=True)
 class BlackHoleParams:
@@ -41,7 +43,8 @@ def entropy_profile_radial(
 def elastic_pi_profile(entropy: np.ndarray, K_D: float) -> np.ndarray:
     if K_D <= 0:
         raise ValueError("K_D must be positive.")
-    return np.exp(np.clip(-np.asarray(entropy, dtype=float) / K_D, -700, 700))
+    _, pi_e, _ = ElasticPi(K_D).compute_piE_and_laplacian(np.asarray(entropy, dtype=float), K_D=K_D)
+    return pi_e / np.pi
 
 
 def horizon_indicator(r: np.ndarray, pi_E: np.ndarray, threshold: float) -> float:

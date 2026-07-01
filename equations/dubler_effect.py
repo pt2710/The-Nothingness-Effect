@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import numpy as np
 
+from equations.elastic_pi.elastic_pi import ElasticPi
+
 
 def _validate_kd(k_d: float | np.ndarray) -> np.ndarray:
     values = np.asarray(k_d, dtype=float)
@@ -21,7 +23,13 @@ def elastic_pi_ratio(delta_s: float | np.ndarray, K_D: float | np.ndarray) -> np
     """Return exp(-delta_s / K_D) for the finite Elastic-pi ratio model."""
 
     kd = _validate_kd(K_D)
-    exponent = np.clip(-np.asarray(delta_s, dtype=float) / kd, -700, 700)
+    values = np.asarray(delta_s, dtype=float)
+    if kd.ndim == 0:
+        values_1d = np.atleast_1d(values)
+        _, pi_e, _ = ElasticPi(float(kd)).compute_piE_and_laplacian(values_1d, K_D=float(kd))
+        ratio = pi_e / np.pi
+        return ratio[0] if values.ndim == 0 else ratio.reshape(values.shape)
+    exponent = np.clip(-values / kd, -700, 700)
     return np.exp(exponent)
 
 

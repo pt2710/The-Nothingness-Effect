@@ -1,5 +1,5 @@
 section,figure,K_D,ratio_at_zero_delta_s,min_shift,max_shift,finite,claim_boundary
-15.4,31,0.5,1.0,-0.9999546000702375,22025.465794806718,True,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
+15.4,31,0.5,1.0,-0.9999546000702375,22025.465794806714,True,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
 15.4,31,1.0,1.0,-0.9932620530009145,147.4131591025766,True,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
-15.4,31,2.0,1.0,-0.9179150013761012,11.182493960703473,True,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
+15.4,31,2.0,1.0,-0.9179150013761012,11.182493960703475,True,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute
 15.4,31,5.0,1.0,-0.6321205588285577,1.718281828459045,True,finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute

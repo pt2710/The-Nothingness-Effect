@@ -103,7 +103,7 @@ Each acquisition script writes a provenance manifest under `empirical/outputs/ma
 ## Model-to-Observable Mappings
 
 - `dubler_redshift_mapping.py`: maps Dubler-shift outputs to a redshift benchmark adapter.
-- `spiral_galaxy_mapping.py`: maps locality-driven particle dynamics to radial rotation-curve observables.
+- `spiral_galaxy_mapping.py`: maps locality-driven particle dynamics plus entropic-elastic morphology diagnostics to radial rotation-curve observables.
 - `horizon_eht_mapping.py`: maps horizon-radius proxies to ring/shadow observables through a fitted angular scale.
 - `observer_memory_mapping.py`: maps black-hole memory-like traces to waveform-style comparison data.
 - `ripple_ringdown_mapping.py`: maps elastic-pi ringdown traces against a damped-sinusoid baseline and waveform-style comparison data.
@@ -150,7 +150,7 @@ What was improved:
 - Dubler redshift:
   explicit sign convention, bounded fit metadata, residual diagnostics
 - Spiral rotation:
-  tangential-velocity extraction, bounded deterministic parameter sweep, simple baseline family, morphology diagnostics
+  tangential-velocity extraction, bounded deterministic parameter sweep, simple baseline family, morphology diagnostics, and multi-galaxy SPARC fitting
 - EHT horizon:
   threshold-crossing proxy audit, uncertainty-aware residuals, shared-scale vs per-source diagnostics
 - Observer memory:
@@ -167,6 +167,27 @@ Current weakest empirical comparisons:
 - observer memory remains weak
 - ringdown remains difficult and the damped-sinusoid baseline may still be stronger
 - spiral rotation remains a finite toy rotation-curve proxy rather than a full astrophysical model
+- improved morphology does not convert the result into empirical validation
+
+## Locality-Driven Spiral Rework
+
+The spiral-galaxy side now uses an explicit body-and-field feedback model:
+
+- mass-bearing bodies deform a density-derived locality field
+- the locality field produces an entropic-elastic tension proxy
+- gravity plus elastic-tension gradients feed back into body motion
+- differential rotation and seeded asymmetry wind the disk into stronger arm-like structure
+
+The empirical SPARC comparison still remains preliminary. It is a repository-linked computational support artifact, not a dark-matter-replacement claim, not a full astrophysical simulation, and not an empirical validation claim.
+
+Additional spiral diagnostics now exposed to the empirical layer include:
+
+- `mode_2_amplitude`
+- `mode_3_amplitude`
+- `density_arm_contrast`
+- `angular_momentum_drift`
+- `elastic_tension_max`
+- `arm_asymmetry_index`
 
 Metric interpretation:
 

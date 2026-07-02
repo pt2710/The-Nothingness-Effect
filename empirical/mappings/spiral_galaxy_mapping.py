@@ -27,33 +27,33 @@ from equations.locality_driven_gravity.locality_driven_gravity import (
 SWEEP_LEVELS: dict[str, dict[str, list[float] | list[int]]] = {
     "quick": {
         "shear": [0.12, 0.2],
-        "sigma": [2.2, 2.8],
-        "damping": [0.988, 0.995],
+        "sigma": [2.4, 3.0],
+        "damping": [0.992],
         "steps": [200],
-        "G_eff": [0.25, 0.4],
-        "radial_scale": [2.4, 3.0],
-        "aggregation_mix": [0.25, 0.5, 0.75],
-        "radius_scale_factor": [0.85, 1.0, 1.15],
+        "G_eff": [0.24, 0.34],
+        "radial_scale": [2.6, 3.2],
+        "aggregation_mix": [0.3, 0.6],
+        "radius_scale_factor": [0.9, 1.0, 1.1],
     },
     "standard": {
-        "shear": [0.08, 0.12, 0.18, 0.24],
-        "sigma": [1.8, 2.2, 2.8, 3.4],
-        "damping": [0.986, 0.99, 0.994, 0.997],
-        "steps": [180, 220, 260],
-        "G_eff": [0.18, 0.25, 0.32, 0.4],
-        "radial_scale": [2.4, 3.0, 3.6, 4.2],
-        "aggregation_mix": [0.0, 0.25, 0.5, 0.75, 1.0],
-        "radius_scale_factor": [0.75, 0.9, 1.0, 1.1, 1.25],
+        "shear": [0.1, 0.2],
+        "sigma": [2.2, 3.0],
+        "damping": [0.988, 0.994],
+        "steps": [180, 240],
+        "G_eff": [0.22, 0.34],
+        "radial_scale": [2.8, 3.6],
+        "aggregation_mix": [0.0, 0.5, 1.0],
+        "radius_scale_factor": [0.88, 1.0, 1.12],
     },
     "extended": {
-        "shear": [0.06, 0.1, 0.14, 0.18, 0.24, 0.3],
-        "sigma": [1.6, 2.0, 2.4, 2.8, 3.2, 3.6],
-        "damping": [0.984, 0.988, 0.992, 0.996, 0.998],
-        "steps": [180, 220, 260, 300],
-        "G_eff": [0.14, 0.2, 0.26, 0.32, 0.38, 0.44],
-        "radial_scale": [2.2, 2.8, 3.4, 4.0, 4.6],
-        "aggregation_mix": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
-        "radius_scale_factor": [0.7, 0.82, 0.94, 1.06, 1.18, 1.3],
+        "shear": [0.08, 0.14, 0.2, 0.28],
+        "sigma": [2.0, 2.6, 3.2],
+        "damping": [0.986, 0.991, 0.996],
+        "steps": [180, 220, 260],
+        "G_eff": [0.18, 0.26, 0.34],
+        "radial_scale": [2.6, 3.2, 3.8],
+        "aggregation_mix": [0.0, 0.33, 0.66, 1.0],
+        "radius_scale_factor": [0.82, 0.94, 1.06, 1.18],
     },
 }
 
@@ -95,21 +95,32 @@ def _profile_for_params(
     G_eff: float,
     radial_scale: float,
 ) -> dict[str, Any]:
+    n_particles = 120 if steps <= 200 else 156
+    grid_size = 28 if steps <= 200 else 34
     params = LocalityGravityParams(
-        n_particles=240,
+        n_particles=n_particles,
         steps=steps,
         shear=shear,
         sigma=sigma,
         damping=damping,
         G_eff=G_eff,
         radial_scale=radial_scale,
+        grid_size=grid_size,
+        central_mass=205.0 if steps <= 200 else 220.0,
     )
     result = simulate_locality_spiral(params=params, seed=2710)
-    profile = radial_velocity_profile(result["positions"], result["velocities"], n_bins=10)
+    profile = radial_velocity_profile(result["positions"], result["velocities"], result["masses"], n_bins=10)
     return {
         "params": params.__dict__,
         "profile": profile,
-        "spiral_metrics": compute_spiral_metrics(result["history"]),
+        "spiral_metrics": compute_spiral_metrics(
+            result["history"],
+            velocity_history=result["velocity_history"],
+            masses=result["masses"],
+            body_types=result["body_types"],
+            tension_field=result["tension_history"][-1],
+        ),
+        "masses": np.asarray(result["masses"], dtype=float),
     }
 
 
@@ -281,8 +292,14 @@ def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[
         "profile_std": np.asarray(profile["tangential_velocity_std"], dtype=float),
         "profile_counts": np.asarray(profile["counts"], dtype=int),
         "spiral_order_parameter": float(fit["profile"]["spiral_metrics"]["spiral_order_parameter"]),
+        "mode_2_amplitude": float(fit["profile"]["spiral_metrics"]["mode_2_amplitude"]),
+        "mode_3_amplitude": float(fit["profile"]["spiral_metrics"]["mode_3_amplitude"]),
         "pitch_angle_proxy": float(fit["profile"]["spiral_metrics"]["pitch_angle_proxy"]),
         "radial_concentration": float(fit["profile"]["spiral_metrics"]["radial_concentration"]),
+        "density_arm_contrast": float(fit["profile"]["spiral_metrics"]["density_arm_contrast"]),
+        "angular_momentum_drift": float(fit["profile"]["spiral_metrics"]["angular_momentum_drift"]),
+        "elastic_tension_max": float(fit["profile"]["spiral_metrics"]["elastic_tension_max"]),
+        "arm_asymmetry_index": float(fit["profile"]["spiral_metrics"]["arm_asymmetry_index"]),
         "per_galaxy_prediction": per_galaxy_prediction,
         "fitted_parameters": {
             "radius_scale": float(radius_scale_mean / galaxy_count),
@@ -323,8 +340,14 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["flat_baseline_RMSE"] = rmse(empirical["velocity"], prediction["flat_baseline_prediction"])
     metrics["linear_baseline_RMSE"] = rmse(empirical["velocity"], prediction["linear_baseline_prediction"])
     metrics["spiral_order_parameter"] = float(prediction["spiral_order_parameter"])
+    metrics["mode_2_amplitude"] = float(prediction["mode_2_amplitude"])
+    metrics["mode_3_amplitude"] = float(prediction["mode_3_amplitude"])
     metrics["pitch_angle_proxy"] = float(prediction["pitch_angle_proxy"])
     metrics["radial_concentration"] = float(prediction["radial_concentration"])
+    metrics["density_arm_contrast"] = float(prediction["density_arm_contrast"])
+    metrics["angular_momentum_drift"] = float(prediction["angular_momentum_drift"])
+    metrics["elastic_tension_max"] = float(prediction["elastic_tension_max"])
+    metrics["arm_asymmetry_index"] = float(prediction["arm_asymmetry_index"])
     metrics["galaxy_count"] = float(len(prediction["per_galaxy_prediction"]))
     metrics["TNE_vs_baseline_note"] = (
         "Improved preliminary residual fit under the implemented multi-galaxy proxy mapping."
@@ -407,11 +430,13 @@ def plot_comparison(
     axes[0].set_ylabel("velocity")
     axes[0].grid(True, alpha=0.25)
     axes[0].legend(loc="best")
-    axes[1].plot(np.arange(len(prediction["density_profile"])), prediction["density_profile"], color="#1f77b4", linewidth=2.0, marker="s")
-    axes[1].set_title("Shared radial density profile")
+    axes[1].plot(np.arange(len(prediction["density_profile"])), prediction["density_profile"], color="#1f77b4", linewidth=2.0, marker="s", label="density profile")
+    axes[1].axhline(prediction["density_arm_contrast"], color="#d62728", linewidth=1.4, linestyle="--", label="arm contrast proxy")
+    axes[1].set_title("Shared radial density profile and arm contrast")
     axes[1].set_xlabel("profile bin")
-    axes[1].set_ylabel("density proxy")
+    axes[1].set_ylabel("density / contrast proxy")
     axes[1].grid(True, alpha=0.25)
+    axes[1].legend(loc="best")
     save_figure(fig, morphology_path, dpi=220)
     plt.close(fig)
     return [curve_path, residual_path, morphology_path]

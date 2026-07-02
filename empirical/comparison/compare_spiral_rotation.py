@@ -97,12 +97,15 @@ def run(
         f"- galaxy count: {int(metrics['galaxy_count'])}",
         f"- per-galaxy baseline family: {prediction['fitted_parameters']['selected_baselines']}",
         f"- spiral order parameter: {prediction['spiral_order_parameter']:.6f}",
+        f"- m=2 / m=3 amplitude: {prediction['mode_2_amplitude']:.6f} / {prediction['mode_3_amplitude']:.6f}",
         f"- pitch-angle proxy: {prediction['pitch_angle_proxy']:.6f}",
+        f"- density arm contrast: {prediction['density_arm_contrast']:.6f}",
+        f"- angular momentum drift: {prediction['angular_momentum_drift']:.6f}",
         f"- RMSE: {metrics['RMSE']:.6f}",
         f"- selected baseline RMSE: {metrics['baseline_RMSE']:.6f}",
         f"- flat / linear baseline RMSE: {metrics['flat_baseline_RMSE']:.6f} / {metrics['linear_baseline_RMSE']:.6f}",
         "",
-        "Interpretation: finite illustrative rotation-curve comparison only. Any fit improvement is a preliminary residual result under the implemented proxy mapping and does not replace full astrophysical modeling.",
+        "Interpretation: finite illustrative rotation-curve comparison only. The locality-driven spiral proxy is not a full astrophysical simulation, not a dark-matter-replacement claim, and not an empirical validation claim.",
     ]
     write_report(paths["report"], "\n".join(report_lines))
     write_manifest(

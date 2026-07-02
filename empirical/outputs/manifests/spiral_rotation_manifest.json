@@ -3,7 +3,7 @@
   "comparison": "spiral_rotation",
   "data_status": "fetched",
   "fitted_parameters": {
-    "aggregation_mix": 0.8333333333333334,
+    "aggregation_mix": 1.0,
     "baseline_scores": {
       "NGC2403": {
         "flat_RMSE": 0.2088623617580955,
@@ -22,41 +22,55 @@
     "per_galaxy": {
       "NGC2403": {
         "aggregation_mix": 1.0,
-        "radius_scale": 1.4631072161966678,
-        "score": 0.13844255067548547,
-        "velocity_scale": 2.3881002555759374
+        "radius_scale": 0.6210845259883848,
+        "score": 0.1229523490631553,
+        "velocity_scale": 0.14906146187429575
       },
       "NGC3198": {
         "aggregation_mix": 1.0,
-        "radius_scale": 1.4631072161966678,
-        "score": 0.17221000808602843,
-        "velocity_scale": 2.436498654173327
+        "radius_scale": 0.6210845259883848,
+        "score": 0.16737421252120768,
+        "velocity_scale": 0.1519754050030231
       },
       "NGC6503": {
-        "aggregation_mix": 0.5,
-        "radius_scale": 1.4631072161966678,
-        "score": 0.08709344027502634,
-        "velocity_scale": 2.623145085754238
+        "aggregation_mix": 1.0,
+        "radius_scale": 0.6210845259883848,
+        "score": 0.10120373170939381,
+        "velocity_scale": 0.15732886184377926
       }
     },
-    "radius_scale": 1.4631072161966678,
+    "radius_scale": 0.6210845259883848,
     "selected_baselines": {
       "NGC2403": "linear_rotation_baseline",
       "NGC3198": "linear_rotation_baseline",
       "NGC6503": "linear_rotation_baseline"
     },
     "simulation_params": {
-      "G_eff": 0.32,
-      "damping": 0.986,
-      "dt": 0.035,
-      "eps": 0.08,
-      "n_particles": 240,
-      "radial_scale": 2.4,
-      "shear": 0.08,
-      "sigma": 2.8,
-      "steps": 260
+      "G_eff": 0.34,
+      "asymmetry_seed": 0.075,
+      "bar_strength": 0.22,
+      "central_mass": 205.0,
+      "cluster_mass_scale": 2.4,
+      "damping": 0.994,
+      "density_sigma": 0.34,
+      "dt": 0.032,
+      "elastic_beta": 0.55,
+      "elastic_kappa": 0.5,
+      "entropic_alpha": 0.95,
+      "eps": 0.16,
+      "gas_mass_scale": 0.72,
+      "grid_size": 28,
+      "n_particles": 120,
+      "radial_scale": 3.6,
+      "relax": 0.86,
+      "shear": 0.1,
+      "shear_gamma": 0.48,
+      "sigma": 2.2,
+      "star_mass_scale": 1.0,
+      "steps": 180,
+      "vertical_scale": 0.22
     },
-    "velocity_scale": 2.482581331834501
+    "velocity_scale": 0.15278857624036604
   },
   "input_dataset_path": "empirical/outputs/data/galaxy_rotation_public.csv",
   "limitations": "Finite toy-model mapping only; not a dark-matter replacement claim and not a full astrophysical simulation.",

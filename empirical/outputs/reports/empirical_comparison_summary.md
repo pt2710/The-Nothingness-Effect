@@ -19,7 +19,7 @@ Claim boundary:
 
 Summary rows:
 - redshift_clock: RMSE=0.009231, MAE=0.008960, status=cached, passed_validation=True
-- galaxy_rotation: RMSE=0.137123, MAE=0.095789, status=fetched, passed_validation=True
+- galaxy_rotation: RMSE=0.133384, MAE=0.094393, status=fetched, passed_validation=True
 - eht_observables: RMSE=0.411214, MAE=0.367623, status=cached, passed_validation=True
 - ligo_waveforms: RMSE=0.420622, MAE=0.345753, status=fetched, passed_validation=True
 - ligo_ringdown: RMSE=0.379599, MAE=0.306026, status=fetched, passed_validation=True

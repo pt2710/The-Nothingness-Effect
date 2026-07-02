@@ -40,6 +40,17 @@ python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d -
 python -m equations.run_animation_artifacts --quick
 ```
 
+For the spiral-galaxy proxy specifically, the animation now renders:
+
+- explicit mass-bearing bodies
+- a density heatmap and ridge contours in 2D
+- fading trajectory trails
+- a central mass marker
+- tension-surface structure in 3D
+- spiral metrics in metadata and on-frame overlays
+
+This remains a finite spiral-formation proxy, not a full astrophysical simulation and not an empirical validation claim.
+
 Run the focused animation tests:
 
 ```bash

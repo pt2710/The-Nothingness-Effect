@@ -73,9 +73,12 @@ def test_galaxy_mapping_emits_baseline_family_and_profiles():
     assert "linear_baseline_prediction" in prediction
     assert "density_profile" in prediction
     assert "pitch_angle_proxy" in prediction
+    assert "density_arm_contrast" in prediction
+    assert "mode_2_amplitude" in prediction
     assert len(set(empirical["galaxy_id"])) >= 2
     metrics = mapping.compute_metrics(empirical, prediction, mapping.compute_residuals(empirical, prediction))
     assert metrics["galaxy_count"] >= 2
+    assert np.isfinite(metrics["density_arm_contrast"])
 
 
 def test_eht_mapping_reports_source_specific_diagnostics():

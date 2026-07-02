@@ -1,4 +1,4 @@
-"""Generate a deterministic 3D TNE proxy animation of spiral-like galaxy formation."""
+"""Generate a deterministic 3D TNE locality-driven galaxy proxy animation."""
 
 from __future__ import annotations
 
@@ -15,18 +15,10 @@ from matplotlib import animation
 
 from equations.animation_io import figure_to_frame, resolve_animation_writer, save_animation, save_frame_strip, save_gif_fallback, write_animation_metadata
 from equations.artifact_io import CLAIM_BOUNDARY, ensure_dir, save_npz
-from equations.locality_driven_gravity.locality_driven_gravity import LocalityGravityParams, compute_spiral_metrics, simulate_locality_spiral
+from equations.locality_driven_gravity.locality_driven_gravity import BodyType, LocalityGravityParams, compute_spiral_metrics, simulate_locality_spiral
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-
-
-def _density_surface(positions: np.ndarray, bound: float, bins: int = 40) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    hist, xedges, yedges = np.histogram2d(positions[:, 0], positions[:, 1], bins=bins, range=[[-bound, bound], [-bound, bound]])
-    xc = 0.5 * (xedges[:-1] + xedges[1:])
-    yc = 0.5 * (yedges[:-1] + yedges[1:])
-    xx, yy = np.meshgrid(xc, yc)
-    return xx, yy, hist.T
 
 
 def run(
@@ -38,49 +30,64 @@ def run(
 ) -> dict[str, object]:
     root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
     params = LocalityGravityParams(
-        n_particles=120 if quick else 280,
-        steps=55 if quick else 180,
-        shear=0.18,
-        damping=0.995,
+        n_particles=96 if quick else 240,
+        steps=42 if quick else 160,
+        grid_size=26 if quick else 42,
+        radial_scale=3.1,
+        central_mass=200.0 if quick else 220.0,
     )
     result = simulate_locality_spiral(params=params, seed=seed)
-    history = result["history"]
-    metrics = compute_spiral_metrics(history)
+    history = np.asarray(result["history"], dtype=float)
+    density_history = np.asarray(result["density_history"], dtype=float)
+    tension_history = np.asarray(result["tension_history"], dtype=float)
+    masses = np.asarray(result["masses"], dtype=float)
+    body_types = np.asarray(result["body_types"], dtype=object)
+    metrics = compute_spiral_metrics(
+        history,
+        velocity_history=result["velocity_history"],
+        masses=masses,
+        body_types=body_types,
+        tension_field=tension_history[-1],
+    )
     frame_count = history.shape[0]
     fps_value = fps or (10 if quick else 16)
     bound = float(np.max(np.abs(history)) * 1.08)
-    bins = 28 if quick else 36
+    grid_axis = np.asarray(result["grid_axis"], dtype=float)
+    xx, yy = np.meshgrid(grid_axis, grid_axis)
+    center_mask = body_types == BodyType.CENTRAL_MASS.value
 
-    fig = plt.figure(figsize=(7.6, 5.9), constrained_layout=True)
+    fig = plt.figure(figsize=(8.0, 6.2), constrained_layout=True)
     ax = fig.add_subplot(111, projection="3d")
 
     def update(frame: int):
         ax.clear()
         positions = history[frame]
-        xx, yy, density = _density_surface(positions, bound, bins=bins)
-        stride = 2
+        density = density_history[frame]
+        tension = tension_history[frame]
         surface = ax.plot_surface(
-            xx[::stride, ::stride],
-            yy[::stride, ::stride],
-            density[::stride, ::stride],
-            cmap="magma",
+            xx,
+            yy,
+            tension,
+            cmap="cividis",
             linewidth=0.0,
             antialiased=False,
-            alpha=0.7,
+            alpha=0.82,
         )
-        radius = np.linalg.norm(positions, axis=1)
-        ax.scatter(positions[:, 0], positions[:, 1], radius * 0.12, c=radius, cmap="viridis", s=8, alpha=0.9)
+        ax.contour(xx, yy, density, levels=6, zdir="z", offset=0.0, colors="white", linewidths=0.6)
+        z_particles = np.clip(0.18 * np.interp(np.linalg.norm(positions, axis=1), [0.0, max(bound, 1e-12)], [0.0, 1.0]) + 0.55 * np.max(tension) * 0.15, 0.0, 1.2)
+        ax.scatter(positions[:, 0], positions[:, 1], z_particles, c=np.linalg.norm(positions, axis=1), cmap="magma", s=8 + 12 * masses / (np.max(masses) + 1e-12), alpha=0.9)
+        ax.scatter(positions[center_mask, 0], positions[center_mask, 1], np.full(np.count_nonzero(center_mask), np.max(tension) * 0.95), c="#ffe08a", s=140, marker="*", edgecolors="black")
         ax.set_title(
-            f"Section 16.4: locality-driven spiral formation toy model t={frame / max(1, frame_count - 1):.2f}\n"
-            f"spiral diagnostic={metrics['spiral_order_parameter']:.3f}"
+            f"TNE locality-driven galaxy proxy  t={frame / max(1, frame_count - 1):.2f}\n"
+            f"spiral={metrics['spiral_order_parameter']:.3f}  contrast={metrics['density_arm_contrast']:.3f}"
         )
         ax.set_xlabel("x")
         ax.set_ylabel("y")
-        ax.set_zlabel("density / radius proxy")
+        ax.set_zlabel("tension / density proxy")
         ax.set_xlim(-bound, bound)
         ax.set_ylim(-bound, bound)
-        ax.set_zlim(0.0, float(np.max(density) + 0.5))
-        ax.view_init(elev=30, azim=42 + 3 * frame)
+        ax.set_zlim(0.0, max(1.1, float(np.max(tension)) * 1.08))
+        ax.view_init(elev=33, azim=38)
         return surface
 
     update(0)
@@ -127,14 +134,24 @@ def run(
         update(int(frame_index))
         strip_frames.append(figure_to_frame(fig))
     save_frame_strip(strip_frames, strip_path)
-    save_npz(data_path, history=history, positions=result["positions"], velocities=result["velocities"])
+    save_npz(
+        data_path,
+        history=history,
+        density_history=density_history,
+        tension_history=tension_history,
+        positions=result["positions"],
+        velocities=result["velocities"],
+        masses=masses,
+        body_types=body_types,
+        grid_axis=result["grid_axis"],
+    )
     write_animation_metadata(
         metadata_path,
         {
             "claim_boundary": CLAIM_BOUNDARY,
             "section": "16.4",
             "animation_name": "spiral_galaxy_formation_3d",
-            "source_equation_module": "equations.locality_driven_gravity.locality_driven_gravity",
+            "source_equation_module": "equations.locality_driven_gravity.entropic_elastic_spiral",
             "source_simulation_function": "simulate_locality_spiral",
             "parameters": params.__dict__,
             "random_seed": seed,
@@ -142,6 +159,8 @@ def run(
             "frame_count": frame_count,
             "fps": fps_value,
             "fallback_mode": fallback_mode,
+            "metrics": metrics,
+            "claim_boundary_detail": "The locality-driven spiral model is a finite TNE proxy model in which mass-bearing bodies deform an entropic-elastic locality field, and the resulting gravity-plus-elastic tension field feeds back into body motion. It is not a full astrophysical galaxy simulation and is not an empirical validation claim.",
         },
     )
     plt.close(fig)
@@ -155,7 +174,7 @@ def run(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate a 3D TNE proxy spiral-galaxy animation.")
+    parser = argparse.ArgumentParser(description="Generate a 3D TNE locality-driven galaxy proxy animation.")
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--fps", type=int, default=None)

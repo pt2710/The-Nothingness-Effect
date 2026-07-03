@@ -9,7 +9,9 @@ import numpy as np
 
 from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
 from equations.locality_driven_gravity.locality_driven_gravity import (
+    arm_phase_offsets,
     LocalityGravityParams,
+    compare_spiral_arm_modes,
     compute_spiral_metrics,
     density_field,
     entropic_elastic_field,
@@ -17,6 +19,7 @@ from equations.locality_driven_gravity.locality_driven_gravity import (
     initialize_spiral_bodies,
     locality_force,
     locality_kernel,
+    simulate_spiral_arm_mode,
     simulate_locality_spiral,
 )
 
@@ -25,14 +28,15 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 
 
 def _write_test_artifacts() -> dict[str, Path]:
-    params = LocalityGravityParams(n_particles=48, steps=18, grid_size=28)
-    result = simulate_locality_spiral(params, seed=123)
+    params = LocalityGravityParams(n_particles=48, steps=18, grid_size=28, arm_mode=2)
+    result = simulate_spiral_arm_mode(2, params=params, seed=123)
     metrics = compute_spiral_metrics(
         result["history"],
         velocity_history=result["velocity_history"],
         masses=result["masses"],
         body_types=result["body_types"],
         tension_field=result["tension_history"][-1],
+        arm_mode=2,
     )
     final = result["history"][-1]
     fig, ax = plt.subplots(figsize=(5, 5), constrained_layout=True)
@@ -71,6 +75,52 @@ def test_body_initialization_is_deterministic():
     assert np.allclose(first["positions"], second["positions"])
     assert np.allclose(first["velocities"], second["velocities"])
     assert np.allclose(first["masses"], second["masses"])
+
+
+def test_arm_mode_accepts_only_supported_values():
+    for arm_mode in (2, 3, 4, "mixed"):
+        result = initialize_spiral_bodies(LocalityGravityParams(n_particles=24, arm_mode=arm_mode), seed=31)
+        assert "arm_mode_assignment" in result
+
+
+def test_invalid_arm_mode_raises_value_error():
+    try:
+        initialize_spiral_bodies(LocalityGravityParams(n_particles=24, arm_mode="five"), seed=31)  # type: ignore[arg-type]
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected invalid arm_mode to raise ValueError.")
+
+
+def test_arm_phase_offsets_produce_valid_two_arm_families():
+    rng = np.random.default_rng(2710)
+    bundle = arm_phase_offsets(rng, 200, 2)
+    phase = np.mod(bundle["phase_offsets"], 2.0 * np.pi)
+    allowed = np.array([0.0, np.pi])
+    assert np.all(np.isclose(phase[:, None], allowed[None, :], atol=1e-8).any(axis=1))
+
+
+def test_arm_phase_offsets_produce_valid_three_arm_families():
+    rng = np.random.default_rng(2710)
+    bundle = arm_phase_offsets(rng, 300, 3)
+    phase = np.mod(bundle["phase_offsets"], 2.0 * np.pi)
+    allowed = np.array([0.0, 2.0 * np.pi / 3.0, 4.0 * np.pi / 3.0])
+    assert np.all(np.isclose(phase[:, None], allowed[None, :], atol=1e-8).any(axis=1))
+
+
+def test_arm_phase_offsets_produce_valid_four_arm_families():
+    rng = np.random.default_rng(2710)
+    bundle = arm_phase_offsets(rng, 400, 4)
+    phase = np.mod(bundle["phase_offsets"], 2.0 * np.pi)
+    allowed = np.array([0.0, 0.5 * np.pi, np.pi, 1.5 * np.pi])
+    assert np.all(np.isclose(phase[:, None], allowed[None, :], atol=1e-8).any(axis=1))
+
+
+def test_mixed_arm_phase_offsets_include_multiple_modes_deterministically():
+    rng = np.random.default_rng(2710)
+    bundle = arm_phase_offsets(rng, 240, "mixed")
+    assigned = np.asarray(bundle["assigned_modes"], dtype=int)
+    assert len(np.unique(assigned)) >= 2
 
 
 def test_all_bodies_have_positive_mass():
@@ -181,11 +231,17 @@ def test_spiral_metrics_are_finite_and_modes_nonzero():
         masses=result["masses"],
         body_types=result["body_types"],
         tension_field=result["tension_history"][-1],
+        arm_mode=2,
     )
     assert np.isfinite(metrics["spiral_order_parameter"])
+    assert np.isfinite(metrics["mode_1_amplitude"])
     assert np.isfinite(metrics["mode_2_amplitude"])
     assert np.isfinite(metrics["mode_3_amplitude"])
-    assert metrics["mode_2_amplitude"] > 0.0 or metrics["mode_3_amplitude"] > 0.0
+    assert np.isfinite(metrics["mode_4_amplitude"])
+    assert np.isfinite(metrics["dominant_mode"])
+    assert np.isfinite(metrics["target_mode_amplitude"])
+    assert np.isfinite(metrics["target_mode_ratio"])
+    assert metrics["mode_2_amplitude"] > 0.0 or metrics["mode_3_amplitude"] > 0.0 or metrics["mode_4_amplitude"] > 0.0
     assert metrics["nan_count"] == 0
 
 
@@ -194,6 +250,31 @@ def test_simulation_no_nan():
     assert np.isnan(result["history"]).sum() == 0
     assert np.isnan(result["density_history"]).sum() == 0
     assert np.isnan(result["tension_history"]).sum() == 0
+
+
+def test_each_supported_arm_mode_simulation_returns_finite_outputs():
+    for arm_mode in (2, 3, 4, "mixed"):
+        result = simulate_spiral_arm_mode(arm_mode, params=LocalityGravityParams(n_particles=36, steps=16, grid_size=24, arm_mode=arm_mode), seed=41)
+        assert np.all(np.isfinite(result["history"]))
+        assert np.all(np.isfinite(result["velocity_history"]))
+        assert np.all(np.isfinite(result["density_history"]))
+        assert np.all(np.isfinite(result["tension_history"]))
+        assert np.all(np.isfinite(result["entropy_history"]))
+        for key in [
+            "mode_1_amplitude",
+            "mode_2_amplitude",
+            "mode_3_amplitude",
+            "mode_4_amplitude",
+            "dominant_mode",
+            "target_mode_amplitude",
+            "target_mode_ratio",
+        ]:
+            assert np.isfinite(result["metrics"][key])
+
+
+def test_compare_spiral_arm_modes_returns_all_requested_modes():
+    results = compare_spiral_arm_modes(seed=2710, quick=True)
+    assert set(results) == {"2", "3", "4", "mixed"}
 
 
 def test_test_script_outputs_are_generated_locally():

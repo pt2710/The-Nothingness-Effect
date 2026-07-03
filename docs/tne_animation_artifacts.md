@@ -27,7 +27,10 @@ Run the 2D animation scripts in quick mode:
 python -m equations.black_hole_dynamics.animation.animate_entropic_horizon_2d --quick
 python -m equations.black_hole_dynamics.animation.animate_hawking_like_flux_2d --quick
 python -m equations.black_hole_dynamics.animation.animate_observer_horizon_memory_2d --quick
-python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_2d --quick
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_2d --quick --arm-mode 2
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_2d --quick --arm-mode 3
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_2d --quick --arm-mode 4
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_2d --quick --arm-mode mixed
 ```
 
 Run the 3D animation scripts in quick mode:
@@ -36,13 +39,17 @@ Run the 3D animation scripts in quick mode:
 python -m equations.black_hole_dynamics.animation.animate_entropic_tension_3d --quick
 python -m equations.black_hole_dynamics.animation.animate_hawking_flux_3d --quick
 python -m equations.black_hole_dynamics.animation.animate_observer_horizon_3d --quick
-python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode 2
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode 3
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode 4
+python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode mixed
 python -m equations.run_animation_artifacts --quick
 ```
 
 For the spiral-galaxy proxy specifically, the animation now renders:
 
 - explicit mass-bearing bodies
+- controlled arm-mode initialization (`2`, `3`, `4`, `mixed`)
 - a density heatmap and ridge contours in 2D
 - fading trajectory trails
 - a central mass marker
@@ -80,6 +87,8 @@ python -m pytest equations/locality_driven_gravity/test/test_spiral_animations.p
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_frame_strip.png`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_data.npz`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_metadata.json`
+- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_arm_mode_3.mp4`
+- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_arm_mode_mixed_frame_strip.png`
 - `equations/black_hole_dynamics/animation/entropic_tension_3d.mp4`
 - `equations/black_hole_dynamics/animation/entropic_tension_3d.gif`
 - `equations/black_hole_dynamics/animation/entropic_tension_3d_frame_strip.png`
@@ -100,6 +109,8 @@ python -m pytest equations/locality_driven_gravity/test/test_spiral_animations.p
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_frame_strip.png`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_data.npz`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_metadata.json`
+- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_arm_mode_4.mp4`
+- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_arm_mode_mixed_frame_strip.png`
 - `equations/animation_artifacts_summary.csv`
 - `equations/animation_artifacts_metadata.json`
 

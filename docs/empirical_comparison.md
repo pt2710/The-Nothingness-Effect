@@ -182,12 +182,20 @@ The empirical SPARC comparison still remains preliminary. It is a repository-lin
 
 Additional spiral diagnostics now exposed to the empirical layer include:
 
+- `mode_1_amplitude`
 - `mode_2_amplitude`
 - `mode_3_amplitude`
+- `mode_4_amplitude`
+- `dominant_mode`
+- `dominant_mode_amplitude`
+- `target_mode_amplitude`
+- `target_mode_ratio`
 - `density_arm_contrast`
 - `angular_momentum_drift`
 - `elastic_tension_max`
 - `arm_asymmetry_index`
+
+The spiral mapping can now run a bounded arm-mode sweep over `2`, `3`, `4`, and `mixed`. If one mode fits better under the implemented proxy mapping, it should be described only as the best preliminary residual fit under that mapping. It is not a morphology validation claim.
 
 Metric interpretation:
 

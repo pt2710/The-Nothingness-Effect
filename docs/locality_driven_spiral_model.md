@@ -104,20 +104,37 @@ The disk is initialized with a radius-dependent circular-speed proxy and a deter
 
 The initial disk includes:
 
-- a bar-like `m=2` perturbation
+- a bar-like perturbation
 - deterministic radial wave interference
 - small seeded local offsets
-- arm selection phase splitting
+- controlled arm-mode phase splitting with `arm_mode in {2, 3, 4, "mixed"}`
 
 The arms are therefore not drawn as static overlays. They emerge from the body distribution and its subsequent gravity-plus-tension evolution.
+
+## Arm-Mode Parameterization
+
+The current implementation supports controlled arm-mode initialization through:
+
+- `arm_mode = 2`
+- `arm_mode = 3`
+- `arm_mode = 4`
+- `arm_mode = "mixed"`
+
+This is an entropic-elastic spiral-arm morphology proxy, not a full astrophysical galaxy simulation. The arm mode is seeded in the body distribution itself and then evolves under gravity plus entropic-elastic feedback. The code does not draw cosmetic spiral overlays on top of an otherwise unstructured disk.
 
 ## Metrics
 
 The model reports:
 
 - `spiral_order_parameter`
+- `mode_1_amplitude`
 - `mode_2_amplitude`
 - `mode_3_amplitude`
+- `mode_4_amplitude`
+- `dominant_mode`
+- `dominant_mode_amplitude`
+- `target_mode_amplitude`
+- `target_mode_ratio`
 - `pitch_angle_proxy`
 - `radial_concentration`
 - `density_arm_contrast`
@@ -142,6 +159,10 @@ Simulation outputs:
 - `equations/locality_driven_gravity/simulation/locality_spiral_metrics.csv`
 - `equations/locality_driven_gravity/simulation/figure6_metadata.json`
 - `equations/locality_driven_gravity/simulation/locality_spiral_metadata.json`
+- `equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.csv`
+- `equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.json`
+- `equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.png`
+- `equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison_report.md`
 
 Animation outputs:
 
@@ -149,6 +170,8 @@ Animation outputs:
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_frame_strip.png`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d.mp4`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_frame_strip.png`
+- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d_arm_mode_3.mp4`
+- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_arm_mode_mixed.mp4`
 
 ## Limitations
 

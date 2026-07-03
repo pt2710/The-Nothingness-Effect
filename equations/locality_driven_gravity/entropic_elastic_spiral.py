@@ -9,9 +9,9 @@ formal proof substitute.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from enum import Enum
-from typing import Any
+from typing import Any, Literal
 
 import numpy as np
 
@@ -24,6 +24,9 @@ class BodyType(str, Enum):
     GAS_CLOUD = "gas_cloud"
     CLUSTER = "cluster"
     OPTIONAL_SMALL_BODY = "optional_small_body"
+
+
+ArmMode = Literal[2, 3, 4, "mixed"]
 
 
 @dataclass(frozen=True)
@@ -51,6 +54,10 @@ class LocalityGravityParams:
     bar_strength: float = 0.22
     asymmetry_seed: float = 0.075
     vertical_scale: float = 0.22
+    arm_mode: ArmMode = 2
+    arm_mode_mixture: tuple[int, ...] = (2, 3, 4)
+    arm_mode_weights: tuple[float, ...] = (0.45, 0.35, 0.20)
+    arm_seed_strength: float = 1.0
 
 
 @dataclass(frozen=True)
@@ -84,6 +91,59 @@ def _body_mix_counts(n_particles: int) -> tuple[int, int, int, int]:
     elif total < n_particles:
         stars += n_particles - total
     return stars, gas, clusters, max(optional, 0)
+
+
+def _normalize_arm_mode(arm_mode: int | str) -> ArmMode:
+    if arm_mode in {2, 3, 4, "mixed"}:
+        return arm_mode  # type: ignore[return-value]
+    raise ValueError("arm_mode must be one of 2, 3, 4, or 'mixed'.")
+
+
+def _phase_family(mode: int) -> np.ndarray:
+    if mode not in {2, 3, 4}:
+        raise ValueError("phase family mode must be one of 2, 3, or 4.")
+    return np.linspace(0.0, 2.0 * np.pi, mode, endpoint=False, dtype=float)
+
+
+def arm_phase_offsets(
+    rng: np.random.Generator,
+    disk_count: int,
+    arm_mode: int | str,
+    *,
+    mixture: tuple[int, ...] = (2, 3, 4),
+    weights: tuple[float, ...] = (0.45, 0.35, 0.20),
+    jitter_scale: float = 0.0,
+) -> dict[str, np.ndarray]:
+    normalized_mode = _normalize_arm_mode(arm_mode)
+    if normalized_mode == "mixed":
+        if len(mixture) == 0 or len(mixture) != len(weights):
+            raise ValueError("arm_mode_mixture and arm_mode_weights must be non-empty and have equal length.")
+        family_modes = np.asarray([int(mode) for mode in mixture], dtype=int)
+        if np.any(~np.isin(family_modes, [2, 3, 4])):
+            raise ValueError("arm_mode_mixture may only contain 2, 3, and 4.")
+        probabilities = np.asarray(weights, dtype=float)
+        if np.any(probabilities < 0.0) or float(np.sum(probabilities)) <= 0.0:
+            raise ValueError("arm_mode_weights must sum to a positive value.")
+        probabilities = probabilities / np.sum(probabilities)
+        mode_assignment = rng.choice(family_modes, size=disk_count, p=probabilities)
+    else:
+        mode_assignment = np.full(disk_count, int(normalized_mode), dtype=int)
+
+    phases = np.empty(disk_count, dtype=float)
+    family_index = np.empty(disk_count, dtype=int)
+    for mode in np.unique(mode_assignment):
+        mask = mode_assignment == mode
+        family = _phase_family(int(mode))
+        indices = rng.integers(0, len(family), np.count_nonzero(mask))
+        family_index[mask] = indices
+        phases[mask] = family[indices]
+    if jitter_scale > 0.0:
+        phases = phases + rng.normal(0.0, jitter_scale, disk_count)
+    return {
+        "phase_offsets": phases,
+        "assigned_modes": mode_assignment.astype(int, copy=False),
+        "family_index": family_index,
+    }
 
 
 def initialize_spiral_bodies(
@@ -132,8 +192,16 @@ def initialize_spiral_bodies(
         amplitude_2=0.55,
         frequency_2=2.1,
     )
-    arm_selector = rng.integers(0, 2, disk_count) * np.pi
-    theta = base_theta + arm_selector + 1.9 * (radii / max(params.radial_scale, 1e-12)) + bar_phase + wave_seed
+    phase_bundle = arm_phase_offsets(
+        rng,
+        disk_count,
+        params.arm_mode,
+        mixture=params.arm_mode_mixture,
+        weights=params.arm_mode_weights,
+        jitter_scale=0.03 if params.arm_mode == "mixed" else 0.0,
+    )
+    arm_phase = params.arm_seed_strength * phase_bundle["phase_offsets"]
+    theta = base_theta + arm_phase + 1.9 * (radii / max(params.radial_scale, 1e-12)) + bar_phase + wave_seed
     theta += rng.normal(0.0, 0.06, disk_count)
     positions[1:, 0] = radii * np.cos(theta)
     positions[1:, 1] = radii * np.sin(theta)
@@ -210,6 +278,9 @@ def initialize_spiral_bodies(
         "spin": spin,
         "positions": positions,
         "velocities": velocities,
+        "arm_phase_offsets": arm_phase,
+        "arm_mode_assignment": phase_bundle["assigned_modes"],
+        "arm_family_index": phase_bundle["family_index"],
     }
 
 
@@ -454,6 +525,9 @@ def _initial_state(params: LocalityGravityParams, seed: int) -> dict[str, np.nda
         "luminosity": np.asarray(initialized["luminosity"], dtype=float),
         "spin": np.asarray(initialized["spin"], dtype=float),
         "body_types": np.asarray(initialized["body_types"], dtype=object),
+        "arm_phase_offsets": np.asarray(initialized["arm_phase_offsets"], dtype=float),
+        "arm_mode_assignment": np.asarray(initialized["arm_mode_assignment"], dtype=int),
+        "arm_family_index": np.asarray(initialized["arm_family_index"], dtype=int),
     }
     field = entropic_elastic_field(state["positions"], state["velocities"], state["masses"], None, params)
     state.update(
@@ -509,6 +583,7 @@ def simulate_locality_spiral(
         masses=state["masses"],
         body_types=state["body_types"],
         tension_field=state["tension"],
+        arm_mode=sim_params.arm_mode,
     )
     return {
         "history": history,
@@ -526,6 +601,22 @@ def simulate_locality_spiral(
         "grid_axis": np.asarray(state["grid_axis"], dtype=float),
         "metrics": metrics,
         "bodies": state["bodies"],
+        "arm_phase_offsets": np.asarray(state["arm_phase_offsets"], dtype=float),
+        "arm_mode_assignment": np.asarray(state["arm_mode_assignment"], dtype=int),
+        "arm_family_index": np.asarray(state["arm_family_index"], dtype=int),
+        "metadata": {
+            "arm_mode": sim_params.arm_mode,
+            "arm_seed_strength": sim_params.arm_seed_strength,
+            "arm_mode_mixture": list(sim_params.arm_mode_mixture),
+            "arm_mode_weights": list(sim_params.arm_mode_weights),
+            "random_seed": seed,
+            "parameter_set": asdict(sim_params),
+            "claim_boundary": (
+                "TNE locality-driven galaxy proxy; entropic-elastic spiral-arm morphology proxy; "
+                "controlled arm-mode initialization; not a full astrophysical simulation; "
+                "not an empirical validation claim; not a formal proof substitute"
+            ),
+        },
     }
 
 
@@ -600,6 +691,16 @@ def _mode_amplitude(positions: np.ndarray, masses: np.ndarray, mode: int) -> flo
     return float(np.abs(np.sum(weights * np.exp(1j * mode * theta))) / (np.sum(weights) + 1e-12))
 
 
+def _target_mode_summary(arm_mode: int | str, amplitudes: dict[int, float]) -> tuple[float, float]:
+    normalized_mode = _normalize_arm_mode(arm_mode)
+    total = float(sum(amplitudes.values()))
+    if normalized_mode == "mixed":
+        target = max(amplitudes[2], amplitudes[3], amplitudes[4])
+    else:
+        target = amplitudes[int(normalized_mode)]
+    return float(target), float(target / (total + 1e-12))
+
+
 def _density_arm_contrast(positions: np.ndarray, masses: np.ndarray, bins_azimuth: int = 24) -> float:
     radii = np.linalg.norm(positions, axis=1)
     mask = (radii > np.quantile(radii, 0.25)) & (radii < np.quantile(radii, 0.8))
@@ -627,6 +728,7 @@ def compute_spiral_metrics(
     masses: np.ndarray | None = None,
     body_types: np.ndarray | None = None,
     tension_field: np.ndarray | None = None,
+    arm_mode: int | str = 2,
 ) -> dict[str, float]:
     positions = np.asarray(history, dtype=float)
     final = positions[-1]
@@ -637,9 +739,15 @@ def compute_spiral_metrics(
     initial_vel = vel_hist[0]
     radius_initial = np.linalg.norm(initial, axis=1)
     radius_final = np.linalg.norm(final, axis=1)
-    m2 = _mode_amplitude(final, mass, 2)
-    m3 = _mode_amplitude(final, mass, 3)
-    spiral_order = float(max(m2, 0.85 * m3))
+    amplitudes = {mode: _mode_amplitude(final, mass, mode) for mode in (1, 2, 3, 4)}
+    m1 = amplitudes[1]
+    m2 = amplitudes[2]
+    m3 = amplitudes[3]
+    m4 = amplitudes[4]
+    dominant_mode = max(amplitudes, key=amplitudes.get)
+    dominant_mode_amplitude = float(amplitudes[dominant_mode])
+    target_mode_amplitude, target_mode_ratio = _target_mode_summary(arm_mode, amplitudes)
+    spiral_order = dominant_mode_amplitude
     tension = np.zeros((8, 8), dtype=float) if tension_field is None else np.asarray(tension_field, dtype=float)
     energy_proxy = float(0.5 * np.sum(mass[:, None] * final_vel**2))
     total_mass = float(np.sum(mass))
@@ -652,8 +760,14 @@ def compute_spiral_metrics(
         "final_mean_radius": float(np.average(radius_final, weights=mass)),
         "radial_concentration": float(np.average(radius_initial, weights=mass) - np.average(radius_final, weights=mass)),
         "spiral_order_parameter": spiral_order,
+        "mode_1_amplitude": m1,
         "mode_2_amplitude": m2,
         "mode_3_amplitude": m3,
+        "mode_4_amplitude": m4,
+        "dominant_mode": float(dominant_mode),
+        "dominant_mode_amplitude": dominant_mode_amplitude,
+        "target_mode_amplitude": target_mode_amplitude,
+        "target_mode_ratio": target_mode_ratio,
         "pitch_angle_proxy": spiral_pitch_proxy(final, mass),
         "density_arm_contrast": density_contrast,
         "angular_momentum_initial": ang_initial,
@@ -674,3 +788,52 @@ def compute_spiral_metrics(
         metrics["gas_cloud_count"] = float(np.count_nonzero(body_array == BodyType.GAS_CLOUD.value))
         metrics["cluster_count"] = float(np.count_nonzero(body_array == BodyType.CLUSTER.value))
     return metrics
+
+
+def simulate_spiral_arm_mode(
+    arm_mode: int | str,
+    params: LocalityGravityParams | None = None,
+    *,
+    seed: int = 2710,
+    quick: bool = False,
+) -> dict[str, Any]:
+    normalized_mode = _normalize_arm_mode(arm_mode)
+    base = params or LocalityGravityParams()
+    sim_params = LocalityGravityParams(
+        **{
+            **asdict(base),
+            "arm_mode": normalized_mode,
+            "n_particles": 96 if quick else base.n_particles,
+            "steps": 72 if quick else base.steps,
+            "grid_size": 32 if quick else base.grid_size,
+            "central_mass": 200.0 if quick else base.central_mass,
+        }
+    )
+    result = simulate_locality_spiral(params=sim_params, seed=seed)
+    result["metrics"] = compute_spiral_metrics(
+        result["history"],
+        velocity_history=result["velocity_history"],
+        masses=result["masses"],
+        body_types=result["body_types"],
+        tension_field=result["tension_history"][-1],
+        arm_mode=normalized_mode,
+    )
+    result["metadata"] = {
+        **result["metadata"],
+        "arm_mode": normalized_mode,
+    }
+    return result
+
+
+def compare_spiral_arm_modes(
+    arm_modes: tuple[int | str, ...] = (2, 3, 4, "mixed"),
+    *,
+    params: LocalityGravityParams | None = None,
+    seed: int = 2710,
+    quick: bool = False,
+) -> dict[str, dict[str, Any]]:
+    comparison: dict[str, dict[str, Any]] = {}
+    for arm_mode in arm_modes:
+        result = simulate_spiral_arm_mode(arm_mode, params=params, seed=seed, quick=quick)
+        comparison[str(arm_mode)] = result
+    return comparison

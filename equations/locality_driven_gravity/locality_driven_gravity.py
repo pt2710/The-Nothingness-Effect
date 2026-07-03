@@ -10,9 +10,12 @@ formal proof substitute.
 from __future__ import annotations
 
 from equations.locality_driven_gravity.entropic_elastic_spiral import (
+    ArmMode,
     BodyType,
     LocalityGravityParams,
     SpiralBody,
+    arm_phase_offsets,
+    compare_spiral_arm_modes,
     compute_spiral_metrics,
     density_field,
     entropic_elastic_field,
@@ -21,15 +24,19 @@ from equations.locality_driven_gravity.entropic_elastic_spiral import (
     locality_force,
     locality_kernel,
     radial_velocity_profile,
+    simulate_spiral_arm_mode,
     simulate_locality_spiral,
     spiral_pitch_proxy,
     step_locality_gravity,
 )
 
 __all__ = [
+    "ArmMode",
     "BodyType",
     "LocalityGravityParams",
     "SpiralBody",
+    "arm_phase_offsets",
+    "compare_spiral_arm_modes",
     "compute_spiral_metrics",
     "density_field",
     "entropic_elastic_field",
@@ -38,6 +45,7 @@ __all__ = [
     "locality_force",
     "locality_kernel",
     "radial_velocity_profile",
+    "simulate_spiral_arm_mode",
     "simulate_locality_spiral",
     "spiral_pitch_proxy",
     "step_locality_gravity",

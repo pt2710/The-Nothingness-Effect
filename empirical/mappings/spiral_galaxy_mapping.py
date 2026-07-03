@@ -94,6 +94,7 @@ def _profile_for_params(
     steps: int,
     G_eff: float,
     radial_scale: float,
+    arm_mode: int | str,
 ) -> dict[str, Any]:
     n_particles = 120 if steps <= 200 else 156
     grid_size = 28 if steps <= 200 else 34
@@ -107,6 +108,7 @@ def _profile_for_params(
         radial_scale=radial_scale,
         grid_size=grid_size,
         central_mass=205.0 if steps <= 200 else 220.0,
+        arm_mode=arm_mode,  # type: ignore[arg-type]
     )
     result = simulate_locality_spiral(params=params, seed=2710)
     profile = radial_velocity_profile(result["positions"], result["velocities"], result["masses"], n_bins=10)
@@ -176,7 +178,12 @@ def _best_local_galaxy_fit(
     return best_local
 
 
-def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "standard", seed: int = 2710) -> dict[str, Any]:
+def fit_parameters(
+    empirical: dict[str, Any],
+    parameter_sweep_level: str = "standard",
+    seed: int = 2710,
+    arm_modes: tuple[int | str, ...] = (2, 3, 4, "mixed"),
+) -> dict[str, Any]:
     del seed
     grid = SWEEP_LEVELS[parameter_sweep_level]
     observed_r = np.asarray(empirical["radius"], dtype=float)
@@ -209,29 +216,31 @@ def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "stan
                 for steps in grid["steps"]:
                     for gravity in grid["G_eff"]:
                         for radial_scale in grid["radial_scale"]:
-                            bundle = _profile_for_params(shear, sigma, damping, int(steps), gravity, radial_scale)
-                            profile = bundle["profile"]
-                            if len(profile["radial_centers"]) < 3:
-                                continue
-                            combined_prediction = np.zeros_like(observed_v)
-                            per_galaxy: dict[str, dict[str, float]] = {}
-                            for galaxy_id, mask in galaxy_slices:
-                                local_fit = _best_local_galaxy_fit(observed_r[mask], observed_v[mask], profile, grid)
-                                combined_prediction[mask] = local_fit["predicted"]
-                                per_galaxy[galaxy_id] = {
-                                    "radius_scale": float(local_fit["radius_scale"]),
-                                    "velocity_scale": float(local_fit["velocity_scale"]),
-                                    "aggregation_mix": float(local_fit["aggregation_mix"]),
-                                    "score": float(local_fit["score"]),
+                            for arm_mode in arm_modes:
+                                bundle = _profile_for_params(shear, sigma, damping, int(steps), gravity, radial_scale, arm_mode)
+                                profile = bundle["profile"]
+                                if len(profile["radial_centers"]) < 3:
+                                    continue
+                                combined_prediction = np.zeros_like(observed_v)
+                                per_galaxy: dict[str, dict[str, float]] = {}
+                                for galaxy_id, mask in galaxy_slices:
+                                    local_fit = _best_local_galaxy_fit(observed_r[mask], observed_v[mask], profile, grid)
+                                    combined_prediction[mask] = local_fit["predicted"]
+                                    per_galaxy[galaxy_id] = {
+                                        "radius_scale": float(local_fit["radius_scale"]),
+                                        "velocity_scale": float(local_fit["velocity_scale"]),
+                                        "aggregation_mix": float(local_fit["aggregation_mix"]),
+                                        "score": float(local_fit["score"]),
+                                    }
+                                score = rmse(observed_v, combined_prediction)
+                                candidate = {
+                                    "score": float(score),
+                                    "profile": bundle,
+                                    "per_galaxy": per_galaxy,
+                                    "arm_mode": arm_mode,
                                 }
-                            score = rmse(observed_v, combined_prediction)
-                            candidate = {
-                                "score": float(score),
-                                "profile": bundle,
-                                "per_galaxy": per_galaxy,
-                            }
-                            if best is None or candidate["score"] < best["score"]:
-                                best = candidate
+                                if best is None or candidate["score"] < best["score"]:
+                                    best = candidate
     assert best is not None
     best["baselines"] = baselines
     best["selected_baselines"] = selected_baselines
@@ -241,6 +250,7 @@ def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "stan
     best["linear_prediction"] = linear_prediction
     best["smoothed_prediction"] = smoothed_prediction
     best["parameter_sweep_level"] = parameter_sweep_level
+    best["arm_modes_tested"] = [str(mode) for mode in arm_modes]
     return best
 
 
@@ -294,6 +304,12 @@ def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[
         "spiral_order_parameter": float(fit["profile"]["spiral_metrics"]["spiral_order_parameter"]),
         "mode_2_amplitude": float(fit["profile"]["spiral_metrics"]["mode_2_amplitude"]),
         "mode_3_amplitude": float(fit["profile"]["spiral_metrics"]["mode_3_amplitude"]),
+        "mode_1_amplitude": float(fit["profile"]["spiral_metrics"]["mode_1_amplitude"]),
+        "mode_4_amplitude": float(fit["profile"]["spiral_metrics"]["mode_4_amplitude"]),
+        "dominant_mode": float(fit["profile"]["spiral_metrics"]["dominant_mode"]),
+        "dominant_mode_amplitude": float(fit["profile"]["spiral_metrics"]["dominant_mode_amplitude"]),
+        "target_mode_amplitude": float(fit["profile"]["spiral_metrics"]["target_mode_amplitude"]),
+        "target_mode_ratio": float(fit["profile"]["spiral_metrics"]["target_mode_ratio"]),
         "pitch_angle_proxy": float(fit["profile"]["spiral_metrics"]["pitch_angle_proxy"]),
         "radial_concentration": float(fit["profile"]["spiral_metrics"]["radial_concentration"]),
         "density_arm_contrast": float(fit["profile"]["spiral_metrics"]["density_arm_contrast"]),
@@ -307,6 +323,8 @@ def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[
             "aggregation_mix": float(aggregation_mix_mean / galaxy_count),
             "simulation_params": fit["profile"]["params"],
             "parameter_sweep_level": fit.get("parameter_sweep_level", "standard"),
+            "arm_mode": str(fit.get("arm_mode", fit["profile"]["params"].get("arm_mode", 2))),
+            "arm_modes_tested": fit.get("arm_modes_tested", ["2"]),
             "baseline_scores": fit["baseline_scores"],
             "selected_baselines": fit["selected_baselines"],
             "per_galaxy": fit["per_galaxy"],
@@ -342,6 +360,12 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["spiral_order_parameter"] = float(prediction["spiral_order_parameter"])
     metrics["mode_2_amplitude"] = float(prediction["mode_2_amplitude"])
     metrics["mode_3_amplitude"] = float(prediction["mode_3_amplitude"])
+    metrics["mode_1_amplitude"] = float(prediction["mode_1_amplitude"])
+    metrics["mode_4_amplitude"] = float(prediction["mode_4_amplitude"])
+    metrics["dominant_mode"] = float(prediction["dominant_mode"])
+    metrics["dominant_mode_amplitude"] = float(prediction["dominant_mode_amplitude"])
+    metrics["target_mode_amplitude"] = float(prediction["target_mode_amplitude"])
+    metrics["target_mode_ratio"] = float(prediction["target_mode_ratio"])
     metrics["pitch_angle_proxy"] = float(prediction["pitch_angle_proxy"])
     metrics["radial_concentration"] = float(prediction["radial_concentration"])
     metrics["density_arm_contrast"] = float(prediction["density_arm_contrast"])
@@ -349,8 +373,9 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["elastic_tension_max"] = float(prediction["elastic_tension_max"])
     metrics["arm_asymmetry_index"] = float(prediction["arm_asymmetry_index"])
     metrics["galaxy_count"] = float(len(prediction["per_galaxy_prediction"]))
+    metrics["arm_mode"] = prediction["fitted_parameters"]["arm_mode"]
     metrics["TNE_vs_baseline_note"] = (
-        "Improved preliminary residual fit under the implemented multi-galaxy proxy mapping."
+        "Best preliminary residual fit under the implemented proxy mapping."
         if metrics["RMSE"] < metrics["baseline_RMSE"]
         else "Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping."
     )

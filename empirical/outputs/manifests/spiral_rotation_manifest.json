@@ -3,7 +3,14 @@
   "comparison": "spiral_rotation",
   "data_status": "fetched",
   "fitted_parameters": {
-    "aggregation_mix": 1.0,
+    "aggregation_mix": 0.3,
+    "arm_mode": "4",
+    "arm_modes_tested": [
+      "2",
+      "3",
+      "4",
+      "mixed"
+    ],
     "baseline_scores": {
       "NGC2403": {
         "flat_RMSE": 0.2088623617580955,
@@ -18,28 +25,28 @@
         "linear_RMSE": 0.06634440756724387
       }
     },
-    "parameter_sweep_level": "standard",
+    "parameter_sweep_level": "quick",
     "per_galaxy": {
       "NGC2403": {
-        "aggregation_mix": 1.0,
-        "radius_scale": 0.6210845259883848,
-        "score": 0.1229523490631553,
-        "velocity_scale": 0.14906146187429575
+        "aggregation_mix": 0.3,
+        "radius_scale": 1.02710062578107,
+        "score": 0.0892604821833227,
+        "velocity_scale": 0.1532887503734527
       },
       "NGC3198": {
-        "aggregation_mix": 1.0,
-        "radius_scale": 0.6210845259883848,
-        "score": 0.16737421252120768,
-        "velocity_scale": 0.1519754050030231
+        "aggregation_mix": 0.3,
+        "radius_scale": 1.02710062578107,
+        "score": 0.12258521273962567,
+        "velocity_scale": 0.15823049585900564
       },
       "NGC6503": {
-        "aggregation_mix": 1.0,
-        "radius_scale": 0.6210845259883848,
-        "score": 0.10120373170939381,
-        "velocity_scale": 0.15732886184377926
+        "aggregation_mix": 0.3,
+        "radius_scale": 1.02710062578107,
+        "score": 0.12414072894797039,
+        "velocity_scale": 0.15593863523496268
       }
     },
-    "radius_scale": 0.6210845259883848,
+    "radius_scale": 1.02710062578107,
     "selected_baselines": {
       "NGC2403": "linear_rotation_baseline",
       "NGC3198": "linear_rotation_baseline",
@@ -47,11 +54,23 @@
     },
     "simulation_params": {
       "G_eff": 0.34,
+      "arm_mode": 4,
+      "arm_mode_mixture": [
+        2,
+        3,
+        4
+      ],
+      "arm_mode_weights": [
+        0.45,
+        0.35,
+        0.2
+      ],
+      "arm_seed_strength": 1.0,
       "asymmetry_seed": 0.075,
       "bar_strength": 0.22,
       "central_mass": 205.0,
       "cluster_mass_scale": 2.4,
-      "damping": 0.994,
+      "damping": 0.992,
       "density_sigma": 0.34,
       "dt": 0.032,
       "elastic_beta": 0.55,
@@ -61,16 +80,16 @@
       "gas_mass_scale": 0.72,
       "grid_size": 28,
       "n_particles": 120,
-      "radial_scale": 3.6,
+      "radial_scale": 3.2,
       "relax": 0.86,
-      "shear": 0.1,
+      "shear": 0.12,
       "shear_gamma": 0.48,
-      "sigma": 2.2,
+      "sigma": 2.4,
       "star_mass_scale": 1.0,
-      "steps": 180,
+      "steps": 200,
       "vertical_scale": 0.22
     },
-    "velocity_scale": 0.15278857624036604
+    "velocity_scale": 0.15581929382247364
   },
   "input_dataset_path": "empirical/outputs/data/galaxy_rotation_public.csv",
   "limitations": "Finite toy-model mapping only; not a dark-matter replacement claim and not a full astrophysical simulation.",

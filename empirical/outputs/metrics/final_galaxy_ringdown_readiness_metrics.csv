@@ -1,0 +1,22 @@
+area,metric,value,notes
+galaxy,visuals_paper_ready,1,supplementary_or_appendix_with_caveats
+galaxy,metrics_paper_ready,1,proxy_metrics_are_reportable_with_scope_limits
+galaxy,aggregate_RMSE,0.13259613742295692,current fetched quick comparison
+galaxy,aggregate_R2,0.5594047329670517,current fetched quick comparison
+galaxy,baseline_RMSE,0.13867878342355602,current selected baseline family
+galaxy,best_arm_mode,4,current bounded sweep winner
+galaxy,density_arm_contrast,4.3550511707267425,current morphology proxy
+galaxy,morphology_stability_score,14.923648510447634,current late-time stability proxy
+galaxy,field_feedback_strength,0.0023066754404545997,current feedback proxy
+galaxy,initialization_vs_evolution_score,0.17650527089875329,current morphology sustenance proxy
+galaxy,appendix_ready,1,bounded proxy comparison suitable with caveats
+ringdown,visuals_paper_ready,1,supplementary_or_appendix_with_caveats
+ringdown,train_beats_baseline,1,train_rmse_is_lower
+ringdown,test_beats_baseline,0,holdout_baseline_is_lower
+ringdown,aggregate_RMSE,0.380055345351557,current standard window comparison
+ringdown,baseline_RMSE,0.39732092338476915,current damped sinusoid baseline
+ringdown,train_RMSE,0.3654635286083989,current standard window
+ringdown,test_RMSE,0.39152273303306556,current standard window
+ringdown,baseline_train_RMSE,0.41389863184221204,current standard window
+ringdown,baseline_test_RMSE,0.3714620119574305,current standard window
+ringdown,appendix_ready,1,transparent proxy comparison suitable with holdout caveat

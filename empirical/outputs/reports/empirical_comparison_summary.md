@@ -9,7 +9,7 @@ Run mode:
 - selected_datasets: redshift, galaxy, eht, memory, ringdown
 - audit enabled: True
 - improve flag: False
-- parameter_sweep_level: standard
+- parameter_sweep_level: quick
 
 Claim boundary:
 - preliminary comparison only
@@ -19,7 +19,7 @@ Claim boundary:
 
 Summary rows:
 - redshift_clock: RMSE=0.009231, MAE=0.008960, status=cached, passed_validation=True
-- galaxy_rotation: RMSE=0.133384, MAE=0.094393, status=fetched, passed_validation=True
+- galaxy_rotation: RMSE=0.132596, MAE=0.097563, status=fetched, passed_validation=True
 - eht_observables: RMSE=0.411214, MAE=0.367623, status=cached, passed_validation=True
 - ligo_waveforms: RMSE=0.420622, MAE=0.345753, status=fetched, passed_validation=True
-- ligo_ringdown: RMSE=0.379599, MAE=0.306026, status=fetched, passed_validation=True
+- ligo_ringdown: RMSE=0.403460, MAE=0.333665, status=fetched, passed_validation=True

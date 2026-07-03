@@ -120,6 +120,8 @@ def create_figure(result: dict[str, object], metrics: dict[str, float], *, title
         f"target ratio = {metrics['target_mode_ratio']:.3f}",
         f"contrast = {metrics['density_arm_contrast']:.3f}",
         f"asymmetry = {metrics['arm_asymmetry_index']:.3f}",
+        f"evolution score = {metrics['initialization_vs_evolution_score']:.3f}",
+        f"feedback = {metrics['field_feedback_strength']:.3f}",
     ]
     ax_metrics.axis("off")
     ax_metrics.set_title("Metrics inset")
@@ -169,6 +171,7 @@ def _save_mode_result(mode_root: Path, arm_mode: int | str, result: dict[str, ob
         density_history=result["density_history"],
         tension_history=result["tension_history"],
         entropy_history=result["entropy_history"],
+        density_gradient_history=result["density_gradient_history"],
         positions=result["positions"],
         velocities=result["velocities"],
         masses=result["masses"],
@@ -271,7 +274,7 @@ def _write_mode_comparison(mode_root: Path, results: dict[str, dict[str, object]
 
     ax_spiral = fig.add_subplot(gs[2, 2:])
     ax_spiral.plot(labels, [results[label]["metrics"]["spiral_order_parameter"] for label in labels], marker="s", linewidth=2.0, color="#e45756", label="spiral order")
-    ax_spiral.plot(labels, [results[label]["metrics"]["arm_asymmetry_index"] for label in labels], marker="^", linewidth=1.8, color="#72b7b2", label="arm asymmetry")
+    ax_spiral.plot(labels, [results[label]["metrics"]["initialization_vs_evolution_score"] for label in labels], marker="^", linewidth=1.8, color="#72b7b2", label="init vs evolution")
     ax_spiral.set_title("Aggregate morphology diagnostics")
     ax_spiral.legend(loc="best")
     ax_spiral.grid(True, alpha=0.2)
@@ -294,6 +297,7 @@ def _write_mode_comparison(mode_root: Path, results: dict[str, dict[str, object]
                 f"- dominant mode: m{int(float(row['dominant_mode']))}",
                 f"- spiral order parameter: {float(row['spiral_order_parameter']):.6f}",
                 f"- target mode ratio: {float(row['target_mode_ratio']):.6f}",
+                f"- initialization vs evolution score: {float(row['initialization_vs_evolution_score']):.6f}",
                 f"- density arm contrast: {float(row['density_arm_contrast']):.6f}",
                 "",
             ]

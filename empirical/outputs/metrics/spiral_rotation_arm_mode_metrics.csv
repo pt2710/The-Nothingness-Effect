@@ -1,5 +1,5 @@
-arm_mode,RMSE,R2,density_arm_contrast,dominant_mode,target_mode_ratio,spiral_order_parameter,TNE_vs_baseline_note
-2,0.1554107343636931,0.3947426017917196,2.5278129762345842,2.0,0.25484243641478327,0.6445045759272106,Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.
-3,0.15255861757610129,0.4167542663282432,3.7968632401779168,2.0,0.26021169359695323,0.6424739560353913,Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.
-4,0.1131451702397588,0.6791883567294508,3.1600909326764652,3.0,0.25263140142240476,0.6189981733405914,Best preliminary residual fit under the implemented proxy mapping.
-mixed,0.15975047083976052,0.36046785994552544,3.3360557383823837,3.0,0.2526446316263257,0.627676065108369,Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.
+arm_mode,RMSE,R2,density_arm_contrast,dominant_mode,target_mode_ratio,spiral_order_parameter,initialization_vs_evolution_score,source_status,TNE_vs_baseline_note
+2,0.14332973414254763,0.48518561677054173,3.287563533025711,3.0,0.24668782713786208,0.6349638204004935,-0.013632339452718426,fetched,Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.
+3,0.15362976470138273,0.4085353243190619,2.484906920793406,3.0,0.26252526993994274,0.6359687821613619,0.11332637665270019,fetched,Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.
+4,0.13259613742295692,0.5594047329670517,4.3550511707267425,4.0,0.26863931739817876,0.7054710231353987,0.17650527089875329,fetched,Best preliminary residual fit under the implemented proxy mapping.
+mixed,0.15925334280329495,0.3644419912597755,3.2002792342743023,1.0,0.25186904071086086,0.60741329804757,-0.06285507446068832,fetched,Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.

@@ -7,10 +7,10 @@ This report audits the current empirical comparison outputs after the Run 6 mapp
 | Dataset | Status | RMSE | MAE | R2 | Baseline |
 | --- | --- | ---: | ---: | ---: | --- |
 | redshift_clock | cached | 0.009231 | 0.008960 | 0.999659 | published_or_fixture_baseline_shift |
-| galaxy_rotation | fetched | 0.133384 | 0.094393 | 0.554156 | multi_galaxy_baseline_family |
+| galaxy_rotation | fetched | 0.132596 | 0.097563 | 0.559405 | multi_galaxy_baseline_family |
 | eht_observables | cached | 0.411214 | 0.367623 | 0.998891 | none |
 | ligo_waveforms | fetched | 0.420622 | 0.345753 | 0.001465 | none |
-| ligo_ringdown | fetched | 0.379599 | 0.306026 | 0.165303 | damped_sinusoid_baseline |
+| ligo_ringdown | fetched | 0.403460 | 0.333665 | 0.057068 | damped_sinusoid_baseline |
 
 ## Diagnosis by Model
 

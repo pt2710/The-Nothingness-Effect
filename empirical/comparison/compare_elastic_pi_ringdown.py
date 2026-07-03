@@ -8,6 +8,7 @@ from pathlib import Path
 from empirical.comparison.common import resolve_input_dataset
 from empirical.io import (
     comparison_paths,
+    ensure_output_tree,
     named_figure_path,
     repo_relative,
     save_rows,
@@ -15,6 +16,11 @@ from empirical.io import (
     write_report,
 )
 from empirical.mappings import ripple_ringdown_mapping as mapping
+import matplotlib
+
+matplotlib.use("Agg")
+
+import matplotlib.pyplot as plt
 
 
 def run(
@@ -40,10 +46,15 @@ def run(
     prediction = mapping.prepare_model_prediction(empirical, fitted)
     residuals = mapping.compute_residuals(empirical, prediction)
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
+    window_sensitivity = mapping.window_sensitivity_analysis(selection["path"], parameter_sweep_level=sweep_level)
+    basis_stability = mapping.basis_stability_analysis(empirical, parameter_sweep_level=sweep_level)
     metrics["data_status"] = selection["status"]
     paths = comparison_paths("elastic_pi_ringdown", output_dir)
     residual_path = named_figure_path("elastic_pi_ringdown", "residuals", output_dir)
     envelope_path = named_figure_path("elastic_pi_ringdown", "envelope", output_dir)
+    output_tree = ensure_output_tree(output_dir)
+    window_sensitivity_path = output_tree["figures"] / "elastic_pi_ringdown_window_sensitivity.png"
+    basis_stability_path = output_tree["figures"] / "elastic_pi_ringdown_basis_stability.png"
 
     rows = []
     full_length = len(empirical["time_raw"])
@@ -73,7 +84,8 @@ def run(
                     "tne_residual": float(residuals["tne_residual"][window_idx]),
                     "baseline_residual": float(residuals["baseline_residual"][window_idx]),
                     "tne_residual_envelope": float(residuals["tne_residual_envelope"][window_idx]),
-                    "baseline_residual_envelope": float(residuals["baseline_residual_envelope"][window_idx]),
+                "baseline_residual_envelope": float(residuals["baseline_residual_envelope"][window_idx]),
+                "window_variant": empirical["window_variant"],
                 }
             )
         rows.append(row)
@@ -95,20 +107,53 @@ def run(
         prediction,
         {"curve": paths["figure"], "residual": residual_path, "envelope": envelope_path},
     )
+    fig, axes = plt.subplots(1, 2, figsize=(12.0, 4.2), constrained_layout=True)
+    axes[0].plot([row["window_variant"] for row in window_sensitivity], [row["RMSE"] for row in window_sensitivity], marker="o", linewidth=2.0, label="TNE")
+    axes[0].plot([row["window_variant"] for row in window_sensitivity], [row["baseline_RMSE"] for row in window_sensitivity], marker="s", linewidth=2.0, label="baseline")
+    axes[0].set_title("Ringdown window sensitivity")
+    axes[0].set_ylabel("RMSE")
+    axes[0].grid(True, alpha=0.25)
+    axes[0].legend(loc="best")
+    axes[1].bar(range(len(basis_stability)), [row["test_RMSE"] for row in basis_stability], color="#d62728", alpha=0.8, label="test")
+    axes[1].plot(range(len(basis_stability)), [row["train_RMSE"] for row in basis_stability], color="#1f77b4", marker="o", linewidth=2.0, label="train")
+    axes[1].set_xticks(range(len(basis_stability)))
+    axes[1].set_xticklabels([str(len(row["basis_names"])) for row in basis_stability], rotation=0)
+    axes[1].set_title("Basis stability by subset size")
+    axes[1].set_ylabel("RMSE")
+    axes[1].set_xlabel("component count")
+    axes[1].grid(True, alpha=0.25)
+    axes[1].legend(loc="best")
+    fig.savefig(window_sensitivity_path, dpi=220, bbox_inches="tight")
+    plt.close(fig)
+    fig, ax = plt.subplots(figsize=(10.0, 4.8), constrained_layout=True)
+    ax.bar(range(len(basis_stability)), [row["test_RMSE"] for row in basis_stability], color="#f58518", alpha=0.8)
+    ax.plot(range(len(basis_stability)), [row["train_RMSE"] for row in basis_stability], color="#4c78a8", marker="o", linewidth=2.0)
+    ax.set_xticks(range(len(basis_stability)))
+    ax.set_xticklabels(["+".join(name.split("_")[0] for name in row["basis_names"][:3]) + ("..." if len(row["basis_names"]) > 3 else "") for row in basis_stability], rotation=20, ha="right")
+    ax.set_title("Ringdown basis stability")
+    ax.set_ylabel("RMSE")
+    ax.grid(True, alpha=0.25)
+    fig.savefig(basis_stability_path, dpi=220, bbox_inches="tight")
+    plt.close(fig)
     report_lines = [
         "# Elastic-pi Ringdown Report",
         "",
         f"- data status: {selection['status']}",
         f"- parameter sweep level: {sweep_level}",
         f"- aligned window start (raw time): {empirical['window_start_time_raw']:.6f}",
+        f"- selected window variant: {empirical['window_variant']}",
         f"- TNE time scale: {prediction['fitted_parameters']['tne']['time_scale']:.6f}",
         f"- TNE time shift: {prediction['fitted_parameters']['tne']['time_shift']:.6f}",
         f"- TNE basis components: {prediction['fitted_parameters']['tne']['basis_names']}",
+        f"- selected coefficients: {prediction['fitted_parameters']['tne']['basis_coefficients']}",
         f"- baseline tau: {prediction['fitted_parameters']['baseline']['tau']:.6f}",
         f"- RMSE: {metrics['RMSE']:.6f}",
         f"- baseline RMSE: {metrics['baseline_RMSE']:.6f}",
         f"- train/test RMSE: {metrics['train_RMSE']:.6f} / {metrics['test_RMSE']:.6f}",
         f"- baseline train/test RMSE: {metrics['baseline_train_RMSE']:.6f} / {metrics['baseline_test_RMSE']:.6f}",
+        "",
+        f"- window sensitivity: {window_sensitivity}",
+        f"- basis stability: {basis_stability}",
         "",
         "Interpretation: finite illustrative ringdown comparison only. This is an improved preliminary residual fit under the implemented proxy mapping when the metrics say so; otherwise the damped-sinusoid baseline remains the stronger fit under the same window.",
     ]
@@ -131,16 +176,28 @@ def run(
                 "figure": repo_relative(paths["figure"]),
                 "residual_figure": repo_relative(residual_path),
                 "envelope_figure": repo_relative(envelope_path),
+                "window_sensitivity_figure": repo_relative(window_sensitivity_path),
+                "basis_stability_figure": repo_relative(basis_stability_path),
                 "report": repo_relative(paths["report"]),
                 "manifest": repo_relative(paths["manifest"]),
             },
+            "window_sensitivity": window_sensitivity,
+            "basis_stability": basis_stability,
             "source_manifest": selection["manifest"],
             "limitations": "Finite illustrative dual-proxy ringdown comparison only; not a full waveform model and not an empirical validation claim.",
         },
     )
     return {
-        "paths": {**paths, "residual_figure": residual_path, "envelope_figure": envelope_path},
+        "paths": {
+            **paths,
+            "residual_figure": residual_path,
+            "envelope_figure": envelope_path,
+            "window_sensitivity_figure": window_sensitivity_path,
+            "basis_stability_figure": basis_stability_path,
+        },
         "metrics": metrics,
+        "window_sensitivity": window_sensitivity,
+        "basis_stability": basis_stability,
         "summary": {
             "model": "elastic_pi_ripples",
             "empirical_dataset": "ligo_ringdown",

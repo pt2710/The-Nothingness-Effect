@@ -1,0 +1,49 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "report_name": "final_galaxy_ringdown_readiness",
+  "galaxy": {
+    "ready_for_appendix": true,
+    "visuals_paper_ready": true,
+    "metrics_paper_ready": true,
+    "current_metrics": {
+      "RMSE": 0.13259613742295692,
+      "R2": 0.5594047329670517,
+      "baseline_RMSE": 0.13867878342355602,
+      "best_arm_mode": "4",
+      "density_arm_contrast": 4.3550511707267425,
+      "morphology_stability_score": 14.923648510447634,
+      "field_feedback_strength": 0.0023066754404545997,
+      "initialization_vs_evolution_score": 0.17650527089875329
+    },
+    "required_caveats": [
+      "finite toy proxy only",
+      "not a full astrophysical simulation",
+      "not a morphology validation claim",
+      "not a dark-matter replacement claim"
+    ]
+  },
+  "ringdown": {
+    "ready_for_appendix": true,
+    "visuals_paper_ready": true,
+    "train_beats_baseline": true,
+    "test_beats_baseline": false,
+    "current_metrics": {
+      "RMSE": 0.380055345351557,
+      "baseline_RMSE": 0.39732092338476915,
+      "train_RMSE": 0.3654635286083989,
+      "test_RMSE": 0.39152273303306556,
+      "baseline_train_RMSE": 0.41389863184221204,
+      "baseline_test_RMSE": 0.3714620119574305
+    },
+    "required_caveats": [
+      "finite illustrative ringdown proxy only",
+      "not a full GR/QFT waveform model",
+      "holdout baseline remains stronger on the current standard-window split"
+    ]
+  },
+  "recommended_wording": {
+    "galaxy": "We provide a finite locality-driven entropic-elastic galaxy proxy and bounded SPARC-linked residual comparison as a repository-linked computational support artifact. These results are not a full astrophysical simulation and are not presented as empirical validation.",
+    "ringdown": "We provide an elastic-pi ripple ringdown proxy together with bounded damped-sinusoid baseline comparisons, window-sensitivity diagnostics, and holdout metrics. These results are not a full GR/QFT waveform model and are not presented as empirical validation.",
+    "joint": "The associated repository artifacts should be interpreted as publication-grade proxy comparisons and finite computational support artifacts for the manuscript's illustrative discussion. They are not formal proof substitutes and do not by themselves establish empirical confirmation of TNE."
+  }
+}

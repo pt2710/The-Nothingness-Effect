@@ -57,6 +57,14 @@ REDUCED_BASIS_NAMES = [
     "centerline_velocity",
 ]
 
+WINDOW_VARIANTS: dict[str, tuple[float, float]] = {
+    "early": (0.00, 0.45),
+    "short": (0.00, 0.35),
+    "standard": (0.00, 1.00),
+    "late": (0.35, 1.00),
+    "long": (0.00, 1.00),
+}
+
 
 def _normalize(values: np.ndarray) -> np.ndarray:
     data = np.asarray(values, dtype=float)
@@ -76,11 +84,19 @@ def _rolling_rms(values: np.ndarray, window: int = 5) -> np.ndarray:
     return np.sqrt(np.convolve(data**2, weights, mode="same"))
 
 
-def _window_slice(strain: np.ndarray) -> tuple[int, int]:
+def _window_slice(strain: np.ndarray, variant: str = "standard") -> tuple[int, int]:
     peak_index = int(np.argmax(np.abs(np.asarray(strain, dtype=float))))
     if peak_index <= max(2, len(strain) // 3):
-        return peak_index, len(strain)
-    return 0, len(strain)
+        start = peak_index
+    else:
+        start = 0
+    stop = len(strain)
+    relative_start, relative_stop = WINDOW_VARIANTS.get(variant, WINDOW_VARIANTS["standard"])
+    base_length = stop - start
+    adjusted_start = start + int(relative_start * base_length)
+    adjusted_stop = start + int(relative_stop * base_length)
+    adjusted_stop = max(adjusted_start + 8, min(stop, adjusted_stop))
+    return adjusted_start, adjusted_stop
 
 
 def _damped_sinusoid(time: np.ndarray, params: np.ndarray) -> np.ndarray:
@@ -143,7 +159,7 @@ def _basis_matrix(projection: dict[str, Any], mapped_time: np.ndarray) -> np.nda
     return np.column_stack(columns)
 
 
-def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, Any]:
+def prepare_empirical_observable(path: str | Path | None = None, window_variant: str = "standard") -> dict[str, Any]:
     rows = read_csv_rows(path or fixture_path("ligo_ringdown_fixture.csv"))
     raw_time = np.asarray([float(row["time"]) for row in rows], dtype=float)
     normalized_strain = np.asarray([float(row["strain"]) for row in rows], dtype=float)
@@ -151,7 +167,7 @@ def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, An
     normalized_uncertainty = np.asarray([float(row["strain_uncertainty"]) for row in rows], dtype=float)
     raw_uncertainty = np.asarray([float(row.get("strain_uncertainty_raw", row["strain_uncertainty"])) for row in rows], dtype=float)
 
-    start, stop = _window_slice(normalized_strain)
+    start, stop = _window_slice(normalized_strain, variant=window_variant)
     aligned_time = raw_time[start:stop] - raw_time[start]
     aligned_raw_strain = raw_strain[start:stop]
     aligned_raw_uncertainty = raw_uncertainty[start:stop]
@@ -176,15 +192,27 @@ def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, An
         "window_stop_index": stop,
         "window_start_time_raw": float(raw_time[start]),
         "window_mask": window_mask,
+        "window_variant": window_variant,
         "event_id": [row["event_id"] for row in rows],
         "source_status": [row["source_status"] for row in rows],
     }
 
 
-def _fit_reduced_basis_signal(time: np.ndarray, observed: np.ndarray, projection: dict[str, Any], time_scale: float, time_shift: float) -> dict[str, Any]:
+def _fit_reduced_basis_signal(
+    time: np.ndarray,
+    observed: np.ndarray,
+    projection: dict[str, Any],
+    time_scale: float,
+    time_shift: float,
+    basis_names: list[str],
+    regularization_strength: float = 0.08,
+) -> dict[str, Any]:
     mapped_time = (time - time_shift) / time_scale
-    basis = _basis_matrix(projection, mapped_time)
-    regularization = np.sqrt(0.05) * np.eye(basis.shape[1], dtype=float)
+    basis = np.column_stack([
+        _normalize(np.interp(mapped_time, projection["time"], np.asarray(projection[name], dtype=float), left=float(np.asarray(projection[name], dtype=float)[0]), right=float(np.asarray(projection[name], dtype=float)[-1])))
+        for name in basis_names
+    ])
+    regularization = np.sqrt(regularization_strength) * np.eye(basis.shape[1], dtype=float)
     response = np.concatenate([observed, np.zeros(basis.shape[1], dtype=float)])
 
     def residual(coefficients: np.ndarray) -> np.ndarray:
@@ -208,6 +236,7 @@ def _fit_reduced_basis_signal(time: np.ndarray, observed: np.ndarray, projection
 def _fit_tne_projection(time: np.ndarray, observed: np.ndarray, parameter_sweep_level: str) -> dict[str, Any]:
     grid = PARAMETER_SWEEP_LEVELS[parameter_sweep_level]
     best: dict[str, Any] | None = None
+    basis_names = REDUCED_BASIS_NAMES
     for c_E in grid["c_E"]:
         for gamma in grid["gamma"]:
             for xi in grid["xi"]:
@@ -215,10 +244,10 @@ def _fit_tne_projection(time: np.ndarray, observed: np.ndarray, parameter_sweep_
                     projection = _projection_for_params(c_E, gamma, xi, width)
                     for time_scale in grid["time_scale"]:
                         for time_shift in grid["time_shift"]:
-                            basis_fit = _fit_reduced_basis_signal(time, observed, projection, float(time_scale), float(time_shift))
+                            basis_fit = _fit_reduced_basis_signal(time, observed, projection, float(time_scale), float(time_shift), basis_names)
                             candidate = {
                                 "projection_name": "reduced_tne_basis",
-                                "basis_names": REDUCED_BASIS_NAMES,
+                                "basis_names": basis_names,
                                 "basis_coefficients": basis_fit["coefficients"].tolist(),
                                 "simulation_params": projection["params"],
                                 "time_scale": float(time_scale),
@@ -293,6 +322,71 @@ def _holdout_metrics(time: np.ndarray, observed: np.ndarray, parameter_sweep_lev
     }
 
 
+def basis_stability_analysis(empirical: dict[str, Any], parameter_sweep_level: str = "standard") -> list[dict[str, Any]]:
+    observed = np.asarray(empirical["strain"], dtype=float)
+    time = np.asarray(empirical["time"], dtype=float)
+    split_index = max(6, int(0.6 * len(time)))
+    analyses: list[dict[str, Any]] = []
+    candidate_sets = [REDUCED_BASIS_NAMES] + [[name for name in REDUCED_BASIS_NAMES if name != removed] for removed in REDUCED_BASIS_NAMES]
+    grid = PARAMETER_SWEEP_LEVELS[parameter_sweep_level]
+    for basis_names in candidate_sets:
+        best: dict[str, Any] | None = None
+        for c_E in grid["c_E"]:
+            for gamma in grid["gamma"]:
+                for xi in grid["xi"]:
+                    for width in grid["width"]:
+                        projection = _projection_for_params(c_E, gamma, xi, width)
+                        for time_scale in grid["time_scale"]:
+                            for time_shift in grid["time_shift"]:
+                                basis_fit = _fit_reduced_basis_signal(time[:split_index], observed[:split_index], projection, float(time_scale), float(time_shift), basis_names)
+                                train_pred = basis_fit["prediction"]
+                                mapped_time = (time[split_index:] - time_shift) / time_scale
+                                basis_test = np.column_stack([
+                                    _normalize(np.interp(mapped_time, projection["time"], np.asarray(projection[name], dtype=float), left=float(np.asarray(projection[name], dtype=float)[0]), right=float(np.asarray(projection[name], dtype=float)[-1])))
+                                    for name in basis_names
+                                ])
+                                test_pred = basis_test @ np.asarray(basis_fit["coefficients"], dtype=float)
+                                candidate = {
+                                    "basis_names": list(basis_names),
+                                    "train_RMSE": float(rmse(observed[:split_index], train_pred)),
+                                    "test_RMSE": float(rmse(observed[split_index:], test_pred)),
+                                    "basis_component_count": len(basis_names),
+                                    "time_scale": float(time_scale),
+                                    "time_shift": float(time_shift),
+                                    "params": {"c_E": c_E, "gamma": gamma, "xi": xi, "width": width},
+                                }
+                                if best is None or candidate["test_RMSE"] < best["test_RMSE"]:
+                                    best = candidate
+        assert best is not None
+        analyses.append(best)
+    analyses.sort(key=lambda item: item["test_RMSE"])
+    return analyses
+
+
+def window_sensitivity_analysis(path: str | Path | None = None, parameter_sweep_level: str = "standard") -> list[dict[str, Any]]:
+    results: list[dict[str, Any]] = []
+    for variant in WINDOW_VARIANTS:
+        empirical = prepare_empirical_observable(path, window_variant=variant)
+        fitted = fit_parameters(empirical, parameter_sweep_level=parameter_sweep_level)
+        prediction = prepare_model_prediction(empirical, fitted)
+        residuals = compute_residuals(empirical, prediction)
+        metrics = compute_metrics(empirical, prediction, residuals)
+        results.append(
+            {
+                "window_variant": variant,
+                "window_start_time_raw": float(empirical["window_start_time_raw"]),
+                "window_duration": float(metrics["window_duration"]),
+                "RMSE": float(metrics["RMSE"]),
+                "baseline_RMSE": float(metrics["baseline_RMSE"]),
+                "train_RMSE": float(metrics["train_RMSE"]),
+                "test_RMSE": float(metrics["test_RMSE"]),
+                "baseline_train_RMSE": float(metrics["baseline_train_RMSE"]),
+                "baseline_test_RMSE": float(metrics["baseline_test_RMSE"]),
+            }
+        )
+    return results
+
+
 def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "standard") -> dict[str, Any]:
     observed = np.asarray(empirical["strain"], dtype=float)
     time = np.asarray(empirical["time"], dtype=float)
@@ -303,6 +397,7 @@ def fit_parameters(empirical: dict[str, Any], parameter_sweep_level: str = "stan
         "tne": tne_fit,
         "holdout": _holdout_metrics(time, observed, parameter_sweep_level),
         "parameter_sweep_level": parameter_sweep_level,
+        "window_variant": empirical.get("window_variant", "standard"),
     }
 
 
@@ -362,6 +457,7 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["residual_envelope_RMSE"] = rmse(residuals["baseline_residual_envelope"], residuals["tne_residual_envelope"])
     metrics["window_start_time_raw"] = float(empirical["window_start_time_raw"])
     metrics["window_duration"] = float(empirical["time"][-1] - empirical["time"][0]) if len(empirical["time"]) else 0.0
+    metrics["window_variant"] = empirical.get("window_variant", "standard")
     metrics["projection_name"] = prediction["fitted_parameters"]["tne"]["projection_name"]
     metrics["basis_component_count"] = float(len(prediction["fitted_parameters"]["tne"]["basis_names"]))
     metrics.update(prediction["fitted_parameters"]["holdout"])

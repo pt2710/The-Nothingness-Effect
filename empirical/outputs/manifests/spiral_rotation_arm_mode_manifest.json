@@ -1,56 +1,67 @@
 {
   "arm_mode_rows": [
     {
-      "R2": 0.3947426017917196,
-      "RMSE": 0.1554107343636931,
+      "R2": 0.48518561677054173,
+      "RMSE": 0.14332973414254763,
       "TNE_vs_baseline_note": "Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.",
       "arm_mode": "2",
-      "density_arm_contrast": 2.5278129762345842,
-      "dominant_mode": 2.0,
-      "spiral_order_parameter": 0.6445045759272106,
-      "target_mode_ratio": 0.25484243641478327
+      "density_arm_contrast": 3.287563533025711,
+      "dominant_mode": 3.0,
+      "initialization_vs_evolution_score": -0.013632339452718426,
+      "source_status": "fetched",
+      "spiral_order_parameter": 0.6349638204004935,
+      "target_mode_ratio": 0.24668782713786208
     },
     {
-      "R2": 0.4167542663282432,
-      "RMSE": 0.15255861757610129,
+      "R2": 0.4085353243190619,
+      "RMSE": 0.15362976470138273,
       "TNE_vs_baseline_note": "Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.",
       "arm_mode": "3",
-      "density_arm_contrast": 3.7968632401779168,
-      "dominant_mode": 2.0,
-      "spiral_order_parameter": 0.6424739560353913,
-      "target_mode_ratio": 0.26021169359695323
+      "density_arm_contrast": 2.484906920793406,
+      "dominant_mode": 3.0,
+      "initialization_vs_evolution_score": 0.11332637665270019,
+      "source_status": "fetched",
+      "spiral_order_parameter": 0.6359687821613619,
+      "target_mode_ratio": 0.26252526993994274
     },
     {
-      "R2": 0.6791883567294508,
-      "RMSE": 0.1131451702397588,
+      "R2": 0.5594047329670517,
+      "RMSE": 0.13259613742295692,
       "TNE_vs_baseline_note": "Best preliminary residual fit under the implemented proxy mapping.",
       "arm_mode": "4",
-      "density_arm_contrast": 3.1600909326764652,
-      "dominant_mode": 3.0,
-      "spiral_order_parameter": 0.6189981733405914,
-      "target_mode_ratio": 0.25263140142240476
+      "density_arm_contrast": 4.3550511707267425,
+      "dominant_mode": 4.0,
+      "initialization_vs_evolution_score": 0.17650527089875329,
+      "source_status": "fetched",
+      "spiral_order_parameter": 0.7054710231353987,
+      "target_mode_ratio": 0.26863931739817876
     },
     {
-      "R2": 0.36046785994552544,
-      "RMSE": 0.15975047083976052,
+      "R2": 0.3644419912597755,
+      "RMSE": 0.15925334280329495,
       "TNE_vs_baseline_note": "Simple baseline family remains better or comparable under the implemented multi-galaxy proxy mapping.",
       "arm_mode": "mixed",
-      "density_arm_contrast": 3.3360557383823837,
-      "dominant_mode": 3.0,
-      "spiral_order_parameter": 0.627676065108369,
-      "target_mode_ratio": 0.2526446316263257
+      "density_arm_contrast": 3.2002792342743023,
+      "dominant_mode": 1.0,
+      "initialization_vs_evolution_score": -0.06285507446068832,
+      "source_status": "fetched",
+      "spiral_order_parameter": 0.60741329804757,
+      "target_mode_ratio": 0.25186904071086086
     }
   ],
   "best_preliminary_fit": {
-    "R2": 0.6791883567294508,
-    "RMSE": 0.1131451702397588,
+    "R2": 0.5594047329670517,
+    "RMSE": 0.13259613742295692,
     "TNE_vs_baseline_note": "Best preliminary residual fit under the implemented proxy mapping.",
     "arm_mode": "4",
-    "density_arm_contrast": 3.1600909326764652,
-    "dominant_mode": 3.0,
-    "spiral_order_parameter": 0.6189981733405914,
-    "target_mode_ratio": 0.25263140142240476
+    "density_arm_contrast": 4.3550511707267425,
+    "dominant_mode": 4.0,
+    "initialization_vs_evolution_score": 0.17650527089875329,
+    "source_status": "fetched",
+    "spiral_order_parameter": 0.7054710231353987,
+    "target_mode_ratio": 0.26863931739817876
   },
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
   "comparison": "spiral_rotation_arm_mode",
   "data_status": "fetched",
   "input_dataset_path": "empirical/outputs/data/galaxy_rotation_public.csv",
@@ -62,5 +73,31 @@
     "metrics": "empirical/outputs/metrics/spiral_rotation_arm_mode_metrics.csv",
     "report": "empirical/outputs/reports/spiral_rotation_arm_mode_report.md"
   },
-  "parameter_sweep_level": "quick"
+  "parameter_sweep_level": "quick",
+  "per_galaxy_metrics": {
+    "NGC2403": {
+      "MAE": 0.07462216043459612,
+      "R2": 0.7090705678339981,
+      "RMSE": 0.11265591887424628,
+      "TNE_winner_flag": 1.0,
+      "baseline_winner": "linear_rotation_baseline",
+      "best_arm_mode": "4"
+    },
+    "NGC3198": {
+      "MAE": 0.13072689544673244,
+      "R2": 0.5185886592100101,
+      "RMSE": 0.16368741513450547,
+      "TNE_winner_flag": 1.0,
+      "baseline_winner": "linear_rotation_baseline",
+      "best_arm_mode": "4"
+    },
+    "NGC6503": {
+      "MAE": 0.08733987408065728,
+      "R2": -1.6519983469200104,
+      "RMSE": 0.11515329368996073,
+      "TNE_winner_flag": 0.0,
+      "baseline_winner": "linear_rotation_baseline",
+      "best_arm_mode": "4"
+    }
+  }
 }

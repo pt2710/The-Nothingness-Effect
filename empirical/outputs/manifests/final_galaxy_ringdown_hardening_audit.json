@@ -1,0 +1,102 @@
+{
+  "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
+  "audit_name": "final_galaxy_ringdown_hardening",
+  "audit_date": "2026-07-03",
+  "scope": [
+    "locality_driven_spiral_galaxy_proxy",
+    "elastic_pi_ringdown_proxy"
+  ],
+  "galaxy": {
+    "aggregate_metrics": {
+      "RMSE": 0.1131451702397588,
+      "MAE": 0.08704505063826014,
+      "R2": 0.6791883567294508,
+      "weighted_RMSE": 6.594593542163169,
+      "baseline_RMSE": 0.13867878342355602,
+      "flat_baseline_RMSE": 0.18644023766915546,
+      "linear_baseline_RMSE": 0.13867878342355602,
+      "residual_mean": -0.01016194874502631,
+      "residual_std": 0.11268790683248783,
+      "selected_arm_mode": 4,
+      "galaxy_count": 3
+    },
+    "per_galaxy_rmse": {
+      "NGC2403": 0.08926,
+      "NGC3198": 0.122585,
+      "NGC6503": 0.124141
+    },
+    "per_arm_mode_rmse": {
+      "2": 0.1554107343636931,
+      "3": 0.15255861757610129,
+      "4": 0.1131451702397588,
+      "mixed": 0.15975047083976052
+    },
+    "visuals": {
+      "figure6_path": "equations/locality_driven_gravity/simulation/figure6_locality_driven_spiral.png",
+      "arm_mode_comparison_path": "equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.png",
+      "animation_2d_path": "equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d.mp4",
+      "animation_3d_path": "equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d.mp4"
+    }
+  },
+  "ringdown": {
+    "aggregate_metrics": {
+      "RMSE": 0.37959874289836565,
+      "MAE": 0.30602556328260033,
+      "R2": 0.16530251461122913,
+      "weighted_RMSE": 0.5714601677991408,
+      "baseline_RMSE": 0.39732092338476915,
+      "train_RMSE": 0.36544862896967484,
+      "test_RMSE": 0.3918719724960643,
+      "baseline_train_RMSE": 0.41389863184221204,
+      "baseline_test_RMSE": 0.3714620119574305,
+      "residual_envelope_RMSE": 0.07442881481097911,
+      "window_start_time_raw": 0.03727531433105469,
+      "window_duration": 0.259765625
+    },
+    "basis": {
+      "projection_name": "reduced_tne_basis",
+      "basis_names": [
+        "centerline",
+        "dominant_mode_1",
+        "dominant_mode_2",
+        "interference_projection",
+        "energy_envelope",
+        "centerline_velocity"
+      ],
+      "basis_coefficients": [
+        0.33984084496486094,
+        0.3535965865149769,
+        -1.4406577228946515,
+        0.33550068511761466,
+        0.32627673027233234,
+        -0.35822829473729156
+      ]
+    },
+    "visuals": {
+      "comparison_path": "empirical/outputs/figures/elastic_pi_ringdown_comparison.png",
+      "residual_path": "empirical/outputs/figures/elastic_pi_ringdown_residuals.png",
+      "envelope_path": "empirical/outputs/figures/elastic_pi_ringdown_envelope.png"
+    }
+  },
+  "limitations": [
+    "Galaxy comparison currently covers only three reproducible galaxies.",
+    "Galaxy reporting does not yet separate initialization-dominated structure from evolution-sustained structure.",
+    "Ringdown reporting currently uses one aligned window and one fixed holdout split.",
+    "Current ringdown test performance remains weaker than the baseline on holdout."
+  ],
+  "improvement_plan": {
+    "will_change": [
+      "galaxy diagnostics",
+      "galaxy holdout/reporting if feasible",
+      "ringdown window sensitivity",
+      "ringdown basis stability",
+      "final readiness reporting"
+    ],
+    "will_not_change": [
+      "claim boundary language",
+      "baseline visibility",
+      "repository structure",
+      "deterministic reproducibility constraints"
+    ]
+  }
+}

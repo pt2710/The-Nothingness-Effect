@@ -1,0 +1,29 @@
+area,metric,value,notes
+galaxy,RMSE,0.1131451702397588,current aggregate TNE proxy fit
+galaxy,MAE,0.08704505063826014,current aggregate TNE proxy fit
+galaxy,R2,0.6791883567294508,current aggregate TNE proxy fit
+galaxy,baseline_RMSE,0.13867878342355602,current selected baseline family
+galaxy,flat_baseline_RMSE,0.18644023766915546,current flat baseline
+galaxy,linear_baseline_RMSE,0.13867878342355602,current linear baseline
+galaxy,residual_mean,-0.01016194874502631,current residual distribution
+galaxy,residual_std,0.11268790683248783,current residual distribution
+galaxy,galaxy_count,3,current reproducible galaxy count
+galaxy,arm_mode_2_RMSE,0.1554107343636931,current per-arm-mode metric
+galaxy,arm_mode_3_RMSE,0.15255861757610129,current per-arm-mode metric
+galaxy,arm_mode_4_RMSE,0.1131451702397588,current per-arm-mode metric
+galaxy,arm_mode_mixed_RMSE,0.15975047083976052,current per-arm-mode metric
+galaxy,NGC2403_RMSE,0.089260,current per-galaxy diagnostic
+galaxy,NGC3198_RMSE,0.122585,current per-galaxy diagnostic
+galaxy,NGC6503_RMSE,0.124141,current per-galaxy diagnostic
+ringdown,RMSE,0.37959874289836565,current aggregate TNE proxy fit
+ringdown,MAE,0.30602556328260033,current aggregate TNE proxy fit
+ringdown,R2,0.16530251461122913,current aggregate TNE proxy fit
+ringdown,baseline_RMSE,0.39732092338476915,current damped-sinusoid baseline
+ringdown,train_RMSE,0.36544862896967484,current holdout diagnostic
+ringdown,test_RMSE,0.3918719724960643,current holdout diagnostic
+ringdown,baseline_train_RMSE,0.41389863184221204,current holdout diagnostic
+ringdown,baseline_test_RMSE,0.3714620119574305,current holdout diagnostic
+ringdown,residual_envelope_RMSE,0.07442881481097911,current envelope diagnostic
+ringdown,window_start_time_raw,0.03727531433105469,current aligned window
+ringdown,window_duration,0.259765625,current aligned window
+ringdown,basis_component_count,6,current reduced basis

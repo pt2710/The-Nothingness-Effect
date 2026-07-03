@@ -135,6 +135,12 @@ The model reports:
 - `dominant_mode_amplitude`
 - `target_mode_amplitude`
 - `target_mode_ratio`
+- `tension_mean`
+- `tension_gradient_mean`
+- `mass_conservation_error`
+- `morphology_stability_score`
+- `field_feedback_strength`
+- `initialization_vs_evolution_score`
 - `pitch_angle_proxy`
 - `radial_concentration`
 - `density_arm_contrast`
@@ -148,6 +154,12 @@ The model reports:
 - `arm_asymmetry_index`
 
 These are descriptive diagnostics for the toy model only.
+
+The new stability diagnostics should be read conservatively:
+
+- `field_feedback_strength` is a proxy for how much elastic-field feedback contributes relative to the total finite toy acceleration budget.
+- `initialization_vs_evolution_score` compares final arm-mode strength to the initialized arm-mode strength and is intended to flag whether morphology appears mostly seeded or more dynamically sustained.
+- `morphology_stability_score` is a finite late-time stability diagnostic, not a proof of asymptotic convergence or astrophysical stability.
 
 ## Artifact Paths
 

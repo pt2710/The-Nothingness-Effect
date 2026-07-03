@@ -50,6 +50,7 @@ def run(
     prediction = mapping.prepare_model_prediction(empirical, fitted)
     residuals = mapping.compute_residuals(empirical, prediction)
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
+    holdout = mapping.holdout_diagnostics(empirical, parameter_sweep_level=sweep_level)
     metrics["data_status"] = selection["status"]
     paths = comparison_paths("spiral_rotation", output_dir)
     morphology_path = morphology_figure_path("spiral", output_dir)
@@ -70,12 +71,32 @@ def run(
             "dominant_mode": float(mode_metrics["dominant_mode"]),
             "target_mode_ratio": float(mode_metrics["target_mode_ratio"]),
             "spiral_order_parameter": float(mode_metrics["spiral_order_parameter"]),
+            "initialization_vs_evolution_score": float(mode_metrics["initialization_vs_evolution_score"]),
+            "source_status": selection["status"],
             "TNE_vs_baseline_note": mode_metrics["TNE_vs_baseline_note"],
         }
         arm_mode_rows.append(row)
         arm_mode_summary[str(arm_mode)] = row
 
     rows = []
+    per_galaxy_metrics: dict[str, dict[str, float | str]] = {}
+    galaxy_ids = list(dict.fromkeys(empirical["galaxy_id"]))
+    for galaxy_id in galaxy_ids:
+        mask = np.asarray([item == galaxy_id for item in empirical["galaxy_id"]], dtype=bool)
+        observed = np.asarray(empirical["velocity"], dtype=float)[mask]
+        tne_pred = np.asarray(prediction["tne_prediction"], dtype=float)[mask]
+        baseline_pred = np.asarray(prediction["baseline_prediction"], dtype=float)[mask]
+        residual = tne_pred - observed
+        ss_res = float(np.sum((observed - tne_pred) ** 2))
+        ss_tot = float(np.sum((observed - np.mean(observed)) ** 2))
+        per_galaxy_metrics[galaxy_id] = {
+            "RMSE": float(np.sqrt(np.mean(residual**2))),
+            "MAE": float(np.mean(np.abs(residual))),
+            "R2": float(1.0 - ss_res / (ss_tot + 1e-12)),
+            "best_arm_mode": str(prediction["fitted_parameters"]["arm_mode"]),
+            "baseline_winner": str(prediction["fitted_parameters"]["selected_baselines"][galaxy_id]),
+            "TNE_winner_flag": float(np.sqrt(np.mean((tne_pred - observed) ** 2)) < np.sqrt(np.mean((baseline_pred - observed) ** 2))),
+        }
     for idx, radius in enumerate(empirical["radius"]):
         rows.append(
             {
@@ -93,6 +114,8 @@ def run(
                 "tne_residual": float(residuals["tne_residual"][idx]),
                 "baseline_residual": float(residuals["baseline_residual"][idx]),
                 "galaxy_id": empirical["galaxy_id"][idx],
+                "best_arm_mode": prediction["fitted_parameters"]["arm_mode"],
+                "baseline_winner": prediction["fitted_parameters"]["selected_baselines"][empirical["galaxy_id"][idx]],
                 "source_status": empirical["source_status"][idx],
             }
         )
@@ -103,6 +126,7 @@ def run(
         [
             {
                 **metrics,
+                "holdout_galaxy_count": float(len(holdout)),
                 "model": "locality_driven_gravity",
                 "empirical_dataset": selection["dataset_name"],
                 "data_status": selection["status"],
@@ -131,7 +155,9 @@ def run(
     axes[1].set_title("Density arm contrast")
     axes[1].grid(True, axis="y", alpha=0.2)
     axes[2].bar(labels, [float(row["dominant_mode"]) for row in arm_mode_rows], color="#54a24b")
-    axes[2].set_title("Dominant mode")
+    axes[2].plot(labels, [float(row["initialization_vs_evolution_score"]) for row in arm_mode_rows], color="#9467bd", marker="o", linewidth=1.8, label="init vs evolution")
+    axes[2].set_title("Dominant mode and evolution score")
+    axes[2].legend(loc="best")
     axes[2].grid(True, axis="y", alpha=0.2)
     fig.suptitle("Finite spiral arm-mode proxy comparison")
     fig.savefig(arm_mode_figure_path, dpi=220, bbox_inches="tight")
@@ -151,12 +177,18 @@ def run(
         f"- m=1 / m=2 / m=3 / m=4 amplitude: {prediction['mode_1_amplitude']:.6f} / {prediction['mode_2_amplitude']:.6f} / {prediction['mode_3_amplitude']:.6f} / {prediction['mode_4_amplitude']:.6f}",
         f"- dominant mode: m{int(prediction['dominant_mode'])}",
         f"- target mode ratio: {prediction['target_mode_ratio']:.6f}",
+        f"- initialization vs evolution score: {prediction['initialization_vs_evolution_score']:.6f}",
+        f"- field feedback strength: {prediction['field_feedback_strength']:.6f}",
         f"- pitch-angle proxy: {prediction['pitch_angle_proxy']:.6f}",
         f"- density arm contrast: {prediction['density_arm_contrast']:.6f}",
         f"- angular momentum drift: {prediction['angular_momentum_drift']:.6f}",
+        f"- tension mean / tension-gradient mean: {prediction['tension_mean']:.6f} / {prediction['tension_gradient_mean']:.6f}",
         f"- RMSE: {metrics['RMSE']:.6f}",
         f"- selected baseline RMSE: {metrics['baseline_RMSE']:.6f}",
-        f"- flat / linear baseline RMSE: {metrics['flat_baseline_RMSE']:.6f} / {metrics['linear_baseline_RMSE']:.6f}",
+        f"- flat / linear / smoothed-reference baseline RMSE: {metrics['flat_baseline_RMSE']:.6f} / {metrics['linear_baseline_RMSE']:.6f} / {metrics['smoothed_reference_RMSE']:.6f}",
+        "",
+        f"- per-galaxy metrics: {per_galaxy_metrics}",
+        f"- holdout diagnostics: {holdout if holdout else 'not feasible with current dataset size'}",
         "",
         "Interpretation: finite illustrative rotation-curve comparison only. The locality-driven spiral proxy is not a full astrophysical simulation, not a dark-matter-replacement claim, and not an empirical validation claim.",
     ]
@@ -171,6 +203,7 @@ def run(
                 "",
                 *[
                     f"- arm_mode={row['arm_mode']}: RMSE={float(row['RMSE']):.6f}, dominant_mode=m{int(float(row['dominant_mode']))}, target_mode_ratio={float(row['target_mode_ratio']):.6f}"
+                    f", initialization_vs_evolution_score={float(row['initialization_vs_evolution_score']):.6f}"
                     for row in arm_mode_rows
                 ],
             ]
@@ -183,6 +216,8 @@ def run(
             "data_status": selection["status"],
             "input_dataset_path": repo_relative(selection["path"]),
             "fitted_parameters": prediction["fitted_parameters"],
+            "per_galaxy_metrics": per_galaxy_metrics,
+            "holdout_diagnostics": holdout,
             "output_paths": {
                 "data": repo_relative(paths["data"]),
                 "metrics": repo_relative(paths["metrics"]),
@@ -199,11 +234,13 @@ def run(
     save_json(
         arm_mode_manifest_path,
         {
+            "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
             "comparison": "spiral_rotation_arm_mode",
             "data_status": selection["status"],
             "input_dataset_path": repo_relative(selection["path"]),
             "parameter_sweep_level": sweep_level,
             "arm_mode_rows": arm_mode_rows,
+            "per_galaxy_metrics": per_galaxy_metrics,
             "best_preliminary_fit": min(arm_mode_rows, key=lambda row: float(row["RMSE"])),
             "output_paths": {
                 "data": repo_relative(arm_mode_data_path),

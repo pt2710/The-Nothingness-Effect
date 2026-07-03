@@ -1,15 +1,20 @@
 # Elastic-pi Ringdown Report
 
 - data status: fetched
-- parameter sweep level: standard
+- parameter sweep level: quick
 - aligned window start (raw time): 0.037275
-- TNE time scale: 1.700000
-- TNE time shift: 0.010000
+- selected window variant: standard
+- TNE time scale: 1.000000
+- TNE time shift: 0.000000
 - TNE basis components: ['centerline', 'dominant_mode_1', 'dominant_mode_2', 'interference_projection', 'energy_envelope', 'centerline_velocity']
+- selected coefficients: [-0.006568788501543408, -0.004159429162494579, -0.7592226823470576, -0.004703298419737413, -0.00986335610781298, -0.907389410125112]
 - baseline tau: 0.020000
-- RMSE: 0.379599
+- RMSE: 0.403460
 - baseline RMSE: 0.397321
-- train/test RMSE: 0.365449 / 0.391872
+- train/test RMSE: 0.419905 / 0.348441
 - baseline train/test RMSE: 0.413899 / 0.371462
+
+- window sensitivity: [{'window_variant': 'early', 'window_start_time_raw': 0.03727531433105469, 'window_duration': 0.111328125, 'RMSE': 0.4073973374122976, 'baseline_RMSE': 0.4265136528769941, 'train_RMSE': 0.3656782793853849, 'test_RMSE': 0.5956329619455463, 'baseline_train_RMSE': 0.4032399877045261, 'baseline_test_RMSE': 0.45924269864218986}, {'window_variant': 'short', 'window_start_time_raw': 0.03727531433105469, 'window_duration': 0.08349609375, 'RMSE': 0.41475079019311273, 'baseline_RMSE': 0.45313588895425944, 'train_RMSE': 0.35640899718396896, 'test_RMSE': 0.5635863919760266, 'baseline_train_RMSE': 0.4325893798954691, 'baseline_test_RMSE': 0.5026179714243862}, {'window_variant': 'standard', 'window_start_time_raw': 0.03727531433105469, 'window_duration': 0.259765625, 'RMSE': 0.40345995944356666, 'baseline_RMSE': 0.39732092338476915, 'train_RMSE': 0.4199051534925416, 'test_RMSE': 0.3484414437486656, 'baseline_train_RMSE': 0.41389863184221204, 'baseline_test_RMSE': 0.3714620119574305}, {'window_variant': 'late', 'window_start_time_raw': 0.1254100799560547, 'window_duration': 0.171630859375, 'RMSE': 0.4287104887781865, 'baseline_RMSE': 0.4445670178973166, 'train_RMSE': 0.4106187201274935, 'test_RMSE': 0.49951301648106095, 'baseline_train_RMSE': 0.46757731898677335, 'baseline_test_RMSE': 0.45957917391079084}, {'window_variant': 'long', 'window_start_time_raw': 0.03727531433105469, 'window_duration': 0.259765625, 'RMSE': 0.40345995944356666, 'baseline_RMSE': 0.39732092338476915, 'train_RMSE': 0.4199051534925416, 'test_RMSE': 0.3484414437486656, 'baseline_train_RMSE': 0.41389863184221204, 'baseline_test_RMSE': 0.3714620119574305}]
+- basis stability: [{'basis_names': ['centerline', 'dominant_mode_1', 'dominant_mode_2', 'interference_projection', 'energy_envelope'], 'train_RMSE': 0.43002201796488704, 'test_RMSE': 0.3351486579083201, 'basis_component_count': 5, 'time_scale': 1.4, 'time_shift': 0.0, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}, {'basis_names': ['centerline', 'dominant_mode_1', 'dominant_mode_2', 'interference_projection', 'centerline_velocity'], 'train_RMSE': 0.42018848913991824, 'test_RMSE': 0.3474668081459254, 'basis_component_count': 5, 'time_scale': 1.4, 'time_shift': 0.0, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}, {'basis_names': ['centerline', 'dominant_mode_1', 'dominant_mode_2', 'energy_envelope', 'centerline_velocity'], 'train_RMSE': 0.4201846282339157, 'test_RMSE': 0.3475008781337553, 'basis_component_count': 5, 'time_scale': 1.4, 'time_shift': 0.0, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}, {'basis_names': ['dominant_mode_1', 'dominant_mode_2', 'interference_projection', 'energy_envelope', 'centerline_velocity'], 'train_RMSE': 0.42018461630823356, 'test_RMSE': 0.34750139895076354, 'basis_component_count': 5, 'time_scale': 1.4, 'time_shift': 0.0, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}, {'basis_names': ['centerline', 'dominant_mode_2', 'interference_projection', 'energy_envelope', 'centerline_velocity'], 'train_RMSE': 0.4201809614657254, 'test_RMSE': 0.3475342548799004, 'basis_component_count': 5, 'time_scale': 1.4, 'time_shift': 0.0, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}, {'basis_names': ['centerline', 'dominant_mode_1', 'dominant_mode_2', 'interference_projection', 'energy_envelope', 'centerline_velocity'], 'train_RMSE': 0.4199051534925416, 'test_RMSE': 0.3484414437486656, 'basis_component_count': 6, 'time_scale': 1.4, 'time_shift': 0.0, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}, {'basis_names': ['centerline', 'dominant_mode_1', 'interference_projection', 'energy_envelope', 'centerline_velocity'], 'train_RMSE': 0.44073985130774945, 'test_RMSE': 0.37683251098852033, 'basis_component_count': 5, 'time_scale': 1.4, 'time_shift': 0.01, 'params': {'c_E': 1.0, 'gamma': 0.06, 'xi': -0.08, 'width': 1.1}}]
 
 Interpretation: finite illustrative ringdown comparison only. This is an improved preliminary residual fit under the implemented proxy mapping when the metrics say so; otherwise the damped-sinusoid baseline remains the stronger fit under the same window.

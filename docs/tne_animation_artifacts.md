@@ -55,6 +55,7 @@ For the spiral-galaxy proxy specifically, the animation now renders:
 - a central mass marker
 - tension-surface structure in 3D
 - spiral metrics in metadata and on-frame overlays
+- stability/evolution diagnostics in metadata for later report linkage
 
 This remains a finite spiral-formation proxy, not a full astrophysical simulation and not an empirical validation claim.
 

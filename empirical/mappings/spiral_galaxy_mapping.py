@@ -86,6 +86,19 @@ def _galaxy_slices(galaxy_ids: list[str]) -> list[tuple[str, np.ndarray]]:
     return slices
 
 
+def subset_empirical(empirical: dict[str, Any], galaxy_ids: set[str]) -> dict[str, Any]:
+    mask = np.asarray([galaxy_id in galaxy_ids for galaxy_id in empirical["galaxy_id"]], dtype=bool)
+    subset: dict[str, Any] = {}
+    for key, value in empirical.items():
+        if isinstance(value, np.ndarray) and value.shape and value.shape[0] == mask.shape[0]:
+            subset[key] = value[mask]
+        elif isinstance(value, list) and len(value) == mask.shape[0]:
+            subset[key] = [item for item, keep in zip(value, mask, strict=True) if keep]
+        else:
+            subset[key] = value
+    return subset
+
+
 @lru_cache(maxsize=256)
 def _profile_for_params(
     shear: float,
@@ -115,13 +128,7 @@ def _profile_for_params(
     return {
         "params": params.__dict__,
         "profile": profile,
-        "spiral_metrics": compute_spiral_metrics(
-            result["history"],
-            velocity_history=result["velocity_history"],
-            masses=result["masses"],
-            body_types=result["body_types"],
-            tension_field=result["tension_history"][-1],
-        ),
+        "spiral_metrics": result["metrics"],
         "masses": np.asarray(result["masses"], dtype=float),
     }
 
@@ -254,6 +261,46 @@ def fit_parameters(
     return best
 
 
+def holdout_diagnostics(empirical: dict[str, Any], parameter_sweep_level: str = "standard") -> dict[str, dict[str, float | str]]:
+    galaxy_ids = list(dict.fromkeys(empirical["galaxy_id"]))
+    if len(galaxy_ids) < 3:
+        return {}
+    diagnostics: dict[str, dict[str, float | str]] = {}
+    for holdout_id in galaxy_ids:
+        training_ids = {galaxy_id for galaxy_id in galaxy_ids if galaxy_id != holdout_id}
+        train_empirical = subset_empirical(empirical, training_ids)
+        holdout_empirical = subset_empirical(empirical, {holdout_id})
+        fitted = fit_parameters(train_empirical, parameter_sweep_level=parameter_sweep_level)
+        profile = fitted["profile"]["profile"]
+        mean_radius_scale = float(np.mean([entry["radius_scale"] for entry in fitted["per_galaxy"].values()]))
+        mean_velocity_scale = float(np.mean([entry["velocity_scale"] for entry in fitted["per_galaxy"].values()]))
+        mean_aggregation_mix = float(np.mean([entry["aggregation_mix"] for entry in fitted["per_galaxy"].values()]))
+        combined_velocity = mean_aggregation_mix * profile["mean_tangential_velocity"] + (1.0 - mean_aggregation_mix) * profile["median_tangential_velocity"]
+        scaled_radius = profile["radial_centers"] * mean_radius_scale
+        holdout_radius = np.asarray(holdout_empirical["radius"], dtype=float)
+        holdout_observed = np.asarray(holdout_empirical["velocity"], dtype=float)
+        holdout_prediction = np.interp(
+            holdout_radius,
+            scaled_radius,
+            combined_velocity * mean_velocity_scale,
+            left=combined_velocity[0] * mean_velocity_scale,
+            right=combined_velocity[-1] * mean_velocity_scale,
+        )
+        local_baseline = _baseline_family(holdout_radius, holdout_observed)
+        flat_rmse = rmse(holdout_observed, local_baseline["flat"])
+        linear_rmse = rmse(holdout_observed, local_baseline["linear"])
+        baseline_name = "flat_rotation_baseline" if flat_rmse < linear_rmse else "linear_rotation_baseline"
+        baseline_prediction = local_baseline["flat"] if baseline_name.startswith("flat") else local_baseline["linear"]
+        diagnostics[holdout_id] = {
+            "holdout_rmse": float(rmse(holdout_observed, holdout_prediction)),
+            "baseline_holdout_rmse": float(rmse(holdout_observed, baseline_prediction)),
+            "best_arm_mode": str(fitted.get("arm_mode", fitted["profile"]["params"].get("arm_mode", 2))),
+            "baseline_winner": baseline_name,
+            "tne_winner_flag": float(rmse(holdout_observed, holdout_prediction) < rmse(holdout_observed, baseline_prediction)),
+        }
+    return diagnostics
+
+
 def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[str, Any] | None = None) -> dict[str, Any]:
     fit = fitted_parameters or fit_parameters(empirical)
     profile = fit["profile"]["profile"]
@@ -315,6 +362,12 @@ def prepare_model_prediction(empirical: dict[str, Any], fitted_parameters: dict[
         "density_arm_contrast": float(fit["profile"]["spiral_metrics"]["density_arm_contrast"]),
         "angular_momentum_drift": float(fit["profile"]["spiral_metrics"]["angular_momentum_drift"]),
         "elastic_tension_max": float(fit["profile"]["spiral_metrics"]["elastic_tension_max"]),
+        "tension_mean": float(fit["profile"]["spiral_metrics"]["tension_mean"]),
+        "tension_gradient_mean": float(fit["profile"]["spiral_metrics"]["tension_gradient_mean"]),
+        "mass_conservation_error": float(fit["profile"]["spiral_metrics"]["mass_conservation_error"]),
+        "morphology_stability_score": float(fit["profile"]["spiral_metrics"]["morphology_stability_score"]),
+        "field_feedback_strength": float(fit["profile"]["spiral_metrics"]["field_feedback_strength"]),
+        "initialization_vs_evolution_score": float(fit["profile"]["spiral_metrics"]["initialization_vs_evolution_score"]),
         "arm_asymmetry_index": float(fit["profile"]["spiral_metrics"]["arm_asymmetry_index"]),
         "per_galaxy_prediction": per_galaxy_prediction,
         "fitted_parameters": {
@@ -357,6 +410,9 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["baseline_model"] = prediction["selected_baseline"]
     metrics["flat_baseline_RMSE"] = rmse(empirical["velocity"], prediction["flat_baseline_prediction"])
     metrics["linear_baseline_RMSE"] = rmse(empirical["velocity"], prediction["linear_baseline_prediction"])
+    metrics["smoothed_reference_RMSE"] = rmse(empirical["velocity"], prediction["smoothed_empirical_reference"])
+    metrics["mean_RMSE"] = float(metrics["RMSE"])
+    metrics["median_RMSE"] = float(np.median(np.abs(residuals["tne_residual"])))
     metrics["spiral_order_parameter"] = float(prediction["spiral_order_parameter"])
     metrics["mode_2_amplitude"] = float(prediction["mode_2_amplitude"])
     metrics["mode_3_amplitude"] = float(prediction["mode_3_amplitude"])
@@ -371,6 +427,12 @@ def compute_metrics(empirical: dict[str, Any], prediction: dict[str, Any], resid
     metrics["density_arm_contrast"] = float(prediction["density_arm_contrast"])
     metrics["angular_momentum_drift"] = float(prediction["angular_momentum_drift"])
     metrics["elastic_tension_max"] = float(prediction["elastic_tension_max"])
+    metrics["tension_mean"] = float(prediction["tension_mean"])
+    metrics["tension_gradient_mean"] = float(prediction["tension_gradient_mean"])
+    metrics["mass_conservation_error"] = float(prediction["mass_conservation_error"])
+    metrics["morphology_stability_score"] = float(prediction["morphology_stability_score"])
+    metrics["field_feedback_strength"] = float(prediction["field_feedback_strength"])
+    metrics["initialization_vs_evolution_score"] = float(prediction["initialization_vs_evolution_score"])
     metrics["arm_asymmetry_index"] = float(prediction["arm_asymmetry_index"])
     metrics["galaxy_count"] = float(len(prediction["per_galaxy_prediction"]))
     metrics["arm_mode"] = prediction["fitted_parameters"]["arm_mode"]

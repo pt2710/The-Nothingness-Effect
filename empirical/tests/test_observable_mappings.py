@@ -56,10 +56,14 @@ def test_ringdown_mapping_emits_alignment_and_holdout_metadata():
     metrics = mapping.compute_metrics(empirical, prediction, residuals)
 
     assert "window_start_index" in empirical
+    assert empirical["window_variant"] == "standard"
     assert "train_RMSE" in metrics
     assert "test_RMSE" in metrics
     assert "tne_residual_envelope" in residuals
     assert metrics["basis_component_count"] >= 4
+    assert metrics["window_variant"] == "standard"
+    assert len(mapping.window_sensitivity_analysis(parameter_sweep_level="quick")) >= 3
+    assert len(mapping.basis_stability_analysis(empirical, parameter_sweep_level="quick")) >= 2
 
 
 def test_galaxy_mapping_emits_baseline_family_and_profiles():
@@ -75,10 +79,12 @@ def test_galaxy_mapping_emits_baseline_family_and_profiles():
     assert "pitch_angle_proxy" in prediction
     assert "density_arm_contrast" in prediction
     assert "mode_2_amplitude" in prediction
+    assert "initialization_vs_evolution_score" in prediction
     assert len(set(empirical["galaxy_id"])) >= 2
     metrics = mapping.compute_metrics(empirical, prediction, mapping.compute_residuals(empirical, prediction))
     assert metrics["galaxy_count"] >= 2
     assert np.isfinite(metrics["density_arm_contrast"])
+    assert np.isfinite(metrics["field_feedback_strength"])
 
 
 def test_eht_mapping_reports_source_specific_diagnostics():

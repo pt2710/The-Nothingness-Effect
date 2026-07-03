@@ -58,6 +58,9 @@ class LocalityGravityParams:
     arm_mode_mixture: tuple[int, ...] = (2, 3, 4)
     arm_mode_weights: tuple[float, ...] = (0.45, 0.35, 0.20)
     arm_seed_strength: float = 1.0
+    density_gradient_coupling: float = 0.55
+    initialization_winding_strength: float = 1.9
+    initialization_jitter: float = 0.06
 
 
 @dataclass(frozen=True)
@@ -201,8 +204,14 @@ def initialize_spiral_bodies(
         jitter_scale=0.03 if params.arm_mode == "mixed" else 0.0,
     )
     arm_phase = params.arm_seed_strength * phase_bundle["phase_offsets"]
-    theta = base_theta + arm_phase + 1.9 * (radii / max(params.radial_scale, 1e-12)) + bar_phase + wave_seed
-    theta += rng.normal(0.0, 0.06, disk_count)
+    theta = (
+        base_theta
+        + arm_phase
+        + params.initialization_winding_strength * (radii / max(params.radial_scale, 1e-12))
+        + bar_phase
+        + wave_seed
+    )
+    theta += rng.normal(0.0, params.initialization_jitter, disk_count)
     positions[1:, 0] = radii * np.cos(theta)
     positions[1:, 1] = radii * np.sin(theta)
 
@@ -358,7 +367,7 @@ def entropic_elastic_field(
     tension = (
         params.relax * previous
         + params.entropic_alpha * density_norm
-        + params.elastic_beta * grad_mag
+        + params.elastic_beta * params.density_gradient_coupling * grad_mag
         + params.shear_gamma * shear_mag
         + 0.18 * wave_seed
     )
@@ -370,6 +379,7 @@ def entropic_elastic_field(
         **density_bundle,
         "entropy": entropy,
         "tension": tension,
+        "density_gradient_magnitude": grad_mag,
         "shear": shear_mag,
         "omega": omega_field,
         "strain_xx": strain_xx,
@@ -454,7 +464,8 @@ def _elastic_acceleration(
     elastic_coupling: np.ndarray,
     params: LocalityGravityParams,
 ) -> np.ndarray:
-    axis = np.asarray(field["axis"], dtype=float)
+    axis_key = "axis" if "axis" in field else "grid_axis"
+    axis = np.asarray(field[axis_key], dtype=float)
     tension = np.asarray(field["tension"], dtype=float)
     grad_y, grad_x = np.gradient(tension, axis, axis, edge_order=1)
     sampled = _sample_grid_vector(positions, axis, grad_x, grad_y)
@@ -501,9 +512,13 @@ def step_locality_gravity(
         "positions": positions,
         "velocities": velocities,
         "acceleration": acceleration,
+        "gravity_acceleration": grav,
+        "locality_acceleration": local,
+        "elastic_acceleration": elastic,
         "density": field["density"],
         "entropy": field["entropy"],
         "tension": field["tension"],
+        "density_gradient_magnitude": field["density_gradient_magnitude"],
         "shear_field": field["shear"],
         "omega_field": field["omega"],
         "strain_xx": field["strain_xx"],
@@ -535,6 +550,7 @@ def _initial_state(params: LocalityGravityParams, seed: int) -> dict[str, np.nda
             "density": field["density"],
             "entropy": field["entropy"],
             "tension": field["tension"],
+            "density_gradient_magnitude": field["density_gradient_magnitude"],
             "shear_field": field["shear"],
             "omega_field": field["omega"],
             "strain_xx": field["strain_xx"],
@@ -563,12 +579,23 @@ def simulate_locality_spiral(
     density_history = np.empty((step_count + 1, grid_size, grid_size), dtype=np.float32)
     tension_history = np.empty((step_count + 1, grid_size, grid_size), dtype=np.float32)
     entropy_history = np.empty((step_count + 1, grid_size, grid_size), dtype=np.float32)
+    density_gradient_history = np.empty((step_count + 1, grid_size, grid_size), dtype=np.float32)
+    gravity_norm_history = np.empty(step_count + 1, dtype=np.float32)
+    locality_norm_history = np.empty(step_count + 1, dtype=np.float32)
+    elastic_norm_history = np.empty(step_count + 1, dtype=np.float32)
+    total_acceleration_norm_history = np.empty(step_count + 1, dtype=np.float32)
 
     history[0] = state["positions"]
     velocity_history[0] = state["velocities"]
     density_history[0] = state["density"]
     tension_history[0] = state["tension"]
     entropy_history[0] = state["entropy"]
+    density_gradient_history[0] = state["density_gradient_magnitude"]
+    gravity_norm_history[0] = np.linalg.norm(gravity_acceleration(state["positions"], state["masses"], state["softening"], sim_params.G_eff, sim_params.eps), axis=1).mean()
+    locality_norm_history[0] = np.linalg.norm(locality_force(state["positions"], masses=state["masses"], G_eff=0.12 * sim_params.G_eff, sigma=sim_params.sigma, eps=sim_params.eps, shear=sim_params.shear, softening=state["softening"]), axis=1).mean()
+    elastic_initial = _elastic_acceleration(state["positions"], state, state["entropic_coupling"], state["elastic_coupling"], sim_params)
+    elastic_norm_history[0] = np.linalg.norm(elastic_initial, axis=1).mean()
+    total_acceleration_norm_history[0] = gravity_norm_history[0] + locality_norm_history[0] + elastic_norm_history[0]
     for index in range(1, step_count + 1):
         state = step_locality_gravity(state, sim_params.dt, sim_params)
         history[index] = state["positions"]
@@ -576,6 +603,11 @@ def simulate_locality_spiral(
         density_history[index] = state["density"]
         tension_history[index] = state["tension"]
         entropy_history[index] = state["entropy"]
+        density_gradient_history[index] = state["density_gradient_magnitude"]
+        gravity_norm_history[index] = np.linalg.norm(state["gravity_acceleration"], axis=1).mean()
+        locality_norm_history[index] = np.linalg.norm(state["locality_acceleration"], axis=1).mean()
+        elastic_norm_history[index] = np.linalg.norm(state["elastic_acceleration"], axis=1).mean()
+        total_acceleration_norm_history[index] = np.linalg.norm(state["acceleration"], axis=1).mean()
 
     metrics = compute_spiral_metrics(
         history=history,
@@ -584,6 +616,13 @@ def simulate_locality_spiral(
         body_types=state["body_types"],
         tension_field=state["tension"],
         arm_mode=sim_params.arm_mode,
+        tension_history=tension_history,
+        density_history=density_history,
+        density_gradient_history=density_gradient_history,
+        gravity_norm_history=gravity_norm_history,
+        locality_norm_history=locality_norm_history,
+        elastic_norm_history=elastic_norm_history,
+        total_acceleration_norm_history=total_acceleration_norm_history,
     )
     return {
         "history": history,
@@ -591,6 +630,7 @@ def simulate_locality_spiral(
         "density_history": density_history,
         "tension_history": tension_history,
         "entropy_history": entropy_history,
+        "density_gradient_history": density_gradient_history,
         "positions": np.asarray(state["positions"], dtype=float),
         "velocities": np.asarray(state["velocities"], dtype=float),
         "masses": np.asarray(state["masses"], dtype=float),
@@ -604,6 +644,10 @@ def simulate_locality_spiral(
         "arm_phase_offsets": np.asarray(state["arm_phase_offsets"], dtype=float),
         "arm_mode_assignment": np.asarray(state["arm_mode_assignment"], dtype=int),
         "arm_family_index": np.asarray(state["arm_family_index"], dtype=int),
+        "gravity_norm_history": gravity_norm_history,
+        "locality_norm_history": locality_norm_history,
+        "elastic_norm_history": elastic_norm_history,
+        "total_acceleration_norm_history": total_acceleration_norm_history,
         "metadata": {
             "arm_mode": sim_params.arm_mode,
             "arm_seed_strength": sim_params.arm_seed_strength,
@@ -729,6 +773,13 @@ def compute_spiral_metrics(
     body_types: np.ndarray | None = None,
     tension_field: np.ndarray | None = None,
     arm_mode: int | str = 2,
+    tension_history: np.ndarray | None = None,
+    density_history: np.ndarray | None = None,
+    density_gradient_history: np.ndarray | None = None,
+    gravity_norm_history: np.ndarray | None = None,
+    locality_norm_history: np.ndarray | None = None,
+    elastic_norm_history: np.ndarray | None = None,
+    total_acceleration_norm_history: np.ndarray | None = None,
 ) -> dict[str, float]:
     positions = np.asarray(history, dtype=float)
     final = positions[-1]
@@ -749,12 +800,35 @@ def compute_spiral_metrics(
     target_mode_amplitude, target_mode_ratio = _target_mode_summary(arm_mode, amplitudes)
     spiral_order = dominant_mode_amplitude
     tension = np.zeros((8, 8), dtype=float) if tension_field is None else np.asarray(tension_field, dtype=float)
+    tension_hist = np.empty((0,), dtype=float) if tension_history is None else np.asarray(tension_history, dtype=float)
+    density_hist = np.empty((0,), dtype=float) if density_history is None else np.asarray(density_history, dtype=float)
+    grad_hist = np.empty((0,), dtype=float) if density_gradient_history is None else np.asarray(density_gradient_history, dtype=float)
     energy_proxy = float(0.5 * np.sum(mass[:, None] * final_vel**2))
     total_mass = float(np.sum(mass))
     ang_initial = _angular_momentum_z(initial, initial_vel, mass)
     ang_final = _angular_momentum_z(final, final_vel, mass)
     profile = radial_velocity_profile(final, final_vel, mass, n_bins=12)
     density_contrast = _density_arm_contrast(final, mass)
+    initial_amplitudes = {mode: _mode_amplitude(initial, mass, mode) for mode in (1, 2, 3, 4)}
+    initial_target_mode_amplitude, _ = _target_mode_summary(arm_mode, initial_amplitudes)
+    initial_dominant = max(initial_amplitudes.values())
+    tension_grad_y, tension_grad_x = np.gradient(tension) if tension.ndim == 2 else (np.zeros_like(tension), np.zeros_like(tension))
+    tension_gradient_mean = float(np.mean(np.sqrt(tension_grad_x**2 + tension_grad_y**2))) if tension.size else 0.0
+    mass_conservation_error = float(abs(total_mass - float(np.sum(mass))) / (abs(total_mass) + 1e-12))
+    if len(positions) >= 4:
+        tail = positions[max(0, len(positions) - max(4, len(positions) // 6)) :]
+        tail_scores = []
+        for snapshot in tail:
+            tail_scores.append(_mode_amplitude(snapshot, mass, int(max(amplitudes, key=amplitudes.get))))
+        morphology_stability_score = float(np.mean(tail_scores) / (np.std(tail_scores) + 1e-12))
+    else:
+        morphology_stability_score = float("nan")
+    field_feedback_strength = 0.0
+    if elastic_norm_history is not None and total_acceleration_norm_history is not None:
+        elastic_norms = np.asarray(elastic_norm_history, dtype=float)
+        total_norms = np.asarray(total_acceleration_norm_history, dtype=float)
+        field_feedback_strength = float(np.mean(elastic_norms / (total_norms + 1e-12)))
+    initialization_vs_evolution_score = float((target_mode_amplitude - initial_target_mode_amplitude) / (abs(initial_target_mode_amplitude) + 1e-12))
     metrics = {
         "initial_mean_radius": float(np.average(radius_initial, weights=mass)),
         "final_mean_radius": float(np.average(radius_final, weights=mass)),
@@ -777,8 +851,17 @@ def compute_spiral_metrics(
         "energy_proxy": energy_proxy,
         "elastic_tension_mean": float(np.mean(tension)),
         "elastic_tension_max": float(np.max(tension)),
+        "tension_mean": float(np.mean(tension)),
+        "tension_max": float(np.max(tension)),
+        "tension_gradient_mean": tension_gradient_mean,
         "arm_asymmetry_index": _arm_asymmetry_index(final, mass),
         "peak_rotation_velocity": float(np.max(profile["mean_tangential_velocity"])) if len(profile["mean_tangential_velocity"]) else float("nan"),
+        "mass_conservation_error": mass_conservation_error,
+        "morphology_stability_score": morphology_stability_score,
+        "field_feedback_strength": field_feedback_strength,
+        "initialization_vs_evolution_score": initialization_vs_evolution_score,
+        "initial_target_mode_amplitude": initial_target_mode_amplitude,
+        "initial_dominant_mode_amplitude": float(initial_dominant),
         "nan_count": int(np.isnan(positions).sum() + np.isnan(vel_hist).sum() + np.isnan(tension).sum()),
     }
     if body_types is not None:

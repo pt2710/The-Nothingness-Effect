@@ -197,6 +197,21 @@ Additional spiral diagnostics now exposed to the empirical layer include:
 
 The spiral mapping can now run a bounded arm-mode sweep over `2`, `3`, `4`, and `mixed`. If one mode fits better under the implemented proxy mapping, it should be described only as the best preliminary residual fit under that mapping. It is not a morphology validation claim.
 
+The spiral comparison now also records:
+
+- per-galaxy RMSE / MAE / R2 diagnostics
+- per-galaxy baseline winner and TNE winner flag
+- bounded galaxy holdout diagnostics when feasible with the current dataset size
+- initialization-vs-evolution and field-feedback diagnostics from the locality-driven toy model
+
+The ringdown comparison now also records:
+
+- window sensitivity over multiple fixed aligned ringdown windows
+- basis stability under leave-one-component-out ablations
+- explicit train/test diagnostics under the same normalization and split for both TNE and the damped-sinusoid baseline
+
+These additions strengthen transparency and generalization diagnostics, but they still do not convert the outputs into empirical validation.
+
 Metric interpretation:
 
 - RMSE / MAE measure residual size under the implemented proxy mapping

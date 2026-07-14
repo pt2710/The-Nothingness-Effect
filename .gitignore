@@ -78,3 +78,15 @@ empirical/cache/
 
 # Regenerable binary data tables
 *.feather
+
+# Authoritative appendix references are external-only inputs.
+external_reference/
+appendix_canonical_self_negating_involution_flowpoint.tex
+appendix_tne_mathematical_closure_architecture.tex
+appendix_tne_foundational_closure_architecture.tex
+appendix_tne_fluctuation_and_elastic_dynamics.tex
+appendix_tne_gravitational_cosmological_quantum_dynamics.tex
+appendix_tne_artificial_intelligence_architechture.tex
+appendix_the_completeness_theorem.tex
+appendix_theorem_complex_commentary.tex
+appendix_tne_research_relations_implications.tex

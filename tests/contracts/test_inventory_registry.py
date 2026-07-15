@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from equations.theorem_complex_runtime.registry import TheoremComplexRegistry
+from tne_runtime.theorem_complex_runtime.registry import TheoremComplexRegistry
 
 
 ROOT = Path(__file__).resolve().parents[2]

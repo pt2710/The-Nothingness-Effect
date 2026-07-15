@@ -6,8 +6,8 @@ import numpy as np
 
 from equations.completeness_theorem.contracts import CompletenessInput, contracts, registered_completeness_registry
 from equations.completeness_theorem.simulation.godel_boundary import godel_boundary_system
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 STATE = np.array([1.0, -0.5, 2.0, 0.75, -1.25, 0.4])

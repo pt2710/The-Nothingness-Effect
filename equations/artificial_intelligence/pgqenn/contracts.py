@@ -10,7 +10,7 @@ import torch
 
 from equations.artificial_intelligence.shared.elastic_pi_gates import ElasticPiGate
 from equations.artificial_intelligence.shared.entropy_gates import normalized_dfi
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ArtifactSpec,
     ClosureStatus,
     CodomainSpec,
@@ -22,7 +22,7 @@ from equations.theorem_complex_runtime import (
     SourceRemovalResult,
     TheoremComplexRegistry,
 )
-from equations.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 from .growth_law import PrimeGraph
 

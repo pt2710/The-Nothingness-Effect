@@ -1,0 +1,9 @@
+step,theorem_complex_id,residual,cumulative_residual_norm,closure_status
+0,weighted_path_functional_and_norm_admissibility,0.0,0.0,satisfied
+1,elastic_field_ratios_and_weight_regularity,1.9229626863835638e-16,1.9229626863835638e-16,satisfied
+2,uniform_entropy_reduction_and_entropic_reweighting_bounds,0.0,1.9229626863835638e-16,satisfied
+3,pdfi_elastic_norm_interface,0.0,1.9229626863835638e-16,satisfied
+4,pdfi_elastic_norm_equivalence_and_decoupling,0.0,1.9229626863835638e-16,satisfied
+5,weighted_path_ratio_regularity_functional,1.9229626863835638e-16,2.7194799110210365e-16,satisfied
+6,entropy_pdfi_calibrated_norm_residual,0.0,2.7194799110210365e-16,satisfied
+7,spatial_weighted_calibration_closure,0.0,2.7194799110210365e-16,numerical_candidate

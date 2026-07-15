@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from equations.theorem_complex_runtime import ComplexContract, TheoremComplexRegistry
+from tne_runtime.theorem_complex_runtime import ComplexContract, TheoremComplexRegistry
 
 from .a_level import contracts as a_contracts
 from .b_level import contracts as b_contracts

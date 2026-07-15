@@ -12,7 +12,7 @@ from equations.flowpoint.flowpoint import (
     harmonic_interpolation,
     scheduled_spectral_history,
 )
-from equations.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 def test_zero_state_is_not_promoted_to_two_state_orbit():

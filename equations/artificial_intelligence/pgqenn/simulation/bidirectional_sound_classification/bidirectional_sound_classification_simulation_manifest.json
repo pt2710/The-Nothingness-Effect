@@ -1,0 +1,51 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "bidirectional_sound_classification",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "bidirectional_sound_classification_simulation_results.csv",
+    "bidirectional_sound_classification_simulation_figure.png",
+    "bidirectional_sound_classification_simulation_animation.gif",
+    "bidirectional_sound_input.wav",
+    "bidirectional_sound_reconstruction.wav",
+    "bidirectional_sound_classification_simulation_manifest.json"
+  ],
+  "intended_output_group": "bidirectional sound classification",
+  "metrics": {
+    "accuracy": 1.0,
+    "modality_rmse": 0.6237840056419373,
+    "roundtrip_accuracy": 1.0
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "4f7b6394f74370d41da64da199c3d7d085b323dd079038bc6d584b213803d9dc",
+  "parameters": {
+    "capability": "bidirectional_sound_classification",
+    "mode": "simulation",
+    "producer_architecture": "pgqenn",
+    "seed": 3,
+    "synthetic_fixture": true
+  },
+  "producer_architecture": "pgqenn",
+  "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_all_capabilities",
+  "related_theorem_complex_ids": [
+    "motif_spectral_dual_regularity_law_for_soinets",
+    "soi_modality_dual_closure",
+    "motif_spectral_modality_collapse_spatial_field"
+  ],
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.6237840056419373
+  ],
+  "seed": 3,
+  "source_status": "synthetic_deterministic_fixture"
+}

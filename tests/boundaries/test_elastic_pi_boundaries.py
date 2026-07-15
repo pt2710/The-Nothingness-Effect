@@ -12,7 +12,7 @@ from equations.elastic_pi.elastic_pi import (
     evaluate_elastic_pi,
     require_elastic_pi_value,
 )
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_exact_source_law_and_log_identity():

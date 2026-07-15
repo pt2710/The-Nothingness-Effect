@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.theorem_complex_runtime.invariants import (
+from tne_runtime.theorem_complex_runtime.invariants import (
     additive_derivation,
     anti_invariant_projector,
     invariant_projector,

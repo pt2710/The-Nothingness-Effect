@@ -1,0 +1,8 @@
+step,theorem_complex_id,residual,cumulative_residual_norm,closure_status
+0,elastic_dtqc_spectral_measure_dual_of_dtqc,0.0,0.0,satisfied
+1,dtqc::dual_support_equivalence_support_mismatch_leakage,0.0,0.0,satisfied
+2,parseval_energy_bijection_l_2_energy_mismatch,0.0,0.0,satisfied
+3,irrational_drive_locking_commensurate_resonance_collapse,0.0,0.0,satisfied
+4,elastic_gain_support_transport_isomorphism,0.0,0.0,satisfied
+5,diophantine_parseval_locking_invariant,0.0,0.0,satisfied
+6,elastic_parseval_quasicrystal_isometry,3.1700384815269117e-15,3.1700384815269117e-15,numerical_candidate

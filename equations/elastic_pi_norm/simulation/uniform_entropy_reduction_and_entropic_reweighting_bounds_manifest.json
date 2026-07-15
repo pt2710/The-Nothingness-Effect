@@ -1,0 +1,30 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "3277f0ffffcc27dc37ed17f7ecf721ba32234706544ceb5cfbeb5538846f2ba2",
+  "approximation_metadata": {
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "elastic_pi_norm_contract_metrics.csv",
+    "elastic_pi_norm_contract_residuals.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "14ab91d117922e52cb50a24c4a67f88067e129aa8beb1ca795b3b2bc2e952ae1",
+  "parameters": {
+    "category": "elastic_pi_norm",
+    "fixture": "deterministic-contract-v1"
+  },
+  "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output C:/Users/PT-Xb/Documents/TNE - Implementation, test and simmulation code P/repo/the_nothingness_effect/equations/elastic_pi_norm/simulation",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds"
+}

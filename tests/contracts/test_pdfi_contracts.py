@@ -5,8 +5,8 @@ from __future__ import annotations
 import numpy as np
 
 from equations.parity_dfi.contracts import ParityDFIInput, contracts
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 INPUT = ParityDFIInput(np.array([7, 22, 11, 34, 17, 52]), response_seed=2.5, K_D=100.0)

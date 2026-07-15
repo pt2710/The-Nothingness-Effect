@@ -1,0 +1,74 @@
+{
+  "architecture": "soinets",
+  "architecture_closure_status": "open",
+  "architecture_metadata": {
+    "arbitration": "fail_closed",
+    "architecture": "SOInet",
+    "backend": "torch",
+    "device": "cpu",
+    "differentiable": true,
+    "formal_proof_substitute": false,
+    "pgqenn_count": 2,
+    "qenn_count": 2,
+    "torch_version": "2.13.0+cpu"
+  },
+  "architecture_residuals": {
+    "bidirectional_memory": 1.3747204542160034,
+    "local_observability": 2.173861026763916,
+    "spatial_boundary": 1.4450068473815918,
+    "spatial_reconstruction": 2.2703375179844443e-08,
+    "spectral": 0.0,
+    "subnetwork_completeness": 1.0636314982548356e-05
+  },
+  "capability_count": 6,
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "generated_files": [
+    "soinets_test_six_output_summary.csv",
+    "soinets_test_architecture_figure.png",
+    "color_classification/color_classification_test_results.csv",
+    "color_classification/color_classification_test_figure.png",
+    "color_classification/color_classification_test_manifest.json",
+    "sound_classification/sound_classification_test_results.csv",
+    "sound_classification/sound_classification_test_figure.png",
+    "sound_classification/sound_classification_test_manifest.json",
+    "bidirectional_color_classification/bidirectional_color_classification_test_results.csv",
+    "bidirectional_color_classification/bidirectional_color_classification_test_figure.png",
+    "bidirectional_color_classification/bidirectional_color_classification_test_manifest.json",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_results.csv",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_figure.png",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_manifest.json",
+    "color_cloning/color_cloning_test_results.csv",
+    "color_cloning/color_cloning_test_figure.png",
+    "color_cloning/color_cloning_test_manifest.json",
+    "sound_cloning/sound_cloning_test_results.csv",
+    "sound_cloning/sound_cloning_test_figure.png",
+    "sound_cloning/sound_cloning_test_manifest.json"
+  ],
+  "output_groups": [
+    "color_classification",
+    "sound_classification",
+    "bidirectional_color_classification",
+    "bidirectional_sound_classification",
+    "color_cloning",
+    "sound_cloning"
+  ],
+  "parameter_hash": "0ab5a8ced4884d382b1a6bf3d46511ba8071848100d9ef791365be2b98f1ddb4",
+  "parameters": {
+    "architecture": "soinets",
+    "mode": "test",
+    "output_groups": [
+      "color_classification",
+      "sound_classification",
+      "bidirectional_color_classification",
+      "bidirectional_sound_classification",
+      "color_cloning",
+      "sound_cloning"
+    ],
+    "seed": 0
+  },
+  "regeneration_command": "python -m equations.artificial_intelligence.soinets.test.run_all_capabilities",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

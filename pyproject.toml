@@ -28,22 +28,19 @@ dev = [
   "mypy>=1.13",
 ]
 
-[tool.setuptools]
-py-modules = ["the_nothingness_effect"]
-
 [tool.setuptools.packages.find]
 where = ["."]
 include = [
   "equations*",
   "empirical*",
-  "theoretical_benchmarks*",
-  "tne_concepts*",
   "fields_of_physics_in_dev*",
+  "tne_runtime*",
 ]
 exclude = ["tests*", "docs*"]
 
 [tool.pytest.ini_options]
 python_files = ["test_*.py"]
+pythonpath = ["."]
 addopts = "-ra"
 filterwarnings = [
   "default",
@@ -53,7 +50,6 @@ filterwarnings = [
 target-version = "py311"
 line-length = 120
 extend-exclude = [
-  "tne_concepts/SOInet/test_*_data",
   "fields_of_physics_in_dev",
 ]
 

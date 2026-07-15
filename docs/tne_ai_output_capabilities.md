@@ -10,8 +10,8 @@ audio files are written beside the script that generated them.
 The former `tne_concepts/SOInet/test_*_data` directories were legacy result
 dumps rather than implementations. They contained 1,566 tracked files
 (83,879,697 bytes) and were removed. Repository-root copies created as an
-import-time side effect were also removed. Compatibility entry points remain,
-but they call the canonical producers and no longer create root output folders.
+import-time side effect were also removed. The entire historical `tne_concepts`
+tree is absent; canonical producers no longer create root output folders.
 
 ## Meaning preserved from the removed names
 
@@ -49,6 +49,11 @@ Every capability follows the same repository-local form:
 The test script imports the implementation from its parent capability. The
 simulation script does the same. Neither producer writes to the repository
 root, a shared generic artifact directory, or another capability's folder.
+
+QENN, PGQENN, and SOInets also each own an architecture-level `test/` and
+`simulation/` suite. Those scripts import the respective model, evaluate its
+native residuals and observation/collapse output, then run all six capability
+groups into architecture-local subdirectories.
 
 ## Implemented semantics
 
@@ -95,4 +100,15 @@ Run all six colocated tests with:
 
 ```bash
 python -m pytest -q equations/artificial_intelligence/*/test
+```
+
+Run all six output groups through each complete architecture with:
+
+```bash
+python -m equations.artificial_intelligence.qenn.test.run_all_capabilities
+python -m equations.artificial_intelligence.qenn.simulation.run_all_capabilities
+python -m equations.artificial_intelligence.pgqenn.test.run_all_capabilities
+python -m equations.artificial_intelligence.pgqenn.simulation.run_all_capabilities
+python -m equations.artificial_intelligence.soinets.test.run_all_capabilities
+python -m equations.artificial_intelligence.soinets.simulation.run_all_capabilities
 ```

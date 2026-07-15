@@ -152,10 +152,9 @@ a finite `numerical_candidate`, not an attainment or proof claim.
 The canonical SOInet is a differentiable meta-network with multiple QENN and
 PGQENN subnetworks, bidirectional memory transfer, aggregated
 observation/collapse readout, a symmetric meta-adjacency, spectral and spatial
-residuals, and fail-closed completeness arbitration. The historical
-`tne_concepts/SOInet/soi_net.py` implementation remains a legacy experimental
-backend; a deprecating compatibility import points new callers to the canonical
-runtime and does not import its duplicated local source laws.
+residuals, and fail-closed completeness arbitration. The historical duplicated
+`tne_concepts/SOInet` implementation has been removed from the repository;
+canonical callers use `equations/artificial_intelligence/soinets` directly.
 
 The certified source-complete chain follows the appendix's actual dependencies:
 B19 consumes A01+A13, B20 consumes A02+A14, and C29 consumes B19+B20. Both B
@@ -166,8 +165,8 @@ success status is `numerical_candidate`.
 
 ## Final validation
 
-The full repository suite completed with 337 passed, 0 failed, 0 skipped, and
-9 warnings in 270.46 seconds on Python 3.14.3. The warnings are seven legacy
+The full repository suite completed with 343 passed, 0 failed, 0 skipped, and
+9 warnings in 293.99 seconds on Python 3.14.3. The warnings are seven legacy
 `PytestReturnNotNoneWarning` records and two expected deprecation warnings from
 the duality compatibility wrapper.
 

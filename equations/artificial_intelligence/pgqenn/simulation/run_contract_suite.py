@@ -8,13 +8,13 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import torch
 
-from equations.artifact_io import save_csv, save_figure
+from tne_runtime.artifacts.io import save_csv, save_figure
 from equations.artificial_intelligence.pgqenn.contracts import APPENDIX, APPENDIX_SHA256, PGQENNContractInput, contracts
 from equations.artificial_intelligence.pgqenn.growth_law import CanonicalPrimeGrowth
-from equations.theorem_complex_runtime import ComplexId, SimulationResult
-from equations.theorem_complex_runtime.artifacts import write_artifact_manifest
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.provenance import build_manifest, git_commit
+from tne_runtime.theorem_complex_runtime import ComplexId, SimulationResult
+from tne_runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.provenance import build_manifest, git_commit
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
@@ -77,7 +77,7 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=Path("artifacts/artificial_intelligence/pgqenn"))
+    parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent)
     parser.add_argument("--seed", type=int, default=0)
     arguments = parser.parse_args()
     print(run_suite(arguments.output, seed=arguments.seed))

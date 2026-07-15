@@ -19,8 +19,8 @@ from equations.mathematical_closure.b_level import (
 )
 from equations.mathematical_closure.c_level import SignedPolarFieldInput, contracts as c_contracts
 from equations.mathematical_closure.contracts import registered_mathematical_closure_registry
-from equations.theorem_complex_runtime import ClosureStatus, evaluate_contract
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 ROOT = Path(__file__).resolve().parents[2]

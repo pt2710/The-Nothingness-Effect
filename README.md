@@ -18,7 +18,7 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
                     -> deterministic simulation -> artifact manifest
 ```
 
-- `equations/theorem_complex_runtime/` provides typed IDs, domains, codomains,
+- `tne_runtime/theorem_complex_runtime/` provides typed IDs, domains, codomains,
   statuses, residuals, registries, evaluation, and provenance.
 - `equations/artificial_intelligence/` contains canonical CPU-testable QENN,
   deterministic prime/parity PGQENN, and multi-network SOInets.
@@ -26,7 +26,7 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
   classification, bidirectional color and sound classification, and color and
   sound cloning. See `docs/tne_ai_output_capabilities.md` for commands and
   claim boundaries.
-- `the_nothingness_effect.py` is the argument-correct central facade; explicit
+- `fields_of_physics_in_dev/the_nothingness_effect.py` is the argument-correct central facade; explicit
   compatibility wrappers retain bounded legacy behavior.
 - `tests/contracts`, `tests/invariants`, `tests/boundaries`,
   `tests/source_removal`, `tests/numerical`, and `tests/artifacts` separate the
@@ -36,14 +36,14 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
 
 ## Versioning Policy
 
-The repository tracks source code, tests, framework notes, static figures, and compact reproducible result files. Local caches, IDE state, agent state, secrets, backup archives, frame dumps, videos, animations, and other large generated artifacts are excluded through `.gitignore`.
+The repository tracks source code, tests, static figures, and compact reproducible result files. Pre-implementation `framework` directories are intentionally excluded. Local caches, IDE state, agent state, secrets, backup archives, frame dumps, videos, animations, and other large generated artifacts are excluded through `.gitignore`.
 
 The authoritative appendix filenames and content hashes are guarded by CI.
 Appendix `.tex` files must remain outside every repository Git root. Reference
 filenames, theorem IDs, labels, and SHA-256 values are permitted metadata;
 source text and checksum sidecar copies are not repository data.
 
-The root ZIP archives (`equations.zip`, `fields_of_physics_in_dev.zip`, and `tne_concepts.zip`) are intentionally ignored because they duplicate files that are already tracked in their corresponding directories.
+Local ZIP archives are intentionally ignored because they duplicate or externally reference repository inputs.
 
 Large generated artifacts can be regenerated from the simulation scripts. If future work requires versioning videos, large archives, or datasets over normal GitHub limits, use Git LFS or an external artifact store.
 
@@ -118,8 +118,9 @@ closure obligations are actually established.
 
 Legacy toy/proxy modules remain available for reproduction and ablation. They
 do not become theorem implementations merely because they return finite
-numbers. The historical `tne_concepts/SOInet` stack is compatibility-only; new
-AI code composes the shared canonical primitives.
+numbers. The historical `tne_concepts` tree and all pre-implementation
+`framework` directories have been removed; canonical AI code composes the
+shared QENN, PGQENN, and SOInet primitives directly.
 
 The repository-level `conftest.py` sets Matplotlib to the headless `Agg` backend during pytest runs, which avoids GUI/Tk dependencies in figure-generating tests.
 

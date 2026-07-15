@@ -15,5 +15,5 @@
   "compatibility_figure": "empirical/outputs/figures/hawking_like_flux_comparison.png",
   "data_status": "theoretical_benchmark",
   "deprecated": true,
-  "redirected_to": "theoretical_benchmarks/hawking"
+  "redirected_to": "equations/black_hole_dynamics/hawking"
 }

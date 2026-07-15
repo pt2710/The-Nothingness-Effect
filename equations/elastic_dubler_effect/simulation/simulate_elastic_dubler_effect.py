@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import SymLogNorm
 
-from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
 from equations.elastic_dubler_effect.elastic_dubler_effect import compute_dubler_grid
 
 

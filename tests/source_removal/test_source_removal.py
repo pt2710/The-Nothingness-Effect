@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.theorem_complex_runtime import ComplexId
-from equations.theorem_complex_runtime.invariants import (
+from tne_runtime.theorem_complex_runtime import ComplexId
+from tne_runtime.theorem_complex_runtime.invariants import (
     additive_derivation,
     source_removal_result,
 )

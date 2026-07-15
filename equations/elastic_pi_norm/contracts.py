@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from equations.parity_dfi.parity_dfi import parity_dfi
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ArtifactSpec,
     ClosureStatus,
     CodomainSpec,
@@ -20,7 +20,7 @@ from equations.theorem_complex_runtime import (
     SourceRemovalResult,
     TheoremComplexRegistry,
 )
-from equations.theorem_complex_runtime.invariants import source_removal_result
+from tne_runtime.theorem_complex_runtime.invariants import source_removal_result
 
 from .elastic_pi_norm import ElasticPiNormResult, elastic_pi_weighted_path
 

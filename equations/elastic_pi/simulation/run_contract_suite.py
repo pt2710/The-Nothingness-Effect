@@ -1,7 +1,7 @@
 from pathlib import Path
 import argparse
 
-from equations.fluctuation_elastic_artifacts import run_suite as _run
+from equations.fluctuation_elastic_dynamics.artifacts import run_suite as _run
 
 
 def run_suite(output_dir: str | Path, *, seed: int = 0):

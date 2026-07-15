@@ -12,8 +12,8 @@ from equations.dynamic_fluctuation_index.contracts import (
     contracts,
 )
 from equations.dynamic_fluctuation_index.dfi import DFIStatus
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 DATA = np.array(

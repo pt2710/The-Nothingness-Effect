@@ -11,8 +11,8 @@ import warnings
 
 import numpy as np
 
-from equations.theorem_complex_runtime.types import DomainViolationError
-from equations.theorem_complex_runtime.validation import ensure_finite
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 _COMPATIBILITY_WARNING_EMITTED = False

@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from equations.elastic_pi.elastic_pi import evaluate_elastic_pi, require_elastic_pi_value
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ArtifactSpec,
     ClosureStatus,
     CodomainSpec,
@@ -20,7 +20,7 @@ from equations.theorem_complex_runtime import (
     SourceRemovalResult,
     TheoremComplexRegistry,
 )
-from equations.theorem_complex_runtime.invariants import source_removal_result
+from tne_runtime.theorem_complex_runtime.invariants import source_removal_result
 
 from .parity_dfi import ParityDFIResult, parity_dfi, parity_inverse_recurrence
 

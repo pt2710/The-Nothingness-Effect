@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import TwoSlopeNorm
 
-from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz, write_metadata
 from equations.noether_tne.noether_tne import (
     NoetherParams,
     noether_validation_metrics,

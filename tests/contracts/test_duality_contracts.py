@@ -9,8 +9,8 @@ from equations.duality.b_level import contracts as b_contracts
 from equations.duality.c_level import contracts as c_contracts
 from equations.duality.contracts import registered_duality_registry
 from equations.duality.duality import FiniteInvolution, FreeCofreeInput, TwoStateInput
-from equations.theorem_complex_runtime import ClosureStatus, evaluate_contract
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 ROOT = Path(__file__).resolve().parents[2]

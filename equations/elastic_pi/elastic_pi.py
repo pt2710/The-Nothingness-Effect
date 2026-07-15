@@ -9,11 +9,11 @@ from typing import Any
 import numpy as np
 
 from equations.dynamic_fluctuation_index.dfi import NormalizedDFIResult, require_finite_dfi
-from equations.theorem_complex_runtime.types import (
+from tne_runtime.theorem_complex_runtime.types import (
     DomainViolationError,
     SingularEvaluationError,
 )
-from equations.theorem_complex_runtime.validation import ensure_finite
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 class ElasticPiStatus(str, Enum):

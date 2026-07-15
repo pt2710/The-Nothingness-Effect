@@ -5,8 +5,8 @@ import math
 import numpy as np
 import pytest
 
-from equations.theorem_complex_runtime import NonFiniteValueError, ResidualResult, ClosureStatus
-from equations.theorem_complex_runtime.validation import ensure_finite, evaluate_exponential
+from tne_runtime.theorem_complex_runtime import NonFiniteValueError, ResidualResult, ClosureStatus
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite, evaluate_exponential
 
 
 @pytest.mark.parametrize("value", [math.nan, math.inf, -math.inf, np.array([1.0, np.nan])])

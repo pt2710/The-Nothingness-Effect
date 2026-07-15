@@ -13,7 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from equations.artifact_io import CLAIM_BOUNDARY, ensure_dir, save_csv, save_figure, save_json, save_npz, write_metadata
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, ensure_dir, save_csv, save_figure, save_json, save_npz, write_metadata
 from equations.locality_driven_gravity.locality_driven_gravity import (
     BodyType,
     LocalityGravityParams,

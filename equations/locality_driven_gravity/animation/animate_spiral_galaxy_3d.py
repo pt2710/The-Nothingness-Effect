@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import animation
 
-from equations.animation_io import figure_to_frame, resolve_animation_writer, save_animation, save_frame_strip, save_gif_fallback, write_animation_metadata
-from equations.artifact_io import CLAIM_BOUNDARY, ensure_dir, save_npz
+from tne_runtime.artifacts.animation_io import figure_to_frame, resolve_animation_writer, save_animation, save_frame_strip, save_gif_fallback, write_animation_metadata
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, ensure_dir, save_npz
 from equations.locality_driven_gravity.locality_driven_gravity import BodyType, LocalityGravityParams, compute_spiral_metrics, simulate_spiral_arm_mode
 
 

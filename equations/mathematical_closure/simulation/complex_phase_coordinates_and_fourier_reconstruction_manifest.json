@@ -1,0 +1,35 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+  "approximation_metadata": {
+    "candidate_not_minimizer": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "mathematical_closure_metrics.csv",
+    "mathematical_closure_trace.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "b7949016a38a8553090260803fea0ea58f2a683e7fee80f719919dd266ad2638",
+  "parameters": {
+    "harmonic_order": 16,
+    "orders": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ]
+  },
+  "regeneration_command": "python -m equations.mathematical_closure.simulation --output C:/Users/PT-Xb/Documents/TNE - Implementation, test and simmulation code P/repo/the_nothingness_effect/equations/mathematical_closure/simulation",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "complex_phase_coordinates_and_fourier_reconstruction"
+}

@@ -5,14 +5,14 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from equations.gravitational_contract_runtime import (
+from equations.gravitational_cosmological_quantum_dynamics.contract_runtime import (
     FieldLawInput,
     SPECS,
     contracts_for,
     registered_module_registry,
 )
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 X = np.linspace(0.0, 2.0 * np.pi, 64)

@@ -8,7 +8,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-from equations.artifact_io import save_csv, save_figure
+from tne_runtime.artifacts.io import save_csv, save_figure
 from equations.completeness_theorem.contracts import (
     APPENDIX,
     APPENDIX_SHA256,
@@ -16,10 +16,10 @@ from equations.completeness_theorem.contracts import (
     contracts,
 )
 from equations.completeness_theorem.simulation.godel_boundary import godel_boundary_system
-from equations.theorem_complex_runtime import ComplexId, SimulationResult
-from equations.theorem_complex_runtime.artifacts import write_artifact_manifest
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.provenance import build_manifest, git_commit
+from tne_runtime.theorem_complex_runtime import ComplexId, SimulationResult
+from tne_runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.provenance import build_manifest, git_commit
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"

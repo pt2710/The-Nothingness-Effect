@@ -39,6 +39,6 @@ unselected physical derivations, and the remaining 50 AI complexes.
 Every individual open row, proposed file, required test, artifact, and decision
 note is preserved in `docs/data/theorem_complex_implementation_matrix.csv`.
 The audit's 170-row repository file plan is separately recorded in
-`docs/data/repository_file_revision_status.csv`: 55 exact planned paths are
-present, 45 responsibilities are partially addressed through conservative
-alternative paths, and 70 remain explicitly open.
+`docs/data/repository_file_revision_status.csv`: 42 exact planned paths are
+present, 58 responsibilities are relocated or partially addressed through
+conservative alternative paths, and 70 remain explicitly open.

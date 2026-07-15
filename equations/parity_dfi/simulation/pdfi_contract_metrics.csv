@@ -1,0 +1,11 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics,source_count
+parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law,A,0.0,satisfied,True,0
+flowpoint_parity_correspondence_and_decoupling,A,0.0,satisfied,True,0
+pdfi_entropic_predictability_and_fluctuation_ambiguity,A,0.0,satisfied,True,0
+pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown,A,0.0,satisfied,True,0
+pdfi_elastic_equivalence_and_decoupling,A,0.0,satisfied,True,0
+completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations,A,0.0,satisfied,True,0
+parity_flowpoint_transport_law,B,0.0,satisfied,True,2
+predictability_observation_parity_coupling,B,0.0,satisfied,True,2
+elastic_calibration_completeness_functional,B,0.0,satisfied,True,2
+spatial_parity_elastic_calibration_closure,C,0.0,numerical_candidate,False,3

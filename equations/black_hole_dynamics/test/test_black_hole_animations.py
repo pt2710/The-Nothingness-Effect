@@ -10,7 +10,7 @@ from equations.black_hole_dynamics.animation.animate_hawking_like_flux_2d import
 from equations.black_hole_dynamics.animation.animate_observer_horizon_3d import run as run_observer_horizon_3d
 from equations.black_hole_dynamics.animation.animate_observer_horizon_memory_2d import run as run_observer_horizon_memory_2d
 from equations.black_hole_dynamics.black_hole_dynamics import detect_threshold_crossing
-from equations.run_animation_artifacts import main as run_animation_artifacts_main
+from tools.run_animation_artifacts import main as run_animation_artifacts_main
 
 
 def _assert_core_outputs(result: dict[str, object]) -> None:
@@ -75,6 +75,8 @@ def test_aggregate_runner_quick_mode(tmp_path, monkeypatch):
             "run_animation_artifacts",
             "--quick",
             "--output-dir",
+            str(tmp_path),
+            "--summary-dir",
             str(tmp_path),
             "--format",
             "frames",

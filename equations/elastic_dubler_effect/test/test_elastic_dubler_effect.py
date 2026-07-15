@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytest
 
-from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
 from equations.elastic_dubler_effect.elastic_dubler_effect import (
     compute_dubler_grid,
     dubler_frequency_ratio,
     dubler_shift,
 )
 from equations.elastic_pi.elastic_pi import ElasticPiEvaluationError
-from equations.theorem_complex_runtime.types import NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.types import NonFiniteValueError
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent

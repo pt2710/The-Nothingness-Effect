@@ -5,8 +5,8 @@ import torch
 
 from equations.artificial_intelligence.pgqenn.contracts import A_IDS, B_IDS, C_IDS, PGQENNContractInput, contracts, derived_operator, source_operator, spatial_operator
 from equations.artificial_intelligence.pgqenn.growth_law import CanonicalPrimeGrowth
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.types import ClosureStatus, DomainViolationError, NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import ClosureStatus, DomainViolationError, NonFiniteValueError
 
 
 @pytest.fixture

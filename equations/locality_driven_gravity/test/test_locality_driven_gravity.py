@@ -7,7 +7,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
 from equations.locality_driven_gravity.locality_driven_gravity import (
     arm_phase_offsets,
     LocalityGravityParams,

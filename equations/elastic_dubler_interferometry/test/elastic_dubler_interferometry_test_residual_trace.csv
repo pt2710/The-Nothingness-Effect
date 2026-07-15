@@ -1,0 +1,8 @@
+step,theorem_complex_id,residual,cumulative_residual_norm,closure_status
+0,elastic_dubler_curvature_correspondence,0.0,0.0,satisfied
+1,elastic_e_curvature_encoding_curvature_ambiguity_divergence,0.0,0.0,satisfied
+2,elastic_dubler_interferometry::elastic_gravitational_memory_instant_relaxation,0.0,0.0,satisfied
+3,elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown,0.0,0.0,satisfied
+4,phase_elliptic_curvature_reconstruction,0.0,0.0,satisfied
+5,memory_resolved_horizon_reconstruction,0.0,0.0,satisfied
+6,memory_aware_phase_curvature_tomography,7.453154127597126e-15,7.453154127597126e-15,numerical_candidate

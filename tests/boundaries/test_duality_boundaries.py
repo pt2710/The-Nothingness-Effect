@@ -3,7 +3,7 @@ from __future__ import annotations
 import pytest
 
 from equations.duality.duality import FiniteInvolution, reciprocal_orbit_double_cover
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_double_cover_does_not_hide_fixed_point_obstruction():

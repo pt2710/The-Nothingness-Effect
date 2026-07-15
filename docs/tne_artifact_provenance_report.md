@@ -8,9 +8,12 @@ root. They produced:
 | Artifact class | Count |
 | --- | ---: |
 | Theorem-level manifests | 136 |
-| Numerical/metrics tables | 18 |
-| Static figures | 18 |
-| Canonical animation generators | 8 |
+| Producer-local manifests | 161 |
+| Numerical/metrics tables | 105 |
+| Static figures | 102 |
+| Compact GIF animations | 38 |
+| Representative WAV files | 20 |
+| Animation-capable producer scripts | 29 |
 
 The manifest IDs match the 136 `implemented` inventory rows exactly, with zero
 duplicates and zero missing entries. Every manifest records the appendix
@@ -24,9 +27,11 @@ finite computational support; not a formal proof substitute
 
 ## Retention policy
 
-Large regenerable outputs remain outside Git. The repository tracks the
-aggregate `docs/data/artifact_provenance_manifest.json`, generator code, compact
-status data, and three representative AI figures:
+Large frame dumps, videos, and regenerable datasets remain outside Git. The
+repository tracks the aggregate `docs/data/artifact_provenance_manifest.json`,
+generator code, compact status data, and selected producer-local figures,
+tables, manifests, audio samples, and GIF evidence. The original three
+aggregate theorem representatives remain:
 
 - `docs/figures/qenn_spatial_closure.png`
 - `docs/figures/pgqenn_prime_graph.png`
@@ -41,11 +46,12 @@ The six observable AI output groups add a separate, bounded evidence layer:
 
 | Artifact class | Count |
 | --- | ---: |
-| Capability manifests | 12 |
-| Capability result tables | 12 |
-| Capability static figures | 12 |
-| Compact capability animations | 6 |
-| Representative auditory WAV files | 5 |
+| Standalone capability manifests | 12 |
+| Standalone capability result tables | 12 |
+| Standalone capability static figures | 12 |
+| Standalone compact animations | 6 |
+| Architecture/mode suites | 6 |
+| Architecture capability executions | 36 |
 
 Unlike the theorem-level regeneration suites, these compact outputs are kept
 beside their `test/` or `simulation/` producer to enforce the repository's
@@ -54,6 +60,10 @@ appendix checksum, related theorem-complex IDs, parameters, tolerances,
 residuals, closure status, generated files, regeneration command, source
 status, and claim boundary. Details are in
 `docs/tne_ai_output_capabilities.md`.
+
+The producer-local aggregate also includes the six requested theorem modules,
+DTQC's five regenerated static views plus phase-clock animation, and Hawking
+benchmark evidence beneath `black_hole_dynamics/hawking`.
 
 ## Validation
 

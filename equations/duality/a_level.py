@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ClosureStatus,
     CodomainSpec,
     ComplexContract,

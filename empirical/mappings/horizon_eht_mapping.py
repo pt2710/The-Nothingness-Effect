@@ -15,7 +15,7 @@ import numpy as np
 
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle
-from equations.artifact_io import save_figure
+from tne_runtime.artifacts.io import save_figure
 from equations.black_hole_dynamics.black_hole_dynamics import BlackHoleParams, black_hole_snapshot
 
 

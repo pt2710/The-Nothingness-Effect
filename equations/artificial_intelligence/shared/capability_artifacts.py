@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
-from equations.artifact_io import save_csv, save_figure, write_metadata
+from tne_runtime.artifacts.io import save_csv, save_figure, write_metadata
 from equations.artificial_intelligence.bidirectional_color_classification import BidirectionalColorClassifier
 from equations.artificial_intelligence.bidirectional_sound_classification import BidirectionalSoundClassifier
 from equations.artificial_intelligence.color_classification import ColorClassifier
@@ -32,7 +32,7 @@ from equations.artificial_intelligence.shared.capability_fixtures import (
 )
 from equations.artificial_intelligence.sound_classification import SoundClassifier
 from equations.artificial_intelligence.sound_cloning import SoundCloner
-from equations.theorem_complex_runtime.provenance import git_commit, parameter_hash
+from tne_runtime.theorem_complex_runtime.provenance import git_commit, parameter_hash
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
@@ -346,6 +346,8 @@ def run_capability(
     *,
     seed: int = 0,
     simulation: bool = False,
+    producer_architecture: str | None = None,
+    producer_module: str | None = None,
 ) -> dict[str, Any]:
     """Run one capability and keep every generated artifact beside its producer."""
 
@@ -364,13 +366,23 @@ def run_capability(
     if simulation:
         generated.append(_save_animation(output / f"{stem}_animation.gif", capability, _animation_values(capability, evaluation)))
         generated.extend(_audio_files(capability, output, evaluation))
-    parameters = {"capability": capability, "mode": mode, "seed": seed, "synthetic_fixture": True}
-    command_module = f"equations.artificial_intelligence.{capability}.{mode}.{'run_simulation' if simulation else 'test_capability'}"
+    parameters = {
+        "capability": capability,
+        "mode": mode,
+        "seed": seed,
+        "synthetic_fixture": True,
+        "producer_architecture": producer_architecture,
+    }
+    command_module = producer_module or (
+        f"equations.artificial_intelligence.{capability}.{mode}."
+        f"{'run_simulation' if simulation else 'test_capability'}"
+    )
     manifest_path = output / f"{stem}_manifest.json"
     manifest = write_metadata(
         manifest_path,
         {
             "capability_id": capability,
+            "producer_architecture": producer_architecture,
             "intended_output_group": capability.replace("_", " "),
             "appendix_filename": APPENDIX,
             "appendix_source_sha256": APPENDIX_SHA256,

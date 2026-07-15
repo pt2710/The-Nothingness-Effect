@@ -9,8 +9,8 @@ from typing import Any
 import numpy as np
 
 from equations.spectrum_of_infinities.spectrum_of_infinities import SpectrumOfInfinities
-from equations.theorem_complex_runtime.types import DomainViolationError, SingularEvaluationError
-from equations.theorem_complex_runtime.validation import ensure_finite
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, SingularEvaluationError
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 class DFIStatus(str, Enum):

@@ -9,7 +9,7 @@ from pathlib import Path
 import torch
 
 from equations.artificial_intelligence.shared.entropy_gates import normalized_dfi
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ArtifactSpec,
     ClosureStatus,
     CodomainSpec,
@@ -21,7 +21,7 @@ from equations.theorem_complex_runtime import (
     SourceRemovalResult,
     TheoremComplexRegistry,
 )
-from equations.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 APPENDIX = "appendix_tne_artificial_intelligence_architechture.tex"

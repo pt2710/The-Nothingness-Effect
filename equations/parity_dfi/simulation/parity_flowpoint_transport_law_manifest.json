@@ -1,0 +1,34 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "3277f0ffffcc27dc37ed17f7ecf721ba32234706544ceb5cfbeb5538846f2ba2",
+  "approximation_metadata": {
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "pdfi_contract_metrics.csv",
+    "pdfi_contract_residuals.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "1183c31d89d1642b46c47c200f62639f63afe1ccd61daa94d36c197e988e6e27",
+  "parameters": {
+    "category": "pdfi",
+    "fixture": "deterministic-contract-v1"
+  },
+  "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output C:/Users/PT-Xb/Documents/TNE - Implementation, test and simmulation code P/repo/the_nothingness_effect/equations/parity_dfi/simulation",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "parity_flowpoint_transport_law"
+}

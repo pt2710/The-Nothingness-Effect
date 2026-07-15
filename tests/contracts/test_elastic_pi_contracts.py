@@ -5,8 +5,8 @@ from __future__ import annotations
 import numpy as np
 
 from equations.elastic_pi.contracts import ElasticPiInput, contracts
-from equations.theorem_complex_runtime.contracts import evaluate_contract
-from equations.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 INPUT = ElasticPiInput(

@@ -13,7 +13,7 @@ from equations.dynamic_fluctuation_index.dfi import (
     normalized_dfi,
     require_finite_dfi,
 )
-from equations.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 SINGULAR = np.array([[1.0, 0.0], [2.0, 0.0]])

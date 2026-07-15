@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 from equations.elastic_pi_norm.elastic_pi_norm import elastic_pi_weighted_path
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_preserved_weighted_path_formula():

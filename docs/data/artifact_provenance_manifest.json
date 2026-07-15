@@ -1,6 +1,6 @@
 {
   "claim_boundary": "finite computational support; not a formal proof substitute",
-  "local_artifact_policy": "Large/regenerable outputs remain outside Git; aggregate provenance and representative static figures are tracked.",
+  "local_artifact_policy": "Large frame dumps and videos remain outside Git; compact producer-local metrics, manifests, representative figures, audio, and selected GIF evidence are tracked.",
   "manifests": [
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
@@ -24,7 +24,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -64,7 +64,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.03597560219624253
@@ -99,7 +99,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -134,7 +134,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -171,7 +171,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -201,7 +201,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -294,7 +294,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -387,7 +387,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -480,7 +480,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -573,7 +573,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -666,7 +666,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -700,7 +700,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -735,7 +735,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -765,7 +765,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -800,7 +800,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -893,7 +893,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -985,7 +985,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.551115123125783e-17,
@@ -1024,7 +1024,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1117,7 +1117,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.36957279084941e-15,
@@ -1147,7 +1147,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1183,7 +1183,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.6165453195571899
@@ -1212,7 +1212,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [],
       "seed": 0,
@@ -1242,7 +1242,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.05395769327878952
@@ -1271,7 +1271,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.597583973135935e-17
@@ -1300,7 +1300,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1336,7 +1336,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.015338145196437836
@@ -1365,7 +1365,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -1395,7 +1395,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1488,7 +1488,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1581,7 +1581,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1674,7 +1674,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1709,7 +1709,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.3252879519388773e-15,
@@ -1739,7 +1739,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -1769,7 +1769,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1861,7 +1861,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.551115123125783e-17,
@@ -1895,7 +1895,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1988,7 +1988,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2081,7 +2081,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2174,7 +2174,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2267,7 +2267,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2360,7 +2360,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2453,7 +2453,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2546,7 +2546,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2638,7 +2638,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2672,7 +2672,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2767,7 +2767,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.5894913077354431
@@ -2797,7 +2797,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2889,7 +2889,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         -1.1102230246251565e-16,
@@ -2922,7 +2922,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3015,7 +3015,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3108,7 +3108,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.2415557069099854e-15,
@@ -3138,7 +3138,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3177,7 +3177,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3269,7 +3269,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [],
       "seed": 0,
@@ -3297,7 +3297,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3390,7 +3390,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3483,7 +3483,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3575,7 +3575,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3613,7 +3613,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.030296081647354534
@@ -3642,7 +3642,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3679,7 +3679,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         15.033296585083008
@@ -3709,7 +3709,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3807,7 +3807,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -3837,7 +3837,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3872,7 +3872,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -3902,7 +3902,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.0196387626502316e-14,
@@ -3933,7 +3933,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3970,7 +3970,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m equations.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -3996,7 +3996,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m equations.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4026,7 +4026,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4119,7 +4119,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4161,7 +4161,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4191,7 +4191,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4221,7 +4221,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4314,7 +4314,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4407,7 +4407,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         7.993105823998126e-15,
@@ -4438,7 +4438,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4533,7 +4533,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         6.012013912200928
@@ -4565,7 +4565,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.911589415878552e-08,
@@ -4598,7 +4598,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.9123276472091675
@@ -4628,7 +4628,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.270175824852434e-15,
@@ -4659,7 +4659,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4748,7 +4748,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m equations.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4780,7 +4780,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.4259138107299805
@@ -4812,7 +4812,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         6.389484405517578
@@ -4844,7 +4844,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         53.855709075927734
@@ -4876,7 +4876,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.4169989387701207e-07,
@@ -4907,7 +4907,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4938,7 +4938,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4973,7 +4973,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5071,7 +5071,7 @@
         ]
       },
       "regeneration_command": "python -m equations.mathematical_closure.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5100,7 +5100,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5137,7 +5137,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5179,7 +5179,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5211,7 +5211,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.5522377490997314
@@ -5241,7 +5241,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.dtqc.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5333,7 +5333,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5362,7 +5362,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5391,7 +5391,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5420,7 +5420,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5449,7 +5449,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5490,7 +5490,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5520,7 +5520,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5620,7 +5620,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5650,7 +5650,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5742,7 +5742,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5778,7 +5778,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         3.554633140563965
@@ -5810,7 +5810,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.2097026456103777e-06,
@@ -5843,7 +5843,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         252.01708984375
@@ -5873,7 +5873,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5916,7 +5916,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         3.652345895767212
@@ -5948,7 +5948,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         17.754825592041016
@@ -5974,7 +5974,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m equations.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6000,7 +6000,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m equations.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6030,7 +6030,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         4.999702984597266e-15,
@@ -6061,7 +6061,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.black_hole_dynamics.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6153,7 +6153,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.597583973135935e-17
@@ -6190,7 +6190,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6227,7 +6227,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m equations.flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6257,7 +6257,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6291,7 +6291,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.9737184047698975
@@ -6323,7 +6323,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.9907820820808411
@@ -6355,7 +6355,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.8860153555870056
@@ -6384,7 +6384,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.parity_dfi.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6414,7 +6414,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         4.440892098500626e-16,
@@ -6444,7 +6444,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6473,7 +6473,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6503,7 +6503,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6596,7 +6596,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6624,7 +6624,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m equations.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6654,7 +6654,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m equations.completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6700,7 +6700,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6731,7 +6731,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.elastic_pi_ripples.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6824,7 +6824,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m equations.cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6916,7 +6916,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [],
       "seed": 0,
@@ -6943,7 +6943,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m equations.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+      "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         -1.1102230246251565e-16,
@@ -6955,7 +6955,550 @@
       "theorem_complex_id": "weighted_path_ratio_regularity_functional"
     }
   ],
-  "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+  "producer_local_artifacts": [
+    "equations/artificial_intelligence/__init__.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/__init__.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/model.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/__init__.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/__main__.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/bidirectional_color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/bidirectional_color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/bidirectional_color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/bidirectional_color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/bidirectional_color_classification/simulation/run_simulation.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/test/__init__.py",
+    "equations/artificial_intelligence/bidirectional_color_classification/test/bidirectional_color_classification_test_figure.png",
+    "equations/artificial_intelligence/bidirectional_color_classification/test/bidirectional_color_classification_test_manifest.json",
+    "equations/artificial_intelligence/bidirectional_color_classification/test/bidirectional_color_classification_test_results.csv",
+    "equations/artificial_intelligence/bidirectional_color_classification/test/test_capability.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/__init__.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/model.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/__init__.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/__main__.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/bidirectional_sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/bidirectional_sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/bidirectional_sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/bidirectional_sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/bidirectional_sound_input.wav",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/bidirectional_sound_reconstruction.wav",
+    "equations/artificial_intelligence/bidirectional_sound_classification/simulation/run_simulation.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/test/__init__.py",
+    "equations/artificial_intelligence/bidirectional_sound_classification/test/bidirectional_sound_classification_test_figure.png",
+    "equations/artificial_intelligence/bidirectional_sound_classification/test/bidirectional_sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/bidirectional_sound_classification/test/bidirectional_sound_classification_test_results.csv",
+    "equations/artificial_intelligence/bidirectional_sound_classification/test/test_capability.py",
+    "equations/artificial_intelligence/color_classification/__init__.py",
+    "equations/artificial_intelligence/color_classification/model.py",
+    "equations/artificial_intelligence/color_classification/simulation/__init__.py",
+    "equations/artificial_intelligence/color_classification/simulation/__main__.py",
+    "equations/artificial_intelligence/color_classification/simulation/color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/color_classification/simulation/color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/color_classification/simulation/color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/color_classification/simulation/color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/color_classification/simulation/run_simulation.py",
+    "equations/artificial_intelligence/color_classification/test/__init__.py",
+    "equations/artificial_intelligence/color_classification/test/color_classification_test_figure.png",
+    "equations/artificial_intelligence/color_classification/test/color_classification_test_manifest.json",
+    "equations/artificial_intelligence/color_classification/test/color_classification_test_results.csv",
+    "equations/artificial_intelligence/color_classification/test/test_capability.py",
+    "equations/artificial_intelligence/color_cloning/__init__.py",
+    "equations/artificial_intelligence/color_cloning/model.py",
+    "equations/artificial_intelligence/color_cloning/simulation/__init__.py",
+    "equations/artificial_intelligence/color_cloning/simulation/__main__.py",
+    "equations/artificial_intelligence/color_cloning/simulation/color_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/color_cloning/simulation/color_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/color_cloning/simulation/color_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/color_cloning/simulation/color_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/color_cloning/simulation/run_simulation.py",
+    "equations/artificial_intelligence/color_cloning/test/__init__.py",
+    "equations/artificial_intelligence/color_cloning/test/color_cloning_test_figure.png",
+    "equations/artificial_intelligence/color_cloning/test/color_cloning_test_manifest.json",
+    "equations/artificial_intelligence/color_cloning/test/color_cloning_test_results.csv",
+    "equations/artificial_intelligence/color_cloning/test/test_capability.py",
+    "equations/artificial_intelligence/pgqenn/__init__.py",
+    "equations/artificial_intelligence/pgqenn/contracts.py",
+    "equations/artificial_intelligence/pgqenn/growth_law.py",
+    "equations/artificial_intelligence/pgqenn/message_passing.py",
+    "equations/artificial_intelligence/pgqenn/model.py",
+    "equations/artificial_intelligence/pgqenn/simulation/__init__.py",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_sound_classification/bidirectional_sound_input.wav",
+    "equations/artificial_intelligence/pgqenn/simulation/bidirectional_sound_classification/bidirectional_sound_reconstruction.wav",
+    "equations/artificial_intelligence/pgqenn/simulation/color_classification/color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/pgqenn/simulation/color_classification/color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/color_classification/color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/color_classification/color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/pgqenn/simulation/color_cloning/color_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/pgqenn/simulation/color_cloning/color_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/color_cloning/color_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/color_cloning/color_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/pgqenn/simulation/pgqenn_simulation_architecture_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/pgqenn_simulation_six_output_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/pgqenn_simulation_six_output_summary.csv",
+    "equations/artificial_intelligence/pgqenn/simulation/run_all_capabilities.py",
+    "equations/artificial_intelligence/pgqenn/simulation/run_contract_suite.py",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_classification/sound_classification_sample.wav",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_classification/sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_classification/sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_classification/sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_classification/sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_cloning/sound_cloning_clone.wav",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_cloning/sound_cloning_input.wav",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_cloning/sound_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_cloning/sound_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_cloning/sound_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/pgqenn/simulation/sound_cloning/sound_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/pgqenn/test/__init__.py",
+    "equations/artificial_intelligence/pgqenn/test/bidirectional_color_classification/bidirectional_color_classification_test_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/bidirectional_color_classification/bidirectional_color_classification_test_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/bidirectional_color_classification/bidirectional_color_classification_test_results.csv",
+    "equations/artificial_intelligence/pgqenn/test/bidirectional_sound_classification/bidirectional_sound_classification_test_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/bidirectional_sound_classification/bidirectional_sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/bidirectional_sound_classification/bidirectional_sound_classification_test_results.csv",
+    "equations/artificial_intelligence/pgqenn/test/color_classification/color_classification_test_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/color_classification/color_classification_test_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/color_classification/color_classification_test_results.csv",
+    "equations/artificial_intelligence/pgqenn/test/color_cloning/color_cloning_test_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/color_cloning/color_cloning_test_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/color_cloning/color_cloning_test_results.csv",
+    "equations/artificial_intelligence/pgqenn/test/pgqenn_test_architecture_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/pgqenn_test_six_output_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/pgqenn_test_six_output_summary.csv",
+    "equations/artificial_intelligence/pgqenn/test/run_all_capabilities.py",
+    "equations/artificial_intelligence/pgqenn/test/sound_classification/sound_classification_test_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/sound_classification/sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/sound_classification/sound_classification_test_results.csv",
+    "equations/artificial_intelligence/pgqenn/test/sound_cloning/sound_cloning_test_figure.png",
+    "equations/artificial_intelligence/pgqenn/test/sound_cloning/sound_cloning_test_manifest.json",
+    "equations/artificial_intelligence/pgqenn/test/sound_cloning/sound_cloning_test_results.csv",
+    "equations/artificial_intelligence/pgqenn/training.py",
+    "equations/artificial_intelligence/qenn/__init__.py",
+    "equations/artificial_intelligence/qenn/contracts.py",
+    "equations/artificial_intelligence/qenn/model.py",
+    "equations/artificial_intelligence/qenn/simulation/__init__.py",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_sound_classification/bidirectional_sound_input.wav",
+    "equations/artificial_intelligence/qenn/simulation/bidirectional_sound_classification/bidirectional_sound_reconstruction.wav",
+    "equations/artificial_intelligence/qenn/simulation/color_classification/color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/qenn/simulation/color_classification/color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/color_classification/color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/color_classification/color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/qenn/simulation/color_cloning/color_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/qenn/simulation/color_cloning/color_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/color_cloning/color_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/color_cloning/color_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/qenn/simulation/qenn_simulation_architecture_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/qenn_simulation_six_output_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/qenn_simulation_six_output_summary.csv",
+    "equations/artificial_intelligence/qenn/simulation/run_all_capabilities.py",
+    "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "equations/artificial_intelligence/qenn/simulation/sound_classification/sound_classification_sample.wav",
+    "equations/artificial_intelligence/qenn/simulation/sound_classification/sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/qenn/simulation/sound_classification/sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/sound_classification/sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/sound_classification/sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/qenn/simulation/sound_cloning/sound_cloning_clone.wav",
+    "equations/artificial_intelligence/qenn/simulation/sound_cloning/sound_cloning_input.wav",
+    "equations/artificial_intelligence/qenn/simulation/sound_cloning/sound_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/qenn/simulation/sound_cloning/sound_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/qenn/simulation/sound_cloning/sound_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/qenn/simulation/sound_cloning/sound_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/qenn/test/__init__.py",
+    "equations/artificial_intelligence/qenn/test/bidirectional_color_classification/bidirectional_color_classification_test_figure.png",
+    "equations/artificial_intelligence/qenn/test/bidirectional_color_classification/bidirectional_color_classification_test_manifest.json",
+    "equations/artificial_intelligence/qenn/test/bidirectional_color_classification/bidirectional_color_classification_test_results.csv",
+    "equations/artificial_intelligence/qenn/test/bidirectional_sound_classification/bidirectional_sound_classification_test_figure.png",
+    "equations/artificial_intelligence/qenn/test/bidirectional_sound_classification/bidirectional_sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/qenn/test/bidirectional_sound_classification/bidirectional_sound_classification_test_results.csv",
+    "equations/artificial_intelligence/qenn/test/color_classification/color_classification_test_figure.png",
+    "equations/artificial_intelligence/qenn/test/color_classification/color_classification_test_manifest.json",
+    "equations/artificial_intelligence/qenn/test/color_classification/color_classification_test_results.csv",
+    "equations/artificial_intelligence/qenn/test/color_cloning/color_cloning_test_figure.png",
+    "equations/artificial_intelligence/qenn/test/color_cloning/color_cloning_test_manifest.json",
+    "equations/artificial_intelligence/qenn/test/color_cloning/color_cloning_test_results.csv",
+    "equations/artificial_intelligence/qenn/test/qenn_test_architecture_figure.png",
+    "equations/artificial_intelligence/qenn/test/qenn_test_six_output_manifest.json",
+    "equations/artificial_intelligence/qenn/test/qenn_test_six_output_summary.csv",
+    "equations/artificial_intelligence/qenn/test/run_all_capabilities.py",
+    "equations/artificial_intelligence/qenn/test/sound_classification/sound_classification_test_figure.png",
+    "equations/artificial_intelligence/qenn/test/sound_classification/sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/qenn/test/sound_classification/sound_classification_test_results.csv",
+    "equations/artificial_intelligence/qenn/test/sound_cloning/sound_cloning_test_figure.png",
+    "equations/artificial_intelligence/qenn/test/sound_cloning/sound_cloning_test_manifest.json",
+    "equations/artificial_intelligence/qenn/test/sound_cloning/sound_cloning_test_results.csv",
+    "equations/artificial_intelligence/qenn/training.py",
+    "equations/artificial_intelligence/shared/__init__.py",
+    "equations/artificial_intelligence/shared/architecture_capability_artifacts.py",
+    "equations/artificial_intelligence/shared/capability_artifacts.py",
+    "equations/artificial_intelligence/shared/capability_fixtures.py",
+    "equations/artificial_intelligence/shared/capability_runtime.py",
+    "equations/artificial_intelligence/shared/closure_losses.py",
+    "equations/artificial_intelligence/shared/elastic_pi_gates.py",
+    "equations/artificial_intelligence/shared/entropy_gates.py",
+    "equations/artificial_intelligence/shared/equivariant_layers.py",
+    "equations/artificial_intelligence/shared/flowpoint_layers.py",
+    "equations/artificial_intelligence/shared/provenance.py",
+    "equations/artificial_intelligence/shared/residuals.py",
+    "equations/artificial_intelligence/shared/types.py",
+    "equations/artificial_intelligence/soinets/__init__.py",
+    "equations/artificial_intelligence/soinets/contracts.py",
+    "equations/artificial_intelligence/soinets/meta_closure.py",
+    "equations/artificial_intelligence/soinets/model.py",
+    "equations/artificial_intelligence/soinets/simulation/__init__.py",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_color_classification/bidirectional_color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_sound_classification/bidirectional_sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_sound_classification/bidirectional_sound_input.wav",
+    "equations/artificial_intelligence/soinets/simulation/bidirectional_sound_classification/bidirectional_sound_reconstruction.wav",
+    "equations/artificial_intelligence/soinets/simulation/color_classification/color_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/soinets/simulation/color_classification/color_classification_simulation_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/color_classification/color_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/color_classification/color_classification_simulation_results.csv",
+    "equations/artificial_intelligence/soinets/simulation/color_cloning/color_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/soinets/simulation/color_cloning/color_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/color_cloning/color_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/color_cloning/color_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/soinets/simulation/run_all_capabilities.py",
+    "equations/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "equations/artificial_intelligence/soinets/simulation/soinets_simulation_architecture_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/soinets_simulation_six_output_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/soinets_simulation_six_output_summary.csv",
+    "equations/artificial_intelligence/soinets/simulation/sound_classification/sound_classification_sample.wav",
+    "equations/artificial_intelligence/soinets/simulation/sound_classification/sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/soinets/simulation/sound_classification/sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/sound_classification/sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/sound_classification/sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/soinets/simulation/sound_cloning/sound_cloning_clone.wav",
+    "equations/artificial_intelligence/soinets/simulation/sound_cloning/sound_cloning_input.wav",
+    "equations/artificial_intelligence/soinets/simulation/sound_cloning/sound_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/soinets/simulation/sound_cloning/sound_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/soinets/simulation/sound_cloning/sound_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/soinets/simulation/sound_cloning/sound_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/soinets/subnetworks.py",
+    "equations/artificial_intelligence/soinets/test/__init__.py",
+    "equations/artificial_intelligence/soinets/test/bidirectional_color_classification/bidirectional_color_classification_test_figure.png",
+    "equations/artificial_intelligence/soinets/test/bidirectional_color_classification/bidirectional_color_classification_test_manifest.json",
+    "equations/artificial_intelligence/soinets/test/bidirectional_color_classification/bidirectional_color_classification_test_results.csv",
+    "equations/artificial_intelligence/soinets/test/bidirectional_sound_classification/bidirectional_sound_classification_test_figure.png",
+    "equations/artificial_intelligence/soinets/test/bidirectional_sound_classification/bidirectional_sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/soinets/test/bidirectional_sound_classification/bidirectional_sound_classification_test_results.csv",
+    "equations/artificial_intelligence/soinets/test/color_classification/color_classification_test_figure.png",
+    "equations/artificial_intelligence/soinets/test/color_classification/color_classification_test_manifest.json",
+    "equations/artificial_intelligence/soinets/test/color_classification/color_classification_test_results.csv",
+    "equations/artificial_intelligence/soinets/test/color_cloning/color_cloning_test_figure.png",
+    "equations/artificial_intelligence/soinets/test/color_cloning/color_cloning_test_manifest.json",
+    "equations/artificial_intelligence/soinets/test/color_cloning/color_cloning_test_results.csv",
+    "equations/artificial_intelligence/soinets/test/run_all_capabilities.py",
+    "equations/artificial_intelligence/soinets/test/soinets_test_architecture_figure.png",
+    "equations/artificial_intelligence/soinets/test/soinets_test_six_output_manifest.json",
+    "equations/artificial_intelligence/soinets/test/soinets_test_six_output_summary.csv",
+    "equations/artificial_intelligence/soinets/test/sound_classification/sound_classification_test_figure.png",
+    "equations/artificial_intelligence/soinets/test/sound_classification/sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/soinets/test/sound_classification/sound_classification_test_results.csv",
+    "equations/artificial_intelligence/soinets/test/sound_cloning/sound_cloning_test_figure.png",
+    "equations/artificial_intelligence/soinets/test/sound_cloning/sound_cloning_test_manifest.json",
+    "equations/artificial_intelligence/soinets/test/sound_cloning/sound_cloning_test_results.csv",
+    "equations/artificial_intelligence/soinets/training.py",
+    "equations/artificial_intelligence/sound_classification/__init__.py",
+    "equations/artificial_intelligence/sound_classification/model.py",
+    "equations/artificial_intelligence/sound_classification/simulation/__init__.py",
+    "equations/artificial_intelligence/sound_classification/simulation/__main__.py",
+    "equations/artificial_intelligence/sound_classification/simulation/run_simulation.py",
+    "equations/artificial_intelligence/sound_classification/simulation/sound_classification_sample.wav",
+    "equations/artificial_intelligence/sound_classification/simulation/sound_classification_simulation_animation.gif",
+    "equations/artificial_intelligence/sound_classification/simulation/sound_classification_simulation_figure.png",
+    "equations/artificial_intelligence/sound_classification/simulation/sound_classification_simulation_manifest.json",
+    "equations/artificial_intelligence/sound_classification/simulation/sound_classification_simulation_results.csv",
+    "equations/artificial_intelligence/sound_classification/test/__init__.py",
+    "equations/artificial_intelligence/sound_classification/test/sound_classification_test_figure.png",
+    "equations/artificial_intelligence/sound_classification/test/sound_classification_test_manifest.json",
+    "equations/artificial_intelligence/sound_classification/test/sound_classification_test_results.csv",
+    "equations/artificial_intelligence/sound_classification/test/test_capability.py",
+    "equations/artificial_intelligence/sound_cloning/__init__.py",
+    "equations/artificial_intelligence/sound_cloning/model.py",
+    "equations/artificial_intelligence/sound_cloning/simulation/__init__.py",
+    "equations/artificial_intelligence/sound_cloning/simulation/__main__.py",
+    "equations/artificial_intelligence/sound_cloning/simulation/run_simulation.py",
+    "equations/artificial_intelligence/sound_cloning/simulation/sound_cloning_clone.wav",
+    "equations/artificial_intelligence/sound_cloning/simulation/sound_cloning_input.wav",
+    "equations/artificial_intelligence/sound_cloning/simulation/sound_cloning_simulation_animation.gif",
+    "equations/artificial_intelligence/sound_cloning/simulation/sound_cloning_simulation_figure.png",
+    "equations/artificial_intelligence/sound_cloning/simulation/sound_cloning_simulation_manifest.json",
+    "equations/artificial_intelligence/sound_cloning/simulation/sound_cloning_simulation_results.csv",
+    "equations/artificial_intelligence/sound_cloning/test/__init__.py",
+    "equations/artificial_intelligence/sound_cloning/test/sound_cloning_test_figure.png",
+    "equations/artificial_intelligence/sound_cloning/test/sound_cloning_test_manifest.json",
+    "equations/artificial_intelligence/sound_cloning/test/sound_cloning_test_results.csv",
+    "equations/artificial_intelligence/sound_cloning/test/test_capability.py",
+    "equations/black_hole_dynamics/hawking/__init__.py",
+    "equations/black_hole_dynamics/hawking/hawking_formulas.py",
+    "equations/black_hole_dynamics/hawking/hawking_theoretical_benchmark.py",
+    "equations/black_hole_dynamics/hawking/simulation/__init__.py",
+    "equations/black_hole_dynamics/hawking/simulation/benchmark_summary.csv",
+    "equations/black_hole_dynamics/hawking/simulation/benchmark_summary.md",
+    "equations/black_hole_dynamics/hawking/simulation/benchmark_summary_metadata.json",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_evaporation_timescale_vs_mass.png",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_normalized_spectrum.png",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_power_vs_mass.png",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_temperature_vs_mass.png",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_theoretical_benchmark_data.csv",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_theoretical_benchmark_metadata.json",
+    "equations/black_hole_dynamics/hawking/simulation/hawking_theoretical_benchmark_metrics.csv",
+    "equations/black_hole_dynamics/hawking/simulation/theoretical_benchmarks/__init__.py",
+    "equations/black_hole_dynamics/hawking/simulation/theoretical_benchmarks/compare_tne_hawking_like_flux.py",
+    "equations/black_hole_dynamics/hawking/simulation/theoretical_benchmarks/simulate_hawking_theoretical_benchmark.py",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_manifest.json",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_metrics.csv",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_power.csv",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_power.png",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_report.md",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_residuals.png",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_spectrum.csv",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_spectrum.png",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_temperature.csv",
+    "equations/black_hole_dynamics/hawking/simulation/tne_vs_hawking_temperature.png",
+    "equations/black_hole_dynamics/hawking/test/__init__.py",
+    "equations/black_hole_dynamics/hawking/test/theoretical_benchmarks/__init__.py",
+    "equations/black_hole_dynamics/hawking/test/theoretical_benchmarks/test_hawking_formulas.py",
+    "equations/black_hole_dynamics/hawking/test/theoretical_benchmarks/test_tne_hawking_benchmark.py",
+    "equations/cosmological_spark_dynamics/__init__.py",
+    "equations/cosmological_spark_dynamics/contracts.py",
+    "equations/cosmological_spark_dynamics/simulation/__init__.py",
+    "equations/cosmological_spark_dynamics/simulation/common_potential_observation_operator_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/cosmic_spark_decay_and_integrated_cosmological_memory_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/cosmic_spark_flowpoint_correspondence_and_spectral_duality_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/cosmological_spark_dynamics_contract_metrics.csv",
+    "equations/cosmological_spark_dynamics/simulation/cosmological_spark_dynamics_simulation_evidence_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/cosmological_spark_dynamics_simulation_residual_animation.gif",
+    "equations/cosmological_spark_dynamics/simulation/cosmological_spark_dynamics_simulation_residual_trace.csv",
+    "equations/cosmological_spark_dynamics/simulation/cosmological_spark_dynamics_spatial_closure.png",
+    "equations/cosmological_spark_dynamics/simulation/elastic_cosmological_geometry_and_dubler_spectral_transfer_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/flowpoint_resolved_cosmological_memory_resolvent_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/horizon_localized_observable_memory_closure_manifest.json",
+    "equations/cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "equations/cosmological_spark_dynamics/simulation/run_evidence.py",
+    "equations/cosmological_spark_dynamics/simulation/wave_sector_and_expansion_sector_cosmological_projection_manifest.json",
+    "equations/cosmological_spark_dynamics/test/__init__.py",
+    "equations/cosmological_spark_dynamics/test/common_potential_observation_operator_manifest.json",
+    "equations/cosmological_spark_dynamics/test/cosmic_spark_decay_and_integrated_cosmological_memory_manifest.json",
+    "equations/cosmological_spark_dynamics/test/cosmic_spark_flowpoint_correspondence_and_spectral_duality_manifest.json",
+    "equations/cosmological_spark_dynamics/test/cosmological_spark_dynamics_contract_metrics.csv",
+    "equations/cosmological_spark_dynamics/test/cosmological_spark_dynamics_spatial_closure.png",
+    "equations/cosmological_spark_dynamics/test/cosmological_spark_dynamics_test_evidence_manifest.json",
+    "equations/cosmological_spark_dynamics/test/cosmological_spark_dynamics_test_residual_animation.gif",
+    "equations/cosmological_spark_dynamics/test/cosmological_spark_dynamics_test_residual_trace.csv",
+    "equations/cosmological_spark_dynamics/test/elastic_cosmological_geometry_and_dubler_spectral_transfer_manifest.json",
+    "equations/cosmological_spark_dynamics/test/flowpoint_resolved_cosmological_memory_resolvent_manifest.json",
+    "equations/cosmological_spark_dynamics/test/horizon_localized_observable_memory_closure_manifest.json",
+    "equations/cosmological_spark_dynamics/test/test_evidence.py",
+    "equations/cosmological_spark_dynamics/test/wave_sector_and_expansion_sector_cosmological_projection_manifest.json",
+    "equations/dtqc/__init__.py",
+    "equations/dtqc/contracts.py",
+    "equations/dtqc/simulation/__init__.py",
+    "equations/dtqc/simulation/dfi_surface.png",
+    "equations/dtqc/simulation/diffraction_fft.png",
+    "equations/dtqc/simulation/diophantine_parseval_locking_invariant_manifest.json",
+    "equations/dtqc/simulation/dtqc__dual_support_equivalence_support_mismatch_leakage_manifest.json",
+    "equations/dtqc/simulation/dtqc_contract_metrics.csv",
+    "equations/dtqc/simulation/dtqc_phase_clock_animation.gif",
+    "equations/dtqc/simulation/dtqc_simulation_evidence_manifest.json",
+    "equations/dtqc/simulation/dtqc_simulation_phase_trace.csv",
+    "equations/dtqc/simulation/dtqc_simulation_residual_animation.gif",
+    "equations/dtqc/simulation/dtqc_simulation_residual_trace.csv",
+    "equations/dtqc/simulation/dtqc_simulation_visualization_manifest.json",
+    "equations/dtqc/simulation/dtqc_spatial_closure.png",
+    "equations/dtqc/simulation/elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
+    "equations/dtqc/simulation/elastic_gain_support_transport_isomorphism_manifest.json",
+    "equations/dtqc/simulation/elastic_parseval_quasicrystal_isometry_manifest.json",
+    "equations/dtqc/simulation/elastic_pi_surface.png",
+    "equations/dtqc/simulation/irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
+    "equations/dtqc/simulation/parseval_energy_bijection_l_2_energy_mismatch_manifest.json",
+    "equations/dtqc/simulation/qc_contour.png",
+    "equations/dtqc/simulation/run_contract_suite.py",
+    "equations/dtqc/simulation/run_evidence.py",
+    "equations/dtqc/simulation/wavelet_central_row.png",
+    "equations/dtqc/test/__init__.py",
+    "equations/dtqc/test/dfi_surface.png",
+    "equations/dtqc/test/diffraction_fft.png",
+    "equations/dtqc/test/diophantine_parseval_locking_invariant_manifest.json",
+    "equations/dtqc/test/dtqc__dual_support_equivalence_support_mismatch_leakage_manifest.json",
+    "equations/dtqc/test/dtqc_contract_metrics.csv",
+    "equations/dtqc/test/dtqc_phase_clock_animation.gif",
+    "equations/dtqc/test/dtqc_spatial_closure.png",
+    "equations/dtqc/test/dtqc_test_evidence_manifest.json",
+    "equations/dtqc/test/dtqc_test_phase_trace.csv",
+    "equations/dtqc/test/dtqc_test_residual_animation.gif",
+    "equations/dtqc/test/dtqc_test_residual_trace.csv",
+    "equations/dtqc/test/dtqc_test_visualization_manifest.json",
+    "equations/dtqc/test/elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
+    "equations/dtqc/test/elastic_gain_support_transport_isomorphism_manifest.json",
+    "equations/dtqc/test/elastic_parseval_quasicrystal_isometry_manifest.json",
+    "equations/dtqc/test/elastic_pi_surface.png",
+    "equations/dtqc/test/irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
+    "equations/dtqc/test/parseval_energy_bijection_l_2_energy_mismatch_manifest.json",
+    "equations/dtqc/test/qc_contour.png",
+    "equations/dtqc/test/test_evidence.py",
+    "equations/dtqc/test/wavelet_central_row.png",
+    "equations/dtqc/visualization.py",
+    "equations/elastic_dubler_interferometry/__init__.py",
+    "equations/elastic_dubler_interferometry/contracts.py",
+    "equations/elastic_dubler_interferometry/simulation/__init__.py",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_curvature_correspondence_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry__elastic_black_hole_emergence_triviality_of_breakdown_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry__elastic_gravitational_memory_instant_relaxation_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry_contract_metrics.csv",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry_simulation_evidence_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry_simulation_residual_animation.gif",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry_simulation_residual_trace.csv",
+    "equations/elastic_dubler_interferometry/simulation/elastic_dubler_interferometry_spatial_closure.png",
+    "equations/elastic_dubler_interferometry/simulation/elastic_e_curvature_encoding_curvature_ambiguity_divergence_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/memory_aware_phase_curvature_tomography_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/memory_resolved_horizon_reconstruction_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/phase_elliptic_curvature_reconstruction_manifest.json",
+    "equations/elastic_dubler_interferometry/simulation/run_contract_suite.py",
+    "equations/elastic_dubler_interferometry/simulation/run_evidence.py",
+    "equations/elastic_dubler_interferometry/test/__init__.py",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_curvature_correspondence_manifest.json",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry__elastic_black_hole_emergence_triviality_of_breakdown_manifest.json",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry__elastic_gravitational_memory_instant_relaxation_manifest.json",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry_contract_metrics.csv",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry_spatial_closure.png",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry_test_evidence_manifest.json",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry_test_residual_animation.gif",
+    "equations/elastic_dubler_interferometry/test/elastic_dubler_interferometry_test_residual_trace.csv",
+    "equations/elastic_dubler_interferometry/test/elastic_e_curvature_encoding_curvature_ambiguity_divergence_manifest.json",
+    "equations/elastic_dubler_interferometry/test/memory_aware_phase_curvature_tomography_manifest.json",
+    "equations/elastic_dubler_interferometry/test/memory_resolved_horizon_reconstruction_manifest.json",
+    "equations/elastic_dubler_interferometry/test/phase_elliptic_curvature_reconstruction_manifest.json",
+    "equations/elastic_dubler_interferometry/test/test_evidence.py",
+    "equations/elastic_pi_norm/__init__.py",
+    "equations/elastic_pi_norm/contracts.py",
+    "equations/elastic_pi_norm/elastic_pi_norm.py",
+    "equations/elastic_pi_norm/simulation/__init__.py",
+    "equations/elastic_pi_norm/simulation/elastic_field_ratios_and_weight_regularity_manifest.json",
+    "equations/elastic_pi_norm/simulation/elastic_pi_norm_contract_metrics.csv",
+    "equations/elastic_pi_norm/simulation/elastic_pi_norm_contract_residuals.png",
+    "equations/elastic_pi_norm/simulation/elastic_pi_norm_simulation_evidence_manifest.json",
+    "equations/elastic_pi_norm/simulation/elastic_pi_norm_simulation_residual_animation.gif",
+    "equations/elastic_pi_norm/simulation/elastic_pi_norm_simulation_residual_trace.csv",
+    "equations/elastic_pi_norm/simulation/entropy_pdfi_calibrated_norm_residual_manifest.json",
+    "equations/elastic_pi_norm/simulation/pdfi_elastic_norm_equivalence_and_decoupling_manifest.json",
+    "equations/elastic_pi_norm/simulation/pdfi_elastic_norm_interface_manifest.json",
+    "equations/elastic_pi_norm/simulation/run_contract_suite.py",
+    "equations/elastic_pi_norm/simulation/run_evidence.py",
+    "equations/elastic_pi_norm/simulation/spatial_weighted_calibration_closure_manifest.json",
+    "equations/elastic_pi_norm/simulation/uniform_entropy_reduction_and_entropic_reweighting_bounds_manifest.json",
+    "equations/elastic_pi_norm/simulation/weighted_path_functional_and_norm_admissibility_manifest.json",
+    "equations/elastic_pi_norm/simulation/weighted_path_ratio_regularity_functional_manifest.json",
+    "equations/elastic_pi_norm/test/__init__.py",
+    "equations/elastic_pi_norm/test/elastic_field_ratios_and_weight_regularity_manifest.json",
+    "equations/elastic_pi_norm/test/elastic_pi_norm_contract_metrics.csv",
+    "equations/elastic_pi_norm/test/elastic_pi_norm_contract_residuals.png",
+    "equations/elastic_pi_norm/test/elastic_pi_norm_test_evidence_manifest.json",
+    "equations/elastic_pi_norm/test/elastic_pi_norm_test_residual_animation.gif",
+    "equations/elastic_pi_norm/test/elastic_pi_norm_test_residual_trace.csv",
+    "equations/elastic_pi_norm/test/entropy_pdfi_calibrated_norm_residual_manifest.json",
+    "equations/elastic_pi_norm/test/pdfi_elastic_norm_equivalence_and_decoupling_manifest.json",
+    "equations/elastic_pi_norm/test/pdfi_elastic_norm_interface_manifest.json",
+    "equations/elastic_pi_norm/test/spatial_weighted_calibration_closure_manifest.json",
+    "equations/elastic_pi_norm/test/test_evidence.py",
+    "equations/elastic_pi_norm/test/uniform_entropy_reduction_and_entropic_reweighting_bounds_manifest.json",
+    "equations/elastic_pi_norm/test/weighted_path_functional_and_norm_admissibility_manifest.json",
+    "equations/elastic_pi_norm/test/weighted_path_ratio_regularity_functional_manifest.json",
+    "equations/mathematical_closure/__init__.py",
+    "equations/mathematical_closure/a_level.py",
+    "equations/mathematical_closure/b_level.py",
+    "equations/mathematical_closure/c_level.py",
+    "equations/mathematical_closure/contracts.py",
+    "equations/mathematical_closure/simulation/__init__.py",
+    "equations/mathematical_closure/simulation/__main__.py",
+    "equations/mathematical_closure/simulation/addition_of_approximation_and_harmonic_geometry_manifest.json",
+    "equations/mathematical_closure/simulation/addition_of_arithmetic_orientation_and_typed_operation_theory_manifest.json",
+    "equations/mathematical_closure/simulation/addition_of_the_two_complete_b_level_operator_families_manifest.json",
+    "equations/mathematical_closure/simulation/complex_phase_coordinates_and_fourier_reconstruction_manifest.json",
+    "equations/mathematical_closure/simulation/finite_approximation_and_vanishing_residual_energy_manifest.json",
+    "equations/mathematical_closure/simulation/flowpoint_unity_orientation_and_integer_unfolding_manifest.json",
+    "equations/mathematical_closure/simulation/mathematical_closure_metrics.csv",
+    "equations/mathematical_closure/simulation/mathematical_closure_simulation_evidence_manifest.json",
+    "equations/mathematical_closure/simulation/mathematical_closure_simulation_residual_animation.gif",
+    "equations/mathematical_closure/simulation/mathematical_closure_simulation_residual_trace.csv",
+    "equations/mathematical_closure/simulation/mathematical_closure_trace.png",
+    "equations/mathematical_closure/simulation/operation_covariance_and_spectral_minimization_manifest.json",
+    "equations/mathematical_closure/simulation/run_evidence.py",
+    "equations/mathematical_closure/simulation/run_suite.py",
+    "equations/mathematical_closure/test/__init__.py",
+    "equations/mathematical_closure/test/addition_of_approximation_and_harmonic_geometry_manifest.json",
+    "equations/mathematical_closure/test/addition_of_arithmetic_orientation_and_typed_operation_theory_manifest.json",
+    "equations/mathematical_closure/test/addition_of_the_two_complete_b_level_operator_families_manifest.json",
+    "equations/mathematical_closure/test/complex_phase_coordinates_and_fourier_reconstruction_manifest.json",
+    "equations/mathematical_closure/test/finite_approximation_and_vanishing_residual_energy_manifest.json",
+    "equations/mathematical_closure/test/flowpoint_unity_orientation_and_integer_unfolding_manifest.json",
+    "equations/mathematical_closure/test/mathematical_closure_metrics.csv",
+    "equations/mathematical_closure/test/mathematical_closure_test_evidence_manifest.json",
+    "equations/mathematical_closure/test/mathematical_closure_test_residual_animation.gif",
+    "equations/mathematical_closure/test/mathematical_closure_test_residual_trace.csv",
+    "equations/mathematical_closure/test/mathematical_closure_trace.png",
+    "equations/mathematical_closure/test/operation_covariance_and_spectral_minimization_manifest.json",
+    "equations/mathematical_closure/test/test_evidence.py",
+    "equations/parity_dfi/__init__.py",
+    "equations/parity_dfi/contracts.py",
+    "equations/parity_dfi/parity_dfi.py",
+    "equations/parity_dfi/simulation/__init__.py",
+    "equations/parity_dfi/simulation/completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations_manifest.json",
+    "equations/parity_dfi/simulation/elastic_calibration_completeness_functional_manifest.json",
+    "equations/parity_dfi/simulation/flowpoint_parity_correspondence_and_decoupling_manifest.json",
+    "equations/parity_dfi/simulation/parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law_manifest.json",
+    "equations/parity_dfi/simulation/parity_dfi_simulation_evidence_manifest.json",
+    "equations/parity_dfi/simulation/parity_dfi_simulation_residual_animation.gif",
+    "equations/parity_dfi/simulation/parity_dfi_simulation_residual_trace.csv",
+    "equations/parity_dfi/simulation/parity_flowpoint_transport_law_manifest.json",
+    "equations/parity_dfi/simulation/pdfi_contract_metrics.csv",
+    "equations/parity_dfi/simulation/pdfi_contract_residuals.png",
+    "equations/parity_dfi/simulation/pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown_manifest.json",
+    "equations/parity_dfi/simulation/pdfi_elastic_equivalence_and_decoupling_manifest.json",
+    "equations/parity_dfi/simulation/pdfi_entropic_predictability_and_fluctuation_ambiguity_manifest.json",
+    "equations/parity_dfi/simulation/predictability_observation_parity_coupling_manifest.json",
+    "equations/parity_dfi/simulation/run_contract_suite.py",
+    "equations/parity_dfi/simulation/run_evidence.py",
+    "equations/parity_dfi/simulation/spatial_parity_elastic_calibration_closure_manifest.json",
+    "equations/parity_dfi/test/__init__.py",
+    "equations/parity_dfi/test/completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations_manifest.json",
+    "equations/parity_dfi/test/elastic_calibration_completeness_functional_manifest.json",
+    "equations/parity_dfi/test/flowpoint_parity_correspondence_and_decoupling_manifest.json",
+    "equations/parity_dfi/test/parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law_manifest.json",
+    "equations/parity_dfi/test/parity_dfi_test_evidence_manifest.json",
+    "equations/parity_dfi/test/parity_dfi_test_residual_animation.gif",
+    "equations/parity_dfi/test/parity_dfi_test_residual_trace.csv",
+    "equations/parity_dfi/test/parity_flowpoint_transport_law_manifest.json",
+    "equations/parity_dfi/test/pdfi_contract_metrics.csv",
+    "equations/parity_dfi/test/pdfi_contract_residuals.png",
+    "equations/parity_dfi/test/pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown_manifest.json",
+    "equations/parity_dfi/test/pdfi_elastic_equivalence_and_decoupling_manifest.json",
+    "equations/parity_dfi/test/pdfi_entropic_predictability_and_fluctuation_ambiguity_manifest.json",
+    "equations/parity_dfi/test/predictability_observation_parity_coupling_manifest.json",
+    "equations/parity_dfi/test/spatial_parity_elastic_calibration_closure_manifest.json",
+    "equations/parity_dfi/test/test_evidence.py"
+  ],
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "schema_version": "1.0",
   "suites": [
@@ -7033,10 +7576,13 @@
     }
   ],
   "summary": {
-    "animation_generators": 8,
+    "animation_generators": 29,
     "deterministic_seed": 0,
-    "generated_static_figures": 18,
-    "generated_tables": 18,
+    "generated_static_figures": 102,
+    "generated_tables": 105,
+    "producer_local_animations": 38,
+    "producer_local_audio_files": 20,
+    "producer_local_manifests": 161,
     "theorem_manifests": 136
   }
 }

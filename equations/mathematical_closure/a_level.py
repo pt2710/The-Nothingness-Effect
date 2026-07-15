@@ -7,7 +7,7 @@ from typing import Callable
 
 import numpy as np
 
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ClosureStatus,
     CodomainSpec,
     ComplexContract,
@@ -16,8 +16,8 @@ from equations.theorem_complex_runtime import (
     DomainSpec,
     ResidualResult,
 )
-from equations.theorem_complex_runtime.types import DomainViolationError
-from equations.theorem_complex_runtime.validation import ensure_finite
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 APPENDIX = "appendix_tne_mathematical_closure_architecture.tex"

@@ -1,0 +1,31 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "approximation_metadata": {
+    "exact_semantics": false
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "elastic_dubler_interferometry_contract_metrics.csv",
+    "elastic_dubler_interferometry_spatial_closure.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "954b17c98202a40beab052e192735317baffa0b11b6d6db718a9323a977d77d8",
+  "parameters": {
+    "fixture": "physical-field-v1",
+    "module": "elastic_dubler_interferometry",
+    "sample_count": 64
+  },
+  "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_contract_suite --output C:/Users/PT-Xb/Documents/TNE - Implementation, test and simmulation code P/repo/the_nothingness_effect/equations/elastic_dubler_interferometry/test",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    5.270175824852434e-15,
+    5.270175824852434e-15
+  ],
+  "seed": 0,
+  "theorem_complex_id": "memory_aware_phase_curvature_tomography"
+}

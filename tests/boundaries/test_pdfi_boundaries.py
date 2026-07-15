@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 from equations.parity_dfi.parity_dfi import parity_dfi, parity_inverse_recurrence
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_orbit_formula_matches_manual_parity_filtered_average():

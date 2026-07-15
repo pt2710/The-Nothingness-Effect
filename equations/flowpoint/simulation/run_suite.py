@@ -8,10 +8,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-from equations.artifact_io import save_csv, save_figure
-from equations.theorem_complex_runtime import ClosureStatus, ComplexId, SimulationResult
-from equations.theorem_complex_runtime.artifacts import write_artifact_manifest
-from equations.theorem_complex_runtime.provenance import build_manifest, git_commit
+from tne_runtime.artifacts.io import save_csv, save_figure
+from tne_runtime.theorem_complex_runtime import ClosureStatus, ComplexId, SimulationResult
+from tne_runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
+from tne_runtime.theorem_complex_runtime.provenance import build_manifest, git_commit
 
 from ..a_level import APPENDIX, APPENDIX_SHA256
 from ..flowpoint import (

@@ -1,0 +1,60 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_statuses": [
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "numerical_candidate"
+  ],
+  "generated_files": [
+    "pdfi_contract_metrics.csv",
+    "pdfi_contract_residuals.png",
+    "parity_dfi_simulation_residual_trace.csv",
+    "parity_dfi_simulation_residual_animation.gif",
+    "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law_manifest.json",
+    "flowpoint_parity_correspondence_and_decoupling_manifest.json",
+    "pdfi_entropic_predictability_and_fluctuation_ambiguity_manifest.json",
+    "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown_manifest.json",
+    "pdfi_elastic_equivalence_and_decoupling_manifest.json",
+    "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations_manifest.json",
+    "parity_flowpoint_transport_law_manifest.json",
+    "predictability_observation_parity_coupling_manifest.json",
+    "elastic_calibration_completeness_functional_manifest.json",
+    "spatial_parity_elastic_calibration_closure_manifest.json"
+  ],
+  "mode": "simulation",
+  "module": "parity_dfi",
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "0f5a8dbef5ebf6984ed78fe4a3424fbcff7cdd658e0e9a333d65422d20fb4ada",
+  "parameters": {
+    "contract_count": 10,
+    "mode": "simulation",
+    "module": "parity_dfi",
+    "seed": 0
+  },
+  "regeneration_command": "python -m equations.parity_dfi.simulation.run_evidence",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "source_status": "canonical_contract_evaluation"
+}

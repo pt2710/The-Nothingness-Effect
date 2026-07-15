@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_statuses": [
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "numerical_candidate"
+  ],
+  "generated_files": [
+    "elastic_dubler_interferometry_contract_metrics.csv",
+    "elastic_dubler_interferometry_spatial_closure.png",
+    "elastic_dubler_interferometry_simulation_residual_trace.csv",
+    "elastic_dubler_interferometry_simulation_residual_animation.gif",
+    "elastic_dubler_curvature_correspondence_manifest.json",
+    "elastic_e_curvature_encoding_curvature_ambiguity_divergence_manifest.json",
+    "elastic_dubler_interferometry__elastic_gravitational_memory_instant_relaxation_manifest.json",
+    "elastic_dubler_interferometry__elastic_black_hole_emergence_triviality_of_breakdown_manifest.json",
+    "phase_elliptic_curvature_reconstruction_manifest.json",
+    "memory_resolved_horizon_reconstruction_manifest.json",
+    "memory_aware_phase_curvature_tomography_manifest.json"
+  ],
+  "mode": "simulation",
+  "module": "elastic_dubler_interferometry",
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "57df3134db5cec43a6ab7fcb695b5cebef10c2604b5fc4475ed724498bdac1d7",
+  "parameters": {
+    "contract_count": 7,
+    "mode": "simulation",
+    "module": "elastic_dubler_interferometry",
+    "seed": 0
+  },
+  "regeneration_command": "python -m equations.elastic_dubler_interferometry.simulation.run_evidence",
+  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    7.453154127597126e-15
+  ],
+  "seed": 0,
+  "source_status": "canonical_contract_evaluation"
+}

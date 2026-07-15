@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ArtifactSpec,
     ClosureStatus,
     CodomainSpec,
@@ -15,7 +15,7 @@ from equations.theorem_complex_runtime import (
     ResidualResult,
     SourceRemovalResult,
 )
-from equations.theorem_complex_runtime.invariants import source_removal_result
+from tne_runtime.theorem_complex_runtime.invariants import source_removal_result
 
 from .a_level import APPENDIX, APPENDIX_SHA256
 from .duality import FiniteInvolution, OrbitField, invariant_anti_invariant_orbit_field

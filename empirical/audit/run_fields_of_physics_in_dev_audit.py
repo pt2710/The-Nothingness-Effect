@@ -9,7 +9,7 @@ import warnings
 from pathlib import Path
 from typing import Any
 
-from equations.artifact_io import save_json
+from tne_runtime.artifacts.io import save_json
 from empirical.io import write_report
 
 
@@ -158,8 +158,8 @@ def run() -> dict[str, Any]:
             }
         )
 
-    csv_path = Path("fields_of_physics_in_dev_audit.csv")
-    json_path = Path("fields_of_physics_in_dev_audit.json")
+    csv_path = Path("fields_of_physics_in_dev/fields_of_physics_in_dev_audit.csv")
+    json_path = Path("fields_of_physics_in_dev/fields_of_physics_in_dev_audit.json")
     report_path = Path("docs/fields_of_physics_in_dev_audit.md")
 
     import csv

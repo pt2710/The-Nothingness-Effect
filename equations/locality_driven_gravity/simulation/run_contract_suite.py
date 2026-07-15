@@ -1,6 +1,6 @@
 from pathlib import Path
 import argparse
-from equations.gravitational_contract_artifacts import run_suite as _run
+from equations.gravitational_cosmological_quantum_dynamics.contract_artifacts import run_suite as _run
 
 
 def run_suite(output_dir: str | Path, *, seed: int = 0):

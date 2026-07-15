@@ -6,7 +6,7 @@ import numpy as np
 
 from equations.dynamic_fluctuation_index.dfi import NormalizedDFIResult
 from equations.elastic_pi.elastic_pi import ElasticPiEvaluation
-from the_nothingness_effect import NothingnessEffect
+from fields_of_physics_in_dev.the_nothingness_effect import NothingnessEffect
 
 
 def test_facade_passes_required_arguments_to_foundational_functions():

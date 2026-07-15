@@ -50,6 +50,12 @@ animations, manifests, and representative audio where applicable. The folder
 mapping, semantics, results, and regeneration commands are documented in
 `docs/tne_ai_output_capabilities.md`.
 
+In addition, QENN, PGQENN, and SOInets each own architecture-local test and
+simulation runners that import the respective model, record native architecture
+residuals, and execute all six output groups. This demonstrates that the six
+observable capabilities are reachable through every canonical AI architecture,
+while retaining their bounded synthetic-fixture claim boundary.
+
 These are numerical capability demonstrations, not additional theorem-complex
 certifications. Their manifests therefore reference related implemented source
 laws without changing the 351-row implementation inventory.

@@ -14,8 +14,8 @@ from equations.flowpoint.b_level import (
 from equations.flowpoint.c_level import AffineHistoryInput, contracts as c_contracts
 from equations.flowpoint.contracts import registered_flowpoint_registry
 from equations.flowpoint.flowpoint import BalanceFiber, PhaseClock
-from equations.theorem_complex_runtime import ClosureStatus, evaluate_contract
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 ROOT = Path(__file__).resolve().parents[2]

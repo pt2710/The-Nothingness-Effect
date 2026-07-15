@@ -20,12 +20,12 @@
     "verification_evidence": "Implemented subset or equivalent responsibility at: docs/tne_theorem_complex_implementation_status.md"
   },
   "equations/animation_io.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/animation_io.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared animation responsibility to tne_runtime/artifacts/animation_io.py; domain animations remain producer-local."
   },
   "equations/artifact_io.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/artifact_io.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared artifact responsibility to tne_runtime/artifacts/io.py."
   },
   "equations/artificial_intelligence/pgqenn/__init__.py": {
     "revision_status": "reviewed_present",
@@ -616,28 +616,28 @@
     "verification_evidence": "Exact planned path exists: equations/symmetry/symmetry.py"
   },
   "equations/theorem_complex_runtime/__init__.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/theorem_complex_runtime/__init__.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/__init__.py."
   },
   "equations/theorem_complex_runtime/invariants.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/theorem_complex_runtime/invariants.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/invariants.py."
   },
   "equations/theorem_complex_runtime/registry.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/theorem_complex_runtime/registry.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/registry.py."
   },
   "equations/theorem_complex_runtime/runner.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/theorem_complex_runtime/runner.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/runner.py."
   },
   "equations/theorem_complex_runtime/types.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/theorem_complex_runtime/types.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/types.py."
   },
   "equations/theorem_complex_runtime/validation.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/theorem_complex_runtime/validation.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/validation.py."
   },
   "equations/uncountable_infinity/uncountable_infinity.py": {
     "revision_status": "reviewed_present",
@@ -660,23 +660,23 @@
     "verification_evidence": "Exact planned path exists: requirements.txt"
   },
   "the_nothingness_effect.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: the_nothingness_effect.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Relocated facade to fields_of_physics_in_dev/the_nothingness_effect.py with contract tests updated."
   },
   "tne_concepts/SOInet/soi_net.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: tne_concepts/SOInet/soi_net.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Legacy tree removed by owner direction; canonical replacement is equations/artificial_intelligence/soinets/model.py with local test/simulation suites."
   },
   "tne_concepts/SOInet/soi_pgnn_analytics.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: tne_concepts/SOInet/soi_pgnn_analytics.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Legacy tree removed; canonical PGQENN analytics and artifacts are under equations/artificial_intelligence/pgqenn."
   },
   "tne_concepts/SOInet/test_bidirectional_soi_net_color_classification.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: tne_concepts/SOInet/test_bidirectional_soi_net_color_classification.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Legacy tree removed; replacement evidence is under artificial_intelligence/bidirectional_color_classification and all three architecture-local suites."
   },
   "tne_concepts/SOInet/test_bidirectional_soi_net_sound_classification.py": {
-    "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: tne_concepts/SOInet/test_bidirectional_soi_net_sound_classification.py"
+    "revision_status": "reviewed_partial_alternative",
+    "verification_evidence": "Legacy tree removed; replacement evidence is under artificial_intelligence/bidirectional_sound_classification and all three architecture-local suites."
   }
 }

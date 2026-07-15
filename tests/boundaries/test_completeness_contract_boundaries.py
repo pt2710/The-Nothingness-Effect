@@ -9,7 +9,7 @@ import pytest
 
 from equations.completeness_theorem.contracts import source_operator
 from tests.contracts.test_completeness_contracts import INPUT
-from equations.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 def test_nonbinary_theorem_prefix_is_rejected():

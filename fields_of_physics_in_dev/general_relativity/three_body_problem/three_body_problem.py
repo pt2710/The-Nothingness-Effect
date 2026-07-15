@@ -22,7 +22,7 @@ root_dir = os.path.abspath(os.path.join(current_dir, "../../../"))
 sys.path.insert(0, root_dir)
 
 
-from the_nothingness_effect import NothingnessEffect
+from fields_of_physics_in_dev.the_nothingness_effect import NothingnessEffect
 
 # -----------------------------------------------------------------------------
 # Constants & Real-World Approximations

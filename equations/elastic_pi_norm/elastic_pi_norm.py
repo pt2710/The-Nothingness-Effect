@@ -7,8 +7,8 @@ from dataclasses import dataclass
 import numpy as np
 
 from equations.elastic_pi.elastic_pi import evaluate_elastic_pi, require_elastic_pi_value
-from equations.theorem_complex_runtime.types import DomainViolationError
-from equations.theorem_complex_runtime.validation import ensure_finite
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 @dataclass(frozen=True)

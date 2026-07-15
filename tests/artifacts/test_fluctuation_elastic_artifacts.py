@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from equations.fluctuation_elastic_artifacts import run_suite
+from equations.fluctuation_elastic_dynamics.artifacts import run_suite
 
 
 @pytest.mark.parametrize(

@@ -7,7 +7,7 @@ from typing import Callable
 
 import numpy as np
 
-from equations.theorem_complex_runtime import (
+from tne_runtime.theorem_complex_runtime import (
     ArtifactSpec,
     ClosureStatus,
     CodomainSpec,
@@ -18,8 +18,8 @@ from equations.theorem_complex_runtime import (
     ResidualResult,
     SourceRemovalResult,
 )
-from equations.theorem_complex_runtime.invariants import source_removal_result
-from equations.theorem_complex_runtime.types import DomainViolationError
+from tne_runtime.theorem_complex_runtime.invariants import source_removal_result
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError
 
 from .a_level import APPENDIX, APPENDIX_SHA256, PiApproximationInput, pi_approximation
 

@@ -11,7 +11,7 @@ from __future__ import annotations
 import numpy as np
 
 from equations.elastic_pi.elastic_pi import ElasticPi, ElasticPiEvaluationError
-from equations.theorem_complex_runtime.validation import ensure_finite
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 def validate_kd(k_d: float | np.ndarray) -> np.ndarray:

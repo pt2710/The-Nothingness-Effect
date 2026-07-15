@@ -1,4 +1,4 @@
-from equations.gravitational_contract_runtime import SPECS, contracts_for, registered_module_registry
+from equations.gravitational_cosmological_quantum_dynamics.contract_runtime import SPECS, contracts_for, registered_module_registry
 
 SPEC = SPECS["locality_driven_gravity"]
 

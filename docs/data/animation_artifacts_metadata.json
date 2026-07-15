@@ -1,0 +1,91 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "format": "auto",
+  "fps": null,
+  "quick": true,
+  "rows": [
+    {
+      "animation": "entropic_horizon_2d",
+      "component": "black_hole_dynamics",
+      "data_path": "equations\\black_hole_dynamics\\animation\\entropic_horizon_crossing_2d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\black_hole_dynamics\\animation\\entropic_horizon_crossing_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\black_hole_dynamics\\animation\\entropic_horizon_crossing_2d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "hawking_like_flux_2d",
+      "component": "black_hole_dynamics",
+      "data_path": "equations\\black_hole_dynamics\\animation\\hawking_like_flux_2d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\black_hole_dynamics\\animation\\hawking_like_flux_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\black_hole_dynamics\\animation\\hawking_like_flux_2d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "observer_horizon_memory_2d",
+      "component": "black_hole_dynamics",
+      "data_path": "equations\\black_hole_dynamics\\animation\\observer_horizon_memory_2d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\black_hole_dynamics\\animation\\observer_horizon_memory_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\black_hole_dynamics\\animation\\observer_horizon_memory_2d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "entropic_tension_3d",
+      "component": "black_hole_dynamics",
+      "data_path": "equations\\black_hole_dynamics\\animation\\entropic_tension_3d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\black_hole_dynamics\\animation\\entropic_tension_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\black_hole_dynamics\\animation\\entropic_tension_3d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "hawking_flux_from_entropic_tension_3d",
+      "component": "black_hole_dynamics",
+      "data_path": "equations\\black_hole_dynamics\\animation\\hawking_flux_from_entropic_tension_3d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\black_hole_dynamics\\animation\\hawking_flux_from_entropic_tension_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\black_hole_dynamics\\animation\\hawking_flux_from_entropic_tension_3d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "observer_horizon_appear_disappear_3d",
+      "component": "black_hole_dynamics",
+      "data_path": "equations\\black_hole_dynamics\\animation\\observer_horizon_appear_disappear_3d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\black_hole_dynamics\\animation\\observer_horizon_appear_disappear_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\black_hole_dynamics\\animation\\observer_horizon_appear_disappear_3d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "spiral_galaxy_formation_2d",
+      "component": "locality_driven_gravity",
+      "data_path": "equations\\locality_driven_gravity\\animation\\spiral_galaxy_formation_2d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\locality_driven_gravity\\animation\\spiral_galaxy_formation_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\locality_driven_gravity\\animation\\spiral_galaxy_formation_2d.mp4",
+      "passed_validation": true
+    },
+    {
+      "animation": "spiral_galaxy_formation_3d",
+      "component": "locality_driven_gravity",
+      "data_path": "equations\\locality_driven_gravity\\animation\\spiral_galaxy_formation_3d_data.npz",
+      "fallback_mode": "mp4",
+      "metadata_path": "equations\\locality_driven_gravity\\animation\\spiral_galaxy_formation_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "equations\\locality_driven_gravity\\animation\\spiral_galaxy_formation_3d.mp4",
+      "passed_validation": true
+    }
+  ],
+  "script": "tools.run_animation_artifacts",
+  "seed": 2710,
+  "summary_path": "docs/data/animation_artifacts_summary.csv"
+}

@@ -1,0 +1,10 @@
+sample,true_index,true_label,predicted_index,predicted_label,confidence,correct,dominant_frequency_hz
+0,0,low_250_hz,0,low_250_hz,0.9324508905410767,True,257.8125
+1,0,low_250_hz,0,low_250_hz,0.9417362809181213,True,250.0
+2,0,low_250_hz,0,low_250_hz,0.9325500726699829,True,257.8125
+3,1,middle_500_hz,1,middle_500_hz,0.9517335295677185,True,496.09375
+4,1,middle_500_hz,1,middle_500_hz,0.9558451771736145,True,500.0
+5,1,middle_500_hz,1,middle_500_hz,0.9558432102203369,True,511.71875
+6,2,high_1000_hz,2,high_1000_hz,0.9986687898635864,True,996.09375
+7,2,high_1000_hz,2,high_1000_hz,0.9988012313842773,True,1000.0
+8,2,high_1000_hz,2,high_1000_hz,0.9988082647323608,True,1003.90625

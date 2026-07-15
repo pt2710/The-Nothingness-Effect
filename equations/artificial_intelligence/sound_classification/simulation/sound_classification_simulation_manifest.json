@@ -1,0 +1,46 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "sound_classification",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "sound_classification_simulation_results.csv",
+    "sound_classification_simulation_figure.png",
+    "sound_classification_simulation_animation.gif",
+    "sound_classification_sample.wav",
+    "sound_classification_simulation_manifest.json"
+  ],
+  "intended_output_group": "sound classification",
+  "metrics": {
+    "accuracy": 1.0,
+    "mean_confidence": 0.963493287563324
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "2a761bfa0ca9af2ac54d1cdefa36327246eff0c0e64eaca7fa25470decf89c6d",
+  "parameters": {
+    "capability": "sound_classification",
+    "mode": "simulation",
+    "seed": 0,
+    "synthetic_fixture": true
+  },
+  "regeneration_command": "python -m equations.artificial_intelligence.sound_classification.simulation.run_simulation",
+  "related_theorem_complex_ids": [
+    "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
+    "pv_parseval_spectral_energy_lock"
+  ],
+  "repository_result_commit": "1a3c1ab9caf38f51c25a2fbd9308e02d578b7535",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    1.1920928955078125e-07
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

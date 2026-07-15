@@ -23,7 +23,7 @@ matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 import numpy as np
-from equations.artifact_io import save_json
+from tne_runtime.artifacts.io import save_json
 
 
 def run(

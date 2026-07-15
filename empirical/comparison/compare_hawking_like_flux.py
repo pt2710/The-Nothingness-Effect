@@ -12,9 +12,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from empirical.io import comparison_paths, repo_relative, save_rows, write_manifest, write_report
-from equations.artifact_io import save_figure
-from theoretical_benchmarks.hawking.compare_tne_hawking_like_flux import run as run_theoretical_comparison
-from theoretical_benchmarks.hawking.simulation.simulate_hawking_theoretical_benchmark import run as run_theoretical_benchmark
+from tne_runtime.artifacts.io import save_figure
+from equations.black_hole_dynamics.hawking.simulation.theoretical_benchmarks.compare_tne_hawking_like_flux import run as run_theoretical_comparison
+from equations.black_hole_dynamics.hawking.simulation.theoretical_benchmarks.simulate_hawking_theoretical_benchmark import run as run_theoretical_benchmark
 
 
 def run(
@@ -35,7 +35,7 @@ def run(
             {
                 "status": "deprecated_empirical_slot",
                 "data_status": "theoretical_benchmark",
-                "redirected_to": "theoretical_benchmarks/hawking",
+                "redirected_to": "equations/black_hole_dynamics/hawking",
             }
         ],
     )
@@ -45,7 +45,7 @@ def run(
     ax.text(
         0.5,
         0.5,
-        "Hawking empirical slot deprecated.\nUse theoretical_benchmarks/hawking/ instead.",
+        "Hawking empirical slot deprecated.\nUse equations/black_hole_dynamics/hawking/ instead.",
         ha="center",
         va="center",
         fontsize=12,
@@ -60,7 +60,7 @@ def run(
                 "",
                 "This empirical entrypoint is deprecated.",
                 "No direct astrophysical empirical Hawking-radiation dataset is fetched here.",
-                "Use the Hawking theoretical benchmark artifacts under `theoretical_benchmarks/hawking/`.",
+                "Use the Hawking theoretical benchmark artifacts under `equations/black_hole_dynamics/hawking/`.",
                 "",
                 "This is a theoretical consistency comparison, not empirical validation.",
             ]
@@ -72,7 +72,7 @@ def run(
             "comparison": "hawking_like_flux",
             "data_status": "theoretical_benchmark",
             "deprecated": True,
-            "redirected_to": "theoretical_benchmarks/hawking",
+            "redirected_to": "equations/black_hole_dynamics/hawking",
             "benchmark_paths": {name: str(path) for name, path in benchmark["paths"].items()},
             "comparison_report": str(comparison["report"]),
             "comparison_manifest": str(comparison["manifest"]),

@@ -1,0 +1,60 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_statuses": [
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "numerical_candidate"
+  ],
+  "generated_files": [
+    "pdfi_contract_metrics.csv",
+    "pdfi_contract_residuals.png",
+    "parity_dfi_test_residual_trace.csv",
+    "parity_dfi_test_residual_animation.gif",
+    "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law_manifest.json",
+    "flowpoint_parity_correspondence_and_decoupling_manifest.json",
+    "pdfi_entropic_predictability_and_fluctuation_ambiguity_manifest.json",
+    "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown_manifest.json",
+    "pdfi_elastic_equivalence_and_decoupling_manifest.json",
+    "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations_manifest.json",
+    "parity_flowpoint_transport_law_manifest.json",
+    "predictability_observation_parity_coupling_manifest.json",
+    "elastic_calibration_completeness_functional_manifest.json",
+    "spatial_parity_elastic_calibration_closure_manifest.json"
+  ],
+  "mode": "test",
+  "module": "parity_dfi",
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "848c57a1a67b9c2a20ffe564bde46ce00649c8108b62dae5810a683dba5de95c",
+  "parameters": {
+    "contract_count": 10,
+    "mode": "test",
+    "module": "parity_dfi",
+    "seed": 0
+  },
+  "regeneration_command": "python -m equations.parity_dfi.test.run_evidence",
+  "repository_result_commit": "8b61db8b785ab4e64b9a71a3fe4aa9e90545469c",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "source_status": "canonical_contract_evaluation"
+}

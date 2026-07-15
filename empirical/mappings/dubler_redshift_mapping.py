@@ -14,7 +14,7 @@ import numpy as np
 
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle, rmse
-from equations.artifact_io import save_figure
+from tne_runtime.artifacts.io import save_figure
 from equations.elastic_dubler_effect.elastic_dubler_effect import dubler_shift
 
 

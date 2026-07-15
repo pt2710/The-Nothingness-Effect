@@ -43,7 +43,7 @@ python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d -
 python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode 3
 python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode 4
 python -m equations.locality_driven_gravity.animation.animate_spiral_galaxy_3d --quick --arm-mode mixed
-python -m equations.run_animation_artifacts --quick
+python -m tools.run_animation_artifacts --quick
 ```
 
 For the spiral-galaxy proxy specifically, the animation now renders:
@@ -112,8 +112,8 @@ python -m pytest equations/locality_driven_gravity/test/test_spiral_animations.p
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_metadata.json`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_arm_mode_4.mp4`
 - `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d_arm_mode_mixed_frame_strip.png`
-- `equations/animation_artifacts_summary.csv`
-- `equations/animation_artifacts_metadata.json`
+- `docs/data/animation_artifacts_summary.csv`
+- `docs/data/animation_artifacts_metadata.json`
 
 Not every run will produce both `.mp4` and `.gif`. The scripts prefer MP4,
 fall back to GIF, and if no writer is available they still produce a

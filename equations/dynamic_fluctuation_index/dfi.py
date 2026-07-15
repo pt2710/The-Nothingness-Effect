@@ -1,131 +1,216 @@
-import os
-import sys
+"""Typed, fail-closed Dynamic Fluctuation Index implementation."""
 
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
+from __future__ import annotations
+
+from dataclasses import dataclass
+from enum import Enum
+from typing import Any
 
 import numpy as np
+
 from equations.spectrum_of_infinities.spectrum_of_infinities import SpectrumOfInfinities
+from tne_runtime.theorem_complex_runtime.types import DomainViolationError, SingularEvaluationError
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
+
+
+class DFIStatus(str, Enum):
+    FINITE = "finite"
+    SINGULAR = "singular"
+    DIVERGENT = "divergent"
+
+
+class DFISingularityError(SingularEvaluationError):
+    """Raised when the canonical DFI denominator vanishes."""
+
+
+@dataclass(frozen=True)
+class DivergenceWitness:
+    status: DFIStatus
+    coordinates: tuple[tuple[int, int], ...]
+    minimum_absolute_denominator: float
+    detail: str
+
+
+@dataclass(frozen=True)
+class NormalizedDFIResult:
+    feature_names: tuple[Any, ...]
+    normalized_entropy: np.ndarray | None
+    entropic_weight: np.ndarray | None
+    relative_volume: np.ndarray | None
+    base_volume: float
+    spectrum_scale: float
+    normalization_residual: float
+    status: DFIStatus
+    divergence_witness: DivergenceWitness
+    approximation_metadata: dict[str, Any]
+
+    @property
+    def finite(self) -> bool:
+        return self.status is DFIStatus.FINITE
+
+
+def _matrix(data: Any) -> tuple[np.ndarray, tuple[Any, ...]]:
+    if hasattr(data, "columns"):
+        array = np.asarray(data.values, dtype=float)
+        names = tuple(data.columns)
+    else:
+        array = np.asarray(data, dtype=float)
+        if array.ndim != 2:
+            raise DomainViolationError("DFI data must be a two-dimensional array")
+        names = tuple(range(array.shape[1]))
+    if array.ndim != 2 or array.shape[0] == 0 or array.shape[1] < 2:
+        raise DomainViolationError("DFI requires at least one sample and two features")
+    ensure_finite(array, name="DFI data")
+    return array, names
+
+
+def unnormalized_divergence_witness(data: Any) -> DivergenceWitness:
+    array, _ = _matrix(data)
+    feature_count = array.shape[1]
+    total = array.sum(axis=1, keepdims=True)
+    remainder = total - array
+    denominator = remainder * feature_count
+    coordinates = tuple(tuple(int(item) for item in coordinate) for coordinate in np.argwhere(denominator == 0))
+    minimum = float(np.min(np.abs(denominator)))
+    return DivergenceWitness(
+        DFIStatus.SINGULAR if coordinates else DFIStatus.FINITE,
+        coordinates,
+        minimum,
+        "zero remainder denominator" if coordinates else "finite denominator on declared sample",
+    )
+
+
+def normalized_dfi(data: Any, *, spectrum_scale: float) -> NormalizedDFIResult:
+    array, names = _matrix(data)
+    if not np.isfinite(spectrum_scale) or spectrum_scale <= 0:
+        raise DomainViolationError("spectrum_scale must be finite and strictly positive")
+    witness = unnormalized_divergence_witness(array)
+    feature_count = array.shape[1]
+    base_volume = float(spectrum_scale / feature_count)
+    if witness.status is DFIStatus.SINGULAR:
+        return NormalizedDFIResult(
+            names,
+            None,
+            None,
+            None,
+            base_volume,
+            float(spectrum_scale),
+            0.0,
+            DFIStatus.SINGULAR,
+            witness,
+            {"masked_nonfinite_values": 0, "canonical_values_available": False},
+        )
+    total = array.sum(axis=1, keepdims=True)
+    remainder = total - array
+    weight = (total * (feature_count - 1)) / (remainder * feature_count)
+    relative_volume = base_volume * weight
+    normalized_entropy = (relative_volume - base_volume) / spectrum_scale
+    ensure_finite((weight, relative_volume, normalized_entropy), name="canonical DFI result")
+    reconstructed = spectrum_scale * normalized_entropy + base_volume
+    normalization_residual = float(np.linalg.norm(reconstructed - relative_volume))
+    return NormalizedDFIResult(
+        names,
+        normalized_entropy,
+        weight,
+        relative_volume,
+        base_volume,
+        float(spectrum_scale),
+        normalization_residual,
+        DFIStatus.FINITE,
+        witness,
+        {"masked_nonfinite_values": 0, "canonical_values_available": True},
+    )
+
+
+def require_finite_dfi(result: NormalizedDFIResult) -> NormalizedDFIResult:
+    if not result.finite:
+        raise DFISingularityError(
+            f"DFI is {result.status.value}: {result.divergence_witness.detail}; "
+            f"coordinates={result.divergence_witness.coordinates[:8]}"
+        )
+    return result
+
+
+def dfi_rescaling_residual(data: Any, first_scale: float, second_scale: float) -> float:
+    first = require_finite_dfi(normalized_dfi(data, spectrum_scale=first_scale))
+    second = require_finite_dfi(normalized_dfi(data, spectrum_scale=second_scale))
+    return float(np.linalg.norm(first.normalized_entropy - second.normalized_entropy))
+
+
+def spatial_localization_residual(result: NormalizedDFIResult) -> tuple[float, float]:
+    finite = require_finite_dfi(result)
+    entropy = np.asarray(finite.normalized_entropy)
+    if entropy.shape[0] < 2:
+        return 0.0, 0.0
+    local_exchange = float(np.linalg.norm(np.diff(entropy, axis=0)))
+    boundary_trace = float(np.linalg.norm(entropy[0]) + np.linalg.norm(entropy[-1]))
+    return local_exchange, boundary_trace
 
 
 class DynamicFluctuationIndex:
-    """
-    DynamicFluctuationIndex computes the parity-based entropic features (DFI) of a dataset.
+    """Compatibility facade over the canonical normalized DFI result."""
 
-    You can also invoke the CLI for full options:
-        $ python dfi.py --help
-
-    Args:
-      soi_params (dict, optional):
-        Default kwargs passed to SpectrumOfInfinities
-        (e.g. normalize_to, adv_mode, type, test_mode, test_value).
-    """
-
-    def __init__(self, soi_params=None):
+    def __init__(self, soi_params=None, *, compatibility_mode: bool = False):
         self.soi_params = soi_params.copy() if soi_params else {}
+        self.compatibility_mode = bool(compatibility_mode)
 
-    def dfi(self, data, soi=None, **soi_kwargs):
-        """
-        Compute the Dynamic Fluctuation Index on `data`.
-
-        Args:
-          data       : pandas DataFrame or 2D numpy array.
-          soi        : optional float/int or SpectrumOfInfinities instance.
-          **soi_kwargs: any of normalize_to, adv_mode, type, test_mode, test_value
-                       to override or extend soi_params.
-
-        Returns:
-          dict mapping column → {
-              'Relative_Entropy': np.ndarray,
-              'Entropic_Weight' : np.ndarray,
-              'Relative_Volume' : np.ndarray
-          }
-        """
-        ε = np.finfo(float).eps
-
-        # pull out data values and feature names
-        if hasattr(data, "columns"):
-            feature_list = data.columns
-            arr = data.values
-        else:
-            arr = np.asarray(data)
-            feature_list = list(range(arr.shape[1]))
-
-        # number of features
-        xn = arr.shape[1]
-
-        # resolve soi_val
+    def _soi_value(self, soi=None, **soi_kwargs) -> float:
         if isinstance(soi, SpectrumOfInfinities):
-            # optionally update its params
-            for k, v in soi_kwargs.items():
-                setattr(soi, k, v)
-            soi_val = soi.soi()
-        elif soi is None:
-            # build a new SpectrumOfInfinities from stored + call-time params
+            for key, value in soi_kwargs.items():
+                setattr(soi, key, value)
+            return float(soi.soi())
+        if soi is None:
             params = dict(self.soi_params)
             params.update(soi_kwargs)
-            soi_inst = SpectrumOfInfinities(**params)
-            soi_val = soi_inst.soi()
-        else:
-            # numeric override
-            soi_val = float(soi)
+            return float(SpectrumOfInfinities(**params).soi())
+        return float(soi)
 
-        # V0 is base volume
-        V0 = soi_val / xn
+    def compute(self, data, soi=None, **soi_kwargs) -> NormalizedDFIResult:
+        return normalized_dfi(data, spectrum_scale=self._soi_value(soi, **soi_kwargs))
 
-        entropical_data = {}
-        x_n = arr.sum(axis=1)[:, None]   # column sum per row
-
-        for idx, col in enumerate(feature_list):
-            x_i = arr[:, [idx]]
-            x_r = x_n - x_i
-
-            with np.errstate(divide='ignore', invalid='ignore'):
-                # avoid division by zero
-                sigma = (x_n * (xn - 1)) / (x_r * xn + ε)  # ε inside denominator!
-            V_x = V0 * sigma
-            S = V_x - V0
-
-            # Replace non-finite values (from any still-possible numerical weirdness)
-            S = np.where(np.isfinite(S), S, 0)
-            sigma = np.where(np.isfinite(sigma), sigma, 1)
-            V_x = np.where(np.isfinite(V_x), V_x, 1)
-
-            entropical_data[col] = {
-                "Relative_Entropy": S.ravel(),
-                "Entropic_Weight":  sigma.ravel(),
-                "Relative_Volume":  V_x.ravel(),
+    def dfi(self, data, soi=None, **soi_kwargs):
+        result = self.compute(data, soi=soi, **soi_kwargs)
+        if not result.finite:
+            if not self.compatibility_mode:
+                return result
+            # Explicit legacy mode only: expose old neutral coercion and record it.
+            array, names = _matrix(data)
+            feature_count = array.shape[1]
+            total = array.sum(axis=1, keepdims=True)
+            remainder = total - array
+            with np.errstate(divide="ignore", invalid="ignore"):
+                weight = (total * (feature_count - 1)) / (remainder * feature_count)
+            weight = np.where(np.isfinite(weight), weight, 1.0)
+            volume = result.base_volume * weight
+            entropy = volume - result.base_volume
+            return {
+                name: {
+                    "Relative_Entropy": entropy[:, index],
+                    "Entropic_Weight": weight[:, index],
+                    "Relative_Volume": volume[:, index],
+                    "Compatibility_Mode": True,
+                }
+                for index, name in enumerate(names)
             }
-
-
-        return entropical_data
+        entropy = result.spectrum_scale * result.normalized_entropy
+        return {
+            name: {
+                "Relative_Entropy": entropy[:, index],
+                "Entropic_Weight": result.entropic_weight[:, index],
+                "Relative_Volume": result.relative_volume[:, index],
+                "Normalization_Residual": result.normalization_residual,
+                "Status": result.status.value,
+            }
+            for index, name in enumerate(result.feature_names)
+        }
 
 
 if __name__ == "__main__":
-    import argparse, textwrap
-    parser = argparse.ArgumentParser(
-        prog="dfi",
-        description="Compute Dynamic Fluctuation Index on a dataset"
-    )
-    parser.add_argument("--soi", type=float, help="Manual SOI value (default: auto)", default=None)
-    parser.add_argument("--normalize_to", type=float, default=100,
-                        help="Normalization constant for SpectrumOfInfinities")
-    parser.add_argument("--adv_mode", action="store_true",
-                        help="Enable advanced symmetric spectrum mode")
-    parser.add_argument("--type", choices=["symmetric","dualistic"],
-                        help="Required if --adv_mode is set")
-    args = parser.parse_args()
+    import argparse
 
-    print(textwrap.dedent(f"""
-    DynamicFluctuationIndex CLI
-    ----------------------------
-    soi             : {args.soi}
-    normalize_to    : {args.normalize_to}
-    adv_mode        : {args.adv_mode}
-    type            : {args.type}
-
-    Usage in Python:
-      from dfi import DynamicFluctuationIndex
-      dfi = DynamicFluctuationIndex(normalize_to={args.normalize_to}, adv_mode={args.adv_mode}, type="{args.type}")
-      results = dfi.dfi(my_dataframe, soi={args.soi})
-    """))
+    parser = argparse.ArgumentParser(description="Compute Dynamic Fluctuation Index on a dataset")
+    parser.add_argument("--soi", type=float, default=None)
+    parser.add_argument("--normalize_to", type=float, default=100)
+    parser.add_argument("--adv_mode", action="store_true")
+    parser.add_argument("--type", choices=["symmetric", "dualistic"])
+    parser.parse_args()

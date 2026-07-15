@@ -1,0 +1,97 @@
+{
+  "affine_history_field": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Exact finite spatial construction; B-source removal, balance, boundary trace, reconstruction, and complement exchange are tested.",
+    "implementation_path": "equations/flowpoint/c_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/contracts/test_flowpoint_contracts.py"
+  },
+  "kernel_fiber_integrability": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed balance map, swap involution, kernel/diagonal projectors, and balance-preserving update are implemented.",
+    "implementation_path": "equations/flowpoint/a_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/invariants/test_flowpoint_source_laws.py"
+  },
+  "parity_to_bit_equivalence_and_2_adic_coding": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Exact finite-prefix parity schedule and explicit truncated 2-adic readout are implemented without claiming an infinite numerical object.",
+    "implementation_path": "equations/flowpoint/a_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/invariants/test_flowpoint_source_laws.py"
+  },
+  "phase_clock": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed origin-free C2 phase and involutive shift are implemented.",
+    "implementation_path": "equations/flowpoint/a_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/contracts/test_flowpoint_contracts.py"
+  },
+  "phase_indexed_kernel_transport": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Potential-difference transport uses both complete sources and satisfies composition, inverse, balance, and two source-removal tests.",
+    "implementation_path": "equations/flowpoint/b_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/contracts/test_flowpoint_contracts.py"
+  },
+  "scheduled_spectral_history": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "The encoder is a genuine schedule-plus-involution derivation with exact finite decoder and both-source ablations.",
+    "implementation_path": "equations/flowpoint/b_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/contracts/test_flowpoint_contracts.py"
+  },
+  "self_negating_oscillation_and_eigenstructure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Canonical F(x)=-x source law, F^2=I, projectors, exact period-two orbit, harmonic sampling, and zero-state failure boundary are implemented.",
+    "implementation_path": "equations/flowpoint/a_level.py",
+    "implementation_status": "implemented",
+    "simulation_path": "equations/flowpoint/simulation/run_suite.py",
+    "test_path": "tests/invariants/test_flowpoint_source_laws.py"
+  },
+  "flowpoint_unity_orientation_and_integer_unfolding": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/a_level.py", "test_path": "tests/contracts/test_mathematical_closure_contracts.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Typed nonzero orientation and integer unfolding; zero remains an explicit boundary."
+  },
+  "operation_covariance_and_spectral_minimization": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/a_level.py", "test_path": "tests/contracts/test_mathematical_closure_contracts.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Typed partial-operation covariance residual; numerical candidates are not promoted to minimizers."
+  },
+  "finite_approximation_and_vanishing_residual_energy": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/a_level.py", "test_path": "tests/boundaries/test_mathematical_closure_boundaries.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Finite damped Leibniz prefix reports damping defect and certified error bound explicitly."
+  },
+  "complex_phase_coordinates_and_fourier_reconstruction": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/a_level.py", "test_path": "tests/contracts/test_mathematical_closure_contracts.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Complex phase coordinates, unitary finite Fourier reconstruction, and Parseval residual are implemented."
+  },
+  "addition_of_arithmetic_orientation_and_typed_operation_theory": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/b_level.py", "test_path": "tests/contracts/test_mathematical_closure_contracts.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Genuine orientation-indexed operation transport with cocycle and both-source ablations."
+  },
+  "addition_of_approximation_and_harmonic_geometry": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/b_level.py", "test_path": "tests/contracts/test_mathematical_closure_contracts.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Finite approximation drives a new calibrated harmonic field with phase bounds and both-source ablations."
+  },
+  "addition_of_the_two_complete_b_level_operator_families": {
+    "implementation_status": "implemented", "implementation_path": "equations/mathematical_closure/c_level.py", "test_path": "tests/contracts/test_mathematical_closure_contracts.py", "simulation_path": "equations/mathematical_closure/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Signed-polar spatial field has local gradients, boundary/reconstruction residuals, B-source ablations, and numerical-candidate status."
+  },
+  "reciprocal_relation_action_groupoid": {
+    "implementation_status": "implemented", "implementation_path": "equations/duality/a_level.py", "test_path": "tests/contracts/test_duality_contracts.py", "simulation_path": "equations/duality/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Finite reciprocal graph, inverse relation, diagonal, and composition closure are typed."
+  },
+  "minimal_two_state_involution_orbitwise_alternator": {
+    "implementation_status": "implemented", "implementation_path": "equations/duality/a_level.py", "test_path": "tests/contracts/test_duality_contracts.py", "simulation_path": "equations/duality/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Nonzero two-state fixed-point-free alternator with explicit zero obstruction."
+  },
+  "involutive_duality_c_2_action": {
+    "implementation_status": "implemented", "implementation_path": "equations/duality/a_level.py", "test_path": "tests/contracts/test_duality_contracts.py", "simulation_path": "equations/duality/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Finite involutions are exposed as typed C2 actions with action residual."
+  },
+  "reciprocal_orbit_double_cover": {
+    "implementation_status": "implemented", "implementation_path": "equations/duality/b_level.py", "test_path": "tests/contracts/test_duality_contracts.py", "simulation_path": "equations/duality/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Two-sheeted orbit cover has explicit projection, deck action, fixed-point obstruction, and both-source ablations."
+  },
+  "two_state_free_cofree_duality": {
+    "implementation_status": "implemented", "implementation_path": "equations/duality/b_level.py", "test_path": "tests/contracts/test_duality_contracts.py", "simulation_path": "equations/duality/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Signed free-cofree extension is a new operator with equivariance residual and both-source ablations."
+  },
+  "invariant_anti_invariant_orbit_fields": {
+    "implementation_status": "implemented", "implementation_path": "equations/duality/c_level.py", "test_path": "tests/contracts/test_duality_contracts.py", "simulation_path": "equations/duality/simulation/run_suite.py", "artifact_status": "generator_smoke_tested", "decision_note": "Spatial orbit-index field has invariant and anti-invariant sections, boundary trace, exact reconstruction, and B-source ablations."
+  }
+}

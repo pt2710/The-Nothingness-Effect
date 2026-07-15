@@ -46,6 +46,9 @@ secrets.*
 build/
 dist/
 site/
+artifacts/generated/
+.qa_artifacts/
+**/framework/
 *.log
 *.tmp
 *.temp
@@ -71,6 +74,25 @@ empirical/cache/
 **/frame_*.png
 **/*_frame_*.png
 
+# Compact deterministic AI capability animations are intentional evidence and
+# remain colocated with their simulation producer.
+!equations/artificial_intelligence/**/simulation/*.gif
+!equations/artificial_intelligence/qenn/simulation/**/*.gif
+!equations/artificial_intelligence/pgqenn/simulation/**/*.gif
+!equations/artificial_intelligence/soinets/simulation/**/*.gif
+!equations/cosmological_spark_dynamics/test/*.gif
+!equations/cosmological_spark_dynamics/simulation/*.gif
+!equations/dtqc/test/*.gif
+!equations/dtqc/simulation/*.gif
+!equations/elastic_dubler_interferometry/test/*.gif
+!equations/elastic_dubler_interferometry/simulation/*.gif
+!equations/elastic_pi_norm/test/*.gif
+!equations/elastic_pi_norm/simulation/*.gif
+!equations/mathematical_closure/test/*.gif
+!equations/mathematical_closure/simulation/*.gif
+!equations/parity_dfi/test/*.gif
+!equations/parity_dfi/simulation/*.gif
+
 # Generated interactive visualization exports
 **/simulation/*.html
 **/simulation.html
@@ -78,3 +100,17 @@ empirical/cache/
 
 # Regenerable binary data tables
 *.feather
+
+# Authoritative appendix references are external-only inputs.
+external_reference/
+appendix_canonical_self_negating_involution_flowpoint.tex
+appendix_tne_mathematical_closure_architecture.tex
+appendix_tne_foundational_closure_architecture.tex
+appendix_tne_fluctuation_and_elastic_dynamics.tex
+appendix_tne_gravitational_cosmological_quantum_dynamics.tex
+appendix_tne_artificial_intelligence_architechture.tex
+appendix_the_completeness_theorem.tex
+appendix_theorem_complex_commentary.tex
+appendix_tne_research_relations_implications.tex
+appendix_*.tex.sha256
+appendix_*.sha256

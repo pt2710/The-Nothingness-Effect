@@ -10,11 +10,13 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.elastic_pi.elastic_pi import ElasticPi
+from equations.elastic_pi.elastic_pi import ElasticPi, ElasticPiEvaluationError
+from tne_runtime.theorem_complex_runtime.validation import ensure_finite
 
 
 def validate_kd(k_d: float | np.ndarray) -> np.ndarray:
     values = np.asarray(k_d, dtype=float)
+    ensure_finite(values, name="Elastic Dubler K_D")
     if np.any(values <= 0):
         raise ValueError("K_D must be positive for the Elastic Dubler-effect model.")
     return values
@@ -39,13 +41,21 @@ def elastic_pi_ratio(delta_s: float | np.ndarray, K_D: float | np.ndarray) -> np
 
     kd = validate_kd(K_D)
     values = np.asarray(delta_s, dtype=float)
+    ensure_finite(values, name="Elastic Dubler entropy difference")
     if kd.ndim == 0:
         values_1d = np.atleast_1d(values)
         _, pi_e, _ = ElasticPi(float(kd)).compute_piE_and_laplacian(values_1d, K_D=float(kd))
         ratio = pi_e / np.pi
         return ratio[0] if values.ndim == 0 else ratio.reshape(values.shape)
-    exponent = np.clip(-values / kd, -700, 700)
-    return np.exp(exponent)
+    exponent = -values / kd
+    ensure_finite(exponent, name="Elastic Dubler exact exponent")
+    with np.errstate(over="ignore", under="ignore", invalid="ignore"):
+        ratio = np.exp(exponent)
+    if np.any(~np.isfinite(ratio)) or np.any(ratio == 0.0):
+        raise ElasticPiEvaluationError(
+            "Elastic Dubler ratio overflowed or underflowed; canonical evaluation does not clip the exponent"
+        )
+    return ratio
 
 
 def dubler_frequency_ratio(delta_s: float | np.ndarray, K_D: float | np.ndarray) -> np.ndarray:

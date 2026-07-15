@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import animation
 
-from equations.animation_io import figure_to_frame, resolve_animation_writer, save_animation, save_frame_strip, save_gif_fallback, write_animation_metadata
-from equations.artifact_io import CLAIM_BOUNDARY, ensure_dir, save_npz
+from tne_runtime.artifacts.animation_io import figure_to_frame, resolve_animation_writer, save_animation, save_frame_strip, save_gif_fallback, write_animation_metadata
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, ensure_dir, save_npz
 from equations.black_hole_dynamics.black_hole_dynamics import BlackHoleParams, simulate_black_hole_dynamics
 
 

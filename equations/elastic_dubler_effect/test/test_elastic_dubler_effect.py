@@ -8,12 +8,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytest
 
-from equations.artifact_io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
+from tne_runtime.artifacts.io import CLAIM_BOUNDARY, save_csv, save_figure, save_npz
 from equations.elastic_dubler_effect.elastic_dubler_effect import (
     compute_dubler_grid,
     dubler_frequency_ratio,
     dubler_shift,
 )
+from equations.elastic_pi.elastic_pi import ElasticPiEvaluationError
+from tne_runtime.theorem_complex_runtime.types import NonFiniteValueError
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -66,6 +68,16 @@ def test_larger_kd_reduces_shift_strength():
 def test_invalid_kd_raises():
     with pytest.raises(ValueError):
         dubler_frequency_ratio(1.0, 0.0)
+
+
+def test_nonfinite_input_is_not_masked():
+    with pytest.raises(NonFiniteValueError):
+        dubler_frequency_ratio(np.nan, 1.0)
+
+
+def test_vector_underflow_is_not_clipped_to_a_finite_proxy():
+    with pytest.raises(ElasticPiEvaluationError):
+        dubler_frequency_ratio(np.array([1000.0, 2000.0]), np.array([1.0, 1.0]))
 
 
 def test_test_script_outputs_are_generated_locally():

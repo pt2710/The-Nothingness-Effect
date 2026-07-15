@@ -1,0 +1,2 @@
+# Optional differentiable CPU backend. Core tests do not import this dependency.
+torch>=2.13,<2.14

@@ -10,12 +10,12 @@ exist.
 
 | Level | Inventory | Implemented |
 | --- | ---: | ---: |
-| A | 204 | 29 |
-| B | 98 | 15 |
-| C | 49 | 7 |
-| Total | 351 | 51 |
+| A | 204 | 57 |
+| B | 98 | 29 |
+| C | 49 | 14 |
+| Total | 351 | 100 |
 
-Remaining status is 244 `proxy_only` and 56 `not_implemented`. Those labels are
+Remaining status is 216 `proxy_only` and 35 `not_implemented`. Those labels are
 deliberately not inferred upward from related legacy modules.
 
 ## Implemented Flowpoint complex chain
@@ -81,3 +81,20 @@ Each B law has a new interaction operator and source-removal tests for every
 complete A source. Each C law has a spatial domain, local operator, boundary or
 leakage diagnostics, all B-source ablations, and `numerical_candidate` status.
 The four artifact runners emit 31 theorem-level provenance manifests.
+
+## Gravitational, cosmological, and quantum dynamics
+
+Seven appendix-facing modules now expose a bounded 4A→2B→1C chain each:
+Elastic Dubler Effect, Elastic Dubler Interferometry, Locality-Driven Gravity,
+Black-Hole Dynamics, Elastic-π Ripples, Cosmological Spark Dynamics, and
+Discrete-Time Quasicrystals. This adds 49 certified contracts while retaining
+all other related legacy rows as `proxy_only` or `not_implemented`.
+
+The selected A laws have typed uniform spatial grids, positive parameter
+conditions, source responses, invariant residuals, and boundary traces. Each B
+law applies a new bilinear field interaction and has non-cancellation energy
+plus both-source removal tests. Each C law combines two complete B laws into a
+local spatial operator with boundary and localization diagnostics, coercivity,
+observability/reconstruction residuals, both-B ablations, and explicit
+`numerical_candidate` status. Seven deterministic runners emit 49 additional
+theorem-level manifests.

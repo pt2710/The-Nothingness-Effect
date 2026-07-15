@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 51,
-      "not_implemented": 56,
-      "proxy_only": 244
+      "implemented": 100,
+      "not_implemented": 35,
+      "proxy_only": 216
     },
     "total": 351
   },
@@ -3255,7 +3255,7 @@
         "eq:ed01_duality_closure_1a2a"
       ],
       "first_label": "ssec:ed01_duality_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_effect",
       "source_complex_id": "elastic_dubler_duality_closure",
@@ -3277,7 +3277,7 @@
         "eq:ed02_pdfi_closure_1a2a"
       ],
       "first_label": "ssec:ed02_pdfi_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_effect",
       "source_complex_id": "elastic_dubler_pdfi_frequency_shift_dual_closure",
@@ -3302,7 +3302,7 @@
         "eq:ed03_curvature_closure_1a2a"
       ],
       "first_label": "ssec:ed03_curvature_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_effect",
       "source_complex_id": "elastic_dubler_e_curvature_duality",
@@ -3323,7 +3323,7 @@
         "eq:ed04_energy_closure_1a2a"
       ],
       "first_label": "ssec:ed04_energy_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_effect",
       "source_complex_id": "elastic_entropic_energy_equivalence",
@@ -3624,7 +3624,7 @@
         "eq:drv_dubler_b01_exchange_square"
       ],
       "first_label": "app:drv_dubler_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_dubler_effect",
       "source_complex_id": "calibrated_pdfi_dubler_endpoint_operator",
@@ -3646,7 +3646,7 @@
         "eq:drv_dubler_b02_exchange_square"
       ],
       "first_label": "app:drv_dubler_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_dubler_effect",
       "source_complex_id": "elastic_log_curvature_energy_production_law",
@@ -3800,7 +3800,7 @@
         "eq:drv_dubler_c01_exchange_square"
       ],
       "first_label": "app:drv_dubler_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "elastic_dubler_effect",
       "source_complex_id": "dubler_potential_current_spatial_closure",
@@ -3891,7 +3891,7 @@
         "eq:edi01_curvature_correspondence_order_parameter_2a"
       ],
       "first_label": "ssec:elastic_dubler_curvature_correspondence_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "elastic_dubler_curvature_correspondence",
@@ -3916,7 +3916,7 @@
         "eq:boundedness_1a"
       ],
       "first_label": "ssec:elastic_piE_curvature_encoding_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "elastic_e_curvature_encoding_curvature_ambiguity_divergence",
@@ -3941,7 +3941,7 @@
         "eq:edi03_gravitational_memory_branch_condition_2a"
       ],
       "first_label": "ssec:elastic_grav_memory_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "elastic_gravitational_memory_instant_relaxation",
@@ -3966,7 +3966,7 @@
         "eq:trivial_breakdown_identity_logic_2a"
       ],
       "first_label": "ssec:elastic_black_hole_emergence_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "elastic_black_hole_emergence_triviality_of_breakdown",
@@ -4113,7 +4113,7 @@
         "eq:drv_edi_b01_exchange_square"
       ],
       "first_label": "app:drv_edi_b01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "phase_elliptic_curvature_reconstruction",
@@ -4135,7 +4135,7 @@
         "eq:drv_edi_b02_exchange_square"
       ],
       "first_label": "app:drv_edi_b02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "memory_resolved_horizon_reconstruction",
@@ -4200,7 +4200,7 @@
         "eq:drv_edi_c01_exchange_square"
       ],
       "first_label": "app:drv_edi_c01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "elastic_dubler_interferometry",
       "source_complex_id": "memory_aware_phase_curvature_tomography",
@@ -4246,7 +4246,7 @@
         "eq:ldg01_locality_decomposition_branch_condition_2a"
       ],
       "first_label": "ssec:locality_decomposition_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "locality_driven_gravity",
       "source_complex_id": "locality_decomposition_nonlocal_entropic_divergence",
@@ -4271,7 +4271,7 @@
         "eq:ldg02_spiral_density_wave_branch_condition_2a"
       ],
       "first_label": "ssec:spiral_density_wave_duality_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "locality_driven_gravity",
       "source_complex_id": "emergent_spiral_density_wave_spiral_dissolution",
@@ -4296,7 +4296,7 @@
         "eq:entropic_curvature_superposition_algebraic_1a2a"
       ],
       "first_label": "ssec:entropic_curvature_superposition_duality_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "locality_driven_gravity",
       "source_complex_id": "entropic_curvature_superposition_duality",
@@ -4321,7 +4321,7 @@
         "eq:ldg04_energy_equivalence_branch_condition_2a"
       ],
       "first_label": "ssec:locality_driven_gravity_entropic_energy_equivalence_lemma_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "locality_driven_gravity",
       "source_complex_id": "elastic_entropic_energy_equivalence",
@@ -4588,7 +4588,7 @@
         "eq:drv_ldg_b01_exchange_square"
       ],
       "first_label": "app:drv_ldg_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "locality_driven_gravity",
       "source_complex_id": "locality_weighted_spiral_order",
@@ -4610,7 +4610,7 @@
         "eq:drv_ldg_b02_exchange_square"
       ],
       "first_label": "app:drv_ldg_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "locality_driven_gravity",
       "source_complex_id": "curvature_driven_elastic_energy_production",
@@ -4719,7 +4719,7 @@
         "eq:drv_ldg_c01_exchange_square"
       ],
       "first_label": "app:drv_ldg_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "locality_driven_gravity",
       "source_complex_id": "locality_energy_morphogenesis_closure",
@@ -4786,7 +4786,7 @@
         "eq:bhhr01_elastic_pi_black_hole_order_parameter_2a"
       ],
       "first_label": "app:bhhr_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "black_hole_dynamics",
       "source_complex_id": "elastic_black_hole_emergence_triviality_of_breakdown",
@@ -4807,7 +4807,7 @@
         "eq:bhhr02_bridge_duality_joint_implications_1a2a"
       ],
       "first_label": "app:bhhr_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "black_hole_dynamics",
       "source_complex_id": "bridge_duality_dual_invariant_translation",
@@ -4829,7 +4829,7 @@
         "eq:bhhr03_singularity_status_joint_implications_1a2a"
       ],
       "first_label": "app:bhhr_complex_03",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "black_hole_dynamics",
       "source_complex_id": "physical_singularity_absence_mathematical_failure_point_status",
@@ -4848,7 +4848,7 @@
         "eq:bhhr04_black_hole_observability_joint_implications_1a2a"
       ],
       "first_label": "app:bhhr_complex_04",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "black_hole_dynamics",
       "source_complex_id": "black_hole_observability_triviality_and_regularity",
@@ -5021,7 +5021,7 @@
         "eq:drv_bhhr_b01_exchange_square"
       ],
       "first_label": "app:drv_bhhr_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "black_hole_dynamics",
       "source_complex_id": "entropy_invariant_horizon_translation",
@@ -5043,7 +5043,7 @@
         "eq:drv_bhhr_b02_exchange_square"
       ],
       "first_label": "app:drv_bhhr_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "black_hole_dynamics",
       "source_complex_id": "regular_observer_horizon_hypersurface",
@@ -5130,7 +5130,7 @@
         "eq:drv_bhhr_c01_exchange_square"
       ],
       "first_label": "app:drv_bhhr_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "black_hole_dynamics",
       "source_complex_id": "regular_nonperforating_horizon_geometry",
@@ -5176,7 +5176,7 @@
         "eq:cubic_identity_1a"
       ],
       "first_label": "ssec:elastic_pi_ripple_gr_recovery_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_ripples",
       "source_complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery",
@@ -5201,7 +5201,7 @@
         "eq:dfi_only_eq_1a"
       ],
       "first_label": "ssec:entropic_q_suppression_gr_quality_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_ripples",
       "source_complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality",
@@ -5226,7 +5226,7 @@
         "eq:grw03_overtone_purity_branch_condition_2a"
       ],
       "first_label": "ssec:nonlinear_overtone_spectral_purity_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_ripples",
       "source_complex_id": "nonlinear_overtone_generation_spectral_purity",
@@ -5251,7 +5251,7 @@
         "eq:gw_lag_derivs_null_2a"
       ],
       "first_label": "ssec:gw_lag_transport_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_ripples",
       "source_complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
@@ -5448,7 +5448,7 @@
         "eq:drv_grw_b01_exchange_square"
       ],
       "first_label": "app:drv_grw_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_pi_ripples",
       "source_complex_id": "wave_energy_quality_invariant",
@@ -5470,7 +5470,7 @@
         "eq:drv_grw_b02_exchange_square"
       ],
       "first_label": "app:drv_grw_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_pi_ripples",
       "source_complex_id": "distance_corrected_harmonic_coupling",
@@ -5557,7 +5557,7 @@
         "eq:drv_grw_c01_exchange_square"
       ],
       "first_label": "app:drv_grw_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "elastic_pi_ripples",
       "source_complex_id": "damping_and_lag_corrected_harmonic_clock",
@@ -5599,7 +5599,7 @@
         "eq:spark_def_app"
       ],
       "first_label": "app:sc_complex_01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "cosmic_spark_flowpoint_correspondence_and_spectral_duality",
@@ -5624,7 +5624,7 @@
         "eq:sc02_memory_error_2a"
       ],
       "first_label": "app:sc_complex_02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory",
@@ -5649,7 +5649,7 @@
         "eq:sc03_cocycle_2a"
       ],
       "first_label": "app:sc_complex_03",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer",
@@ -5674,7 +5674,7 @@
         "eq:sc04_kernel_equivalence_2a"
       ],
       "first_label": "app:sc_complex_04",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "wave_sector_and_expansion_sector_cosmological_projection",
@@ -5699,7 +5699,7 @@
         "eq:sc05_transform_integral_commutation_2b"
       ],
       "first_label": "app:sc_complex_05",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "flowpoint_resolved_cosmological_memory_resolvent",
@@ -5724,7 +5724,7 @@
         "eq:sc06_frequency_expansion_synthesis_2b"
       ],
       "first_label": "app:sc_complex_06",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "common_potential_observation_operator",
@@ -5749,7 +5749,7 @@
         "eq:sc07_dual_branch_definition_2c"
       ],
       "first_label": "app:sc_complex_07",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "cosmological_spark_dynamics",
       "source_complex_id": "horizon_localized_observable_memory_closure",
@@ -5798,7 +5798,7 @@
         "eq:fourier_synthesis_measure_2a"
       ],
       "first_label": "app:dtqc_complex_01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dtqc",
       "source_complex_id": "elastic_dtqc_spectral_measure_dual_of_dtqc",
@@ -5823,7 +5823,7 @@
         "eq:leakage_mass_2a"
       ],
       "first_label": "app:dtqc_complex_02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dtqc",
       "source_complex_id": "dual_support_equivalence_support_mismatch_leakage",
@@ -5848,7 +5848,7 @@
         "eq:l2_gap_equals_resid_2a"
       ],
       "first_label": "app:dtqc_complex_03",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dtqc",
       "source_complex_id": "parseval_energy_bijection_l_2_energy_mismatch",
@@ -5873,7 +5873,7 @@
         "eq:calc_Sx_conv_1a"
       ],
       "first_label": "app:dtqc_complex_04",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dtqc",
       "source_complex_id": "irrational_drive_locking_commensurate_resonance_collapse",
@@ -6170,7 +6170,7 @@
         "eq:drv_dtqc_b01_exchange_square"
       ],
       "first_label": "app:drv_dtqc_b01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "dtqc",
       "source_complex_id": "elastic_gain_support_transport_isomorphism",
@@ -6192,7 +6192,7 @@
         "eq:drv_dtqc_b02_exchange_square"
       ],
       "first_label": "app:drv_dtqc_b02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "dtqc",
       "source_complex_id": "diophantine_parseval_locking_invariant",
@@ -6323,7 +6323,7 @@
         "eq:drv_dtqc_c01_exchange_square"
       ],
       "first_label": "app:drv_dtqc_c01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "dtqc",
       "source_complex_id": "elastic_parseval_quasicrystal_isometry",

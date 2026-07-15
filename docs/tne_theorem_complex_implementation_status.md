@@ -10,12 +10,12 @@ exist.
 
 | Level | Inventory | Implemented |
 | --- | ---: | ---: |
-| A | 204 | 70 |
-| B | 98 | 35 |
-| C | 49 | 17 |
-| Total | 351 | 122 |
+| A | 204 | 74 |
+| B | 98 | 37 |
+| C | 49 | 18 |
+| Total | 351 | 129 |
 
-Remaining status is 194 `proxy_only` and 35 `not_implemented`. Those labels are
+Remaining status is 187 `proxy_only` and 35 `not_implemented`. Those labels are
 deliberately not inferred upward from related legacy modules.
 
 ## Implemented Flowpoint complex chain
@@ -131,3 +131,18 @@ defect field. Every B operator uses both source residuals and exposes two
 source-removal witnesses. The C operator reports boundary trace, localization,
 reconstruction, coercivity, observability, and both-B ablations. A successful
 finite computation is reported only as `numerical_candidate`.
+
+## PGQENN
+
+The canonical graph-growth law is deterministic and records every prime label,
+typed 2-adic depth, parity phase, and weighted adjacency. Prime-gap/depth
+criteria select edges; stochastic sampling exists only as the named, seeded
+`stochastic_comparison_ablation` mode. Bias-free graph message passing is
+Flowpoint/C2 equivariant and combines fail-closed DFI, parity-conditioned pDFI,
+exact unclipped Elastic-π gains, graph locality, and Parseval diagnostics.
+
+Seven PGQENN theorem complexes are certified: four prime-graph A laws, two
+positive non-cancelling B residual energies, and one graph-local C defect field.
+The C result reports boundary trace, edge localization, reconstruction,
+coercivity, isolated-node observability, and both-B source removal. It remains
+a finite `numerical_candidate`, not an attainment or proof claim.

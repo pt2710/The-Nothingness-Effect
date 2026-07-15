@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 122,
+      "implemented": 129,
       "not_implemented": 35,
-      "proxy_only": 194
+      "proxy_only": 187
     },
     "total": 351
   },
@@ -6915,7 +6915,7 @@
         "eq:prime_motif_boundedness_proof_calc_cap_1a"
       ],
       "first_label": "app:pgqenn_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pgqenn",
       "source_complex_id": "prime_motif_boundedness_motif_induced_energy_divergence",
@@ -6940,7 +6940,7 @@
         "eq:flowpoint_parity_locking_proof_calculus_equation_1a"
       ],
       "first_label": "app:pgqenn_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pgqenn",
       "source_complex_id": "flowpoint_parity_locking_parity_leakage",
@@ -6965,7 +6965,7 @@
         "eq:dfi_pgqenn_proof_calculus_equation_1a"
       ],
       "first_label": "app:pgqenn_complex_03",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pgqenn",
       "source_complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
@@ -6990,7 +6990,7 @@
         "eq:elastic_pi_curvature_regularization_proof_calculus_equation_1a"
       ],
       "first_label": "app:pgqenn_complex_04",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pgqenn",
       "source_complex_id": "elastic_e_curvature_regularization_curvature_ambiguity_leakage",
@@ -7165,7 +7165,7 @@
         "eq:drv_pgqenn_b01_2b"
       ],
       "first_label": "app:drv_pgqenn_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "pgqenn",
       "source_complex_id": "prime_motif_parity_stability_functional",
@@ -7190,7 +7190,7 @@
         "eq:drv_pgqenn_b02_2b"
       ],
       "first_label": "app:drv_pgqenn_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "pgqenn",
       "source_complex_id": "dfi_elastic_prime_curvature_coupling",
@@ -7290,7 +7290,7 @@
         "eq:drv_pgqenn_c01_2c"
       ],
       "first_label": "app:drv_pgqenn_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "pgqenn",
       "source_complex_id": "prime_motif_elastic_parity_spatial_closure",

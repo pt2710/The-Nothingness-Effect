@@ -53,9 +53,10 @@ provenance manifest.
 ## Checkpoint status
 
 The Flowpoint, mathematical-closure, foundational-duality, DFI, pDFI,
-Elastic-π, Elastic-π Norm, and selected physical-dynamics checkpoints certify
-100 theorem complexes: 57 A, 29 B, and 14 C. The remaining matrix contains 216
-`proxy_only` and 35 `not_implemented` records. Every upgraded B contract has all-source removal
+Elastic-π, Elastic-π Norm, selected physical-dynamics, and completeness
+checkpoints certify 115 theorem complexes: 66 A, 33 B, and 16 C. The remaining
+matrix contains 201 `proxy_only` and 35 `not_implemented` records. Every
+upgraded B contract has all-source removal
 tests, and every upgraded C contract has an explicit spatial/local operator,
 boundary or leakage diagnostics, all-B-source ablations, and a
 `numerical_candidate` distinction where finite computation does not establish
@@ -71,3 +72,7 @@ Effect, Elastic Dubler Interferometry, Locality-Driven Gravity, Black-Hole
 Dynamics, Elastic-π Ripples, Cosmological Spark Dynamics, and Discrete-Time
 Quasicrystals. Legacy simulators remain proxy evidence for every non-upgraded
 row and are not presented as complete theorem implementations.
+
+All 15 completeness-theorem records are typed, but finite dual-closure traces,
+fixed points, certificate gluing, and terminal quotients retain the explicit
+boundary that they are computational support rather than formal proof.

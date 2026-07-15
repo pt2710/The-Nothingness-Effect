@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 100,
+      "implemented": 115,
       "not_implemented": 35,
-      "proxy_only": 216
+      "proxy_only": 201
     },
     "total": 351
   },
@@ -7970,7 +7970,7 @@
         "eq:completeness_principle_formal_04"
       ],
       "first_label": "app:godel_boundary_first_order_completeness_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion",
@@ -7990,7 +7990,7 @@
         "eq:completeness_principle_formal_07"
       ],
       "first_label": "app:completeness_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
@@ -8013,7 +8013,7 @@
         "eq:completeness_principle_formal_10"
       ],
       "first_label": "app:completeness_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse",
@@ -8038,7 +8038,7 @@
         "eq:dcid_cor_quantum_equation_1a"
       ],
       "first_label": "app:completeness_complex_03",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "dual_closure_idempotence_and_oscillatory_non_closure",
@@ -8063,7 +8063,7 @@
         "eq:karoubi_cor_quantum_equation_1a_73"
       ],
       "first_label": "app:completeness_complex_04",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
@@ -8088,7 +8088,7 @@
         "eq:cps_cor_quantum_equation_1a_8"
       ],
       "first_label": "app:completeness_complex_05",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures",
@@ -8113,7 +8113,7 @@
         "eq:cons_cor_quantum_equation_1a_9"
       ],
       "first_label": "app:completeness_complex_06",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
@@ -8138,7 +8138,7 @@
         "eq:ct07_outcome_principle"
       ],
       "first_label": "app:completeness_complex_07",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "completeness_theorem",
       "source_complex_id": "typed_admissibility_instrument",
@@ -8163,7 +8163,7 @@
         "eq:ct08_split_residual"
       ],
       "first_label": "app:completeness_complex_08",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "completeness_theorem",
       "source_complex_id": "idempotent_splitting_and_oscillation_obstruction",
@@ -8188,7 +8188,7 @@
         "eq:ct09_negative_implication"
       ],
       "first_label": "app:completeness_complex_09",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "completeness_theorem",
       "source_complex_id": "protected_commuting_closure_transport",
@@ -8212,7 +8212,7 @@
         "eq:completeness_principle_formal_34"
       ],
       "first_label": "app:noether_global_a_level_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "global_symmetry_and_kd_charge_conservation",
@@ -8235,7 +8235,7 @@
         "eq:completeness_principle_formal_37"
       ],
       "first_label": "app:noether_local_a_level_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "completeness_theorem",
       "source_complex_id": "local_gauge_symmetry_and_elastic_divergence_identity",
@@ -8260,7 +8260,7 @@
         "eq:noether_charge_synthesis"
       ],
       "first_label": "app:noether_b_level_symmetric_closure",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "completeness_theorem",
       "source_complex_id": "noether_constant_to_local_transgression",
@@ -8285,7 +8285,7 @@
         "eq:ct10_principle_78"
       ],
       "first_label": "app:completeness_complex_10",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "completeness_theorem",
       "source_complex_id": "sheaf_of_closure_certificates",
@@ -8310,7 +8310,7 @@
         "eq:nothingness_ic_principle"
       ],
       "first_label": "app:nothingness_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "completeness_theorem",
       "source_complex_id": "terminal_quotient_of_closure_certificates",

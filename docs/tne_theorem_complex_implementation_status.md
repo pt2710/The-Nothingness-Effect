@@ -10,12 +10,12 @@ exist.
 
 | Level | Inventory | Implemented |
 | --- | ---: | ---: |
-| A | 204 | 57 |
-| B | 98 | 29 |
-| C | 49 | 14 |
-| Total | 351 | 100 |
+| A | 204 | 66 |
+| B | 98 | 33 |
+| C | 49 | 16 |
+| Total | 351 | 115 |
 
-Remaining status is 216 `proxy_only` and 35 `not_implemented`. Those labels are
+Remaining status is 201 `proxy_only` and 35 `not_implemented`. Those labels are
 deliberately not inferred upward from related legacy modules.
 
 ## Implemented Flowpoint complex chain
@@ -98,3 +98,20 @@ local spatial operator with boundary and localization diagnostics, coercivity,
 observability/reconstruction residuals, both-B ablations, and explicit
 `numerical_candidate` status. Seven deterministic runners emit 49 additional
 theorem-level manifests.
+
+## Completeness theorem
+
+All 15 completeness records are now typed: 9 A, 4 B, and 2 C. The source laws
+reuse the existing finite dual-closure simulator for bounded Gödel-like
+boundary evidence and add finite-prefix theoremhood, non-manifestability,
+idempotence, Karoubi splitting, parity/SOI commutation, conservativity, and
+global/local Noether residuals.
+
+The four B contracts implement genuine multi-source admissibility, splitting,
+protected transport, and constant-to-local transgression operators with
+every-source removal tests. The two C contracts implement spatial certificate
+gluing and a terminal certificate quotient with boundary, overlap/quotient,
+reconstruction, and observability residuals. Both remain
+`numerical_candidate`; finite representational closure is never labeled a
+formal proof. The artifact runner emits 15 theorem-level manifests in addition
+to the repository's pre-existing supplementary traces.

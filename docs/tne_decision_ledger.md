@@ -7,3 +7,5 @@
 | D-003 | Disambiguate the audit's four duplicate slug IDs with module prefixes. | The audit has 351 rows but only 347 unique slugs. Both colliding records receive `module::source_slug`; the original audit value remains in `source_complex_id`. |
 | D-004 | Treat finite residual reduction as evidence, never as proof by itself. | Runtime statuses distinguish `numerical_candidate`, `closed`, `open`, `blocked`, and `singular`; clipping is approximation metadata. |
 | D-005 | Keep legacy/proxy coverage visible until every contract gate is present. | Existing related code maps to `proxy_only`; a file's existence alone does not upgrade a theorem-complex status. |
+| D-006 | Implement Flowpoint from the canonical linear involution, not the historical XOR presentation. | `F(x)=-x`, the exact parity schedule, balance-fiber transport, and affine history field are typed source laws. `fp` remains a compatibility generator, including Boolean toggling. |
+| D-007 | Represent a computed 2-adic value as an exact finite prefix with an explicit digit count. | A finite integer is not presented as a completed infinite 2-adic object. |

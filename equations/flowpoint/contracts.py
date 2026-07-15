@@ -1,0 +1,24 @@
+"""Flowpoint theorem-contract registration."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+from equations.theorem_complex_runtime import ComplexContract, TheoremComplexRegistry
+
+from .a_level import contracts as a_contracts
+from .b_level import contracts as b_contracts
+from .c_level import contracts as c_contracts
+
+
+def flowpoint_contracts() -> tuple[ComplexContract, ...]:
+    return a_contracts() + b_contracts() + c_contracts()
+
+
+def registered_flowpoint_registry(
+    matrix: str | Path = "docs/data/theorem_complex_implementation_matrix.csv",
+) -> TheoremComplexRegistry:
+    registry = TheoremComplexRegistry.from_csv(matrix)
+    for contract in flowpoint_contracts():
+        registry.register(contract)
+    return registry

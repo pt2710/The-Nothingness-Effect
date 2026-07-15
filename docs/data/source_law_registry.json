@@ -36,6 +36,11 @@
     "C": 49,
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
+    "implementation_status_counts": {
+      "implemented": 7,
+      "not_implemented": 74,
+      "proxy_only": 270
+    },
     "total": 351
   },
   "schema_version": "1.0",
@@ -59,7 +64,7 @@
         "eq:flowpoint_harmonic_sampling_1a"
       ],
       "first_label": "subsec:flowpoint_oscillation_eigenstructure_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "flowpoint",
       "source_complex_id": "self_negating_oscillation_and_eigenstructure",
@@ -84,7 +89,7 @@
         "eq:2adic_bit_flip_increment_parity_1a"
       ],
       "first_label": "subsec:parity_to_bit_equivalence_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "flowpoint",
       "source_complex_id": "parity_to_bit_equivalence_and_2_adic_coding",
@@ -109,7 +114,7 @@
         "eq:flowpoint_forward_balance_invariance_1a"
       ],
       "first_label": "subsec:flowpoint_completeness_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "flowpoint",
       "source_complex_id": "kernel_fiber_integrability",
@@ -134,7 +139,7 @@
         "eq:torsor_origin_coordinate_bijection_1a"
       ],
       "first_label": "subsec:flowpoint_nonlinear_time_phase_clock_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "flowpoint",
       "source_complex_id": "phase_clock",
@@ -159,7 +164,7 @@
         "eq:drv_flowpoint_b01_prefix_agreement_1b"
       ],
       "first_label": "app:drv_flowpoint_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "flowpoint",
       "source_complex_id": "scheduled_spectral_history",
@@ -184,7 +189,7 @@
         "eq:drv_flowpoint_b02_cocycle_law_1b"
       ],
       "first_label": "app:drv_flowpoint_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "flowpoint",
       "source_complex_id": "phase_indexed_kernel_transport",
@@ -209,7 +214,7 @@
         "eq:drv_flowpoint_c01_field_transport_1c"
       ],
       "first_label": "app:drv_flowpoint_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "flowpoint",
       "source_complex_id": "affine_history_field",

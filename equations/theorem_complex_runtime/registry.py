@@ -67,7 +67,11 @@ class TheoremComplexRegistry:
         result = {"total": len(self._inventory), "A": 0, "B": 0, "C": 0}
         for record in self._inventory.values():
             result[record.level.value] += 1
-        result["implemented"] = len(self._contracts)
+        result["inventory_implemented"] = sum(
+            record.implementation_status == "implemented"
+            for record in self._inventory.values()
+        )
+        result["registered_contracts"] = len(self._contracts)
         return result
 
     @classmethod

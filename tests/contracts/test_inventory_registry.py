@@ -18,7 +18,8 @@ def test_inventory_has_exact_a_b_c_counts_and_unique_ids():
         "A": 204,
         "B": 98,
         "C": 49,
-        "implemented": 0,
+        "inventory_implemented": 7,
+        "registered_contracts": 0,
     }
     assert len({str(record.complex_id) for record in registry.inventory()}) == 351
 

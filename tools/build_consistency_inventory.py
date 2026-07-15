@@ -152,13 +152,21 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
         raise ValueError(f"Expected 351 theorem complexes; received {len(rows)}")
     ids = canonical_ids(rows)
     hashes, _, verification = verify_sources(appendix_dir, rows)
+    overrides_path = output_dir / "implementation_status_overrides.json"
+    overrides = (
+        json.loads(overrides_path.read_text(encoding="utf-8"))
+        if overrides_path.is_file()
+        else {}
+    )
 
     matrix_rows: list[dict[str, Any]] = []
     for row in rows:
         key = (row["appendix_file"], row["first_label"], row["module"])
+        canonical_id = ids[key]
+        override = overrides.get(canonical_id, {})
         matrix_rows.append(
             {
-                "complex_id": ids[key],
+                "complex_id": canonical_id,
                 "source_complex_id": row["complex_id"],
                 "appendix_file": row["appendix_file"],
                 "appendix_source_sha256": hashes[row["appendix_file"]],
@@ -169,16 +177,18 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
                 "equation_labels": row["equation_labels"],
                 "module": row["module"],
                 "baseline_status": row["baseline_status"],
-                "implementation_status": implementation_status(row),
-                "implementation_path": row["proposed_implementation_file"],
-                "test_path": row["proposed_test_file"],
-                "simulation_path": row["proposed_simulation_file"],
+                "implementation_status": override.get("implementation_status", implementation_status(row)),
+                "implementation_path": override.get("implementation_path", row["proposed_implementation_file"]),
+                "test_path": override.get("test_path", row["proposed_test_file"]),
+                "simulation_path": override.get("simulation_path", row["proposed_simulation_file"]),
                 "visualization_path": row["proposed_visualization_file"],
                 "required_tests": row["required_tests"],
                 "required_artifacts": row["required_artifacts"],
-                "artifact_status": "not_generated",
+                "artifact_status": override.get("artifact_status", "not_generated"),
                 "appendix_label_verification": "verified",
-                "decision_note": "Audit baseline retained; exact contract not yet certified.",
+                "decision_note": override.get(
+                    "decision_note", "Audit baseline retained; exact contract not yet certified."
+                ),
             }
         )
     matrix_fields = list(matrix_rows[0])
@@ -238,6 +248,9 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
             "C": sum(row["level"] == "C" for row in matrix_rows),
             "duplicate_complex_ids": 0,
             "audit_source_id_collisions_resolved": 4,
+            "implementation_status_counts": dict(
+                Counter(row["implementation_status"] for row in matrix_rows)
+            ),
         },
         "verification": verification,
         "source_laws": [

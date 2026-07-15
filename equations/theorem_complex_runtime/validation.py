@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, fields, is_dataclass
 import math
 from numbers import Number
-from typing import Any, Iterable
+from typing import Any, Iterable, Mapping
 
 import numpy as np
 
@@ -15,6 +15,8 @@ from .types import NonFiniteValueError
 def ensure_finite(value: Any, *, name: str = "value") -> Any:
     """Return *value* if finite, otherwise raise without coercion."""
 
+    if value is None or isinstance(value, (str, bytes, bool)):
+        return value
     if isinstance(value, Number):
         if isinstance(value, complex):
             finite = math.isfinite(value.real) and math.isfinite(value.imag)
@@ -22,6 +24,18 @@ def ensure_finite(value: Any, *, name: str = "value") -> Any:
             finite = math.isfinite(float(value))
         if not finite:
             raise NonFiniteValueError(f"{name} contains NaN or infinity")
+        return value
+    if is_dataclass(value) and not isinstance(value, type):
+        for item in fields(value):
+            ensure_finite(getattr(value, item.name), name=f"{name}.{item.name}")
+        return value
+    if isinstance(value, Mapping):
+        for key, item in value.items():
+            ensure_finite(item, name=f"{name}[{key!r}]")
+        return value
+    if isinstance(value, (tuple, list, set)):
+        for index, item in enumerate(value):
+            ensure_finite(item, name=f"{name}[{index}]")
         return value
     array = np.asarray(value)
     if not np.all(np.isfinite(array)):

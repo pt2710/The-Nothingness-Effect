@@ -28,6 +28,13 @@ from theoretical_benchmarks.hawking.hawking_theoretical_benchmark import (
 )
 
 
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _repository_path(path: Path) -> str:
+    return path.resolve().relative_to(REPOSITORY_ROOT).as_posix()
+
+
 def _common_mass_coordinates(count: int = 24) -> dict[str, np.ndarray]:
     physical_mass = np.geomspace(1.0e11, 1.0e15, count)
     proxy_mass = np.geomspace(1.4, 6.5, count)
@@ -285,18 +292,18 @@ def run() -> dict[str, Any]:
             "claim_boundary": THEORETICAL_CLAIM_BOUNDARY,
             "comparison_type": "theoretical consistency comparison",
             "data_status": "theoretical_benchmark",
-            "source_benchmark_data": str((simulation_dir() / "hawking_theoretical_benchmark_data.csv").as_posix()),
+            "source_benchmark_data": _repository_path(simulation_dir() / "hawking_theoretical_benchmark_data.csv"),
             "output_paths": {
-                "temperature_csv": temperature_csv.as_posix(),
-                "power_csv": power_csv.as_posix(),
-                "spectrum_csv": spectrum_csv.as_posix(),
-                "metrics_csv": metrics_csv.as_posix(),
-                "temperature_figure": (comparison_root / "tne_vs_hawking_temperature.png").as_posix(),
-                "power_figure": (comparison_root / "tne_vs_hawking_power.png").as_posix(),
-                "spectrum_figure": (comparison_root / "tne_vs_hawking_spectrum.png").as_posix(),
-                "residual_figure": residual_path.as_posix(),
-                "report": report_path.as_posix(),
-                "manifest": manifest_path.as_posix(),
+                "temperature_csv": _repository_path(temperature_csv),
+                "power_csv": _repository_path(power_csv),
+                "spectrum_csv": _repository_path(spectrum_csv),
+                "metrics_csv": _repository_path(metrics_csv),
+                "temperature_figure": _repository_path(comparison_root / "tne_vs_hawking_temperature.png"),
+                "power_figure": _repository_path(comparison_root / "tne_vs_hawking_power.png"),
+                "spectrum_figure": _repository_path(comparison_root / "tne_vs_hawking_spectrum.png"),
+                "residual_figure": _repository_path(residual_path),
+                "report": _repository_path(report_path),
+                "manifest": _repository_path(manifest_path),
             },
             "limitations": "Finite proxy comparison only; not empirical validation and not a proof substitute.",
         },

@@ -22,6 +22,13 @@ def _deterministic_test_seed():
 
     random.seed(0)
     np.random.seed(0)
+    try:
+        import torch
+    except ImportError:
+        pass
+    else:
+        torch.manual_seed(0)
+        torch.use_deterministic_algorithms(True)
 
 
 @pytest.fixture(scope="session")

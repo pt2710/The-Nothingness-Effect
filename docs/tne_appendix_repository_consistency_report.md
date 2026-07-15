@@ -95,3 +95,34 @@ bidirectional memory, observation aggregation, spectral/spatial meta-residuals,
 and fail-closed arbitration. Appendix verification corrected the bounded source
 selection to B19=A01+A13 and B20=A02+A14; C29 consumes those two complete B
 laws. The older duplicated `tne_concepts/SOInet` stack is compatibility-only.
+
+## Final artifact, file-plan, and CI gates
+
+All 18 certified runners were regenerated outside the Git root. Their 136
+unique theorem manifests cover the implemented matrix exactly and produced 18
+metrics tables plus 18 static figures at deterministic seed 0. Eight canonical
+animation generators remain available; large animations and frame dumps are
+not tracked.
+
+The audit's 170-row repository file plan was reviewed row by row: 55 exact
+paths are present, 45 rows have a documented partial/equivalent responsibility,
+and 70 remain explicitly open. An alternate path does not imply that every
+theorem assigned to the planned module is implemented.
+
+`pyproject.toml` declares packaging, optional AI dependencies, pytest, Ruff,
+and mypy configuration. CI separates the core suite, theorem contracts,
+artifact smoke tests, AI CPU smoke tests, and security/provenance guards. The
+guards enforce unique IDs, complete aggregate provenance, resolved implemented
+dependencies, no canonical NaN/Inf neutralization, and no tracked `.tex` files.
+
+## Final QA snapshot
+
+- Python: 3.14.3; dependency check passed.
+- Full suite: 337 passed, 0 failed, 0 skipped, 9 warnings in 270.46 seconds.
+- Inventory: 136 implemented (78 A, 39 B, 19 C), 180 proxy-only, 35 not implemented.
+- Duplicate complex IDs: 0; unresolved implemented-source dependencies: 0.
+- Artifacts: 18 tables, 18 static figures, 8 animation generators, 136 manifests.
+- Appendix verification: 7 checksums, 351 first labels, and 3,722 equation labels verified; no missing labels.
+- Git security: 0 tracked `.tex` files and 0 authoritative appendix filename/content-hash matches.
+
+The machine-readable snapshot is `docs/data/final_qa_manifest.json`.

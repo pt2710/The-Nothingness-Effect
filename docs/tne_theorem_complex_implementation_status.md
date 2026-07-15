@@ -163,3 +163,15 @@ operators are positive non-cancelling residual energies with every-source
 removal tests. C29 is one modality-spatial field with boundary, localization,
 reconstruction, coercivity, observability, and both-B ablations. Its finite
 success status is `numerical_candidate`.
+
+## Final validation
+
+The full repository suite completed with 337 passed, 0 failed, 0 skipped, and
+9 warnings in 270.46 seconds on Python 3.14.3. The warnings are seven legacy
+`PytestReturnNotNoneWarning` records and two expected deprecation warnings from
+the duality compatibility wrapper.
+
+The aggregate guard reports 351 unique IDs, 136 registered contracts, zero
+duplicate IDs, zero unresolved implemented-source dependencies, 136 provenance
+manifests, and zero tracked `.tex` files. `python -m pip check` reports no broken
+requirements.

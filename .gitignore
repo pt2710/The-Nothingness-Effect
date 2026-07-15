@@ -46,6 +46,8 @@ secrets.*
 build/
 dist/
 site/
+artifacts/generated/
+.qa_artifacts/
 *.log
 *.tmp
 *.temp
@@ -90,3 +92,5 @@ appendix_tne_artificial_intelligence_architechture.tex
 appendix_the_completeness_theorem.tex
 appendix_theorem_complex_commentary.tex
 appendix_tne_research_relations_implications.tex
+appendix_*.tex.sha256
+appendix_*.sha256

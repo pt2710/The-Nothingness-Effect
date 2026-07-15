@@ -197,13 +197,21 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
     matrix_fields = list(matrix_rows[0])
     write_csv(output_dir / "theorem_complex_implementation_matrix.csv", matrix_rows, matrix_fields)
 
+    ai_overrides_path = output_dir / "ai_integration_status_overrides.json"
+    ai_overrides = (
+        json.loads(ai_overrides_path.read_text(encoding="utf-8"))
+        if ai_overrides_path.is_file()
+        else {}
+    )
     ai_rows = read_csv(audit_dir / "TNE_AI_DERIVATION_INTEGRATION_MATRIX.csv")
     ai_output: list[dict[str, Any]] = []
     for row in ai_rows:
         key = (row["appendix_file"], row["first_label"], row["module"])
+        canonical_id = ids[key]
+        integration = ai_overrides.get(canonical_id, {})
         ai_output.append(
             {
-                "complex_id": ids[key],
+                "complex_id": canonical_id,
                 "source_complex_id": row["complex_id"],
                 "appendix_file": row["appendix_file"],
                 "appendix_source_sha256": hashes[row["appendix_file"]],
@@ -217,11 +225,18 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
                 "pgqenn_use": row["pgqenn_use"],
                 "soinets_use": row["soinets_use"],
                 "verification_status": "appendix_labels_verified",
-                "integration_status": "planned",
+                "integration_status": integration.get("integration_status", "planned"),
+                "integration_evidence": integration.get("integration_evidence", ""),
             }
         )
     write_csv(output_dir / "ai_derivation_integration_matrix.csv", ai_output, list(ai_output[0]))
 
+    revision_overrides_path = output_dir / "repository_revision_status_overrides.json"
+    revision_overrides = (
+        json.loads(revision_overrides_path.read_text(encoding="utf-8"))
+        if revision_overrides_path.is_file()
+        else {}
+    )
     revision_rows = read_csv(audit_dir / "TNE_REPOSITORY_FILE_REVISION_PLAN.csv")
     revision_output: list[dict[str, Any]] = []
     for row in revision_rows:
@@ -230,7 +245,14 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
             status = "present_unverified" if exists else "pending_addition"
         else:
             status = "pending_revision" if exists else "missing_baseline_path"
-        revision_output.append({**row, "revision_status": status, "verification_evidence": ""})
+        override = revision_overrides.get(row["path"], {})
+        revision_output.append(
+            {
+                **row,
+                "revision_status": override.get("revision_status", status),
+                "verification_evidence": override.get("verification_evidence", ""),
+            }
+        )
     write_csv(
         output_dir / "repository_file_revision_status.csv",
         revision_output,

@@ -1,0 +1,110 @@
+{
+  "appendix_source_checksum_verification": {
+    "appendix_checksum_verified": true,
+    "appendix_counts": {
+      "appendix_canonical_self_negating_involution_flowpoint.tex": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "total": 7
+      },
+      "appendix_the_completeness_theorem.tex": {
+        "A": 9,
+        "B": 4,
+        "C": 2,
+        "total": 15
+      },
+      "appendix_tne_artificial_intelligence_architechture.tex": {
+        "A": 40,
+        "B": 21,
+        "C": 10,
+        "total": 71
+      },
+      "appendix_tne_fluctuation_and_elastic_dynamics.tex": {
+        "A": 22,
+        "B": 10,
+        "C": 4,
+        "total": 36
+      },
+      "appendix_tne_foundational_closure_architecture.tex": {
+        "A": 43,
+        "B": 22,
+        "C": 14,
+        "total": 79
+      },
+      "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": {
+        "A": 82,
+        "B": 37,
+        "C": 17,
+        "total": 136
+      },
+      "appendix_tne_mathematical_closure_architecture.tex": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "total": 7
+      }
+    },
+    "level_counts": {
+      "A": 204,
+      "B": 98,
+      "C": 49
+    },
+    "missing_equation_labels": 0,
+    "missing_first_labels": 0,
+    "verified_appendix_files": 7,
+    "verified_equation_labels": 3722,
+    "verified_first_labels": 351
+  },
+  "artifact_summary": {
+    "animation_generators": 8,
+    "deterministic_seed": 0,
+    "generated_static_figures": 18,
+    "generated_tables": 18,
+    "theorem_manifests": 136
+  },
+  "changes": {
+    "modified_files": 17,
+    "new_files": 189,
+    "total_changed_files": 206
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "default_branch": "main",
+  "dependency_status": "pip check passed",
+  "python_version": "3.14.3",
+  "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
+  "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+  "repository_revision_plan": {
+    "reviewed_open": 70,
+    "reviewed_partial_alternative": 45,
+    "reviewed_present": 55
+  },
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "result_commit_note": "This is the immutable implementation/artifact source commit immediately before the final QA report commit.",
+  "schema_version": "1.0",
+  "security_confirmation": "No authoritative appendix .tex file was copied into, tracked by, committed to, or pushed to the GitHub repository.",
+  "source_law_regression_status": "passed",
+  "tests": {
+    "failed": 0,
+    "passed": 337,
+    "runtime_seconds": 270.46,
+    "skipped": 0,
+    "warnings": 9
+  },
+  "theorem_inventory": {
+    "A": 204,
+    "B": 98,
+    "C": 49,
+    "duplicate_complex_ids": 0,
+    "implemented": 136,
+    "implemented_A": 78,
+    "implemented_B": 39,
+    "implemented_C": 19,
+    "not_implemented": 35,
+    "proxy_only": 180,
+    "total": 351
+  },
+  "tracked_tex_files": [],
+  "unresolved_internal_dependencies": [],
+  "work_branch": "codex/tne-appendix-consistency"
+}

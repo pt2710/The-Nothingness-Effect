@@ -29,6 +29,11 @@ AUTHORITATIVE_SHA256 = {
     "f0f87435af715ebacf51f58fd87c978f22355a4856ddec73061e3c500cb29a41",
     "1973d00e76f03858ed58c0ad6457e0773f17a2b8609cdb57328f7f5bb664d7aa",
 }
+AUTHORITATIVE_SIDECAR_FILENAMES = {
+    sidecar
+    for filename in AUTHORITATIVE_FILENAMES
+    for sidecar in (f"{filename}.sha256", f"{Path(filename).stem}.sha256")
+}
 
 
 def tracked_paths(repository: Path) -> list[Path]:
@@ -51,14 +56,20 @@ def digest(path: Path) -> str:
 def main() -> int:
     repository = Path.cwd().resolve()
     tracked = tracked_paths(repository)
-    forbidden_names = [path for path in tracked if path.name in AUTHORITATIVE_FILENAMES]
+    forbidden_names = [
+        path
+        for path in tracked
+        if path.name in AUTHORITATIVE_FILENAMES or path.name in AUTHORITATIVE_SIDECAR_FILENAMES
+    ]
     forbidden_hashes = [
         path for path in tracked if path.is_file() and digest(path) in AUTHORITATIVE_SHA256
     ]
     working_tree_copies = [
         path
-        for path in repository.rglob("*.tex")
-        if ".git" not in path.parts and path.name in AUTHORITATIVE_FILENAMES
+        for path in repository.rglob("*")
+        if ".git" not in path.parts
+        and path.is_file()
+        and (path.name in AUTHORITATIVE_FILENAMES or path.name in AUTHORITATIVE_SIDECAR_FILENAMES)
     ]
     if forbidden_names or forbidden_hashes or working_tree_copies:
         print("authoritative appendix security gate failed")

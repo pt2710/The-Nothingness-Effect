@@ -73,6 +73,10 @@ empirical/cache/
 **/frame_*.png
 **/*_frame_*.png
 
+# Compact deterministic AI capability animations are intentional evidence and
+# remain colocated with their simulation producer.
+!equations/artificial_intelligence/**/simulation/*.gif
+
 # Generated interactive visualization exports
 **/simulation/*.html
 **/simulation.html

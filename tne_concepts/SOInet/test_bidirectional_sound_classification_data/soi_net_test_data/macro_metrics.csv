@@ -1,6 +1,0 @@
-metric,value
-accuracy,0.89
-balanced_accuracy,0.92640522875817
-macro_precision,0.8244680851063829
-macro_recall,0.92640522875817
-macro_f1,0.864604585909459

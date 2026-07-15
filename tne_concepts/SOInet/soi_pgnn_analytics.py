@@ -2,6 +2,7 @@ import os
 import math
 import random
 from collections import defaultdict, deque, Counter
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -21,11 +22,11 @@ except ImportError:
     betweenness_centrality = None
     clustering = None
 
-# Default data/figure directory
-DEFAULT_FIG_DIR = "test_color_classification_data/soi_net_test_figures"
-os.makedirs(DEFAULT_FIG_DIR, exist_ok=True)
-DEFAULT_DATA_DIR = "test_color_classification_data/soi_net_test_data"
-os.makedirs(DEFAULT_DATA_DIR, exist_ok=True)
+# Legacy analytics defaults now point at the canonical producer-local layout.
+# Importing this compatibility module must not create repository-root folders.
+_REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_FIG_DIR = str(_REPOSITORY_ROOT / "equations" / "artificial_intelligence" / "color_classification" / "simulation")
+DEFAULT_DATA_DIR = str(_REPOSITORY_ROOT / "equations" / "artificial_intelligence" / "color_classification" / "test")
 
 # --- Alignment helper for all plotting routines ---
 def _align_coords_primes(coords, primes):
@@ -328,8 +329,10 @@ def plot_spectrum_classification(wavelengths, prototypes, net_idx, fig_dir=DEFAU
     plt.close(fig)
 
 def plot_sound_wave_comparisons(
-    freqs, prototypes, true, pred, sample_rate=16000, duration=0.3, out_dir="test_sound_classification_data/sound_wave_comparisons"
+    freqs, prototypes, true, pred, sample_rate=16000, duration=0.3, out_dir=None
 ):
+    if out_dir is None:
+        out_dir = _REPOSITORY_ROOT / "equations" / "artificial_intelligence" / "sound_classification" / "simulation"
     os.makedirs(out_dir, exist_ok=True)
     t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
     for i, (f_true, f_pred, lab_true, lab_pred) in enumerate(zip(freqs, prototypes[pred], true, pred)):

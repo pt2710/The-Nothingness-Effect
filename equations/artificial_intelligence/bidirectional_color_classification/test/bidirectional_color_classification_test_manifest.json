@@ -1,0 +1,46 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "bidirectional_color_classification",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "bidirectional_color_classification_test_results.csv",
+    "bidirectional_color_classification_test_figure.png",
+    "bidirectional_color_classification_test_manifest.json"
+  ],
+  "intended_output_group": "bidirectional color classification",
+  "metrics": {
+    "accuracy": 1.0,
+    "modality_rmse": 0.03500858321785927,
+    "roundtrip_accuracy": 1.0
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "8588f47b5095979dbad66ad2c58fd8cd3b86d74b1ab69c79a232273566004b95",
+  "parameters": {
+    "capability": "bidirectional_color_classification",
+    "mode": "test",
+    "seed": 0,
+    "synthetic_fixture": true
+  },
+  "regeneration_command": "python -m equations.artificial_intelligence.bidirectional_color_classification.test.test_capability",
+  "related_theorem_complex_ids": [
+    "soi_modality_invariant_convergence_and_collapse_completeness",
+    "soi_modality_dual_closure",
+    "modality_collapse_symmetry_operator"
+  ],
+  "repository_result_commit": "07ef126acb96e3c19bf841df1e048da0aa2d1027",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.03500858321785927
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

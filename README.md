@@ -22,6 +22,10 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
   statuses, residuals, registries, evaluation, and provenance.
 - `equations/artificial_intelligence/` contains canonical CPU-testable QENN,
   deterministic prime/parity PGQENN, and multi-network SOInets.
+- Its six producer-local output modules demonstrate color and sound
+  classification, bidirectional color and sound classification, and color and
+  sound cloning. See `docs/tne_ai_output_capabilities.md` for commands and
+  claim boundaries.
 - `the_nothingness_effect.py` is the argument-correct central facade; explicit
   compatibility wrappers retain bounded legacy behavior.
 - `tests/contracts`, `tests/invariants`, `tests/boundaries`,

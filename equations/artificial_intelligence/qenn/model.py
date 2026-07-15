@@ -13,7 +13,7 @@ from equations.artificial_intelligence.shared.entropy_gates import normalized_df
 from equations.artificial_intelligence.shared.equivariant_layers import C2EquivariantLinear, SpectralMemory
 from equations.artificial_intelligence.shared.flowpoint_layers import FlowpointLayer, anti_invariant_projector, invariant_projector
 from equations.artificial_intelligence.shared.provenance import backend_metadata
-from equations.artificial_intelligence.shared.types import AIClosureStatus, TNEAIOutput, require_finite_tensor
+from equations.artificial_intelligence.shared.types import TNEAIOutput, require_finite_tensor
 
 
 @dataclass

@@ -35,6 +35,26 @@ status data, and three representative AI figures:
 The aggregate manifest uses `<output-root>` placeholders, so regeneration
 commands are portable and do not expose a workstation path.
 
+## Colocated AI capability evidence
+
+The six observable AI output groups add a separate, bounded evidence layer:
+
+| Artifact class | Count |
+| --- | ---: |
+| Capability manifests | 12 |
+| Capability result tables | 12 |
+| Capability static figures | 12 |
+| Compact capability animations | 6 |
+| Representative auditory WAV files | 5 |
+
+Unlike the theorem-level regeneration suites, these compact outputs are kept
+beside their `test/` or `simulation/` producer to enforce the repository's
+subject-local organization standard. Every capability manifest records the AI
+appendix checksum, related theorem-complex IDs, parameters, tolerances,
+residuals, closure status, generated files, regeneration command, source
+status, and claim boundary. Details are in
+`docs/tne_ai_output_capabilities.md`.
+
 ## Validation
 
 `python -m tools.qa_guards` requires exactly one aggregate manifest per

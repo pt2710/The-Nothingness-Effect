@@ -1,0 +1,1 @@
+"""Color classification simulation package."""

@@ -39,6 +39,21 @@ readouts, transfers memory in both directions, and evaluates spectral, spatial,
 boundary, observability, and subnetwork completeness residuals. Its actual
 appendix source dependencies are B19=A01+A13, B20=A02+A14, and C29=B19+B20.
 
+## Observable output capabilities
+
+Six bounded output capabilities now connect these shared primitives to
+deterministic visual and auditory evidence: color classification, sound
+classification, bidirectional color classification, bidirectional sound
+classification, color cloning, and sound cloning. Each implementation owns a
+colocated `test/` and `simulation/` producer with compact data, figures,
+animations, manifests, and representative audio where applicable. The folder
+mapping, semantics, results, and regeneration commands are documented in
+`docs/tne_ai_output_capabilities.md`.
+
+These are numerical capability demonstrations, not additional theorem-complex
+certifications. Their manifests therefore reference related implemented source
+laws without changing the 351-row implementation inventory.
+
 ## Shared derivations currently wired
 
 The integrated rows include the canonical Flowpoint involution, finite parity
@@ -65,4 +80,5 @@ evidence are in `docs/data/ai_derivation_integration_matrix.csv`.
 python -m pip install -r requirements-ai.txt
 python -m pytest -q tests/numerical/test_qenn_model.py tests/numerical/test_pgqenn_model.py tests/numerical/test_soinets_model.py
 python -m pytest -q tests/contracts/test_qenn_contracts.py tests/contracts/test_pgqenn_contracts.py tests/contracts/test_soinets_contracts.py
+python -m pytest -q equations/artificial_intelligence/*/test
 ```

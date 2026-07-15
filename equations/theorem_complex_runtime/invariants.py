@@ -12,7 +12,8 @@ from .validation import ensure_finite
 
 def _array(value: Any) -> np.ndarray:
     ensure_finite(value)
-    return np.asarray(value, dtype=float)
+    dtype = complex if np.iscomplexobj(value) else float
+    return np.asarray(value, dtype=dtype)
 
 
 def l2_norm(value: Any) -> float:

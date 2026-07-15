@@ -10,12 +10,12 @@ exist.
 
 | Level | Inventory | Implemented |
 | --- | ---: | ---: |
-| A | 204 | 4 |
-| B | 98 | 2 |
-| C | 49 | 1 |
-| Total | 351 | 7 |
+| A | 204 | 11 |
+| B | 98 | 6 |
+| C | 49 | 3 |
+| Total | 351 | 20 |
 
-Remaining status is 270 `proxy_only` and 74 `not_implemented`. Those labels are
+Remaining status is 257 `proxy_only` and 74 `not_implemented`. Those labels are
 deliberately not inferred upward from related legacy modules.
 
 ## Implemented Flowpoint complex chain
@@ -46,3 +46,17 @@ python -m equations.flowpoint.simulation --output <directory>
 
 It writes one deterministic metrics table, one representative static figure,
 and seven theorem-level provenance manifests.
+
+## Foundational duality and mathematical closure
+
+Six foundational-duality complexes now expose finite involutive relations,
+minimal two-state actions, a genuine reciprocal double-cover law, free–cofree
+duality, and a spatial invariant/anti-invariant orbit field. Fixed points remain
+an explicit obstruction to the minimal double cover.
+
+All seven mathematical-closure complexes are typed. Their two B laws implement
+orientation-indexed operation transport and approximation-conditioned harmonic
+geometry rather than carrying A outputs side by side. The C signed-polar field
+has a declared spatial domain, local gradient, boundary trace, reconstruction
+residual, and both-source ablations. Because finite calibration does not prove
+attainment, its successful result remains `numerical_candidate`.

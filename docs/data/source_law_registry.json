@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 7,
+      "implemented": 20,
       "not_implemented": 74,
-      "proxy_only": 270
+      "proxy_only": 257
     },
     "total": 351
   },
@@ -239,7 +239,7 @@
         "eq:tne_mpl_tc_negative_principle_2a"
       ],
       "first_label": "ssec:tne_mpl_tc_bridge_theorem_1a2a",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "mathematical_closure",
       "source_complex_id": "flowpoint_unity_orientation_and_integer_unfolding",
@@ -264,7 +264,7 @@
         "eq:fm_alg_minimizer_synthesis_2a"
       ],
       "first_label": "ssec:fm_alg_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "mathematical_closure",
       "source_complex_id": "operation_covariance_and_spectral_minimization",
@@ -289,7 +289,7 @@
         "eq:fm_pi_spectral_principle_2a"
       ],
       "first_label": "ssec:fm_pi_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "mathematical_closure",
       "source_complex_id": "finite_approximation_and_vanishing_residual_energy",
@@ -314,7 +314,7 @@
         "eq:fm_trig_harmonic_principle_2a"
       ],
       "first_label": "ssec:fm_trig_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "mathematical_closure",
       "source_complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
@@ -339,7 +339,7 @@
         "eq:fm_baa_principle_2b"
       ],
       "first_label": "ssec:fm_baa_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "mathematical_closure",
       "source_complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory",
@@ -364,7 +364,7 @@
         "eq:fm_bag_synthesis_2b"
       ],
       "first_label": "ssec:fm_bag_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "mathematical_closure",
       "source_complex_id": "addition_of_approximation_and_harmonic_geometry",
@@ -389,7 +389,7 @@
         "eq:fm_c_initial_value_determination_2c"
       ],
       "first_label": "ssec:fm_c_complex",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "mathematical_closure",
       "source_complex_id": "addition_of_the_two_complete_b_level_operator_families",
@@ -464,7 +464,7 @@
         "eq:reciprocal_duality_equiv_inverse_relation_1a"
       ],
       "first_label": "thm:duality_invariance_app_groupoid",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "duality",
       "source_complex_id": "reciprocal_relation_action_groupoid",
@@ -489,7 +489,7 @@
         "eq:minimal_duality_equiv_sign_coordinate_1a"
       ],
       "first_label": "app:duality_minimal_universal",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "duality",
       "source_complex_id": "minimal_two_state_involution_orbitwise_alternator",
@@ -514,7 +514,7 @@
         "eq:duality_category_involution_from_action_1a"
       ],
       "first_label": "app:duality_category_equiv",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "duality",
       "source_complex_id": "involutive_duality_c_2_action",
@@ -539,7 +539,7 @@
         "eq:drv_duality_b01_pair_composition"
       ],
       "first_label": "app:drv_duality_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "duality",
       "source_complex_id": "reciprocal_orbit_double_cover",
@@ -564,7 +564,7 @@
         "eq:drv_duality_b02_free_principle_inverse"
       ],
       "first_label": "app:drv_duality_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "duality",
       "source_complex_id": "two_state_free_cofree_duality",
@@ -589,7 +589,7 @@
         "eq:drv_duality_c01_sign_triviality"
       ],
       "first_label": "app:drv_duality_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "duality",
       "source_complex_id": "invariant_anti_invariant_orbit_fields",

@@ -35,7 +35,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m equations.cosmological_spark_dynamics.test.run_evidence",
-  "repository_result_commit": "122cc20f7ac2f41639c171618aca7fb4945ab016",
+  "repository_result_commit": "8b61db8b785ab4e64b9a71a3fe4aa9e90545469c",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,

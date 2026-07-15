@@ -57,27 +57,30 @@
     "verified_first_labels": 351
   },
   "artifact_summary": {
-    "animation_generators": 8,
+    "animation_generators": 29,
     "deterministic_seed": 0,
-    "generated_static_figures": 18,
-    "generated_tables": 18,
+    "generated_static_figures": 102,
+    "generated_tables": 105,
+    "producer_local_animations": 38,
+    "producer_local_audio_files": 20,
+    "producer_local_manifests": 161,
     "theorem_manifests": 136
   },
   "changes": {
-    "modified_files": 17,
-    "new_files": 189,
-    "total_changed_files": 206
+    "modified_files": 1742,
+    "new_files": 650,
+    "total_changed_files": 2392
   },
   "claim_boundary": "finite computational support; not a formal proof substitute",
   "default_branch": "main",
-  "dependency_status": "pip check passed",
+  "dependency_status": "pip check passed; core and CPU AI dependencies available",
   "python_version": "3.14.3",
   "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
-  "repository_result_commit": "85e63cd738c9330553237d17ccb0e3d22ba4453e",
+  "repository_result_commit": "8b61db8b785ab4e64b9a71a3fe4aa9e90545469c",
   "repository_revision_plan": {
     "reviewed_open": 70,
-    "reviewed_partial_alternative": 45,
-    "reviewed_present": 55
+    "reviewed_partial_alternative": 58,
+    "reviewed_present": 42
   },
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "result_commit_note": "This is the immutable implementation/artifact source commit immediately before the final QA report commit.",
@@ -86,8 +89,8 @@
   "source_law_regression_status": "passed",
   "tests": {
     "failed": 0,
-    "passed": 337,
-    "runtime_seconds": 270.46,
+    "passed": 343,
+    "runtime_seconds": 293.99,
     "skipped": 0,
     "warnings": 9
   },

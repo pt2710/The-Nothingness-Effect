@@ -54,8 +54,9 @@ provenance manifest.
 
 The Flowpoint, mathematical-closure, foundational-duality, DFI, pDFI,
 Elastic-π, Elastic-π Norm, selected physical-dynamics, and completeness
-checkpoints certify 115 theorem complexes: 66 A, 33 B, and 16 C. The remaining
-matrix contains 201 `proxy_only` and 35 `not_implemented` records. Every
+checkpoints plus the first QENN chain certify 122 theorem complexes: 70 A, 35
+B, and 17 C. The remaining matrix contains 194 `proxy_only` and 35
+`not_implemented` records. Every
 upgraded B contract has all-source removal
 tests, and every upgraded C contract has an explicit spatial/local operator,
 boundary or leakage diagnostics, all-B-source ablations, and a
@@ -76,3 +77,8 @@ row and are not presented as complete theorem implementations.
 All 15 completeness-theorem records are typed, but finite dual-closure traces,
 fixed points, certificate gluing, and terminal quotients retain the explicit
 boundary that they are computational support rather than formal proof.
+
+The QENN checkpoint adds an optional CPU PyTorch backend and certifies a bounded
+4A→2B→1C chain. Its B-level residual energies are genuine positive couplings of
+both A sources, and its C-level output is a single boundary-sensitive defect
+field. The remaining QENN rows stay explicitly at proxy status.

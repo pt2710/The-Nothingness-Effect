@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 115,
+      "implemented": 122,
       "not_implemented": 35,
-      "proxy_only": 201
+      "proxy_only": 194
     },
     "total": 351
   },
@@ -6390,7 +6390,7 @@
         "eq:moat_uniform_decay_2a"
       ],
       "first_label": "app:qenn_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "qenn",
       "source_complex_id": "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
@@ -6415,7 +6415,7 @@
         "eq:bounded_flux_plateau_calculus_equation_1a"
       ],
       "first_label": "app:qenn_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "qenn",
       "source_complex_id": "dfi_entropy_plateau_dfi_divergence_spiking",
@@ -6440,7 +6440,7 @@
         "eq:pv_pure_point_contraction_calculus_equation_1a"
       ],
       "first_label": "app:qenn_complex_03",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "qenn",
       "source_complex_id": "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
@@ -6465,7 +6465,7 @@
         "eq:parseval_energy_bijection_epochs_proof_calculus_equation_1a"
       ],
       "first_label": "app:qenn_complex_04",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "qenn",
       "source_complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance",
@@ -6690,7 +6690,7 @@
         "eq:drv_qenn_b01_2b"
       ],
       "first_label": "app:drv_qenn_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "qenn",
       "source_complex_id": "lyapunov_entropy_dissipation_functional",
@@ -6715,7 +6715,7 @@
         "eq:drv_qenn_b02_2b"
       ],
       "first_label": "app:drv_qenn_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "qenn",
       "source_complex_id": "pv_parseval_spectral_energy_lock",
@@ -6840,7 +6840,7 @@
         "eq:drv_qenn_c01_2c"
       ],
       "first_label": "app:drv_qenn_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "qenn",
       "source_complex_id": "lyapunov_parseval_training_isometry_closure",

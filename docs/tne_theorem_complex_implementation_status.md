@@ -10,12 +10,12 @@ exist.
 
 | Level | Inventory | Implemented |
 | --- | ---: | ---: |
-| A | 204 | 66 |
-| B | 98 | 33 |
-| C | 49 | 16 |
-| Total | 351 | 115 |
+| A | 204 | 70 |
+| B | 98 | 35 |
+| C | 49 | 17 |
+| Total | 351 | 122 |
 
-Remaining status is 201 `proxy_only` and 35 `not_implemented`. Those labels are
+Remaining status is 194 `proxy_only` and 35 `not_implemented`. Those labels are
 deliberately not inferred upward from related legacy modules.
 
 ## Implemented Flowpoint complex chain
@@ -115,3 +115,19 @@ reconstruction, and observability residuals. Both remain
 `numerical_candidate`; finite representational closure is never labeled a
 formal proof. The artifact runner emits 15 theorem-level manifests in addition
 to the repository's pre-existing supplementary traces.
+
+## QENN
+
+The optional CPU PyTorch backend supplies exact Flowpoint transitions,
+invariant/anti-invariant projectors, bias-free C2-equivariant layers,
+fail-closed normalized DFI, parity-conditioned losses, an unclipped Elastic-π
+gain, spectral memory, observation readout, and completeness-residual
+arbitration. Canonical execution rejects NaN, infinity, zero DFI denominators,
+and non-positive Elastic-π calibration.
+
+Seven QENN theorem complexes are certified: four independent A residual laws,
+two positive non-cancelling B residual-energy operators, and one spatial C
+defect field. Every B operator uses both source residuals and exposes two
+source-removal witnesses. The C operator reports boundary trace, localization,
+reconstruction, coercivity, observability, and both-B ablations. A successful
+finite computation is reported only as `numerical_candidate`.

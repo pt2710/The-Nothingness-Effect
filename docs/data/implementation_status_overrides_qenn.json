@@ -2,57 +2,57 @@
   "dfi_entropy_plateau_dfi_divergence_spiking": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed QENN source law with explicit domain, codomain, residual field, failure condition, and finite-input guard.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   },
   "lyapunov_entropy_dissipation_functional": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Positive non-cancelling appendix residual energy uses both complete A sources and two source-removal witnesses.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   },
   "lyapunov_parseval_training_isometry_closure": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Single spatial defect field reports boundary, localization, reconstruction, coercivity, observability, both-B ablations, and numerical-candidate status.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   },
   "lyapunov_weight_lattice_fourier_pisot_spectral_purification": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed QENN source law with explicit domain, codomain, residual field, failure condition, and finite-input guard.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   },
   "parseval_energy_bijection_for_epochs_energy_mass_imbalance": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed QENN source law with explicit domain, codomain, residual field, failure condition, and finite-input guard.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   },
   "pv_inflation_pure_point_diffraction_non_pv_salem_leakage": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed QENN source law with explicit domain, codomain, residual field, failure condition, and finite-input guard.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   },
   "pv_parseval_spectral_energy_lock": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Positive non-cancelling appendix residual energy uses both complete A sources and two source-removal witnesses.",
-    "implementation_path": "equations/artificial_intelligence/qenn/contracts.py",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_qenn_contracts.py"
   }
 }

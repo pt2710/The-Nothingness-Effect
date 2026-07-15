@@ -16,7 +16,7 @@
   "raw_file_path": "",
   "script_used": "fetch_hawking_analogue_or_limits.py",
   "source_name": "Hawking theoretical benchmark",
-  "source_url": "equations/black_hole_dynamics/hawking",
+  "source_url": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking",
   "status": "theoretical_benchmark",
-  "theoretical_benchmark_runner": "python -m equations.black_hole_dynamics.hawking.simulation.theoretical_benchmarks.compare_tne_hawking_like_flux"
+  "theoretical_benchmark_runner": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.hawking.simulation.theoretical_benchmarks.compare_tne_hawking_like_flux"
 }

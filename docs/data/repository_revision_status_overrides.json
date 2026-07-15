@@ -21,215 +21,215 @@
   },
   "equations/animation_io.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared animation responsibility to tne_runtime/artifacts/animation_io.py; domain animations remain producer-local."
+    "verification_evidence": "Relocated shared animation responsibility to the_nothingness_effect._runtime/artifacts/animation_io.py; domain animations remain producer-local."
   },
   "equations/artifact_io.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared artifact responsibility to tne_runtime/artifacts/io.py."
+    "verification_evidence": "Relocated shared artifact responsibility to the_nothingness_effect._runtime/artifacts/io.py."
   },
-  "equations/artificial_intelligence/pgqenn/__init__.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/artificial_intelligence/pgqenn/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/artificial_intelligence/pgqenn/__init__.py"
   },
-  "equations/artificial_intelligence/pgqenn/a_level.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/a_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/b_level.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/b_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/c_level.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/c_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/residuals.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/simulation/run_suite.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_suite.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/pgqenn/simulation/run_contract_suite.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/tests/test_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/tests/test_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
     "verification_evidence": "Implemented subset or equivalent responsibility at: tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/tests/test_contracts.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/tests/test_contracts.py": {
     "revision_status": "reviewed_partial_alternative",
     "verification_evidence": "Implemented subset or equivalent responsibility at: tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/pgqenn/visualization/render_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/pgqenn/visualization/render_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/pgqenn/simulation/run_contract_suite.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py;tests/contracts/test_pgqenn_contracts.py;tests/artifacts/test_pgqenn_artifacts.py;tests/numerical/test_pgqenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/__init__.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/artificial_intelligence/qenn/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/artificial_intelligence/qenn/__init__.py"
   },
-  "equations/artificial_intelligence/qenn/a_level.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/a_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/b_level.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/b_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/c_level.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/c_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/residuals.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/qenn/contracts.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/simulation/run_suite.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_suite.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/qenn/simulation/run_contract_suite.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/tests/test_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/tests/test_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
     "verification_evidence": "Implemented subset or equivalent responsibility at: tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/tests/test_contracts.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/tests/test_contracts.py": {
     "revision_status": "reviewed_partial_alternative",
     "verification_evidence": "Implemented subset or equivalent responsibility at: tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/qenn/visualization/render_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/qenn/visualization/render_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/qenn/simulation/run_contract_suite.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py;tests/contracts/test_qenn_contracts.py;tests/artifacts/test_qenn_artifacts.py;tests/numerical/test_qenn_model.py"
   },
-  "equations/artificial_intelligence/shared/__init__.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/artificial_intelligence/shared/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/artificial_intelligence/shared/__init__.py"
   },
-  "equations/artificial_intelligence/shared/a_level.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/a_level.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/shared/b_level.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/b_level.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/shared/c_level.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/c_level.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/shared/residuals.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/residuals.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/artificial_intelligence/shared/residuals.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/artificial_intelligence/shared/residuals.py"
   },
-  "equations/artificial_intelligence/shared/simulation/run_suite.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/simulation/run_suite.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/shared/tests/test_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/tests/test_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/shared/tests/test_contracts.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/tests/test_contracts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/shared/visualization/render_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/shared/visualization/render_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/artificial_intelligence/soinets/__init__.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/artificial_intelligence/soinets/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/artificial_intelligence/soinets/__init__.py"
   },
-  "equations/artificial_intelligence/soinets/a_level.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/a_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/b_level.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/b_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/c_level.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/c_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/residuals.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/soinets/contracts.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/simulation/run_suite.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_suite.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/soinets/simulation/run_contract_suite.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/tests/test_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/tests/test_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
     "verification_evidence": "Implemented subset or equivalent responsibility at: tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/tests/test_contracts.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/tests/test_contracts.py": {
     "revision_status": "reviewed_partial_alternative",
     "verification_evidence": "Implemented subset or equivalent responsibility at: tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/artificial_intelligence/soinets/visualization/render_artifacts.py": {
+  "the_nothingness_effect/artificial_intelligence/soinets/visualization/render_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/artificial_intelligence/soinets/simulation/run_contract_suite.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py;tests/contracts/test_soinets_contracts.py;tests/artifacts/test_soinets_artifacts.py;tests/numerical/test_soinets_model.py"
   },
-  "equations/black_hole_dynamics/black_hole_dynamics.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/black_hole_dynamics.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/black_hole_dynamics/black_hole_dynamics.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/black_hole_dynamics.py"
   },
-  "equations/completeness_theorem/models.py": {
+  "the_nothingness_effect/the_completeness_theorem/models.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/completeness_theorem/models.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/the_completeness_theorem/models.py"
   },
-  "equations/completeness_theorem/simulation/dual_closure.py": {
+  "the_nothingness_effect/the_completeness_theorem/simulation/dual_closure.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/completeness_theorem/simulation/dual_closure.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/the_completeness_theorem/simulation/dual_closure.py"
   },
-  "equations/completeness_theorem/simulation/godel_boundary.py": {
+  "the_nothingness_effect/the_completeness_theorem/simulation/godel_boundary.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/completeness_theorem/simulation/godel_boundary.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/the_completeness_theorem/simulation/godel_boundary.py"
   },
-  "equations/completeness_theorem/tests/test_dual_closure_invariants.py": {
+  "the_nothingness_effect/the_completeness_theorem/tests/test_dual_closure_invariants.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/completeness_theorem/tests/test_dual_closure_invariants.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/the_completeness_theorem/tests/test_dual_closure_invariants.py"
   },
-  "equations/cosmological_spark_dynamics/__init__.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/cosmological_spark_dynamics/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/__init__.py"
   },
-  "equations/cosmological_spark_dynamics/a_level.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/a_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/cosmological_spark_dynamics/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py"
   },
-  "equations/cosmological_spark_dynamics/b_level.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/b_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/cosmological_spark_dynamics/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py"
   },
-  "equations/cosmological_spark_dynamics/c_level.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/c_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/cosmological_spark_dynamics/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py"
   },
-  "equations/cosmological_spark_dynamics/residuals.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/cosmological_spark_dynamics/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py"
   },
-  "equations/cosmological_spark_dynamics/simulation/run_suite.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_suite.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/cosmological_spark_dynamics/simulation/run_contract_suite.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py"
   },
-  "equations/cosmological_spark_dynamics/tests/test_artifacts.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/tests/test_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/cosmological_spark_dynamics/tests/test_contracts.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/tests/test_contracts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/cosmological_spark_dynamics/visualization/render_artifacts.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/visualization/render_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/cosmological_spark_dynamics/simulation/run_contract_suite.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py"
   },
-  "equations/countable_infinity/countable_infinity.py": {
+  "the_nothingness_effect/foundational_architecture/countable_infinity/countable_infinity.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/countable_infinity/countable_infinity.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/countable_infinity/countable_infinity.py"
   },
   "equations/discrete_time_quasicrystals/__init__.py": {
     "revision_status": "reviewed_open",
@@ -267,113 +267,113 @@
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/duality/duality.py": {
+  "the_nothingness_effect/foundational_architecture/duality/duality.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/duality/duality.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/duality/duality.py"
   },
-  "equations/dynamic_fluctuation_index/dfi.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/dfi.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/dynamic_fluctuation_index/dfi.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/dfi.py"
   },
-  "equations/elastic_dubler_effect/elastic_dubler_effect.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/elastic_dubler_effect.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/elastic_dubler_effect/elastic_dubler_effect.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/elastic_dubler_effect.py"
   },
-  "equations/elastic_dubler_interferometry/__init__.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/elastic_dubler_interferometry/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/__init__.py"
   },
-  "equations/elastic_dubler_interferometry/a_level.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/a_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_dubler_interferometry/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py"
   },
-  "equations/elastic_dubler_interferometry/b_level.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/b_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_dubler_interferometry/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py"
   },
-  "equations/elastic_dubler_interferometry/c_level.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/c_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_dubler_interferometry/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py"
   },
-  "equations/elastic_dubler_interferometry/residuals.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_dubler_interferometry/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py"
   },
-  "equations/elastic_dubler_interferometry/simulation/run_suite.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_suite.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_dubler_interferometry/simulation/run_contract_suite.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py"
   },
-  "equations/elastic_dubler_interferometry/tests/test_artifacts.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/tests/test_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/elastic_dubler_interferometry/tests/test_contracts.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/tests/test_contracts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/elastic_dubler_interferometry/visualization/render_artifacts.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/visualization/render_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_dubler_interferometry/simulation/run_contract_suite.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py"
   },
-  "equations/elastic_pi/elastic_pi.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/elastic_pi.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/elastic_pi/elastic_pi.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/elastic_pi.py"
   },
-  "equations/elastic_pi_norm/__init__.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/elastic_pi_norm/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/__init__.py"
   },
-  "equations/elastic_pi_norm/a_level.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/a_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_pi_norm/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/contracts.py"
   },
-  "equations/elastic_pi_norm/b_level.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/b_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_pi_norm/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/contracts.py"
   },
-  "equations/elastic_pi_norm/c_level.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/c_level.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_pi_norm/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/contracts.py"
   },
-  "equations/elastic_pi_norm/residuals.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_pi_norm/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/contracts.py"
   },
-  "equations/elastic_pi_norm/simulation/run_suite.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/run_suite.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_pi_norm/simulation/run_contract_suite.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/run_contract_suite.py"
   },
-  "equations/elastic_pi_norm/tests/test_artifacts.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/tests/test_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/elastic_pi_norm/tests/test_contracts.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/tests/test_contracts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/elastic_pi_norm/visualization/render_artifacts.py": {
+  "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/visualization/render_artifacts.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/elastic_pi_norm/simulation/run_contract_suite.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/run_contract_suite.py"
   },
-  "equations/elastic_pi_ripples/elastic_pi_ripples.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/elastic_pi_ripples.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/elastic_pi_ripples/elastic_pi_ripples.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/elastic_pi_ripples.py"
   },
-  "equations/flowpoint/flowpoint.py": {
+  "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/flowpoint.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/flowpoint/flowpoint.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/flowpoint.py"
   },
-  "equations/flowpoint/test/test_flowpoint.py": {
+  "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/flowpoint/test/test_flowpoint.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py"
   },
-  "equations/flowpoint_math_operations/fp_math_operations.py": {
+  "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/fp_math_operations.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/flowpoint_math_operations/fp_math_operations.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/fp_math_operations.py"
   },
-  "equations/flowpoint_trigonometry/fp_trigonometry.py": {
+  "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/fp_trigonometry.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/flowpoint_trigonometry/fp_trigonometry.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/fp_trigonometry.py"
   },
   "equations/foundational_closure/flowpoint_closure/__init__.py": {
     "revision_status": "reviewed_open",
@@ -519,53 +519,53 @@
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/locality_driven_gravity/entropic_elastic_spiral.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/entropic_elastic_spiral.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/locality_driven_gravity/entropic_elastic_spiral.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/entropic_elastic_spiral.py"
   },
-  "equations/locality_driven_gravity/locality_driven_gravity.py": {
+  "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/locality_driven_gravity.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/locality_driven_gravity/locality_driven_gravity.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/locality_driven_gravity.py"
   },
-  "equations/mathematical_closure/__init__.py": {
+  "the_nothingness_effect/mathematical_architecture/__init__.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/mathematical_closure/__init__.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/__init__.py"
   },
-  "equations/mathematical_closure/a_level.py": {
+  "the_nothingness_effect/mathematical_architecture/a_level.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/mathematical_closure/a_level.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/a_level.py"
   },
-  "equations/mathematical_closure/b_level.py": {
+  "the_nothingness_effect/mathematical_architecture/b_level.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/mathematical_closure/b_level.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/b_level.py"
   },
-  "equations/mathematical_closure/c_level.py": {
+  "the_nothingness_effect/mathematical_architecture/c_level.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/mathematical_closure/c_level.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/c_level.py"
   },
-  "equations/mathematical_closure/residuals.py": {
+  "the_nothingness_effect/mathematical_architecture/residuals.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Implemented subset or equivalent responsibility at: equations/mathematical_closure/contracts.py"
+    "verification_evidence": "Implemented subset or equivalent responsibility at: the_nothingness_effect/mathematical_architecture/contracts.py"
   },
-  "equations/mathematical_closure/simulation/run_suite.py": {
+  "the_nothingness_effect/mathematical_architecture/simulation/run_suite.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/mathematical_closure/simulation/run_suite.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/mathematical_architecture/simulation/run_suite.py"
   },
-  "equations/mathematical_closure/tests/test_artifacts.py": {
+  "the_nothingness_effect/mathematical_architecture/tests/test_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/mathematical_closure/tests/test_contracts.py": {
+  "the_nothingness_effect/mathematical_architecture/tests/test_contracts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/mathematical_closure/visualization/render_artifacts.py": {
+  "the_nothingness_effect/mathematical_architecture/visualization/render_artifacts.py": {
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/observation_and_collapse/observation_and_collapse.py": {
+  "the_nothingness_effect/foundational_architecture/observation_and_collapse/observation_and_collapse.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/observation_and_collapse/observation_and_collapse.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/observation_and_collapse/observation_and_collapse.py"
   },
   "equations/parity_adapted_dfi/__init__.py": {
     "revision_status": "reviewed_open",
@@ -603,45 +603,45 @@
     "revision_status": "reviewed_open",
     "verification_evidence": "No exact path or certified substitute; theorem rows remain proxy_only/not_implemented where applicable."
   },
-  "equations/spatiality/spatiality.py": {
+  "the_nothingness_effect/foundational_architecture/spatiality/spatiality.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/spatiality/spatiality.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/spatiality/spatiality.py"
   },
-  "equations/spectrum_of_infinities/spectrum_of_infinities.py": {
+  "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/spectrum_of_infinities.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/spectrum_of_infinities/spectrum_of_infinities.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/spectrum_of_infinities.py"
   },
-  "equations/symmetry/symmetry.py": {
+  "the_nothingness_effect/foundational_architecture/symmetry/symmetry.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/symmetry/symmetry.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/symmetry/symmetry.py"
   },
   "equations/theorem_complex_runtime/__init__.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/__init__.py."
+    "verification_evidence": "Relocated shared runtime to the_nothingness_effect._runtime/theorem_complex_runtime/__init__.py."
   },
   "equations/theorem_complex_runtime/invariants.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/invariants.py."
+    "verification_evidence": "Relocated shared runtime to the_nothingness_effect._runtime/theorem_complex_runtime/invariants.py."
   },
   "equations/theorem_complex_runtime/registry.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/registry.py."
+    "verification_evidence": "Relocated shared runtime to the_nothingness_effect._runtime/theorem_complex_runtime/registry.py."
   },
   "equations/theorem_complex_runtime/runner.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/runner.py."
+    "verification_evidence": "Relocated shared runtime to the_nothingness_effect._runtime/theorem_complex_runtime/runner.py."
   },
   "equations/theorem_complex_runtime/types.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/types.py."
+    "verification_evidence": "Relocated shared runtime to the_nothingness_effect._runtime/theorem_complex_runtime/types.py."
   },
   "equations/theorem_complex_runtime/validation.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Relocated shared runtime to tne_runtime/theorem_complex_runtime/validation.py."
+    "verification_evidence": "Relocated shared runtime to the_nothingness_effect._runtime/theorem_complex_runtime/validation.py."
   },
-  "equations/uncountable_infinity/uncountable_infinity.py": {
+  "the_nothingness_effect/foundational_architecture/uncountable_infinity/uncountable_infinity.py": {
     "revision_status": "reviewed_present",
-    "verification_evidence": "Exact planned path exists: equations/uncountable_infinity/uncountable_infinity.py"
+    "verification_evidence": "Exact planned path exists: the_nothingness_effect/foundational_architecture/uncountable_infinity/uncountable_infinity.py"
   },
   "pyproject.toml": {
     "revision_status": "reviewed_present",
@@ -665,11 +665,11 @@
   },
   "tne_concepts/SOInet/soi_net.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Legacy tree removed by owner direction; canonical replacement is equations/artificial_intelligence/soinets/model.py with local test/simulation suites."
+    "verification_evidence": "Legacy tree removed by owner direction; canonical replacement is the_nothingness_effect/artificial_intelligence/soinets/model.py with local test/simulation suites."
   },
   "tne_concepts/SOInet/soi_pgnn_analytics.py": {
     "revision_status": "reviewed_partial_alternative",
-    "verification_evidence": "Legacy tree removed; canonical PGQENN analytics and artifacts are under equations/artificial_intelligence/pgqenn."
+    "verification_evidence": "Legacy tree removed; canonical PGQENN analytics and artifacts are under the_nothingness_effect/artificial_intelligence/pgqenn."
   },
   "tne_concepts/SOInet/test_bidirectional_soi_net_color_classification.py": {
     "revision_status": "reviewed_partial_alternative",

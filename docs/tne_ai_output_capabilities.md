@@ -17,12 +17,12 @@ tree is absent; canonical producers no longer create root output folders.
 
 | Removed legacy directory | Intended AI output | Canonical location |
 | --- | --- | --- |
-| `test_color_classification_data` | Classify color to demonstrate bounded visual perception | `equations/artificial_intelligence/color_classification/` |
-| `test_sound_classification_data` | Classify tonal sound to demonstrate bounded auditory perception | `equations/artificial_intelligence/sound_classification/` |
-| `test_bidirectional_color_classification_data` | RGB image → label → RGB prototype → label closure | `equations/artificial_intelligence/bidirectional_color_classification/` |
-| `test_bidirectional_sound_classification_data` | Waveform → label → prototype tone → label closure | `equations/artificial_intelligence/bidirectional_sound_classification/` |
-| `test_image_cloning_data` | Clone finite color-image content | `equations/artificial_intelligence/color_cloning/` |
-| `test_sound_cloning_data` | Clone finite sound-wave content | `equations/artificial_intelligence/sound_cloning/` |
+| `test_color_classification_data` | Classify color to demonstrate bounded visual perception | `the_nothingness_effect/artificial_intelligence/color_classification/` |
+| `test_sound_classification_data` | Classify tonal sound to demonstrate bounded auditory perception | `the_nothingness_effect/artificial_intelligence/sound_classification/` |
+| `test_bidirectional_color_classification_data` | RGB image → label → RGB prototype → label closure | `the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/` |
+| `test_bidirectional_sound_classification_data` | Waveform → label → prototype tone → label closure | `the_nothingness_effect/artificial_intelligence/bidirectional_sound_classification/` |
+| `test_image_cloning_data` | Clone finite color-image content | `the_nothingness_effect/artificial_intelligence/color_cloning/` |
+| `test_sound_cloning_data` | Clone finite sound-wave content | `the_nothingness_effect/artificial_intelligence/sound_cloning/` |
 
 ## Organization standard
 
@@ -92,23 +92,23 @@ vision, hearing, generative intelligence, or a formal theorem proof.
 Replace `<capability>` with any canonical location from the mapping table.
 
 ```bash
-python -m equations.artificial_intelligence.<capability>.test.test_capability
-python -m equations.artificial_intelligence.<capability>.simulation.run_simulation
+python -m the_nothingness_effect.artificial_intelligence.<capability>.test.test_capability
+python -m the_nothingness_effect.artificial_intelligence.<capability>.simulation.run_simulation
 ```
 
 Run all six colocated tests with:
 
 ```bash
-python -m pytest -q equations/artificial_intelligence/*/test
+python -m pytest -q the_nothingness_effect/artificial_intelligence/*/test
 ```
 
 Run all six output groups through each complete architecture with:
 
 ```bash
-python -m equations.artificial_intelligence.qenn.test.run_all_capabilities
-python -m equations.artificial_intelligence.qenn.simulation.run_all_capabilities
-python -m equations.artificial_intelligence.pgqenn.test.run_all_capabilities
-python -m equations.artificial_intelligence.pgqenn.simulation.run_all_capabilities
-python -m equations.artificial_intelligence.soinets.test.run_all_capabilities
-python -m equations.artificial_intelligence.soinets.simulation.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.qenn.test.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_all_capabilities
 ```

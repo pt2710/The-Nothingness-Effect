@@ -2,121 +2,121 @@
   "2_adic_criterion_of_theoremhood_and_typed_dual_infinity": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "commutation_of_closure_with_parity_soi_and_misaligned_closures": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "dual_closure_idempotence_and_oscillatory_non_closure": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "g_delian_provability_boundary_and_declared_dual_carrier_completion": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "global_symmetry_and_kd_charge_conservation": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "idempotent_splitting_and_oscillation_obstruction": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Genuine multi-source admissibility, splitting, transport, or transgression operator with every-source ablation.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "karoubi_envelope_equivalence_and_missing_idempotent_splittings": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "local_gauge_symmetry_and_elastic_divergence_identity": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "noether_constant_to_local_transgression": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Genuine multi-source admissibility, splitting, transport, or transgression operator with every-source ablation.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "non_manifestability_of_the_anti_circle_and_observation_collapse": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Typed finite source law with explicit boundary/obstruction status; representational closure is not formal proof.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "protected_commuting_closure_transport": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Genuine multi-source admissibility, splitting, transport, or transgression operator with every-source ablation.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "sheaf_of_closure_certificates": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Spatial certificate gluing or terminal quotient has boundary, reconstruction, observability, both-B ablations, and numerical-candidate status.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "terminal_quotient_of_closure_certificates": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Spatial certificate gluing or terminal quotient has boundary, reconstruction, observability, both-B ablations, and numerical-candidate status.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   },
   "typed_admissibility_instrument": {
     "artifact_status": "generator_smoke_tested",
     "decision_note": "Genuine multi-source admissibility, splitting, transport, or transgression operator with every-source ablation.",
-    "implementation_path": "equations/completeness_theorem/contracts.py",
+    "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
     "implementation_status": "implemented",
-    "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+    "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
     "test_path": "tests/contracts/test_completeness_contracts.py"
   }
 }

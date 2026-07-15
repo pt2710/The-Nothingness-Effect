@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import numpy as np
 
-from tne_runtime.theorem_complex_runtime import ComplexId
-from tne_runtime.theorem_complex_runtime.invariants import (
+from the_nothingness_effect._runtime.theorem_complex_runtime import ComplexId
+from the_nothingness_effect._runtime.theorem_complex_runtime.invariants import (
     additive_derivation,
     source_removal_result,
 )

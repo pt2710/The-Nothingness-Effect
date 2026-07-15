@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "equations_module": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.elastic_pi_ripples",
+  "figure": "7",
+  "output_directory": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation",
+  "paper_caption_target": "Propagation and attenuation of an elastic-pi ripple after black-hole ringdown. Waveform distortion/nonlinear term Xi visible at late times.",
+  "parameters": {
+    "amplitude": 0.8,
+    "c_E": 1.0,
+    "center": 0.0,
+    "dt": 0.02,
+    "gamma": 0.08,
+    "length": 20.0,
+    "n": 320,
+    "steps": 260,
+    "width": 0.9,
+    "xi": -0.08
+  },
+  "random_seed": null,
+  "script": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.simulate_elastic_pi_ripples",
+  "section": "19.4"
+}

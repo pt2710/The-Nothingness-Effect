@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from tne_runtime.theorem_complex_runtime.registry import TheoremComplexRegistry
+from the_nothingness_effect._runtime.theorem_complex_runtime.registry import TheoremComplexRegistry
 
 
 ROOT = Path(__file__).resolve().parents[2]

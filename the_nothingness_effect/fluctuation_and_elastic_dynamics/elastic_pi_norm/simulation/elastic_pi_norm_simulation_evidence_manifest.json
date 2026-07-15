@@ -1,0 +1,54 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_statuses": [
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "numerical_candidate"
+  ],
+  "generated_files": [
+    "elastic_pi_norm_contract_metrics.csv",
+    "elastic_pi_norm_contract_residuals.png",
+    "elastic_pi_norm_simulation_residual_trace.csv",
+    "elastic_pi_norm_simulation_residual_animation.gif",
+    "weighted_path_functional_and_norm_admissibility_manifest.json",
+    "elastic_field_ratios_and_weight_regularity_manifest.json",
+    "uniform_entropy_reduction_and_entropic_reweighting_bounds_manifest.json",
+    "pdfi_elastic_norm_interface_manifest.json",
+    "pdfi_elastic_norm_equivalence_and_decoupling_manifest.json",
+    "weighted_path_ratio_regularity_functional_manifest.json",
+    "entropy_pdfi_calibrated_norm_residual_manifest.json",
+    "spatial_weighted_calibration_closure_manifest.json"
+  ],
+  "mode": "simulation",
+  "module": "elastic_pi_norm",
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "114dc239cc0800cc9ffe8a8123b891716277fd34c0f150f105bda15278677c66",
+  "parameters": {
+    "contract_count": 8,
+    "mode": "simulation",
+    "module": "elastic_pi_norm",
+    "seed": 0
+  },
+  "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_evidence",
+  "repository_result_commit": "8b61db8b785ab4e64b9a71a3fe4aa9e90545469c",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    1.9229626863835638e-16,
+    0.0,
+    0.0,
+    0.0,
+    1.9229626863835638e-16,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "source_status": "canonical_contract_evaluation"
+}

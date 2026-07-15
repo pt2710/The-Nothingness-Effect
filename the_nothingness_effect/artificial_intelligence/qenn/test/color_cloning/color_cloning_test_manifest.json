@@ -1,0 +1,48 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "color_cloning",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "color_cloning_test_results.csv",
+    "color_cloning_test_figure.png",
+    "color_cloning_test_manifest.json"
+  ],
+  "intended_output_group": "color cloning",
+  "metrics": {
+    "peak_error": 1.7881393432617188e-07,
+    "rmse": 4.6282416121812275e-08
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "4983a8c7b1b040099652fce414a4b423afe1ec17ea735369c34e7b1223185e00",
+  "parameters": {
+    "capability": "color_cloning",
+    "mode": "test",
+    "producer_architecture": "qenn",
+    "seed": 4,
+    "synthetic_fixture": true
+  },
+  "producer_architecture": "qenn",
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.test.run_all_capabilities",
+  "related_theorem_complex_ids": [
+    "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
+    "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
+  ],
+  "repository_result_commit": "8b61db8b785ab4e64b9a71a3fe4aa9e90545469c",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    4.6282416121812275e-08,
+    1.7583406730636852e-08,
+    1.1018027379350315e-07
+  ],
+  "seed": 4,
+  "source_status": "synthetic_deterministic_fixture"
+}

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import json
 
-from equations.completeness_theorem.contracts import APPENDIX_SHA256
-from equations.completeness_theorem.simulation.run_contract_suite import run_suite
+from the_nothingness_effect.the_completeness_theorem.contracts import APPENDIX_SHA256
+from the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite import run_suite
 
 
 def test_completeness_contract_artifacts_write_fifteen_manifests(tmp_path):

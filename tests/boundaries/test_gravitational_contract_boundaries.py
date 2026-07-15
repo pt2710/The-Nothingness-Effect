@@ -5,8 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from equations.gravitational_cosmological_quantum_dynamics.contract_runtime import FieldLawInput, source_operator
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime import FieldLawInput, source_operator
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 def test_nonuniform_spatial_grid_is_rejected():

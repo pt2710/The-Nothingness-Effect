@@ -20,7 +20,7 @@ proj_root   = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.insert(0, proj_root)
 
 from thermal_parts import thermal_motor_parts
-from equations.dynamic_fluctuation_index.dfi import DynamicFluctuationIndex
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import DynamicFluctuationIndex
 from visualization import ThermalEntropyVisualization
 
 def main():

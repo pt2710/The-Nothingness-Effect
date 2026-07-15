@@ -5,8 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from equations.elastic_pi_norm.elastic_pi_norm import elastic_pi_weighted_path
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.elastic_pi_norm import elastic_pi_weighted_path
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_preserved_weighted_path_formula():

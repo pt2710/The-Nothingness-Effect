@@ -3,9 +3,9 @@ from __future__ import annotations
 import pytest
 import torch
 
-from equations.artificial_intelligence.soinets.contracts import A_IDS, B_IDS, C_IDS, SOInetContractInput, contracts, derived_operator, source_operator, spatial_operator
-from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
-from tne_runtime.theorem_complex_runtime.types import ClosureStatus, DomainViolationError, NonFiniteValueError
+from the_nothingness_effect.artificial_intelligence.soinets.contracts import A_IDS, B_IDS, C_IDS, SOInetContractInput, contracts, derived_operator, source_operator, spatial_operator
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import ClosureStatus, DomainViolationError, NonFiniteValueError
 
 
 @pytest.fixture

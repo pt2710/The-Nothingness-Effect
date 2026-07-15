@@ -26,7 +26,7 @@ Unavailable sources are not silently treated as evidence. They either remain `ma
 
 Noether and fp-Gauss outputs remain internal consistency diagnostics rather than direct empirical comparisons.
 
-Hawking-radiation is not treated as a direct empirical fetched-data target in this layer. It is handled separately under `equations/black_hole_dynamics/hawking/`.
+Hawking-radiation is not treated as a direct empirical fetched-data target in this layer. It is handled separately under `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/`.
 
 ## Directory Layout
 
@@ -240,7 +240,7 @@ python -m empirical.audit.run_fields_of_physics_in_dev_audit
 - Residuals, fits, and scalings are derived comparison metrics, not direct confirmation.
 - Fixture fallback remains valid for reproducibility when public data are unavailable.
 - These outputs are suitable as repository-linked supplementary computational artifacts for later manuscript references.
-- Hawking benchmark outputs belong under `equations/black_hole_dynamics/hawking/` and should be cited as theoretical consistency artifacts rather than empirical comparisons.
+- Hawking benchmark outputs belong under `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/` and should be cited as theoretical consistency artifacts rather than empirical comparisons.
 
 ## Known Limitations
 

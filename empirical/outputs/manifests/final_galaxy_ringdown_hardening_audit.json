@@ -32,10 +32,10 @@
       "mixed": 0.15975047083976052
     },
     "visuals": {
-      "figure6_path": "equations/locality_driven_gravity/simulation/figure6_locality_driven_spiral.png",
-      "arm_mode_comparison_path": "equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.png",
-      "animation_2d_path": "equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d.mp4",
-      "animation_3d_path": "equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d.mp4"
+      "figure6_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/figure6_locality_driven_spiral.png",
+      "arm_mode_comparison_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.png",
+      "animation_2d_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/animation/spiral_galaxy_formation_2d.mp4",
+      "animation_3d_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/animation/spiral_galaxy_formation_3d.mp4"
     }
   },
   "ringdown": {

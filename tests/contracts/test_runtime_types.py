@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from tne_runtime.theorem_complex_runtime import (
+from the_nothingness_effect._runtime.theorem_complex_runtime import (
     CodomainSpec,
     ComplexContract,
     ComplexId,

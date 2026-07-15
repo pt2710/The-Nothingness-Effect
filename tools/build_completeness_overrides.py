@@ -9,7 +9,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from equations.completeness_theorem.contracts import A_IDS, B_IDS, C_IDS
+from the_nothingness_effect.the_completeness_theorem.contracts import A_IDS, B_IDS, C_IDS
 
 
 def build():
@@ -24,9 +24,9 @@ def build():
             note = "Spatial certificate gluing or terminal quotient has boundary, reconstruction, observability, both-B ablations, and numerical-candidate status."
         result[value] = {
             "implementation_status": "implemented",
-            "implementation_path": "equations/completeness_theorem/contracts.py",
+            "implementation_path": "the_nothingness_effect/the_completeness_theorem/contracts.py",
             "test_path": "tests/contracts/test_completeness_contracts.py",
-            "simulation_path": "equations/completeness_theorem/simulation/run_contract_suite.py",
+            "simulation_path": "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
             "artifact_status": "generator_smoke_tested",
             "decision_note": note,
         }

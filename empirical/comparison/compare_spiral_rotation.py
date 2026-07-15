@@ -23,7 +23,7 @@ matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 import numpy as np
-from tne_runtime.artifacts.io import save_json
+from the_nothingness_effect._runtime.artifacts.io import save_json
 
 
 def run(

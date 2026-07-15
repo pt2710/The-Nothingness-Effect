@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "the-nothingness-effect"
-version = "0.2.0"
+version = "0.3.0"
 description = "Typed theorem-complex runtime and bounded computational models for The Nothingness Effect"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -31,10 +31,9 @@ dev = [
 [tool.setuptools.packages.find]
 where = ["."]
 include = [
-  "equations*",
+  "the_nothingness_effect*",
   "empirical*",
   "fields_of_physics_in_dev*",
-  "tne_runtime*",
 ]
 exclude = ["tests*", "docs*"]
 

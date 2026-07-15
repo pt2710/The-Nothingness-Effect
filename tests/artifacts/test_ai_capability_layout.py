@@ -10,7 +10,7 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[2]
-AI_ROOT = ROOT / "equations" / "artificial_intelligence"
+AI_ROOT = ROOT / "the_nothingness_effect" / "artificial_intelligence"
 CAPABILITIES = (
     "color_classification",
     "sound_classification",

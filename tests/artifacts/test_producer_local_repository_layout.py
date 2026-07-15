@@ -9,8 +9,9 @@ from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[2]
-EQUATIONS = ROOT / "equations"
-AI = EQUATIONS / "artificial_intelligence"
+PACKAGE = ROOT / "the_nothingness_effect"
+RUNTIME = PACKAGE / "_runtime"
+AI = PACKAGE / "artificial_intelligence"
 AI_ARCHITECTURES = ("qenn", "pgqenn", "soinets")
 CAPABILITIES = (
     "color_classification",
@@ -20,20 +21,27 @@ CAPABILITIES = (
     "color_cloning",
     "sound_cloning",
 )
-LOCAL_MODULES = (
-    "cosmological_spark_dynamics",
-    "dtqc",
-    "elastic_dubler_interferometry",
-    "elastic_pi_norm",
-    "mathematical_closure",
-    "parity_dfi",
-)
+LOCAL_MODULES = {
+    "cosmological_spark_dynamics": PACKAGE
+    / "gravitational_cosmological_and_quantum_dynamics_architecture"
+    / "emergent_cosmological_spark_dynamics",
+    "dtqc": PACKAGE
+    / "gravitational_cosmological_and_quantum_dynamics_architecture"
+    / "discrete_time_quasicrystals_in_the_flowpoint",
+    "elastic_dubler_interferometry": PACKAGE
+    / "gravitational_cosmological_and_quantum_dynamics_architecture"
+    / "elastic_dubler_interferometry_probing_gravitational_curvature",
+    "elastic_pi_norm": PACKAGE / "fluctuation_and_elastic_dynamics" / "elastic_pi_norm",
+    "mathematical_closure": PACKAGE / "mathematical_architecture",
+    "parity_dfi": PACKAGE
+    / "fluctuation_and_elastic_dynamics"
+    / "parity_adapted_dynamic_fluctuation_index",
+}
 
 
 def test_removed_legacy_trees_and_loose_equation_infrastructure_are_absent() -> None:
     forbidden = (
-        EQUATIONS / "mccrackns_prime_law",
-        EQUATIONS / "numbers_domains",
+        ROOT / "equations",
         ROOT / "figures_mccrackn",
         ROOT / "figures",
         ROOT / "tne_concepts",
@@ -47,17 +55,22 @@ def test_removed_legacy_trees_and_loose_equation_infrastructure_are_absent() -> 
         "fluctuation_elastic_artifacts.py", "gravitational_contract_artifacts.py",
         "gravitational_contract_runtime.py", "run_animation_artifacts.py",
     }
-    assert not any((EQUATIONS / name).exists() for name in loose_names)
+    assert not any((ROOT / "equations" / name).exists() for name in loose_names)
 
 
 def test_relocated_runtime_facade_audits_and_hawking_benchmarks_exist() -> None:
-    assert (ROOT / "tne_runtime" / "theorem_complex_runtime" / "types.py").is_file()
-    assert (ROOT / "tne_runtime" / "artifacts" / "io.py").is_file()
+    assert (RUNTIME / "theorem_complex_runtime" / "types.py").is_file()
+    assert (RUNTIME / "artifacts" / "io.py").is_file()
     physics = ROOT / "fields_of_physics_in_dev"
     assert (physics / "the_nothingness_effect.py").is_file()
     assert (physics / "fields_of_physics_in_dev_audit.csv").is_file()
     assert (physics / "fields_of_physics_in_dev_audit.json").is_file()
-    hawking = EQUATIONS / "black_hole_dynamics" / "hawking"
+    hawking = (
+        PACKAGE
+        / "gravitational_cosmological_and_quantum_dynamics_architecture"
+        / "black_holes_hawking_radiation_and_observer_horizons"
+        / "hawking"
+    )
     assert (hawking / "test" / "theoretical_benchmarks" / "test_hawking_formulas.py").is_file()
     assert (
         hawking / "simulation" / "theoretical_benchmarks" / "simulate_hawking_theoretical_benchmark.py"
@@ -93,8 +106,7 @@ def test_each_ai_architecture_owns_all_six_test_and_simulation_outputs() -> None
 
 
 def test_requested_theorem_modules_own_test_and_simulation_evidence() -> None:
-    for module in LOCAL_MODULES:
-        root = EQUATIONS / module
+    for module, root in LOCAL_MODULES.items():
         assert (root / "test" / "test_evidence.py").is_file()
         assert (root / "simulation" / "run_evidence.py").is_file()
         for mode in ("test", "simulation"):
@@ -114,7 +126,7 @@ def test_dtqc_recreates_all_five_static_views_and_dynamic_phase_clock() -> None:
         "dfi_surface.png", "elastic_pi_surface.png",
     }
     for mode in ("test", "simulation"):
-        producer = EQUATIONS / "dtqc" / mode
+        producer = LOCAL_MODULES["dtqc"] / mode
         assert expected.issubset({path.name for path in producer.glob("*.png")})
         with Image.open(producer / "dtqc_phase_clock_animation.gif") as image:
             assert image.is_animated

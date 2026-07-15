@@ -22,7 +22,7 @@ def run(
     payload = provenance_manifest(
         dataset_name="hawking_analogue_or_limits",
         source_name="Hawking theoretical benchmark",
-        source_url="equations/black_hole_dynamics/hawking",
+        source_url="the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking",
         script_name=Path(__file__).name,
         status="theoretical_benchmark",
         output_dir=str(output_dir) if output_dir is not None else None,
@@ -36,7 +36,7 @@ def run(
         ],
         limitations="Hawking-radiation is handled as a theoretical benchmark, not a direct empirical fetched-data target.",
         extra={
-            "theoretical_benchmark_runner": "python -m equations.black_hole_dynamics.hawking.simulation.theoretical_benchmarks.compare_tne_hawking_like_flux",
+            "theoretical_benchmark_runner": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.hawking.simulation.theoretical_benchmarks.compare_tne_hawking_like_flux",
         },
     )
     write_dataset_manifest("hawking_analogue_or_limits_manifest.json", payload, str(output_dir) if output_dir is not None else None)

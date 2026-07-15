@@ -7,9 +7,9 @@ from dataclasses import replace
 import numpy as np
 import pytest
 
-from equations.completeness_theorem.contracts import source_operator
+from the_nothingness_effect.the_completeness_theorem.contracts import source_operator
 from tests.contracts.test_completeness_contracts import INPUT
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 def test_nonbinary_theorem_prefix_is_rejected():

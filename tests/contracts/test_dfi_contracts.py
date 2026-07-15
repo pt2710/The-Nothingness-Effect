@@ -4,16 +4,16 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.dynamic_fluctuation_index.contracts import (
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.contracts import (
     ApplicabilityInput,
     DFIInput,
     DFIRescalingInput,
     SpatialDFIInput,
     contracts,
 )
-from equations.dynamic_fluctuation_index.dfi import DFIStatus
-from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
-from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import DFIStatus
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 DATA = np.array(

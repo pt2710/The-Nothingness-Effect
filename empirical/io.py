@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tne_runtime.artifacts.io import ensure_dir, save_csv, save_json
+from the_nothingness_effect._runtime.artifacts.io import ensure_dir, save_csv, save_json
 
 
 EMPIRICAL_CLAIM_BOUNDARY = (

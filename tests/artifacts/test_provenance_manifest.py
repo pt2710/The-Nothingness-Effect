@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import json
 
-from tne_runtime.theorem_complex_runtime import ClosureStatus, ComplexId, SimulationResult
-from tne_runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
-from tne_runtime.theorem_complex_runtime.provenance import build_manifest
+from the_nothingness_effect._runtime.theorem_complex_runtime import ClosureStatus, ComplexId, SimulationResult
+from the_nothingness_effect._runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import build_manifest
 
 
 def test_manifest_contains_required_claim_boundary_and_reproduction_fields(theorem_artifact_dir):

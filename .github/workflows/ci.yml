@@ -18,8 +18,8 @@ jobs:
           cache: pip
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements-dev.txt
-      - run: python -m compileall -q equations empirical fields_of_physics_in_dev tne_runtime tools
-      - run: python -m ruff check equations/artificial_intelligence tests/artifacts/test_ai_capability_layout.py
+      - run: python -m compileall -q equations empirical fields_of_physics_in_dev the_nothingness_effect._runtime tools
+      - run: python -m ruff check the_nothingness_effect/artificial_intelligence tests/artifacts/test_ai_capability_layout.py
       - name: Core tests without optional AI backend
         run: >-
           python -m pytest -q
@@ -30,7 +30,7 @@ jobs:
           --ignore=tests/artifacts/test_qenn_artifacts.py
           --ignore=tests/artifacts/test_pgqenn_artifacts.py
           --ignore=tests/artifacts/test_soinets_artifacts.py
-          --ignore-glob=equations/artificial_intelligence/*/test/*
+          --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/*
 
   theorem-contracts:
     runs-on: ubuntu-latest
@@ -68,12 +68,12 @@ jobs:
           tests/numerical/test_qenn_model.py
           tests/numerical/test_pgqenn_model.py
           tests/numerical/test_soinets_model.py
-          equations/artificial_intelligence/color_classification/test
-          equations/artificial_intelligence/sound_classification/test
-          equations/artificial_intelligence/bidirectional_color_classification/test
-          equations/artificial_intelligence/bidirectional_sound_classification/test
-          equations/artificial_intelligence/color_cloning/test
-          equations/artificial_intelligence/sound_cloning/test
+          the_nothingness_effect/artificial_intelligence/color_classification/test
+          the_nothingness_effect/artificial_intelligence/sound_classification/test
+          the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/test
+          the_nothingness_effect/artificial_intelligence/bidirectional_sound_classification/test
+          the_nothingness_effect/artificial_intelligence/color_cloning/test
+          the_nothingness_effect/artificial_intelligence/sound_cloning/test
 
   security-and-provenance-guards:
     runs-on: ubuntu-latest

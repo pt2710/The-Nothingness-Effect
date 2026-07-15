@@ -41,7 +41,7 @@ balance residual, exact reconstruction predicate, and both B-source ablations.
 The artifact runner is:
 
 ```text
-python -m equations.flowpoint.simulation --output <directory>
+python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <directory>
 ```
 
 It writes one deterministic metrics table, one representative static figure,
@@ -154,7 +154,7 @@ PGQENN subnetworks, bidirectional memory transfer, aggregated
 observation/collapse readout, a symmetric meta-adjacency, spectral and spatial
 residuals, and fail-closed completeness arbitration. The historical duplicated
 `tne_concepts/SOInet` implementation has been removed from the repository;
-canonical callers use `equations/artificial_intelligence/soinets` directly.
+canonical callers use `the_nothingness_effect/artificial_intelligence/soinets` directly.
 
 The certified source-complete chain follows the appendix's actual dependencies:
 B19 consumes A01+A13, B20 consumes A02+A14, and C29 consumes B19+B20. Both B

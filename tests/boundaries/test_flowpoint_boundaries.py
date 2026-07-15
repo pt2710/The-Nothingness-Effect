@@ -4,7 +4,7 @@ import math
 
 import pytest
 
-from equations.flowpoint.flowpoint import (
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import (
     BalanceFiber,
     FlowpointSchedule,
     affine_history_field,
@@ -12,7 +12,7 @@ from equations.flowpoint.flowpoint import (
     harmonic_interpolation,
     scheduled_spectral_history,
 )
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 def test_zero_state_is_not_promoted_to_two_state_orbit():

@@ -5,17 +5,17 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from equations.flowpoint.a_level import contracts as a_contracts
-from equations.flowpoint.b_level import (
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level import contracts as a_contracts
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.b_level import (
     PhaseTransportInput,
     ScheduledHistoryInput,
     contracts as b_contracts,
 )
-from equations.flowpoint.c_level import AffineHistoryInput, contracts as c_contracts
-from equations.flowpoint.contracts import registered_flowpoint_registry
-from equations.flowpoint.flowpoint import BalanceFiber, PhaseClock
-from tne_runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.c_level import AffineHistoryInput, contracts as c_contracts
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.contracts import registered_flowpoint_registry
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import BalanceFiber, PhaseClock
+from the_nothingness_effect._runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 ROOT = Path(__file__).resolve().parents[2]

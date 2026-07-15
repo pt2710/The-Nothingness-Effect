@@ -6,12 +6,12 @@ the repository.
 
 ## Shared infrastructure
 
-- `tne_runtime/theorem_complex_runtime/`: typed contracts, registries,
+- `the_nothingness_effect._runtime/theorem_complex_runtime/`: typed contracts, registries,
   invariants, residuals, validation, provenance, and runners.
-- `tne_runtime/artifacts/`: shared persistence and animation helpers.
-- `equations/fluctuation_elastic_dynamics/artifacts.py`: DFI/pDFI/Elastic-pi
+- `the_nothingness_effect._runtime/artifacts/`: shared persistence and animation helpers.
+- `the_nothingness_effect/fluctuation_and_elastic_dynamics/artifacts.py`: DFI/pDFI/Elastic-pi
   domain artifacts.
-- `equations/gravitational_cosmological_quantum_dynamics/`: shared physical
+- `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/`: shared physical
   contract runtime and artifacts.
 - `tools/run_animation_artifacts.py`: aggregate regeneration command.
 - `docs/data/animation_artifacts_*`: aggregate animation reports.
@@ -39,7 +39,7 @@ DFI surface, exact Elastic-pi surface, and phase-clock animation evidence.
 
 The facade and fields audit now live in `fields_of_physics_in_dev/`. Hawking
 theoretical benchmark tests and simulations live below
-`equations/black_hole_dynamics/hawking/`. The repository no longer contains
+`the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/`. The repository no longer contains
 `tne_concepts`, `theoretical_benchmarks` at root, `figures`,
 `figures_mccrackn`, `equations/mccrackns_prime_law`, or
 `equations/numbers_domains`.

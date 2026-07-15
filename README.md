@@ -18,9 +18,9 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
                     -> deterministic simulation -> artifact manifest
 ```
 
-- `tne_runtime/theorem_complex_runtime/` provides typed IDs, domains, codomains,
+- `the_nothingness_effect._runtime/theorem_complex_runtime/` provides typed IDs, domains, codomains,
   statuses, residuals, registries, evaluation, and provenance.
-- `equations/artificial_intelligence/` contains canonical CPU-testable QENN,
+- `the_nothingness_effect/artificial_intelligence/` contains canonical CPU-testable QENN,
   deterministic prime/parity PGQENN, and multi-network SOInets.
 - Its six producer-local output modules demonstrate color and sound
   classification, bidirectional color and sound classification, and color and
@@ -97,10 +97,10 @@ residual vector, closure status, generated files, regeneration command, and the
 claim boundary `finite computational support; not a formal proof substitute`.
 
 ```bash
-python -m equations.flowpoint.simulation --output artifacts/generated/flowpoint
-python -m equations.artificial_intelligence.qenn.simulation.run_contract_suite --output artifacts/generated/qenn
-python -m equations.artificial_intelligence.pgqenn.simulation.run_contract_suite --output artifacts/generated/pgqenn
-python -m equations.artificial_intelligence.soinets.simulation.run_contract_suite --output artifacts/generated/soinets
+python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output artifacts/generated/flowpoint
+python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output artifacts/generated/qenn
+python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output artifacts/generated/pgqenn
+python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output artifacts/generated/soinets
 ```
 
 The aggregate regeneration catalog is

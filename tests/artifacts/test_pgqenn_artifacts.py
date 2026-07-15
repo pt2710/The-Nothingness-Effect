@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import json
 
-from equations.artificial_intelligence.pgqenn.contracts import APPENDIX_SHA256
-from equations.artificial_intelligence.pgqenn.simulation.run_contract_suite import run_suite
+from the_nothingness_effect.artificial_intelligence.pgqenn.contracts import APPENDIX_SHA256
+from the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite import run_suite
 
 
 def test_pgqenn_suite_emits_seven_provenance_manifests(tmp_path):

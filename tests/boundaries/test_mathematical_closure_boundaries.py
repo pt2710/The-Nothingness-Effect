@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import pytest
 
-from equations.mathematical_closure.a_level import PiApproximationInput, pi_approximation
-from equations.mathematical_closure.b_level import ApproximationHarmonicInput, approximation_harmonic_geometry
-from equations.mathematical_closure.c_level import SignedPolarFieldInput, signed_polar_field
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect.mathematical_architecture.a_level import PiApproximationInput, pi_approximation
+from the_nothingness_effect.mathematical_architecture.b_level import ApproximationHarmonicInput, approximation_harmonic_geometry
+from the_nothingness_effect.mathematical_architecture.c_level import SignedPolarFieldInput, signed_polar_field
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_damping_length_is_part_of_approximation_domain():

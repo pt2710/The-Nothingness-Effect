@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from equations.flowpoint.simulation import run_suite
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation import run_suite
 
 
 def test_flowpoint_artifacts_have_seven_reproducible_manifests(tmp_path):

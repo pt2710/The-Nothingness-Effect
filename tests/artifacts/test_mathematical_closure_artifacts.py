@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from equations.mathematical_closure.simulation import run_suite
+from the_nothingness_effect.mathematical_architecture.simulation import run_suite
 
 
 def test_mathematical_closure_artifacts_are_deterministic_and_bounded(tmp_path):

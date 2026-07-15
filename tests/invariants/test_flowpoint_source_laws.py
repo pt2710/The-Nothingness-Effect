@@ -4,12 +4,12 @@ from dataclasses import replace
 
 import numpy as np
 
-from equations.flowpoint.c_level import (
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.c_level import (
     AffineHistoryInput,
     affine_history_operator,
     affine_history_residual,
 )
-from equations.flowpoint.flowpoint import (
+from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import (
     BalanceFiber,
     FlowpointSchedule,
     PhaseClock,

@@ -1,0 +1,49 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "sound_cloning",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "sound_cloning_simulation_results.csv",
+    "sound_cloning_simulation_figure.png",
+    "sound_cloning_simulation_animation.gif",
+    "sound_cloning_input.wav",
+    "sound_cloning_clone.wav",
+    "sound_cloning_simulation_manifest.json"
+  ],
+  "intended_output_group": "sound cloning",
+  "metrics": {
+    "rmse": 5.2972893627156736e-08,
+    "snr_db": 134.12113526197703
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "d4cde56279ac08e54f9976bc57deebb05f55a171a0b965bc2fd127ca5bbd22d2",
+  "parameters": {
+    "capability": "sound_cloning",
+    "mode": "simulation",
+    "seed": 0,
+    "synthetic_fixture": true
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.sound_cloning.simulation.run_simulation",
+  "related_theorem_complex_ids": [
+    "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
+    "pv_parseval_spectral_energy_lock"
+  ],
+  "repository_result_commit": "1a3c1ab9caf38f51c25a2fbd9308e02d578b7535",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    5.2972893627156736e-08,
+    2.7906322586090937e-08,
+    0.0
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

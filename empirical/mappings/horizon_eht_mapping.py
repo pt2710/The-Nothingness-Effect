@@ -15,8 +15,8 @@ import numpy as np
 
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle
-from tne_runtime.artifacts.io import save_figure
-from equations.black_hole_dynamics.black_hole_dynamics import BlackHoleParams, black_hole_snapshot
+from the_nothingness_effect._runtime.artifacts.io import save_figure
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.black_hole_dynamics import BlackHoleParams, black_hole_snapshot
 
 
 DEFAULT_SOURCE_METADATA: dict[str, tuple[float, float]] = {

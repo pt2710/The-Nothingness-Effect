@@ -24,7 +24,7 @@ def _commit() -> str:
 
 def _producer_local_files() -> list[Path]:
     roots = [
-        Path("equations/artificial_intelligence"),
+        Path("the_nothingness_effect/artificial_intelligence"),
         *(Path("equations") / name for name in (
             "cosmological_spark_dynamics",
             "dtqc",
@@ -33,7 +33,7 @@ def _producer_local_files() -> list[Path]:
             "mathematical_closure",
             "parity_dfi",
         )),
-        Path("equations/black_hole_dynamics/hawking"),
+        Path("the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking"),
     ]
     allowed_suffixes = {".py", ".json", ".csv", ".png", ".gif", ".wav", ".md"}
     return sorted(
@@ -54,8 +54,8 @@ def _animation_generators() -> list[Path]:
         *Path("equations").glob("**/animation/animate_*.py"),
         *Path("equations").glob("**/simulation/run_evidence.py"),
         *Path("equations").glob("**/test/test_evidence.py"),
-        *Path("equations/artificial_intelligence").glob("**/simulation/run_simulation.py"),
-        *Path("equations/artificial_intelligence").glob("**/simulation/run_all_capabilities.py"),
+        *Path("the_nothingness_effect/artificial_intelligence").glob("**/simulation/run_simulation.py"),
+        *Path("the_nothingness_effect/artificial_intelligence").glob("**/simulation/run_all_capabilities.py"),
     }
     return sorted(candidates)
 

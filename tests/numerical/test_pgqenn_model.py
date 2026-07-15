@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import torch
 
-from equations.artificial_intelligence.pgqenn.growth_law import CanonicalPrimeGrowth, stochastic_comparison_graph
-from equations.artificial_intelligence.pgqenn.model import PGQENNModel
-from equations.artificial_intelligence.pgqenn.training import training_step
+from the_nothingness_effect.artificial_intelligence.pgqenn.growth_law import CanonicalPrimeGrowth, stochastic_comparison_graph
+from the_nothingness_effect.artificial_intelligence.pgqenn.model import PGQENNModel
+from the_nothingness_effect.artificial_intelligence.pgqenn.training import training_step
 
 
 def test_prime_growth_is_deterministic_typed_and_distinct_from_ablation():

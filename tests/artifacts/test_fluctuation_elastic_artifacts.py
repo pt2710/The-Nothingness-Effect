@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from equations.fluctuation_elastic_dynamics.artifacts import run_suite
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.artifacts import run_suite
 
 
 @pytest.mark.parametrize(

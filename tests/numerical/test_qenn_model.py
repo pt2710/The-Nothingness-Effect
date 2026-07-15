@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import torch
 
-from equations.artificial_intelligence.qenn.model import QENNModel
-from equations.artificial_intelligence.qenn.training import training_step
-from equations.artificial_intelligence.shared.types import AIClosureStatus
+from the_nothingness_effect.artificial_intelligence.qenn.model import QENNModel
+from the_nothingness_effect.artificial_intelligence.qenn.training import training_step
+from the_nothingness_effect.artificial_intelligence.shared.types import AIClosureStatus
 
 
 def test_qenn_is_differentiable_and_uses_tne_gates():

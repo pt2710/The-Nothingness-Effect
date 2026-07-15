@@ -5,22 +5,22 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from equations.mathematical_closure.a_level import (
+from the_nothingness_effect.mathematical_architecture.a_level import (
     OperationCovarianceInput,
     OrientationInput,
     PhaseCoordinateInput,
     PiApproximationInput,
     contracts as a_contracts,
 )
-from equations.mathematical_closure.b_level import (
+from the_nothingness_effect.mathematical_architecture.b_level import (
     ApproximationHarmonicInput,
     ArithmeticOrientationInput,
     contracts as b_contracts,
 )
-from equations.mathematical_closure.c_level import SignedPolarFieldInput, contracts as c_contracts
-from equations.mathematical_closure.contracts import registered_mathematical_closure_registry
-from tne_runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect.mathematical_architecture.c_level import SignedPolarFieldInput, contracts as c_contracts
+from the_nothingness_effect.mathematical_architecture.contracts import registered_mathematical_closure_registry
+from the_nothingness_effect._runtime.theorem_complex_runtime import ClosureStatus, evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 ROOT = Path(__file__).resolve().parents[2]

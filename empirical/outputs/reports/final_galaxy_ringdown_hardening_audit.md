@@ -104,10 +104,10 @@ Current ringdown limitations:
 
 Verified current visual files:
 
-- `equations/locality_driven_gravity/simulation/figure6_locality_driven_spiral.png` exists, size `1278732` bytes
-- `equations/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.png` exists, size `592865` bytes
-- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_2d.mp4` exists, size `327819` bytes
-- `equations/locality_driven_gravity/animation/spiral_galaxy_formation_3d.mp4` exists, size `1196495` bytes
+- `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/figure6_locality_driven_spiral.png` exists, size `1278732` bytes
+- `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/arm_modes/spiral_arm_mode_comparison.png` exists, size `592865` bytes
+- `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/animation/spiral_galaxy_formation_2d.mp4` exists, size `327819` bytes
+- `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/animation/spiral_galaxy_formation_3d.mp4` exists, size `1196495` bytes
 - `empirical/outputs/figures/elastic_pi_ringdown_comparison.png` exists, size `327224` bytes
 - `empirical/outputs/figures/elastic_pi_ringdown_residuals.png` exists, size `231824` bytes
 - `empirical/outputs/figures/elastic_pi_ringdown_envelope.png` exists, size `204615` bytes

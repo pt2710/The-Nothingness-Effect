@@ -4,8 +4,8 @@ import json
 
 import pytest
 
-from equations.gravitational_cosmological_quantum_dynamics.contract_artifacts import run_suite
-from equations.gravitational_cosmological_quantum_dynamics.contract_runtime import APPENDIX_SHA256, SPECS
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts import run_suite
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime import APPENDIX_SHA256, SPECS
 
 
 @pytest.mark.parametrize("module", sorted(SPECS))

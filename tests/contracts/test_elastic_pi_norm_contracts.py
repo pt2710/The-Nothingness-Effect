@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.elastic_pi_norm.contracts import ElasticPiNormInput, contracts
-from tne_runtime.theorem_complex_runtime.contracts import evaluate_contract
-from tne_runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts import ElasticPiNormInput, contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import ClosureStatus, ComplexLevel
 
 
 INPUT = ElasticPiNormInput(

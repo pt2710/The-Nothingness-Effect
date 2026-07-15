@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import torch
 
-from equations.artificial_intelligence.soinets.model import SOInetModel
-from equations.artificial_intelligence.soinets.training import training_step
+from the_nothingness_effect.artificial_intelligence.soinets.model import SOInetModel
+from the_nothingness_effect.artificial_intelligence.soinets.training import training_step
 
 
 def test_soinet_runs_multiple_subnetworks_and_fail_closed_meta_residuals():

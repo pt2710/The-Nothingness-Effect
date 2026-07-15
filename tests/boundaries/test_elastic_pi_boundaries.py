@@ -5,14 +5,14 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from equations.elastic_pi.elastic_pi import (
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.elastic_pi import (
     ElasticPi,
     ElasticPiEvaluationError,
     ElasticPiStatus,
     evaluate_elastic_pi,
     require_elastic_pi_value,
 )
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_exact_source_law_and_log_identity():

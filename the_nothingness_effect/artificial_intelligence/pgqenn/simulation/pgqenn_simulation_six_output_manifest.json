@@ -1,0 +1,81 @@
+{
+  "architecture": "pgqenn",
+  "architecture_closure_status": "numerical_candidate",
+  "architecture_metadata": {
+    "architecture": "PGQENN",
+    "backend": "torch",
+    "device": "cpu",
+    "differentiable": true,
+    "formal_proof_substitute": false,
+    "growth_mode": "canonical_prime_parity",
+    "torch_version": "2.13.0+cpu"
+  },
+  "architecture_residuals": {
+    "graph_symmetry": 0.0,
+    "message_equivariance": 0.0,
+    "parseval": 9.5367431640625e-07,
+    "self_loop": 0.0
+  },
+  "capability_count": 6,
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "generated_files": [
+    "pgqenn_simulation_six_output_summary.csv",
+    "pgqenn_simulation_architecture_figure.png",
+    "color_classification/color_classification_simulation_results.csv",
+    "color_classification/color_classification_simulation_figure.png",
+    "color_classification/color_classification_simulation_animation.gif",
+    "color_classification/color_classification_simulation_manifest.json",
+    "sound_classification/sound_classification_simulation_results.csv",
+    "sound_classification/sound_classification_simulation_figure.png",
+    "sound_classification/sound_classification_simulation_animation.gif",
+    "sound_classification/sound_classification_sample.wav",
+    "sound_classification/sound_classification_simulation_manifest.json",
+    "bidirectional_color_classification/bidirectional_color_classification_simulation_results.csv",
+    "bidirectional_color_classification/bidirectional_color_classification_simulation_figure.png",
+    "bidirectional_color_classification/bidirectional_color_classification_simulation_animation.gif",
+    "bidirectional_color_classification/bidirectional_color_classification_simulation_manifest.json",
+    "bidirectional_sound_classification/bidirectional_sound_classification_simulation_results.csv",
+    "bidirectional_sound_classification/bidirectional_sound_classification_simulation_figure.png",
+    "bidirectional_sound_classification/bidirectional_sound_classification_simulation_animation.gif",
+    "bidirectional_sound_classification/bidirectional_sound_input.wav",
+    "bidirectional_sound_classification/bidirectional_sound_reconstruction.wav",
+    "bidirectional_sound_classification/bidirectional_sound_classification_simulation_manifest.json",
+    "color_cloning/color_cloning_simulation_results.csv",
+    "color_cloning/color_cloning_simulation_figure.png",
+    "color_cloning/color_cloning_simulation_animation.gif",
+    "color_cloning/color_cloning_simulation_manifest.json",
+    "sound_cloning/sound_cloning_simulation_results.csv",
+    "sound_cloning/sound_cloning_simulation_figure.png",
+    "sound_cloning/sound_cloning_simulation_animation.gif",
+    "sound_cloning/sound_cloning_input.wav",
+    "sound_cloning/sound_cloning_clone.wav",
+    "sound_cloning/sound_cloning_simulation_manifest.json"
+  ],
+  "output_groups": [
+    "color_classification",
+    "sound_classification",
+    "bidirectional_color_classification",
+    "bidirectional_sound_classification",
+    "color_cloning",
+    "sound_cloning"
+  ],
+  "parameter_hash": "dcd267a453e960a39fc984d0678cc348af3f0a63c160a9d6eb0eba4a61fb5802",
+  "parameters": {
+    "architecture": "pgqenn",
+    "mode": "simulation",
+    "output_groups": [
+      "color_classification",
+      "sound_classification",
+      "bidirectional_color_classification",
+      "bidirectional_sound_classification",
+      "color_cloning",
+      "sound_cloning"
+    ],
+    "seed": 0
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_all_capabilities",
+  "repository_result_commit": "8b61db8b785ab4e64b9a71a3fe4aa9e90545469c",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

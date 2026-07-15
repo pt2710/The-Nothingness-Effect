@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pytest
 
-from equations.duality.duality import FiniteInvolution, reciprocal_orbit_double_cover
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect.foundational_architecture.duality.duality import FiniteInvolution, reciprocal_orbit_double_cover
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_double_cover_does_not_hide_fixed_point_obstruction():

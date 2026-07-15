@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from equations.duality.simulation import run_suite
+from the_nothingness_effect.foundational_architecture.duality.simulation import run_suite
 
 
 def test_duality_artifacts_write_six_manifests(tmp_path):

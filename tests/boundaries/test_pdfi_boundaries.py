@@ -5,8 +5,8 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from equations.parity_dfi.parity_dfi import parity_dfi, parity_inverse_recurrence
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.parity_dfi import parity_dfi, parity_inverse_recurrence
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
 
 
 def test_orbit_formula_matches_manual_parity_filtered_average():

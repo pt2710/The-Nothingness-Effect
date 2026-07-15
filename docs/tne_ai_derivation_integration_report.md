@@ -86,5 +86,5 @@ evidence are in `docs/data/ai_derivation_integration_matrix.csv`.
 python -m pip install -r requirements-ai.txt
 python -m pytest -q tests/numerical/test_qenn_model.py tests/numerical/test_pgqenn_model.py tests/numerical/test_soinets_model.py
 python -m pytest -q tests/contracts/test_qenn_contracts.py tests/contracts/test_pgqenn_contracts.py tests/contracts/test_soinets_contracts.py
-python -m pytest -q equations/artificial_intelligence/*/test
+python -m pytest -q the_nothingness_effect/artificial_intelligence/*/test
 ```

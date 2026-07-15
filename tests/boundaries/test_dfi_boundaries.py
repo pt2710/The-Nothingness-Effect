@@ -5,7 +5,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from equations.dynamic_fluctuation_index.dfi import (
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import (
     DFIStatus,
     DFISingularityError,
     DynamicFluctuationIndex,
@@ -13,7 +13,7 @@ from equations.dynamic_fluctuation_index.dfi import (
     normalized_dfi,
     require_finite_dfi,
 )
-from tne_runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError, NonFiniteValueError
 
 
 SINGULAR = np.array([[1.0, 0.0], [2.0, 0.0]])

@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import numpy as np
 
-from equations.dynamic_fluctuation_index.dfi import NormalizedDFIResult
-from equations.elastic_pi.elastic_pi import ElasticPiEvaluation
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import NormalizedDFIResult
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.elastic_pi import ElasticPiEvaluation
 from fields_of_physics_in_dev.the_nothingness_effect import NothingnessEffect
 
 

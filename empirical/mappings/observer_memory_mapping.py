@@ -11,7 +11,7 @@ import numpy as np
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle
 from empirical.visualization.plot_empirical_comparisons import plot_series_comparison
-from equations.black_hole_dynamics.black_hole_dynamics import BlackHoleParams, simulate_black_hole_dynamics
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.black_hole_dynamics import BlackHoleParams, simulate_black_hole_dynamics
 
 
 @lru_cache(maxsize=1)

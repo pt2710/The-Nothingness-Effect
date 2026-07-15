@@ -33,7 +33,7 @@
     "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
     "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
   ],
-  "repository_result_commit": "07ef126acb96e3c19bf841df1e048da0aa2d1027",
+  "repository_result_commit": "1a3c1ab9caf38f51c25a2fbd9308e02d578b7535",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,

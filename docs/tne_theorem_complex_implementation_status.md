@@ -10,12 +10,12 @@ exist.
 
 | Level | Inventory | Implemented |
 | --- | ---: | ---: |
-| A | 204 | 74 |
-| B | 98 | 37 |
-| C | 49 | 18 |
-| Total | 351 | 129 |
+| A | 204 | 78 |
+| B | 98 | 39 |
+| C | 49 | 19 |
+| Total | 351 | 136 |
 
-Remaining status is 187 `proxy_only` and 35 `not_implemented`. Those labels are
+Remaining status is 180 `proxy_only` and 35 `not_implemented`. Those labels are
 deliberately not inferred upward from related legacy modules.
 
 ## Implemented Flowpoint complex chain
@@ -146,3 +146,20 @@ positive non-cancelling B residual energies, and one graph-local C defect field.
 The C result reports boundary trace, edge localization, reconstruction,
 coercivity, isolated-node observability, and both-B source removal. It remains
 a finite `numerical_candidate`, not an attainment or proof claim.
+
+## SOInets
+
+The canonical SOInet is a differentiable meta-network with multiple QENN and
+PGQENN subnetworks, bidirectional memory transfer, aggregated
+observation/collapse readout, a symmetric meta-adjacency, spectral and spatial
+residuals, and fail-closed completeness arbitration. The historical
+`tne_concepts/SOInet/soi_net.py` implementation remains a legacy experimental
+backend; a deprecating compatibility import points new callers to the canonical
+runtime and does not import its duplicated local source laws.
+
+The certified source-complete chain follows the appendix's actual dependencies:
+B19 consumes A01+A13, B20 consumes A02+A14, and C29 consumes B19+B20. Both B
+operators are positive non-cancelling residual energies with every-source
+removal tests. C29 is one modality-spatial field with boundary, localization,
+reconstruction, coercivity, observability, and both-B ablations. Its finite
+success status is `numerical_candidate`.

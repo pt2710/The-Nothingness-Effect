@@ -54,8 +54,9 @@ provenance manifest.
 
 The Flowpoint, mathematical-closure, foundational-duality, DFI, pDFI,
 Elastic-π, Elastic-π Norm, selected physical-dynamics, and completeness
-checkpoints plus the first QENN and PGQENN chains certify 129 theorem complexes:
-74 A, 37 B, and 18 C. The remaining matrix contains 187 `proxy_only` and 35
+checkpoints plus source-complete QENN, PGQENN, and SOInet chains certify 136
+theorem complexes: 78 A, 39 B, and 19 C. The remaining matrix contains 180
+`proxy_only` and 35
 `not_implemented` records. Every
 upgraded B contract has all-source removal
 tests, and every upgraded C contract has an explicit spatial/local operator,
@@ -88,3 +89,9 @@ Flowpoint-equivariant message passing, pDFI conditioning, and exact Elastic-π
 edge gains. Legacy random sampling is retained only as a seeded comparison
 ablation. Its bounded 4A→2B→1C chain has all-source ablations and an explicit
 graph-local numerical-candidate boundary; all other PGQENN rows remain proxy.
+
+The SOInet checkpoint composes multiple canonical QENN/PGQENN subnetworks with
+bidirectional memory, observation aggregation, spectral/spatial meta-residuals,
+and fail-closed arbitration. Appendix verification corrected the bounded source
+selection to B19=A01+A13 and B20=A02+A14; C29 consumes those two complete B
+laws. The older duplicated `tne_concepts/SOInet` stack is compatibility-only.

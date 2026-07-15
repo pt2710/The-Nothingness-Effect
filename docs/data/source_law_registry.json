@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 129,
+      "implemented": 136,
       "not_implemented": 35,
-      "proxy_only": 187
+      "proxy_only": 180
     },
     "total": 351
   },
@@ -7327,7 +7327,7 @@
       "complex_id": "motif_spectral_dual_regularity_law_for_soinets",
       "equation_labels": [],
       "first_label": "app:soinet_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "soinets",
       "source_complex_id": "motif_spectral_dual_regularity_law_for_soinets",
@@ -7339,7 +7339,7 @@
       "complex_id": "soi_modality_invariant_convergence_and_collapse_completeness",
       "equation_labels": [],
       "first_label": "app:soinet_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "soinets",
       "source_complex_id": "soi_modality_invariant_convergence_and_collapse_completeness",
@@ -7502,7 +7502,7 @@
       "complex_id": "soi_universal_entropy_plateau_theorem",
       "equation_labels": [],
       "first_label": "app:soinet_complex_13",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "soinets",
       "source_complex_id": "soi_universal_entropy_plateau_theorem",
@@ -7514,7 +7514,7 @@
       "complex_id": "soi_modality_dual_closure",
       "equation_labels": [],
       "first_label": "app:soinet_complex_14",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "soinets",
       "source_complex_id": "soi_modality_dual_closure",
@@ -7596,7 +7596,7 @@
         "eq:tne_additive_soinet_b19_joint_definition"
       ],
       "first_label": "app:soinet_complex_19",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "soinets",
       "source_complex_id": "motif_spectral_entropy_coupling_energy",
@@ -7621,7 +7621,7 @@
         "eq:tne_additive_soinet_b20_joint_definition"
       ],
       "first_label": "app:soinet_complex_20",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "soinets",
       "source_complex_id": "modality_collapse_symmetry_operator",
@@ -7846,7 +7846,7 @@
         "eq:soinet29_definition_2c"
       ],
       "first_label": "app:soinet_complex_29",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "soinets",
       "source_complex_id": "motif_spectral_modality_collapse_spatial_field",

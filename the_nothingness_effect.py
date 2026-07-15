@@ -28,6 +28,7 @@ Usage:
 
 import os
 import sys
+import warnings
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -41,6 +42,7 @@ from equations.spectrum_of_infinities.spectrum_of_infinities import SpectrumOfIn
 from equations.observation_and_collapse.observation_and_collapse import observation_and_collapse
 from equations.flowpoint_trigonometry.fp_trigonometry import FlowpointTrigonometry
 from equations.dynamic_fluctuation_index.dfi import DynamicFluctuationIndex
+from equations.elastic_pi.elastic_pi import evaluate_elastic_pi
 from equations.flowpoint_math_operations.fp_math_operations import FlowpointMath
 
 class NothingnessEffect:
@@ -50,7 +52,7 @@ class NothingnessEffect:
 
         """
 
-    def fp(self):
+    def fp(self, value):
         """
         Flowpoint (fp) Generator Function
         Implements the dynamic oscillatory behavior of the Flowpoint as defined by:
@@ -122,9 +124,9 @@ class NothingnessEffect:
         TypeError
         If the input f is not a supported type (bool, int, float, or complex).
         """
-        return fp()
+        return fp(value)
 
-    def sym_eq(self):
+    def sym_eq(self, x):
         """
         Implements the symmetry equation: ±X = (x, -x) = ((x ≠ -x)^(x = -x) × (-x ≠ x)^(-x = x))
 
@@ -138,9 +140,9 @@ class NothingnessEffect:
         tuple
         A tuple containing the result for x and -x. For boolean inputs, it returns (x, not x). For integers, it returns (x, -x). For floats, it returns the calculated symmetry values.
         """
-        return symmetry_equation()
+        return symmetry_equation(x)
 
-    def dual_eq(self):
+    def dual_eq(self, y):
         """
         Implements the duality equation for Y: ±Y = (y, -y) = ((-y ≠ y)^(-y = y)) / ((y ≠ -y)^(y = -y))
 
@@ -154,9 +156,9 @@ class NothingnessEffect:
         tuple
         A tuple containing the result for y and -y. For boolean inputs, it returns (y, not y). For integers, it returns (y, -y). For floats, it returns the calculated duality values.
         """
-        return duality_equation()
+        return duality_equation(y)
     
-    def spa_eq(self):
+    def spa_eq(self, z):
         """
         Implements the spatiality equation for Z: ±Z = (z, -z) = ∛((z ≠ -z)^(z = -z) · (-z ≠ z)^(-z = z))
 
@@ -168,15 +170,15 @@ class NothingnessEffect:
         tuple
         A tuple containing the result for z and -z
         """
-        return spatiality_equation()
+        return spatiality_equation(z)
     
-    def countable_infinity(self):
+    def countable_infinity(self, x, y, z):
         """Defines the countable infinity function."""
-        return countable_infinity()
+        return countable_infinity(x, y, z)
 
-    def uncountable_infinity(self):
+    def uncountable_infinity(self, x=1, y=1, z=1):
         """Defines the uncountable infinity function."""
-        return uncountable_infinity()
+        return uncountable_infinity(x, y, z)
 
     def soi(self, **soi_kwargs):
         """
@@ -195,25 +197,41 @@ class NothingnessEffect:
         return engine.soi()
 
 
-    def dfi(self, *args, **kwargs):
+    def dfi(self, data, soi=None, **soi_kwargs):
         """
         Compute the Dynamic Fluctuation Index on `data`.
 
-        This simply delegates to DynamicFluctuationIndex.dfi(), so all
-        parameters (data, soi, normalize_to, adv_mode, type, etc.) match
-        that class's signature.
+        This delegates to the canonical typed DFI evaluator. Finite input
+        returns a NormalizedDFIResult; a denominator obstruction returns the
+        same type with an explicit singular status and no neutralized arrays.
 
         Usage:
           ne = NothingnessEffect()
-          ne.dfi(df)                                    # default SOI
-          ne.dfi(df, soi=250)                           # manual SOI
-          ne.dfi(df, soi=108, adv_mode=True, type="symmetric")  # advanced mode
+          ne.dfi(df)                   # typed result with default SOI
+          ne.dfi(df, soi=250)          # typed result with manual SOI
         """
         engine = DynamicFluctuationIndex()
-        return engine.dfi(*args, **kwargs)
+        return engine.compute(data, soi=soi, **soi_kwargs)
+
+    def legacy_dfi(self, data, soi=None, **soi_kwargs):
+        """Return the historical per-feature dictionary with a deprecation warning."""
+        warnings.warn(
+            "legacy_dfi is a compatibility wrapper; use dfi for a typed fail-closed result",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return DynamicFluctuationIndex(compatibility_mode=True).dfi(
+            data, soi=soi, **soi_kwargs
+        )
+
+    def elastic_pi(self, entropy, *, K_D=1.0, x=None, exponent_clip=None):
+        """Evaluate the typed Elastic-pi source law and retain diagnostics."""
+        return evaluate_elastic_pi(
+            entropy, K_D=K_D, x=x, exponent_clip=exponent_clip
+        )
 
 
-    def obs_n_col(self):
+    def obs_n_col(self, *coordinates):
         """
         Implements the observation and collapse process in The Nothingness Effect.
 
@@ -223,7 +241,12 @@ class NothingnessEffect:
         function
         A function that takes three arguments (x, y, z) and returns a tuple of two values.
         """
-        return observation_and_collapse()
+        operator = observation_and_collapse()
+        if not coordinates:
+            return operator
+        if len(coordinates) != 3:
+            raise TypeError("obs_n_col expects either no arguments or exactly x, y, z")
+        return operator(*coordinates)
 
     def fp_trig(self):
         """

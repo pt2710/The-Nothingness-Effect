@@ -37,9 +37,9 @@
     "audit_source_id_collisions_resolved": 4,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 20,
-      "not_implemented": 74,
-      "proxy_only": 257
+      "implemented": 51,
+      "not_implemented": 56,
+      "proxy_only": 244
     },
     "total": 351
   },
@@ -2359,7 +2359,7 @@
         "eq:dfi01_unit_mass_transfer_1a"
       ],
       "first_label": "app:dfi_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dfi",
       "source_complex_id": "dfi_spectrum_normalized_existence_and_normalization_breakdown",
@@ -2384,7 +2384,7 @@
         "eq:dfi02_spurious_vectors_2a"
       ],
       "first_label": "app:dfi_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dfi",
       "source_complex_id": "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
@@ -2409,7 +2409,7 @@
         "eq:dfi03_log_response_2a"
       ],
       "first_label": "app:dfi_complex_03",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "dfi",
       "source_complex_id": "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
@@ -2534,7 +2534,7 @@
         "eq:drv_dfi_b01_2b"
       ],
       "first_label": "app:drv_dfi_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "dfi",
       "source_complex_id": "scale_normalized_dfi_homogeneity_invariant",
@@ -2559,7 +2559,7 @@
         "eq:drv_dfi_b02_2b"
       ],
       "first_label": "app:drv_dfi_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "dfi",
       "source_complex_id": "entropic_applicability_response_operator",
@@ -2609,7 +2609,7 @@
         "eq:drv_dfi_c01_2c"
       ],
       "first_label": "app:drv_dfi_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "dfi",
       "source_complex_id": "spatially_localized_dfi_consistency_closure",
@@ -2634,7 +2634,7 @@
         "eq:loss_predictive_power_pDFI_corollary_2a"
       ],
       "first_label": "ssec:parity_definite_indeterminate_fluctuation_law_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pdfi",
       "source_complex_id": "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
@@ -2659,7 +2659,7 @@
         "eq:pdfi02_status_set_1a2a"
       ],
       "first_label": "ssec:flowpoint_parity_correspondence_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pdfi",
       "source_complex_id": "flowpoint_parity_correspondence_and_decoupling",
@@ -2684,7 +2684,7 @@
         "eq:corollary_unpredictable_variance_2a"
       ],
       "first_label": "ssec:entropic_fluctuation_predictability_pDFI_ambiguity_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pdfi",
       "source_complex_id": "pdfi_entropic_predictability_and_fluctuation_ambiguity",
@@ -2709,7 +2709,7 @@
         "eq:lemma_meta_probabilistic_1a2a"
       ],
       "first_label": "ssec:dual_closure_principle_pdfi_metaobservation_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pdfi",
       "source_complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
@@ -2734,7 +2734,7 @@
         "eq:lemma_equivalence_boundary_1a2a"
       ],
       "first_label": "ssec:pdfi_elastic_pi_equivalence_decoupling_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pdfi",
       "source_complex_id": "pdfi_elastic_equivalence_and_decoupling",
@@ -2759,7 +2759,7 @@
         "eq:lemma_synthesis_1a2a"
       ],
       "first_label": "ssec:completeness_parity_dfi_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "pdfi",
       "source_complex_id": "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations",
@@ -2784,7 +2784,7 @@
         "eq:drv_pdfi_b01_2b"
       ],
       "first_label": "app:drv_pdfi_b01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "pdfi",
       "source_complex_id": "parity_flowpoint_transport_law",
@@ -2809,7 +2809,7 @@
         "eq:drv_pdfi_b02_2b"
       ],
       "first_label": "app:drv_pdfi_b02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "pdfi",
       "source_complex_id": "predictability_observation_parity_coupling",
@@ -2834,7 +2834,7 @@
         "eq:drv_pdfi_b03_2b"
       ],
       "first_label": "app:drv_pdfi_b03",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "pdfi",
       "source_complex_id": "elastic_calibration_completeness_functional",
@@ -2859,7 +2859,7 @@
         "eq:drv_pdfi_c01_2c"
       ],
       "first_label": "app:drv_pdfi_c01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "pdfi",
       "source_complex_id": "spatial_parity_elastic_calibration_closure",
@@ -2884,7 +2884,7 @@
         "eq:proof_deriv_exp_pi_1a"
       ],
       "first_label": "app:elastic_pi_complex_01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi",
       "source_complex_id": "dfi_elastic_equivalence_and_breakdown",
@@ -2909,7 +2909,7 @@
         "eq:lemma_log_laplacian_1a"
       ],
       "first_label": "app:elastic_pi_complex_02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi",
       "source_complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
@@ -2934,7 +2934,7 @@
         "eq:entropy_curvature_undefined_2a"
       ],
       "first_label": "app:elastic_pi_complex_03",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi",
       "source_complex_id": "elastic_curvature_entropy_duality_and_decoupling",
@@ -2959,7 +2959,7 @@
         "eq:proof_pi_equality_1a"
       ],
       "first_label": "app:elastic_pi_complex_04",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi",
       "source_complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
@@ -2984,7 +2984,7 @@
         "eq:drv_elasticpi_b01_2b"
       ],
       "first_label": "app:drv_elasticpi_b01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_pi",
       "source_complex_id": "dfi_log_curvature_reciprocity_law",
@@ -3009,7 +3009,7 @@
         "eq:drv_elasticpi_b02_2b"
       ],
       "first_label": "app:drv_elasticpi_b02",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_pi",
       "source_complex_id": "curvature_certified_simulation_residual",
@@ -3034,7 +3034,7 @@
         "eq:drv_elasticpi_c01_2c"
       ],
       "first_label": "app:drv_elasticpi_c01",
-      "implementation_status": "proxy_only",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "elastic_pi",
       "source_complex_id": "spatial_reciprocal_curvature_validation_closure",
@@ -3059,7 +3059,7 @@
         "eq:epinorm_c1_constant_transition_zero_2a"
       ],
       "first_label": "ssec:epinorm_complex_i_admissibility",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_norm",
       "source_complex_id": "weighted_path_functional_and_norm_admissibility",
@@ -3082,7 +3082,7 @@
         "eq:epinorm_c2_joint_synthesis_1a2a"
       ],
       "first_label": "ssec:epinorm_complex_ii_weight_regular",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_norm",
       "source_complex_id": "elastic_field_ratios_and_weight_regularity",
@@ -3107,7 +3107,7 @@
         "eq:epinorm_c3_uniform_baseline_1a2a"
       ],
       "first_label": "ssec:epinorm_complex_iii_bounds",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_norm",
       "source_complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds",
@@ -3132,7 +3132,7 @@
         "eq:epinorm_c4_joint_synthesis_1a2a"
       ],
       "first_label": "ssec:epinorm_complex_iv_pdfi_interface",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_norm",
       "source_complex_id": "pdfi_elastic_norm_interface",
@@ -3157,7 +3157,7 @@
         "eq:pdfi05_elastic_pi_norm_handoff"
       ],
       "first_label": "ssec:pdfi_elastic_pi_equiv_decouple_1a2a",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "A",
       "module": "elastic_pi_norm",
       "source_complex_id": "pdfi_elastic_norm_equivalence_and_decoupling",
@@ -3182,7 +3182,7 @@
         "eq:drv_epinorm_b01_2b"
       ],
       "first_label": "app:drv_epinorm_b01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_pi_norm",
       "source_complex_id": "weighted_path_ratio_regularity_functional",
@@ -3207,7 +3207,7 @@
         "eq:drv_epinorm_b02_2b"
       ],
       "first_label": "app:drv_epinorm_b02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "B",
       "module": "elastic_pi_norm",
       "source_complex_id": "entropy_pdfi_calibrated_norm_residual",
@@ -3232,7 +3232,7 @@
         "eq:drv_epinorm_c01_2c"
       ],
       "first_label": "app:drv_epinorm_c01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "level": "C",
       "module": "elastic_pi_norm",
       "source_complex_id": "spatial_weighted_calibration_closure",

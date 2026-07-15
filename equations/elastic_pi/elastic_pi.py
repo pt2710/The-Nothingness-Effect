@@ -1,89 +1,203 @@
+"""Canonical Elastic-pi source law with explicit approximation diagnostics."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from enum import Enum
+from typing import Any
+
 import numpy as np
 
+from equations.dynamic_fluctuation_index.dfi import NormalizedDFIResult, require_finite_dfi
+from equations.theorem_complex_runtime.types import (
+    DomainViolationError,
+    SingularEvaluationError,
+)
+from equations.theorem_complex_runtime.validation import ensure_finite
+
+
+class ElasticPiStatus(str, Enum):
+    EXACTLY_EVALUATED = "exactly_evaluated"
+    APPROXIMATED = "approximated"
+    UNDERFLOW = "underflow"
+    OVERFLOW = "overflow"
+
+
+class ElasticPiEvaluationError(SingularEvaluationError):
+    """Raised when a requested floating-point Elastic-pi value is unavailable."""
+
+
+@dataclass(frozen=True)
+class ElasticPiEvaluation:
+    entropy: np.ndarray
+    K_D: float
+    coordinates: np.ndarray
+    exact_exponent: np.ndarray
+    evaluated_exponent: np.ndarray
+    analytic_log_value: np.ndarray
+    value: np.ndarray | None
+    log_laplacian: np.ndarray
+    status: ElasticPiStatus
+    approximation_metadata: dict[str, Any]
+
+    @property
+    def exact_numerical_evaluation(self) -> bool:
+        return self.status is ElasticPiStatus.EXACTLY_EVALUATED
+
+
+def _coordinates(entropy: np.ndarray, x: Any | None) -> tuple[np.ndarray, float]:
+    if entropy.ndim != 1 or entropy.size == 0:
+        raise DomainViolationError("Elastic-pi entropy must be a non-empty one-dimensional array")
+    coordinates = np.arange(entropy.size, dtype=float) if x is None else np.asarray(x, dtype=float)
+    if coordinates.shape != entropy.shape:
+        raise DomainViolationError("Elastic-pi coordinates must have the entropy shape")
+    ensure_finite(coordinates, name="Elastic-pi coordinates")
+    if coordinates.size < 2:
+        return coordinates, 1.0
+    spacing = np.diff(coordinates)
+    if np.any(spacing <= 0):
+        raise DomainViolationError("Elastic-pi coordinates must be strictly increasing")
+    mean_spacing = float(np.mean(spacing))
+    if not np.allclose(spacing, mean_spacing, rtol=1e-10, atol=1e-12):
+        raise DomainViolationError("the canonical finite-difference Laplacian requires uniform coordinates")
+    return coordinates, mean_spacing
+
+
+def evaluate_elastic_pi(
+    entropy: Any,
+    *,
+    K_D: float,
+    x: Any | None = None,
+    exponent_clip: float | None = None,
+) -> ElasticPiEvaluation:
+    r"""Evaluate pi_E = pi exp(-S/K_D), with K_D > 0.
+
+    ``exponent_clip`` is an explicitly approximate evaluation policy.  The
+    exact exponent and analytic logarithm are retained even when clipping is
+    requested, so a clipped value cannot masquerade as the exact source law.
+    """
+
+    values = np.asarray(entropy, dtype=float)
+    ensure_finite(values, name="Elastic-pi entropy")
+    scale = float(K_D)
+    if not np.isfinite(scale) or scale <= 0:
+        raise DomainViolationError("Elastic-pi K_D must be finite and strictly positive")
+    coordinates, spacing = _coordinates(values, x)
+    exact_exponent = -values / scale
+    ensure_finite(exact_exponent, name="Elastic-pi exact exponent")
+
+    clipped = np.zeros(exact_exponent.shape, dtype=bool)
+    evaluated_exponent = exact_exponent.copy()
+    if exponent_clip is not None:
+        limit = float(exponent_clip)
+        if not np.isfinite(limit) or limit <= 0:
+            raise DomainViolationError("exponent_clip must be finite and strictly positive")
+        evaluated_exponent = np.clip(exact_exponent, -limit, limit)
+        clipped = evaluated_exponent != exact_exponent
+
+    analytic_log_value = np.log(np.pi) + exact_exponent
+    laplacian = np.zeros_like(analytic_log_value)
+    if analytic_log_value.size > 2:
+        laplacian[1:-1] = (
+            analytic_log_value[2:]
+            - 2.0 * analytic_log_value[1:-1]
+            + analytic_log_value[:-2]
+        ) / (spacing**2)
+
+    with np.errstate(over="ignore", under="ignore", invalid="ignore"):
+        numerical_value = np.pi * np.exp(evaluated_exponent)
+    has_overflow = bool(np.any(np.isinf(numerical_value)))
+    has_underflow = bool(np.any(numerical_value == 0.0))
+    if has_overflow or has_underflow:
+        status = ElasticPiStatus.OVERFLOW if has_overflow else ElasticPiStatus.UNDERFLOW
+        result_value = None
+    else:
+        ensure_finite(numerical_value, name="Elastic-pi numerical value")
+        result_value = numerical_value
+        status = ElasticPiStatus.APPROXIMATED if np.any(clipped) else ElasticPiStatus.EXACTLY_EVALUATED
+
+    metadata: dict[str, Any] = {
+        "clipped": bool(np.any(clipped)),
+        "clipped_count": int(np.count_nonzero(clipped)),
+        "exponent_clip": None if exponent_clip is None else float(exponent_clip),
+        "exact_exponent_min": float(np.min(exact_exponent)),
+        "exact_exponent_max": float(np.max(exact_exponent)),
+        "evaluated_exponent_min": float(np.min(evaluated_exponent)),
+        "evaluated_exponent_max": float(np.max(evaluated_exponent)),
+        "source_law": "pi * exp(-S / K_D)",
+        "exact_value_available": result_value is not None and not bool(np.any(clipped)),
+    }
+    return ElasticPiEvaluation(
+        values,
+        scale,
+        coordinates,
+        exact_exponent,
+        evaluated_exponent,
+        analytic_log_value,
+        result_value,
+        laplacian,
+        status,
+        metadata,
+    )
+
+
+def require_elastic_pi_value(result: ElasticPiEvaluation) -> np.ndarray:
+    if result.value is None:
+        raise ElasticPiEvaluationError(
+            f"Elastic-pi numerical evaluation ended with {result.status.value}; "
+            "request an explicit exponent_clip policy for an approximation"
+        )
+    return result.value
+
+
 class ElasticPi:
-    """
-    Universal ElasticPi class for computation and analysis of the elastic pi field.
+    """Backward-compatible facade over the canonical typed Elastic-pi law."""
 
-    Args:
-        K_D (float, optional): Default characteristic scaling constant for the system.
-            Defaults to 1.0 (not np.pi). Can be overridden per call.
-    """
-
-    def __init__(self, K_D=1.0):
-        """
-        Initialize ElasticPi with the default scaling constant.
-
-        Args:
-            K_D (float, optional): Default entropy scaling constant. Defaults to 1.0.
-        """
-        self.K_D = float(K_D)
+    def __init__(self, K_D: float = 1.0):
+        scale = float(K_D)
+        if not np.isfinite(scale) or scale <= 0:
+            raise DomainViolationError("Elastic-pi K_D must be finite and strictly positive")
+        self.K_D = scale
 
     def build_S_analytic(self, x, formula=None, **kwargs):
-        """
-        Construct analytic or synthetic relative entropy S(x).
+        coordinates = np.asarray(x)
+        result = formula(coordinates, **kwargs) if formula is not None else np.zeros_like(coordinates)
+        ensure_finite(result, name="analytic entropy")
+        return result
 
-        Args:
-            x (np.ndarray): 1D spatial or temporal coordinate array.
-            formula (callable, optional): Function to compute S(x). Must accept x and **kwargs.
-            **kwargs: Extra parameters for formula.
+    def evaluate(self, S, x=None, K_D=None, *, exponent_clip=None) -> ElasticPiEvaluation:
+        scale = self.K_D if K_D is None else float(K_D)
+        return evaluate_elastic_pi(S, K_D=scale, x=x, exponent_clip=exponent_clip)
 
-        Returns:
-            np.ndarray: Analytic S(x).
-        """
-        if formula is not None:
-            return formula(x, **kwargs)
-        return np.zeros_like(x)
-
-    def compute_piE_and_laplacian(self, S, x=None, K_D=None):
-        """
-        Compute elastic pi field and Laplacian of its log.
-
-        Args:
-            S (np.ndarray): Relative entropy array.
-            x (np.ndarray, optional): Coordinates. If None, uses unit spacing.
-            K_D (float, optional): Override scaling constant for this computation. Defaults to self.K_D.
-
-        Returns:
-            tuple:
-                x (np.ndarray): Coordinates.
-                piE (np.ndarray): Elastic pi field.
-                lap (np.ndarray): Laplacian of log(piE).
-        """
-        _K_D = float(self.K_D) if K_D is None else float(K_D)
-        if x is None:
-            x = np.arange(len(S))
-            h = 1.0
-        else:
-            x = np.asarray(x)
-            h = np.mean(np.diff(x))
-
-        # --- Robust handling to prevent overflow/underflow ---
-        expo = np.clip(-S / _K_D, -700, 700)
-        piE = np.pi * np.exp(expo)
-        # Avoid log(0): replace zeros with tiny value before log
-        piE = np.where(piE == 0, 1e-300, piE)
-        lnE = np.log(piE)
-        lap = np.zeros_like(lnE)
-        lap[1:-1] = (lnE[2:] - 2 * lnE[1:-1] + lnE[:-2]) / (h ** 2)
-        return x, piE, lap
+    def compute_piE_and_laplacian(
+        self,
+        S,
+        x=None,
+        K_D=None,
+        *,
+        exponent_clip=None,
+        return_diagnostics: bool = False,
+    ):
+        result = self.evaluate(S, x=x, K_D=K_D, exponent_clip=exponent_clip)
+        if return_diagnostics:
+            return result
+        if exponent_clip is not None:
+            raise DomainViolationError(
+                "clipped Elastic-pi evaluation requires return_diagnostics=True so approximation metadata is preserved"
+            )
+        return result.coordinates, require_elastic_pi_value(result), result.log_laplacian
 
     def empirical_from_dfi(self, data, dfi_engine, soi=1.0, feature=None):
-        """
-        Compute relative entropy S from a DFI engine.
-
-        Args:
-            data (np.ndarray or pd.DataFrame): Input dataset.
-            dfi_engine (DynamicFluctuationIndex): Instance of DFI calculator.
-            soi (float, optional): Spectrum of Infinities parameter.
-            feature (str or int, optional): Use specific feature, else mean across all.
-
-        Returns:
-            np.ndarray: Relative entropy S.
-        """
         entropic = dfi_engine.dfi(data, soi=soi)
+        if isinstance(entropic, NormalizedDFIResult):
+            require_finite_dfi(entropic)
+            normalized = np.asarray(entropic.normalized_entropy)
+            entropy = entropic.spectrum_scale * normalized
+            if feature is not None:
+                index = entropic.feature_names.index(feature)
+                return entropy[:, index]
+            return np.mean(entropy, axis=1)
         if feature is not None:
-            S = entropic[feature]["Relative_Entropy"]
-        else:
-            all_S = [featdict["Relative_Entropy"] for featdict in entropic.values()]
-            S = np.mean(np.vstack(all_S), axis=0)
-        return S
+            return entropic[feature]["Relative_Entropy"]
+        all_entropy = [item["Relative_Entropy"] for item in entropic.values()]
+        return np.mean(np.vstack(all_entropy), axis=0)

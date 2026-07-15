@@ -49,3 +49,19 @@ Initial strict implementation status remains honest: 277 complexes are
 theorem-contract implementations. Status changes require a typed operator,
 invariant/residual, required source-removal tests, simulation evidence, and a
 provenance manifest.
+
+## Checkpoint status
+
+The Flowpoint, mathematical-closure, foundational-duality, DFI, pDFI,
+Elastic-π, and Elastic-π Norm checkpoints certify 51 theorem complexes:
+29 A, 15 B, and 7 C. The remaining matrix contains 244 `proxy_only` and 56
+`not_implemented` records. Every upgraded B contract has all-source removal
+tests, and every upgraded C contract has an explicit spatial/local operator,
+boundary or leakage diagnostics, all-B-source ablations, and a
+`numerical_candidate` distinction where finite computation does not establish
+mathematical attainment.
+
+The canonical DFI and Elastic-π source paths are now fail closed. DFI returns a
+typed singular witness instead of neutralized non-finite values. Elastic-π
+underflow/overflow is explicit, and optional exponent clipping preserves both
+the exact and evaluated exponents in approximation metadata.

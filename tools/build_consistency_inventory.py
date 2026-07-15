@@ -152,12 +152,15 @@ def build_outputs(audit_dir: Path, appendix_dir: Path, output_dir: Path, reposit
         raise ValueError(f"Expected 351 theorem complexes; received {len(rows)}")
     ids = canonical_ids(rows)
     hashes, _, verification = verify_sources(appendix_dir, rows)
-    overrides_path = output_dir / "implementation_status_overrides.json"
-    overrides = (
-        json.loads(overrides_path.read_text(encoding="utf-8"))
-        if overrides_path.is_file()
-        else {}
-    )
+    overrides: dict[str, Any] = {}
+    for overrides_path in sorted(output_dir.glob("implementation_status_overrides*.json")):
+        payload = json.loads(overrides_path.read_text(encoding="utf-8"))
+        overlap = set(overrides).intersection(payload)
+        if overlap:
+            raise ValueError(
+                f"Implementation overrides are duplicated across files: {sorted(overlap)[:5]}"
+            )
+        overrides.update(payload)
 
     matrix_rows: list[dict[str, Any]] = []
     for row in rows:

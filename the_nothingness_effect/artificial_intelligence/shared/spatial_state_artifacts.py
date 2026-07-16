@@ -1,4 +1,4 @@
-"""Architecture-owned 3D growth, stream, matrix and signed-state evidence."""
+"""Architecture-owned 3D evidence derived from actual runtime tensors."""
 
 from __future__ import annotations
 
@@ -22,6 +22,9 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     git_commit,
     parameter_hash,
 )
+from the_nothingness_effect.artificial_intelligence.shared.runtime_state import (
+    ArchitectureRuntimeState,
+)
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
@@ -31,88 +34,39 @@ START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
 class SpatialProfile:
     title: str
     axis_labels: tuple[str, str, str]
-    streams: tuple[str, str, str, str]
     signed_meaning: str
-    source_status: str
 
 
 _PROFILES = {
     "qenn": SpatialProfile(
-        "QENN Flowpoint/DTQC state growth",
-        ("epoch depth", "DTQC spectral phase", "Flowpoint sector"),
-        ("invariant", "anti_invariant", "dtqc_memory", "closure"),
-        "positive/negative Flowpoint orientation",
-        "QENN runtime state: Flowpoint projectors plus DTQC memory",
+        "QENN runtime Flowpoint/DTQC state",
+        ("runtime component 1", "runtime component 2", "runtime component 3"),
+        "canonical positive/negative Flowpoint orientation",
     ),
     "soinets": SpatialProfile(
-        "SOInets subnetwork/meta-closure growth",
-        ("subnetwork depth", "modality exchange", "meta-closure depth"),
-        ("qenn", "pgqenn", "memory_transfer", "meta_closure"),
+        "SOInet runtime subnetwork/meta-closure state",
+        ("subnetwork state", "transfer state", "meta-closure state"),
         "forward/reverse closure orientation",
-        "SOInet runtime state: QENN/PGQENN subnetworks and meta-closure",
     ),
     "multimodal": SpatialProfile(
-        "Multimodal modality/cluster state growth",
-        ("modality axis", "cluster growth", "SOInet closure depth"),
-        ("color", "sound", "vision", "cross_modal"),
-        "positive/negative Flowpoint carrier orientation",
-        "multimodal runtime state: learned axes, clusters and SOInet closure",
+        "Multimodal runtime modality/cluster state",
+        ("modality state", "cluster state", "SOInet state"),
+        "positive/negative carrier orientation",
     ),
 }
 
-_COLORS = ("#4c78a8", "#59a14f", "#f28e2b", "#e15759")
 
-
-def _state(
-    architecture: str, seed: int, count: int
-) -> tuple[SpatialProfile, np.ndarray, np.ndarray, tuple[str, ...], np.ndarray]:
-    try:
-        profile = _PROFILES[architecture]
-    except KeyError as error:
-        raise ValueError(f"no 3D spatial-state profile for {architecture!r}") from error
-    generator = np.random.default_rng(seed)
-    step = np.arange(count, dtype=float)
-    stream_index = (np.arange(count) % 4).astype(int)
-    phase = 2.0 * np.pi * step / max(count - 1, 1)
-    coordinates = np.column_stack(
-        (
-            -1.0 + 2.0 * step / max(count - 1, 1),
-            np.sin(phase + 0.42 * stream_index),
-            np.cos(1.7 * phase - 0.31 * stream_index),
-        )
+def _resample(value: np.ndarray, size: int) -> np.ndarray:
+    vector = np.asarray(value, dtype=float).reshape(-1)
+    if vector.size == size:
+        return vector
+    if vector.size == 1:
+        return np.repeat(vector, size)
+    return np.interp(
+        np.linspace(0.0, 1.0, size),
+        np.linspace(0.0, 1.0, vector.size),
+        vector,
     )
-    coordinates[:, 1:] += generator.normal(0.0, 0.025, (count, 2))
-    coordinates = np.clip(coordinates, -1.0, 1.0)
-    distances = np.linalg.norm(coordinates[:, None, :] - coordinates[None, :, :], axis=-1)
-    adjacency = np.exp(-2.4 * distances)
-    adjacency[distances > 1.05] = 0.0
-    for index in range(count - 1):
-        adjacency[index, index + 1] = adjacency[index + 1, index] = max(
-            adjacency[index, index + 1], 0.42
-        )
-    np.fill_diagonal(adjacency, 0.0)
-    streams = tuple(profile.streams[index] for index in stream_index)
-    return profile, coordinates, adjacency, streams, stream_index
-
-
-def _signed_state(
-    coordinates: np.ndarray, adjacency: np.ndarray
-) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    count = len(coordinates)
-    negative = coordinates.copy()
-    negative[:, 0] = -0.93 * coordinates[:, 0]
-    negative[:, 1] = -0.72 * coordinates[:, 1] + 0.18 * coordinates[:, 2]
-    negative[:, 2] = 0.81 * coordinates[:, 2] + 0.12 * coordinates[:, 1]
-    negative = np.clip(negative, -1.0, 1.0)
-    signed_coordinates = np.concatenate((coordinates, negative), axis=0)
-    signed_adjacency = np.zeros((2 * count, 2 * count), dtype=float)
-    signed_adjacency[:count, :count] = adjacency
-    signed_adjacency[count:, count:] = 0.86 * adjacency
-    partner_weights = np.linspace(0.34, 0.18, count)
-    signed_adjacency[np.arange(count), count + np.arange(count)] = partner_weights
-    signed_adjacency[count + np.arange(count), np.arange(count)] = partner_weights
-    partner = np.concatenate((count + np.arange(count), np.arange(count)))
-    return signed_coordinates, signed_adjacency, partner
 
 
 def _draw_graph(
@@ -130,28 +84,30 @@ def _draw_graph(
     visible = min(max(int(visible), 1), len(coordinates))
     for source in range(visible):
         for target in range(source + 1, visible):
-            weight = adjacency[source, target]
+            weight = float(adjacency[source, target])
             if weight <= 0.0:
                 continue
             axis.plot(
                 coordinates[[source, target], 0],
                 coordinates[[source, target], 1],
                 coordinates[[source, target], 2],
-                color="#6f7782",
-                alpha=min(0.62, 0.08 + float(weight)),
-                linewidth=0.35 + 2.2 * float(weight),
+                alpha=min(0.72, 0.08 + weight),
+                linewidth=0.35 + 2.2 * weight,
             )
     if activation is None:
-        colors = [_COLORS[_PROFILES_STREAM_INDEX(stream, streams)] for stream in streams[:visible]]
+        unique = tuple(dict.fromkeys(streams))
+        colors = [unique.index(stream) for stream in streams[:visible]]
     else:
         values = np.asarray(activation[:visible], dtype=float)
-        colors = plt.cm.plasma(values / max(float(values.max()), 1e-9))
+        maximum = max(float(np.max(values)), 1e-9)
+        colors = values / maximum
     axis.scatter(
         coordinates[:visible, 0],
         coordinates[:visible, 1],
         coordinates[:visible, 2],
         c=colors,
-        s=34,
+        cmap="plasma",
+        s=38,
         edgecolors="black",
         linewidths=0.25,
     )
@@ -165,11 +121,6 @@ def _draw_graph(
         zlim=(-1.15, 1.15),
     )
     axis.view_init(elev=23.0, azim=azimuth)
-
-
-def _PROFILES_STREAM_INDEX(stream: str, streams: tuple[str, ...]) -> int:
-    unique = tuple(dict.fromkeys(streams))
-    return unique.index(stream) % len(_COLORS)
 
 
 def _draw_signed(
@@ -191,34 +142,35 @@ def _draw_signed(
     visible_set = set(visible)
     for source in visible:
         for target in range(source + 1, len(coordinates)):
-            if target not in visible_set or adjacency[source, target] <= 0.0:
+            weight = float(adjacency[source, target])
+            if target not in visible_set or weight <= 0.0:
                 continue
             cross = (source < pair_count) != (target < pair_count)
             axis.plot(
                 coordinates[[source, target], 0],
                 coordinates[[source, target], 1],
                 coordinates[[source, target], 2],
-                color="#8e63b6" if cross else "#777777",
-                alpha=0.38 if cross else 0.15,
-                linewidth=1.0 if cross else 0.4,
+                alpha=0.45 if cross else min(0.35, 0.05 + weight),
+                linewidth=1.0 if cross else 0.4 + weight,
             )
     for sign, offset, marker, label in (
         (1, 0, "o", "positive/forward"),
         (-1, pair_count, "^", "negative/reverse"),
     ):
         indices = np.arange(offset, offset + visible_pairs)
-        if activation is None:
-            colors: Any = "#377eb8" if sign > 0 else "#e41a1c"
-        else:
-            values = np.asarray(activation[indices], dtype=float)
-            colors = plt.cm.plasma(values / max(float(np.max(activation)), 1e-9))
+        values = (
+            np.full(visible_pairs, float(sign))
+            if activation is None
+            else np.asarray(activation[indices], dtype=float)
+        )
         axis.scatter(
             coordinates[indices, 0],
             coordinates[indices, 1],
             coordinates[indices, 2],
-            c=colors,
+            c=values,
+            cmap="coolwarm",
             marker=marker,
-            s=30,
+            s=34,
             edgecolors="black",
             linewidths=0.22,
             label=label,
@@ -250,8 +202,12 @@ def _movie(path: Path, frames: int, update: Any) -> Path:
     return path
 
 
-def _occupancy(coordinates: np.ndarray, bins: int, visible: int | None = None) -> np.ndarray:
-    indices = np.rint(np.clip((coordinates + 1.0) * 0.5, 0.0, 1.0) * (bins - 1)).astype(int)
+def _occupancy(
+    coordinates: np.ndarray, bins: int, visible: int | None = None
+) -> np.ndarray:
+    indices = np.rint(
+        np.clip((coordinates + 1.0) * 0.5, 0.0, 1.0) * (bins - 1)
+    ).astype(int)
     values = np.zeros((bins, bins, bins), dtype=float)
     count = len(indices) if visible is None else min(int(visible), len(indices))
     for index in indices[:count]:
@@ -263,20 +219,33 @@ def generate_spatial_state_artifacts(
     architecture: str,
     output_dir: str | Path,
     *,
+    runtime_state: ArchitectureRuntimeState,
     seed: int,
     simulation: bool,
 ) -> dict[str, object]:
-    """Generate equivalent 3D evidence without conflating architecture sources."""
+    """Generate 3D evidence exclusively from the supplied runtime snapshot."""
 
+    if architecture not in _PROFILES:
+        raise ValueError(f"no 3D spatial-state profile for {architecture!r}")
+    if runtime_state.architecture != architecture:
+        raise ValueError("runtime-state architecture does not match spatial producer")
+    profile = _PROFILES[architecture]
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     mode = "simulation" if simulation else "test"
-    count = 24 if simulation else 18
-    profile, coordinates, adjacency, streams, stream_index = _state(
-        architecture, seed, count
-    )
-    signed_coordinates, signed_adjacency, partner = _signed_state(
-        coordinates, adjacency
+    coordinates = np.asarray(runtime_state.coordinates, dtype=float)
+    adjacency = np.asarray(runtime_state.adjacency, dtype=float)
+    streams = tuple(runtime_state.streams)
+    signed_coordinates = np.asarray(runtime_state.signed_coordinates, dtype=float)
+    signed_adjacency = np.asarray(runtime_state.signed_adjacency, dtype=float)
+    partner = np.asarray(runtime_state.partner, dtype=int)
+    count = len(coordinates)
+    if count < 2 or adjacency.shape != (count, count):
+        raise ValueError("runtime spatial state requires at least two aligned nodes")
+    if len(streams) != count:
+        streams = tuple(streams[index % len(streams)] for index in range(count))
+    trace = np.stack(
+        [_resample(row, count) for row in runtime_state.activation_trace]
     )
     prefix = f"{architecture}_{mode}_network_3d"
     bins = 6
@@ -286,8 +255,14 @@ def generate_spatial_state_artifacts(
     figure = plt.figure(figsize=(8.4, 6.8), constrained_layout=True)
     axis = figure.add_subplot(111, projection="3d")
     _draw_graph(
-        axis, coordinates, adjacency, streams, visible=count,
-        title=profile.title, axis_labels=profile.axis_labels,
+        axis,
+        coordinates,
+        adjacency,
+        streams,
+        visible=count,
+        title=profile.title,
+        axis_labels=profile.axis_labels,
+        activation=trace[-1],
     )
     figures.append(save_figure(figure, output / f"{prefix}_growth.png", dpi=180))
     plt.close(figure)
@@ -299,76 +274,102 @@ def generate_spatial_state_artifacts(
     colors = plt.cm.viridis(occupancy / max(float(occupancy.max()), 1.0))
     colors[..., 3] = np.where(filled, 0.88, 0.0)
     axis.voxels(filled, facecolors=colors, edgecolor="#333333", linewidth=0.3)
-    axis.set(
-        title=f"{profile.title} — matrix occupancy",
-        xlabel=profile.axis_labels[0], ylabel=profile.axis_labels[1],
-        zlabel=profile.axis_labels[2],
+    axis.set(title=f"{profile.title} — runtime occupancy")
+    figures.append(
+        save_figure(figure, output / f"{prefix}_matrix_occupancy.png", dpi=180)
     )
-    figures.append(save_figure(figure, output / f"{prefix}_matrix_occupancy.png", dpi=180))
     plt.close(figure)
 
     figure, axes = plt.subplots(1, 3, figsize=(13.5, 4.4), constrained_layout=True)
-    for axis, (x_axis, y_axis) in zip(axes, ((0, 1), (0, 2), (1, 2)), strict=True):
+    stream_names = tuple(dict.fromkeys(streams))
+    stream_index = np.asarray([stream_names.index(stream) for stream in streams])
+    for axis, (x_axis, y_axis) in zip(
+        axes, ((0, 1), (0, 2), (1, 2)), strict=True
+    ):
         axis.scatter(
-            coordinates[:, x_axis], coordinates[:, y_axis], c=stream_index,
-            cmap="tab10", s=50, edgecolors="black", linewidths=0.25,
+            coordinates[:, x_axis],
+            coordinates[:, y_axis],
+            c=stream_index,
+            cmap="tab10",
+            s=50,
+            edgecolors="black",
+            linewidths=0.25,
         )
-        axis.set(xlabel=profile.axis_labels[x_axis], ylabel=profile.axis_labels[y_axis])
+        axis.set(
+            xlabel=profile.axis_labels[x_axis], ylabel=profile.axis_labels[y_axis]
+        )
         axis.grid(alpha=0.22)
-    figures.append(save_figure(figure, output / f"{prefix}_axis_projections.png", dpi=175))
+    figures.append(
+        save_figure(figure, output / f"{prefix}_axis_projections.png", dpi=175)
+    )
     plt.close(figure)
 
     figure, axes = plt.subplots(1, 2, figsize=(11.2, 5.0), constrained_layout=True)
-    raw = np.exp(-1.6 * np.abs(np.arange(count)[:, None] - np.arange(count)[None, :]))
-    np.fill_diagonal(raw, 0.0)
+    covariance = np.abs(coordinates @ coordinates.T)
+    np.fill_diagonal(covariance, 0.0)
     for axis, matrix, title in (
-        (axes[0], raw, "sequential state adjacency"),
-        (axes[1], adjacency, "3D-localized adjacency"),
+        (axes[0], covariance, "runtime coordinate covariance"),
+        (axes[1], adjacency, "runtime model adjacency"),
     ):
         image = axis.imshow(matrix, cmap="magma")
-        axis.set(title=title, xlabel="node", ylabel="node")
+        axis.set(title=title, xlabel="state", ylabel="state")
         figure.colorbar(image, ax=axis, shrink=0.8)
-    figures.append(save_figure(figure, output / f"{prefix}_locality_adjacency.png", dpi=175))
+    figures.append(
+        save_figure(figure, output / f"{prefix}_locality_adjacency.png", dpi=175)
+    )
     plt.close(figure)
 
     figure = plt.figure(figsize=(9.0, 7.0), constrained_layout=True)
     axis = figure.add_subplot(111, projection="3d")
     _draw_graph(
-        axis, coordinates, adjacency, streams, visible=count,
-        title=f"{architecture.upper()} four-source state growth",
+        axis,
+        coordinates,
+        adjacency,
+        streams,
+        visible=count,
+        title=f"{architecture.upper()} runtime source-state growth",
         axis_labels=profile.axis_labels,
+        activation=trace[-1],
     )
-    for name, color in zip(profile.streams, _COLORS, strict=True):
-        axis.scatter([], [], [], color=color, label=name.replace("_", " "))
-    axis.legend(loc="upper left", fontsize=7)
-    figures.append(save_figure(figure, output / f"{prefix}_source_stream_growth.png", dpi=180))
+    figures.append(
+        save_figure(figure, output / f"{prefix}_source_stream_growth.png", dpi=180)
+    )
     plt.close(figure)
 
-    stream_counts = np.zeros((bins, bins, bins, 4), dtype=float)
-    indices = np.rint(np.clip((coordinates + 1.0) * 0.5, 0.0, 1.0) * (bins - 1)).astype(int)
+    stream_counts = np.zeros((bins, bins, bins, max(len(stream_names), 1)))
+    indices = np.rint(
+        np.clip((coordinates + 1.0) * 0.5, 0.0, 1.0) * (bins - 1)
+    ).astype(int)
     for index, coordinate in enumerate(indices):
         stream_counts[tuple(coordinate) + (stream_index[index],)] += 1.0
     figure = plt.figure(figsize=(8.1, 6.5), constrained_layout=True)
     axis = figure.add_subplot(111, projection="3d")
     filled = stream_counts.sum(axis=-1) > 0.0
     dominant = stream_counts.argmax(axis=-1)
-    palette = np.asarray([matplotlib.colors.to_rgba(color) for color in _COLORS])
-    facecolors = palette[dominant]
+    facecolors = plt.cm.tab10(dominant / max(len(stream_names) - 1, 1))
     facecolors[..., 3] = np.where(filled, 0.86, 0.0)
     axis.voxels(filled, facecolors=facecolors, edgecolor="#333333", linewidth=0.25)
-    axis.set(title=f"{architecture.upper()} four-source 3D matrix")
-    figures.append(save_figure(figure, output / f"{prefix}_source_stream_matrix.png", dpi=180))
+    axis.set(title=f"{architecture.upper()} runtime source-state matrix")
+    figures.append(
+        save_figure(figure, output / f"{prefix}_source_stream_matrix.png", dpi=180)
+    )
     plt.close(figure)
 
     figure = plt.figure(figsize=(9.5, 7.0), constrained_layout=True)
     axis = figure.add_subplot(111, projection="3d")
     _draw_signed(
-        axis, signed_coordinates, signed_adjacency, pair_count=count,
-        visible_pairs=count, title=f"{architecture.upper()} simultaneous signed-state growth",
+        axis,
+        signed_coordinates,
+        signed_adjacency,
+        pair_count=count,
+        visible_pairs=count,
+        title=f"{architecture.upper()} runtime signed-state lift",
         axis_labels=profile.axis_labels,
     )
     axis.legend(loc="upper left", fontsize=8)
-    figures.append(save_figure(figure, output / f"{prefix}_signed_spectrum_growth.png", dpi=180))
+    figures.append(
+        save_figure(figure, output / f"{prefix}_signed_spectrum_growth.png", dpi=180)
+    )
     plt.close(figure)
 
     figure, axes = plt.subplots(1, 3, figsize=(14.0, 4.5), constrained_layout=True)
@@ -378,31 +379,53 @@ def generate_spatial_state_artifacts(
         (axes[2], signed_adjacency[:count, count:], "Flowpoint partner bridge"),
     ):
         image = axis.imshow(matrix, cmap="magma", aspect="auto")
-        axis.set(title=title, xlabel="node", ylabel="node")
+        axis.set(title=title, xlabel="state", ylabel="state")
         figure.colorbar(image, ax=axis, shrink=0.78)
-    figures.append(save_figure(figure, output / f"{prefix}_signed_spectrum_adjacency.png", dpi=175))
+    figures.append(
+        save_figure(
+            figure, output / f"{prefix}_signed_spectrum_adjacency.png", dpi=175
+        )
+    )
     plt.close(figure)
 
     figure, axes = plt.subplots(1, 3, figsize=(13.5, 4.4), constrained_layout=True)
     sign = np.concatenate((np.ones(count), -np.ones(count)))
-    for axis, (x_axis, y_axis) in zip(axes, ((0, 1), (0, 2), (1, 2)), strict=True):
+    for axis, (x_axis, y_axis) in zip(
+        axes, ((0, 1), (0, 2), (1, 2)), strict=True
+    ):
         axis.scatter(
-            signed_coordinates[:, x_axis], signed_coordinates[:, y_axis], c=sign,
-            cmap="coolwarm", vmin=-1, vmax=1, s=25,
-            edgecolors="black", linewidths=0.2,
+            signed_coordinates[:, x_axis],
+            signed_coordinates[:, y_axis],
+            c=sign,
+            cmap="coolwarm",
+            vmin=-1,
+            vmax=1,
+            s=25,
+            edgecolors="black",
+            linewidths=0.2,
         )
-        axis.set(xlabel=profile.axis_labels[x_axis], ylabel=profile.axis_labels[y_axis])
+        axis.set(
+            xlabel=profile.axis_labels[x_axis], ylabel=profile.axis_labels[y_axis]
+        )
         axis.grid(alpha=0.22)
-    figures.append(save_figure(figure, output / f"{prefix}_signed_spectrum_projections.png", dpi=175))
+    figures.append(
+        save_figure(
+            figure, output / f"{prefix}_signed_spectrum_projections.png", dpi=175
+        )
+    )
     plt.close(figure)
 
     node_table = save_csv(
         output / f"{prefix}_nodes.csv",
         [
             {
-                "node_index": index, "stream": streams[index],
-                "x": float(coordinates[index, 0]), "y": float(coordinates[index, 1]),
-                "z": float(coordinates[index, 2]), "degree": float(adjacency[index].sum()),
+                "node_index": index,
+                "stream": streams[index],
+                "x": float(coordinates[index, 0]),
+                "y": float(coordinates[index, 1]),
+                "z": float(coordinates[index, 2]),
+                "degree": float(adjacency[index].sum()),
+                "state_source": "runtime_output_tensor",
             }
             for index in range(count)
         ],
@@ -411,7 +434,8 @@ def generate_spatial_state_artifacts(
         output / f"{prefix}_edges.csv",
         [
             {"source": source, "target": target, "weight": float(adjacency[source, target])}
-            for source in range(count) for target in range(source + 1, count)
+            for source in range(count)
+            for target in range(source + 1, count)
             if adjacency[source, target] > 0.0
         ],
     )
@@ -419,8 +443,10 @@ def generate_spatial_state_artifacts(
         output / f"{prefix}_signed_spectrum_nodes.csv",
         [
             {
-                "node_index": index, "orientation": "positive" if index < count else "negative",
-                "partner_index": int(partner[index]), "stream": streams[index % count],
+                "node_index": index,
+                "orientation": "positive" if index < count else "negative",
+                "partner_index": int(partner[index]),
+                "stream": streams[index % count],
                 "x": float(signed_coordinates[index, 0]),
                 "y": float(signed_coordinates[index, 1]),
                 "z": float(signed_coordinates[index, 2]),
@@ -431,96 +457,153 @@ def generate_spatial_state_artifacts(
     signed_edge_table = save_csv(
         output / f"{prefix}_signed_spectrum_edges.csv",
         [
-            {"source": source, "target": target, "weight": float(signed_adjacency[source, target])}
-            for source in range(2 * count) for target in range(source + 1, 2 * count)
+            {
+                "source": source,
+                "target": target,
+                "weight": float(signed_adjacency[source, target]),
+            }
+            for source in range(2 * count)
+            for target in range(source + 1, 2 * count)
             if signed_adjacency[source, target] > 0.0
         ],
     )
 
-    movies.append(_movie(
-        output / f"{prefix}_growth.gif", count,
-        lambda frame, axis: _draw_graph(
-            axis, coordinates, adjacency, streams, visible=frame + 1,
-            title=f"{profile.title} — {frame + 1}/{count}", axis_labels=profile.axis_labels,
-            azimuth=-58 + 1.5 * frame,
-        ),
-    ))
+    movies.append(
+        _movie(
+            output / f"{prefix}_growth.gif",
+            count,
+            lambda frame, axis: _draw_graph(
+                axis,
+                coordinates,
+                adjacency,
+                streams,
+                visible=frame + 1,
+                title=f"{profile.title} — {frame + 1}/{count}",
+                axis_labels=profile.axis_labels,
+                activation=trace[min(frame, len(trace) - 1)],
+                azimuth=-58 + 1.5 * frame,
+            ),
+        )
+    )
 
     def matrix_frame(frame: int, axis: Any) -> None:
-        values = _occupancy(coordinates, bins, frame + 1)
+        visible = int(np.ceil((frame + 1) * count / max(len(trace), 1)))
+        values = _occupancy(coordinates, bins, visible)
         occupied = values > 0.0
         colors_frame = plt.cm.plasma(values / max(float(values.max()), 1.0))
         colors_frame[..., 3] = np.where(occupied, 0.9, 0.0)
-        axis.voxels(occupied, facecolors=colors_frame, edgecolor="#333333", linewidth=0.25)
-        axis.set(title=f"3D matrix growth — {frame + 1}/{count}")
-
-    movies.append(_movie(output / f"{prefix}_matrix_growth.gif", count, matrix_frame))
-    normalized = adjacency / np.maximum(adjacency.sum(axis=1, keepdims=True), 1e-12)
-    states = [np.eye(count)[0]]
-    for _ in range(13):
-        states.append(0.35 * states[-1] + 0.65 * (normalized @ states[-1]))
-    movies.append(_movie(
-        output / f"{prefix}_signal_propagation.gif", len(states),
-        lambda frame, axis: _draw_graph(
-            axis, coordinates, adjacency, streams, visible=count,
-            title=f"3D signal propagation — {frame + 1}/{len(states)}",
-            axis_labels=profile.axis_labels, activation=states[frame], azimuth=-55 + 2 * frame,
-        ),
-    ))
-    stream_frames = 14
-    movies.append(_movie(
-        output / f"{prefix}_source_stream_growth.gif", stream_frames,
-        lambda frame, axis: _draw_graph(
-            axis, coordinates, adjacency, streams,
-            visible=int(np.ceil((frame + 1) * count / stream_frames)),
-            title=f"Four-source growth — {frame + 1}/{stream_frames}",
-            axis_labels=profile.axis_labels, azimuth=-58 + 1.8 * frame,
-        ),
-    ))
-    movies.append(_movie(
-        output / f"{prefix}_source_stream_signal.gif", len(states),
-        lambda frame, axis: _draw_graph(
-            axis, coordinates, adjacency, streams, visible=count,
-            title=f"Four-source signal — {frame + 1}/{len(states)}",
-            axis_labels=profile.axis_labels, activation=states[frame], azimuth=-54 + 2 * frame,
-        ),
-    ))
-    signed_frames = 14
-    movies.append(_movie(
-        output / f"{prefix}_signed_spectrum_growth.gif", signed_frames,
-        lambda frame, axis: _draw_signed(
-            axis, signed_coordinates, signed_adjacency, pair_count=count,
-            visible_pairs=int(np.ceil((frame + 1) * count / signed_frames)),
-            title=f"Signed-state growth — {frame + 1}/{signed_frames}",
-            axis_labels=profile.axis_labels, azimuth=-60 + 1.7 * frame,
-        ),
-    ))
-    signed_normalized = signed_adjacency / np.maximum(
-        signed_adjacency.sum(axis=1, keepdims=True), 1e-12
-    )
-    initial = np.zeros(2 * count)
-    initial[0] = initial[partner[0]] = 1.0
-    signed_states = [initial]
-    for _ in range(13):
-        signed_states.append(
-            0.28 * signed_states[-1] + 0.72 * (signed_normalized @ signed_states[-1])
+        axis.voxels(
+            occupied, facecolors=colors_frame, edgecolor="#333333", linewidth=0.25
         )
-    movies.append(_movie(
-        output / f"{prefix}_signed_spectrum_signal.gif", len(signed_states),
-        lambda frame, axis: _draw_signed(
-            axis, signed_coordinates, signed_adjacency, pair_count=count,
-            visible_pairs=count, title=f"Signed-state signal — {frame + 1}/{len(signed_states)}",
-            axis_labels=profile.axis_labels, activation=signed_states[frame], azimuth=-56 + 2 * frame,
-        ),
-    ))
+        axis.set(title=f"Runtime 3D matrix — frame {frame + 1}/{len(trace)}")
+
+    movies.append(
+        _movie(output / f"{prefix}_matrix_growth.gif", len(trace), matrix_frame)
+    )
+    movies.append(
+        _movie(
+            output / f"{prefix}_signal_propagation.gif",
+            len(trace),
+            lambda frame, axis: _draw_graph(
+                axis,
+                coordinates,
+                adjacency,
+                streams,
+                visible=count,
+                title=f"Runtime state trace — {frame + 1}/{len(trace)}",
+                axis_labels=profile.axis_labels,
+                activation=trace[frame],
+                azimuth=-55 + 2 * frame,
+            ),
+        )
+    )
+    movies.append(
+        _movie(
+            output / f"{prefix}_source_stream_growth.gif",
+            count,
+            lambda frame, axis: _draw_graph(
+                axis,
+                coordinates,
+                adjacency,
+                streams,
+                visible=frame + 1,
+                title=f"Runtime source-state exposure — {frame + 1}/{count}",
+                axis_labels=profile.axis_labels,
+                activation=trace[min(frame, len(trace) - 1)],
+                azimuth=-58 + 1.8 * frame,
+            ),
+        )
+    )
+    movies.append(
+        _movie(
+            output / f"{prefix}_source_stream_signal.gif",
+            len(trace),
+            lambda frame, axis: _draw_graph(
+                axis,
+                coordinates,
+                adjacency,
+                streams,
+                visible=count,
+                title=f"Runtime source-state signal — {frame + 1}/{len(trace)}",
+                axis_labels=profile.axis_labels,
+                activation=trace[frame],
+                azimuth=-54 + 2 * frame,
+            ),
+        )
+    )
+    signed_frames = max(10, count)
+    movies.append(
+        _movie(
+            output / f"{prefix}_signed_spectrum_growth.gif",
+            signed_frames,
+            lambda frame, axis: _draw_signed(
+                axis,
+                signed_coordinates,
+                signed_adjacency,
+                pair_count=count,
+                visible_pairs=int(np.ceil((frame + 1) * count / signed_frames)),
+                title=f"Runtime signed-state lift — {frame + 1}/{signed_frames}",
+                axis_labels=profile.axis_labels,
+                azimuth=-60 + 1.7 * frame,
+            ),
+        )
+    )
+    signed_trace = np.concatenate((trace, trace), axis=1)
+    movies.append(
+        _movie(
+            output / f"{prefix}_signed_spectrum_signal.gif",
+            len(signed_trace),
+            lambda frame, axis: _draw_signed(
+                axis,
+                signed_coordinates,
+                signed_adjacency,
+                pair_count=count,
+                visible_pairs=count,
+                title=f"Runtime signed-state signal — {frame + 1}/{len(signed_trace)}",
+                axis_labels=profile.axis_labels,
+                activation=signed_trace[frame],
+                azimuth=-56 + 2 * frame,
+            ),
+        )
+    )
 
     tables = [node_table, edge_table, signed_node_table, signed_edge_table]
+    partner_residual = int(
+        np.max(np.abs(partner[partner] - np.arange(2 * count)))
+    )
     parameters = {
-        "architecture": architecture, "mode": mode, "seed": seed,
-        "node_count": count, "axis_labels": list(profile.axis_labels),
-        "source_streams": list(profile.streams), "signed_meaning": profile.signed_meaning,
-        "partner_involution_residual": int(np.max(np.abs(partner[partner] - np.arange(2 * count)))),
-        "coordinate_asymmetry": float(np.linalg.norm(signed_coordinates[count:] + coordinates)),
+        "architecture": architecture,
+        "mode": mode,
+        "seed": seed,
+        "node_count": count,
+        "axis_labels": list(profile.axis_labels),
+        "source_streams": list(dict.fromkeys(streams)),
+        "signed_meaning": profile.signed_meaning,
+        "partner_involution_residual": partner_residual,
+        "coordinate_asymmetry": float(
+            np.linalg.norm(signed_coordinates[count:] + coordinates)
+        ),
+        "state_source": runtime_state.source_status,
     }
     generated = [path.name for path in (*figures, *tables, *movies)]
     manifest = write_metadata(
@@ -537,15 +620,15 @@ def generate_spatial_state_artifacts(
             "regeneration_command": (
                 "python -m the_nothingness_effect.artificial_intelligence."
                 f"{architecture}.{mode}.run_all_capabilities"
-                if architecture != "multimodal"
-                else "python -m the_nothingness_effect.artificial_intelligence.multimodal."
-                f"{mode}.run_pipeline"
             ),
-            "source_status": profile.source_status,
-            "claim_boundary": "finite computational support; not a formal proof substitute",
+            "source_status": "runtime_derived_spatial_state",
+            "claim_boundary": "finite observed model state; not a formal proof substitute",
         },
     )
     return {
-        "figures": figures, "tables": tables, "animations": movies,
-        "manifest": manifest, "partner_involution_residual": parameters["partner_involution_residual"],
+        "figures": figures,
+        "tables": tables,
+        "animations": movies,
+        "manifest": manifest,
+        "partner_involution_residual": partner_residual,
     }

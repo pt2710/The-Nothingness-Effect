@@ -1,9 +1,9 @@
-"""Torch-native DTQC inflation and spectral-closure operator for QENN.
+"""Torch-native stateful DTQC inflation and spectral-closure operator for QENN.
 
-The operator is a finite numerical realization of the module's four canonical
-A sources, their two additive B diagnostics, and the C-level elastic/Parseval
-quasicrystal closure.  It returns a numerical candidate and never promotes a
-small residual to a formal existence or attainment claim.
+The operator preserves the seven appendix-facing theorem-complex residual IDs while
+adding an explicit discrete-time trajectory. Its returned reconstruction is the
+last transported state, so Elastic-pi gain and Flowpoint alternation are causal
+parts of the QENN hidden field rather than post-hoc diagnostics.
 """
 
 from __future__ import annotations
@@ -27,7 +27,12 @@ DTQC_COMPLEX_IDS = (*SPEC.a_ids, *SPEC.b_ids, SPEC.c_id)
 
 @dataclass(frozen=True)
 class DTQCNeuralState:
-    """Typed finite DTQC state consumed by QENN."""
+    """Typed finite DTQC state consumed by QENN.
+
+    ``trajectory`` is ordered ``[time, batch, feature]``. The legacy-compatible
+    scalar fields describe the final time step, while ``order_parameters`` expose
+    temporal diagnostics without changing the appendix-facing residual key set.
+    """
 
     carrier: torch.Tensor
     inflated_state: torch.Tensor
@@ -36,6 +41,11 @@ class DTQCNeuralState:
     reconstruction: torch.Tensor
     input_leakage: torch.Tensor
     residuals: dict[str, torch.Tensor]
+    trajectory: torch.Tensor | None = None
+    flowpoint_sector: torch.Tensor | None = None
+    drive_phase: torch.Tensor | None = None
+    temporal_spectrum: torch.Tensor | None = None
+    order_parameters: dict[str, torch.Tensor] | None = None
     complex_ids: tuple[str, ...] = DTQC_COMPLEX_IDS
     closure_status: str = "numerical_candidate"
 
@@ -61,8 +71,25 @@ def _rfft_energy(spectrum: torch.Tensor, sample_count: int) -> torch.Tensor:
     return (spectrum.abs().square() * weights).sum(dim=-1)
 
 
+def _normalized_correlation(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
+    dtype = left.dtype
+    eps = torch.finfo(dtype).eps
+    numerator = (left * right).sum(dim=-1)
+    denominator = (
+        torch.linalg.vector_norm(left, dim=-1)
+        * torch.linalg.vector_norm(right, dim=-1)
+    ).clamp_min(eps)
+    return numerator / denominator
+
+
 class DTQCInflationLayer(nn.Module):
-    """Pisot/Fibonacci inflation followed by fixed-support spectral closure."""
+    """Stateful Pisot/Fibonacci drive with Flowpoint and spectral closure.
+
+    The temporal drive is an irrational phase advance, while the Flowpoint sector
+    alternates sign at every step by default. A configurable leakage threshold
+    keeps ordinary QENN execution backward compatible and permits strict
+    fail-closed runs for dedicated DTQC validation.
+    """
 
     def __init__(
         self,
@@ -70,6 +97,10 @@ class DTQCInflationLayer(nn.Module):
         pisot_factor: float = (1.0 + math.sqrt(5.0)) / 2.0,
         strength: float = 0.25,
         support_fraction: float = 0.5,
+        time_steps: int = 8,
+        memory_fraction: float = 0.25,
+        max_input_leakage: float = 1.0,
+        flowpoint_alternation: bool = True,
     ) -> None:
         super().__init__()
         if not math.isfinite(pisot_factor) or pisot_factor <= 1.0:
@@ -78,9 +109,19 @@ class DTQCInflationLayer(nn.Module):
             raise DomainViolationError("DTQC inflation strength must lie strictly between zero and one")
         if not math.isfinite(support_fraction) or not 0.0 < support_fraction <= 1.0:
             raise DomainViolationError("DTQC support fraction must lie in (0, 1]")
+        if not isinstance(time_steps, int) or time_steps < 3:
+            raise DomainViolationError("DTQC temporal trajectory requires at least three time steps")
+        if not math.isfinite(memory_fraction) or not 0.0 <= memory_fraction < 1.0:
+            raise DomainViolationError("DTQC memory fraction must lie in [0, 1)")
+        if not math.isfinite(max_input_leakage) or not 0.0 <= max_input_leakage <= 1.0:
+            raise DomainViolationError("DTQC maximum input leakage must lie in [0, 1]")
         self.register_buffer("pisot_factor", torch.tensor(float(pisot_factor)))
         self.register_buffer("strength", torch.tensor(float(strength)))
+        self.register_buffer("memory_fraction", torch.tensor(float(memory_fraction)))
         self.support_fraction = float(support_fraction)
+        self.time_steps = int(time_steps)
+        self.max_input_leakage = float(max_input_leakage)
+        self.flowpoint_alternation = bool(flowpoint_alternation)
 
     def forward(self, value: torch.Tensor, *, elastic_gain: torch.Tensor | None = None) -> DTQCNeuralState:
         if not isinstance(value, torch.Tensor) or value.ndim != 2 or value.shape[-1] < 2:
@@ -91,74 +132,150 @@ class DTQCInflationLayer(nn.Module):
         dtype = value.dtype
         device = value.device
 
-        symbols = torch.tensor(fibonacci_word(feature_count), dtype=dtype, device=device)
-        phi = self.pisot_factor.to(dtype=dtype, device=device)
-        amplitudes = torch.where(symbols == 0, torch.ones_like(symbols), torch.ones_like(symbols) / phi)
-        centered = amplitudes - amplitudes.mean()
-        scale = centered.abs().amax().clamp_min(torch.finfo(dtype).eps)
-        phase_clock = torch.cos(2.0 * torch.pi * torch.arange(feature_count, dtype=dtype, device=device) / phi)
-        carrier = centered / scale * phase_clock
-        profile = 1.0 + self.strength.to(dtype=dtype, device=device) * carrier
-        inflated = value * profile
-
-        spectrum = torch.fft.rfft(inflated, dim=-1, norm="ortho")
-        carrier_spectrum = torch.fft.rfft(profile, dim=-1, norm="ortho").abs()
-        support_count = max(2, math.ceil(carrier_spectrum.numel() * self.support_fraction))
-        support_count = min(support_count, carrier_spectrum.numel())
-        indices = torch.topk(carrier_spectrum, support_count, sorted=True).indices
-        support_mask = torch.zeros_like(carrier_spectrum, dtype=torch.bool).scatter(0, indices, True)
-        projected = spectrum * support_mask
-        reconstruction = torch.fft.irfft(projected, n=feature_count, dim=-1, norm="ortho")
-        reconstructed_spectrum = torch.fft.rfft(reconstruction, dim=-1, norm="ortho")
-
-        denominator = torch.linalg.vector_norm(spectrum).clamp_min(torch.finfo(dtype).eps)
-        input_leakage = torch.linalg.vector_norm(spectrum - projected) / denominator
-        spectral_residual = torch.linalg.vector_norm(reconstructed_spectrum - projected)
-        support_residual = torch.linalg.vector_norm(reconstructed_spectrum * ~support_mask)
-        parseval_residual = torch.linalg.vector_norm(
-            reconstruction.square().sum(dim=-1) - _rfft_energy(projected, feature_count)
-        )
-
-        regenerated = torch.tensor(fibonacci_word(feature_count), dtype=dtype, device=device)
-        inflation_residual = torch.linalg.vector_norm(symbols - regenerated)
-        locking_residual = torch.linalg.vector_norm(
-            phase_clock
-            - torch.cos(2.0 * torch.pi * torch.arange(feature_count, dtype=dtype, device=device) / phi)
-        )
         if elastic_gain is None:
             elastic_gain = torch.ones((value.shape[0], 1), dtype=dtype, device=device)
         if elastic_gain.shape not in {(value.shape[0], 1), value.shape}:
             raise DomainViolationError("DTQC elastic gain must be per-sample or aligned with the input field")
         if not bool(torch.isfinite(elastic_gain).all()) or bool((elastic_gain <= 0).any()):
             raise NonFiniteValueError("DTQC elastic gain must be finite and strictly positive")
-        transported = projected * elastic_gain[..., :1]
-        transport_residual = torch.linalg.vector_norm(transported * ~support_mask)
-        diophantine_parseval = torch.sqrt(parseval_residual.square() + locking_residual.square())
+        sample_gain = elastic_gain[..., :1]
+
+        symbols = torch.tensor(fibonacci_word(feature_count), dtype=dtype, device=device)
+        phi = self.pisot_factor.to(dtype=dtype, device=device)
+        amplitudes = torch.where(symbols == 0, torch.ones_like(symbols), torch.ones_like(symbols) / phi)
+        centered = amplitudes - amplitudes.mean()
+        scale = centered.abs().amax().clamp_min(torch.finfo(dtype).eps)
+        feature_axis = torch.arange(feature_count, dtype=dtype, device=device)
+
+        state = value
+        trajectory: list[torch.Tensor] = []
+        sectors: list[torch.Tensor] = []
+        phases: list[torch.Tensor] = []
+        leakages: list[torch.Tensor] = []
+        final_carrier = torch.zeros(feature_count, dtype=dtype, device=device)
+        final_inflated = value
+        final_transported = torch.fft.rfft(value, dim=-1, norm="ortho")
+        final_support = torch.ones(final_transported.shape[-1], dtype=torch.bool, device=device)
+        final_reconstruction = value
+        final_spectral_residual = torch.zeros((), dtype=dtype, device=device)
+        final_support_residual = torch.zeros((), dtype=dtype, device=device)
+        final_parseval_residual = torch.zeros((), dtype=dtype, device=device)
+        final_transport_residual = torch.zeros((), dtype=dtype, device=device)
+        final_locking_residual = torch.zeros((), dtype=dtype, device=device)
+
+        for step in range(self.time_steps):
+            phase = 2.0 * torch.pi * torch.as_tensor(step, dtype=dtype, device=device) / phi
+            sector_value = -1.0 if self.flowpoint_alternation and step % 2 else 1.0
+            sector = torch.as_tensor(sector_value, dtype=dtype, device=device)
+            phase_clock = torch.cos(2.0 * torch.pi * feature_axis / phi + phase)
+            carrier = centered / scale * phase_clock
+            profile = 1.0 + self.strength.to(dtype=dtype, device=device) * carrier
+            remembered = (
+                (1.0 - self.memory_fraction.to(dtype=dtype, device=device)) * value
+                + self.memory_fraction.to(dtype=dtype, device=device) * state
+            )
+            inflated = sector * remembered * profile
+
+            spectrum = torch.fft.rfft(inflated, dim=-1, norm="ortho")
+            carrier_spectrum = torch.fft.rfft(profile, dim=-1, norm="ortho").abs()
+            support_count = max(2, math.ceil(carrier_spectrum.numel() * self.support_fraction))
+            support_count = min(support_count, carrier_spectrum.numel())
+            indices = torch.topk(carrier_spectrum, support_count, sorted=True).indices
+            support_mask = torch.zeros_like(carrier_spectrum, dtype=torch.bool).scatter(0, indices, True)
+            projected = spectrum * support_mask
+
+            # Elastic-pi is part of the returned state, not merely a diagnostic.
+            transported = projected * sample_gain
+            reconstruction = torch.fft.irfft(transported, n=feature_count, dim=-1, norm="ortho")
+            reconstructed_spectrum = torch.fft.rfft(reconstruction, dim=-1, norm="ortho")
+
+            denominator = torch.linalg.vector_norm(spectrum).clamp_min(torch.finfo(dtype).eps)
+            input_leakage = torch.linalg.vector_norm(spectrum - projected) / denominator
+            spectral_residual = torch.linalg.vector_norm(reconstructed_spectrum - transported)
+            support_residual = torch.linalg.vector_norm(reconstructed_spectrum * ~support_mask)
+            parseval_residual = torch.linalg.vector_norm(
+                reconstruction.square().sum(dim=-1) - _rfft_energy(transported, feature_count)
+            )
+            transport_residual = torch.linalg.vector_norm(transported * ~support_mask)
+            locking_residual = torch.linalg.vector_norm(
+                phase_clock - torch.cos(2.0 * torch.pi * feature_axis / phi + phase)
+            )
+
+            trajectory.append(reconstruction)
+            sectors.append(sector)
+            phases.append(phase)
+            leakages.append(input_leakage)
+            state = reconstruction
+            final_carrier = carrier
+            final_inflated = inflated
+            final_transported = transported
+            final_support = support_mask
+            final_reconstruction = reconstruction
+            final_spectral_residual = spectral_residual
+            final_support_residual = support_residual
+            final_parseval_residual = parseval_residual
+            final_transport_residual = transport_residual
+            final_locking_residual = locking_residual
+
+        trajectory_tensor = torch.stack(trajectory)
+        sector_tensor = torch.stack(sectors)
+        phase_tensor = torch.stack(phases)
+        leakage_tensor = torch.stack(leakages)
+        temporal_spectrum = torch.fft.rfft(trajectory_tensor, dim=0, norm="ortho")
+
+        flat = trajectory_tensor.reshape(self.time_steps, -1)
+        one_step_correlation = _normalized_correlation(flat[1:], flat[:-1]).mean()
+        two_step_correlation = _normalized_correlation(flat[2:], flat[:-2]).mean()
+        reference = flat[0] / torch.linalg.vector_norm(flat[0]).clamp_min(torch.finfo(dtype).eps)
+        temporal_signal = flat @ reference
+        temporal_power = torch.fft.rfft(temporal_signal, dim=0, norm="ortho").abs().square()
+        non_dc_power = temporal_power[1:].sum().clamp_min(torch.finfo(dtype).eps)
+        subharmonic_fraction = temporal_power[-1] / non_dc_power
+        mean_leakage = leakage_tensor.mean()
+        leakage_excess = torch.relu(
+            mean_leakage - torch.as_tensor(self.max_input_leakage, dtype=dtype, device=device)
+        )
+
+        regenerated = torch.tensor(fibonacci_word(feature_count), dtype=dtype, device=device)
+        inflation_residual = torch.linalg.vector_norm(symbols - regenerated)
+        diophantine_parseval = torch.sqrt(final_parseval_residual.square() + final_locking_residual.square())
         spatial_closure = torch.sqrt(
-            spectral_residual.square()
-            + support_residual.square()
-            + parseval_residual.square()
+            final_spectral_residual.square()
+            + (final_support_residual + leakage_excess).square()
+            + final_parseval_residual.square()
             + inflation_residual.square()
-            + transport_residual.square()
+            + final_transport_residual.square()
         )
 
         residuals = {
-            SPEC.a_ids[0]: spectral_residual,
-            SPEC.a_ids[1]: support_residual,
-            SPEC.a_ids[2]: parseval_residual,
+            SPEC.a_ids[0]: final_spectral_residual,
+            SPEC.a_ids[1]: final_support_residual + leakage_excess,
+            SPEC.a_ids[2]: final_parseval_residual,
             SPEC.a_ids[3]: inflation_residual,
-            SPEC.b_ids[0]: transport_residual,
+            SPEC.b_ids[0]: final_transport_residual,
             SPEC.b_ids[1]: diophantine_parseval,
             SPEC.c_id: spatial_closure,
         }
-        if not all(bool(torch.isfinite(item)) for item in residuals.values()):
-            raise NonFiniteValueError("DTQC neural residual contains NaN or infinity")
+        order_parameters = {
+            "flowpoint_one_step_correlation": one_step_correlation,
+            "period_two_correlation": two_step_correlation,
+            "subharmonic_fraction": subharmonic_fraction,
+            "mean_input_leakage": mean_leakage,
+            "elastic_gain_mean": sample_gain.mean(),
+        }
+        if not all(bool(torch.isfinite(item)) for item in (*residuals.values(), *order_parameters.values())):
+            raise NonFiniteValueError("DTQC neural state contains NaN or infinity")
         return DTQCNeuralState(
-            carrier,
-            inflated,
-            projected,
-            support_mask,
-            reconstruction,
-            input_leakage,
-            residuals,
+            carrier=final_carrier,
+            inflated_state=final_inflated,
+            spectral_measure=final_transported,
+            support_mask=final_support,
+            reconstruction=final_reconstruction,
+            input_leakage=mean_leakage,
+            residuals=residuals,
+            trajectory=trajectory_tensor,
+            flowpoint_sector=sector_tensor,
+            drive_phase=phase_tensor,
+            temporal_spectrum=temporal_spectrum,
+            order_parameters=order_parameters,
         )

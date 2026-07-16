@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 
 from the_nothingness_effect.artificial_intelligence.pgqenn.contracts import APPENDIX_SHA256
+from the_nothingness_effect.artificial_intelligence.pgqenn.mpl_tc_dependency import MPL_TC_MODULE_SHA256
 from the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite import run_suite
 
 
@@ -15,7 +16,5 @@ def test_pgqenn_suite_emits_seven_provenance_manifests(tmp_path):
         assert payload["appendix_source_sha256"] == APPENDIX_SHA256
         assert payload["parameters"]["growth_mode"] == "mpl_tc_prime_motif"
         assert payload["parameters"]["mpl_tc_commit"] == "056e346824e9ec9785ab45b642b3b842c88f6e56"
-        assert payload["parameters"]["mpl_tc_module_sha256"] == (
-            "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9"
-        )
+        assert payload["parameters"]["mpl_tc_module_sha256"] == MPL_TC_MODULE_SHA256
         assert payload["claim_boundary"] == "finite computational support; not a formal proof substitute"

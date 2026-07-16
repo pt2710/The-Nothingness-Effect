@@ -30,6 +30,9 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
   candidates in the external QENN/PGQENN/SOInets outline—is documented in
   `docs/tne_ai_theorem_complex_usage_assessment.md`. Each mapping records a use
   decision, optimization hypothesis, metric, and evidence boundary.
+- The 22 currently AI-blocking A contracts are reviewed individually in
+  `docs/tne_blocked_upstream_source_law_outline.md`, which distinguishes
+  possible appendix clarifications from repository implementation work.
 - PGQENN combines the pinned positive MPL-TC streams with an explicitly
   TNE-derived negative Flowpoint lift; the multimodal trainer performs joint
   deterministic search over positive `K_D` and the SOI carrier scale.

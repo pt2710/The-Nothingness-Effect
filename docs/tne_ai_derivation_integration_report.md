@@ -2,11 +2,11 @@
 
 QENN, PGQENN, and SOInets each execute all six requested output groups in their own `test/artifacts` and `simulation/artifacts` trees: color classification, sound classification, bidirectional color classification, bidirectional sound classification, color cloning, and sound cloning.
 
-The cross-appendix AI matrix contains 280 verified mappings: 22 `blocked_source_law`, 12 `integrated_runtime`, 11 `integrated_shared_primitive`, 128 `planned_proxy_source`, 107 `typed_contract_available`.
+The cross-appendix AI matrix contains 280 verified mappings: 22 `authoritative_source_contract_not_implemented`, 12 `integrated_runtime`, 11 `integrated_shared_primitive`, 128 `planned_proxy_source`, 107 `typed_contract_available`.
 
 Every row now records its source theorem's current implementation status. No row carries the retired carrier-conflict classification. Typed availability does not by itself claim that every target architecture consumes the source; target-specific wiring remains explicit in the evidence column.
 
-The owner-supplied 137-title AI outline is assessed through these mappings. Every row now includes a use decision, a falsifiable optimization hypothesis, a metric, and a conclusion. Current decisions are 23 use-now-with-ablation, 107 typed candidates, 128 deferred proxy sources, and 22 upstream source-law blocks.
+The owner-supplied 137-title AI outline is assessed through these mappings. Every row now includes a use decision, a falsifiable optimization hypothesis, a metric, and a conclusion. Current decisions are 23 use-now-with-ablation, 107 typed candidates, 128 deferred proxy sources, and 22 verified authoritative A contracts awaiting repository implementation.
 
 Canonical AI execution is CPU-testable, fail-closed for non-finite values, and uses deterministic seeds. PGQENN random sampling remains only a named ablation/comparison mode.
 

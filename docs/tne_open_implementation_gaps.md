@@ -1,6 +1,6 @@
 # TNE open implementation gaps
 
-Of 351 verified complexes, 173 are implemented, 156 remain proxy-only, and 22 A-level source laws remain blocked. There are no blocked B/C rows and no carrier-label conflicts. Proxy B/C rows remain open because their complete source/operator/closure obligations are not yet certified, not because of their names.
+Of 351 verified complexes, 173 are implemented, 156 remain proxy-only, and 22 verified A-level source contracts are not yet implemented. There are no blocked B/C rows and no carrier-label conflicts. Proxy B/C rows remain open because their complete source/operator/closure obligations are not yet certified, not because of their names.
 
 | Module | Implemented | Proxy | Blocked |
 | --- | --- | --- | --- |

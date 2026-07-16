@@ -20,7 +20,11 @@ row records QENN, PGQENN and SOInet uses plus four explicit decisions:
 | `use_now_with_ablation` | 23 | Runtime/shared primitive exists; structural effect is tested, while task benefit remains dataset-specific. |
 | `evaluate_typed_candidate` | 107 | Typed theorem contract exists; a target-specific bridge and controlled ablation are still required. |
 | `defer_until_source_complete` | 128 | Related proxy code is not sufficient for canonical enablement or an optimization claim. |
-| `blocked_until_source_law` | 22 | The upstream A source law must be completed before an admissible AI experiment. |
+| `implement_authoritative_source_contract` | 22 | Appendix labels/equations are verified; the repository still needs a certified typed A contract before AI enablement. |
+
+The 22 rows are implementation blocks, not a finding that 22 appendix laws are
+absent. Their exact upstream-review checklist is recorded in
+`docs/tne_blocked_upstream_source_law_outline.md`.
 
 No theorem complex is enabled merely because its name sounds relevant. A
 candidate is useful only if the target architecture declares its input/output

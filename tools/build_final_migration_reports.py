@@ -147,8 +147,12 @@ def update_ai_matrix(matrix: list[dict[str, str]]) -> list[dict[str, str]]:
             integration = "planned_proxy_source"
             evidence = "Related numerical code exists, but the complete source-law contract is not certified for AI integration."
         else:
-            integration = "blocked_source_law"
-            evidence = "The underlying A-level source law remains unresolved; this is not a carrier-label conflict."
+            integration = "authoritative_source_contract_not_implemented"
+            evidence = (
+                "Authoritative A-level labels and equations are verified, but the repository "
+                "does not yet expose a certified typed contract. This is neither evidence of "
+                "a missing appendix law nor a carrier-label conflict."
+            )
         use_decision, hypothesis, metric, conclusion = ai_optimization_assessment(
             row, status, integration
         )
@@ -231,10 +235,10 @@ def ai_optimization_assessment(
             "related proxy code is insufficient for canonical AI enablement or an optimization claim",
         )
     return (
-        "blocked_until_source_law",
+        "implement_authoritative_source_contract",
         hypothesis,
         metric,
-        "no optimization experiment is admissible until the upstream A source law is implemented",
+        "appendix equations are present; implement and certify the typed A contract before enabling the AI experiment",
     )
 
 
@@ -357,7 +361,7 @@ def build_reports(qa: dict[str, object]) -> None:
     )
     (DOCS / "tne_open_implementation_gaps.md").write_text(
         "# TNE open implementation gaps\n\n"
-        f"Of 351 verified complexes, {status['implemented']} are implemented, {status['proxy']} remain proxy-only, and {status['blocked']} A-level source laws remain blocked. "
+        f"Of 351 verified complexes, {status['implemented']} are implemented, {status['proxy']} remain proxy-only, and {status['blocked']} verified A-level source contracts are not yet implemented. "
         "There are no blocked B/C rows and no carrier-label conflicts. Proxy B/C rows remain open because their complete source/operator/closure obligations are not yet certified, not because of their names.\n\n"
         f"{module_gap_table}\n\n"
         "## Next safe order\n\n"
@@ -381,7 +385,7 @@ def build_reports(qa: dict[str, object]) -> None:
         + ", ".join(f"{count} `{name}`" for name, count in sorted(ai_counts.items()))
         + ".\n\n"
         "Every row now records its source theorem's current implementation status. No row carries the retired carrier-conflict classification. Typed availability does not by itself claim that every target architecture consumes the source; target-specific wiring remains explicit in the evidence column.\n\n"
-        "The owner-supplied 137-title AI outline is assessed through these mappings. Every row now includes a use decision, a falsifiable optimization hypothesis, a metric, and a conclusion. Current decisions are 23 use-now-with-ablation, 107 typed candidates, 128 deferred proxy sources, and 22 upstream source-law blocks.\n\n"
+        "The owner-supplied 137-title AI outline is assessed through these mappings. Every row now includes a use decision, a falsifiable optimization hypothesis, a metric, and a conclusion. Current decisions are 23 use-now-with-ablation, 107 typed candidates, 128 deferred proxy sources, and 22 verified authoritative A contracts awaiting repository implementation.\n\n"
         "Canonical AI execution is CPU-testable, fail-closed for non-finite values, and uses deterministic seeds. PGQENN random sampling remains only a named ablation/comparison mode.\n\n"
         "The executable dependency chain is DTQC -> QENN, QENN + pinned MPL-TC -> PGQENN, and QENN + PGQENN -> SOInets. QENN also composes Flowpoint projectors, normalized DFI, pDFI, exact unclipped Elastic-pi, Elastic Dubler, observation/collapse, spectral memory, Parseval, and completeness residuals. PGQENN consumes all four verified positive MPL-TC TC streams; its negative number spectrum is a separately labelled TNE Flowpoint lift, not an extension claimed by MPL-TC.\n\n"
         "The visible trainable multimodal package adds learned shared/private modality axes, forward/reverse transport residuals, local per-axis and global cross-axis Gaussian-Bernoulli RBMs, and bounded modality-specific prototype growth over the canonical SOInet backbone. Axis, RBM, cluster and signed-spectrum contexts affect inference and have independent source-removal modes. Joint validation search tunes exact positive K_D and the SOI normalization carrier while verifying DFI scale invariance. RBM is an external numerical realization, not an appendix source law. The uploaded multimodal ZIP remains external design context; none of its source or artifacts was copied.\n\n"

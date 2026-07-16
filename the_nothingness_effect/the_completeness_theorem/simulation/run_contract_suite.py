@@ -59,7 +59,7 @@ def fixture() -> CompletenessInput:
         np.arange(state.size, dtype=float),
         AdmissibilityData(
             diameter=1.0,
-            infinity_istate=np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0]),
+            infinity_state=np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0]),
             infinity_involution=np.diag([-1.0, 1.0, 1.0, 1.0, 1.0, 1.0]),
             observation_outcome_bit=0,
             theorem_bit=1,

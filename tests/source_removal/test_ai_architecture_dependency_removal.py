@@ -30,6 +30,9 @@ class _MotifRemovedProvider:
             tuple(1 for _ in source.motif_runs),
         )
 
+    def triadic_streams(self, count: int):
+        return self._canonical.triadic_streams(count)
+
 
 def test_removing_dtqc_changes_qenn_hidden_lattice():
     torch.manual_seed(12)
@@ -105,6 +108,26 @@ def test_removing_mpl_tc_motifs_changes_pgqenn_graph_law():
     assert canonical.primes == removed.primes
     assert canonical.motifs != removed.motifs
     assert not torch.equal(canonical.adjacency, removed.adjacency)
+
+
+def test_removing_three_additional_tc_streams_changes_pgqenn_messages():
+    from the_nothingness_effect.artificial_intelligence.pgqenn.model import PGQENNModel
+
+    torch.manual_seed(41)
+    model = PGQENNModel(5, 7, 3)
+    features = torch.rand(11, 5) + 0.2
+    complete = model(features)
+    model.triadic_streams_enabled = False
+    prime_only = model(features)
+
+    assert complete.graph.triadic_growth.stream_counts["pure_even_lift"] == 6
+    assert complete.graph.triadic_growth.stream_counts["first_order_odd"] == 10
+    assert all(
+        count > 0 for count in complete.graph.triadic_growth.stream_counts.values()
+    )
+    assert float(complete.triadic_stream_source_removal_delta.detach()) > 0.0
+    assert not torch.allclose(complete.node_state, prime_only.node_state)
+    assert prime_only.metadata["triadic_stream_integration"] == "source_removal_ablation"
 
 
 def test_removing_multimodal_dubler_changes_named_domain_fusion():

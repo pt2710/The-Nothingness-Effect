@@ -121,7 +121,9 @@ def run_architecture_capability_suite(
         for path in (
             *network["figures"],
             network["table"],
+            *network.get("extra_tables", ()),
             *network["animations"],
+            *network.get("extra_manifests", ()),
             network["manifest"],
         )
     )

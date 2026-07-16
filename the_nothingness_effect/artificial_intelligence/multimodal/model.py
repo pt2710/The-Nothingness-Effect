@@ -253,6 +253,12 @@ class TNETrainableMultimodalModel(nn.Module):
                 "energy_realization": "local_and_global_gaussian_bernoulli_rbm",
                 "energy_source_status": "external_numerical_realization_not_tne_source_law",
                 "cluster_growth": "bounded_deterministic_modality_prototypes",
+                "dynamic_K_D": float(
+                    self.backbone.elastic_dubler.K_D.detach().cpu()
+                ) if self.backbone.elastic_dubler is not None else None,
+                "dynamic_K_D_semantics": (
+                    "exact positive source-law parameter; no exponent clipping"
+                ),
                 "active_clusters": cluster_state.active_clusters,
                 "external_reference_context_sha256": (
                     "EE6A04D89EBE5DA78D4F93950789A8833A904FF29A8F03DECDC97C621199ADB4"

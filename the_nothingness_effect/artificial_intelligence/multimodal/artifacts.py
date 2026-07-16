@@ -64,6 +64,14 @@ def _history_arrays(run: MultimodalTrainingRun) -> dict[str, np.ndarray]:
         "cluster_count": np.array([item.cluster_count for item in run.history]),
         "local_energy": np.array([item.local_free_energy for item in run.history]),
         "global_energy": np.array([item.global_free_energy for item in run.history]),
+        "K_D": np.array([item.K_D for item in run.history]),
+        "learning_rate": np.array([item.learning_rate for item in run.history]),
+        "validation_objective": np.array(
+            [item.validation_objective for item in run.history]
+        ),
+        "K_D_improvement": np.array(
+            [item.K_D_selection_improvement for item in run.history]
+        ),
     }
 
 
@@ -97,6 +105,10 @@ def _write_tables(
                 "validation_loss": item.validation_loss,
                 "validation_accuracy": item.validation_accuracy,
                 "gradient_norm": item.gradient_norm,
+                "K_D": item.K_D,
+                "learning_rate": item.learning_rate,
+                "validation_objective": item.validation_objective,
+                "K_D_selection_improvement": item.K_D_selection_improvement,
                 **{
                     f"weight_{name}": item.modality_weights[index]
                     for index, name in enumerate(names)
@@ -147,7 +159,34 @@ def _write_tables(
             for name, value in evaluation.reconstruction_rmse.items()
         ],
     )
-    return [history, metrics, residuals, ablation_table, confusion, similarity, reconstruction]
+    kd_optimization = save_csv(
+        output / "dynamic_kd_optimization.csv",
+        [
+            {
+                "epoch": probe.epoch,
+                "K_D": probe.K_D,
+                "objective": probe.objective,
+                "cross_entropy": probe.cross_entropy,
+                "reconstruction_rmse": probe.reconstruction_rmse,
+                "brier_score": probe.brier_score,
+                "calibration_error": probe.calibration_error,
+                "bounded_closure_penalty": probe.bounded_closure_penalty,
+                "status": probe.status,
+                "obstruction": probe.obstruction,
+            }
+            for probe in run.kd_probes
+        ],
+    )
+    return [
+        history,
+        metrics,
+        residuals,
+        ablation_table,
+        confusion,
+        similarity,
+        reconstruction,
+        kd_optimization,
+    ]
 
 
 def _static_figures(
@@ -158,6 +197,7 @@ def _static_figures(
     names: tuple[str, ...],
     evaluation_labels: torch.Tensor,
     latent_labels: torch.Tensor,
+    run: MultimodalTrainingRun,
 ) -> list[Path]:
     figures: list[Path] = []
     figures.append(
@@ -307,6 +347,76 @@ def _static_figures(
             ),
         )
     )
+    figures.append(
+        _save_plot(
+            output,
+            "dynamic_kd_trajectory.png",
+            lambda axis: (
+                axis.plot(
+                    arrays["epoch"], arrays["K_D"], marker="o", color="#7a5195"
+                ),
+                axis.set(
+                    title="Validation-selected dynamic K_D trajectory",
+                    xlabel="epoch",
+                    ylabel="exact positive K_D",
+                ),
+                axis.set_yscale("log"),
+            ),
+        )
+    )
+
+    valid_probes = tuple(
+        probe for probe in run.kd_probes if probe.objective is not None
+    )
+
+    def draw_kd_landscape(axis: Any) -> None:
+        if not valid_probes:
+            axis.text(0.5, 0.5, "No valid K_D probes", ha="center", va="center")
+            return
+        scatter = axis.scatter(
+            [probe.K_D for probe in valid_probes],
+            [float(probe.objective) for probe in valid_probes],
+            c=[probe.epoch for probe in valid_probes],
+            cmap="viridis",
+            s=65,
+            edgecolors="black",
+            linewidths=0.35,
+        )
+        axis.set_xscale("log")
+        axis.set(
+            title="K_D validation-objective landscape",
+            xlabel="candidate K_D",
+            ylabel="composite validation objective",
+        )
+        axis.figure.colorbar(scatter, ax=axis, label="epoch")
+
+    figures.append(_save_plot(output, "dynamic_kd_validation_landscape.png", draw_kd_landscape))
+
+    def draw_hyperparameters(axis: Any) -> None:
+        kd_scale = arrays["K_D"] / max(float(arrays["K_D"][0]), 1e-12)
+        lr_scale = arrays["learning_rate"] / max(
+            float(arrays["learning_rate"][0]), 1e-12
+        )
+        axis.plot(arrays["epoch"], kd_scale, marker="o", label="K_D / initial")
+        axis.plot(
+            arrays["epoch"], lr_scale, marker="s", label="learning rate / initial"
+        )
+        axis.plot(
+            arrays["epoch"],
+            arrays["validation_objective"] / max(
+                float(arrays["validation_objective"][0]), 1e-12
+            ),
+            marker="^",
+            label="validation objective / initial",
+        )
+        axis.set(
+            title="Dynamic hyperparameter and objective response",
+            xlabel="epoch",
+            ylabel="relative value",
+        )
+        axis.legend()
+
+    figures.append(_save_plot(output, "hyperparameter_optimization_response.png", draw_hyperparameters))
     return figures
 
 
@@ -385,6 +495,29 @@ def _animations(
             ),
         ),
     ]
+    animations.append(
+        _save_animation(
+            output,
+            "dynamic_kd_optimization.gif",
+            frames,
+            lambda frame, axis: (
+                axis.plot(
+                    arrays["epoch"][: frame + 1],
+                    arrays["K_D"][: frame + 1],
+                    color="#7a5195",
+                    marker="o",
+                    label="selected K_D",
+                ),
+                axis.set_yscale("log"),
+                axis.set(
+                    title=f"Dynamic K_D optimization — epoch {frame}",
+                    xlabel="epoch",
+                    ylabel="exact positive K_D",
+                ),
+                axis.legend(),
+            ),
+        )
+    )
     tokens = evaluation.output.backbone_output.modality_tokens.detach().cpu()
     reconstruction = evaluation.output.reconstructed_fused_tokens.detach().cpu()
     sample_frames = min(tokens.shape[0], 8)
@@ -424,6 +557,8 @@ def run_multimodal_pipeline_artifacts(
         dataset.validation,
         epochs=epochs,
         seed=seed,
+        optimize_K_D=True,
+        adaptive_learning_rate=True,
     )
     evaluation = evaluate_multimodal_model(model, dataset.test)
     ablations = evaluate_source_removals(model, dataset.test)
@@ -438,6 +573,7 @@ def run_multimodal_pipeline_artifacts(
         names,
         dataset.test.labels,
         dataset.train.labels,
+        run,
     )
     movies = _animations(output, arrays, evaluation, names, dataset.train.labels)
     network = generate_multimodal_network_artifacts(
@@ -456,6 +592,19 @@ def run_multimodal_pipeline_artifacts(
         "modalities": list(names),
         "classes": list(dataset.class_names),
         "synthetic_samples_per_class": 8,
+        "dynamic_K_D": {
+            "enabled": True,
+            "initial": (
+                run.kd_selections[0].previous_K_D if run.kd_selections else 1.0
+            ),
+            "final": run.history[-1].K_D if run.history else 1.0,
+            "probe_count": len(run.kd_probes),
+            "selection_count": len(run.kd_selections),
+            "total_probe_improvement": sum(
+                selection.improvement for selection in run.kd_selections
+            ),
+        },
+        "adaptive_learning_rate": True,
     }
     manifest = write_metadata(
         output / "multimodal_pipeline_manifest.json",

@@ -7,9 +7,14 @@ from dataclasses import dataclass
 import torch
 from torch.nn import functional
 
+from the_nothingness_effect.artificial_intelligence.shared.dynamic_kd import (
+    dynamic_kd_state,
+)
+
 from .data import MultimodalBatch
 from .evaluation import evaluate_multimodal_model
 from .model import TNETrainableMultimodalModel, TNETrainableMultimodalOutput
+from .optimization import DynamicKDSearch, KDProbe, KDSelection, validation_objective
 
 
 @dataclass(frozen=True)
@@ -33,6 +38,10 @@ class MultimodalEpoch:
     cluster_count: int
     growth_event_count: int
     cluster_centroids: tuple[tuple[float, ...], ...]
+    K_D: float
+    learning_rate: float
+    validation_objective: float
+    K_D_selection_improvement: float
 
 
 @dataclass(frozen=True)
@@ -41,6 +50,8 @@ class MultimodalTrainingRun:
     seed: int
     epochs: int
     learning_rate: float
+    kd_probes: tuple[KDProbe, ...] = ()
+    kd_selections: tuple[KDSelection, ...] = ()
 
 
 def _loss_components(
@@ -74,6 +85,9 @@ def train_multimodal_model(
     epochs: int = 8,
     learning_rate: float = 0.015,
     seed: int = 0,
+    optimize_K_D: bool = False,
+    adaptive_learning_rate: bool = False,
+    kd_search: DynamicKDSearch | None = None,
 ) -> MultimodalTrainingRun:
     if epochs < 1 or learning_rate <= 0:
         raise ValueError("epochs and learning rate must be positive")
@@ -81,8 +95,21 @@ def train_multimodal_model(
     validation_batch.validate()
     torch.manual_seed(seed)
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    scheduler = (
+        torch.optim.lr_scheduler.ReduceLROnPlateau(
+            optimizer, mode="min", factor=0.7, patience=2, min_lr=learning_rate * 0.08
+        )
+        if adaptive_learning_rate
+        else None
+    )
+    search = kd_search or (DynamicKDSearch() if optimize_K_D else None)
     history: list[MultimodalEpoch] = []
     for epoch in range(epochs):
+        selection = (
+            search.select(model, validation_batch, epoch=epoch)
+            if search is not None
+            else None
+        )
         model.train()
         optimizer.zero_grad(set_to_none=True)
         output = model(train_batch.modalities)
@@ -95,6 +122,10 @@ def train_multimodal_model(
         predictions = output.readout.argmax(dim=-1)
         train_accuracy = (predictions == train_batch.labels).float().mean()
         validation = evaluate_multimodal_model(model, validation_batch)
+        objective = validation_objective(validation)
+        current_learning_rate = float(optimizer.param_groups[0]["lr"])
+        if scheduler is not None:
+            scheduler.step(objective)
         weights = output.backbone_output.modality_weights.mean(dim=0)
         history.append(
             MultimodalEpoch(
@@ -132,6 +163,19 @@ def train_multimodal_model(
                     tuple(float(value) for value in row)
                     for row in output.cluster_state.centroids.detach().cpu().tolist()
                 ),
+                K_D=dynamic_kd_state(model).value,
+                learning_rate=current_learning_rate,
+                validation_objective=objective,
+                K_D_selection_improvement=(
+                    selection.improvement if selection is not None else 0.0
+                ),
             )
         )
-    return MultimodalTrainingRun(tuple(history), seed, epochs, learning_rate)
+    return MultimodalTrainingRun(
+        tuple(history),
+        seed,
+        epochs,
+        learning_rate,
+        search.probes if search is not None else (),
+        search.selections if search is not None else (),
+    )

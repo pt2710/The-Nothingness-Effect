@@ -106,7 +106,7 @@ class AdaptiveModalityClusterNetwork(nn.Module):
                         if active < self.max_clusters:
                             cluster = self._spawn(value, modality_id)
                             events.append(
-                                ClusterGrowthEvent(step, "spawn", cluster, modality, float("nan"))
+                            ClusterGrowthEvent(step, "spawn", cluster, modality, 0.0)
                             )
                         continue
                     distances = torch.linalg.vector_norm(

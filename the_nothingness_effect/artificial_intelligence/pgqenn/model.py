@@ -32,6 +32,7 @@ class PGQENNOutput(TNEAIOutput):
     qenn_backbone_output: QENNOutput | None = None
     mpl_motifs: tuple[str, ...] = ()
     observation_collapse_state: ObservationCollapseState | None = None
+    triadic_stream_source_removal_delta: torch.Tensor | None = None
 
 
 class PGQENNModel(nn.Module):
@@ -45,6 +46,7 @@ class PGQENNModel(nn.Module):
         motif_width: int = 2,
         mpl_tc_repository: str | Path | None = None,
         qenn_dtqc_enabled: bool = True,
+        triadic_streams_enabled: bool = True,
     ):
         super().__init__()
         if min(input_dim, hidden_dim, output_dim) <= 0:
@@ -64,6 +66,7 @@ class PGQENNModel(nn.Module):
         self.elastic_gate = ElasticPiGate(K_D)
         self.readout_layer = nn.Linear(hidden_dim, output_dim)
         self.observation_collapse = ObservationCollapseReadout()
+        self.triadic_streams_enabled = bool(triadic_streams_enabled)
 
     def forward(self, features: torch.Tensor, graph: PrimeGraph | None = None, *, tolerance: float = 1e-5) -> PGQENNOutput:
         require_finite_tensor(features, "PGQENN input")
@@ -71,9 +74,23 @@ class PGQENNModel(nn.Module):
             raise ValueError("PGQENN input must have shape [nodes, input_dim]")
         qenn_output = self.qenn_backbone(features, tolerance=tolerance)
         graph = graph or self.growth.build(features.shape[0], dtype=features.dtype)
-        hidden = self.message_passing(qenn_output.hidden, graph)
+        hidden = self.message_passing(
+            qenn_output.hidden,
+            graph,
+            use_triadic_streams=self.triadic_streams_enabled,
+        )
+        prime_only_hidden = self.message_passing(
+            qenn_output.hidden, graph, use_triadic_streams=False
+        )
+        triadic_stream_delta = torch.linalg.vector_norm(hidden - prime_only_hidden)
         dfi = qenn_output.dfi
         adjacency = graph.adjacency.to(dtype=features.dtype, device=features.device)
+        spatial_adjacency = graph.message_adjacency.to(
+            dtype=features.dtype, device=features.device
+        )
+        coordinates = graph.coordinates_3d.to(
+            dtype=features.dtype, device=features.device
+        )
         degree_sequence = adjacency.sum(dim=-1) + 1.0
         parity_mask = torch.tensor(
             [(index + graph.two_adic_depths[index].value) % 2 for index in range(len(graph.primes) - 1)],
@@ -91,10 +108,32 @@ class PGQENNModel(nn.Module):
         logits = self.readout_layer(node_state.mean(dim=0, keepdim=True))
         observation_state = self.observation_collapse(logits)
         observation = observation_state.probabilities
+        triadic = graph.triadic_growth
+        triadic_symmetry = (
+            torch.linalg.vector_norm(
+                triadic.spatial_adjacency - triadic.spatial_adjacency.T
+            ).to(dtype=features.dtype, device=features.device)
+            if triadic is not None
+            else torch.zeros((), dtype=features.dtype, device=features.device)
+        )
         residuals = {
-            "message_equivariance": self.message_passing.equivariance_residual(qenn_output.hidden, graph),
+            "message_equivariance": self.message_passing.equivariance_residual(
+                qenn_output.hidden,
+                graph,
+                use_triadic_streams=self.triadic_streams_enabled,
+            ),
             "graph_symmetry": torch.linalg.vector_norm(adjacency - adjacency.T),
             "self_loop": torch.linalg.vector_norm(torch.diagonal(adjacency)),
+            "growth_3d_spatial_symmetry": torch.linalg.vector_norm(
+                spatial_adjacency - spatial_adjacency.T
+            ),
+            "growth_3d_axis_rank": torch.relu(
+                torch.tensor(3.0, dtype=features.dtype, device=features.device)
+                - torch.linalg.matrix_rank(
+                    coordinates - coordinates.mean(dim=0, keepdim=True)
+                ).to(dtype=features.dtype)
+            ),
+            "triadic_stream_adjacency_symmetry": triadic_symmetry,
             "parseval": parseval_residual(node_state),
             "qenn_backbone_completeness": torch.stack(tuple(qenn_output.residuals.values())).sum(),
             "mpl_tc_dependency": torch.zeros((), dtype=features.dtype, device=features.device),
@@ -116,6 +155,27 @@ class PGQENNModel(nn.Module):
             ],
             "observation_collapse_integration": "canonical_runtime",
             "growth_mode": graph.growth_mode,
+            "growth_geometry": "prime_shell_x_mpl_tc_motif_x_two_adic_run_depth",
+            "growth_axis_labels": graph.axis_labels,
+            "message_adjacency": "canonical_edges_localized_by_3d_growth_geometry",
+            "triadic_stream_integration": (
+                "experimental_finite_prefix_structural_bridge"
+                if self.triadic_streams_enabled
+                else "source_removal_ablation"
+            ),
+            "triadic_stream_counts": triadic.stream_counts if triadic is not None else {},
+            "triadic_stream_types": (
+                "pure_even_lift",
+                "first_order_odd",
+                "lpf_odd_composite",
+                "mixed_even_composite",
+            ),
+            "triadic_stream_source_removal_delta": float(
+                triadic_stream_delta.detach().cpu()
+            ),
+            "triadic_modality_semantics": (
+                "TC stream kind is a structural growth axis; modality remains the node feature field"
+            ),
             "mpl_tc_repository": graph.dependency_url,
             "mpl_tc_commit": graph.dependency_commit,
             "mpl_tc_module_sha256": graph.dependency_sha256,
@@ -135,4 +195,5 @@ class PGQENNModel(nn.Module):
             qenn_backbone_output=qenn_output,
             mpl_motifs=graph.motifs,
             observation_collapse_state=observation_state,
+            triadic_stream_source_removal_delta=triadic_stream_delta,
         )

@@ -289,11 +289,36 @@ def generate_architecture_network_artifacts(
         output / f"{prefix}_recurrent_activation.gif", frames, recurrent_frame
     )
     movies = [signal_movie, topology_movie, recurrent_movie]
+    extra_tables: list[Path] = []
+    extra_manifests: list[Path] = []
+    spatial_growth = None
+    if architecture == "pgqenn":
+        from the_nothingness_effect.artificial_intelligence.pgqenn.growth_artifacts import (
+            generate_pgqenn_growth_3d_artifacts,
+        )
+
+        spatial_growth = generate_pgqenn_growth_3d_artifacts(
+            output, seed=seed, simulation=simulation
+        )
+        figures.extend(spatial_growth["figures"])
+        movies.extend(spatial_growth["animations"])
+        extra_tables.extend(spatial_growth["tables"])
+        extra_manifests.append(spatial_growth["manifest"])
     parameters = {
         "architecture": architecture, "mode": mode, "seed": seed,
         "node_count": len(spec.nodes), "edge_count": len(spec.edges),
+        "executable_3d_growth": architecture == "pgqenn",
     }
-    generated = [path.name for path in (*figures, table, *movies)]
+    generated = [
+        path.name
+        for path in (
+            *figures,
+            table,
+            *extra_tables,
+            *movies,
+            *extra_manifests,
+        )
+    ]
     manifest = write_metadata(
         output / f"{prefix}_manifest.json",
         {
@@ -312,4 +337,12 @@ def generate_architecture_network_artifacts(
             "source_status": "deterministic_network_state_visualization",
         },
     )
-    return {"figures": figures, "animations": movies, "table": table, "manifest": manifest}
+    return {
+        "figures": figures,
+        "animations": movies,
+        "table": table,
+        "extra_tables": extra_tables,
+        "extra_manifests": extra_manifests,
+        "spatial_growth": spatial_growth,
+        "manifest": manifest,
+    }

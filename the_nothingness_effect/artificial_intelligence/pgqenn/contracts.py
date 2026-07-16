@@ -164,7 +164,10 @@ def derived_operator(index: int, value: PGQENNContractInput) -> PGQENNDerivedLaw
 
 
 def spatial_operator(value: PGQENNContractInput) -> PGQENNSpatialClosure:
-    features, adjacency = _validate(value)
+    features, _ = _validate(value)
+    adjacency = value.graph.message_adjacency.to(
+        dtype=features.dtype, device=features.device
+    )
     first = derived_operator(0, value)
     second = derived_operator(1, value)
     potential = 0.5 * (_delta(first.derived_operator) + _delta(second.derived_operator))

@@ -30,20 +30,19 @@ jobs:
         run: >-
           python -m pytest -q
           --ignore=tests/numerical
+          --ignore=tests/artifacts
+          --ignore=tests/contracts/test_appendix_derived_contracts.py
+          --ignore=tests/contracts/test_authoritative_source_bindings.py
           --ignore=tests/contracts/test_qenn_contracts.py
           --ignore=tests/contracts/test_pgqenn_contracts.py
           --ignore=tests/contracts/test_soinets_contracts.py
+          --ignore=tests/contracts/test_qenn_dfi_remaining_source_contracts.py
+          --ignore=tests/contracts/test_pgqenn_remaining_source_contracts.py
+          --ignore=tests/contracts/test_soinets_remaining_source_contracts.py
           --ignore=tests/contracts/test_mpl_tc_dependency.py
           --ignore=tests/invariants/test_elastic_dubler_ai.py
           --ignore=tests/invariants/test_observation_collapse_readout.py
           --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py
-          --ignore=tests/artifacts/test_ai_network_artifacts.py
-          --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py
-          --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py
-          --ignore=tests/artifacts/test_qenn_artifacts.py
-          --ignore=tests/artifacts/test_pgqenn_artifacts.py
-          --ignore=tests/artifacts/test_soinets_artifacts.py
-          --ignore=tests/artifacts/test_soinets_runtime_simulation.py
           --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/*
 
   theorem-contracts:

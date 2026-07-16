@@ -1,0 +1,138 @@
+"""Deterministic finite provenance witnesses for newly recertified A sources."""
+
+from __future__ import annotations
+
+import numpy as np
+import torch
+
+from the_nothingness_effect.artificial_intelligence.pgqenn.contracts import (
+    PGQENNContractInput,
+)
+from the_nothingness_effect.artificial_intelligence.pgqenn.growth_law import (
+    CanonicalPrimeGrowth,
+)
+from the_nothingness_effect.artificial_intelligence.pgqenn.source_contracts import (
+    SOURCE_IDS as PGQENN_SOURCE_IDS,
+)
+from the_nothingness_effect.artificial_intelligence.qenn.contracts import (
+    QENNContractInput,
+)
+from the_nothingness_effect.artificial_intelligence.qenn.source_contracts import (
+    SOURCE_IDS as QENN_SOURCE_IDS,
+)
+from the_nothingness_effect.artificial_intelligence.soinets.contracts import (
+    SOInetContractInput,
+)
+from the_nothingness_effect.artificial_intelligence.soinets.source_contracts import (
+    SOURCE_IDS as SOINET_SOURCE_IDS,
+)
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import (
+    normalized_dfi,
+)
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.extended_contracts import (
+    DFIDecompositionInput,
+    DFIFlowpointInterfaceInput,
+    DFISimulationInput,
+)
+
+
+def _qenn_sample() -> QENNContractInput:
+    axis = torch.linspace(0.0, 2.0 * torch.pi, 12)
+    signal = torch.stack(
+        (
+            torch.sin(axis),
+            torch.cos(axis),
+            torch.sin(2.0 * axis),
+            torch.cos(2.0 * axis),
+            0.5 * torch.sin(axis),
+            0.5 * torch.cos(axis),
+        ),
+        dim=-1,
+    )
+    return QENNContractInput(signal, tolerance=1e-6)
+
+
+def _pgqenn_sample() -> PGQENNContractInput:
+    graph = CanonicalPrimeGrowth().build(9)
+    node = torch.arange(1.0, 10.0).unsqueeze(-1)
+    features = torch.cat(
+        (
+            node / 10.0,
+            torch.sin(node),
+            torch.cos(node),
+            torch.log1p(node),
+            (node % 3.0) / 3.0,
+        ),
+        dim=-1,
+    )
+    return PGQENNContractInput(graph, features, tolerance=1e-6)
+
+
+def _soinet_sample() -> SOInetContractInput:
+    axis = torch.linspace(0.0, 2.0 * torch.pi, 8)
+    base = torch.stack(
+        (
+            1.2 + torch.sin(axis),
+            1.2 + torch.cos(axis),
+            1.2 + torch.sin(2.0 * axis),
+            1.2 + torch.cos(2.0 * axis),
+        ),
+        dim=-1,
+    )
+    modalities = torch.stack((base, 1.05 * base, torch.roll(base, 1, 0)))
+    return SOInetContractInput(modalities, tolerance=1e-6)
+
+
+def _dfi_samples() -> dict[str, object]:
+    values = np.asarray(
+        (
+            (1.0, 2.0, 4.0),
+            (2.0, 3.0, 5.0),
+            (3.0, 5.0, 8.0),
+        ),
+        dtype=float,
+    )
+    components = np.asarray(
+        normalized_dfi(values, spectrum_scale=1.0).normalized_entropy,
+        dtype=float,
+    )
+    return {
+        "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": (
+            DFIDecompositionInput(values, (0, 1, 2), 1.0, 1e-10)
+        ),
+        "dfi_flowpoint_consistency_and_interface_inconsistency": (
+            DFIFlowpointInterfaceInput(
+                values,
+                np.eye(values.shape[1]),
+                np.ones_like(components),
+                1.0,
+                1e-10,
+            )
+        ),
+        "dfi_simulation_consistency_and_simulation_breakdown": (
+            DFISimulationInput(
+                values,
+                components,
+                float(np.sum(components)),
+                1.0,
+                1e-10,
+            )
+        ),
+    }
+
+
+def sample_inputs() -> dict[str, object]:
+    """Return one deterministic typed witness for every promoted A source."""
+
+    qenn = _qenn_sample()
+    pgqenn = _pgqenn_sample()
+    soinets = _soinet_sample()
+    result = {
+        **{str(identifier): qenn for identifier in QENN_SOURCE_IDS},
+        **{str(identifier): pgqenn for identifier in PGQENN_SOURCE_IDS},
+        **{str(identifier): soinets for identifier in SOINET_SOURCE_IDS},
+        **_dfi_samples(),
+    }
+    if len(result) != 31:
+        raise RuntimeError(f"expected 31 recertified source samples, found {len(result)}")
+    return result

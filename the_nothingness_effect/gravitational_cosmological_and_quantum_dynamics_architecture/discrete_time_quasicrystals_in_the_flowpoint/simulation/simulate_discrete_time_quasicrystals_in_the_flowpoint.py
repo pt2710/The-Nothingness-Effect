@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 from importlib import import_module
 import json
+import math
 from pathlib import Path
 
 import matplotlib
@@ -28,9 +29,9 @@ def _decagonal_field(size: int = 32) -> torch.Tensor:
     y, x = torch.meshgrid(axis, axis, indexing="ij")
     field = torch.zeros_like(x)
     for index in range(10):
-        angle = 2.0 * torch.pi * index / 10.0
+        angle = 2.0 * math.pi * index / 10.0
         field = field + torch.cos(
-            2.4 * (torch.cos(angle) * x + torch.sin(angle) * y)
+            2.4 * (math.cos(angle) * x + math.sin(angle) * y)
         )
     field = field / 10.0
     return 0.25 + (field - field.amin()) / (

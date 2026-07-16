@@ -110,5 +110,33 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
       - run: python tools/check_no_authoritative_appendices.py
-      - run: python -m tools.qa_guards
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
+      - run: python -m tools.qa_guards
+
+  release-qa:
+    needs:
+      - core
+      - theorem-contracts
+      - artifact-smoke
+      - ai-cpu
+      - security-and-provenance-guards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pip check
+      - run: python -m tools.qa_guards
+      - name: Build and assert fail-closed final QA
+        run: >-
+          python tools/build_final_qa_manifest.py
+          --output "${RUNNER_TEMP}/final_qa_manifest.json"
+          --python-version 3.11
+          --dependency-status "pip check passed"
+          --source-law-regression-status passed
+          --check

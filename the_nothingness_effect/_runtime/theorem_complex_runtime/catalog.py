@@ -1,10 +1,9 @@
 """Canonical theorem-complex catalog with explicit Foundational registration.
 
 The prior catalog implementation is preserved byte-identically in
-``_catalog_impl.py``. This adapter extends its module registry with the
-Countable- and Uncountable-Infinity canonical contracts while delegating
-catalog semantics, release closure, and cache behavior to the preserved
-implementation.
+``_catalog_impl.py``. This adapter extends its module registry with canonical
+Countable-Infinity, Uncountable-Infinity, and Observation-and-Collapse
+contracts while delegating catalog semantics and release closure.
 """
 
 from __future__ import annotations
@@ -23,6 +22,11 @@ _FOUNDATIONAL_MODULES = (
         "canonical_contracts",
         "contracts",
     ),
+    (
+        "the_nothingness_effect.foundational_architecture.observation_and_collapse."
+        "canonical_contracts",
+        "contracts",
+    ),
 )
 for module in _FOUNDATIONAL_MODULES:
     if module not in _impl.CONTRACT_MODULES:
@@ -37,6 +41,4 @@ release_active_contracts = _impl.release_active_contracts
 
 
 def __getattr__(name: str):
-    """Delegate compatibility access to the preserved catalog implementation."""
-
     return getattr(_impl, name)

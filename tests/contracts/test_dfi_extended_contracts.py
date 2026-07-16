@@ -16,7 +16,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
     DomainViolationError,
 )
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.derived_contracts import (
-    contracts,
+    contracts as derived_contracts,
 )
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import (
     normalized_dfi,
@@ -29,6 +29,9 @@ from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation
     DFIFlowpointInterfaceInput,
     DFISimulationCertificate,
     DFISimulationInput,
+)
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.source_contracts import (
+    contracts as source_contracts,
 )
 
 
@@ -56,7 +59,7 @@ def _canonical_entropy() -> np.ndarray:
 
 
 def test_dfi_a05_decomposition_and_mapping_covariance():
-    contract = contracts()[0]
+    contract = source_contracts()[0]
     evaluation = evaluate_contract(
         contract,
         DFIDecompositionInput(DATA, SCALE, (2, 0, 1)),
@@ -73,13 +76,13 @@ def test_dfi_a05_decomposition_and_mapping_covariance():
 def test_dfi_a05_rejects_nonpermutation_mapping():
     with pytest.raises(DomainViolationError, match="each feature index"):
         evaluate_contract(
-            contracts()[0],
+            source_contracts()[0],
             DFIDecompositionInput(DATA, SCALE, (0, 0, 2)),
         )
 
 
 def test_dfi_a06_flowpoint_interface_commutes_for_involutive_swap():
-    contract = contracts()[1]
+    contract = source_contracts()[1]
     evaluation = evaluate_contract(
         contract,
         DFIFlowpointInterfaceInput(DATA, SCALE, SWAP),
@@ -102,7 +105,7 @@ def test_dfi_a06_noninvolutive_interface_fails_closed():
         ]
     )
     evaluation = evaluate_contract(
-        contracts()[1],
+        source_contracts()[1],
         DFIFlowpointInterfaceInput(DATA, SCALE, cycle),
     )
 
@@ -113,7 +116,7 @@ def test_dfi_a06_noninvolutive_interface_fails_closed():
 def test_dfi_a07_exact_simulation_record_is_satisfied():
     expected = _canonical_entropy()
     evaluation = evaluate_contract(
-        contracts()[2],
+        source_contracts()[2],
         DFISimulationInput(DATA, SCALE, expected),
     )
 
@@ -128,7 +131,7 @@ def test_dfi_a07_perturbed_simulation_exposes_breakdown():
     perturbed = _canonical_entropy().copy()
     perturbed[0, 0] += 0.05
     evaluation = evaluate_contract(
-        contracts()[2],
+        source_contracts()[2],
         DFISimulationInput(DATA, SCALE, perturbed),
     )
 
@@ -138,7 +141,7 @@ def test_dfi_a07_perturbed_simulation_exposes_breakdown():
 
 
 def test_dfi_b03_requires_all_three_recertified_sources():
-    contract = contracts()[3]
+    contract = derived_contracts()[0]
     source = AdditiveDerivationInput(
         {
             "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": np.array(

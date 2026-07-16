@@ -33,6 +33,7 @@ jobs:
           --ignore=tests/invariants/test_elastic_dubler_ai.py
           --ignore=tests/invariants/test_observation_collapse_readout.py
           --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py
+          --ignore=tests/artifacts/test_ai_network_artifacts.py
           --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py
           --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py
           --ignore=tests/artifacts/test_qenn_artifacts.py
@@ -109,6 +110,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pip install -e .
       - run: python tools/check_no_authoritative_appendices.py
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
@@ -130,6 +132,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pip install -e .
       - run: python -m pip check
       - run: python -m tools.qa_guards
       - name: Build and assert fail-closed final QA

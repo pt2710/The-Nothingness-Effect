@@ -4,17 +4,30 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from functools import partial
-from typing import Callable
 import hashlib
+from pathlib import Path
+from typing import Callable
+
 import numpy as np
 
 from .contract_protocol import ContractResult, ContractStatus
-from .types import ClosureStatus, CodomainSpec, ComplexContract, ComplexId, ComplexLevel, DomainSpec, ResidualResult
+from .types import (
+    ClosureStatus,
+    CodomainSpec,
+    ComplexContract,
+    ComplexId,
+    ComplexLevel,
+    DomainSpec,
+    ResidualResult,
+)
+
 
 FOUNDATIONAL = "appendix_tne_foundational_closure_architecture.tex"
 FOUNDATIONAL_SHA256 = "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
 GRAVITATIONAL = "appendix_tne_gravitational_cosmological_quantum_dynamics.tex"
 GRAVITATIONAL_SHA256 = "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062"
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+FIGURE_FIXTURE = "docs/figures/figure_provenance_fixture.svg"
 
 
 @dataclass(frozen=True)
@@ -29,20 +42,73 @@ def _call_positional(function: Callable, value: PositionalContractInput) -> Cont
 
 def _residual(identifier: str, _source, result: ContractResult) -> ResidualResult:
     vector = tuple(float(value) for value in result.residuals.values()) or (0.0,)
-    tolerance = max((float(value) for value in result.tolerances.values()), default=0.0)
-    passed = result.status in {ContractStatus.EXACT, ContractStatus.NUMERICAL_CANDIDATE}
-    status = ClosureStatus.SATISFIED if passed else (ClosureStatus.INVALID_DOMAIN if result.status is ContractStatus.INVALID_INPUT else ClosureStatus.OPEN)
-    return ResidualResult(identifier, vector, tolerance, passed, status, {"contract_status": result.status.value, "reason_code": result.reason_code})
+    tolerance = max(
+        (float(value) for value in result.tolerances.values()),
+        default=0.0,
+    )
+    passed = result.status in {
+        ContractStatus.EXACT,
+        ContractStatus.NUMERICAL_CANDIDATE,
+    }
+    status = (
+        ClosureStatus.SATISFIED
+        if passed
+        else ClosureStatus.INVALID_DOMAIN
+        if result.status is ContractStatus.INVALID_INPUT
+        else ClosureStatus.OPEN
+    )
+    return ResidualResult(
+        identifier,
+        vector,
+        tolerance,
+        passed,
+        status,
+        {
+            "contract_status": result.status.value,
+            "reason_code": result.reason_code,
+        },
+    )
 
 
 def contracts() -> tuple[ComplexContract, ...]:
-    from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.recertified_contracts import evaluate_2adic_dimensional_unification, evaluate_kernel_alternator
-    from the_nothingness_effect.foundational_architecture.duality.recertified_contracts import evaluate_kernel_recursion
-    from the_nothingness_effect.foundational_architecture.symmetry.recertified_contracts import evaluate_order_two_symmetry_recursion
-    from the_nothingness_effect.foundational_architecture.spatiality.recertified_contracts import evaluate_affine_spatial_involution_orbit
-    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.recertified_contracts import evaluate_bridge_duality_and_2_adic_criterion, evaluate_edi_cross_complex_closure, evaluate_elastic_curvature_smoothness, evaluate_elastic_entropic_stability, evaluate_elastic_geometric_consistency
-    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.recertified_contracts import evaluate_symmetric_cosmology_cross_complex_closure
-    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts import evaluate_autocorrelation_completeness, evaluate_dfi_compatible_tail_control, evaluate_drift_boundedness, evaluate_elastic_invariance_of_support, evaluate_figure_backed_closure, evaluate_floquet_free_robustness, evaluate_meyer_cut_and_project_structure, evaluate_ou_noise_5d_scatter, evaluate_reconstruction_equivalence, evaluate_wavelet_ridge_locking, evaluate_z2x2_sign_symmetry
+    from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.recertified_contracts import (
+        evaluate_2adic_dimensional_unification,
+        evaluate_kernel_alternator,
+    )
+    from the_nothingness_effect.foundational_architecture.duality.recertified_contracts import (
+        evaluate_kernel_recursion,
+    )
+    from the_nothingness_effect.foundational_architecture.symmetry.recertified_contracts import (
+        evaluate_order_two_symmetry_recursion,
+    )
+    from the_nothingness_effect.foundational_architecture.spatiality.recertified_contracts import (
+        evaluate_affine_spatial_involution_orbit,
+    )
+    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.recertified_contracts import (
+        evaluate_bridge_duality_and_2_adic_criterion,
+        evaluate_edi_cross_complex_closure,
+        evaluate_elastic_curvature_smoothness,
+        evaluate_elastic_entropic_stability,
+        evaluate_elastic_geometric_consistency,
+    )
+    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.recertified_contracts import (
+        evaluate_symmetric_cosmology_cross_complex_closure,
+    )
+    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.figure_provenance import (
+        evaluate_figure_backed_closure,
+    )
+    from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts import (
+        evaluate_autocorrelation_completeness,
+        evaluate_dfi_compatible_tail_control,
+        evaluate_drift_boundedness,
+        evaluate_elastic_invariance_of_support,
+        evaluate_floquet_free_robustness,
+        evaluate_meyer_cut_and_project_structure,
+        evaluate_ou_noise_5d_scatter,
+        evaluate_reconstruction_equivalence,
+        evaluate_wavelet_ridge_locking,
+        evaluate_z2x2_sign_symmetry,
+    )
 
     definitions = (
         ("kernel_alternator", FOUNDATIONAL, FOUNDATIONAL_SHA256, evaluate_kernel_alternator, True, "canonical_self_negating_involution/the_flowpoint"),
@@ -72,7 +138,29 @@ def contracts() -> tuple[ComplexContract, ...]:
     for identifier, appendix, digest, function, positional, module in definitions:
         operator = partial(_call_positional, function) if positional else function
         input_types = (PositionalContractInput,) if positional else (object,)
-        result.append(ComplexContract(ComplexId(identifier), appendix, digest, ComplexLevel.A, (), DomainSpec(f"{identifier} input", "typed recertified source-law input", input_types), CodomainSpec(f"{identifier} result", "fail-closed typed contract result", (ContractResult,)), operator, residual=partial(_residual, identifier), exact_semantics=False, implementation_path=f"the_nothingness_effect/{module}/recertified_contracts.py"))
+        result.append(
+            ComplexContract(
+                ComplexId(identifier),
+                appendix,
+                digest,
+                ComplexLevel.A,
+                (),
+                DomainSpec(
+                    f"{identifier} input",
+                    "typed recertified source-law input",
+                    input_types,
+                ),
+                CodomainSpec(
+                    f"{identifier} result",
+                    "fail-closed typed contract result",
+                    (ContractResult,),
+                ),
+                operator,
+                residual=partial(_residual, identifier),
+                exact_semantics=False,
+                implementation_path=f"the_nothingness_effect/{module}/recertified_contracts.py",
+            )
+        )
     return tuple(result)
 
 
@@ -92,7 +180,9 @@ def sample_inputs() -> dict[str, object]:
         evaluate_elastic_entropic_stability(EntropicStabilityInput(-np.eye(2), np.eye(2), np.eye(2), 1.0)),
         evaluate_elastic_geometric_consistency(GeometryInput(np.stack([np.eye(2), np.eye(2)]), np.array([[0.0, 0.0], [1.0, 1.0]]), np.array([[0, 1]]), True)),
     )
-    wavelet = np.zeros((3, 4)); wavelet[1, :] = 1.0
+    wavelet = np.zeros((3, 4))
+    wavelet[1, :] = 1.0
+    figure_hash = hashlib.sha256((REPOSITORY_ROOT / FIGURE_FIXTURE).read_bytes()).hexdigest()
     return {
         "kernel_alternator": PositionalContractInput(([1.0, 2.0], [3.0, 4.0])),
         "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece": TwoAdicUnificationInput((0, 1), (1, 1), (0, 1), 2),
@@ -115,5 +205,13 @@ def sample_inputs() -> dict[str, object]:
         "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability": FloquetRobustnessInput(np.array([0.2, 0.3]), np.array([[0.1, 0.2], [0.2, 0.2]]), True, True, "seeded Gaussian ensemble"),
         "drift_boundedness_criterion_unbounded_drift_breakdown": DriftInput(np.ones(6), np.arange(6.0), "affine"),
         "dfi_compatible_tail_control_tail_driven_mass_imbalance": DFITailInput(np.array([1.0, 1.0, 0.0, 0.0]), np.ones(4), np.array([True, True, False, False]), (2, 4), True),
-        "figure_backed_closure_bragg_cwt_figure_contradicted_claims": FigureClosureInput(np.zeros((4, 2)), np.arange(4.0), np.zeros(3), (hashlib.sha256(b"figure").hexdigest(),), {"window": 4}, 0, True),
+        "figure_backed_closure_bragg_cwt_figure_contradicted_claims": FigureClosureInput(
+            np.zeros((4, 2)),
+            np.arange(4.0),
+            np.zeros(3),
+            (figure_hash,),
+            {"window": 4, "generated_files": [FIGURE_FIXTURE]},
+            0,
+            True,
+        ),
     }

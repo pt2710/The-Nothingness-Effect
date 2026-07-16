@@ -18,19 +18,23 @@ def test_multimodal_pipeline_writes_diverse_training_validation_evaluation_evide
     )
 
     assert len(result["tables"]) == 10
-    assert len(result["figures"]) == 21
-    assert len(result["animations"]) == 11
+    assert len(result["figures"]) == 23
+    assert len(result["animations"]) == 12
     assert all(path.is_file() for path in result["tables"])
     assert all(path.is_file() for path in result["figures"])
     assert all(path.is_file() for path in result["animations"])
     payload = json.loads(result["manifest"].read_text(encoding="utf-8"))
     assert payload["source_status"] == "synthetic_deterministic_training_fixture"
-    assert len(payload["generated_files"]) == 43
+    assert len(payload["generated_files"]) == 46
     assert payload["parameters"]["dynamic_K_D"]["enabled"] is True
     assert payload["parameters"]["dynamic_K_D"]["probe_count"] >= 6
+    assert payload["parameters"]["dynamic_SOI_normalization"]["enabled"] is True
     assert any(path.name == "dynamic_kd_optimization.csv" for path in result["tables"])
     assert any(path.name == "dynamic_kd_trajectory.png" for path in result["figures"])
     assert any(path.name == "dynamic_kd_optimization.gif" for path in result["animations"])
+    assert any(path.name == "dynamic_soi_trajectory.png" for path in result["figures"])
+    assert any(path.name == "dynamic_kd_soi_validation_landscape.png" for path in result["figures"])
+    assert any(path.name == "dynamic_kd_soi_optimization.gif" for path in result["animations"])
     assert result["network"]["manifest"].is_file()
     assert any(path.name.endswith("network_topology.png") for path in result["figures"])
     assert any(path.name.endswith("cluster_growth.gif") for path in result["animations"])

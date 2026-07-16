@@ -29,6 +29,19 @@ def test_prime_growth_is_deterministic_typed_and_distinct_from_ablation():
         spatial_locality_adjacency(first.adjacency, flattened_motif_axis),
     )
     assert first.growth_mode == "mpl_tc_prime_motif"
+    signed = first.signed_triadic_growth
+    assert signed is not None
+    assert signed.spectrum_counts == {"positive": 52, "negative": 52}
+    assert signed.value_involution_residual == 0.0
+    assert signed.coordinate_asymmetry > 0.0
+    split = signed.positive_node_count
+    assert not torch.allclose(
+        signed.coordinates_3d[split:], -signed.coordinates_3d[:split]
+    )
+    assert not torch.allclose(
+        signed.spatial_adjacency[:split, :split],
+        signed.spatial_adjacency[split:, split:],
+    )
     assert first.dependency_commit == "056e346824e9ec9785ab45b642b3b842c88f6e56"
     assert len(first.motifs) == len(first.primes)
     assert ablation.growth_mode == "stochastic_comparison_ablation"
@@ -55,6 +68,9 @@ def test_pgqenn_uses_equivariant_messages_pdfi_elastic_gain_and_gradients():
         "pure_even_lift", "first_order_odd", "lpf_odd_composite", "mixed_even_composite"
     }
     assert float(output.triadic_stream_source_removal_delta.detach()) > 0.0
+    assert float(output.signed_spectrum_source_removal_delta.detach()) > 0.0
+    assert output.metadata["signed_spectrum_integration"] == "tne_flowpoint_involution_lift"
+    assert output.metadata["signed_spectrum_counts"]["positive"] == output.metadata["signed_spectrum_counts"]["negative"]
     assert output.pdfi is not None and torch.isfinite(output.pdfi)
     assert output.node_state is not None and output.node_state.shape == (9, 7)
     assert float(output.residuals["message_equivariance"].detach()) == 0.0

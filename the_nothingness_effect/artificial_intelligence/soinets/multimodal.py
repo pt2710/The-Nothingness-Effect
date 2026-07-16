@@ -66,6 +66,7 @@ class TNEMultimodalSOInet(nn.Module):
         output_dim: int,
         *,
         K_D: float = 1.0,
+        soi_scale: float = 1.0,
         qenn_count: int = 1,
         pgqenn_count: int = 1,
         mpl_tc_repository: str | Path | None = None,
@@ -97,6 +98,7 @@ class TNEMultimodalSOInet(nn.Module):
             qenn_count=qenn_count,
             pgqenn_count=pgqenn_count,
             K_D=K_D,
+            soi_scale=soi_scale,
             mpl_tc_repository=mpl_tc_repository,
         )
         self.shared_decoder = nn.Sequential(

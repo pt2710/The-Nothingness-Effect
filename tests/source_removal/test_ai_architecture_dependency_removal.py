@@ -130,6 +130,23 @@ def test_removing_three_additional_tc_streams_changes_pgqenn_messages():
     assert prime_only.metadata["triadic_stream_integration"] == "source_removal_ablation"
 
 
+def test_removing_negative_flowpoint_spectrum_changes_pgqenn_messages():
+    from the_nothingness_effect.artificial_intelligence.pgqenn.model import PGQENNModel
+
+    torch.manual_seed(43)
+    model = PGQENNModel(5, 7, 3)
+    features = torch.rand(11, 5) + 0.2
+    complete = model(features)
+    model.signed_spectrum_enabled = False
+    positive_only = model(features)
+
+    signed = complete.graph.signed_triadic_growth
+    assert signed is not None and signed.value_involution_residual == 0.0
+    assert float(complete.signed_spectrum_source_removal_delta.detach()) > 0.0
+    assert not torch.allclose(complete.node_state, positive_only.node_state)
+    assert positive_only.metadata["signed_spectrum_integration"] == "positive_spectrum_ablation"
+
+
 def test_removing_multimodal_dubler_changes_named_domain_fusion():
     torch.manual_seed(31)
     canonical = TNEMultimodalSOInet(5, 7, 3)

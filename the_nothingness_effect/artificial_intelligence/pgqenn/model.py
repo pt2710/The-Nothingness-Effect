@@ -33,6 +33,7 @@ class PGQENNOutput(TNEAIOutput):
     mpl_motifs: tuple[str, ...] = ()
     observation_collapse_state: ObservationCollapseState | None = None
     triadic_stream_source_removal_delta: torch.Tensor | None = None
+    signed_spectrum_source_removal_delta: torch.Tensor | None = None
 
 
 class PGQENNModel(nn.Module):
@@ -43,10 +44,12 @@ class PGQENNModel(nn.Module):
         output_dim: int,
         *,
         K_D: float = 1.0,
+        soi_scale: float = 1.0,
         motif_width: int = 2,
         mpl_tc_repository: str | Path | None = None,
         qenn_dtqc_enabled: bool = True,
         triadic_streams_enabled: bool = True,
+        signed_spectrum_enabled: bool = True,
     ):
         super().__init__()
         if min(input_dim, hidden_dim, output_dim) <= 0:
@@ -56,6 +59,7 @@ class PGQENNModel(nn.Module):
             hidden_dim,
             hidden_dim,
             K_D=K_D,
+            soi_scale=soi_scale,
             dtqc_enabled=qenn_dtqc_enabled,
         )
         self.growth = CanonicalPrimeGrowth(
@@ -67,6 +71,7 @@ class PGQENNModel(nn.Module):
         self.readout_layer = nn.Linear(hidden_dim, output_dim)
         self.observation_collapse = ObservationCollapseReadout()
         self.triadic_streams_enabled = bool(triadic_streams_enabled)
+        self.signed_spectrum_enabled = bool(signed_spectrum_enabled)
 
     def forward(self, features: torch.Tensor, graph: PrimeGraph | None = None, *, tolerance: float = 1e-5) -> PGQENNOutput:
         require_finite_tensor(features, "PGQENN input")
@@ -78,11 +83,21 @@ class PGQENNModel(nn.Module):
             qenn_output.hidden,
             graph,
             use_triadic_streams=self.triadic_streams_enabled,
+            use_signed_spectrum=self.signed_spectrum_enabled,
+        )
+        positive_spectrum_hidden = self.message_passing(
+            qenn_output.hidden,
+            graph,
+            use_triadic_streams=self.triadic_streams_enabled,
+            use_signed_spectrum=False,
         )
         prime_only_hidden = self.message_passing(
             qenn_output.hidden, graph, use_triadic_streams=False
         )
         triadic_stream_delta = torch.linalg.vector_norm(hidden - prime_only_hidden)
+        signed_spectrum_delta = torch.linalg.vector_norm(
+            hidden - positive_spectrum_hidden
+        )
         dfi = qenn_output.dfi
         adjacency = graph.adjacency.to(dtype=features.dtype, device=features.device)
         spatial_adjacency = graph.message_adjacency.to(
@@ -109,6 +124,7 @@ class PGQENNModel(nn.Module):
         observation_state = self.observation_collapse(logits)
         observation = observation_state.probabilities
         triadic = graph.triadic_growth
+        signed_triadic = graph.signed_triadic_growth
         triadic_symmetry = (
             torch.linalg.vector_norm(
                 triadic.spatial_adjacency - triadic.spatial_adjacency.T
@@ -121,6 +137,7 @@ class PGQENNModel(nn.Module):
                 qenn_output.hidden,
                 graph,
                 use_triadic_streams=self.triadic_streams_enabled,
+                use_signed_spectrum=self.signed_spectrum_enabled,
             ),
             "graph_symmetry": torch.linalg.vector_norm(adjacency - adjacency.T),
             "self_loop": torch.linalg.vector_norm(torch.diagonal(adjacency)),
@@ -134,6 +151,13 @@ class PGQENNModel(nn.Module):
                 ).to(dtype=features.dtype)
             ),
             "triadic_stream_adjacency_symmetry": triadic_symmetry,
+            "signed_spectrum_value_involution": torch.tensor(
+                signed_triadic.value_involution_residual
+                if signed_triadic is not None
+                else 0.0,
+                dtype=features.dtype,
+                device=features.device,
+            ),
             "parseval": parseval_residual(node_state),
             "qenn_backbone_completeness": torch.stack(tuple(qenn_output.residuals.values())).sum(),
             "mpl_tc_dependency": torch.zeros((), dtype=features.dtype, device=features.device),
@@ -173,6 +197,25 @@ class PGQENNModel(nn.Module):
             "triadic_stream_source_removal_delta": float(
                 triadic_stream_delta.detach().cpu()
             ),
+            "signed_spectrum_integration": (
+                "tne_flowpoint_involution_lift"
+                if self.signed_spectrum_enabled
+                else "positive_spectrum_ablation"
+            ),
+            "signed_spectrum_counts": (
+                signed_triadic.spectrum_counts if signed_triadic is not None else {}
+            ),
+            "signed_spectrum_source_removal_delta": float(
+                signed_spectrum_delta.detach().cpu()
+            ),
+            "signed_spectrum_coordinate_asymmetry": (
+                signed_triadic.coordinate_asymmetry
+                if signed_triadic is not None
+                else 0.0
+            ),
+            "negative_spectrum_authority": (
+                "TNE Flowpoint neural lift; MPL-TC provenance is positive-only"
+            ),
             "triadic_modality_semantics": (
                 "TC stream kind is a structural growth axis; modality remains the node feature field"
             ),
@@ -196,4 +239,5 @@ class PGQENNModel(nn.Module):
             mpl_motifs=graph.motifs,
             observation_collapse_state=observation_state,
             triadic_stream_source_removal_delta=triadic_stream_delta,
+            signed_spectrum_source_removal_delta=signed_spectrum_delta,
         )

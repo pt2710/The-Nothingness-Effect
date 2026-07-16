@@ -10,6 +10,9 @@ from torch.nn import functional
 from the_nothingness_effect.artificial_intelligence.shared.dynamic_kd import (
     dynamic_kd_state,
 )
+from the_nothingness_effect.artificial_intelligence.shared.dynamic_soi import (
+    dynamic_soi_state,
+)
 
 from .data import MultimodalBatch
 from .evaluation import evaluate_multimodal_model
@@ -39,9 +42,11 @@ class MultimodalEpoch:
     growth_event_count: int
     cluster_centroids: tuple[tuple[float, ...], ...]
     K_D: float
+    soi_scale: float
     learning_rate: float
     validation_objective: float
     K_D_selection_improvement: float
+    joint_hyperparameter_improvement: float
 
 
 @dataclass(frozen=True)
@@ -52,6 +57,14 @@ class MultimodalTrainingRun:
     learning_rate: float
     kd_probes: tuple[KDProbe, ...] = ()
     kd_selections: tuple[KDSelection, ...] = ()
+
+    @property
+    def hyperparameter_probes(self) -> tuple[KDProbe, ...]:
+        return self.kd_probes
+
+    @property
+    def hyperparameter_selections(self) -> tuple[KDSelection, ...]:
+        return self.kd_selections
 
 
 def _loss_components(
@@ -164,9 +177,13 @@ def train_multimodal_model(
                     for row in output.cluster_state.centroids.detach().cpu().tolist()
                 ),
                 K_D=dynamic_kd_state(model).value,
+                soi_scale=dynamic_soi_state(model).value,
                 learning_rate=current_learning_rate,
                 validation_objective=objective,
                 K_D_selection_improvement=(
+                    selection.improvement if selection is not None else 0.0
+                ),
+                joint_hyperparameter_improvement=(
                     selection.improvement if selection is not None else 0.0
                 ),
             )

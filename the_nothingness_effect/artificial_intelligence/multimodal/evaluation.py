@@ -8,6 +8,8 @@ from typing import Any
 import torch
 from torch.nn import functional
 
+from the_nothingness_effect.artificial_intelligence.pgqenn.model import PGQENNModel
+
 from .data import MultimodalBatch
 from .model import TNETrainableMultimodalModel, TNETrainableMultimodalOutput
 
@@ -111,22 +113,29 @@ def evaluate_source_removals(
     axis_enabled = model.axis_network_enabled
     energy_enabled = model.energy_regulation_enabled
     cluster_enabled = model.cluster_context_enabled
+    pgqenn_models = tuple(
+        module for module in model.modules() if isinstance(module, PGQENNModel)
+    )
+    signed_states = tuple(module.signed_spectrum_enabled for module in pgqenn_models)
     variants = (
-        ("complete", raw_observer, elastic_dubler, True, True, True),
-        ("observation_removed", None, elastic_dubler, True, True, True),
-        ("elastic_dubler_removed", raw_observer, None, True, True, True),
-        ("modality_axes_removed", raw_observer, elastic_dubler, False, True, True),
-        ("rbm_regulator_removed", raw_observer, elastic_dubler, True, False, True),
-        ("cluster_context_removed", raw_observer, elastic_dubler, True, True, False),
-        ("observation_and_dubler_removed", None, None, True, True, True),
+        ("complete", raw_observer, elastic_dubler, True, True, True, True),
+        ("observation_removed", None, elastic_dubler, True, True, True, True),
+        ("elastic_dubler_removed", raw_observer, None, True, True, True, True),
+        ("modality_axes_removed", raw_observer, elastic_dubler, False, True, True, True),
+        ("rbm_regulator_removed", raw_observer, elastic_dubler, True, False, True, True),
+        ("cluster_context_removed", raw_observer, elastic_dubler, True, True, False, True),
+        ("signed_spectrum_removed", raw_observer, elastic_dubler, True, True, True, False),
+        ("observation_and_dubler_removed", None, None, True, True, True, True),
     )
     try:
-        for name, observer, dubler, axes, energy, clusters in variants:
+        for name, observer, dubler, axes, energy, clusters, signed in variants:
             model.backbone.raw_observer = observer
             model.backbone.elastic_dubler = dubler
             model.axis_network_enabled = axes
             model.energy_regulation_enabled = energy
             model.cluster_context_enabled = clusters
+            for pgqenn in pgqenn_models:
+                pgqenn.signed_spectrum_enabled = signed
             evaluation = evaluate_multimodal_model(model, batch)
             rows.append({"variant": name, **evaluation.metrics})
     finally:
@@ -135,4 +144,6 @@ def evaluate_source_removals(
         model.axis_network_enabled = axis_enabled
         model.energy_regulation_enabled = energy_enabled
         model.cluster_context_enabled = cluster_enabled
+        for pgqenn, signed in zip(pgqenn_models, signed_states, strict=True):
+            pgqenn.signed_spectrum_enabled = signed
     return rows

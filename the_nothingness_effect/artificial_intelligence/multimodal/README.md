@@ -9,6 +9,13 @@ The package separates `model.py`, `data.py`, `training.py`, `validation.py`,
 metrics, figures, animations, and provenance beneath their own `artifacts`
 directories.
 
+Training can jointly select the exact positive Elastic constant `K_D` and the
+positive SOI normalization gain. The SOI gain realizes
+`W_tilde = gamma**-1 W`; normalized DFI remains scale-invariant and exposes a
+separate residual. PGQENN's positive MPL-TC streams and TNE Flowpoint-signed
+negative lift are inherited through the SOInet backbone. Their source-removal
+effects are recorded rather than assumed to improve a task.
+
 ```bash
 python -m the_nothingness_effect.artificial_intelligence.multimodal.test.run_pipeline
 python -m the_nothingness_effect.artificial_intelligence.multimodal.simulation.run_pipeline

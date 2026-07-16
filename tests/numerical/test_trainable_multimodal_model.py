@@ -13,6 +13,10 @@ from the_nothingness_effect.artificial_intelligence.shared.dynamic_kd import (
     dynamic_kd_state,
     set_dynamic_kd,
 )
+from the_nothingness_effect.artificial_intelligence.shared.dynamic_soi import (
+    dynamic_soi_state,
+    set_dynamic_soi,
+)
 
 
 def test_visible_multimodal_model_has_per_sample_predictions_and_gradients():
@@ -70,6 +74,7 @@ def test_multimodal_training_validation_and_evaluation_are_finite():
     assert len(run.kd_selections) == 2
     assert len(run.kd_probes) >= 6
     assert all(item.K_D > 0.0 for item in run.history)
+    assert all(item.soi_scale > 0.0 for item in run.history)
     assert all(torch.isfinite(torch.tensor(item.validation_objective)) for item in run.history)
     assert all(torch.isfinite(torch.tensor(item.train_total_loss)) for item in run.history)
     assert 0.0 <= evaluation.metrics["accuracy"] <= 1.0
@@ -93,3 +98,26 @@ def test_dynamic_kd_updates_every_exact_elastic_source_law_atomically():
     assert selection.selected_K_D > 0.0
     assert selection.selected_objective <= selection.previous_objective + 1e-12
     assert dynamic_kd_state(model).value == selection.selected_K_D
+    assert (
+        abs(dynamic_soi_state(model).value - selection.selected_soi_scale) <= 1e-6
+    )
+
+
+def test_dynamic_soi_updates_normalized_qenn_carriers_without_changing_dfi_law():
+    torch.manual_seed(17)
+    model = TNETrainableMultimodalModel(hidden_dim=8)
+    initial = dynamic_soi_state(model)
+    assert initial.value == 1.0 and len(initial.buffer_names) >= 2
+    dataset = make_synthetic_multimodal_dataset(samples_per_class=5, seed=17)
+    before = model(dataset.validation.modalities)
+
+    updated = set_dynamic_soi(model, 1.6)
+    after = model(dataset.validation.modalities)
+
+    assert abs(updated.value - 1.6) <= 1e-6
+    assert set(updated.buffer_names) == set(initial.buffer_names)
+    assert not torch.allclose(before.readout, after.readout)
+    qenn = after.backbone_output.soinet_output.qenn_outputs[0]
+    assert (
+        float(qenn.residuals["dfi_soi_rescaling_invariance"].detach()) <= 1e-6
+    )

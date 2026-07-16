@@ -22,6 +22,12 @@ DOCS = ROOT / "docs"
 
 
 INTEGRATED_RUNTIME_EVIDENCE = {
+    "flowpoint_unity_orientation_and_integer_unfolding": (
+        "PGQENN applies the exact finite Flowpoint value involution n->-n to verified positive TC placements; the negative geometry is a separately labelled TNE bridge."
+    ),
+    "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence": (
+        "QENN evaluates the normalized carrier W_tilde=gamma^-1 W while recording the canonical DFI rescaling-invariance residual during joint K_D/SOI search."
+    ),
     "weighted_path_functional_and_norm_admissibility": (
         "QENN executes the finite Elastic-pi weighted transition norm on its declared feature-window trajectory."
     ),
@@ -143,16 +149,93 @@ def update_ai_matrix(matrix: list[dict[str, str]]) -> list[dict[str, str]]:
         else:
             integration = "blocked_source_law"
             evidence = "The underlying A-level source law remains unresolved; this is not a carrier-label conflict."
+        use_decision, hypothesis, metric, conclusion = ai_optimization_assessment(
+            row, status, integration
+        )
         result.append(
             {
                 **row,
                 "source_implementation_status": status,
                 "integration_status": integration,
                 "integration_evidence": evidence,
+                "use_decision": use_decision,
+                "optimization_hypothesis": hypothesis,
+                "optimization_metric": metric,
+                "optimization_conclusion": conclusion,
                 "carrier_conflict": "false",
             }
         )
     return result
+
+
+def ai_optimization_assessment(
+    row: dict[str, str], status: str, integration: str
+) -> tuple[str, str, str, str]:
+    """Assign a falsifiable AI use/optimization assessment to every mapping."""
+
+    text = " ".join(
+        str(row.get(field, ""))
+        for field in (
+            "module",
+            "complex_title",
+            "reusable_ai_primitive",
+            "qenn_use",
+            "pgqenn_use",
+            "soinets_use",
+        )
+    ).lower()
+    if "observation" in text or "collapse" in text:
+        hypothesis = "improve calibrated readout and reject ambiguous collapse states"
+        metric = "expected calibration error; Brier score; collapse idempotence/definiteness residual"
+    elif "quasicrystal" in text or "dtqc" in text or "parseval" in text:
+        hypothesis = "reduce spectral leakage while preserving reconstructible energy/support"
+        metric = "support leakage; Parseval residual; spectral reconstruction RMSE"
+    elif "elastic" in text or "dubler" in text or "curvature" in text:
+        hypothesis = "stabilize weighted transitions, curvature response, and relative modality/shell gain"
+        metric = "validation objective; gradient norm; Elastic-pi norm/ratio residual; source-removal delta"
+    elif "dfi" in text or "entropy" in text or "fluctuation" in text:
+        hypothesis = "reduce spiking, entropy drift, and scale-dependent instability"
+        metric = "DFI/pDFI drift; validation objective; predictive entropy; obstruction count"
+    elif "parity" in text or "2-adic" in text or "involut" in text or "flowpoint" in text:
+        hypothesis = "improve reversible transport and prevent parity/equivariance leakage"
+        metric = "involution/equivariance residual; reverse reconstruction error; source-removal delta"
+    elif "spatial" in text or "local" in text or "adjacency" in text or "shell" in text:
+        hypothesis = "improve locality-aware transport without boundary or shell leakage"
+        metric = "localization/boundary residual; message reconstruction; held-out objective"
+    elif "spectrum" in text or "fourier" in text or "memory" in text:
+        hypothesis = "improve spectral memory and cross-scale reconstruction"
+        metric = "spectral reconstruction RMSE; support leakage; transfer residual"
+    else:
+        hypothesis = "reduce the declared theorem residual in the target architecture"
+        metric = "typed contract residual; source-removal delta; held-out validation objective"
+
+    if integration in {"integrated_runtime", "integrated_shared_primitive"}:
+        return (
+            "use_now_with_ablation",
+            hypothesis,
+            metric,
+            "runtime structural effect is tested; task-level improvement must be established per dataset",
+        )
+    if status == "implemented":
+        return (
+            "evaluate_typed_candidate",
+            hypothesis,
+            metric,
+            "source contract is available, but target-specific optimization benefit is not yet measured",
+        )
+    if status == "proxy":
+        return (
+            "defer_until_source_complete",
+            hypothesis,
+            metric,
+            "related proxy code is insufficient for canonical AI enablement or an optimization claim",
+        )
+    return (
+        "blocked_until_source_law",
+        hypothesis,
+        metric,
+        "no optimization experiment is admissible until the upstream A source law is implemented",
+    )
 
 
 def build_path_manifest(master: dict[str, object]) -> dict[str, object]:
@@ -298,16 +381,17 @@ def build_reports(qa: dict[str, object]) -> None:
         + ", ".join(f"{count} `{name}`" for name, count in sorted(ai_counts.items()))
         + ".\n\n"
         "Every row now records its source theorem's current implementation status. No row carries the retired carrier-conflict classification. Typed availability does not by itself claim that every target architecture consumes the source; target-specific wiring remains explicit in the evidence column.\n\n"
+        "The owner-supplied 137-title AI outline is assessed through these mappings. Every row now includes a use decision, a falsifiable optimization hypothesis, a metric, and a conclusion. Current decisions are 23 use-now-with-ablation, 107 typed candidates, 128 deferred proxy sources, and 22 upstream source-law blocks.\n\n"
         "Canonical AI execution is CPU-testable, fail-closed for non-finite values, and uses deterministic seeds. PGQENN random sampling remains only a named ablation/comparison mode.\n\n"
-        "The executable dependency chain is DTQC -> QENN, QENN + pinned MPL-TC -> PGQENN, and QENN + PGQENN -> SOInets. QENN also composes Flowpoint projectors, normalized DFI, pDFI, exact unclipped Elastic-pi, Elastic Dubler, observation/collapse, spectral memory, Parseval, and completeness residuals.\n\n"
-        "The visible trainable multimodal package adds learned shared/private modality axes, forward/reverse transport residuals, local per-axis and global cross-axis Gaussian-Bernoulli RBMs, and bounded modality-specific prototype growth over the canonical SOInet backbone. Axis, RBM, and cluster contexts affect inference and have independent source-removal modes. RBM is an external numerical realization, not an appendix source law. The uploaded multimodal ZIP remains external design context; none of its source or artifacts was copied.\n\n"
+        "The executable dependency chain is DTQC -> QENN, QENN + pinned MPL-TC -> PGQENN, and QENN + PGQENN -> SOInets. QENN also composes Flowpoint projectors, normalized DFI, pDFI, exact unclipped Elastic-pi, Elastic Dubler, observation/collapse, spectral memory, Parseval, and completeness residuals. PGQENN consumes all four verified positive MPL-TC TC streams; its negative number spectrum is a separately labelled TNE Flowpoint lift, not an extension claimed by MPL-TC.\n\n"
+        "The visible trainable multimodal package adds learned shared/private modality axes, forward/reverse transport residuals, local per-axis and global cross-axis Gaussian-Bernoulli RBMs, and bounded modality-specific prototype growth over the canonical SOInet backbone. Axis, RBM, cluster and signed-spectrum contexts affect inference and have independent source-removal modes. Joint validation search tunes exact positive K_D and the SOI normalization carrier while verifying DFI scale invariance. RBM is an external numerical realization, not an appendix source law. The uploaded multimodal ZIP remains external design context; none of its source or artifacts was copied.\n\n"
         "QENN, PGQENN, and SOInets each own static topology, directed-connectivity, and activation/residual views plus signal-propagation, topology-growth, and recurrent-activation GIFs in both test and simulation directories. Multimodal producers additionally own axis-learning, cluster-growth, RBM bipartite, energy-landscape, and RBM-reconstruction evidence.\n",
         encoding="utf-8",
     )
     (DOCS / "tne_artifact_provenance_report.md").write_text(
         "# TNE artifact provenance report\n\n"
         f"The aggregate manifest covers all **{artifact_summary['theorem_manifests']}** implemented theorem contracts with no missing or duplicate ID. It indexes **{artifact_summary['generated_tables']}** tables, **{artifact_summary['generated_static_figures']}** static figures, **{artifact_summary['producer_local_animations']}** tracked GIF animations, **{artifact_summary['producer_local_audio_files']}** audio files, and **{artifact_summary['animation_generators']}** animation generators.\n\n"
-        f"Result files live beneath the producing module's `test/artifacts` or `simulation/artifacts` directory. Producer-local evidence contains **{artifact_summary['producer_local_manifests']}** manifests. Each multimodal mode owns nine tables, eighteen figures, ten compact GIFs, and two manifests. Large regenerable frame dumps and videos remain external. Every theorem manifest records checksum, start/result commit, seed, tolerances, residual vector, closure status, generated files, regeneration command, and the finite-evidence claim boundary.\n",
+        f"Result files live beneath the producing module's `test/artifacts` or `simulation/artifacts` directory. Producer-local evidence contains **{artifact_summary['producer_local_manifests']}** manifests. Each multimodal mode owns ten tables, twenty-three figures, twelve compact GIFs, and two manifests. PGQENN additionally records signed-spectrum 3D growth and signal propagation. Large regenerable frame dumps and videos remain external. Every theorem manifest records checksum, start/result commit, seed, tolerances, residual vector, closure status, generated files, regeneration command, and the finite-evidence claim boundary.\n",
         encoding="utf-8",
     )
     (DOCS / "tne_import_migration_report.md").write_text(

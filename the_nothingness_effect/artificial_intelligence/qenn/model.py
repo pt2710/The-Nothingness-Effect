@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 
 import torch
 from torch import nn
@@ -66,6 +67,8 @@ class QENNModel(nn.Module):
         super().__init__()
         if min(input_dim, hidden_dim, output_dim) <= 0:
             raise ValueError("QENN dimensions must be positive")
+        if not math.isfinite(soi_scale) or soi_scale <= 0.0:
+            raise ValueError("QENN SOI normalization must be finite and positive")
         self.flowpoint = FlowpointLayer()
         self.equivariant = C2EquivariantLinear(input_dim, hidden_dim)
         self.memory = SpectralMemory()
@@ -88,10 +91,17 @@ class QENNModel(nn.Module):
         require_finite_tensor(value, "QENN input")
         if value.ndim != 2 or value.shape[1] != self.equivariant.linear.in_features:
             raise ValueError("QENN input must have shape [batch, input_dim]")
-        invariant = invariant_projector(value, self.flowpoint)
-        anti = anti_invariant_projector(value, self.flowpoint)
-        dfi = normalized_dfi(value, self.soi_scale)
-        pdfi = batch_parity_conditioned_dfi(value)
+        # The appendix separates scale-invariant DFI from the normalized epoch
+        # carrier W_tilde = gamma_t**-1 W_t.  The former remains invariant;
+        # the latter is the actual feature field transported through QENN.
+        normalized_value = require_finite_tensor(
+            value / self.soi_scale, "QENN SOI-normalized carrier"
+        )
+        invariant = invariant_projector(normalized_value, self.flowpoint)
+        anti = anti_invariant_projector(normalized_value, self.flowpoint)
+        dfi = normalized_dfi(normalized_value, self.soi_scale)
+        reference_dfi = normalized_dfi(value, 1.0)
+        pdfi = batch_parity_conditioned_dfi(normalized_value)
         entropy = torch.abs(dfi) + pdfi
         elastic = self.elastic_gate(entropy)
         dubler_state = self.elastic_dubler(entropy) if self.elastic_dubler is not None else None
@@ -104,7 +114,7 @@ class QENNModel(nn.Module):
             anti * feature_precision, "QENN Elastic Dubler feature bridge"
         )
         equivariant = torch.tanh(self.equivariant(bridged_anti))
-        elastic_norm_state = elastic_pi_transition_norm(value, elastic)
+        elastic_norm_state = elastic_pi_transition_norm(normalized_value, elastic)
         gain = torch.mean(elastic / torch.pi, dim=-1, keepdim=True)
         gated = require_finite_tensor(equivariant * gain, "QENN gated state")
         dtqc_state = self.dtqc(gated, elastic_gain=gain) if self.dtqc is not None else None
@@ -125,9 +135,17 @@ class QENNModel(nn.Module):
             else torch.full_like(logits, 1.0 / logits.shape[-1])
         )
         residuals = {
-            "flowpoint_involution": self.flowpoint.involution_residual(value),
+            "flowpoint_involution": self.flowpoint.involution_residual(normalized_value),
             "c2_equivariance": self.equivariant.equivariance_residual(bridged_anti),
-            "projector_reconstruction": torch.linalg.vector_norm(invariant + anti - value),
+            "projector_reconstruction": torch.linalg.vector_norm(
+                invariant + anti - normalized_value
+            ),
+            "soi_carrier_reconstruction": torch.linalg.vector_norm(
+                self.soi_scale * normalized_value - value
+            ),
+            "dfi_soi_rescaling_invariance": torch.linalg.vector_norm(
+                dfi - reference_dfi
+            ),
             "invariant_fixed_sector": torch.linalg.vector_norm(self.flowpoint(invariant) - invariant),
             "anti_invariant_sector": torch.linalg.vector_norm(self.flowpoint(anti) + anti),
             "spectral_reconstruction": spectral_residual,
@@ -145,6 +163,8 @@ class QENNModel(nn.Module):
             **backend_metadata(),
             "architecture": "QENN",
             "soi_scale": float(self.soi_scale),
+            "soi_normalization": "W_tilde=gamma_t^-1 W_t",
+            "dfi_scale_semantics": "canonical_similarity_invariant",
             "dtqc_integration": "canonical_runtime" if dtqc_state is not None else "source_removal_ablation",
             "observation_collapse_integration": (
                 "canonical_runtime" if observation_state is not None else "source_removal_ablation"

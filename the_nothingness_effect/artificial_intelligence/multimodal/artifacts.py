@@ -65,6 +65,7 @@ def _history_arrays(run: MultimodalTrainingRun) -> dict[str, np.ndarray]:
         "local_energy": np.array([item.local_free_energy for item in run.history]),
         "global_energy": np.array([item.global_free_energy for item in run.history]),
         "K_D": np.array([item.K_D for item in run.history]),
+        "soi_scale": np.array([item.soi_scale for item in run.history]),
         "learning_rate": np.array([item.learning_rate for item in run.history]),
         "validation_objective": np.array(
             [item.validation_objective for item in run.history]
@@ -106,9 +107,13 @@ def _write_tables(
                 "validation_accuracy": item.validation_accuracy,
                 "gradient_norm": item.gradient_norm,
                 "K_D": item.K_D,
+                "soi_scale": item.soi_scale,
                 "learning_rate": item.learning_rate,
                 "validation_objective": item.validation_objective,
                 "K_D_selection_improvement": item.K_D_selection_improvement,
+                "joint_hyperparameter_improvement": (
+                    item.joint_hyperparameter_improvement
+                ),
                 **{
                     f"weight_{name}": item.modality_weights[index]
                     for index, name in enumerate(names)
@@ -165,6 +170,7 @@ def _write_tables(
             {
                 "epoch": probe.epoch,
                 "K_D": probe.K_D,
+                "soi_scale": probe.soi_scale,
                 "objective": probe.objective,
                 "cross_entropy": probe.cross_entropy,
                 "reconstruction_rmse": probe.reconstruction_rmse,
@@ -210,6 +216,26 @@ def _static_figures(
                 axis.plot(arrays["epoch"], arrays["validation_loss"], label="validation"),
                 axis.set(title="Multimodal training and validation losses", xlabel="epoch", ylabel="loss"),
                 axis.legend(),
+            ),
+        )
+    )
+    figures.append(
+        _save_plot(
+            output,
+            "dynamic_soi_trajectory.png",
+            lambda axis: (
+                axis.plot(
+                    arrays["epoch"],
+                    arrays["soi_scale"],
+                    marker="o",
+                    color="#ef5675",
+                ),
+                axis.set(
+                    title="Validation-selected SOI normalization trajectory",
+                    xlabel="epoch",
+                    ylabel="positive normalization gain γ",
+                ),
+                axis.set_yscale("log"),
             ),
         )
     )
@@ -343,7 +369,7 @@ def _static_figures(
             lambda axis: (
                 axis.bar([row["variant"] for row in ablations], [row["cross_entropy"] for row in ablations], color="#f58518"),
                 axis.tick_params(axis="x", rotation=20),
-                axis.set(title="Observation/Elastic-Dubler source removal", ylabel="held-out cross entropy"),
+                axis.set(title="Typed source-removal comparison", ylabel="held-out cross entropy"),
             ),
         )
     )
@@ -392,12 +418,57 @@ def _static_figures(
 
     figures.append(_save_plot(output, "dynamic_kd_validation_landscape.png", draw_kd_landscape))
 
+    def draw_joint_landscape(axis: Any) -> None:
+        if not valid_probes:
+            axis.text(0.5, 0.5, "No valid joint probes", ha="center", va="center")
+            return
+        scatter = axis.scatter(
+            [probe.K_D for probe in valid_probes],
+            [probe.soi_scale for probe in valid_probes],
+            c=[float(probe.objective) for probe in valid_probes],
+            cmap="viridis_r",
+            s=70,
+            edgecolors="black",
+            linewidths=0.35,
+        )
+        axis.set_xscale("log")
+        axis.set_yscale("log")
+        axis.set(
+            title="Joint K_D / SOI validation landscape",
+            xlabel="candidate K_D",
+            ylabel="candidate SOI normalization γ",
+        )
+        axis.figure.colorbar(scatter, ax=axis, label="validation objective")
+
+    figures.append(
+        _save_plot(
+            output, "dynamic_kd_soi_validation_landscape.png", draw_joint_landscape
+        )
+    )
+
     def draw_hyperparameters(axis: Any) -> None:
-        kd_scale = arrays["K_D"] / max(float(arrays["K_D"][0]), 1e-12)
+        initial_kd = (
+            run.kd_selections[0].previous_K_D
+            if run.kd_selections
+            else float(arrays["K_D"][0])
+        )
+        kd_scale = arrays["K_D"] / max(float(initial_kd), 1e-12)
+        initial_soi = (
+            run.kd_selections[0].previous_soi_scale
+            if run.kd_selections
+            else float(arrays["soi_scale"][0])
+        )
+        soi_scale = arrays["soi_scale"] / max(float(initial_soi), 1e-12)
         lr_scale = arrays["learning_rate"] / max(
             float(arrays["learning_rate"][0]), 1e-12
         )
         axis.plot(arrays["epoch"], kd_scale, marker="o", label="K_D / initial")
+        axis.plot(
+            arrays["epoch"],
+            soi_scale,
+            marker="D",
+            label="SOI γ / initial",
+        )
         axis.plot(
             arrays["epoch"], lr_scale, marker="s", label="learning rate / initial"
         )
@@ -518,6 +589,38 @@ def _animations(
             ),
         )
     )
+    animations.append(
+        _save_animation(
+            output,
+            "dynamic_kd_soi_optimization.gif",
+            frames,
+            lambda frame, axis: (
+                axis.plot(
+                    arrays["epoch"][: frame + 1],
+                    arrays["K_D"][: frame + 1]
+                    / max(float(arrays["K_D"][0]), 1e-12),
+                    color="#7a5195",
+                    marker="o",
+                    label="K_D / initial",
+                ),
+                axis.plot(
+                    arrays["epoch"][: frame + 1],
+                    arrays["soi_scale"][: frame + 1]
+                    / max(float(arrays["soi_scale"][0]), 1e-12),
+                    color="#ef5675",
+                    marker="D",
+                    label="SOI γ / initial",
+                ),
+                axis.set(
+                    title=f"Joint K_D / SOI optimization — epoch {frame}",
+                    xlabel="epoch",
+                    ylabel="relative positive scale",
+                ),
+                axis.set_yscale("log"),
+                axis.legend(),
+            ),
+        )
+    )
     tokens = evaluation.output.backbone_output.modality_tokens.detach().cpu()
     reconstruction = evaluation.output.reconstructed_fused_tokens.detach().cpu()
     sample_frames = min(tokens.shape[0], 8)
@@ -603,6 +706,16 @@ def run_multimodal_pipeline_artifacts(
             "total_probe_improvement": sum(
                 selection.improvement for selection in run.kd_selections
             ),
+        },
+        "dynamic_SOI_normalization": {
+            "enabled": True,
+            "initial": (
+                run.kd_selections[0].previous_soi_scale
+                if run.kd_selections
+                else 1.0
+            ),
+            "final": run.history[-1].soi_scale if run.history else 1.0,
+            "semantics": "W_tilde=gamma_t^-1 W_t; canonical DFI remains scale-invariant",
         },
         "adaptive_learning_rate": True,
     }

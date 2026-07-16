@@ -22,6 +22,7 @@ class PrimeEquivariantMessagePassing(nn.Module):
         graph: PrimeGraph,
         *,
         use_triadic_streams: bool = True,
+        use_signed_spectrum: bool = True,
     ) -> torch.Tensor:
         require_finite_tensor(features, "PGQENN node features")
         if features.ndim != 2 or features.shape[0] != len(graph.primes):
@@ -39,10 +40,14 @@ class PrimeEquivariantMessagePassing(nn.Module):
         prime_messages = (adjacency / degree) @ flowpoint_state
         messages = prime_messages
         if use_triadic_streams:
-            triadic = graph.triadic_growth
+            triadic = (
+                graph.signed_triadic_growth
+                if use_signed_spectrum
+                else graph.triadic_growth
+            )
             if triadic is None:
                 raise AIObstructionError(
-                    "four-stream message passing requires typed MPL-TC triadic growth"
+                    "four-stream message passing requires typed triadic growth"
                 )
             source_indices = torch.tensor(
                 triadic.source_prime_indices,
@@ -52,7 +57,19 @@ class PrimeEquivariantMessagePassing(nn.Module):
             assignment = torch.nn.functional.one_hot(
                 source_indices, num_classes=len(graph.primes)
             ).to(dtype=features.dtype)
-            triadic_features = assignment @ flowpoint_state
+            if use_signed_spectrum:
+                signs = torch.tensor(
+                    triadic.spectrum_signs,
+                    dtype=features.dtype,
+                    device=features.device,
+                ).unsqueeze(-1)
+            else:
+                signs = torch.ones(
+                    (len(triadic.source_prime_indices), 1),
+                    dtype=features.dtype,
+                    device=features.device,
+                )
+            triadic_features = signs * (assignment @ flowpoint_state)
             triadic_adjacency = triadic.spatial_adjacency.to(
                 dtype=features.dtype, device=features.device
             )
@@ -61,7 +78,7 @@ class PrimeEquivariantMessagePassing(nn.Module):
             )
             triadic_messages = (triadic_adjacency / triadic_degree) @ triadic_features
             source_count = assignment.T.sum(dim=-1, keepdim=True).clamp_min(1.0)
-            pooled = assignment.T @ triadic_messages / source_count
+            pooled = assignment.T @ (signs * triadic_messages) / source_count
             messages = 0.5 * (prime_messages + pooled)
         return torch.tanh(self.linear(messages))
 
@@ -71,8 +88,19 @@ class PrimeEquivariantMessagePassing(nn.Module):
         graph: PrimeGraph,
         *,
         use_triadic_streams: bool = True,
+        use_signed_spectrum: bool = True,
     ) -> torch.Tensor:
         return torch.linalg.vector_norm(
-            self(-features, graph, use_triadic_streams=use_triadic_streams)
-            + self(features, graph, use_triadic_streams=use_triadic_streams)
+            self(
+                -features,
+                graph,
+                use_triadic_streams=use_triadic_streams,
+                use_signed_spectrum=use_signed_spectrum,
+            )
+            + self(
+                features,
+                graph,
+                use_triadic_streams=use_triadic_streams,
+                use_signed_spectrum=use_signed_spectrum,
+            )
         )

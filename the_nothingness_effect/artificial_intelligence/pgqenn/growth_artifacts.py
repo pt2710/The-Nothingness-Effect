@@ -22,7 +22,12 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     parameter_hash,
 )
 
-from .growth_law import CanonicalPrimeGrowth, PrimeGraph, TriadicGrowthGraph
+from .growth_law import (
+    CanonicalPrimeGrowth,
+    PrimeGraph,
+    SignedTriadicGrowthGraph,
+    TriadicGrowthGraph,
+)
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
@@ -235,6 +240,93 @@ def _triadic_matrix(graph: TriadicGrowthGraph, bins: int) -> tuple[np.ndarray, n
     return counts.sum(axis=-1), counts.argmax(axis=-1)
 
 
+def _draw_signed_graph(
+    axis: Any,
+    graph: SignedTriadicGrowthGraph,
+    *,
+    visible_pairs: int,
+    title: str,
+    activation: np.ndarray | None = None,
+    azimuth: float = -58.0,
+) -> None:
+    coordinates = graph.coordinates_3d.detach().cpu().numpy()
+    adjacency = graph.spatial_adjacency.detach().cpu().numpy()
+    pair_count = min(max(1, int(visible_pairs)), graph.positive_node_count)
+    visible = tuple(range(pair_count)) + tuple(
+        range(graph.positive_node_count, graph.positive_node_count + pair_count)
+    )
+    visible_set = set(visible)
+    for source in visible:
+        for target in range(source + 1, len(graph.values)):
+            if target not in visible_set or adjacency[source, target] <= 0.0:
+                continue
+            cross = graph.spectrum_signs[source] != graph.spectrum_signs[target]
+            axis.plot(
+                coordinates[[source, target], 0],
+                coordinates[[source, target], 1],
+                coordinates[[source, target], 2],
+                color="#8e63b6" if cross else "#6f7782",
+                alpha=0.36 if cross else 0.16,
+                linewidth=1.0 if cross else 0.42,
+            )
+    for sign, marker, label in ((1, "o", "positive"), (-1, "^", "negative")):
+        indices = [index for index in visible if graph.spectrum_signs[index] == sign]
+        if activation is None:
+            colors = [_STREAM_COLORS[graph.stream_kinds[index]] for index in indices]
+        else:
+            values = np.asarray([activation[index] for index in indices], dtype=float)
+            colors = plt.cm.plasma(values / max(float(np.max(activation)), 1e-9))
+        axis.scatter(
+            coordinates[indices, 0],
+            coordinates[indices, 1],
+            coordinates[indices, 2],
+            c=colors,
+            marker=marker,
+            s=28 if sign > 0 else 34,
+            edgecolors="black",
+            linewidths=0.22,
+            alpha=0.9,
+            label=f"{label} spectrum",
+        )
+    axis.set(
+        title=title,
+        xlabel="signed number spectrum",
+        ylabel="TC stream kind",
+        zlabel="asymmetric structural depth",
+        xlim=(-1.15, 1.15),
+        ylim=(-1.25, 1.25),
+        zlim=(-1.2, 1.2),
+    )
+    axis.view_init(elev=23.0, azim=azimuth)
+
+
+def _signed_edge_rows(graph: SignedTriadicGrowthGraph) -> list[dict[str, Any]]:
+    adjacency = graph.spatial_adjacency.detach().cpu().numpy()
+    rows: list[dict[str, Any]] = []
+    for source in range(len(graph.values)):
+        for target in range(source + 1, len(graph.values)):
+            if adjacency[source, target] <= 0.0:
+                continue
+            rows.append(
+                {
+                    "source_index": source,
+                    "target_index": target,
+                    "source_value": graph.values[source],
+                    "target_value": graph.values[target],
+                    "source_spectrum": "positive"
+                    if graph.spectrum_signs[source] > 0
+                    else "negative",
+                    "target_spectrum": "positive"
+                    if graph.spectrum_signs[target] > 0
+                    else "negative",
+                    "source_stream": graph.stream_kinds[source],
+                    "target_stream": graph.stream_kinds[target],
+                    "spatial_weight": float(adjacency[source, target]),
+                }
+            )
+    return rows
+
+
 def generate_pgqenn_growth_3d_artifacts(
     output_dir: str | Path,
     *,
@@ -413,6 +505,104 @@ def generate_pgqenn_growth_3d_artifacts(
         ],
     )
 
+    signed = graph.signed_triadic_growth
+    if signed is None:
+        raise RuntimeError("canonical PGQENN graph did not expose its signed lift")
+    figure = plt.figure(figsize=(10.0, 7.2), constrained_layout=True)
+    axis = figure.add_subplot(111, projection="3d")
+    _draw_signed_graph(
+        axis,
+        signed,
+        visible_pairs=signed.positive_node_count,
+        title="PGQENN simultaneous positive/negative Flowpoint growth",
+    )
+    axis.legend(loc="upper left", fontsize=8)
+    figures.append(
+        save_figure(
+            figure, output / f"{prefix}_signed_spectrum_growth.png", dpi=180
+        )
+    )
+    plt.close(figure)
+
+    signed_adjacency = signed.spatial_adjacency.detach().cpu().numpy()
+    split = signed.positive_node_count
+    figure, axes = plt.subplots(1, 3, figsize=(14.0, 4.5), constrained_layout=True)
+    signed_blocks = (
+        (signed_adjacency[:split, :split], "positive MPL-TC block"),
+        (signed_adjacency[split:, split:], "negative TNE lift block"),
+        (signed_adjacency[:split, split:], "Flowpoint cross-spectrum bridge"),
+    )
+    for axis, (matrix, title) in zip(axes, signed_blocks, strict=True):
+        image = axis.imshow(matrix, cmap="magma", aspect="auto")
+        axis.set(title=title, xlabel="node", ylabel="node")
+        figure.colorbar(image, ax=axis, shrink=0.78)
+    figures.append(
+        save_figure(
+            figure, output / f"{prefix}_signed_spectrum_adjacency.png", dpi=175
+        )
+    )
+    plt.close(figure)
+
+    signed_coordinates = signed.coordinates_3d.detach().cpu().numpy()
+    figure, axes = plt.subplots(1, 3, figsize=(13.6, 4.4), constrained_layout=True)
+    sign_colors = np.where(np.asarray(signed.spectrum_signs) > 0, 1.0, -1.0)
+    for axis, (x_axis, y_axis, title) in zip(
+        axes,
+        (
+            (0, 1, "spectrum × stream"),
+            (0, 2, "spectrum × structural depth"),
+            (1, 2, "stream × structural depth"),
+        ),
+        strict=True,
+    ):
+        axis.scatter(
+            signed_coordinates[:, x_axis],
+            signed_coordinates[:, y_axis],
+            c=sign_colors,
+            cmap="coolwarm",
+            vmin=-1.0,
+            vmax=1.0,
+            s=22,
+            edgecolors="black",
+            linewidths=0.18,
+        )
+        axis.set(
+            title=title,
+            xlabel=signed.axis_labels[x_axis],
+            ylabel=signed.axis_labels[y_axis],
+        )
+        axis.grid(alpha=0.22)
+    figures.append(
+        save_figure(
+            figure, output / f"{prefix}_signed_spectrum_projections.png", dpi=175
+        )
+    )
+    plt.close(figure)
+
+    signed_node_table = save_csv(
+        output / f"{prefix}_signed_spectrum_nodes.csv",
+        [
+            {
+                "node_index": index,
+                "value": signed.values[index],
+                "spectrum": "positive"
+                if signed.spectrum_signs[index] > 0
+                else "negative",
+                "stream_kind": signed.stream_kinds[index],
+                "source_prime_index": signed.source_prime_indices[index],
+                "involution_partner_index": signed.involution_partner_indices[index],
+                "x_signed_spectrum": float(signed_coordinates[index, 0]),
+                "y_stream_kind": float(signed_coordinates[index, 1]),
+                "z_structural_depth": float(signed_coordinates[index, 2]),
+            }
+            for index in range(len(signed.values))
+        ],
+    )
+    signed_edge_table = save_csv(
+        output / f"{prefix}_signed_spectrum_edges.csv",
+        _signed_edge_rows(signed),
+    )
+
     growth_movie = _save_3d_movie(
         output / f"{prefix}_growth.gif",
         count,
@@ -504,14 +694,71 @@ def generate_pgqenn_growth_3d_artifacts(
             azimuth=-55.0 + 2.0 * frame,
         ),
     )
+    signed_frame_count = 24 if simulation else 18
+    signed_growth_movie = _save_3d_movie(
+        output / f"{prefix}_signed_spectrum_growth.gif",
+        signed_frame_count,
+        lambda frame, axis: _draw_signed_graph(
+            axis,
+            signed,
+            visible_pairs=int(
+                np.ceil(
+                    (frame + 1)
+                    * signed.positive_node_count
+                    / signed_frame_count
+                )
+            ),
+            title=(
+                "Simultaneous signed-spectrum growth — "
+                f"step {frame + 1}/{signed_frame_count}"
+            ),
+            azimuth=-60.0 + 1.7 * frame,
+        ),
+    )
+    signed_normalized = signed_adjacency / np.maximum(
+        signed_adjacency.sum(axis=1, keepdims=True), 1e-12
+    )
+    signed_initial = np.zeros(len(signed.values), dtype=float)
+    signed_initial[0] = 1.0
+    signed_initial[signed.involution_partner_indices[0]] = 1.0
+    signed_signal_states = [signed_initial]
+    for _ in range(13):
+        propagated = signed_normalized @ signed_signal_states[-1]
+        signed_signal_states.append(
+            0.28 * signed_signal_states[-1] + 0.72 * propagated
+        )
+    signed_signal_movie = _save_3d_movie(
+        output / f"{prefix}_signed_spectrum_signal.gif",
+        len(signed_signal_states),
+        lambda frame, axis: _draw_signed_graph(
+            axis,
+            signed,
+            visible_pairs=signed.positive_node_count,
+            activation=signed_signal_states[frame],
+            title=(
+                "Signed Flowpoint message propagation — "
+                f"step {frame + 1}/{len(signed_signal_states)}"
+            ),
+            azimuth=-56.0 + 2.0 * frame,
+        ),
+    )
     movies = [
         growth_movie,
         matrix_movie,
         signal_movie,
         triadic_growth_movie,
         triadic_signal_movie,
+        signed_growth_movie,
+        signed_signal_movie,
     ]
-    tables = [node_table, edge_table, triadic_node_table, triadic_edge_table]
+    tables = [
+        node_table,
+        edge_table,
+        triadic_node_table,
+        triadic_edge_table,
+        signed_node_table,
+        signed_edge_table,
+    ]
     parameters = {
         "architecture": "PGQENN",
         "mode": mode,
@@ -525,6 +772,12 @@ def generate_pgqenn_growth_3d_artifacts(
         "triadic_finite_limit": triadic.finite_limit,
         "triadic_module_sha256": triadic.dependency_sha256,
         "triadic_bridge_status": "experimental_finite_prefix_structural_bridge",
+        "signed_spectrum_counts": signed.spectrum_counts,
+        "signed_value_involution_residual": signed.value_involution_residual,
+        "signed_coordinate_asymmetry": signed.coordinate_asymmetry,
+        "negative_spectrum_authority": (
+            "TNE Flowpoint neural lift; MPL-TC remains positive-only"
+        ),
     }
     generated = [path.name for path in (*figures, *tables, *movies)]
     manifest = write_metadata(
@@ -542,7 +795,9 @@ def generate_pgqenn_growth_3d_artifacts(
                 "python -m the_nothingness_effect.artificial_intelligence.pgqenn."
                 f"{mode}.run_all_capabilities"
             ),
-            "source_status": "canonical_mpl_tc_prime_growth_with_3d_locality",
+            "source_status": (
+                "verified positive MPL-TC growth plus TNE Flowpoint signed lift"
+            ),
             "claim_boundary": "finite computational support; not a formal proof substitute",
         },
     )

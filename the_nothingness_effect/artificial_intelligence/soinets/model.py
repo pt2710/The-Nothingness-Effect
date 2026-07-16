@@ -40,6 +40,7 @@ class SOInetModel(nn.Module):
         qenn_count: int = 2,
         pgqenn_count: int = 2,
         K_D: float = 1.0,
+        soi_scale: float = 1.0,
         mpl_tc_repository: str | Path | None = None,
     ):
         super().__init__()
@@ -50,6 +51,7 @@ class SOInetModel(nn.Module):
             qenn_count=qenn_count,
             pgqenn_count=pgqenn_count,
             K_D=K_D,
+            soi_scale=soi_scale,
             mpl_tc_repository=mpl_tc_repository,
         )
         self.q_to_p = nn.Linear(hidden_dim, hidden_dim, bias=False)

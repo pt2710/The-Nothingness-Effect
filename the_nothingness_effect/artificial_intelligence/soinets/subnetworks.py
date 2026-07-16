@@ -21,18 +21,29 @@ class SubnetworkEnsemble(nn.Module):
         qenn_count: int = 2,
         pgqenn_count: int = 2,
         K_D: float = 1.0,
+        soi_scale: float = 1.0,
         mpl_tc_repository: str | Path | None = None,
     ):
         super().__init__()
         if qenn_count < 1 or pgqenn_count < 1:
             raise ValueError("SOInets requires at least one QENN and one PGQENN subnetwork")
-        self.qenn = nn.ModuleList(QENNModel(input_dim, hidden_dim, output_dim, K_D=K_D) for _ in range(qenn_count))
+        self.qenn = nn.ModuleList(
+            QENNModel(
+                input_dim,
+                hidden_dim,
+                output_dim,
+                K_D=K_D,
+                soi_scale=soi_scale,
+            )
+            for _ in range(qenn_count)
+        )
         self.pgqenn = nn.ModuleList(
             PGQENNModel(
                 input_dim,
                 hidden_dim,
                 output_dim,
                 K_D=K_D,
+                soi_scale=soi_scale,
                 mpl_tc_repository=mpl_tc_repository,
             )
             for _ in range(pgqenn_count)

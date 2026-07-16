@@ -1,10 +1,4 @@
-"""Compatibility shim for the recertified DFI A05--A07 source contracts.
-
-The canonical registrations live in :mod:`extended_contracts` and are included
-once through :mod:`derived_contracts`.  This module remains importable for
-callers created during the recertification work but deliberately contributes no
-second catalog registration.
-"""
+"""Canonical recertified DFI A05--A07 source-contract exports."""
 
 from __future__ import annotations
 
@@ -15,6 +9,7 @@ from .extended_contracts import (
     DFIFlowpointInterfaceInput,
     DFISimulationCertificate,
     DFISimulationInput,
+    contracts,
     decomposition_certificate,
     flowpoint_interface_certificate,
     simulation_certificate,
@@ -26,12 +21,6 @@ SOURCE_IDS = (
     "dfi_flowpoint_consistency_and_interface_inconsistency",
     "dfi_simulation_consistency_and_simulation_breakdown",
 )
-
-
-def contracts() -> tuple[()]:
-    """Return no duplicate registrations; use ``extended_contracts.contracts``."""
-
-    return ()
 
 
 __all__ = (

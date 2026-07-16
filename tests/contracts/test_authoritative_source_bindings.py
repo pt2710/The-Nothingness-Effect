@@ -22,7 +22,6 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
 )
 from tools.export_effective_theorem_matrix import export, export_provenance
 
-
 EXPECTED = {
     "appendix_canonical_self_negating_involution_flowpoint.tex": (
         "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206"
@@ -63,6 +62,10 @@ EXPECTED_PROMOTION_PATH_COUNTS = {
         "the_nothingness_effect/foundational_architecture/"
         "countable_infinity/canonical_contracts.py"
     ): 6,
+    (
+        "the_nothingness_effect/foundational_architecture/"
+        "uncountable_infinity/canonical_contracts.py"
+    ): 17,
 }
 
 
@@ -88,32 +91,24 @@ def test_every_managed_runtime_contract_uses_authoritative_digest():
 def test_foundational_binding_promotes_only_reviewed_complexes():
     statuses = release_statuses()
     rows = [
-        row
-        for row in _raw_matrix()
-        if row["appendix_file"] == FOUNDATIONAL
+        row for row in _raw_matrix() if row["appendix_file"] == FOUNDATIONAL
     ]
     foundational_contracts = [
-        contract
-        for contract in all_contracts()
-        if contract.appendix == FOUNDATIONAL
+        contract for contract in all_contracts() if contract.appendix == FOUNDATIONAL
     ]
-
     assert len(rows) == 79
-    assert len(foundational_contracts) == 30
-    assert sum(
-        statuses[row["complex_id"]] == "implemented" for row in rows
-    ) == 30
-    assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 49
+    assert len(foundational_contracts) == 47
+    assert sum(statuses[row["complex_id"]] == "implemented" for row in rows) == 47
+    assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 32
 
 
-def test_all_source_promotions_are_named_auditable_and_dependency_closed():
+def test_all_promotions_are_named_auditable_and_dependency_closed():
     overrides = implementation_status_overrides()
-    raw = _raw_matrix()
-    effective = bind_inventory_rows(raw)
+    effective = bind_inventory_rows(_raw_matrix())
     effective_by_id = {row["complex_id"]: row for row in effective}
     statuses = release_statuses()
 
-    assert len(overrides) == 47
+    assert len(overrides) == 64
     assert Counter(
         record["evidence_path"] for record in overrides.values()
     ) == EXPECTED_PROMOTION_PATH_COUNTS
@@ -128,11 +123,9 @@ def test_all_source_promotions_are_named_auditable_and_dependency_closed():
         assert statuses[identifier] == "implemented"
 
     assert PROMOTED_DFI.issubset(overrides)
-    assert sum(
-        row["implementation_status"] == "implemented" for row in effective
-    ) == 242
-    assert sum(status == "implemented" for status in statuses.values()) == 242
-    assert sum(status == "proxy" for status in statuses.values()) == 109
+    assert sum(row["implementation_status"] == "implemented" for row in effective) == 259
+    assert sum(status == "implemented" for status in statuses.values()) == 259
+    assert sum(status == "proxy" for status in statuses.values()) == 92
     assert len(dependency_downgrades()) == 0
     assert statuses["flowpoint_certified_dfi_validation_functional"] == "implemented"
     assert statuses["spatially_localized_dfi_consistency_closure"] == "implemented"
@@ -140,13 +133,12 @@ def test_all_source_promotions_are_named_auditable_and_dependency_closed():
 
 def test_effective_matrix_has_no_authoritative_source_mismatch():
     report = source_binding_report()
-
     assert report["total_rows"] == 351
     assert report["managed_appendices"] == 4
     assert report["managed_rows"] == 108
     assert report["effective_source_sha_mismatches"] == 0
-    assert report["implementation_status_overrides"] == 47
-    assert len(report["implementation_status_changes"]) == 47
+    assert report["implementation_status_overrides"] == 64
+    assert len(report["implementation_status_changes"]) == 64
     assert not report["effective_mismatches"]
 
 
@@ -159,9 +151,7 @@ def test_binding_preserves_recorded_digest_for_audit():
             "implementation_status": "proxy",
         }
     ]
-
     bound = bind_inventory_rows(rows, status_overrides={})
-
     assert bound[0]["recorded_appendix_source_sha256"] == "0" * 64
     assert bound[0]["appendix_source_sha256"] == EXPECTED[
         "appendix_the_completeness_theorem.tex"
@@ -175,19 +165,15 @@ def test_binding_preserves_recorded_digest_for_audit():
 def test_effective_matrix_export_is_machine_readable(tmp_path: Path):
     output = tmp_path / "effective.csv"
     report_output = tmp_path / "effective.json"
-
     report = export(output, report_output)
-
     with output.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     stored_report = json.loads(report_output.read_text(encoding="utf-8"))
     assert len(rows) == 351
     assert report["effective_source_sha_mismatches"] == 0
-    assert report["implementation_status_overrides"] == 47
+    assert report["implementation_status_overrides"] == 64
     assert stored_report["effective_matrix_output"] == output.as_posix()
-    assert sum(
-        row["implementation_status"] == "implemented" for row in rows
-    ) == 242
+    assert sum(row["implementation_status"] == "implemented" for row in rows) == 259
     assert all(
         row["appendix_source_sha256"] == EXPECTED[row["appendix_file"]]
         for row in rows
@@ -198,13 +184,12 @@ def test_effective_matrix_export_is_machine_readable(tmp_path: Path):
 def test_effective_provenance_uses_same_authoritative_bindings(tmp_path: Path):
     output = tmp_path / "effective-provenance.json"
     report_output = tmp_path / "effective-provenance-report.json"
-
     report = export_provenance(output, report_output)
     payload = json.loads(output.read_text(encoding="utf-8"))
     stored_report = json.loads(report_output.read_text(encoding="utf-8"))
-
     assert report["effective_source_sha_mismatches"] == 0
     assert stored_report["effective_provenance_output"] == output.as_posix()
+    assert len(payload["manifests"]) == 259
     assert all(
         item["appendix_source_sha256"] == EXPECTED[item["appendix_filename"]]
         for item in payload["manifests"]
@@ -222,11 +207,9 @@ def test_provenance_binding_preserves_recorded_digest():
             }
         ]
     }
-
     effective = bind_provenance_manifest(raw)
     report = provenance_binding_report()
     item = effective["manifests"][0]
-
     assert item["recorded_appendix_source_sha256"] == "0" * 64
     assert item["appendix_source_sha256"] == EXPECTED[
         "appendix_the_completeness_theorem.tex"

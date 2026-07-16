@@ -1,228 +1,90 @@
-"""Deterministic finite provenance witnesses for recertified source laws."""
+"""Deterministic provenance witnesses with modular Foundational extensions."""
 
 from __future__ import annotations
 
-import numpy as np
-import torch
+from ._source_samples_impl import *  # noqa: F401,F403
+from ._source_samples_impl import sample_inputs as _base_sample_inputs
 
-from the_nothingness_effect.artificial_intelligence.pgqenn.contracts import (
-    PGQENNContractInput,
-)
-from the_nothingness_effect.artificial_intelligence.pgqenn.growth_law import (
-    CanonicalPrimeGrowth,
-)
-from the_nothingness_effect.artificial_intelligence.pgqenn.source_contracts import (
-    SOURCE_IDS as PGQENN_SOURCE_IDS,
-)
-from the_nothingness_effect.artificial_intelligence.qenn.contracts import (
-    QENNContractInput,
-)
-from the_nothingness_effect.artificial_intelligence.qenn.source_contracts import (
-    SOURCE_IDS as QENN_SOURCE_IDS,
-)
-from the_nothingness_effect.artificial_intelligence.soinets.contracts import (
-    SOInetContractInput,
-)
-from the_nothingness_effect.artificial_intelligence.soinets.source_contracts import (
-    SOURCE_IDS as SOINET_SOURCE_IDS,
-)
-from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import (
-    normalized_dfi,
-)
-from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.extended_contracts import (
-    DFIDecompositionInput,
-    DFIFlowpointInterfaceInput,
-    DFISimulationInput,
-)
-from the_nothingness_effect.foundational_architecture.countable_infinity.canonical_contracts import (
-    A1 as COUNTABLE_A1,
-    A2 as COUNTABLE_A2,
-    A3 as COUNTABLE_A3,
-    B1 as COUNTABLE_B1,
-    B2 as COUNTABLE_B2,
-    C1 as COUNTABLE_C1,
-    CountableEnumerationInput,
-    CoverDynamicsInput,
-    CubicAccessibilityInput,
-    FinitaryRecurrenceInput,
-    ReflectedAddressInput,
-    SignedCubicTransductionInput,
-)
-from the_nothingness_effect.foundational_architecture.spatiality.canonical_contracts import (
-    A1 as SPATIALITY_A1,
-    A2 as SPATIALITY_A2,
-    B1 as SPATIALITY_B1,
-    B2 as SPATIALITY_B2,
-    C1 as SPATIALITY_C1,
-    OrbitClassificationInput,
-    OrbitHarmonicInput,
-    PhaseSpatialityInput,
-    SpectralReconstructionInput,
-    SquareRootLiftInput,
-)
-from the_nothingness_effect.foundational_architecture.symmetry.canonical_contracts import (
-    A1 as SYMMETRY_A1,
-    A2 as SYMMETRY_A2,
-    B1 as SYMMETRY_B1,
-    B2 as SYMMETRY_B2,
-    C1 as SYMMETRY_C1,
-    GeneratorWordInput,
-    OrbitActionInput,
-    ScheduleParityInput,
-    ScheduleTransportInput,
-    ScheduleWordFieldInput,
+from the_nothingness_effect.foundational_architecture.uncountable_infinity.canonical_contracts import (
+    A1 as UNCOUNTABLE_A1,
+    A2 as UNCOUNTABLE_A2,
+    A3 as UNCOUNTABLE_A3,
+    A4 as UNCOUNTABLE_A4,
+    A5 as UNCOUNTABLE_A5,
+    A6 as UNCOUNTABLE_A6,
+    A7 as UNCOUNTABLE_A7,
+    A8 as UNCOUNTABLE_A8,
+    A9 as UNCOUNTABLE_A9,
+    A10 as UNCOUNTABLE_A10,
+    B1 as UNCOUNTABLE_B1,
+    B2 as UNCOUNTABLE_B2,
+    B3 as UNCOUNTABLE_B3,
+    B4 as UNCOUNTABLE_B4,
+    B5 as UNCOUNTABLE_B5,
+    C1 as UNCOUNTABLE_C1,
+    C2 as UNCOUNTABLE_C2,
+    AdicRepairInput,
+    BooleanInput,
+    CoverageFieldInput,
+    CoverageInput,
+    DenseTraceInput,
+    DualRepairInput,
+    OperationalInput,
+    PowerSetInput,
+    PrefixInput,
+    SuperpositionInput,
+    TrajectoryInput,
 )
 
 
-def _qenn_sample() -> QENNContractInput:
-    axis = torch.linspace(0.0, 2.0 * torch.pi, 12)
-    signal = torch.stack(
-        (
-            torch.sin(axis),
-            torch.cos(axis),
-            torch.sin(2.0 * axis),
-            torch.cos(2.0 * axis),
-            0.5 * torch.sin(axis),
-            0.5 * torch.cos(axis),
-        ),
-        dim=-1,
-    )
-    return QENNContractInput(signal, tolerance=1e-6)
+_UNCOUNTABLE_AXES = ((1, 0, 1), (0, 1, 0), (1, 1, 0))
+_UNCOUNTABLE_PREFIX = PrefixInput((1, 0, 1, 1, 0, 1), 4)
 
 
-def _pgqenn_sample() -> PGQENNContractInput:
-    graph = CanonicalPrimeGrowth().build(9)
-    node = torch.arange(1.0, 10.0).unsqueeze(-1)
-    features = torch.cat(
-        (
-            node / 10.0,
-            torch.sin(node),
-            torch.cos(node),
-            torch.log1p(node),
-            (node % 3.0) / 3.0,
-        ),
-        dim=-1,
-    )
-    return PGQENNContractInput(graph, features, tolerance=1e-6)
-
-
-def _soinet_sample() -> SOInetContractInput:
-    axis = torch.linspace(0.0, 2.0 * torch.pi, 8)
-    base = torch.stack(
-        (
-            1.2 + torch.sin(axis),
-            1.2 + torch.cos(axis),
-            1.2 + torch.sin(2.0 * axis),
-            1.2 + torch.cos(2.0 * axis),
-        ),
-        dim=-1,
-    )
-    modalities = torch.stack((base, 1.05 * base, torch.roll(base, 1, 0)))
-    return SOInetContractInput(modalities, tolerance=1e-6)
-
-
-def _dfi_samples() -> dict[str, object]:
-    values = np.asarray(
-        (
-            (1.0, 2.0, 4.0),
-            (2.0, 3.0, 5.0),
-            (3.0, 5.0, 8.0),
-        ),
-        dtype=float,
-    )
-    components = np.asarray(
-        normalized_dfi(values, spectrum_scale=1.0).normalized_entropy,
-        dtype=float,
-    )
+def _uncountable_samples() -> dict[str, object]:
     return {
-        "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": (
-            DFIDecompositionInput(
-                data=values,
-                spectrum_scale=1.0,
-                feature_permutation=(0, 1, 2),
-                tolerance=1e-10,
-            )
+        str(UNCOUNTABLE_A1): TrajectoryInput((1, 0, 1, 1, 0, 1, 0, 1, 1)),
+        str(UNCOUNTABLE_A2): PowerSetInput((0, 1, 0, 1, 1, 0)),
+        str(UNCOUNTABLE_A3): DenseTraceInput(
+            (1.25, -0.5, 2.0), (1, 0, 1, 0, 1)
         ),
-        "dfi_flowpoint_consistency_and_interface_inconsistency": (
-            DFIFlowpointInterfaceInput(
-                data=values,
-                spectrum_scale=1.0,
-                feature_involution=np.eye(values.shape[1]),
-                tolerance=1e-10,
-            )
+        str(UNCOUNTABLE_A4): _UNCOUNTABLE_PREFIX,
+        str(UNCOUNTABLE_A5): _UNCOUNTABLE_PREFIX,
+        str(UNCOUNTABLE_A6): _UNCOUNTABLE_PREFIX,
+        str(UNCOUNTABLE_A7): BooleanInput((1, 0, 1, 0), (0, 1, 1, 0)),
+        str(UNCOUNTABLE_A8): OperationalInput(
+            (1, 0, 1, 1), 2, ((1, 0),), (1,)
         ),
-        "dfi_simulation_consistency_and_simulation_breakdown": (
-            DFISimulationInput(
-                data=values,
-                spectrum_scale=1.0,
-                simulated_normalized_entropy=components,
-                tolerance=1e-10,
-            )
+        str(UNCOUNTABLE_A9): CoverageInput(
+            (1, -2, 0), _UNCOUNTABLE_AXES, (0.0, 0.0, 0.0)
         ),
-    }
-
-
-def _symmetry_samples() -> dict[str, object]:
-    tape = (1, 0, 1, 1)
-    state = np.asarray((1.0, -2.0, 0.5), dtype=float)
-    identity = np.eye(state.size)
-    return {
-        str(SYMMETRY_A1): ScheduleParityInput(tape, state),
-        str(SYMMETRY_A2): OrbitActionInput(state),
-        str(SYMMETRY_B1): ScheduleTransportInput(tape, state, 0, 2),
-        str(SYMMETRY_B2): GeneratorWordInput(state, (1, 0, 0), identity),
-        str(SYMMETRY_C1): ScheduleWordFieldInput(tape, state, identity),
-    }
-
-
-def _spatiality_samples() -> dict[str, object]:
-    point = 1.0 + 2.0j
-    order = 5
-    indices = np.arange(order)
-    samples = (
-        np.exp(2j * np.pi * indices / order)
-        + 0.2 * np.exp(4j * np.pi * indices / order)
-    )
-    return {
-        str(SPATIALITY_A1): OrbitClassificationInput(point, order),
-        str(SPATIALITY_A2): PhaseSpatialityInput(point, 0.7),
-        str(SPATIALITY_B1): SquareRootLiftInput(point, order),
-        str(SPATIALITY_B2): OrbitHarmonicInput(samples),
-        str(SPATIALITY_C1): SpectralReconstructionInput(samples),
-    }
-
-
-def _countable_samples() -> dict[str, object]:
-    base = (0, 0, 0)
-    return {
-        str(COUNTABLE_A1): CountableEnumerationInput(7, (0, 5, 2)),
-        str(COUNTABLE_A2): CubicAccessibilityInput(
-            base,
-            (0, 2, 1, 2),
-            (0.2, 0.3, 0.5),
+        str(UNCOUNTABLE_A10): DualRepairInput((0, 1, 3, -1)),
+        str(UNCOUNTABLE_B1): SuperpositionInput(
+            (1, 0, 1, 1, 0), (0, 1, 1, 0, 1)
         ),
-        str(COUNTABLE_A3): FinitaryRecurrenceInput(1, 4, 8),
-        str(COUNTABLE_B1): SignedCubicTransductionInput(base, (3, 1, 5)),
-        str(COUNTABLE_B2): CoverDynamicsInput(base, 0, (1, 1, 1), 3),
-        str(COUNTABLE_C1): ReflectedAddressInput(base, (0, 4, 5)),
+        str(UNCOUNTABLE_B2): _UNCOUNTABLE_PREFIX,
+        str(UNCOUNTABLE_B3): _UNCOUNTABLE_PREFIX,
+        str(UNCOUNTABLE_B4): OperationalInput(
+            (1, 1, 0, 1), 2, ((0, 0),), (1,)
+        ),
+        str(UNCOUNTABLE_B5): AdicRepairInput(
+            (1, -2, 0),
+            ((1, 0, 1), (0, 1, 0), (1, 1, 1)),
+            (0, 1, 3, -1),
+        ),
+        str(UNCOUNTABLE_C1): PrefixInput((1, 0, 1, 1, 0, 1, 1, 0), 5),
+        str(UNCOUNTABLE_C2): CoverageFieldInput(
+            (1, -2, 0),
+            _UNCOUNTABLE_AXES,
+            3,
+            ((0, 0, 0),),
+            (1,),
+        ),
     }
 
 
 def sample_inputs() -> dict[str, object]:
-    """Return one deterministic typed witness for every promoted contract."""
-
-    qenn = _qenn_sample()
-    pgqenn = _pgqenn_sample()
-    soinets = _soinet_sample()
-    result = {
-        **{str(identifier): qenn for identifier in QENN_SOURCE_IDS},
-        **{str(identifier): pgqenn for identifier in PGQENN_SOURCE_IDS},
-        **{str(identifier): soinets for identifier in SOINET_SOURCE_IDS},
-        **_dfi_samples(),
-        **_symmetry_samples(),
-        **_spatiality_samples(),
-        **_countable_samples(),
-    }
-    if len(result) != 47:
-        raise RuntimeError(f"expected 47 recertified samples, found {len(result)}")
+    result = {**_base_sample_inputs(), **_uncountable_samples()}
+    if len(result) != 64:
+        raise RuntimeError(f"expected 64 recertified samples, found {len(result)}")
     return result

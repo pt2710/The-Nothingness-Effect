@@ -22,9 +22,14 @@ def _contract():
 
 
 def test_spectrum_dfi_uses_exact_normalized_baseline_scaling():
+    contract = _contract()
+    assert contract.implementation_path.endswith(
+        "the_spectrum_of_infinities/authoritative_dfi.py"
+    )
+
     omega = 6.0
     multipliers = np.asarray((1.0, 2.0, 4.0))
-    evaluation = evaluate_contract(_contract(), DFIInput(multipliers, omega))
+    evaluation = evaluate_contract(contract, DFIInput(multipliers, omega))
     output = evaluation.output
 
     baseline = omega / multipliers.size

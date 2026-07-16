@@ -686,6 +686,7 @@ def run_multimodal_pipeline_artifacts(
     figures.extend(network["figures"])
     movies.extend(network["animations"])
     generated = [path.name for path in (*tables, *figures, *movies)]
+    generated.extend(path.name for path in network.get("extra_manifests", ()))
     generated.append(network["manifest"].name)
     parameters = {
         "architecture": "TNE Trainable Multimodal SOInet",

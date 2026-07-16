@@ -23,8 +23,8 @@ def test_each_ai_architecture_generates_network_topology_and_animations(
         simulation=False,
     )
 
-    expected_figures = 12 if architecture == "pgqenn" else 3
-    expected_animations = 10 if architecture == "pgqenn" else 3
+    expected_figures = 12
+    expected_animations = 10
     assert len(result["figures"]) == expected_figures
     assert len(result["animations"]) == expected_animations
     assert result["table"].is_file()
@@ -34,8 +34,11 @@ def test_each_ai_architecture_generates_network_topology_and_animations(
             assert image.n_frames >= 10
     manifest = json.loads(result["manifest"].read_text(encoding="utf-8"))
     assert manifest["artifact_family"] == "network_topology_and_activation"
-    expected_generated = 30 if architecture == "pgqenn" else 7
+    expected_generated = 30 if architecture == "pgqenn" else 28
     assert len(manifest["generated_files"]) == expected_generated
+    assert result["spatial_growth"] is not None
+    assert any("signed_spectrum_growth" in path.name for path in result["figures"])
+    assert any("signed_spectrum_growth" in path.name for path in result["animations"])
     if architecture == "pgqenn":
         assert result["spatial_growth"]["graph"].triadic_growth.stream_counts
         assert any("triadic_stream_matrix" in path.name for path in result["figures"])
@@ -45,3 +48,5 @@ def test_each_ai_architecture_generates_network_topology_and_animations(
         signed = result["spatial_growth"]["graph"].signed_triadic_growth
         assert signed.value_involution_residual == 0.0
         assert signed.coordinate_asymmetry > 0.0
+    else:
+        assert result["spatial_growth"]["partner_involution_residual"] == 0

@@ -16,6 +16,9 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     git_commit,
     parameter_hash,
 )
+from the_nothingness_effect.artificial_intelligence.shared.spatial_state_artifacts import (
+    generate_spatial_state_artifacts,
+)
 
 from .evaluation import MultimodalEvaluation
 from .model import TNETrainableMultimodalModel
@@ -335,6 +338,14 @@ def generate_multimodal_network_artifacts(
         )
     )
 
+    spatial_growth = generate_spatial_state_artifacts(
+        "multimodal", output, seed=seed, simulation=simulation
+    )
+    tables.extend(spatial_growth["tables"])
+    figures.extend(spatial_growth["figures"])
+    movies.extend(spatial_growth["animations"])
+    extra_manifests = [spatial_growth["manifest"]]
+
     parameters = {
         "architecture": "TNE Trainable Multimodal SOInet",
         "mode": mode, "seed": seed, "modalities": list(names),
@@ -342,8 +353,10 @@ def generate_multimodal_network_artifacts(
         "active_clusters": state.cluster_state.active_clusters,
         "local_rbm": [model.local_energy.visible_dim, model.local_energy.hidden_dim],
         "global_rbm": [model.global_energy.visible_dim, model.global_energy.hidden_dim],
+        "executable_3d_growth": True,
+        "architecture_specific_3d_semantics": True,
     }
-    generated = [path.name for path in (*tables, *figures, *movies)]
+    generated = [path.name for path in (*tables, *figures, *movies, *extra_manifests)]
     manifest = write_metadata(
         output / f"{prefix}_manifest.json",
         {
@@ -363,4 +376,11 @@ def generate_multimodal_network_artifacts(
             "rbm_source_status": "external_numerical_realization_not_tne_source_law",
         },
     )
-    return {"tables": tables, "figures": figures, "animations": movies, "manifest": manifest}
+    return {
+        "tables": tables,
+        "figures": figures,
+        "animations": movies,
+        "extra_manifests": extra_manifests,
+        "spatial_growth": spatial_growth,
+        "manifest": manifest,
+    }

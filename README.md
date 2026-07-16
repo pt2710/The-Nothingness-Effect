@@ -36,6 +36,11 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
 - PGQENN combines the pinned positive MPL-TC streams with an explicitly
   TNE-derived negative Flowpoint lift; the multimodal trainer performs joint
   deterministic search over positive `K_D` and the SOI carrier scale.
+- QENN, PGQENN, SOInets, and multimodal each generate producer-local static
+  figures and animated GIFs for 3D growth, matrix occupancy, axis projections,
+  source-stream evolution, signed-state coupling, and signal propagation. The
+  axis/stream labels remain architecture-specific; only PGQENN labels streams
+  as MPL-TC.
 - `fields_of_physics_in_dev/the_nothingness_effect.py` is the argument-correct central facade; explicit
   compatibility wrappers retain bounded legacy behavior.
 - `tests/contracts`, `tests/invariants`, `tests/boundaries`,

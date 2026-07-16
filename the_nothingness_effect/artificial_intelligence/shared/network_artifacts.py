@@ -304,10 +304,23 @@ def generate_architecture_network_artifacts(
         movies.extend(spatial_growth["animations"])
         extra_tables.extend(spatial_growth["tables"])
         extra_manifests.append(spatial_growth["manifest"])
+    else:
+        from the_nothingness_effect.artificial_intelligence.shared.spatial_state_artifacts import (
+            generate_spatial_state_artifacts,
+        )
+
+        spatial_growth = generate_spatial_state_artifacts(
+            architecture, output, seed=seed, simulation=simulation
+        )
+        figures.extend(spatial_growth["figures"])
+        movies.extend(spatial_growth["animations"])
+        extra_tables.extend(spatial_growth["tables"])
+        extra_manifests.append(spatial_growth["manifest"])
     parameters = {
         "architecture": architecture, "mode": mode, "seed": seed,
         "node_count": len(spec.nodes), "edge_count": len(spec.edges),
-        "executable_3d_growth": architecture == "pgqenn",
+        "executable_3d_growth": True,
+        "architecture_specific_3d_semantics": True,
     }
     generated = [
         path.name

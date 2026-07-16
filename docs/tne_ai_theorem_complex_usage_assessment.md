@@ -64,6 +64,12 @@ finite result alone is not improvement.
 - Producer-local CSV, PNG and GIF evidence records joint hyperparameter probes,
   signed-spectrum topology, asymmetric adjacency, signal propagation and
   source-removal comparisons.
+- QENN, PGQENN, SOInets and multimodal all expose the same artifact categories:
+  3D growth, matrix occupancy, axis projections, locality adjacency,
+  four-source growth/matrix, signed-state growth/adjacency/projections and the
+  corresponding growth/signal animations. Labels and source authority differ
+  by architecture; the shared visual grammar does not make every model an
+  MPL-TC model.
 
 ## Observed deterministic probe results
 

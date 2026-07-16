@@ -59,17 +59,17 @@
   "artifact_summary": {
     "animation_generators": 33,
     "deterministic_seed": 0,
-    "generated_static_figures": 279,
-    "generated_tables": 253,
-    "producer_local_animations": 95,
+    "generated_static_figures": 333,
+    "generated_tables": 277,
+    "producer_local_animations": 137,
     "producer_local_audio_files": 20,
-    "producer_local_manifests": 196,
+    "producer_local_manifests": 202,
     "theorem_manifests": 173
   },
   "changes": {
     "modified_files": 2113,
-    "new_files": 4985,
-    "total_changed_files": 7098
+    "new_files": 5112,
+    "total_changed_files": 7225
   },
   "claim_boundary": "finite computational support; not a formal proof substitute",
   "default_branch": "main",
@@ -88,7 +88,7 @@
   },
   "python_version": "3.14.3",
   "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
-  "repository_result_commit": "b9abd8df2d6063163e99fa82b7cb9618bea3fd77",
+  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
   "repository_revision_plan": {
     "reviewed_partial_alternative": 27,
     "reviewed_present": 9,
@@ -103,7 +103,7 @@
   "tests": {
     "failed": 0,
     "passed": 820,
-    "runtime_seconds": 528.09,
+    "runtime_seconds": 617.17,
     "skipped": 0,
     "warnings": 8
   },

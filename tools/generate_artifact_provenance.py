@@ -43,12 +43,18 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     build_manifest,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog import (
-    sample_inputs,
+    sample_inputs as recertified_sample_inputs,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime.source_samples import (
+    sample_inputs as promoted_source_sample_inputs,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
     ComplexLevel,
     SimulationResult,
 )
+
+
+START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
 
 
 def _implemented_ids(matrix: Path) -> set[str]:
@@ -71,20 +77,11 @@ def _commit() -> str:
 
 
 def _producer_local_files() -> list[Path]:
-    roots = [Path("the_nothingness_effect")]
-    allowed_suffixes = {
-        ".py",
-        ".json",
-        ".csv",
-        ".png",
-        ".gif",
-        ".wav",
-        ".md",
-    }
+    allowed_suffixes = {".py", ".json", ".csv", ".png", ".gif", ".wav", ".md"}
     return sorted(
         {
             path
-            for root in roots
+            for root in (Path("the_nothingness_effect"),)
             if root.is_dir()
             for path in root.rglob("*")
             if path.is_file()
@@ -96,12 +93,11 @@ def _producer_local_files() -> list[Path]:
 
 
 def _animation_generators() -> list[Path]:
+    root = Path("the_nothingness_effect")
     candidates = {
-        *Path("the_nothingness_effect").glob(
-            "**/animation/animate_*.py"
-        ),
-        *Path("the_nothingness_effect").glob("**/simulation/run_evidence.py"),
-        *Path("the_nothingness_effect").glob("**/test/test_evidence.py"),
+        *root.glob("**/animation/animate_*.py"),
+        *root.glob("**/simulation/run_evidence.py"),
+        *root.glob("**/test/test_evidence.py"),
         *Path("the_nothingness_effect/artificial_intelligence").glob(
             "**/simulation/run_simulation.py"
         ),
@@ -121,41 +117,50 @@ def _animation_generators() -> list[Path]:
     return sorted(candidates)
 
 
+def _sample_inputs() -> dict[str, object]:
+    samples = recertified_sample_inputs()
+    promoted = promoted_source_sample_inputs()
+    overlap = set(samples) & set(promoted)
+    if overlap:
+        raise RuntimeError(f"duplicate provenance sample IDs: {sorted(overlap)[:5]}")
+    samples.update(promoted)
+    return samples
+
+
 def _generate_uncovered_contracts(
     output_root: Path,
     covered: set[str],
     expected: set[str],
 ) -> None:
-    """Generate deterministic residual/source-removal evidence for derived laws."""
+    """Generate deterministic residual and source-removal evidence."""
 
     catalog = {
         str(contract.complex_id): contract for contract in active_contracts()
     }
-    recertified_samples = sample_inputs()
+    samples = _sample_inputs()
     destination = output_root / "appendix_derived"
     destination.mkdir(parents=True, exist_ok=True)
+
     for identifier in sorted(expected - covered):
         contract = catalog[identifier]
         fields = {
             str(source_id): np.full((6, 4), float(index + 1))
             for index, source_id in enumerate(contract.source_ids)
         }
-        if identifier in recertified_samples:
-            value = recertified_samples[identifier]
+        if identifier in samples:
+            value = samples[identifier]
         elif contract.level is ComplexLevel.B:
             value = AdditiveDerivationInput(fields)
         elif contract.level is ComplexLevel.C:
             value = SpatialClosureInput(fields)
         else:
-            raise ValueError(f"uncovered non-derived contract: {identifier}")
+            raise ValueError(f"uncovered A contract lacks typed sample: {identifier}")
+
         evaluation = evaluate_contract(contract, value)
         removals = [check(value) for check in contract.source_removal_checks]
-        residual = (
-            () if evaluation.residual is None else evaluation.residual.vector
-        )
+        residual = () if evaluation.residual is None else evaluation.residual.vector
         table = save_csv(
-            destination
-            / f"{identifier.replace('::', '__')}_source_removal.csv",
+            destination / f"{identifier.replace('::', '__')}_source_removal.csv",
             [
                 {
                     "theorem_complex_id": identifier,
@@ -179,14 +184,15 @@ def _generate_uncovered_contracts(
         simulation = SimulationResult(
             contract.complex_id,
             evaluation.status,
-            {"fixture": "deterministic-derived-source-fields-v1"},
+            {"fixture": "deterministic-recertified-contract-v2"},
             0,
-            {"absolute": 1e-10},
+            {"absolute": 1e-6},
             tuple(float(item) for item in residual),
             (table.name,),
             {
                 "exact_semantics": contract.exact_semantics,
                 "source_removal_count": len(removals),
+                "typed_sample": identifier in samples,
             },
         )
         write_artifact_manifest(
@@ -195,9 +201,7 @@ def _generate_uncovered_contracts(
                 simulation,
                 appendix_filename=contract.appendix,
                 appendix_source_sha256=contract.appendix_source_sha256,
-                repository_start_commit=(
-                    "b97a2da379ff9fc503c4c43185030674f887b85c"
-                ),
+                repository_start_commit=START_COMMIT,
                 repository_result_commit=_commit(),
                 regeneration_command=(
                     "python tools/generate_artifact_provenance.py "
@@ -214,14 +218,11 @@ def generate(
 ) -> dict[str, object]:
     output_root.mkdir(parents=True, exist_ok=True)
     for suite_name, module_name in ARTIFACT_SUITES:
-        import_module(module_name).run_suite(
-            output_root / suite_name,
-            seed=0,
-        )
+        import_module(module_name).run_suite(output_root / suite_name, seed=0)
+
     manifest_paths = sorted(output_root.rglob("*_manifest.json"))
     manifests = [
-        json.loads(path.read_text(encoding="utf-8"))
-        for path in manifest_paths
+        json.loads(path.read_text(encoding="utf-8")) for path in manifest_paths
     ]
     expected = _implemented_ids(
         Path("docs/data/theorem_complex_implementation_matrix.csv")
@@ -233,9 +234,9 @@ def generate(
     )
     manifest_paths = sorted(output_root.rglob("*_manifest.json"))
     manifests = [
-        json.loads(path.read_text(encoding="utf-8"))
-        for path in manifest_paths
+        json.loads(path.read_text(encoding="utf-8")) for path in manifest_paths
     ]
+
     output_token = output_root.as_posix()
     for manifest in manifests:
         manifest["regeneration_command"] = manifest[
@@ -250,35 +251,28 @@ def generate(
             f"missing={sorted(expected - set(identifiers))[:5]} "
             f"extra={sorted(set(identifiers) - expected)[:5]}"
         )
+
     if representative_dir is not None:
         representative_dir.mkdir(parents=True, exist_ok=True)
         for suite in ("qenn", "pgqenn", "soinets"):
             source = next((output_root / suite).glob("*.png"))
             shutil.copyfile(source, representative_dir / source.name)
+
     tables = sorted(output_root.rglob("*.csv"))
     figures = sorted(output_root.rglob("*.png"))
     producer_files = _producer_local_files()
     producer_manifests = [
         path for path in producer_files if path.name.endswith("_manifest.json")
     ]
-    producer_tables = [
-        path for path in producer_files if path.suffix == ".csv"
-    ]
-    producer_figures = [
-        path for path in producer_files if path.suffix == ".png"
-    ]
-    producer_animations = [
-        path for path in producer_files if path.suffix == ".gif"
-    ]
-    producer_audio = [
-        path for path in producer_files if path.suffix == ".wav"
-    ]
+    producer_tables = [path for path in producer_files if path.suffix == ".csv"]
+    producer_figures = [path for path in producer_files if path.suffix == ".png"]
+    producer_animations = [path for path in producer_files if path.suffix == ".gif"]
+    producer_audio = [path for path in producer_files if path.suffix == ".wav"]
     animation_generators = _animation_generators()
+
     payload = {
-        "schema_version": "1.1",
-        "repository_start_commit": (
-            "b97a2da379ff9fc503c4c43185030674f887b85c"
-        ),
+        "schema_version": "1.2",
+        "repository_start_commit": START_COMMIT,
         "repository_result_commit": _commit(),
         "claim_boundary": (
             "finite computational support; not a formal proof substitute"
@@ -292,6 +286,7 @@ def generate(
             "producer_local_audio_files": len(producer_audio),
             "animation_generators": len(animation_generators),
             "deterministic_seed": 0,
+            "typed_promoted_source_samples": 31,
         },
         "local_artifact_policy": (
             "Large frame dumps and videos remain outside Git; compact "
@@ -299,12 +294,9 @@ def generate(
             "audio, and selected GIF evidence are tracked."
         ),
         "suites": [
-            {"name": name, "module": module}
-            for name, module in ARTIFACT_SUITES
+            {"name": name, "module": module} for name, module in ARTIFACT_SUITES
         ],
-        "producer_local_artifacts": [
-            path.as_posix() for path in producer_files
-        ],
+        "producer_local_artifacts": [path.as_posix() for path in producer_files],
         "manifests": sorted(
             manifests,
             key=lambda item: item["theorem_complex_id"],

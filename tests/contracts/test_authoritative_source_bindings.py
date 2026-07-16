@@ -46,8 +46,9 @@ EXPECTED_PROMOTION_PATH_COUNTS = {
     "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py": 6,
     "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py": 17,
     "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py": 16,
-    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py": 15,
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py": 14,
     "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_dfi.py": 1,
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_finitization.py": 1,
 }
 EXPECTED_OVERRIDE_COUNT = sum(EXPECTED_PROMOTION_PATH_COUNTS.values())
 EXPECTED_IMPLEMENTED = BASE_IMPLEMENTED + EXPECTED_OVERRIDE_COUNT

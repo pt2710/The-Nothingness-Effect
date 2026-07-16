@@ -5,7 +5,6 @@ modules never depend on repository-only tooling. Release activation is
 fail-closed: an inventory row requested as ``implemented`` is active only when
 all of its declared source contracts are active as well.
 """
-
 from __future__ import annotations
 
 import csv
@@ -24,6 +23,7 @@ CONTRACT_MODULES = (
     ("the_nothingness_effect.foundational_architecture.symmetry.derived_contracts", "contracts"),
     ("the_nothingness_effect.foundational_architecture.spatiality.derived_contracts", "contracts"),
     ("the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.contracts", "contracts"),
+    ("the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dependency_sources", "contracts"),
     ("the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.derived_contracts", "contracts"),
     ("the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts", "contracts"),
     ("the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts", "contracts"),
@@ -39,10 +39,13 @@ CONTRACT_MODULES = (
     ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.derived_contracts", "contracts"),
     ("the_nothingness_effect.the_completeness_theorem.contracts", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.qenn.contracts", "contracts"),
+    ("the_nothingness_effect.artificial_intelligence.qenn.dependency_sources", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.qenn.derived_contracts", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.pgqenn.contracts", "contracts"),
+    ("the_nothingness_effect.artificial_intelligence.pgqenn.dependency_sources", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.pgqenn.derived_contracts", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.soinets.contracts", "contracts"),
+    ("the_nothingness_effect.artificial_intelligence.soinets.dependency_sources", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.soinets.derived_contracts", "contracts"),
 )
 
@@ -76,7 +79,6 @@ def release_statuses(matrix_path: str | Path | None = None) -> dict[str, str]:
     This prevents a partially closed dependency graph from being advertised as
     a completed theorem-complex implementation.
     """
-
     rows = _matrix_rows(matrix_path)
     requested = {
         row["complex_id"]
@@ -117,7 +119,6 @@ def release_statuses(matrix_path: str | Path | None = None) -> dict[str, str]:
 
 def dependency_downgrades(matrix_path: str | Path | None = None) -> tuple[dict[str, object], ...]:
     """Describe every requested implementation removed by dependency closure."""
-
     rows = _matrix_rows(matrix_path)
     statuses = release_statuses(matrix_path)
     catalog = {str(contract.complex_id): contract for contract in all_contracts()}
@@ -151,7 +152,6 @@ def active_contracts(matrix_path: str | Path | None = None) -> tuple[ComplexCont
     :func:`release_active_contracts`, which additionally enforces recursive
     dependency closure.
     """
-
     rows = _matrix_rows(matrix_path)
     active_ids = {
         row["complex_id"]
@@ -169,7 +169,6 @@ def release_active_contracts(
     matrix_path: str | Path | None = None,
 ) -> tuple[ComplexContract, ...]:
     """Return only implementations whose complete source graph is release-active."""
-
     statuses = release_statuses(matrix_path)
     active_ids = {
         identifier for identifier, status in statuses.items() if status == "implemented"

@@ -98,24 +98,27 @@ def _dfi_samples() -> dict[str, object]:
     )
     return {
         "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": (
-            DFIDecompositionInput(values, (0, 1, 2), 1.0, 1e-10)
+            DFIDecompositionInput(
+                data=values,
+                spectrum_scale=1.0,
+                feature_permutation=(0, 1, 2),
+                tolerance=1e-10,
+            )
         ),
         "dfi_flowpoint_consistency_and_interface_inconsistency": (
             DFIFlowpointInterfaceInput(
-                values,
-                np.eye(values.shape[1]),
-                np.ones_like(components),
-                1.0,
-                1e-10,
+                data=values,
+                spectrum_scale=1.0,
+                feature_involution=np.eye(values.shape[1]),
+                tolerance=1e-10,
             )
         ),
         "dfi_simulation_consistency_and_simulation_breakdown": (
             DFISimulationInput(
-                values,
-                components,
-                float(np.sum(components)),
-                1.0,
-                1e-10,
+                data=values,
+                spectrum_scale=1.0,
+                simulated_normalized_entropy=components,
+                tolerance=1e-10,
             )
         ),
     }

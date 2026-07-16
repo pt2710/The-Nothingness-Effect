@@ -65,6 +65,11 @@ def _expand(value: torch.Tensor, modalities: torch.Tensor) -> torch.Tensor:
         return value.reshape(1, 1, -1).expand_as(modalities)
     if value.ndim == 2 and value.shape == modalities.shape[:2]:
         return value.unsqueeze(-1).expand_as(modalities)
+    if value.ndim == 2 and value.shape == (
+        modalities.shape[0],
+        modalities.shape[-1],
+    ):
+        return value.unsqueeze(1).expand_as(modalities)
     return value.expand_as(modalities)
 
 
@@ -103,13 +108,13 @@ def source_operator(index: int, value: SOInetContractInput) -> SOInetSourceLaw:
         modality_count = modalities.shape[0]
         total = modalities.sum(dim=0, keepdim=True)
         leave_one_out = (total - modalities) / float(modality_count - 1)
-        residual = (modalities - leave_one_out).abs()
         response = leave_one_out
+        residual = (modalities - leave_one_out).abs()
         failure = "cross-domain generalization failure or collapse outside the source domain"
     elif index == 2:
         entropy = _entropy(modalities)
         minimum = entropy.amin(dim=1, keepdim=True)
-        catastrophe = torch.relu(minimum - entropy) + torch.relu(eps - entropy)
+        catastrophe = torch.relu(entropy - minimum) + torch.relu(eps - entropy)
         response = _expand(entropy, modalities)
         residual = _expand(catastrophe, modalities)
         failure = "entropic catastrophe, undefined probability mass, or failed entropy minimization"
@@ -186,15 +191,15 @@ def source_operator(index: int, value: SOInetContractInput) -> SOInetSourceLaw:
     elif index == 8:
         normalized = _normalized(modalities, dim=-1)
         invariant = normalized.mean(dim=0, keepdim=True)
-        residual = (normalized - invariant).abs()
         response = invariant.expand_as(modalities)
+        residual = (normalized - invariant).abs()
         failure = "modality-dependent representation blocks universal adaptation"
     elif index == 9:
         modality_count = modalities.shape[0]
         total = modalities.sum(dim=0, keepdim=True)
         clone = (total - modalities) / float(modality_count - 1)
-        residual = (modalities - clone).abs()
         response = clone
+        residual = (modalities - clone).abs()
         failure = "universal cloning reconstruction fails on a held-out modality"
     elif index == 10:
         flattened = modalities.reshape(-1, modalities.shape[-1])

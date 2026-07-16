@@ -1,0 +1,47 @@
+{
+  "architecture": "TNE Trainable Multimodal SOInet",
+  "artifact_family": "axes_energy_clusters_and_network",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "generated_files": [
+    "multimodal_test_network_cluster_growth.csv",
+    "multimodal_test_network_cluster_state.csv",
+    "multimodal_test_network_topology.png",
+    "multimodal_test_network_axes_and_clusters.png",
+    "multimodal_test_network_axis_transport.png",
+    "multimodal_test_network_rbm_bipartite.png",
+    "multimodal_test_network_cluster_topology.png",
+    "multimodal_test_network_energy_landscape.png",
+    "multimodal_test_network_topology_activation.gif",
+    "multimodal_test_network_topology_growth.gif",
+    "multimodal_test_network_axis_learning.gif",
+    "multimodal_test_network_cluster_growth.gif",
+    "multimodal_test_network_rbm_reconstruction.gif"
+  ],
+  "parameter_hash": "b7f8cf51c24fe655732aa51e8ae4d2f33d86abd09788f302ddf1132160a33e4d",
+  "parameters": {
+    "active_clusters": 22,
+    "architecture": "TNE Trainable Multimodal SOInet",
+    "axis_dim": 12,
+    "global_rbm": [
+      18,
+      12
+    ],
+    "local_rbm": [
+      12,
+      6
+    ],
+    "modalities": [
+      "color",
+      "sound",
+      "vision"
+    ],
+    "mode": "test",
+    "seed": 0
+  },
+  "rbm_source_status": "external_numerical_realization_not_tne_source_law",
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.multimodal.test.run_pipeline",
+  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "seed": 0,
+  "source_status": "synthetic_deterministic_training_and_network_state"
+}

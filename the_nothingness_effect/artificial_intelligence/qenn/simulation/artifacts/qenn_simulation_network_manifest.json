@@ -1,0 +1,27 @@
+{
+  "architecture": "qenn",
+  "artifact_family": "network_topology_and_activation",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "generated_files": [
+    "qenn_simulation_network_topology.png",
+    "qenn_simulation_network_connectivity.png",
+    "qenn_simulation_network_activation_residual.png",
+    "qenn_simulation_network_nodes.csv",
+    "qenn_simulation_network_signal_propagation.gif",
+    "qenn_simulation_network_topology_growth.gif",
+    "qenn_simulation_network_recurrent_activation.gif"
+  ],
+  "parameter_hash": "39a056590847806fcdc9c0371a9bbe0b9862a2357caf6c3aaeae271d1685f42a",
+  "parameters": {
+    "architecture": "qenn",
+    "edge_count": 11,
+    "mode": "simulation",
+    "node_count": 10,
+    "seed": 0
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_all_capabilities",
+  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "seed": 0,
+  "source_status": "deterministic_network_state_visualization"
+}

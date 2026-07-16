@@ -35,6 +35,14 @@
   "generated_files": [
     "pgqenn_simulation_six_output_summary.csv",
     "pgqenn_simulation_architecture_figure.png",
+    "pgqenn_simulation_network_topology.png",
+    "pgqenn_simulation_network_connectivity.png",
+    "pgqenn_simulation_network_activation_residual.png",
+    "pgqenn_simulation_network_nodes.csv",
+    "pgqenn_simulation_network_signal_propagation.gif",
+    "pgqenn_simulation_network_topology_growth.gif",
+    "pgqenn_simulation_network_recurrent_activation.gif",
+    "pgqenn_simulation_network_manifest.json",
     "color_classification/color_classification_simulation_results.csv",
     "color_classification/color_classification_simulation_figure.png",
     "color_classification/color_classification_simulation_animation.gif",
@@ -88,7 +96,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_all_capabilities",
-  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
+  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "synthetic_deterministic_fixture"

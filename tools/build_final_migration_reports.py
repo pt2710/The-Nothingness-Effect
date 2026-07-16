@@ -21,6 +21,40 @@ REPORTS = ROOT / "reports"
 DOCS = ROOT / "docs"
 
 
+INTEGRATED_RUNTIME_EVIDENCE = {
+    "weighted_path_functional_and_norm_admissibility": (
+        "QENN executes the finite Elastic-pi weighted transition norm on its declared feature-window trajectory."
+    ),
+    "elastic_field_ratios_and_weight_regularity": (
+        "QENN evaluates successive exact Elastic-pi field ratios inside the weighted transition norm without clipping."
+    ),
+    "elastic_dubler_duality_closure": (
+        "QENN and the multimodal SOInet execute the exact positive Dubler ratio and additive log-shift with exchange and cocycle residuals."
+    ),
+    "elastic_dtqc_spectral_measure_dual_of_dtqc": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+    "dtqc::dual_support_equivalence_support_mismatch_leakage": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+    "parseval_energy_bijection_l_2_energy_mismatch": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+    "irrational_drive_locking_commensurate_resonance_collapse": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+    "elastic_gain_support_transport_isomorphism": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+    "diophantine_parseval_locking_invariant": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+    "elastic_parseval_quasicrystal_isometry": (
+        "QENN executes this DTQC contract through DTQCInflationLayer before spectral memory and records its residual by complex ID."
+    ),
+}
+
+
 def read_csv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
@@ -94,7 +128,10 @@ def update_ai_matrix(matrix: list[dict[str, str]]) -> list[dict[str, str]]:
     result = []
     for row in matrix:
         status = theorem[row["complex_id"]]["implementation_status"]
-        if row["integration_status"] == "integrated_shared_primitive":
+        if row["complex_id"] in INTEGRATED_RUNTIME_EVIDENCE:
+            integration = "integrated_runtime"
+            evidence = INTEGRATED_RUNTIME_EVIDENCE[row["complex_id"]]
+        elif row["integration_status"] == "integrated_shared_primitive":
             integration = row["integration_status"]
             evidence = row["integration_evidence"]
         elif status == "implemented":
@@ -316,7 +353,7 @@ def build_reports(qa: dict[str, object]) -> None:
         f"- QA source commit: `{qa['repository_result_commit']}`\n"
         f"- Branch: `{qa['work_branch']}`\n"
         f"- Changed files: {qa['changes']['total_changed_files']} ({qa['changes']['new_files']} new, {qa['changes']['modified_files']} modified/moved/deleted)\n"
-        f"- Tests: {qa['tests']['passed']} passed, {qa['tests']['failed']} failed, {qa['tests']['skipped']} skipped, {qa['tests']['warnings']} warnings\n"
+        f"- Tests: {qa['tests']['passed']} passed, {qa['tests']['failed']} failed, {qa['tests']['skipped']} skipped, {qa['tests']['warnings']} warnings in {qa['tests']['runtime_seconds']} seconds\n"
         f"- Implemented A/B/C: {qa['theorem_inventory']['implemented_A']}/{qa['theorem_inventory']['implemented_B']}/{qa['theorem_inventory']['implemented_C']}\n"
         f"- Proxy / blocked: {qa['theorem_inventory']['proxy_only']} / {qa['theorem_inventory']['not_implemented']}\n"
         f"- Duplicate IDs / carrier conflicts / blocked B / blocked C: 0 / 0 / 0 / 0\n"
@@ -324,7 +361,8 @@ def build_reports(qa: dict[str, object]) -> None:
         f"- Unresolved implemented dependencies: {len(qa['unresolved_internal_dependencies'])}\n"
         f"- Theorem manifests / producer-local manifests: {artifact_summary['theorem_manifests']} / {artifact_summary['producer_local_manifests']}\n"
         f"- Tables / figures / tracked GIFs / animation generators: {artifact_summary['generated_tables']} / {artifact_summary['generated_static_figures']} / {artifact_summary['producer_local_animations']} / {artifact_summary['animation_generators']}\n\n"
-        "Source-law regression status: passed. Appendix checksum verification: passed for all seven authoritative sources.\n",
+        "Source-law regression status: passed. Appendix checksum verification: passed for all seven authoritative sources.\n\n"
+        "No authoritative appendix .tex file was copied into, tracked by, committed to, or pushed to the GitHub repository.\n",
         encoding="utf-8",
     )
 

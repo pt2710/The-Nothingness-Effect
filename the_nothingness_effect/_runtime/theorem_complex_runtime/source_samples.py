@@ -1,4 +1,4 @@
-"""Deterministic provenance witnesses with Observation-and-Collapse extension."""
+"""Deterministic provenance witnesses with Spectrum-of-Infinities extension."""
 
 from __future__ import annotations
 
@@ -38,6 +38,40 @@ from the_nothingness_effect.foundational_architecture.observation_and_collapse.c
     TemporalCompressionInput,
     UniquenessInput,
 )
+from the_nothingness_effect.foundational_architecture.the_spectrum_of_infinities.canonical_contracts import (
+    A1 as SOI_A1,
+    A2 as SOI_A2,
+    A3 as SOI_A3,
+    A4 as SOI_A4,
+    A5 as SOI_A5,
+    A6 as SOI_A6,
+    A7 as SOI_A7,
+    A8 as SOI_A8,
+    A9 as SOI_A9,
+    A10 as SOI_A10,
+    B1 as SOI_B1,
+    B2 as SOI_B2,
+    B3 as SOI_B3,
+    C1 as SOI_C1,
+    C2 as SOI_C2,
+    C3 as SOI_C3,
+    AddressInput,
+    CosmicLedgerInput,
+    DFIInput,
+    DecompositionInput,
+    DualRealizabilityInput,
+    ElasticProbeInput,
+    EntropyInput,
+    FactorMapInput,
+    FinitizationInput,
+    HistoryAccessibilityInput,
+    LpInput,
+    MeasurableScopeInput,
+    MeasureTransferInput,
+    MetricDeformationInput,
+    NormalizationInput,
+    ObservableLocalityInput,
+)
 
 
 def _observation_samples() -> dict[str, object]:
@@ -56,8 +90,12 @@ def _observation_samples() -> dict[str, object]:
         ),
         dtype=float,
     )
-    horizon_temporal = np.asarray(((1.0, 0.5, 0.0, 0.0), (0.5, 0.25, 0.0, 0.0)))
-    horizon_spectral = np.asarray(((0.5, 0.25, 0.0, 0.0), (0.25, 0.125, 0.0, 0.0)))
+    horizon_temporal = np.asarray(
+        ((1.0, 0.5, 0.0, 0.0), (0.5, 0.25, 0.0, 0.0))
+    )
+    horizon_spectral = np.asarray(
+        ((0.5, 0.25, 0.0, 0.0), (0.25, 0.125, 0.0, 0.0))
+    )
     return {
         str(OBS_A1): MeanErgodicInput(identity, fixed_state, 8),
         str(OBS_A2): AttractorInput(
@@ -97,8 +135,99 @@ def _observation_samples() -> dict[str, object]:
     }
 
 
+def _spectrum_samples() -> dict[str, object]:
+    identity_2 = np.eye(2)
+    identity_3 = np.eye(3)
+    histories = np.asarray(((0, 0), (0, 1), (1, 0), (1, 1)), dtype=int)
+    addresses = np.asarray((0.0, 0.25, 0.5, 0.75))
+    schedules = histories.copy()
+    initial_bits = np.zeros(4, dtype=int)
+    expected_histories = np.asarray(
+        tuple(
+            tuple(
+                [0]
+                + [
+                    int(np.bitwise_xor.reduce(schedule[: index + 1]))
+                    for index in range(schedule.size)
+                ]
+            )
+            for schedule in schedules
+        ),
+        dtype=int,
+    )
+    projector_middle = np.diag((0.0, 1.0, 0.0))
+    return {
+        str(SOI_A1): NormalizationInput(np.asarray((1.0, 1.0)), 2.0),
+        str(SOI_A2): DFIInput(np.asarray((1.0, 2.0, 4.0)), 3.0),
+        str(SOI_A3): DecompositionInput(np.asarray((1.0, 2.0)), np.eye(2)),
+        str(SOI_A4): LpInput(np.asarray((3.0, 4.0)), 4.0, 2.0),
+        str(SOI_A5): EntropyInput(np.asarray((0.5, 0.5)), 2.0),
+        str(SOI_A6): FinitizationInput(
+            np.asarray((1.0, 2.0)),
+            np.asarray(((0.0, 0.0), (0.5, 1.0), (1.0, 2.0))),
+        ),
+        str(SOI_A7): DualRealizabilityInput(identity_2, np.asarray((1.0, 2.0))),
+        str(SOI_A8): MeasureTransferInput(
+            np.asarray((0.5, 0.5)),
+            np.asarray((0, 1)),
+            np.asarray((0.5, 0.5)),
+            2.0,
+        ),
+        str(SOI_A9): MeasurableScopeInput(
+            np.asarray((1.0, 2.0)),
+            np.asarray((True, True)),
+            np.asarray((True, True)),
+        ),
+        str(SOI_A10): FactorMapInput(
+            identity_2,
+            identity_2,
+            identity_2,
+            np.asarray((1.0, 2.0)),
+        ),
+        str(SOI_B1): AddressInput(
+            histories,
+            addresses,
+            np.full(4, 0.25),
+            4.0,
+        ),
+        str(SOI_B2): MetricDeformationInput(
+            np.asarray(((0.0, 0.0), (1.0, 0.0), (0.0, 1.0))),
+            identity_2,
+            np.full(3, 1.0 / 3.0),
+            np.asarray((1.0, 2.0, 3.0)),
+            identity_3,
+        ),
+        str(SOI_B3): HistoryAccessibilityInput(
+            initial_bits,
+            schedules,
+            expected_histories,
+            4.0,
+        ),
+        str(SOI_C1): CosmicLedgerInput(
+            addresses,
+            histories,
+            np.zeros((4, 1)),
+        ),
+        str(SOI_C2): ObservableLocalityInput(
+            np.asarray((0.0, 1.0, 0.0)),
+            np.asarray((0.0, 1.0, 0.0)),
+            identity_3,
+        ),
+        str(SOI_C3): ElasticProbeInput(
+            np.zeros(3),
+            projector_middle,
+            projector_middle,
+            1.0,
+        ),
+    }
+
+
 def sample_inputs() -> dict[str, object]:
-    result = {**_base_sample_inputs(), **_observation_samples()}
-    if len(result) != 80:
-        raise RuntimeError(f"expected 80 recertified samples, found {len(result)}")
+    result = {
+        **_base_sample_inputs(),
+        **_observation_samples(),
+        **_spectrum_samples(),
+    }
+    if len(result) != 96:
+        raise RuntimeError(f"expected 96 recertified samples, found {len(result)}")
     return result

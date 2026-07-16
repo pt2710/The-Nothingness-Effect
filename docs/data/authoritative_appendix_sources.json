@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "authority_rule": "Checksums bind repository contracts and effective inventory rows to the latest externally maintained authoritative appendix sources. The authoritative .tex files are not tracked in this repository.",
-  "binding_mode": "runtime-enforced manifest binding with generated effective matrix",
+  "authority_rule": "Checksums bind repository contracts and effective inventory rows to the latest externally maintained authoritative appendix sources. The authoritative .tex files are not tracked in this repository. Implementation-status overrides are permitted only for named executable contracts with committed tests and artifact generators.",
+  "binding_mode": "runtime-enforced manifest binding with generated effective matrix and provenance",
   "appendices": {
     "appendix_canonical_self_negating_involution_flowpoint.tex": {
       "sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
@@ -18,6 +18,23 @@
     "appendix_the_completeness_theorem.tex": {
       "sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "status": "recertified_six_obligations_integrated"
+    }
+  },
+  "implementation_status_overrides": {
+    "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": {
+      "status": "implemented",
+      "reason": "Typed decomposition, permutation-covariance, additive-total, and reproducibility contract with positive and invalid-mapping tests.",
+      "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"
+    },
+    "dfi_flowpoint_consistency_and_interface_inconsistency": {
+      "status": "implemented",
+      "reason": "Typed feature-involution, component/total consistency, and commuting-interface contract with obstruction tests.",
+      "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"
+    },
+    "dfi_simulation_consistency_and_simulation_breakdown": {
+      "status": "implemented",
+      "reason": "Typed canonical-versus-simulated DFI validation record with explicit component, total, maximum-error, and breakdown witnesses.",
+      "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"
     }
   }
 }

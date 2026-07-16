@@ -13,6 +13,9 @@ from the_nothingness_effect.artificial_intelligence.soinets.source_contracts imp
     contracts,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import all_contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
+    evaluate_contract,
+)
 
 
 def _modalities(*, identical: bool = False) -> torch.Tensor:
@@ -43,7 +46,7 @@ def test_soinet_remaining_source_laws_return_finite_modality_fields():
     value = SOInetContractInput(_modalities(), tolerance=1e-6)
 
     for contract in contracts():
-        evaluation = contract.evaluate(value)
+        evaluation = evaluate_contract(contract, value)
         output = evaluation.output
 
         assert output.response.shape == value.modalities.shape
@@ -56,7 +59,7 @@ def test_soinet_remaining_source_laws_return_finite_modality_fields():
 
 def test_soinet_exact_composition_identity_is_zero_residual():
     value = SOInetContractInput(_modalities(), tolerance=1e-6)
-    compositionality = contracts()[4].evaluate(value)
+    compositionality = evaluate_contract(contracts()[4], value)
 
     assert compositionality.output.invariant_residual <= 1e-6
     assert compositionality.residual is not None
@@ -67,18 +70,22 @@ def test_soinet_identical_modalities_close_transfer_cloning_and_phase_locking():
     value = SOInetContractInput(_modalities(identical=True), tolerance=1e-5)
     by_id = {str(contract.complex_id): contract for contract in contracts()}
 
-    hierarchy = by_id[
-        "hierarchical_soi_stack_transfer_cross_regime_collapse_duality"
-    ].evaluate(value)
-    generalization = by_id[
-        "soi_cross_domain_generalization_and_collapse"
-    ].evaluate(value)
-    cloning = by_id[
-        "soinet_universal_cloning_principle_cloning_failure_duality"
-    ].evaluate(value)
-    phase = by_id[
-        "spectral_phase_locking_and_collapse_in_soinet"
-    ].evaluate(value)
+    hierarchy = evaluate_contract(
+        by_id["hierarchical_soi_stack_transfer_cross_regime_collapse_duality"],
+        value,
+    )
+    generalization = evaluate_contract(
+        by_id["soi_cross_domain_generalization_and_collapse"],
+        value,
+    )
+    cloning = evaluate_contract(
+        by_id["soinet_universal_cloning_principle_cloning_failure_duality"],
+        value,
+    )
+    phase = evaluate_contract(
+        by_id["spectral_phase_locking_and_collapse_in_soinet"],
+        value,
+    )
 
     assert hierarchy.output.invariant_residual <= 1e-5
     assert generalization.output.invariant_residual <= 1e-5
@@ -93,15 +100,20 @@ def test_soinet_held_out_modality_perturbation_activates_failure_duals():
     value = SOInetContractInput(perturbed)
     by_id = {str(contract.complex_id): contract for contract in contracts()}
 
-    generalization = by_id[
-        "soi_cross_domain_generalization_and_collapse"
-    ].evaluate(value)
-    cloning = by_id[
-        "soinet_universal_cloning_principle_cloning_failure_duality"
-    ].evaluate(value)
-    brittleness = by_id[
-        "soinet_universal_generalization_principle_failure_brittleness_duality"
-    ].evaluate(value)
+    generalization = evaluate_contract(
+        by_id["soi_cross_domain_generalization_and_collapse"],
+        value,
+    )
+    cloning = evaluate_contract(
+        by_id["soinet_universal_cloning_principle_cloning_failure_duality"],
+        value,
+    )
+    brittleness = evaluate_contract(
+        by_id[
+            "soinet_universal_generalization_principle_failure_brittleness_duality"
+        ],
+        value,
+    )
 
     assert generalization.output.invariant_residual > 0.0
     assert cloning.output.invariant_residual > 0.0

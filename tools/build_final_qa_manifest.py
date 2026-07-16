@@ -17,6 +17,7 @@ else:
     from verify_tne_repository_layout import verify
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
+    provenance_binding_report,
     source_binding_report,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
@@ -113,6 +114,7 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
     )
     downgraded = list(dependency_downgrades())
     authority = source_binding_report()
+    provenance_authority = provenance_binding_report()
 
     artifact = json.loads(
         Path("docs/data/artifact_provenance_manifest.json").read_text(
@@ -188,6 +190,8 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         release_blockers.append("tracked_authoritative_tex")
     if int(authority["effective_source_sha_mismatches"]):
         release_blockers.append("authoritative_source_binding")
+    if int(provenance_authority["effective_source_sha_mismatches"]):
+        release_blockers.append("artifact_provenance_source_binding")
     if arguments.source_law_regression_status != "passed":
         release_blockers.append("source_law_regression")
     if not bool(verification.get("appendix_checksum_verified")):
@@ -241,6 +245,7 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         },
         "dependency_downgrades": downgraded,
         "authoritative_source_binding": authority,
+        "artifact_provenance_source_binding": provenance_authority,
         "artifact_summary": artifact["summary"],
         "entrypoint_execution": {
             "test": test_execution["summary"],

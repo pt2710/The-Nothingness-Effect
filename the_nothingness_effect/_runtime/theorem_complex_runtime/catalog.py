@@ -145,6 +145,31 @@ def dependency_downgrades(matrix_path: str | Path | None = None) -> tuple[dict[s
 
 
 def active_contracts(matrix_path: str | Path | None = None) -> tuple[ComplexContract, ...]:
+    """Return contracts explicitly requested as implemented in the inventory.
+
+    This preserves the historical runtime API. Release gates must use
+    :func:`release_active_contracts`, which additionally enforces recursive
+    dependency closure.
+    """
+
+    rows = _matrix_rows(matrix_path)
+    active_ids = {
+        row["complex_id"]
+        for row in rows
+        if row["implementation_status"] == "implemented"
+    }
+    catalog = {str(contract.complex_id): contract for contract in all_contracts()}
+    missing = active_ids - catalog.keys()
+    if missing:
+        raise RuntimeError(f"implemented inventory IDs lack contracts: {sorted(missing)[:5]}")
+    return tuple(catalog[identifier] for identifier in sorted(active_ids))
+
+
+def release_active_contracts(
+    matrix_path: str | Path | None = None,
+) -> tuple[ComplexContract, ...]:
+    """Return only implementations whose complete source graph is release-active."""
+
     statuses = release_statuses(matrix_path)
     active_ids = {
         identifier for identifier, status in statuses.items() if status == "implemented"

@@ -1,0 +1,108 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "elastic_gain_ou_support_margin",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/1b/elastic_gain_ou_support_margin_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/2b/elastic_gain_ou_support_margin_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/1b2b/complete_elastic_gain_ou_support_margin_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dtqc_b04_product_carrier",
+    "eq:drv_dtqc_b04_1b",
+    "eq:drv_dtqc_b04_theorem_1b",
+    "eq:drv_dtqc_b04_res_1b",
+    "eq:drv_dtqc_b04_2b",
+    "eq:drv_dtqc_b04_theorem_2b",
+    "eq:drv_dtqc_b04_res_2b",
+    "eq:drv_dtqc_b04_joint",
+    "eq:drv_dtqc_b04_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/falsification_checks/test_elastic_gain_ou_support_margin_falsification.py"
+  ],
+  "first_label": "app:drv_dtqc_b04",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "elastic_gain_ou_support_margin",
+  "source_complex_ids": [
+    "elastic_invariance_of_support_nonlinear_leakage",
+    "ou_noise_5_d_scatter_robustness_noise_induced_smearing"
+  ],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/falsification_checks/test_elastic_gain_ou_support_margin_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Elastic-Gain OU Support Margin Classification",
+    "left": "Elastic-Gain OU Support Margin Law",
+    "right": "Elastic-Gain OU Support Margin Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Elastic-Gain OU Support Margin Classification",
+    "left": "Elastic-Gain OU Support Margin Law",
+    "right": "Elastic-Gain OU Support Margin Failure Law"
+  }
+}

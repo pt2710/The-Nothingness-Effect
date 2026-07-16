@@ -1,0 +1,110 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "observer_accessible_curvature_memory",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_004_observer_accessible_curvature_memory/1b/observer_accessible_curvature_memory_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_004_observer_accessible_curvature_memory/2b/observer_accessible_curvature_memory_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_004_observer_accessible_curvature_memory/1b2b/complete_observer_accessible_curvature_memory_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_bhhr_b04_product_carrier",
+    "eq:drv_bhhr_b04_1b",
+    "eq:drv_bhhr_b04_theorem_1b",
+    "eq:drv_bhhr_b04_res_1b",
+    "eq:drv_bhhr_b04_2b",
+    "eq:drv_bhhr_b04_theorem_2b",
+    "eq:drv_bhhr_b04_res_2b",
+    "eq:drv_bhhr_b04_joint",
+    "eq:drv_bhhr_b04_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_004_observer_accessible_curvature_memory/falsification_checks/test_observer_accessible_curvature_memory_falsification.py"
+  ],
+  "first_label": "app:drv_bhhr_b04",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "black_hole_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py"
+  ],
+  "source_complex_id": "observer_accessible_curvature_memory",
+  "source_complex_ids": [
+    "observer_horizon_threshold_infinite_visibility",
+    "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_holes_hawking_radiation_and_observer_horizons.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_004_observer_accessible_curvature_memory/falsification_checks/test_observer_accessible_curvature_memory_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Observer-Accessible Curvature Memory Classification",
+    "left": "Observer-Accessible Curvature Memory Law",
+    "right": "Observer-Accessible Curvature Memory Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Observer-Accessible Curvature Memory Classification",
+    "left": "Observer-Accessible Curvature Memory Law",
+    "right": "Observer-Accessible Curvature Memory Failure Law"
+  }
+}

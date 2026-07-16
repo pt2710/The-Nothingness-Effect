@@ -1,0 +1,153 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 57,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "bridge_duality_and_the_2_adic_criterion",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_005_bridge_duality_and_the_2_adic_criterion/1a/theorem_1a_no_ontological_bridge.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_005_bridge_duality_and_the_2_adic_criterion/2a/theorem_2a_divergent_tension_non_traversable.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_005_bridge_duality_and_the_2_adic_criterion/1a2a/bridge_duality_and_the_2_adic_criterion.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:edi05_bridge_duality_order_parameter_1a",
+    "eq:edi05_bridge_duality_branch_condition_1a",
+    "eq:bridge_duality_2adic_boundary_1a",
+    "eq:bridge_duality_2adic_translation_1a",
+    "eq:bridge_duality_2adic_nojump_1a",
+    "eq:bridge_duality_2adic_infwork_1a",
+    "eq:bridge_duality_2adic_diffeo_1a",
+    "eq:bridge_duality_2adic_smallloop_1a",
+    "eq:bridge_duality_2adic_loopcalc_1a",
+    "eq:bridge_duality_2adic_loopq_1a",
+    "eq:bridge_duality_2adic_chain_1a",
+    "eq:bridge_duality_2adic_contra_1a",
+    "eq:bridge_duality_2adic_abscont_1a",
+    "eq:bridge_duality_2adic_absimp_1a",
+    "eq:bridge_duality_2adic_boundworkhop_1a",
+    "eq:bridge_duality_2adic_noboundary_1a",
+    "eq:bridge_duality_2adic_c2along_1a",
+    "eq:bridge_duality_2adic_dqae_1a",
+    "eq:edi05_bridge_duality_order_parameter_2a",
+    "eq:edi05_bridge_duality_branch_condition_2a",
+    "eq:bridge_duality_2adic_diverge_2a",
+    "eq:bridge_duality_2adic_loopdiv_2a",
+    "eq:bridge_duality_2adic_nonL1_2a",
+    "eq:bridge_duality_2adic_notraverse_2a",
+    "eq:bridge_duality_2adic_barrier_2a",
+    "eq:bridge_duality_2adic_c2fail_2a",
+    "eq:bridge_duality_2adic_calcloop_2a",
+    "eq:bridge_duality_2adic_qfail_2a",
+    "eq:bridge_duality_2adic_chain_2a",
+    "eq:bridge_duality_2adic_contra_2a",
+    "eq:bridge_duality_2adic_allgamma_2a",
+    "eq:bridge_duality_2adic_noabs_2a",
+    "eq:bridge_duality_2adic_whole_2a",
+    "eq:bridge_duality_2adic_whole2_2a",
+    "eq:bridge_duality_2adic_calcw_2a",
+    "eq:bridge_duality_2adic_nocross_2a",
+    "eq:edi05_bridge_duality_status_1a2a",
+    "eq:bridge_duality_2adic_nobridge_1a2a",
+    "eq:bridge_duality_2adic_criterion_1a2a",
+    "eq:bridge_duality_2adic_tau_def_1a2a",
+    "eq:bridge_duality_2adic_tau_bound_1a2a",
+    "eq:bridge_duality_2adic_attempt_puncture_1a2a",
+    "eq:bridge_duality_2adic_work_1a2a",
+    "eq:bridge_duality_2adic_2calc_1a2a",
+    "eq:bridge_duality_2adic_work_implication_1a2a",
+    "eq:bridge_duality_2adic_c2lemma_1a2a",
+    "eq:bridge_duality_2adic_c2neg_1a2a",
+    "eq:bridge_duality_2adic_w11_1a2a",
+    "eq:bridge_duality_2adic_ac_1a2a",
+    "eq:bridge_duality_2adic_unified_chain_1a2a",
+    "eq:bridge_duality_2adic_dualclose_1a2a",
+    "eq:bridge_duality_2adic_calcclose_1a2a",
+    "eq:bridge_duality_2adic_calccontra_1a2a",
+    "eq:bridge_duality_2adic_operclose_1a2a",
+    "eq:bridge_duality_2adic_operfinish_1a2a",
+    "eq:bridge_duality_2adic_corcalc_1a2a",
+    "eq:bridge_duality_2adic_corcalc2_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_005_bridge_duality_and_the_2_adic_criterion/falsification_checks/test_bridge_duality_and_the_2_adic_criterion_falsification.py"
+  ],
+  "first_label": "ssec:bridge_duality_2adic_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "bridge_duality_and_the_2_adic_criterion",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_005_bridge_duality_and_the_2_adic_criterion/falsification_checks/test_bridge_duality_and_the_2_adic_criterion_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Bridge Duality and the 2-adic Criterion",
+    "left": "Theorem 1A: No Ontological Bridge",
+    "right": "Theorem 2A: Divergent Tension, Non-Traversable"
+  },
+  "theorem_titles_tex": {
+    "cross": "Bridge Duality and the 2-adic Criterion (1A $\\leftrightarrow$ 2A)",
+    "left": "Theorem 1A: No Ontological Bridge",
+    "right": "Theorem 2A: Divergent Tension, Non-Traversable"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 22,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/1a/entropic_metric_and_curvature_encoding.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/2a/entropic_cosmological_frequency_transfer.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/1a2a/geometryfrequency_dual_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:sc03_elastic_field_1a2a",
+    "eq:sc03_curvature_proxy_1a2a",
+    "eq:sc03_logshift_1a2a",
+    "eq:sc03_log_encoding_1a",
+    "eq:sc03_proxy_encoding_1a",
+    "eq:sc03_laplacian_encoding_1a",
+    "eq:sc03_pointwise_map_1a",
+    "eq:sc03_inverse_map_1a",
+    "eq:sc03_curvature_difference_1a",
+    "eq:sc03_geometry_synthesis_1a",
+    "eq:sc03_transfer_theorem_2a",
+    "eq:sc03_cocycle_2a",
+    "eq:sc03_multiplicative_cocycle_2a",
+    "eq:sc03_loop_cancellation_2a",
+    "eq:sc03_frequency_synthesis_2a",
+    "eq:sc03_joint_system_1a2a",
+    "eq:sc03_commutative_diagram_1a2a",
+    "eq:sc03_geometry_residual_1a2a",
+    "eq:sc03_frequency_residual_1a2a",
+    "eq:sc03_common_potential_1a2a",
+    "eq:sc03_consistency_test_1a2a",
+    "eq:sc03_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/falsification_checks/test_elastic_cosmological_geometry_and_dubler_spectral_transfer_falsification.py"
+  ],
+  "first_label": "app:sc_complex_03",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/1a/entropic_metric_and_curvature_encoding.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/2a/entropic_cosmological_frequency_transfer.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/1a2a/geometryfrequency_dual_closure.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "cosmological_geometry field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "cosmological_spark_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py"
+  ],
+  "source_complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer/falsification_checks/test_elastic_cosmological_geometry_and_dubler_spectral_transfer_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Geometry–Frequency Dual Closure",
+    "left": "Entropic Metric and Curvature Encoding",
+    "right": "Entropic Cosmological Frequency Transfer"
+  },
+  "theorem_titles_tex": {
+    "cross": "Geometry--Frequency Dual Closure",
+    "left": "Entropic Metric and Curvature Encoding",
+    "right": "Entropic Cosmological Frequency Transfer"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_foundational_closure_architecture.tex",
+      "sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/foundational_architecture/countable_infinity",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/foundational_architecture/countable_infinity/test/generate_artifacts.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "bidirectional_integer_rays_and_finite_polarity_enumeration",
+    "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+    "finitary_flip_invariance_and_null_recurrent_countable_exploration",
+    "signed_shortlex_cubic_transduction",
+    "recurrent_cubical_cover_dynamics",
+    "reflected_cubical_address_space"
+  ]
+}

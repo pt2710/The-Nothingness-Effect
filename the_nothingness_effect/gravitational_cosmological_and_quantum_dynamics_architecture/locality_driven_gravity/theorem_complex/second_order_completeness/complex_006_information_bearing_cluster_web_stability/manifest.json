@@ -1,0 +1,109 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "information_bearing_cluster_web_stability",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_006_information_bearing_cluster_web_stability/1b/information_bearing_cluster_web_stability_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_006_information_bearing_cluster_web_stability/2b/information_bearing_cluster_web_stability_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_006_information_bearing_cluster_web_stability/1b2b/complete_information_bearing_cluster_web_stability_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_ldg_b06_product_carrier",
+    "eq:drv_ldg_b06_1b",
+    "eq:drv_ldg_b06_theorem_1b",
+    "eq:drv_ldg_b06_res_1b",
+    "eq:drv_ldg_b06_2b",
+    "eq:drv_ldg_b06_theorem_2b",
+    "eq:drv_ldg_b06_res_2b",
+    "eq:drv_ldg_b06_joint",
+    "eq:drv_ldg_b06_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_006_information_bearing_cluster_web_stability/falsification_checks/test_information_bearing_cluster_web_stability_falsification.py"
+  ],
+  "first_label": "app:drv_ldg_b06",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "information_bearing_cluster_web_stability",
+  "source_complex_ids": [
+    "entropic_localization_cluster_stability_duality",
+    "localized_curvature_information_preservation_duality",
+    "cosmic_web_emergence_homogenization_duality"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_006_information_bearing_cluster_web_stability/falsification_checks/test_information_bearing_cluster_web_stability_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Information-Bearing Cluster-Web Stability Classification",
+    "left": "Information-Bearing Cluster-Web Stability Law",
+    "right": "Information-Bearing Cluster-Web Stability Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Information-Bearing Cluster-Web Stability Classification",
+    "left": "Information-Bearing Cluster-Web Stability Law",
+    "right": "Information-Bearing Cluster-Web Stability Failure Law"
+  }
+}

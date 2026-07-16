@@ -1,0 +1,125 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "regular_observer_horizon_hypersurface",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/1b/regular_observer_horizon_hypersurface_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/2b/regular_observer_horizon_hypersurface_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/1b2b/complete_regular_observer_horizon_hypersurface_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_bhhr_b02_product_carrier",
+    "eq:drv_bhhr_b02_1b",
+    "eq:drv_bhhr_b02_theorem_1b",
+    "eq:drv_bhhr_b02_res_1b",
+    "eq:drv_bhhr_b02_2b",
+    "eq:drv_bhhr_b02_theorem_2b",
+    "eq:drv_bhhr_b02_res_2b",
+    "eq:drv_bhhr_b02_joint",
+    "eq:drv_bhhr_b02_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/falsification_checks/test_regular_observer_horizon_hypersurface_falsification.py"
+  ],
+  "first_label": "app:drv_bhhr_b02",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/1b/regular_observer_horizon_hypersurface_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/2b/regular_observer_horizon_hypersurface_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/1b2b/complete_regular_observer_horizon_hypersurface_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine bilinear two-source response",
+      "name": "regular_observer_horizon_hypersurface interaction",
+      "python_types": [
+        "DerivedFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "black_hole_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py"
+  ],
+  "source_complex_id": "regular_observer_horizon_hypersurface",
+  "source_complex_ids": [
+    "physical_singularity_absence_mathematical_failure_point_status",
+    "black_hole_observability_triviality_and_regularity"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_holes_hawking_radiation_and_observer_horizons.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/second_order_completeness/complex_002_regular_observer_horizon_hypersurface/falsification_checks/test_regular_observer_horizon_hypersurface_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Regular Observer-Horizon Hypersurface Classification",
+    "left": "Regular Observer-Horizon Hypersurface Law",
+    "right": "Regular Observer-Horizon Hypersurface Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Regular Observer-Horizon Hypersurface Classification",
+    "left": "Regular Observer-Horizon Hypersurface Law",
+    "right": "Regular Observer-Horizon Hypersurface Failure Law"
+  }
+}

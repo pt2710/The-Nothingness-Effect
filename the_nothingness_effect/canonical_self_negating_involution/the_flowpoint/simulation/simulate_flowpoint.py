@@ -25,7 +25,6 @@ Usage:
 """
 
 import os
-import sys
 import time
 import csv
 import numpy as np
@@ -36,8 +35,6 @@ from matplotlib.animation import PillowWriter
 # Set up paths to import modules from the parent directory.
 script_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 # Import the Flowpoint function and the trigonometry helper class.
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint import fp
 from the_nothingness_effect.mathematical_architecture.flowpoint_trigonometry import FlowpointTrigonometry

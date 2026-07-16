@@ -33,6 +33,8 @@ def _input_for(contract_id: str):
         return DFIRescalingInput(DATA, 7.0, 19.0)
     if contract_id == "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence":
         return DFIInput(DATA, 7.0)
+    if contract_id == "dfi_adaptive_applicability_and_contextual_instability":
+        return ApplicabilityInput(DATA, 7.0, threshold=0.01)
     if contract_id == "scale_normalized_dfi_homogeneity_invariant":
         return DFIRescalingInput(DATA, 7.0, 19.0)
     if contract_id == "entropic_applicability_response_operator":
@@ -40,13 +42,13 @@ def _input_for(contract_id: str):
     return SpatialDFIInput(DATA, spectrum_scale=7.0)
 
 
-def test_all_six_dfi_contracts_evaluate_with_typed_outputs():
+def test_all_seven_dfi_contracts_evaluate_with_typed_outputs():
     evaluations = {
         str(contract.complex_id): evaluate_contract(contract, _input_for(str(contract.complex_id)))
         for contract in contracts()
     }
 
-    assert len(evaluations) == 6
+    assert len(evaluations) == 7
     assert evaluations["dfi_spectrum_normalized_existence_and_normalization_breakdown"].output.status is DFIStatus.FINITE
     assert evaluations["dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence"].output.rescaling_residual <= 1e-12
     assert evaluations["spatially_localized_dfi_consistency_closure"].status is ClosureStatus.NUMERICAL_CANDIDATE

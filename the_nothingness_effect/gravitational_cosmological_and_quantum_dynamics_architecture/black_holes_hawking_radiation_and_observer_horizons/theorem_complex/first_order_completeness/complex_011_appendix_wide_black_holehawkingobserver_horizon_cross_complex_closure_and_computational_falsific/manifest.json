@@ -1,0 +1,113 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 15,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_011_appendix_wide_black_holehawkingobserver_horizon_cross_complex_closure_and_computational_falsific/1a/typed_black_holehawkingobserver_horizon_compositional_closure.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_011_appendix_wide_black_holehawkingobserver_horizon_cross_complex_closure_and_computational_falsific/2a/bhhr_meta_closure_dependency_localized_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_011_appendix_wide_black_holehawkingobserver_horizon_cross_complex_closure_and_computational_falsific/1a2a/bhhr_meta_closure_complete_cross_complex_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:bhhr_cross_complex_chain_1a2a",
+    "eq:bhhr_meta_complex_set_1a2a",
+    "eq:bhhr_meta_dependency_graph_1a2a",
+    "eq:bhhr_meta_layer_projection_1a2a",
+    "eq:bhhr_meta_composite_domain_1a2a",
+    "eq:bhhr_meta_realization_tuple_1a",
+    "eq:bhhr_meta_composite_map_1a",
+    "eq:bhhr_meta_interface_commutation_1a",
+    "eq:bhhr_cross_complex_residual_vector_1a2a",
+    "eq:bhhr_cross_complex_total_residual_1a2a",
+    "eq:bhhr_meta_status_1a2a",
+    "eq:bhhr_cross_complex_audit_record_1a2a",
+    "eq:bhhr_meta_zero_equivalence_1a2a",
+    "eq:bhhr_meta_fault_residual_map_1a2a",
+    "eq:bhhr_meta_joint_closure_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_011_appendix_wide_black_holehawkingobserver_horizon_cross_complex_closure_and_computational_falsific/falsification_checks/test_appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsif_falsification.py"
+  ],
+  "first_label": "app:bhhr_cross_complex_meta_closure_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "black_hole_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py"
+  ],
+  "source_complex_id": "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_holes_hawking_radiation_and_observer_horizons.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_011_appendix_wide_black_holehawkingobserver_horizon_cross_complex_closure_and_computational_falsific/falsification_checks/test_appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsif_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "BHHR Meta-Closure – Complete Cross-Complex Closure Classification",
+    "left": "Typed Black-Hole–Hawking–Observer-Horizon Compositional Closure",
+    "right": "BHHR Meta-Closure – Dependency-Localized Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "BHHR Meta-Closure -- Complete Cross-Complex Closure Classification",
+    "left": "Typed Black-Hole--Hawking--Observer-Horizon Compositional Closure",
+    "right": "BHHR Meta-Closure -- Dependency-Localized Breakdown"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 39,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_008_elastic_gravitational_memoryinstant_relaxation/1a/elastic_pi_gravitational_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_008_elastic_gravitational_memoryinstant_relaxation/2a/no_memory_instant_relaxation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_008_elastic_gravitational_memoryinstant_relaxation/1a2a/elastic_pi_gravitational_memory_no_memory_instant_relaxation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:bhhr08_elastic_pi_gravitational_memory_order_parameter_1a",
+    "eq:bhhr08_elastic_pi_gravitational_memory_branch_condition_1a",
+    "eq:elastic_pi_persist_1a",
+    "eq:curvature_persist_1a",
+    "eq:memory_integral_positive_1a",
+    "eq:calculus_memory_1a",
+    "eq:field_persistence_lemma_1a",
+    "eq:lemma_calculus_memory_1a",
+    "eq:field_equilibrium_1a",
+    "eq:field_memory_1a",
+    "eq:proof_calculus_memory_1a",
+    "eq:corollary_field_curvature_1a",
+    "eq:corollary_calculus_memory_1a",
+    "eq:bhhr08_elastic_pi_gravitational_memory_order_parameter_2a",
+    "eq:bhhr08_elastic_pi_gravitational_memory_branch_condition_2a",
+    "eq:field_relax_2a",
+    "eq:curvature_relax_2a",
+    "eq:memory_zero_2a",
+    "eq:calculus_memory_2a",
+    "eq:lemma_field_relax_2a",
+    "eq:lemma_curvature_zero_2a",
+    "eq:proof_field_relax_2a",
+    "eq:proof_curvature_zero_2a",
+    "eq:proof_calculus_memory_2a",
+    "eq:corollary_memory_zero_2a",
+    "eq:corollary_calculus_memory_2a",
+    "eq:bhhr08_elastic_pi_gravitational_memory_status_1a2a",
+    "eq:memory_positive_1a2a",
+    "eq:memory_zero_1a2a",
+    "eq:calculus_memory_persists_1a2a",
+    "eq:calculus_memory_absent_1a2a",
+    "eq:lemma_memory_duality_1a2a",
+    "eq:lemma_memory_duality_zero_1a2a",
+    "eq:lemma_calculus_duality_1a2a",
+    "eq:proof_memory_duality_1a2a",
+    "eq:proof_memory_duality_zero_1a2a",
+    "eq:proof_calculus_duality_1a2a",
+    "eq:corollary_duality_1a2a",
+    "eq:corollary_calculus_duality_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_008_elastic_gravitational_memoryinstant_relaxation/falsification_checks/test_black_hole_dynamics_elastic_gravitational_memory_instant_relaxation_falsification.py"
+  ],
+  "first_label": "app:bhhr_complex_08",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "black_hole_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py"
+  ],
+  "source_complex_id": "elastic_gravitational_memory_instant_relaxation",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_holes_hawking_radiation_and_observer_horizons.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_008_elastic_gravitational_memoryinstant_relaxation/falsification_checks/test_black_hole_dynamics_elastic_gravitational_memory_instant_relaxation_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic pi Gravitational Memory <-> No-Memory/Instant Relaxation",
+    "left": "Elastic pi Gravitational Memory",
+    "right": "No-Memory / Instant Relaxation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic $\\pi$ Gravitational Memory $\\leftrightarrow$ No-Memory/Instant Relaxation",
+    "left": "Elastic $\\pi$ Gravitational Memory",
+    "right": "No-Memory / Instant Relaxation"
+  }
+}

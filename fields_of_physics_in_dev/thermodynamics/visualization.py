@@ -6,7 +6,6 @@ Usage: python visualization.py
 
 import io
 import os
-import sys
 import time
 import numpy as np
 import pandas as pd
@@ -14,8 +13,6 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 from matplotlib.animation import FFMpegWriter
 from tqdm import tqdm
 from PIL import Image

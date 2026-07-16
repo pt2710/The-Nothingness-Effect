@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 31,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "end_compactified_additive_continuum_field",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_001_end_compactified_additive_continuum_field/1c/uniform_ray_convergence_to_a_continuum_additive_field.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_001_end_compactified_additive_continuum_field/2c/finite_field_shadows_with_continuum_cylindrical_fibres.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_001_end_compactified_additive_continuum_field/1c2c/boundary_fieldcoherent_tower_isomorphism.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:u_c01_additive_derivation",
+    "eq:u_c01_end_compactification_1c",
+    "eq:u_c01_finite_data_1c",
+    "eq:u_c01_boundary_data_1c",
+    "eq:u_c01_field_1c",
+    "eq:u_c01_edge_increment_1c",
+    "eq:u_c01_uniform_ray_limit_1c",
+    "eq:u_c01_error_bound_1c",
+    "eq:u_c01_boundary_recovery_1c",
+    "eq:u_c01_center_tail_decomposition_1c",
+    "eq:u_c01_tail_bound_1c",
+    "eq:u_c01_synthesis_1c",
+    "eq:u_c01_principle_1c",
+    "eq:u_c01_level_label_2c",
+    "eq:u_c01_prefix_quotient_2c",
+    "eq:u_c01_field_shadow_2c",
+    "eq:u_c01_cylinder_fibre_2c",
+    "eq:u_c01_inverse_limit_2c",
+    "eq:u_c01_field_inverse_limit_2c",
+    "eq:u_c01_bond_increment_2c",
+    "eq:u_c01_synthesis_2c",
+    "eq:u_c01_principle_2c",
+    "eq:u_c01_tower_carrier_joint",
+    "eq:u_c01_exchange_map_joint",
+    "eq:u_c01_joint_inverse_laws",
+    "eq:u_c01_joint_intertwining",
+    "eq:u_c01_residual_joint",
+    "eq:u_c01_corollary_joint",
+    "eq:u_c01_paradox_joint",
+    "eq:u_c01_synthesis_joint",
+    "eq:u_c01_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_001_end_compactified_additive_continuum_field/falsification_checks/test_end_compactified_additive_continuum_field_falsification.py"
+  ],
+  "first_label": "app:drv_uncountable_c01",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "end_compactified_additive_continuum_field",
+  "source_complex_ids": [
+    "binary_supported_continuous_superposition_and_atom_phase_translation",
+    "prefix_tree_dense_reconstruction"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_001_end_compactified_additive_continuum_field/falsification_checks/test_end_compactified_additive_continuum_field_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Boundary-Field–Coherent-Tower Isomorphism",
+    "left": "Uniform Ray Convergence to a Continuum Additive Field",
+    "right": "Finite Field Shadows with Continuum Cylindrical Fibres"
+  },
+  "theorem_titles_tex": {
+    "cross": "Boundary-Field--Coherent-Tower Isomorphism",
+    "left": "Uniform Ray Convergence to a Continuum Additive Field",
+    "right": "Finite Field Shadows with Continuum Cylindrical Fibres"
+  }
+}

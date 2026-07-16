@@ -1,0 +1,162 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 47,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "scheduled_spectral_history",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/1b/exact_scheduled_spectral_coding.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/2b/fixed_sector_preservation_and_orbitwise_coding.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/1b2b/pure_to_affine_history_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_flowpoint_b01_binary_history_carrier",
+    "eq:drv_flowpoint_b01_schedule",
+    "eq:drv_flowpoint_b01_schedule_parity",
+    "eq:drv_flowpoint_b01_encoder_type_1b",
+    "eq:drv_flowpoint_b01_encoder_1b",
+    "eq:drv_flowpoint_b01_decoder_1b",
+    "eq:drv_flowpoint_b01_spectral_code_1b",
+    "eq:drv_flowpoint_b01_exact_sample_1b",
+    "eq:drv_flowpoint_b01_inverse_laws_1b",
+    "eq:drv_flowpoint_b01_code_identity_1b",
+    "eq:drv_flowpoint_b01_first_difference_1b",
+    "eq:drv_flowpoint_b01_prefix_agreement_1b",
+    "eq:drv_flowpoint_b01_first_spectral_difference_1b",
+    "eq:drv_flowpoint_b01_coefficient_recovery_1b",
+    "eq:drv_flowpoint_b01_binary_ultrametric_1b",
+    "eq:drv_flowpoint_b01_isometry_1b",
+    "eq:drv_flowpoint_b01_harmonic_sampling_1b",
+    "eq:drv_flowpoint_b01_two_state_history_paradox_1b",
+    "eq:drv_flowpoint_b01_synthesis_1b",
+    "eq:drv_flowpoint_b01_principle_1b",
+    "eq:drv_flowpoint_b01_general_spectral_state_2b",
+    "eq:drv_flowpoint_b01_affine_encoder_type_2b",
+    "eq:drv_flowpoint_b01_affine_encoder_2b",
+    "eq:drv_flowpoint_b01_affine_decoder_2b",
+    "eq:drv_flowpoint_b01_affine_sample_2b",
+    "eq:drv_flowpoint_b01_projected_samples_2b",
+    "eq:drv_flowpoint_b01_affine_left_inverse_2b",
+    "eq:drv_flowpoint_b01_projector_recovery_2b",
+    "eq:drv_flowpoint_b01_orientation_recovery_2b",
+    "eq:drv_flowpoint_b01_constant_spectral_imbalance_2b",
+    "eq:drv_flowpoint_b01_orbit_transfer_2b",
+    "eq:drv_flowpoint_b01_static_invariant_paradox_2b",
+    "eq:drv_flowpoint_b01_synthesis_2b",
+    "eq:drv_flowpoint_b01_principle_2b",
+    "eq:drv_flowpoint_b01_affine_translation_joint",
+    "eq:drv_flowpoint_b01_affine_retraction_joint",
+    "eq:drv_flowpoint_b01_residual_joint",
+    "eq:drv_flowpoint_b01_affine_inverse_joint",
+    "eq:drv_flowpoint_b01_encoder_intertwining_joint",
+    "eq:drv_flowpoint_b01_residual_characterization_joint",
+    "eq:drv_flowpoint_b01_projector_translation_joint",
+    "eq:drv_flowpoint_b01_involution_translation_joint",
+    "eq:drv_flowpoint_b01_commuting_diagram_joint",
+    "eq:drv_flowpoint_b01_code_invariance_joint",
+    "eq:drv_flowpoint_b01_same_code_paradox_joint",
+    "eq:drv_flowpoint_b01_synthesis_joint",
+    "eq:drv_flowpoint_b01_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/falsification_checks/test_scheduled_spectral_history_falsification.py"
+  ],
+  "first_label": "app:drv_flowpoint_b01",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/b_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/1b/exact_scheduled_spectral_coding.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/2b/fixed_sector_preservation_and_orbitwise_coding.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/1b2b/pure_to_affine_history_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "decoded anti-invariant samples",
+      "name": "scheduled spectral history",
+      "python_types": [
+        "ScheduledSpectralHistory"
+      ]
+    },
+    "domain": {
+      "description": "complete binary schedule and nonzero anti-invariant state",
+      "name": "scheduled history input",
+      "python_types": [
+        "ScheduledHistoryInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.b_level.scheduled_history_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.b_level.scheduled_history_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "scheduled_spectral_history",
+  "source_complex_ids": [
+    "self_negating_oscillation_and_eigenstructure",
+    "parity_to_bit_equivalence_and_2_adic_coding"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_flowpoint_contracts.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_001_scheduled_spectral_history/falsification_checks/test_scheduled_spectral_history_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Pure-to-Affine History Equivalence",
+    "left": "Exact Scheduled Spectral Coding",
+    "right": "Fixed-Sector Preservation and Orbitwise Coding"
+  },
+  "theorem_titles_tex": {
+    "cross": "Pure-to-Affine History Equivalence",
+    "left": "Exact Scheduled Spectral Coding",
+    "right": "Fixed-Sector Preservation and Orbitwise Coding"
+  }
+}

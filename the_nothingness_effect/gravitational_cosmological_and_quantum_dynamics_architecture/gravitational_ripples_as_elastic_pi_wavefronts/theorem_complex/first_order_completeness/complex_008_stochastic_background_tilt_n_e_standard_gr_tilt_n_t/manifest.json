@@ -1,0 +1,134 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 37,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_008_stochastic_background_tilt_n_e_standard_gr_tilt_n_t/1a/operational_transport_tilt.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_008_stochastic_background_tilt_n_e_standard_gr_tilt_n_t/2a/conserved_gr_tilt.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_008_stochastic_background_tilt_n_e_standard_gr_tilt_n_t/1a2a/stochastic_background_tilt_elastic_pi_transport_vs_gr.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw08_stochastic_tilt_order_parameter_1a",
+    "eq:grw08_stochastic_tilt_branch_condition_1a",
+    "eq:nonzero_delta_n_interval_1a",
+    "eq:transfer_reconstruct_1a",
+    "eq:tilt_running_1a",
+    "eq:series_running_1a",
+    "eq:tilt_diff_lemma_1a",
+    "eq:tilt_running_lemma_1a",
+    "eq:proof_nonzero_delta_n_1a",
+    "eq:calc_chain_rule_expansion_1a",
+    "eq:calc_delta_n_from_chain_1a",
+    "eq:cor_transfer_int_1a",
+    "eq:cor_transfer_solution_1a",
+    "eq:grw08_stochastic_tilt_order_parameter_2a",
+    "eq:grw08_stochastic_tilt_branch_condition_2a",
+    "eq:transfer_identity_2a",
+    "eq:delta_n_zero_2a",
+    "eq:tilt_running_zero_2a",
+    "eq:gr_limit_transfer_2a",
+    "eq:gr_limit_slope_2a",
+    "eq:proof_tilt_equal_2a",
+    "eq:calc_running_zero_from_T_one_2a",
+    "eq:calc_constant_diff_zero_2a",
+    "eq:null_offset_direct_2a",
+    "eq:null_offset_running_2a",
+    "eq:grw08_stochastic_tilt_status_1a2a",
+    "eq:sgwb_transfer_1a2a",
+    "eq:tilt_decomposition_1a2a",
+    "eq:delta_n_def_1a2a",
+    "eq:tilt_calculus_defs_1a2a",
+    "eq:delta_n_calculus_1a2a",
+    "eq:equivalence_1a2a",
+    "eq:equivalence_calculus_1a2a",
+    "eq:proof_logdiff_1a2a",
+    "eq:calc_second_derivative_equivalence_1a2a",
+    "eq:identifiability_condition_1a2a",
+    "eq:band_integral_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_008_stochastic_background_tilt_n_e_standard_gr_tilt_n_t/falsification_checks/test_stochastic_background_tilt_n_e_standard_gr_tilt_n_t_falsification.py"
+  ],
+  "first_label": "ssec:sgwb_tilt_transport_vs_gr_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_008_stochastic_background_tilt_n_e_standard_gr_tilt_n_t/falsification_checks/test_stochastic_background_tilt_n_e_standard_gr_tilt_n_t_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Stochastic Background Tilt: Elastic-pi Transport vs.\\ GR",
+    "left": "Operational Transport Tilt",
+    "right": "Conserved GR Tilt"
+  },
+  "theorem_titles_tex": {
+    "cross": "Stochastic Background Tilt: Elastic-$\\pi$ Transport vs.\\ GR",
+    "left": "Operational Transport Tilt (1A)",
+    "right": "Conserved GR Tilt (2A)"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_006_dfiflowpoint_consistency_and_interface_inconsistency/1a/dfi_flowpoint_consistency_theorem.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_006_dfiflowpoint_consistency_and_interface_inconsistency/2a/dfi_flowpoint_inconsistency_theorem.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_006_dfiflowpoint_consistency_and_interface_inconsistency/1a2a/complete_dfiflowpoint_bridge_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dfi06_interface_maps_1a2a",
+    "eq:dfi06_dfi_output_1a2a",
+    "eq:dfi06_consistency_relation_1a2a",
+    "eq:dfi06_compatibility_definition_1a",
+    "eq:dfi06_component_consistency_1a",
+    "eq:dfi06_total_consistency_1a",
+    "eq:dfi06_commuting_diagram_1a",
+    "eq:dfi06_synthesis_1a",
+    "eq:dfi06_component_defect_2a",
+    "eq:dfi06_vector_defect_2a",
+    "eq:dfi06_noncommuting_interface_2a",
+    "eq:dfi06_inconsistent_vectors_2a",
+    "eq:dfi06_defect_decomposition_2a",
+    "eq:dfi06_synthesis_2a",
+    "eq:dfi06_bridge_tuple_1a2a",
+    "eq:dfi06_bridge_dichotomy_1a2a",
+    "eq:dfi06_norm_zero_criterion_1a2a",
+    "eq:dfi06_consistency_score_1a2a",
+    "eq:dfi06_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_006_dfiflowpoint_consistency_and_interface_inconsistency/falsification_checks/test_dfi_flowpoint_consistency_and_interface_inconsistency_falsification.py"
+  ],
+  "first_label": "app:dfi_complex_06",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dfi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_006_dfiflowpoint_consistency_and_interface_inconsistency/falsification_checks/test_dfi_flowpoint_consistency_and_interface_inconsistency_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete DFI–Flowpoint Bridge Classification",
+    "left": "DFI-Flowpoint Consistency Theorem",
+    "right": "DFI-Flowpoint Inconsistency Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete DFI--Flowpoint Bridge Classification",
+    "left": "DFI-Flowpoint Consistency Theorem",
+    "right": "DFI-Flowpoint Inconsistency Theorem"
+  }
+}

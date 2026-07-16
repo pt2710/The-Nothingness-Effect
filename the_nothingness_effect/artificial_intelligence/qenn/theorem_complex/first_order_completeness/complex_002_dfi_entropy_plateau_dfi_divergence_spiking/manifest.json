@@ -1,0 +1,158 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_entropy_plateau_dfi_divergence_spiking",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/1a/dfi_entropy_plateau.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/2a/dfi_divergence_spiking.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/1a2a/dfi_entropy_plateau_dfi_divergence_spiking.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dfi_entropy_plateau_algebraic_align_1a",
+    "eq:dfi_entropy_plateau_algebraic_equation_1a",
+    "eq:dfi_entropy_plateau_calculus_align_1a",
+    "eq:dfi_entropy_plateau_calculus_equation_1a",
+    "eq:pv_contraction_uniformization_algebraic_align_1a",
+    "eq:pv_contraction_uniformization_algebraic_equation_1a",
+    "eq:pv_contraction_uniformization_calculus_align_1a",
+    "eq:pv_contraction_uniformization_calculus_equation_1a",
+    "eq:bounded_flux_plateau_algebraic_align_1a",
+    "eq:bounded_flux_plateau_algebraic_equation_1a",
+    "eq:bounded_flux_plateau_calculus_align_1a",
+    "eq:bounded_flux_plateau_calculus_equation_1a",
+    "eq:batch_size_plateau_algebraic_align_1a",
+    "eq:batch_size_plateau_algebraic_equation_1a",
+    "eq:batch_size_plateau_calculus_align_1a",
+    "eq:batch_size_plateau_calculus_equation_1a",
+    "eq:dfi_divergence_spiking_algebraic_align_2a",
+    "eq:dfi_divergence_spiking_algebraic_equation_2a",
+    "eq:dfi_divergence_spiking_calculus_align_2a",
+    "eq:dfi_divergence_spiking_calculus_equation_2a",
+    "eq:bias_heavytail_instability_algebraic_align_2a",
+    "eq:bias_heavytail_instability_algebraic_equation_2a",
+    "eq:bias_heavytail_instability_calculus_align_2a",
+    "eq:bias_heavytail_instability_calculus_equation_2a",
+    "eq:spike_persistence_algebraic_align_2a",
+    "eq:spike_persistence_algebraic_equation_2a",
+    "eq:spike_persistence_calculus_align_2a",
+    "eq:spike_persistence_calculus_equation_2a",
+    "eq:adversarial_sensitivity_algebraic_align_2a",
+    "eq:adversarial_sensitivity_algebraic_equation_2a",
+    "eq:adversarial_sensitivity_calculus_align_2a",
+    "eq:adversarial_sensitivity_calculus_equation_2a",
+    "eq:dfi_entropy_plateau_algebraic_align_1a2a",
+    "eq:dfi_entropy_plateau_algebraic_equation_1a2a",
+    "eq:dfi_entropy_plateau_calculus_align_1a2a",
+    "eq:dfi_entropy_plateau_calculus_equation_1a2a",
+    "eq:plateau_divergence_dichotomy_algebraic_align_1a2a",
+    "eq:plateau_divergence_dichotomy_algebraic_equation_1a2a",
+    "eq:plateau_divergence_dichotomy_calculus_align_1a2a",
+    "eq:plateau_divergence_dichotomy_calculus_equation_1a2a",
+    "eq:plateau_vs_spiking_algebraic_align_1a2a",
+    "eq:plateau_vs_spiking_algebraic_equation_1a2a",
+    "eq:plateau_vs_spiking_calculus_align_1a2a",
+    "eq:plateau_vs_spiking_calculus_equation_1a2a",
+    "eq:diagnostic_certification_rule_algebraic_align_1a2a",
+    "eq:diagnostic_certification_rule_algebraic_equation_1a2a",
+    "eq:diagnostic_certification_rule_calculus_align_1a2a",
+    "eq:diagnostic_certification_rule_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/falsification_checks/test_dfi_entropy_plateau_dfi_divergence_spiking_falsification.py"
+  ],
+  "first_label": "app:qenn_complex_02",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/1a/dfi_entropy_plateau.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/2a/dfi_divergence_spiking.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/1a2a/dfi_entropy_plateau_dfi_divergence_spiking.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed QENN response, invariant residual, and failure condition",
+      "name": "dfi_entropy_plateau_dfi_divergence_spiking source law",
+      "python_types": [
+        "QENNSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite rank-two training state and positive residual weights",
+      "name": "QENN training field",
+      "python_types": [
+        "QENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.qenn.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.qenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "dfi_entropy_plateau_dfi_divergence_spiking",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_qenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_002_dfi_entropy_plateau_dfi_divergence_spiking/falsification_checks/test_dfi_entropy_plateau_dfi_divergence_spiking_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "DFI Entropy Plateau <-> DFI Divergence / Spiking",
+    "left": "DFI Entropy Plateau",
+    "right": "DFI Divergence / Spiking"
+  },
+  "theorem_titles_tex": {
+    "cross": "DFI Entropy Plateau $\\leftrightarrow$ DFI Divergence / Spiking (1A $\\leftrightarrow$ 2A)",
+    "left": "DFI Entropy Plateau (1A)",
+    "right": "DFI Divergence / Spiking (2A)"
+  }
+}

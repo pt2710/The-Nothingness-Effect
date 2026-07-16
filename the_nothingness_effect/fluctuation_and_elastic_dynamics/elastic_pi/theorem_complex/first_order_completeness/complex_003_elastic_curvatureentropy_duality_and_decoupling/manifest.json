@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_curvature_entropy_duality_and_decoupling",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/1a/elastic_pi_curvatureentropy_link.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/2a/entropycurvature_decoupling_theorem.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/1a2a/elastic_pi_curvatureentropy_duality_decoupling.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:elastic_pi03_preserved_field_1a2a",
+    "eq:elastic_pi03_forward_operator_1a2a",
+    "eq:elastic_pi03_delta_1a2a",
+    "eq:elastic_pi_coupling_1a2a",
+    "eq:elastic_pi03_injective_constraint_1a",
+    "eq:elastic_pi_curvature_linear_1a",
+    "eq:elastic_pi_curvature_entropy_1a",
+    "eq:elastic_pi_linear_1a2a",
+    "eq:lemma_linear_laplacian_1a",
+    "eq:corollary_proportionality_1a",
+    "eq:elastic_pi03_synthesis_1a",
+    "eq:entropy_curvature_undefined_2a",
+    "eq:entropy_curvature_breakdown_2a",
+    "eq:lemma_entropy_curvature_decoupling_2a",
+    "eq:elastic_pi03_synthesis_2a",
+    "eq:elastic_pi03_interface_tuple_1a2a",
+    "eq:elastic_pi_breakdown_1a2a",
+    "eq:dual_lemma_1a2a",
+    "eq:elastic_pi03_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/falsification_checks/test_elastic_curvature_entropy_duality_and_decoupling_falsification.py"
+  ],
+  "first_label": "app:elastic_pi_complex_03",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/1a/elastic_pi_curvatureentropy_link.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/2a/entropycurvature_decoupling_theorem.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/1a2a/elastic_pi_curvatureentropy_duality_decoupling.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "forward proxy and entropy reconstruction",
+      "name": "curvature-entropy duality",
+      "python_types": [
+        "CurvatureEntropyDuality"
+      ]
+    },
+    "domain": {
+      "description": "finite one-dimensional entropy field, K_D > 0, and declared coordinates",
+      "name": "Elastic-pi source",
+      "python_types": [
+        "ElasticPiInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.duality_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py"
+  ],
+  "source_complex_id": "elastic_curvature_entropy_duality_and_decoupling",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_elastic_pi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_003_elastic_curvatureentropy_duality_and_decoupling/falsification_checks/test_elastic_curvature_entropy_duality_and_decoupling_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic pi Curvature–Entropy Duality <-> Decoupling",
+    "left": "Elastic pi Curvature–Entropy Link",
+    "right": "Entropy–Curvature Decoupling Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic $\\pi$ Curvature--Entropy Duality $\\leftrightarrow$ Decoupling",
+    "left": "Elastic $\\pi$ Curvature--Entropy Link",
+    "right": "Entropy--Curvature Decoupling Theorem"
+  }
+}

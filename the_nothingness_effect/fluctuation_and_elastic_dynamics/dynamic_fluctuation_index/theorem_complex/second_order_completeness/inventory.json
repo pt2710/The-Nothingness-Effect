@@ -1,0 +1,21 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "scale_normalized_dfi_homogeneity_invariant",
+      "directory": "complex_001_scale_normalized_dfi_homogeneity_invariant",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "entropic_applicability_response_operator",
+      "directory": "complex_002_entropic_applicability_response_operator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "flowpoint_certified_dfi_validation_functional",
+      "directory": "complex_003_flowpoint_certified_dfi_validation_functional",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index"
+}

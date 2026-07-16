@@ -1,0 +1,138 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 37,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_002_involutive_collapsespectral_pinning_and_spectral_drift/1b/involutive_collapsespectral_pinning.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_002_involutive_collapsespectral_pinning_and_spectral_drift/2b/spectral_drift_oblique_pinning_and_non_convergence.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_002_involutive_collapsespectral_pinning_and_spectral_drift/1b2b/collapsespectral_pinning_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:isp_canonical_observation_collapse_1b2b",
+    "eq:isp_cesaro_operator_1b2b",
+    "eq:isp_canonical_hilbert_assignment_1b2b",
+    "eq:isp_source_dual_complexes_1b2b",
+    "eq:isp_source_branch_identification_1b2b",
+    "eq:isp_positive_branch_composition_1b",
+    "eq:isp_negative_branch_composition_2b",
+    "eq:isp_branch_exchange_1b2b",
+    "eq:isp_branch_exchange_closure_1b2b",
+    "eq:isp_pinned_operator_conditions_1b",
+    "eq:isp_projector_pair_1b",
+    "eq:isp_pinned_collapse_value_1b",
+    "eq:isp_spectral_decomposition_1b",
+    "eq:isp_orthogonal_projector_identities_1b",
+    "eq:isp_operator_norm_collapse_1b",
+    "eq:isp_canonical_pinned_output_1b",
+    "eq:isp_exact_parity_formula_1b",
+    "eq:isp_convergence_rate_1b",
+    "eq:isp_two_rail_functional_calculus_1b",
+    "eq:isp_fixed_antifixed_split_1b",
+    "eq:isp_synthesis_chain_1b",
+    "eq:std_isp_principle_1b",
+    "eq:isp_primary_defects_2b",
+    "eq:isp_convergence_defect_2b",
+    "eq:isp_limit_defects_2b",
+    "eq:isp_idempotence_defect_2b",
+    "eq:isp_oblique_involution_2b",
+    "eq:isp_oblique_projection_2b",
+    "eq:isp_leakage_vector_2b",
+    "eq:isp_synthesis_chain_2b",
+    "eq:std_isp_principle_2b",
+    "eq:isp_joint_status_tuple_1b2b",
+    "eq:isp_complete_pinning_criterion_1b2b",
+    "eq:isp_involution_orthogonality_equivalence_1b2b",
+    "eq:isp_joint_canonical_assignment_1b2b",
+    "eq:isp_joint_synthesis_1b2b",
+    "eq:std_isp_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_002_involutive_collapsespectral_pinning_and_spectral_drift/falsification_checks/test_involutive_collapse_spectral_pinning_and_spectral_drift_falsification.py"
+  ],
+  "first_label": "app:obs_symmetry_involutive_spectral_pinning",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift",
+  "source_complex_ids": [
+    "hilbert_projection_realization_and_projection_breakdown",
+    "ergodic_collapse_projection_and_non_convergence",
+    "observation_definiteness_equivalence_and_closure_failure"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_002_involutive_collapsespectral_pinning_and_spectral_drift/falsification_checks/test_involutive_collapse_spectral_pinning_and_spectral_drift_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Collapse–Spectral Pinning Classification",
+    "left": "Involutive Collapse–Spectral Pinning",
+    "right": "Spectral Drift, Oblique Pinning, and Non-Convergence"
+  },
+  "theorem_titles_tex": {
+    "cross": "Collapse--Spectral Pinning Classification",
+    "left": "Involutive Collapse--Spectral Pinning",
+    "right": "Spectral Drift, Oblique Pinning, and Non-Convergence"
+  }
+}

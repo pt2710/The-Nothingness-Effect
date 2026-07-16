@@ -1,0 +1,144 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 49,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_004_recursive_cantor_space_universality_and_finite_resolution_collapse/1a/cantor_space_universality_of_flowpoint_recursion.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_004_recursive_cantor_space_universality_and_finite_resolution_collapse/2a/finite_resolution_minimality_under_prefix_projection.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_004_recursive_cantor_space_universality_and_finite_resolution_collapse/1a2a/continuum_reconstruction_from_coherent_finite_projections.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:uncountable_recursive_binary_code_space_1a2a",
+    "eq:uncountable_recursive_binary_cylinder_1a2a",
+    "eq:uncountable_recursive_cantor_encoder_1a2a",
+    "eq:uncountable_recursive_cantor_homeomorphism_1a2a",
+    "eq:uncountable_recursive_trajectory_space_1a2a",
+    "eq:uncountable_recursive_flowpoint_trajectory_encoder_1a2a",
+    "eq:uncountable_recursive_flowpoint_carrier_1a2a",
+    "eq:uncountable_recursive_flowpoint_carrier_definition_1a",
+    "eq:uncountable_recursive_flowpoint_target_definition_1a",
+    "eq:uncountable_recursive_target_surjection_1a",
+    "eq:uncountable_recursive_compact_continuum_cardinality_1a",
+    "eq:uncountable_cantor_surjection_map_1a",
+    "eq:uncountable_nested_closed_covers_1a",
+    "eq:uncountable_nested_intersection_singleton_1a",
+    "eq:uncountable_recursive_target_map_construction_1a",
+    "eq:uncountable_recursive_distance_map_1a",
+    "eq:uncountable_recursive_continuum_lower_bound_1a",
+    "eq:uncountable_recursive_continuum_upper_bound_1a",
+    "eq:uncountable_recursive_continuum_surjection_1a",
+    "eq:uncountable_recursive_continuum_equal_cardinality_1a",
+    "eq:uncountable_recursive_universality_synthesis_1a",
+    "eq:uncountable_recursive_universality_principle_1a",
+    "eq:uncountable_prefix_projection_code_2a",
+    "eq:uncountable_prefix_projection_trajectory_2a",
+    "eq:uncountable_prefix_equivalence_relation_2a",
+    "eq:uncountable_finite_resolution_vocabulary_2a",
+    "eq:uncountable_finite_projection_quotient_2a",
+    "eq:uncountable_finite_projection_quotient_cardinality_2a",
+    "eq:uncountable_finite_projection_fibre_cardinality_2a",
+    "eq:uncountable_finite_resolution_vocabulary_cardinality_2a",
+    "eq:uncountable_cylinder_partition_2a",
+    "eq:uncountable_cylinder_homeomorphism_2a",
+    "eq:uncountable_cylinder_cardinality_2a",
+    "eq:uncountable_prefix_concatenation_homeomorphism_2a",
+    "eq:uncountable_finite_resolution_union_2a",
+    "eq:uncountable_finite_observation_many_to_one_2a",
+    "eq:uncountable_finite_projection_synthesis_2a",
+    "eq:uncountable_finite_projection_principle_2a",
+    "eq:uncountable_prefix_bonding_map_1a2a",
+    "eq:uncountable_prefix_inverse_limit_definition_1a2a",
+    "eq:uncountable_coherent_observation_map_1a2a",
+    "eq:uncountable_inverse_limit_homeomorphism_1a2a",
+    "eq:uncountable_inverse_limit_cardinality_1a2a",
+    "eq:uncountable_finite_stages_countable_total_1a2a",
+    "eq:uncountable_prefix_equality_characterization_1a2a",
+    "eq:uncountable_finite_descriptor_countable_1a2a",
+    "eq:uncountable_coherent_thread_continuum_1a2a",
+    "eq:uncountable_inverse_limit_synthesis_1a2a",
+    "eq:uncountable_recursive_projection_dual_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_004_recursive_cantor_space_universality_and_finite_resolution_collapse/falsification_checks/test_recursive_cantor_space_universality_and_finite_resolution_collapse_falsification.py"
+  ],
+  "first_label": "subsec:uncountable_infinity_recursive_universality_finite_projection_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_004_recursive_cantor_space_universality_and_finite_resolution_collapse/falsification_checks/test_recursive_cantor_space_universality_and_finite_resolution_collapse_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Continuum Reconstruction from Coherent Finite Projections",
+    "left": "Cantor-Space Universality of Flowpoint Recursion",
+    "right": "Finite-Resolution Minimality under Prefix Projection"
+  },
+  "theorem_titles_tex": {
+    "cross": "Continuum Reconstruction from Coherent Finite Projections",
+    "left": "Cantor-Space Universality of Flowpoint Recursion",
+    "right": "Finite-Resolution Minimality under Prefix Projection"
+  }
+}

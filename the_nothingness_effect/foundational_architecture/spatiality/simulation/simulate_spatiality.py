@@ -24,14 +24,10 @@ This script assumes the presence of the spatiality.py module in an appropriate
 directory structure.
 """
 import os
-import sys
 import numpy as np
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
 script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, script_dir)
-
 import csv
 import time
 from tqdm import tqdm

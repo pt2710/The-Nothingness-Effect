@@ -1,0 +1,19 @@
+'Authoritative theorem title: Complete Dubler Ratio Branch Classification.'
+
+from the_nothingness_effect._runtime.theorem_complex_runtime.generated import TheoremComponent, TheoremRole
+
+
+COMPONENT = TheoremComponent(
+    complex_id='elastic_dubler_duality_closure',
+    role=TheoremRole.CROSS,
+    authoritative_title='Complete Dubler Ratio Branch Classification',
+    authoritative_title_tex='Complete Dubler Ratio Branch Classification',
+    equation_labels=('eq:ed01_duality_status_1a2a', 'eq:ed01_duality_complete_equiv_1a2a', 'eq:ed01_duality_closure_1a2a'),
+    implementation_status='implemented',
+)
+
+
+def evaluate(value, *, parameters=None):
+    """Evaluate through the registered complete contract or fail closed."""
+
+    return COMPONENT.evaluate(value, parameters=parameters)

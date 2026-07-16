@@ -1,0 +1,105 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "closure_conditioned_spectral_outcome_field",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/third_order_completeness/complex_004_closure_conditioned_spectral_outcome_field/1c/orthogonal_outcome_resolution_of_the_invariant_sector.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/third_order_completeness/complex_004_closure_conditioned_spectral_outcome_field/2c/classification_of_spectral_outcome_field_failure.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/third_order_completeness/complex_004_closure_conditioned_spectral_outcome_field/1c2c/exact_fielddefect_equivalence.py"
+  ],
+  "dependency_status": "not_directly_computable",
+  "equation_labels": [
+    "eq:drv_oac_c01_spatial_carrier",
+    "eq:drv_oac_c01_1c",
+    "eq:drv_oac_c01_theorem_1c",
+    "eq:drv_oac_c01_res_1c",
+    "eq:drv_oac_c01_2c",
+    "eq:drv_oac_c01_res_2c",
+    "eq:drv_oac_c01_joint",
+    "eq:drv_oac_c01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/third_order_completeness/complex_004_closure_conditioned_spectral_outcome_field/falsification_checks/test_closure_conditioned_spectral_outcome_field_falsification.py"
+  ],
+  "first_label": "app:drv_oac_c01",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "closure_conditioned_spectral_outcome_field",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/third_order_completeness/complex_004_closure_conditioned_spectral_outcome_field/falsification_checks/test_closure_conditioned_spectral_outcome_field_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Exact Field–Defect Equivalence",
+    "left": "Orthogonal Outcome Resolution of the Invariant Sector",
+    "right": "Classification of Spectral Outcome-Field Failure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Exact Field--Defect Equivalence",
+    "left": "Orthogonal Outcome Resolution of the Invariant Sector",
+    "right": "Classification of Spectral Outcome-Field Failure"
+  }
+}

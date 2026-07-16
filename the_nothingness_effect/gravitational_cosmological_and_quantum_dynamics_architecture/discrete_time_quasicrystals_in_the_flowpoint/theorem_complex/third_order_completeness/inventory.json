@@ -1,0 +1,21 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "elastic_parseval_quasicrystal_isometry",
+      "directory": "complex_001_elastic_parseval_quasicrystal_isometry",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_meyer_noise_stable_diffraction_closure",
+      "directory": "complex_002_parity_meyer_noise_stable_diffraction_closure",
+      "status": "blocked"
+    },
+    {
+      "complex_id": "certified_multiscale_dtqc_reconstruction_closure",
+      "directory": "complex_003_certified_multiscale_dtqc_reconstruction_closure",
+      "status": "blocked"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint"
+}

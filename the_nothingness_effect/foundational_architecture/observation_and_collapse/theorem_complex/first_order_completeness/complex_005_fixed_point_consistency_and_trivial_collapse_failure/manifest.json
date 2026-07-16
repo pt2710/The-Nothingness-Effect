@@ -1,0 +1,124 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 27,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "fixed_point_consistency_and_trivial_collapse_failure",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_005_fixed_point_consistency_and_trivial_collapse_failure/1a/fixed_point_consistency_of_closure_observation.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_005_fixed_point_consistency_and_trivial_collapse_failure/2a/fixed_point_failure_and_trivial_collapse_classification.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_005_fixed_point_consistency_and_trivial_collapse_failure/1a2a/closurefailure_dual_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:obs05_canonical_observation_collapse_1a2a",
+    "eq:obs05_canonical_lattice_realization_1a2a",
+    "eq:obs05_observation_map_1a2a",
+    "eq:obs05_monotone_1a",
+    "eq:obs05_extensive_1a",
+    "eq:obs05_idempotent_1a",
+    "eq:obs05_fixed_set_1a",
+    "eq:obs05_output_fixed_1a",
+    "eq:obs05_least_fixed_above_1a",
+    "eq:obs05_range_fixed_equality_1a",
+    "eq:obs05_general_range_fixed_identity_1a",
+    "eq:obs05_iteration_stability_1a",
+    "eq:obs05_synthesis_1a",
+    "eq:std_obs05_principle_1a",
+    "eq:obs05_idempotence_defect_2a",
+    "eq:obs05_monotonicity_defect_2a",
+    "eq:obs05_extensivity_defect_2a",
+    "eq:obs05_triviality_defect_2a",
+    "eq:obs05_reflection_example_2a",
+    "eq:obs05_no_false_implication_2a",
+    "eq:obs05_trivial_range_corollary_2a",
+    "eq:obs05_synthesis_2a",
+    "eq:std_obs05_principle_2a",
+    "eq:obs05_joint_status_tuple_1a2a",
+    "eq:obs05_exact_closure_criterion_1a2a",
+    "eq:obs05_joint_closure_defect_1a2a",
+    "eq:std_obs05_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_005_fixed_point_consistency_and_trivial_collapse_failure/falsification_checks/test_fixed_point_consistency_and_trivial_collapse_failure_falsification.py"
+  ],
+  "first_label": "app:obs_complex_05",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "fixed_point_consistency_and_trivial_collapse_failure",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_005_fixed_point_consistency_and_trivial_collapse_failure/falsification_checks/test_fixed_point_consistency_and_trivial_collapse_failure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Closure–Failure Dual Classification",
+    "left": "Fixed-Point Consistency of Closure Observation",
+    "right": "Fixed-Point Failure and Trivial-Collapse Classification"
+  },
+  "theorem_titles_tex": {
+    "cross": "Closure--Failure Dual Classification",
+    "left": "Fixed-Point Consistency of Closure Observation",
+    "right": "Fixed-Point Failure and Trivial-Collapse Classification"
+  }
+}

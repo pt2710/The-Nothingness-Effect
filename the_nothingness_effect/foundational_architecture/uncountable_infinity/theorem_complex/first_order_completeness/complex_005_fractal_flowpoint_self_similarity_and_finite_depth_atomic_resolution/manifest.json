@@ -1,0 +1,172 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 77,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_005_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution/1a/fractal_self_similarity_of_the_flowpoint_continuum.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_005_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution/2a/atomicity_irreducibility_under_finite_depth_collapse.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_005_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution/1a2a/inverse_limit_reconstruction_from_fractal_atomic_resolution.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:uncountable_fractal_binary_code_space_1a2a",
+    "eq:uncountable_fractal_cantor_encoder_1a2a",
+    "eq:uncountable_fractal_cantor_set_1a2a",
+    "eq:uncountable_fractal_cantor_homeomorphism_1a2a",
+    "eq:uncountable_fractal_similarity_generators_1a2a",
+    "eq:uncountable_fractal_word_similarity_1a2a",
+    "eq:uncountable_fractal_cantor_cell_1a2a",
+    "eq:uncountable_fractal_trajectory_space_1a2a",
+    "eq:uncountable_fractal_uniform_metric_1a2a",
+    "eq:uncountable_fractal_flowpoint_encoder_1a2a",
+    "eq:uncountable_fractal_flowpoint_carrier_1a2a",
+    "eq:uncountable_fractal_flowpoint_isometry_1a2a",
+    "eq:uncountable_fractal_trajectory_similarity_1a2a",
+    "eq:uncountable_fractal_trajectory_cell_1a2a",
+    "eq:uncountable_fractal_flowpoint_continuum_definition_1a",
+    "eq:uncountable_fractal_flowpoint_embeddings_1a",
+    "eq:uncountable_fractal_flowpoint_cell_definition_1a",
+    "eq:uncountable_fractal_recursive_self_similarity_definition_1a",
+    "eq:uncountable_fractal_two_branch_decomposition_1a",
+    "eq:uncountable_fractal_depth_m_decomposition_1a",
+    "eq:uncountable_fractal_cell_similarity_map_1a",
+    "eq:uncountable_fractal_cell_similarity_ratio_1a",
+    "eq:uncountable_fractal_cell_cardinality_1a",
+    "eq:uncountable_fractal_hausdorff_dimension_1a",
+    "eq:uncountable_fractal_prefix_similarity_identity_1a",
+    "eq:uncountable_fractal_trajectory_prefix_identity_1a",
+    "eq:uncountable_fractal_similarity_metric_identity_1a",
+    "eq:uncountable_fractal_cell_diameter_1a",
+    "eq:uncountable_fractal_unique_first_bit_decomposition_1a",
+    "eq:uncountable_fractal_first_level_cover_1a",
+    "eq:uncountable_fractal_iterated_cover_proof_1a",
+    "eq:uncountable_fractal_dimension_equation_1a",
+    "eq:uncountable_fractal_dimension_solution_1a",
+    "eq:uncountable_fractal_branch_homeomorphism_1a",
+    "eq:uncountable_fractal_branch_rescaled_isometry_1a",
+    "eq:uncountable_fractal_exact_self_similarity_synthesis_1a",
+    "eq:uncountable_fractal_principle_summary_1a",
+    "eq:uncountable_fractal_zero_tail_truncation_2a",
+    "eq:uncountable_fractal_atomic_projection_map_2a",
+    "eq:uncountable_fractal_atom_set_2a",
+    "eq:uncountable_fractal_resolution_equivalence_2a",
+    "eq:uncountable_fractal_projection_idempotence_2a",
+    "eq:uncountable_fractal_atom_count_2a",
+    "eq:uncountable_fractal_atomic_quotient_2a",
+    "eq:uncountable_fractal_projection_fibre_2a",
+    "eq:uncountable_fractal_atomic_fibre_cardinality_2a",
+    "eq:uncountable_fractal_projection_error_bound_2a",
+    "eq:uncountable_fractal_projection_prefix_equivalence_2a",
+    "eq:uncountable_fractal_projection_cell_membership_2a",
+    "eq:uncountable_fractal_projection_composition_law_2a",
+    "eq:uncountable_fractal_projection_tail_error_2a",
+    "eq:uncountable_fractal_truncation_idempotence_proof_2a",
+    "eq:uncountable_fractal_atom_count_proof_2a",
+    "eq:uncountable_fractal_geometric_tail_bound_2a",
+    "eq:uncountable_fractal_finite_atomic_resolution_2a",
+    "eq:uncountable_fractal_finite_atomic_resolution_synthesis_2a",
+    "eq:uncountable_fractal_atomicity_principle_summary_2a",
+    "eq:uncountable_fractal_atomic_resolution_tower_1a2a",
+    "eq:uncountable_fractal_bonding_map_1a2a",
+    "eq:uncountable_fractal_coherent_thread_condition_1a2a",
+    "eq:uncountable_fractal_joint_structure_definition_1a2a",
+    "eq:uncountable_fractal_inverse_limit_map_1a2a",
+    "eq:uncountable_fractal_inverse_limit_identification_1a2a",
+    "eq:uncountable_fractal_projection_convergence_1a2a",
+    "eq:uncountable_fractal_joint_error_rate_1a2a",
+    "eq:uncountable_fractal_joint_finite_stage_cardinality_1a2a",
+    "eq:uncountable_fractal_joint_inverse_limit_cardinality_1a2a",
+    "eq:uncountable_fractal_thread_word_representation_1a2a",
+    "eq:uncountable_fractal_thread_prefix_compatibility_1a2a",
+    "eq:uncountable_fractal_unique_infinite_code_1a2a",
+    "eq:uncountable_fractal_thread_projection_realization_1a2a",
+    "eq:uncountable_fractal_projection_thread_coherence_1a2a",
+    "eq:uncountable_fractal_inverse_limit_injectivity_1a2a",
+    "eq:uncountable_fractal_countable_union_atoms_1a2a",
+    "eq:uncountable_fractal_uncountable_coherent_threads_1a2a",
+    "eq:uncountable_fractal_atomicity_reconstruction_synthesis_1a2a",
+    "eq:uncountable_fractal_joint_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_005_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution/falsification_checks/test_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution_falsification.py"
+  ],
+  "first_label": "subsec:uncountable_infinity_fractal_self_similarity_atomic_resolution_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_005_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution/falsification_checks/test_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Inverse-Limit Reconstruction from Fractal Atomic Resolution",
+    "left": "Fractal Self-Similarity of the Flowpoint Continuum",
+    "right": "Atomicity/Irreducibility under Finite-Depth Collapse"
+  },
+  "theorem_titles_tex": {
+    "cross": "Inverse-Limit Reconstruction from Fractal Atomic Resolution",
+    "left": "Fractal Self-Similarity of the Flowpoint Continuum",
+    "right": "Atomicity/Irreducibility under Finite-Depth Collapse"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 11,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "boolean_decision_extension_consensus",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_004_boolean_decisionextension_consensus/1b/minimal_complete_boolean_algebra_of_resolved_and_unresolved_outcomes.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_004_boolean_decisionextension_consensus/2b/extensionconsensus_representation_theorem.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_004_boolean_decisionextension_consensus/1b2b/partial_rulerectangular_family_isomorphism.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:p7_b04_additive_derivation",
+    "eq:p7_b04_synthesis_1b",
+    "eq:p7_b04_principle_1b",
+    "eq:p7_b04_consensus_recovery",
+    "eq:p7_b04_synthesis_2b",
+    "eq:p7_b04_principle_2b",
+    "eq:p7_b04_joint_isomorphism",
+    "eq:p7_b04_joint_atom_recovery",
+    "eq:p7_b04_corollary_joint",
+    "eq:p7_b04_synthesis_joint",
+    "eq:p7_b04_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_004_boolean_decisionextension_consensus/falsification_checks/test_boolean_decision_extension_consensus_falsification.py"
+  ],
+  "first_label": "app:drv_uncountable_b04",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "boolean_decision_extension_consensus",
+  "source_complex_ids": [
+    "complete_boolean_algebra_missing_complements_and_generated_completion",
+    "operational_coarse_graining_and_persistence_of_unresolved_distinctions"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_004_boolean_decisionextension_consensus/falsification_checks/test_boolean_decision_extension_consensus_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Partial-Rule–Rectangular-Family Isomorphism",
+    "left": "Minimal Complete Boolean Algebra of Resolved and Unresolved Outcomes",
+    "right": "Extension–Consensus Representation Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Partial-Rule--Rectangular-Family Isomorphism",
+    "left": "Minimal Complete Boolean Algebra of Resolved and Unresolved Outcomes",
+    "right": "Extension--Consensus Representation Theorem"
+  }
+}

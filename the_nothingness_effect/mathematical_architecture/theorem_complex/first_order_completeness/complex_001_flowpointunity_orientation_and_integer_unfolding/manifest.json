@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "artifact_manifests": [
+    "the_nothingness_effect/mathematical_architecture/test/artifacts/manifest.json",
+    "the_nothingness_effect/mathematical_architecture/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 18,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "flowpoint_unity_orientation_and_integer_unfolding",
+  "component_modules": [
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/1a/equivariant_positive_orientation_transport.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/2a/equivariant_counter_orientation_transport.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/1a2a/dual_orientation_integer_reconstruction.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:tne_mpl_tc_chi_plus_1a",
+    "eq:tne_mpl_tc_positive_equivariance_1a",
+    "eq:tne_mpl_tc_orbit_transport_1a",
+    "eq:tne_mpl_tc_positive_spectrum_1a",
+    "eq:tne_mpl_tc_positive_synthesis_1a",
+    "eq:tne_mpl_tc_positive_principle_1a",
+    "eq:tne_mpl_tc_chi_minus_2a",
+    "eq:tne_mpl_tc_negative_equivariance_2a",
+    "eq:tne_mpl_tc_counter_orbit_transport_2a",
+    "eq:tne_mpl_tc_negative_spectrum_2a",
+    "eq:tne_mpl_tc_negative_synthesis_2a",
+    "eq:tne_mpl_tc_negative_principle_2a",
+    "eq:tne_mpl_tc_orientation_torsor_1a2a",
+    "eq:tne_mpl_tc_integer_reconstruction_1a2a",
+    "eq:tne_mpl_tc_orientation_reconstruction_1a2a",
+    "eq:tne_mpl_tc_dual_unity_1a2a",
+    "eq:tne_mpl_tc_joint_synthesis_1a2a",
+    "eq:tne_mpl_tc_dual_bridge_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/falsification_checks/test_flowpoint_unity_orientation_and_integer_unfolding_falsification.py"
+  ],
+  "first_label": "ssec:tne_mpl_tc_bridge_theorem_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/mathematical_architecture/a_level.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/1a/equivariant_positive_orientation_transport.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/2a/equivariant_counter_orientation_transport.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/1a2a/dual_orientation_integer_reconstruction.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "orientation in {-1,+1}",
+      "name": "orientation and unfolding",
+      "python_types": [
+        "OrientationResult"
+      ]
+    },
+    "domain": {
+      "description": "finite nonzero real value",
+      "name": "oriented nonzero scalar",
+      "python_types": [
+        "OrientationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.mathematical_architecture.a_level.orientation_unfolding",
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "mathematical_closure",
+  "owner_path": "the_nothingness_effect/mathematical_architecture",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/mathematical_architecture/simulation/run_suite.py",
+    "the_nothingness_effect/mathematical_architecture/simulation/simulate_mathematical_architecture.py"
+  ],
+  "source_complex_id": "flowpoint_unity_orientation_and_integer_unfolding",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_mathematical_closure_contracts.py",
+    "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
+    "the_nothingness_effect/mathematical_architecture/test/test_mathematical_architecture.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/first_order_completeness/complex_001_flowpointunity_orientation_and_integer_unfolding/falsification_checks/test_flowpoint_unity_orientation_and_integer_unfolding_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Dual-Orientation Integer Reconstruction",
+    "left": "Equivariant Positive-Orientation Transport",
+    "right": "Equivariant Counter-Orientation Transport"
+  },
+  "theorem_titles_tex": {
+    "cross": "Dual-Orientation Integer Reconstruction",
+    "left": "Equivariant Positive-Orientation Transport",
+    "right": "Equivariant Counter-Orientation Transport"
+  }
+}

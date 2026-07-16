@@ -1,0 +1,119 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 23,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction/1a/reconstruction_equivalence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction/2a/non_invertible_reconstruction.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction/1a2a/algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:orthogonality_lines_1a",
+    "eq:bohr_coeff_extract_1a",
+    "eq:kernel_triviality_1a",
+    "eq:proj_extract_1a",
+    "eq:iff_equivalence_1a",
+    "eq:round_trip_identity_1a",
+    "eq:residual_off_support_2a",
+    "eq:residual_energy_2a",
+    "eq:single_line_mismatch_2a",
+    "eq:residual_characterization_2a",
+    "eq:detect_violation_2a",
+    "eq:dtqc10_joint_status_1a2a",
+    "eq:q_support_def_1a2a",
+    "eq:time_series_def_1a2a",
+    "eq:spectral_measure_def_1a2a",
+    "eq:forward_map_1a2a",
+    "eq:inverse_map_1a2a",
+    "eq:mean_energy_limit_1a2a",
+    "eq:parseval_pp_1a2a",
+    "eq:stability_series_1a2a",
+    "eq:stability_measure_1a2a",
+    "eq:round_trip_equivalences_1a2a",
+    "eq:compression_certificate_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction/falsification_checks/test_algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_10",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction/falsification_checks/test_algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Algebraic–Analytic Reconstruction Equivalence <-> Non-Invertible Reconstruction",
+    "left": "Reconstruction Equivalence",
+    "right": "Non-Invertible Reconstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "Algebraic–Analytic Reconstruction Equivalence $\\leftrightarrow$ Non-Invertible Reconstruction",
+    "left": "Reconstruction Equivalence (1A)",
+    "right": "Non-Invertible Reconstruction (2A)"
+  }
+}

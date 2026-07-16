@@ -1,0 +1,133 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "artifact_manifests": [
+    "the_nothingness_effect/mathematical_architecture/test/artifacts/manifest.json",
+    "the_nothingness_effect/mathematical_architecture/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "addition_of_approximation_and_harmonic_geometry",
+  "component_modules": [
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/1b/uniform_phase_calibration_bound.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/2b/error_controlled_harmonic_reconstruction.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/1b2b/convergence_of_finite_phase_harmonic_reconstruction.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:fm_bag_phase_clocks",
+    "eq:fm_bag_phase_map_1b",
+    "eq:fm_bag_phase_error_1b",
+    "eq:fm_bag_harmonic_error_1b",
+    "eq:fm_bag_phase_grid_1b",
+    "eq:fm_bag_synthesis_1b",
+    "eq:fm_bag_principle_1b",
+    "eq:fm_bag_reconstruction_2b",
+    "eq:fm_bag_reconstruction_error_2b",
+    "eq:fm_bag_modewise_bound_2b",
+    "eq:fm_bag_finite_band_bound_2b",
+    "eq:fm_bag_synthesis_2b",
+    "eq:fm_bag_principle_2b",
+    "eq:fm_bag_joint_carrier",
+    "eq:fm_bag_joint_convergence",
+    "eq:fm_bag_joint_factorization",
+    "eq:fm_bag_joint_index",
+    "eq:fm_bag_joint_synthesis",
+    "eq:fm_bag_joint_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/falsification_checks/test_addition_of_approximation_and_harmonic_geometry_falsification.py"
+  ],
+  "first_label": "ssec:fm_bag_complex",
+  "implementation_modules": [
+    "the_nothingness_effect/mathematical_architecture/b_level.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/1b/uniform_phase_calibration_bound.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/2b/error_controlled_harmonic_reconstruction.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/1b2b/convergence_of_finite_phase_harmonic_reconstruction.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "approximate and exact phase fields with residual",
+      "name": "calibrated harmonic field",
+      "python_types": [
+        "ApproximationHarmonicResult"
+      ]
+    },
+    "domain": {
+      "description": "finite approximation and harmonic coefficients",
+      "name": "calibrated harmonic input",
+      "python_types": [
+        "ApproximationHarmonicInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.mathematical_architecture.b_level.approximation_harmonic_geometry",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.mathematical_architecture.b_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "mathematical_closure",
+  "owner_path": "the_nothingness_effect/mathematical_architecture",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/mathematical_architecture/simulation/run_suite.py",
+    "the_nothingness_effect/mathematical_architecture/simulation/simulate_mathematical_architecture.py"
+  ],
+  "source_complex_id": "addition_of_approximation_and_harmonic_geometry",
+  "source_complex_ids": [
+    "finite_approximation_and_vanishing_residual_energy",
+    "complex_phase_coordinates_and_fourier_reconstruction"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_mathematical_closure_contracts.py",
+    "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
+    "the_nothingness_effect/mathematical_architecture/test/test_mathematical_architecture.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/second_order_completeness/complex_002_addition_of_approximation_and_harmonic_geometry/falsification_checks/test_addition_of_approximation_and_harmonic_geometry_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Convergence of Finite-Phase Harmonic Reconstruction",
+    "left": "Uniform Phase Calibration Bound",
+    "right": "Error-Controlled Harmonic Reconstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "Convergence of Finite-Phase Harmonic Reconstruction",
+    "left": "Uniform Phase Calibration Bound",
+    "right": "Error-Controlled Harmonic Reconstruction"
+  }
+}

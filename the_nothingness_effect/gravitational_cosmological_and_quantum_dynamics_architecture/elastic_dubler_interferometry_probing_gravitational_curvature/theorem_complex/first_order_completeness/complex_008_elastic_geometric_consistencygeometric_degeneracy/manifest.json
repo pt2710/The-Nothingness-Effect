@@ -1,0 +1,151 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 55,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_geometric_consistency_geometric_degeneracy",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_008_elastic_geometric_consistencygeometric_degeneracy/1a/elastic_geometric_consistency.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_008_elastic_geometric_consistencygeometric_degeneracy/2a/geometric_degeneracy.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_008_elastic_geometric_consistencygeometric_degeneracy/1a2a/elastic_geometric_consistency_geometric_degeneracy.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:edi08_geometric_consistency_order_parameter_1a",
+    "eq:edi08_geometric_consistency_branch_condition_1a",
+    "eq:full_rank_stability_1a",
+    "eq:injectivity_consequence_1a",
+    "eq:ift_stability_1a",
+    "eq:jac_kernel_zero_1a",
+    "eq:lipschitz_implies_inj_1a",
+    "eq:c_positive_1a",
+    "eq:mean_value_bound_1a",
+    "eq:mv_lower_bound_1a",
+    "eq:well_posed_inversion_1a",
+    "eq:unique_geom_from_data_1a",
+    "eq:stable_reconstruction_near_1a",
+    "eq:local_inverse_exists_1a",
+    "eq:cor_1a_inverse_exists",
+    "eq:cor_1a_separation",
+    "eq:metric_reg_1a",
+    "eq:robust_inversion_1a",
+    "eq:edi08_geometric_consistency_order_parameter_2a",
+    "eq:edi08_geometric_consistency_branch_condition_2a",
+    "eq:rank_deficiency_2a",
+    "eq:ill_posed_2a",
+    "eq:kernel_nontrivial_2a",
+    "eq:flat_directions_2a",
+    "eq:null_direction_2a",
+    "eq:local_nonuniqueness_2a",
+    "eq:second_order_2a",
+    "eq:persistent_ambiguity_2a",
+    "eq:no_unique_inverse_2a",
+    "eq:ill_posed_consequence_2a",
+    "eq:indistinguishable_manifold_2a",
+    "eq:identifiability_fails_2a",
+    "eq:equiv_class_2a",
+    "eq:set_valued_inverse_2a",
+    "eq:dim_class_2a",
+    "eq:ambiguity_persists_2a",
+    "eq:edi08_geometric_consistency_status_1a2a",
+    "eq:elastic_geom_injectivity_1a2a",
+    "eq:elastic_geom_stability_1a2a",
+    "eq:elastic_geom_degeneracy_1a2a",
+    "eq:elastic_geom_dual_closure_1a2a",
+    "eq:jacobian_injectivity_1a2a",
+    "eq:jacobian_degeneracy_1a2a",
+    "eq:kernel_criterion_1a2a",
+    "eq:diagnostic_statement_1a2a",
+    "eq:rank_semicont_1a2a",
+    "eq:degeneracy_onset_1a2a",
+    "eq:rank_duality_1a2a",
+    "eq:dual_closure_conclusion_1a2a",
+    "eq:ift_regions_1a2a",
+    "eq:rank_partition_1a2a",
+    "eq:frontier_set_1a2a",
+    "eq:frontier_switch_1a2a",
+    "eq:det_frontier_1a2a",
+    "eq:generic_restoration_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_008_elastic_geometric_consistencygeometric_degeneracy/falsification_checks/test_elastic_geometric_consistency_geometric_degeneracy_falsification.py"
+  ],
+  "first_label": "ssec:elastic_geometric_consistency_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "elastic_geometric_consistency_geometric_degeneracy",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_008_elastic_geometric_consistencygeometric_degeneracy/falsification_checks/test_elastic_geometric_consistency_geometric_degeneracy_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic Geometric Consistency <-> Geometric Degeneracy",
+    "left": "Elastic Geometric Consistency",
+    "right": "Geometric Degeneracy"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic Geometric Consistency $\\leftrightarrow$ Geometric Degeneracy",
+    "left": "Elastic Geometric Consistency (1A)",
+    "right": "Geometric Degeneracy (2A)"
+  }
+}

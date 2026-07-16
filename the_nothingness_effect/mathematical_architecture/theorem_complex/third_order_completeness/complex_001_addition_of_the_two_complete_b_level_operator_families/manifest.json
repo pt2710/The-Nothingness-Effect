@@ -1,0 +1,135 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "artifact_manifests": [
+    "the_nothingness_effect/mathematical_architecture/test/artifacts/manifest.json",
+    "the_nothingness_effect/mathematical_architecture/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 21,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "addition_of_the_two_complete_b_level_operator_families",
+  "component_modules": [
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/1c/well_defined_signed_polar_field_synthesis.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/2c/exact_quotient_reconstruction.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/1c2c/equivariant_field_transport_and_calibration_convergence.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:fm_signed_polar_equivalence",
+    "eq:fm_signed_polar_carrier",
+    "eq:fm_signed_polar_realization",
+    "eq:fm_c_phase_field_1c",
+    "eq:fm_c_field_well_defined_1c",
+    "eq:fm_negative_radius_phase_reversal",
+    "eq:fm_c_unity_fields_1c",
+    "eq:fm_c_synthesis_1c",
+    "eq:fm_c_principle_1c",
+    "eq:fm_c_reconstruction_2c",
+    "eq:fm_c_inverse_relations_2c",
+    "eq:fm_c_initial_value_determination_2c",
+    "eq:fm_c_synthesis_2c",
+    "eq:fm_c_principle_2c",
+    "eq:fm_c_joint_carrier",
+    "eq:fm_c_induced_field_operator",
+    "eq:fm_third_order_completeness",
+    "eq:fm_c_gluing_recovery_joint",
+    "eq:fm_c_residual",
+    "eq:fm_c_joint_synthesis",
+    "eq:fm_c_joint_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/falsification_checks/test_addition_of_the_two_complete_b_level_operator_families_falsification.py"
+  ],
+  "first_label": "ssec:fm_c_complex",
+  "implementation_modules": [
+    "the_nothingness_effect/mathematical_architecture/c_level.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/1c/well_defined_signed_polar_field_synthesis.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/2c/exact_quotient_reconstruction.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/1c2c/equivariant_field_transport_and_calibration_convergence.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.mathematical_architecture.c_level.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "field, local gradients, boundary and reconstruction residuals",
+      "name": "calibrated complex field",
+      "python_types": [
+        "SignedPolarFieldResult"
+      ]
+    },
+    "domain": {
+      "description": "quotient-compatible radius, phase, and spatial times",
+      "name": "signed-polar spatial field",
+      "python_types": [
+        "SignedPolarFieldInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.mathematical_architecture.c_level.signed_polar_field",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.mathematical_architecture.c_level.field_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "mathematical_closure",
+  "owner_path": "the_nothingness_effect/mathematical_architecture",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/mathematical_architecture/simulation/run_suite.py",
+    "the_nothingness_effect/mathematical_architecture/simulation/simulate_mathematical_architecture.py"
+  ],
+  "source_complex_id": "addition_of_the_two_complete_b_level_operator_families",
+  "source_complex_ids": [
+    "addition_of_arithmetic_orientation_and_typed_operation_theory",
+    "addition_of_approximation_and_harmonic_geometry"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_mathematical_closure_contracts.py",
+    "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
+    "the_nothingness_effect/mathematical_architecture/test/test_mathematical_architecture.py",
+    "the_nothingness_effect/mathematical_architecture/theorem_complex/third_order_completeness/complex_001_addition_of_the_two_complete_b_level_operator_families/falsification_checks/test_addition_of_the_two_complete_b_level_operator_families_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Equivariant Field Transport and Calibration Convergence",
+    "left": "Well-Defined Signed-Polar Field Synthesis",
+    "right": "Exact Quotient Reconstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "Equivariant Field Transport and Calibration Convergence",
+    "left": "Well-Defined Signed-Polar Field Synthesis",
+    "right": "Exact Quotient Reconstruction"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 10,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "complement_invariant_fractal_skeleton_completion",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_003_complement_invariant_fractal_skeleton_completion/1b/countable_dual_skeleton_completes_to_the_self_similar_continuum.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_003_complement_invariant_fractal_skeleton_completion/2b/cauchy_classes_and_coherent_prefix_atoms_determine_the_same_point.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_003_complement_invariant_fractal_skeleton_completion/1b2b/equivariant_pointcompletion_isomorphism.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:p7_b03_additive_derivation",
+    "eq:p7_b03_cantor_reflection",
+    "eq:p7_b03_synthesis_1b",
+    "eq:p7_b03_principle_1b",
+    "eq:p7_b03_synthesis_2b",
+    "eq:p7_b03_principle_2b",
+    "eq:p7_b03_joint_isomorphism",
+    "eq:p7_b03_corollary_joint",
+    "eq:p7_b03_synthesis_joint",
+    "eq:p7_b03_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_003_complement_invariant_fractal_skeleton_completion/falsification_checks/test_complement_invariant_fractal_skeleton_completion_falsification.py"
+  ],
+  "first_label": "app:drv_uncountable_b03",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "complement_invariant_fractal_skeleton_completion",
+  "source_complex_ids": [
+    "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+    "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/second_order_completeness/complex_003_complement_invariant_fractal_skeleton_completion/falsification_checks/test_complement_invariant_fractal_skeleton_completion_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Equivariant Point–Completion Isomorphism",
+    "left": "Countable Dual Skeleton Completes to the Self-Similar Continuum",
+    "right": "Cauchy Classes and Coherent Prefix Atoms Determine the Same Point"
+  },
+  "theorem_titles_tex": {
+    "cross": "Equivariant Point--Completion Isomorphism",
+    "left": "Countable Dual Skeleton Completes to the Self-Similar Continuum",
+    "right": "Cauchy Classes and Coherent Prefix Atoms Determine the Same Point"
+  }
+}

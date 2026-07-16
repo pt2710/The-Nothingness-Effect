@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "involution_to_chord_linearization",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b/equivariant_linearization_of_an_involution.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/2b/parity_propagation_along_the_orbit_chord.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b2b/abstract_orbitaffine_chord_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:involution_chord_synthesis_operator",
+    "eq:free_vector_space_on_involution_1b",
+    "eq:canonical_linearized_involution_1b",
+    "eq:canonical_affine_orbit_embedding_1b",
+    "eq:canonical_affine_involution_1b",
+    "eq:canonical_affine_equivariance_1b",
+    "eq:canonical_orbit_midpoint_1b",
+    "eq:canonical_orbit_chord_1b",
+    "eq:canonical_orbit_chord_decomposition_1b",
+    "eq:canonical_chord_metric_1b",
+    "eq:involution_spatial_chord_synthesis_1b",
+    "eq:involution_spatial_chord_pair_synthesis_1b",
+    "eq:canonical_affine_realization_principle_1b",
+    "eq:canonical_affine_orbit_classification_principle_1b",
+    "eq:chord_recursion_field_2b",
+    "eq:parity_propagation_orbit_chord_2b",
+    "eq:chord_recursion_two_step_2b",
+    "eq:chord_midpoint_recovery_2b",
+    "eq:chord_opposition_recovery_2b",
+    "eq:recursive_symmetry_alternating_geometry_synthesis_2b",
+    "eq:recursive_chord_pair_inverse_synthesis_2b",
+    "eq:orbit_chord_recursion_principle_2b",
+    "eq:orbit_chord_reconstruction_principle_2b",
+    "eq:distinguished_basis_chord_realization_1b2b",
+    "eq:abstract_to_affine_chord_assignment_1b2b",
+    "eq:involution_reconstruction_from_chord_1b2b",
+    "eq:orbit_quotient_midpoint_locus_1b2b",
+    "eq:equivariant_linear_extension_1b2b",
+    "eq:equivariant_chord_intertwining_1b2b",
+    "eq:canonical_spatialization_synthesis_1b2b",
+    "eq:canonical_spatialization_inverse_synthesis_1b2b",
+    "eq:distinguished_basis_chord_reconstruction_principle_1b2b",
+    "eq:distinguished_basis_chord_recursion_principle_1b2b"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/falsification_checks/test_involution_to_chord_linearization_falsification.py"
+  ],
+  "first_label": "app:tne_found_involution_chord_linearization",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint_spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "involution_to_chord_linearization",
+  "source_complex_ids": [
+    "order_two_symmetry_recursion",
+    "affine_spatial_involution_orbit"
+  ],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/falsification_checks/test_involution_to_chord_linearization_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Abstract Orbit–Affine Chord Equivalence",
+    "left": "Equivariant Linearization of an Involution",
+    "right": "Parity Propagation along the Orbit Chord"
+  },
+  "theorem_titles_tex": {
+    "cross": "Abstract Orbit--Affine Chord Equivalence",
+    "left": "Equivariant Linearization of an Involution",
+    "right": "Parity Propagation along the Orbit Chord"
+  }
+}

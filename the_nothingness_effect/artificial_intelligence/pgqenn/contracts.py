@@ -28,7 +28,7 @@ from .growth_law import PrimeGraph
 
 
 APPENDIX = "appendix_tne_artificial_intelligence_architechture.tex"
-APPENDIX_SHA256 = "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842"
+APPENDIX_SHA256 = "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a"
 A_IDS = tuple(ComplexId(item) for item in (
     "prime_motif_boundedness_motif_induced_energy_divergence",
     "flowpoint_parity_locking_parity_leakage",

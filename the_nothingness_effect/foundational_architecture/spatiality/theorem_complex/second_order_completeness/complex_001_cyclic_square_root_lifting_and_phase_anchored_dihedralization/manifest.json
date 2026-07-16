@@ -1,0 +1,122 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 24,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_001_cyclic_square_root_lifting_and_phase_anchored_dihedralization/1b/cyclic_square_root_of_a_two_state_involution.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_001_cyclic_square_root_lifting_and_phase_anchored_dihedralization/2b/dihedral_extension_of_a_regular_cyclic_orbit.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_001_cyclic_square_root_lifting_and_phase_anchored_dihedralization/1b2b/minimal_reflection_as_the_square_of_a_dihedral_quarter_turn.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:spatiality_root_lift_carrier_1b",
+    "eq:spatiality_root_lift_operator_1b",
+    "eq:spatiality_root_square_fourth_1b",
+    "eq:spatiality_root_orientation_map_1b",
+    "eq:spatiality_root_quarter_turn_conjugacy_1b",
+    "eq:spatiality_root_four_cycle_1b",
+    "eq:spatiality_root_projection_1b",
+    "eq:spatiality_root_synthesis_1b",
+    "eq:spatiality_root_principle_1b",
+    "eq:spatiality_polygon_embedding_2b",
+    "eq:spatiality_polygon_reflection_2b",
+    "eq:spatiality_polygon_reflection_formula_2b",
+    "eq:spatiality_dihedral_relations_2b",
+    "eq:spatiality_dihedral_group_2b",
+    "eq:spatiality_reflection_fixed_congruence_2b",
+    "eq:spatiality_reflection_anchor_conjugacy_2b",
+    "eq:spatiality_dihedral_synthesis_2b",
+    "eq:spatiality_dihedral_principle_2b",
+    "eq:spatiality_lifted_reflection_joint_b",
+    "eq:spatiality_lifted_dihedral_relations_joint_b",
+    "eq:spatiality_lifted_d4_joint_b",
+    "eq:spatiality_lifted_shadow_joint_b",
+    "eq:spatiality_root_joint_synthesis_b",
+    "eq:spatiality_root_joint_principle_b"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_001_cyclic_square_root_lifting_and_phase_anchored_dihedralization/falsification_checks/test_cyclic_square_root_lifting_and_phase_anchored_dihedralization_falsification.py"
+  ],
+  "first_label": "app:spatiality_cyclic_root_dihedral_b",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization",
+  "source_complex_ids": [
+    "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+    "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_001_cyclic_square_root_lifting_and_phase_anchored_dihedralization/falsification_checks/test_cyclic_square_root_lifting_and_phase_anchored_dihedralization_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Minimal Reflection as the Square of a Dihedral Quarter-Turn",
+    "left": "Cyclic Square Root of a Two-State Involution",
+    "right": "Dihedral Extension of a Regular Cyclic Orbit"
+  },
+  "theorem_titles_tex": {
+    "cross": "Minimal Reflection as the Square of a Dihedral Quarter-Turn",
+    "left": "Cyclic Square Root of a Two-State Involution",
+    "right": "Dihedral Extension of a Regular Cyclic Orbit"
+  }
+}

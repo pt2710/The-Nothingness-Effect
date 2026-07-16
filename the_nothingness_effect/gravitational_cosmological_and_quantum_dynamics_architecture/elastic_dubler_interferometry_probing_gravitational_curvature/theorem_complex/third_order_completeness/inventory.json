@@ -1,0 +1,16 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "memory_aware_phase_curvature_tomography",
+      "directory": "complex_001_memory_aware_phasecurvature_tomography",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "regularized_stable_geometric_reconstruction",
+      "directory": "complex_002_regularized_stable_geometric_reconstruction",
+      "status": "blocked"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature"
+}

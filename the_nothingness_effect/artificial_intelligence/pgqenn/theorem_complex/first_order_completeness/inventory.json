@@ -1,0 +1,56 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "prime_motif_boundedness_motif_induced_energy_divergence",
+      "directory": "complex_001_prime_motif_boundedness_motif_induced_energy_divergence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "flowpoint_parity_locking_parity_leakage",
+      "directory": "complex_002_flowpoint_parity_locking_parity_leakage",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
+      "directory": "complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_e_curvature_regularization_curvature_ambiguity_leakage",
+      "directory": "complex_004_elastic_e_curvature_regularization_curvature_ambiguity_leakage",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
+      "directory": "complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy",
+      "directory": "complex_006_soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift",
+      "directory": "complex_007_motif_exhaustion_completeness_coverage_bias_long_memory_drift",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch",
+      "directory": "complex_008_weightenergy_parseval_equivalence_layerwise_l_2_energy_mismatch",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination",
+      "directory": "complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips",
+      "directory": "complex_010_prime_shell_growth_regularity_shell_instability_phase_slips",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/pgqenn"
+}

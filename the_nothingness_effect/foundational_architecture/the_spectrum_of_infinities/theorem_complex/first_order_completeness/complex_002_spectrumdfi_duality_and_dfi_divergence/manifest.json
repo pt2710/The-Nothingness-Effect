@@ -1,0 +1,106 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "spectrum_dfi_duality_and_dfi_divergence",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_002_spectrumdfi_duality_and_dfi_divergence/1a/spectrumdfi_duality_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_002_spectrumdfi_duality_and_dfi_divergence/2a/dfi_divergence_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_002_spectrumdfi_duality_and_dfi_divergence/1a2a/soidfi_regularity_transfer_theorem.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soi_dfi_original_soi_1a2a",
+    "eq:soi_dfi_measure_scaling_1a2a",
+    "eq:soi_dfi_pushforward_pair_1a2a",
+    "eq:soi_dfi_core_equations_1a2a",
+    "eq:soi_dfi_absolute_relative_baseline_1a2a",
+    "eq:soi_dfi_exponential_response_1a2a",
+    "eq:std_soi_dfi_regularity_2a",
+    "eq:std_soi_dfi_joint",
+    "eq:soi_dfi_scale_covariance_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_002_spectrumdfi_duality_and_dfi_divergence/falsification_checks/test_spectrum_dfi_duality_and_dfi_divergence_falsification.py"
+  ],
+  "first_label": "app:soi_complex_02",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "spectrum_dfi_duality_and_dfi_divergence",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_002_spectrumdfi_duality_and_dfi_divergence/falsification_checks/test_spectrum_dfi_duality_and_dfi_divergence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOI–DFI Regularity Transfer Theorem",
+    "left": "Spectrum–DFI Duality Theorem",
+    "right": "DFI Divergence Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOI--DFI Regularity Transfer Theorem",
+    "left": "Spectrum--DFI Duality Theorem",
+    "right": "DFI Divergence Theorem"
+  }
+}

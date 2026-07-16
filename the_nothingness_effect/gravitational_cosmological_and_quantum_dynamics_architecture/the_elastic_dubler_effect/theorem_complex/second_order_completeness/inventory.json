@@ -1,0 +1,46 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "calibrated_pdfi_dubler_endpoint_operator",
+      "directory": "complex_001_calibrated_pdfidubler_endpoint_operator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_log_curvature_energy_production_law",
+      "directory": "complex_002_elastic_log_curvature_energy_production_law",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_localized_pdfi_response_operator",
+      "directory": "complex_003_parity_localized_pdfi_response_operator",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "elasticity_scaled_spectral_operator_flow",
+      "directory": "complex_004_elasticity_scaled_spectral_operator_flow",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observable_entropy_redistribution_channel",
+      "directory": "complex_005_observable_entropy_redistribution_channel",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "temporal_directed_elastic_transport",
+      "directory": "complex_006_temporal_directed_elastic_transport",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "information_calibrated_quantum_spectral_response",
+      "directory": "complex_007_information_calibrated_quantum_spectral_response",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "elasticity_weighted_spatial_heterogeneity",
+      "directory": "complex_008_elasticity_weighted_spatial_heterogeneity",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect"
+}

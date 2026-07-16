@@ -15,13 +15,8 @@ All outputs are saved alongside the script.
 """
 
 import os
-import sys
-
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
 script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, script_dir)
-
 import csv
 import time
 import random

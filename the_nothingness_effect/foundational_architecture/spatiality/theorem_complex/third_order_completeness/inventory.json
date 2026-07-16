@@ -1,0 +1,16 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "equivariant_orbit_spectral_reconstruction",
+      "directory": "complex_001_equivariant_orbitspectral_reconstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "twisted_orbit_balance_bundle",
+      "directory": "complex_002_twisted_orbit_balance_bundle",
+      "status": "blocked"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/spatiality"
+}

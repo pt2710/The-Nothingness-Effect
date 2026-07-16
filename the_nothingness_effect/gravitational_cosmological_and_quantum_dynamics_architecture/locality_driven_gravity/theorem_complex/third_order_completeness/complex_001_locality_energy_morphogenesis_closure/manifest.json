@@ -1,0 +1,122 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "locality_energy_morphogenesis_closure",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/1c/locality_energy_morphogenesis_closure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/2c/locality_energy_morphogenesis_closure_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/1c2c/complete_locality_energy_morphogenesis_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_ldg_c01_spatial_carrier",
+    "eq:drv_ldg_c01_1c",
+    "eq:drv_ldg_c01_theorem_1c",
+    "eq:drv_ldg_c01_res_1c",
+    "eq:drv_ldg_c01_2c",
+    "eq:drv_ldg_c01_res_2c",
+    "eq:drv_ldg_c01_joint",
+    "eq:drv_ldg_c01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/falsification_checks/test_locality_energy_morphogenesis_closure_falsification.py"
+  ],
+  "first_label": "app:drv_ldg_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/1c/locality_energy_morphogenesis_closure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/2c/locality_energy_morphogenesis_closure_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/1c2c/complete_locality_energy_morphogenesis_closure_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "codomain": {
+      "description": "local field, boundary, localization, coercivity, observability, and candidate status",
+      "name": "locality_energy_morphogenesis_closure spatial closure",
+      "python_types": [
+        "SpatialFieldClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "locality_energy_morphogenesis_closure",
+  "source_complex_ids": [
+    "locality_weighted_spiral_order",
+    "curvature_driven_elastic_energy_production"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_001_locality_energy_morphogenesis_closure/falsification_checks/test_locality_energy_morphogenesis_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Locality-Energy Morphogenesis Closure Classification",
+    "left": "Locality-Energy Morphogenesis Closure Law",
+    "right": "Locality-Energy Morphogenesis Closure Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Locality-Energy Morphogenesis Closure Classification",
+    "left": "Locality-Energy Morphogenesis Closure Law",
+    "right": "Locality-Energy Morphogenesis Closure Failure Law"
+  }
+}

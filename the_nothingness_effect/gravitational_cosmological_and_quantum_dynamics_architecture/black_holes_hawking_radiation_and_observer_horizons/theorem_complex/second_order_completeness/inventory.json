@@ -1,0 +1,31 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "entropy_invariant_horizon_translation",
+      "directory": "complex_001_entropy_invariant_horizon_translation",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "regular_observer_horizon_hypersurface",
+      "directory": "complex_002_regular_observer_horizon_hypersurface",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "spatiotemporal_hawking_flux_density",
+      "directory": "complex_003_spatiotemporal_hawking_flux_density",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observer_accessible_curvature_memory",
+      "directory": "complex_004_observer_accessible_curvature_memory",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "certified_residual_memory_lower_bound",
+      "directory": "complex_005_certified_residual_memory_lower_bound",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons"
+}

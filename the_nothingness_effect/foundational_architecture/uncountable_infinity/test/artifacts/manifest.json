@@ -1,0 +1,45 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_foundational_closure_architecture.tex",
+      "sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/foundational_architecture/uncountable_infinity/test/generate_artifacts.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "continuum_trajectory_cardinality_and_countable_phase_cell_collapse",
+    "power_set_continuum_and_atomic_quotient_collapse",
+    "dense_flowpoint_traces_and_nowhere_dense_quantized_collapse",
+    "recursive_cantor_space_universality_and_finite_resolution_collapse",
+    "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+    "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
+    "complete_boolean_algebra_missing_complements_and_generated_completion",
+    "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+    "2_adic_coded_continuum_coverage_and_singleton_collapse",
+    "dual_realizability_invariant_closure_and_defect_repair",
+    "binary_supported_continuous_superposition_and_atom_phase_translation",
+    "prefix_tree_dense_reconstruction",
+    "complement_invariant_fractal_skeleton_completion",
+    "boolean_decision_extension_consensus",
+    "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization",
+    "end_compactified_additive_continuum_field",
+    "decision_weighted_complex_coverage_and_dual_repair_field"
+  ]
+}

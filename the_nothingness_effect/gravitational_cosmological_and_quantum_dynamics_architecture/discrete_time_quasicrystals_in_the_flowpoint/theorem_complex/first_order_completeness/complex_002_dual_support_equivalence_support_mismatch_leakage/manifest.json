@@ -1,0 +1,157 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 46,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dtqc::dual_support_equivalence_support_mismatch_leakage",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/1a/dual_support_equivalence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/2a/dtqc_02_support_mismatch_leakage.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/1a2a/dtqc_02_dual_support_equivalence_support_mismatch_leakage.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:occupancy_equivalence_1a",
+    "eq:leakage_zero_1a",
+    "eq:lattice_windows_pairing_1a",
+    "eq:indicator_zero_difference_1a",
+    "eq:l1_indicator_zero_1a",
+    "eq:window_integral_equivalence_1a",
+    "eq:support_equality_conclusion_1a",
+    "eq:selector_equivalence_1a",
+    "eq:amplitude_map_bijection_1a",
+    "eq:calibration_relation_1a",
+    "eq:l2_error_bound_equal_support_1a",
+    "eq:leakage_mass_2a",
+    "eq:nonempty_leakage_implies_mismatch_2a",
+    "eq:l2_bias_from_leakage_2a",
+    "eq:single_violation_implies_leakage_2a",
+    "eq:cardinality_leakage_positive_2a",
+    "eq:test_window_violation_2a",
+    "eq:triangle_inequality_support_2a",
+    "eq:parseval_energy_split_2a",
+    "eq:leakage_energy_lower_2a",
+    "eq:leakage_bias_consequence_2a",
+    "eq:nonvanishing_residual_2a",
+    "eq:triangle_noise_2a",
+    "eq:noisy_bias_lower_bound_2a",
+    "eq:noise_persistence_limit_2a",
+    "eq:dtqc02_joint_status_1a2a",
+    "eq:freq_lattice_def_1a2a",
+    "eq:predicted_spectrum_1a2a",
+    "eq:empirical_measure_1a2a",
+    "eq:support_sets_1a2a",
+    "eq:indicator_equivalence_1a2a",
+    "eq:leakage_set_1a2a",
+    "eq:fourier_inversion_linesum_1a2a",
+    "eq:distribution_pairing_model_1a2a",
+    "eq:distribution_pairing_empirical_1a2a",
+    "eq:equivalence_leakage_empty_1a2a",
+    "eq:counting_equivalence_1a2a",
+    "eq:test_family_equivalence_1a2a",
+    "eq:set_algebra_equivalence_1a2a",
+    "eq:model_pairing_selectors_1a2a",
+    "eq:empirical_pairing_selectors_1a2a",
+    "eq:pairing_to_indicator_1a2a",
+    "eq:support_equality_from_pairings_explicit_1a2a",
+    "eq:golden_test_statistic_1a2a",
+    "eq:golden_test_equivalence_1a2a",
+    "eq:golden_test_window_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/falsification_checks/test_dtqc_dual_support_equivalence_support_mismatch_leakage_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_02",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/1a/dual_support_equivalence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/2a/dtqc_02_support_mismatch_leakage.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/1a2a/dtqc_02_dual_support_equivalence_support_mismatch_leakage.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "dual_support field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "dual_support_equivalence_support_mismatch_leakage",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_002_dual_support_equivalence_support_mismatch_leakage/falsification_checks/test_dtqc_dual_support_equivalence_support_mismatch_leakage_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "DTQC 02 – Dual Support Equivalence <-> Support Mismatch/Leakage",
+    "left": "Dual Support Equivalence",
+    "right": "DTQC 02 – Support Mismatch/Leakage"
+  },
+  "theorem_titles_tex": {
+    "cross": "DTQC 02 -- Dual Support Equivalence $\\leftrightarrow$ Support Mismatch/Leakage",
+    "left": "Dual Support Equivalence (1A)",
+    "right": "DTQC 02 -- Support Mismatch/Leakage"
+  }
+}

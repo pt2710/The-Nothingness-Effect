@@ -1,0 +1,16 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "regular_nonperforating_horizon_geometry",
+      "directory": "complex_001_regular_nonperforating_horizon_geometry",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "observable_hawking_memory_certification",
+      "directory": "complex_002_observable_hawking_memory_certification",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons"
+}

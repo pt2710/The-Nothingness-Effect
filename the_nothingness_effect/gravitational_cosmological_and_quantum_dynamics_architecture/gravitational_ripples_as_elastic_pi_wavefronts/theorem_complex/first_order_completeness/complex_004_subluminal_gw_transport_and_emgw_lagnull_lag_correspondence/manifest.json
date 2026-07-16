@@ -1,0 +1,136 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 24,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/1a/subluminal_transport_with_coherent_lag.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/2a/null_lag_correspondence_gr_limit.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/1a2a/subluminal_gw_transport_emgw_lag_null_lag_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw04_gw_lag_order_parameter_1a",
+    "eq:grw04_gw_lag_branch_condition_1a",
+    "eq:gw_lag_transport_operational_1a",
+    "eq:gw_lag_distance_trend_1a",
+    "eq:gw_lag_bandavg_1a",
+    "eq:gw_lag_direct_1a",
+    "eq:gw_lag_derivative_1a",
+    "eq:gw_lag_regression_1a",
+    "eq:grw04_gw_lag_order_parameter_2a",
+    "eq:grw04_gw_lag_branch_condition_2a",
+    "eq:gw_lag_null_2a",
+    "eq:gw_lag_derivs_null_2a",
+    "eq:gw_lag_beta_null_2a",
+    "eq:gw_lag_eta_2a",
+    "eq:gw_lag_bound_2a",
+    "eq:grw04_gw_lag_status_1a2a",
+    "eq:gw_lag_transport_operational_1a2a",
+    "eq:gw_speed_defect_dfi_1a2a",
+    "eq:gw_lag_sign_stability_1a2a",
+    "eq:gw_lag_frequency_slope_1a2a",
+    "eq:gw_lag_distance_trend_1a2a",
+    "eq:gw_lag_equivalence_operational_1a2a",
+    "eq:gw_lag_equivalence_proof_1a2a",
+    "eq:gw_lag_bound_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/falsification_checks/test_subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence_falsification.py"
+  ],
+  "first_label": "ssec:gw_lag_transport_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/1a/subluminal_transport_with_coherent_lag.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/2a/null_lag_correspondence_gr_limit.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/1a2a/subluminal_gw_transport_emgw_lag_null_lag_correspondence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "transport_lag field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence/falsification_checks/test_subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Subluminal GW Transport \\& EM–GW Lag <-> Null Lag Correspondence",
+    "left": "Subluminal Transport with Coherent Lag",
+    "right": "Null Lag Correspondence (GR Limit)"
+  },
+  "theorem_titles_tex": {
+    "cross": "Subluminal GW Transport \\& EM--GW Lag $\\leftrightarrow$ Null Lag Correspondence",
+    "left": "Subluminal Transport with Coherent Lag",
+    "right": "Null Lag Correspondence (GR Limit)"
+  }
+}

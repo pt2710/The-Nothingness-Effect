@@ -1,0 +1,115 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 20,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle/1a/soinet_cross_modal_compositionality.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle/2a/modality_invariant_collapse_principle.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle/1a2a/soinet_cross_modal_compositionality_modality_invariant_collapse_principle.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soinet_crossmodal_1a",
+    "eq:soinet_calculus_stability_1a",
+    "eq:modality_derivative_1a",
+    "eq:modality_entropy_1a",
+    "eq:flowpoint_invariance_1a",
+    "eq:flowpoint_derivative_1a",
+    "eq:soinet_collapse_2a",
+    "eq:soinet_calculus_collapse_2a",
+    "eq:fixedpoint_flowpoint_2a",
+    "eq:fixedpoint_derivative_2a",
+    "eq:fixpoint_intersection_2a",
+    "eq:collapse_derivative_2a",
+    "eq:soinet_crossmodal_1a2a",
+    "eq:soinet_collapse_1a2a",
+    "eq:soinet_calculus_stability_1a2a",
+    "eq:soinet_calculus_collapse_1a2a",
+    "eq:modality_invariance_1a2a",
+    "eq:modality_invariance_derivative_1a2a",
+    "eq:modality_invariance_corollary_1a2a",
+    "eq:modality_invariance_corollary_derivative_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle/falsification_checks/test_soinet_cross_modal_compositionality_modality_invariant_collapse_principle_falsification.py"
+  ],
+  "first_label": "app:soinet_complex_08",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle/falsification_checks/test_soinet_cross_modal_compositionality_modality_invariant_collapse_principle_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOInet Cross-Modal Compositionality , Modality-Invariant Collapse Principle",
+    "left": "SOInet Cross-Modal Compositionality",
+    "right": "Modality-Invariant Collapse Principle"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOInet Cross-Modal Compositionality , Modality-Invariant Collapse Principle",
+    "left": "SOInet Cross-Modal Compositionality",
+    "right": "Modality-Invariant Collapse Principle"
+  }
+}

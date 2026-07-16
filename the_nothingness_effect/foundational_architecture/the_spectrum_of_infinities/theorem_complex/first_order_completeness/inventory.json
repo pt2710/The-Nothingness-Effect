@@ -1,0 +1,56 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "spectrum_normalization_and_normalization_obstruction",
+      "directory": "complex_001_spectrum_normalization_and_normalization_obstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "spectrum_dfi_duality_and_dfi_divergence",
+      "directory": "complex_002_spectrumdfi_duality_and_dfi_divergence",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "measurable_decomposition_and_non_measurable_obstruction",
+      "directory": "complex_003_measurable_decomposition_and_non_measurable_obstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "completeness_and_incompleteness_of_the_soi_l_p_structure",
+      "directory": "complex_004_completeness_and_incompleteness_of_the_soi_l_p_structure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "entropy_density_mapping_and_entropy_divergence",
+      "directory": "complex_005_entropy_density_mapping_and_entropy_divergence",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "finitizable_infinity_and_the_non_finitization_boundary",
+      "directory": "complex_006_finitizable_infinity_and_the_non_finitization_boundary",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "dual_realizability_and_the_missing_dual_defect",
+      "directory": "complex_007_dual_realizability_and_the_missing_dual_defect",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction",
+      "directory": "complex_008_soi_measure_preserving_normalization_and_spectrum_obstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "borel_analytic_sufficiency_and_over_extension_beyond_measurability",
+      "directory": "complex_009_borel_analytic_sufficiency_and_over_extension_beyond_measurability",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "factor_map_equivariance_and_limit_bias",
+      "directory": "complex_010_factor_map_equivariance_and_limit_bias",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities"
+}

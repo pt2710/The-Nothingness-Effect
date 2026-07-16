@@ -1,0 +1,36 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
+      "directory": "complex_001_parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "flowpoint_parity_correspondence_and_decoupling",
+      "directory": "complex_002_flowpointparity_correspondence_and_decoupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pdfi_entropic_predictability_and_fluctuation_ambiguity",
+      "directory": "complex_003_pdfi_entropic_predictability_and_fluctuation_ambiguity",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
+      "directory": "complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pdfi_elastic_equivalence_and_decoupling",
+      "directory": "complex_005_pdfielastic_equivalence_and_decoupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations",
+      "directory": "complex_006_completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuat",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index"
+}

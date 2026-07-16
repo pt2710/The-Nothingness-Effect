@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing/1a/inflationcollapse_support_invariance.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing/2a/nonlinear_sideband_mixing.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing/1a2a/inflationcollapse_support_invariance_nonlinear_sideband_mixing.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:inflation_collapse_support_invariance_algebraic_align_1a",
+    "eq:inflation_collapse_support_invariance_algebraic_equation_1a",
+    "eq:inflation_collapse_support_invariance_calculus_align_1a",
+    "eq:inflation_collapse_support_invariance_calculus_equation_1a",
+    "eq:linear_commutation_support_projector_algebraic_align_1a",
+    "eq:linear_commutation_support_projector_algebraic_equation_1a",
+    "eq:linear_commutation_support_projector_calculus_align_1a",
+    "eq:linear_commutation_support_projector_calculus_equation_1a",
+    "eq:support_preservation_under_linear_inflation_algebraic_align_1a",
+    "eq:support_preservation_under_linear_inflation_algebraic_equation_1a",
+    "eq:support_preservation_under_linear_inflation_calculus_align_1a",
+    "eq:support_preservation_under_linear_inflation_calculus_equation_1a",
+    "eq:stability_region_linear_hparams_algebraic_align_1a",
+    "eq:stability_region_linear_hparams_algebraic_equation_1a",
+    "eq:stability_region_linear_hparams_calculus_align_1a",
+    "eq:stability_region_linear_hparams_calculus_equation_1a",
+    "eq:nonlinear_sideband_mixing_algebraic_align_2a",
+    "eq:nonlinear_sideband_mixing_algebraic_equation_2a",
+    "eq:nonlinear_sideband_mixing_calculus_align_2a",
+    "eq:nonlinear_sideband_mixing_calculus_equation_2a",
+    "eq:quadratic_intermodulation_offlattice_algebraic_align_2a",
+    "eq:quadratic_intermodulation_offlattice_algebraic_equation_2a",
+    "eq:quadratic_intermodulation_offlattice_calculus_align_2a",
+    "eq:quadratic_intermodulation_offlattice_calculus_equation_2a",
+    "eq:sideband_emergence_under_mixing_algebraic_align_2a",
+    "eq:sideband_emergence_under_mixing_algebraic_equation_2a",
+    "eq:sideband_emergence_under_mixing_calculus_align_2a",
+    "eq:sideband_emergence_under_mixing_calculus_equation_2a",
+    "eq:alarm_threshold_sideband_onset_algebraic_align_2a",
+    "eq:alarm_threshold_sideband_onset_algebraic_equation_2a",
+    "eq:alarm_threshold_sideband_onset_calculus_align_2a",
+    "eq:alarm_threshold_sideband_onset_calculus_equation_2a",
+    "eq:inflation_collapse_support_invariance_sideband_mixing_algebraic_align_1a2a",
+    "eq:inflation_collapse_support_invariance_sideband_mixing_algebraic_equation_1a2a",
+    "eq:inflation_collapse_support_invariance_sideband_mixing_calculus_align_1a2a",
+    "eq:inflation_collapse_support_invariance_sideband_mixing_calculus_equation_1a2a",
+    "eq:projected_energy_equivalence_algebraic_align_1a2a",
+    "eq:projected_energy_equivalence_algebraic_equation_1a2a",
+    "eq:projected_energy_equivalence_calculus_align_1a2a",
+    "eq:projected_energy_equivalence_calculus_equation_1a2a",
+    "eq:energy_support_characterization_algebraic_align_1a2a",
+    "eq:energy_support_characterization_algebraic_equation_1a2a",
+    "eq:energy_support_characterization_calculus_align_1a2a",
+    "eq:energy_support_characterization_calculus_equation_1a2a",
+    "eq:regularized_training_objective_algebraic_align_1a2a",
+    "eq:regularized_training_objective_algebraic_equation_1a2a",
+    "eq:regularized_training_objective_calculus_align_1a2a",
+    "eq:regularized_training_objective_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing/falsification_checks/test_inflation_collapse_support_invariance_nonlinear_sideband_mixing_falsification.py"
+  ],
+  "first_label": "app:qenn_complex_09",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing/falsification_checks/test_inflation_collapse_support_invariance_nonlinear_sideband_mixing_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Inflation–Collapse Support Invariance <-> Nonlinear Sideband Mixing",
+    "left": "Inflation–Collapse Support Invariance",
+    "right": "Nonlinear Sideband Mixing"
+  },
+  "theorem_titles_tex": {
+    "cross": "Inflation--Collapse Support Invariance $\\leftrightarrow$ Nonlinear Sideband Mixing (1A $\\leftrightarrow$ 2A)",
+    "left": "Inflation--Collapse Support Invariance (1A)",
+    "right": "Nonlinear Sideband Mixing (2A)"
+  }
+}

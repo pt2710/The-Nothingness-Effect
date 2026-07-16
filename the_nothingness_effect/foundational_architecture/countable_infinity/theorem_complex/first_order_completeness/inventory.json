@@ -1,0 +1,21 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "bidirectional_integer_rays_and_finite_polarity_enumeration",
+      "directory": "complex_001_bidirectional_integer_rays_and_finite_polarity_enumeration",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+      "directory": "complex_002_combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration",
+      "directory": "complex_003_finitary_flip_invariance_and_null_recurrent_countable_exploration",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/countable_infinity"
+}

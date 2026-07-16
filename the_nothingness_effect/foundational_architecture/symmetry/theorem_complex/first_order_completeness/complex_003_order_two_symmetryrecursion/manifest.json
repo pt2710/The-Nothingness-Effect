@@ -1,0 +1,164 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 69,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "order_two_symmetry_recursion",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/1a/minimal_symmetry_involution_at_the_flowpoint.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/2a/universal_symmetric_recursion_law.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/1a2a/involutionparity_recursion_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_symmetry_global_map_1a2a",
+    "eq:flowpoint_symmetry_global_involution_1a2a",
+    "eq:flowpoint_symmetry_global_fixed_set_1a2a",
+    "eq:flowpoint_symmetry_global_orbit_1a2a",
+    "eq:flowpoint_symmetry_global_c2_1a2a",
+    "eq:minimal_flowpoint_symmetry_definition_1a",
+    "eq:minimal_flowpoint_symmetry_generated_group_1a",
+    "eq:minimal_flowpoint_symmetry_c2_action_1a",
+    "eq:minimal_flowpoint_symmetry_group_isomorphism_1a",
+    "eq:minimal_flowpoint_symmetry_fixed_orbit_1a",
+    "eq:minimal_flowpoint_symmetry_two_cycle_1a",
+    "eq:minimal_flowpoint_symmetry_orbit_orientation_1a",
+    "eq:minimal_flowpoint_symmetry_orbit_conjugacy_1a",
+    "eq:involutive_symmetry_pointwise_return_1a",
+    "eq:involutive_symmetry_pullback_definition_1a",
+    "eq:involutive_symmetry_pullback_involution_1a",
+    "eq:involutive_symmetry_differential_identity_1a",
+    "eq:involutive_symmetry_differential_inverse_1a",
+    "eq:parity_flowpoint_operator_1a",
+    "eq:parity_flowpoint_involution_1a",
+    "eq:linear_symmetry_projectors_1a",
+    "eq:linear_symmetry_sector_decomposition_1a",
+    "eq:minimal_involution_symmetry_seed_synthesis_1a",
+    "eq:minimal_flowpoint_symmetry_principle_1a",
+    "eq:recursive_flowpoint_symmetry_orbit_definition_2a",
+    "eq:recursive_flowpoint_symmetry_update_definition_2a",
+    "eq:recursive_flowpoint_symmetric_closure_definition_2a",
+    "eq:universal_symmetric_recursion_periodicity_2a",
+    "eq:universal_symmetric_recursion_even_odd_2a",
+    "eq:universal_symmetric_recursion_period_one_2a",
+    "eq:universal_symmetric_recursion_exact_period_two_2a",
+    "eq:symmetric_recursion_parity_projection_2a",
+    "eq:symmetric_recursion_phase_map_2a",
+    "eq:symmetric_recursion_orbit_map_2a",
+    "eq:symmetric_recursion_parity_factorization_2a",
+    "eq:symmetric_recursion_invariant_readout_condition_2a",
+    "eq:symmetric_recursion_invariant_readout_orbit_2a",
+    "eq:symmetric_recursion_anti_invariant_readout_condition_2a",
+    "eq:symmetric_recursion_anti_invariant_readout_orbit_2a",
+    "eq:parity_factored_orbit_recursion_synthesis_2a",
+    "eq:fixed_involution_recursive_closure_principle_2a",
+    "eq:minimal_recursive_symmetry_order_two_definition_1a2a",
+    "eq:minimal_recursive_symmetry_parity_definition_1a2a",
+    "eq:minimal_recursive_symmetry_orbit_definition_1a2a",
+    "eq:minimal_recursive_symmetry_factor_definition_1a2a",
+    "eq:minimal_recursive_symmetry_orbit_factor_definition_1a2a",
+    "eq:joint_flowpoint_symmetry_equiv_involution_1a2a",
+    "eq:joint_flowpoint_symmetry_equiv_c2_action_1a2a",
+    "eq:joint_flowpoint_symmetry_equiv_periodicity_1a2a",
+    "eq:joint_flowpoint_symmetry_integer_action_1a2a",
+    "eq:joint_flowpoint_symmetry_kernel_condition_1a2a",
+    "eq:joint_flowpoint_symmetry_exact_kernel_1a2a",
+    "eq:joint_flowpoint_symmetry_fixed_class_1a2a",
+    "eq:joint_flowpoint_symmetry_two_cycle_class_1a2a",
+    "eq:joint_flowpoint_symmetry_single_generator_normal_form_1a2a",
+    "eq:joint_flowpoint_symmetry_commuting_involutions_1a2a",
+    "eq:joint_flowpoint_symmetry_commutation_condition_1a2a",
+    "eq:joint_flowpoint_symmetry_product_involution_1a2a",
+    "eq:joint_flowpoint_symmetry_product_square_1a2a",
+    "eq:joint_flowpoint_symmetry_linear_projectors_1a2a",
+    "eq:joint_flowpoint_symmetry_linear_decomposition_1a2a",
+    "eq:joint_flowpoint_symmetry_linear_orbit_1a2a",
+    "eq:joint_flowpoint_symmetry_pullback_orbit_1a2a",
+    "eq:joint_flowpoint_symmetry_tangent_recursion_1a2a",
+    "eq:joint_flowpoint_symmetry_tangent_closure_1a2a",
+    "eq:joint_flowpoint_symmetry_recursion_synthesis_1a2a",
+    "eq:flowpoint_symmetric_dual_closure_involution_1a2a",
+    "eq:flowpoint_symmetric_dual_closure_operator_1a2a",
+    "eq:flowpoint_symmetric_dual_closure_orbit_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/falsification_checks/test_order_two_symmetry_recursion_falsification.py"
+  ],
+  "first_label": "app:flowpoint_symmetry_dual",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint_symmetry",
+  "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py"
+  ],
+  "source_complex_id": "order_two_symmetry_recursion",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/falsification_checks/test_order_two_symmetry_recursion_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Involution–Parity Recursion Equivalence",
+    "left": "Minimal Symmetry Involution at the Flowpoint",
+    "right": "Universal Symmetric Recursion Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Involution--Parity Recursion Equivalence \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Minimal Symmetry Involution at the Flowpoint",
+    "right": "Universal Symmetric Recursion Law"
+  }
+}

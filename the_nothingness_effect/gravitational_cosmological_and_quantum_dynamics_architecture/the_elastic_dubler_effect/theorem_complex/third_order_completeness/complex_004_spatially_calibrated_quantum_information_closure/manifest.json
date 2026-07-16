@@ -1,0 +1,109 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "spatially_calibrated_quantum_information_closure",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_004_spatially_calibrated_quantum_information_closure/1c/spatial_quantum_information_response_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_004_spatially_calibrated_quantum_information_closure/2c/spatial_quantum_information_failure_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_004_spatially_calibrated_quantum_information_closure/1c2c/complete_spatial_quantum_information_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dubler_c04_spatial_carrier",
+    "eq:drv_dubler_c04_1c",
+    "eq:drv_dubler_c04_theorem_1c",
+    "eq:drv_dubler_c04_res_1c",
+    "eq:drv_dubler_c04_2c",
+    "eq:drv_dubler_c04_theorem_2c",
+    "eq:drv_dubler_c04_res_2c",
+    "eq:drv_dubler_c04_joint",
+    "eq:drv_dubler_c04_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_004_spatially_calibrated_quantum_information_closure/falsification_checks/test_spatially_calibrated_quantum_information_closure_falsification.py"
+  ],
+  "first_label": "app:drv_dubler_c04",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_effect",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py"
+  ],
+  "source_complex_id": "spatially_calibrated_quantum_information_closure",
+  "source_complex_ids": [
+    "information_calibrated_quantum_spectral_response",
+    "elasticity_weighted_spatial_heterogeneity"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_the_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_004_spatially_calibrated_quantum_information_closure/falsification_checks/test_spatially_calibrated_quantum_information_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Spatial Quantum-Information Closure Classification",
+    "left": "Spatial Quantum-Information Response Theorem",
+    "right": "Spatial Quantum-Information Failure Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Spatial Quantum-Information Closure Classification",
+    "left": "Spatial Quantum-Information Response Theorem",
+    "right": "Spatial Quantum-Information Failure Theorem"
+  }
+}

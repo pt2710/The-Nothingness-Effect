@@ -1,0 +1,155 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 58,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "ergodic_collapse_projection_and_non_convergence",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_008_ergodic_collapse_projection_and_non_convergence/1a/ergodic_collapse_as_orthogonal_projection.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_008_ergodic_collapse_projection_and_non_convergence/2a/non_convergence_and_non_orthogonal_projection.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_008_ergodic_collapse_projection_and_non_convergence/1a2a/exact_involutive_collapse_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ecp_canonical_observation_collapse_1a2a",
+    "eq:ecp_cesaro_observation_operator_1a2a",
+    "eq:ecp_canonical_operator_realization_1a2a",
+    "eq:ecp_unitary_involution_conditions_1a",
+    "eq:ecp_fixed_antifixed_projectors_1a",
+    "eq:ecp_1a_collapse_value_definition",
+    "eq:ecp_projection_limit_1a",
+    "eq:ecp_projection_rate_1a",
+    "eq:ecp_canonical_projection_realization_1a",
+    "eq:ecp_even_average_1a",
+    "eq:ecp_odd_average_1a",
+    "eq:ecp_orthogonal_projector_properties_1a",
+    "eq:ecp_even_sum_proof_1a",
+    "eq:ecp_odd_sum_proof_1a",
+    "eq:ecp_norm_bound_proof_1a",
+    "eq:ecp_selfadjoint_involution_proof_1a",
+    "eq:ecp_idempotence_proof_1a",
+    "eq:ecp_fixed_antifixed_decomposition_1a",
+    "eq:ecp_fixed_antifixed_orthogonality_1a",
+    "eq:ecp_component_selection_1a",
+    "eq:ecp_even_exact_paradox_1a",
+    "eq:ecp_synthesis_chain_1a",
+    "eq:ecp_principle_projection_1a",
+    "eq:ecp_strong_cauchy_defect_2a",
+    "eq:ecp_orthogonality_defect_2a",
+    "eq:ecp_target_defect_2a",
+    "eq:ecp_obstruction_profile_2a",
+    "eq:ecp_nonconvergence_condition_2a",
+    "eq:ecp_nonorthogonal_condition_2a",
+    "eq:ecp_divergent_scalar_witness_2a",
+    "eq:ecp_oblique_involution_2a",
+    "eq:ecp_oblique_projection_limit_2a",
+    "eq:ecp_power_over_n_identity_2a",
+    "eq:ecp_fixed_range_identity_2a",
+    "eq:ecp_geometric_divergence_proof_2a",
+    "eq:ecp_oblique_adjoint_proof_2a",
+    "eq:ecp_certificate_nonconvergence_2a",
+    "eq:ecp_certificate_nonorthogonal_2a",
+    "eq:ecp_synthesis_failure_modes_2a",
+    "eq:std_ecp_principle_2a",
+    "eq:ecp_bounded_involution_class_1a2a",
+    "eq:ecp_orthogonal_involution_class_1a2a",
+    "eq:ecp_oblique_involution_class_1a2a",
+    "eq:ecp_involution_projection_1a2a",
+    "eq:ecp_all_involutions_converge_1a2a",
+    "eq:ecp_algebraic_projection_involution_1a2a",
+    "eq:ecp_exact_orthogonality_boundary_1a2a",
+    "eq:ecp_involution_to_projection_map_1a2a",
+    "eq:ecp_projection_to_involution_map_1a2a",
+    "eq:ecp_joint_idempotence_proof_1a2a",
+    "eq:ecp_joint_range_kernel_proof_1a2a",
+    "eq:ecp_joint_selfadjoint_equivalence_1a2a",
+    "eq:ecp_joint_unitary_equivalence_1a2a",
+    "eq:ecp_joint_orthogonal_case_1a2a",
+    "eq:ecp_joint_oblique_case_1a2a",
+    "eq:ecp_same_formula_two_geometries_1a2a",
+    "eq:ecp_joint_synthesis_1a2a",
+    "eq:ecp_classification_order_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_008_ergodic_collapse_projection_and_non_convergence/falsification_checks/test_ergodic_collapse_projection_and_non_convergence_falsification.py"
+  ],
+  "first_label": "ssec:ecp_theorem_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "ergodic_collapse_projection_and_non_convergence",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_008_ergodic_collapse_projection_and_non_convergence/falsification_checks/test_ergodic_collapse_projection_and_non_convergence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Exact Involutive Collapse Classification",
+    "left": "Ergodic Collapse as Orthogonal Projection",
+    "right": "Non-Convergence and Non-Orthogonal Projection"
+  },
+  "theorem_titles_tex": {
+    "cross": "Exact Involutive Collapse Classification",
+    "left": "Ergodic Collapse as Orthogonal Projection",
+    "right": "Non-Convergence and Non-Orthogonal Projection"
+  }
+}

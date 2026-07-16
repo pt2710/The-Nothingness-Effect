@@ -1,0 +1,44 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_foundational_closure_architecture.tex",
+      "sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "observation_induced_collapse_and_collapse_divergence",
+    "collapse_attractor_stability_and_attractor_instability",
+    "uniqueness_and_non_uniqueness_of_collapse",
+    "hilbert_projection_realization_and_projection_breakdown",
+    "fixed_point_consistency_and_trivial_collapse_failure",
+    "observation_definiteness_equivalence_and_closure_failure",
+    "definite_state_projection_and_state_ambiguity",
+    "ergodic_collapse_projection_and_non_convergence",
+    "outcome_conditioned_closure_instrument",
+    "involutive_collapse_spectral_pinning_and_spectral_drift",
+    "temporal_compression_and_frozen_time_obstruction",
+    "collapse_spectral_selection_and_spectral_ambiguity",
+    "observation_dimensional_binding_and_dimensional_non_binding",
+    "observable_locality_and_collapse_inaccessibility",
+    "local_horizon_boundary_and_non_locality_divergence",
+    "closure_conditioned_spectral_outcome_field"
+  ]
+}

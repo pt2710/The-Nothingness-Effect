@@ -8,18 +8,6 @@ import os
 import sys
 
 # --- Robust project root detection (adjust marker if needed)
-def find_project_root(marker="equations"):
-    d = os.path.abspath(__file__)
-    while True:
-        d = os.path.dirname(d)
-        if marker in os.listdir(d):
-            return d
-        if d == os.path.dirname(d):
-            break
-    raise RuntimeError(f"Could not find project root with marker '{marker}'.")
-
-project_root = find_project_root()
-sys.path.insert(0, project_root)
 
 import csv
 import time

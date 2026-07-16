@@ -1,0 +1,171 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 61,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "reciprocal_relation_action_groupoid",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/1a/reciprocal_duality_invariance.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/2a/canonical_action_groupoid_realization_of_involutive_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/1a2a/duality_invariancegroupoid_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:duality_invariance_global_map_1a2a",
+    "eq:duality_invariance_graph_definition_1a2a",
+    "eq:duality_invariance_pair_reversal_1a2a",
+    "eq:duality_invariance_diagonal_relation_1a2a",
+    "eq:duality_invariance_inverse_relation_1a2a",
+    "eq:duality_invariance_relation_composition_1a2a",
+    "eq:duality_invariance_c2_definition_1a2a",
+    "eq:reciprocal_duality_relation_invariance_definition_1a",
+    "eq:reciprocal_duality_relation_inverse_definition_1a",
+    "eq:reciprocal_duality_equiv_involution_1a",
+    "eq:reciprocal_duality_equiv_pair_reversal_1a",
+    "eq:reciprocal_duality_equiv_inverse_relation_1a",
+    "eq:reciprocal_duality_equiv_relation_square_1a",
+    "eq:reciprocal_duality_self_inverse_1a",
+    "eq:reciprocal_consistency_orbit_relation_1a",
+    "eq:reciprocal_consistency_orbit_class_1a",
+    "eq:reciprocal_consistency_fixed_class_1a",
+    "eq:reciprocal_consistency_two_element_class_1a",
+    "eq:reciprocal_consistency_orbit_orientation_1a",
+    "eq:reciprocal_consistency_sign_conjugacy_1a",
+    "eq:order_two_relational_generated_group_1a",
+    "eq:order_two_relational_differential_identity_1a",
+    "eq:order_two_relational_fixed_differential_1a",
+    "eq:reciprocal_duality_invariance_principle_1a",
+    "eq:duality_action_groupoid_action_definition_2a",
+    "eq:duality_action_groupoid_definition_2a",
+    "eq:duality_action_groupoid_objects_2a",
+    "eq:duality_action_groupoid_arrows_2a",
+    "eq:canonical_duality_action_definition_2a",
+    "eq:canonical_duality_groupoid_source_2a",
+    "eq:canonical_duality_groupoid_target_2a",
+    "eq:canonical_duality_groupoid_identity_2a",
+    "eq:canonical_duality_groupoid_inverse_2a",
+    "eq:canonical_duality_groupoid_composition_2a",
+    "eq:duality_groupoid_generating_arrow_2a",
+    "eq:duality_groupoid_generating_inverse_2a",
+    "eq:duality_groupoid_forward_reverse_identity_2a",
+    "eq:duality_groupoid_reverse_forward_identity_2a",
+    "eq:duality_groupoid_fixed_isotropy_2a",
+    "eq:duality_groupoid_nontrivial_orbit_pair_groupoid_2a",
+    "eq:duality_action_groupoid_principle_2a",
+    "eq:duality_groupoid_joint_equiv_involution_1a2a",
+    "eq:duality_groupoid_joint_equiv_reciprocity_1a2a",
+    "eq:duality_groupoid_joint_equiv_relation_square_1a2a",
+    "eq:duality_groupoid_joint_equiv_action_1a2a",
+    "eq:duality_groupoid_joint_equiv_recursion_1a2a",
+    "eq:duality_groupoid_joint_equiv_groupoid_1a2a",
+    "eq:graph_groupoid_generating_arrow_1a2a",
+    "eq:graph_groupoid_graph_pair_1a2a",
+    "eq:graph_groupoid_inverse_reversal_1a2a",
+    "eq:graph_groupoid_composition_dictionary_1a2a",
+    "eq:graph_groupoid_reversal_inverse_dictionary_1a2a",
+    "eq:graph_groupoid_composition_dictionary_boxed_1a2a",
+    "eq:duality_groupoid_pullback_definition_1a2a",
+    "eq:duality_groupoid_pullback_involution_1a2a",
+    "eq:duality_groupoid_linear_projectors_1a2a",
+    "eq:duality_groupoid_linear_decomposition_1a2a",
+    "eq:duality_groupoid_linear_orbit_1a2a",
+    "eq:duality_groupoid_smooth_differential_identity_1a2a",
+    "eq:reciprocal_relation_action_groupoid_synthesis_1a2a",
+    "eq:duality_invariance_groupoid_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/falsification_checks/test_reciprocal_relation_action_groupoid_falsification.py"
+  ],
+  "first_label": "thm:duality_invariance_app_groupoid",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/a_level.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/1a/reciprocal_duality_invariance.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/2a/canonical_action_groupoid_realization_of_involutive_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/1a2a/duality_invariancegroupoid_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "graph, inverse graph, diagonal and composition",
+      "name": "reciprocal action groupoid",
+      "python_types": [
+        "RelationGroupoid"
+      ]
+    },
+    "domain": {
+      "description": "finite carrier and involutive permutation",
+      "name": "finite involutive relation",
+      "python_types": [
+        "FiniteInvolution"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.foundational_architecture.duality.duality.reciprocal_relation_action_groupoid",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.foundational_architecture.duality.a_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/run_suite.py",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "reciprocal_relation_action_groupoid",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_duality_contracts.py",
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_001_reciprocal_relationaction_groupoid/falsification_checks/test_reciprocal_relation_action_groupoid_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Duality Invariance–Groupoid Equivalence",
+    "left": "Reciprocal Duality Invariance",
+    "right": "Canonical Action-Groupoid Realization of Involutive Duality"
+  },
+  "theorem_titles_tex": {
+    "cross": "Duality Invariance--Groupoid Equivalence",
+    "left": "Reciprocal Duality Invariance",
+    "right": "Canonical Action-Groupoid Realization of Involutive Duality"
+  }
+}

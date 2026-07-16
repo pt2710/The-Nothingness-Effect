@@ -1,0 +1,114 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality/1a/hierarchical_soi_stack_transfer.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality/2a/cross_regime_collapse_duality.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality/1a2a/hierarchical_soi_stack_transfer_cross_regime_collapse_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soinet_map_1a",
+    "eq:soinet_calc_1a",
+    "eq:soinet_iso_1a",
+    "eq:soinet_iso_calc_1a",
+    "eq:soinet_union_1a",
+    "eq:soinet_union_calc_1a",
+    "eq:soinet_collapse_calc_2a",
+    "eq:soinet_fp_2a",
+    "eq:soinet_fp_calc_2a",
+    "eq:soinet_entropy_2a",
+    "eq:soinet_entropy_calc_2a",
+    "eq:soinet_map_1a2a",
+    "eq:soinet_stacktransfer_1a2a",
+    "eq:soinet_calc1_1a2a",
+    "eq:soinet_calc2_1a2a",
+    "eq:soinet_stackuniversal_lemma_1a2a",
+    "eq:soinet_stackuniversal_calc_lemma_1a2a",
+    "eq:soinet_stacktransfer_collapse_1a2a",
+    "eq:soinet_stacktransfer_collapse_calc_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality/falsification_checks/test_hierarchical_soi_stack_transfer_cross_regime_collapse_duality_falsification.py"
+  ],
+  "first_label": "app:soinet_complex_09",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality/falsification_checks/test_hierarchical_soi_stack_transfer_cross_regime_collapse_duality_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Hierarchical SOI-Stack Transfer , Cross-Regime Collapse Duality",
+    "left": "Hierarchical SOI-Stack Transfer",
+    "right": "Cross-Regime Collapse Duality"
+  },
+  "theorem_titles_tex": {
+    "cross": "Hierarchical SOI-Stack Transfer , Cross-Regime Collapse Duality",
+    "left": "Hierarchical SOI-Stack Transfer",
+    "right": "Cross-Regime Collapse Duality"
+  }
+}

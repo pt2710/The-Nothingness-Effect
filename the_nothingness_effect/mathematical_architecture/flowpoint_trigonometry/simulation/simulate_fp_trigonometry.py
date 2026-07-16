@@ -23,9 +23,6 @@ Success criteria:
 """
 
 import os
-import sys
-
-
 import time
 from datetime import timedelta
 import math
@@ -37,9 +34,7 @@ import matplotlib.animation as animation
 
 # Adjust the import path to locate FlowpointTrigonometry
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
-from fp_trigonometry import FlowpointTrigonometry  # Adjust import as needed
+from the_nothingness_effect.mathematical_architecture.flowpoint_trigonometry.fp_trigonometry import FlowpointTrigonometry  # Adjust import as needed
 
 def calculate_trigonometry(theta, fp_trig):
     x = math.cos(theta)

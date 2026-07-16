@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 17,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "common_potential_observation_operator",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/1b/common_potential_observation_operator_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/2b/common_potential_observation_operator_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/1b2b/complete_common_potential_observation_operator_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:sc06_source_complexes_1b2b",
+    "eq:sc06_geometry_wave_state_1b",
+    "eq:sc06_geometry_wave_chain_1b",
+    "eq:sc06_geometry_wave_bound_1b",
+    "eq:sc06_geometry_wave_residual_1b",
+    "eq:sc06_geometry_wave_synthesis_1b",
+    "eq:sc06_frequency_expansion_state_2b",
+    "eq:sc06_frequency_expansion_chain_2b",
+    "eq:sc06_frequency_expansion_bound_2b",
+    "eq:sc06_cocycle_transport_2b",
+    "eq:sc06_expansion_loop_2b",
+    "eq:sc06_frequency_expansion_synthesis_2b",
+    "eq:sc06_joint_system_1b2b",
+    "eq:sc06_explicit_b_composition_1b2b",
+    "eq:sc06_branch_exchange_1b2b",
+    "eq:sc06_combined_residual_1b2b",
+    "eq:sc06_joint_synthesis_1b2b"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/falsification_checks/test_common_potential_observation_operator_falsification.py"
+  ],
+  "first_label": "app:sc_complex_06",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/1b/common_potential_observation_operator_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/2b/common_potential_observation_operator_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/1b2b/complete_common_potential_observation_operator_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine bilinear two-source response",
+      "name": "common_potential_observation_operator interaction",
+      "python_types": [
+        "DerivedFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "cosmological_spark_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py"
+  ],
+  "source_complex_id": "common_potential_observation_operator",
+  "source_complex_ids": [
+    "elastic_cosmological_geometry_and_dubler_spectral_transfer",
+    "wave_sector_and_expansion_sector_cosmological_projection"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_002_common_potential_observation_operator/falsification_checks/test_common_potential_observation_operator_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Common-Potential Observation Operator Classification",
+    "left": "Common-Potential Observation Operator Law",
+    "right": "Common-Potential Observation Operator Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Common-Potential Observation Operator Classification",
+    "left": "Common-Potential Observation Operator Law",
+    "right": "Common-Potential Observation Operator Failure Law"
+  }
+}

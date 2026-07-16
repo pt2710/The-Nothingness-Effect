@@ -1,0 +1,133 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 20,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "terminal_quotient_of_closure_certificates",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/1c/terminal_admissibilityrepresentation_collapse.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/2c/terminal_invarianceconservation_collapse.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/1c2c/nothingness_axiom_terminal_spatial_quotient.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:nothingness_ar_quotient",
+    "eq:nothingness_ar_singleton",
+    "eq:nothingness_ar_criterion",
+    "eq:nothingness_ar_observable_factorization",
+    "eq:nothingness_ar_synthesis",
+    "eq:nothingness_ar_principle",
+    "eq:nothingness_ic_quotient",
+    "eq:nothingness_ic_singleton",
+    "eq:nothingness_ic_criterion",
+    "eq:nothingness_ic_observable_factorization",
+    "eq:nothingness_ic_synthesis",
+    "eq:nothingness_ic_principle",
+    "eq:nothingness_joint_carrier_1c2c",
+    "eq:nothingness_pushout_quotient",
+    "eq:nothingness_joint_singleton_1c2c",
+    "eq:nothingness_joint_singleton",
+    "eq:nothingness_pushout_identification",
+    "eq:nothingness_endomorphism_factorization",
+    "eq:nothingness_joint_synthesis",
+    "eq:nothingness_joint_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/falsification_checks/test_terminal_quotient_of_closure_certificates_falsification.py"
+  ],
+  "first_label": "app:nothingness_complex_01",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/1c/terminal_admissibilityrepresentation_collapse.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/2c/terminal_invarianceconservation_collapse.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/1c2c/nothingness_axiom_terminal_spatial_quotient.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "spatial certificate gluing or terminal quotient candidate",
+      "name": "terminal_quotient_of_closure_certificates closure",
+      "python_types": [
+        "CompletenessSpatialClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "terminal_quotient_of_closure_certificates",
+  "source_complex_ids": [
+    "protected_commuting_closure_transport",
+    "noether_constant_to_local_transgression"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_002_terminal_quotient_of_closure_certificates/falsification_checks/test_terminal_quotient_of_closure_certificates_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Nothingness-Axiom Terminal Spatial Quotient",
+    "left": "Terminal Admissibility–Representation Collapse",
+    "right": "Terminal Invariance–Conservation Collapse"
+  },
+  "theorem_titles_tex": {
+    "cross": "Nothingness-Axiom Terminal Spatial Quotient",
+    "left": "Terminal Admissibility–Representation Collapse",
+    "right": "Terminal Invariance–Conservation Collapse"
+  }
+}

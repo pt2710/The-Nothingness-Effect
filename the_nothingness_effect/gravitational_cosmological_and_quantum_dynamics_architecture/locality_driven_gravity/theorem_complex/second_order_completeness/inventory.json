@@ -1,0 +1,36 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "locality_weighted_spiral_order",
+      "directory": "complex_001_locality_weighted_spiral_order",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "curvature_driven_elastic_energy_production",
+      "directory": "complex_002_curvature_driven_elastic_energy_production",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "rotation_pitch_coupling_invariant",
+      "directory": "complex_003_rotation_pitch_coupling_invariant",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "screened_halo_response",
+      "directory": "complex_004_screened_halo_response",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "confined_filament_persistence",
+      "directory": "complex_005_confined_filament_persistence",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "information_bearing_cluster_web_stability",
+      "directory": "complex_006_information_bearing_cluster_web_stability",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity"
+}

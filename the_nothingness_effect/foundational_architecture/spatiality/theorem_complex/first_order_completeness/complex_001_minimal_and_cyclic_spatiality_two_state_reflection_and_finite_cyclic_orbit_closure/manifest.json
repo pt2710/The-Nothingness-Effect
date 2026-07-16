@@ -1,0 +1,138 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 43,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_001_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure/1a/minimal_involutive_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_001_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure/2a/finite_cyclic_spatial_recursion.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_001_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure/1a2a/minimal_involution_as_the_order_two_cyclic_boundary.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:minimal_cyclic_spatiality_global_map_1a2a",
+    "eq:minimal_cyclic_spatiality_generated_group_1a2a",
+    "eq:minimal_cyclic_spatiality_orbit_definition_1a2a",
+    "eq:minimal_cyclic_spatiality_cm_definition_1a2a",
+    "eq:minimal_cyclic_spatiality_involution_cube_boundary_1a2a",
+    "eq:minimal_cyclic_spatiality_exact_order_three_boundary_1a2a",
+    "eq:minimal_two_state_spatial_map_1a",
+    "eq:minimal_two_state_spatial_involution_1a",
+    "eq:minimal_two_state_spatial_nonidentity_1a",
+    "eq:minimal_two_state_spatial_sign_realization_1a",
+    "eq:minimal_involutive_spatiality_generated_group_1a",
+    "eq:minimal_involutive_spatiality_sign_conjugacy_1a",
+    "eq:minimal_involutive_spatiality_affine_reflection_1a",
+    "eq:spatial_involutive_action_definition_1a",
+    "eq:spatial_involutive_action_orbit_1a",
+    "eq:minimal_involutive_spatiality_exchange_proof_1a",
+    "eq:minimal_involutive_spatiality_power_reduction_proof_1a",
+    "eq:spatiality_two_orientations_1a",
+    "eq:minimal_spatial_reflection_synthesis_1a",
+    "eq:minimal_involutive_spatiality_principle_1a",
+    "eq:finite_cyclic_spatial_generator_2a",
+    "eq:finite_cyclic_spatial_order_dividing_m_2a",
+    "eq:finite_cyclic_spatial_action_definition_2a",
+    "eq:finite_cyclic_spatial_orbit_divides_order_2a",
+    "eq:finite_cyclic_spatial_periodic_recursion_2a",
+    "eq:finite_cyclic_spatial_orbit_decomposition_2a",
+    "eq:finite_cyclic_spatial_exact_order_three_2a",
+    "eq:cyclic_spatial_minimal_orbit_period_2a",
+    "eq:cyclic_spatial_orbit_period_divisibility_2a",
+    "eq:cyclic_spatial_orbit_enumeration_2a",
+    "eq:cyclic_spatial_three_cycle_2a",
+    "eq:finite_cyclic_spatial_stabilizer_proof_2a",
+    "eq:finite_cyclic_spatial_orbit_stabilizer_proof_2a",
+    "eq:spatiality_order_three_rotation_matrix_2a",
+    "eq:finite_cyclic_spatial_orbit_synthesis_2a",
+    "eq:finite_cyclic_spatiality_principle_2a",
+    "eq:minimal_cyclic_joint_regular_orbit_classification_1a2a",
+    "eq:minimal_cyclic_joint_order_two_involution_1a2a",
+    "eq:minimal_cyclic_joint_main_equivalence_1a2a",
+    "eq:regular_cyclic_orbit_reconstruction_map_1a2a",
+    "eq:order_two_order_three_spatial_separation_1a2a",
+    "eq:minimal_cyclic_spatial_classification_synthesis_1a2a",
+    "eq:minimal_cyclic_spatial_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_001_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure/falsification_checks/test_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure_falsification.py"
+  ],
+  "first_label": "app:spatiality_minimal_cyclic",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_001_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure/falsification_checks/test_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Minimal Involution as the Order-Two Cyclic Boundary",
+    "left": "Minimal Involutive Spatiality",
+    "right": "Finite Cyclic Spatial Recursion"
+  },
+  "theorem_titles_tex": {
+    "cross": "Minimal Involution as the Order-Two Cyclic Boundary",
+    "left": "Minimal Involutive Spatiality",
+    "right": "Finite Cyclic Spatial Recursion"
+  }
+}

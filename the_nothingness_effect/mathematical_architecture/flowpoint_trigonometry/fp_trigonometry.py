@@ -5,12 +5,9 @@ Email: thenothingnesseffect@gmail.com
 
 """
 import os
-import sys
 import math
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint import fp
 from the_nothingness_effect.mathematical_architecture.flowpoint_pi_approximation.fp_pi_approximation import fp_pi
 

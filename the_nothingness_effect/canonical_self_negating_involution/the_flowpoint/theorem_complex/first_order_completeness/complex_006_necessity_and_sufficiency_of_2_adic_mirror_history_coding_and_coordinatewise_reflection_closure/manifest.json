@@ -1,0 +1,171 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 74,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/1a/necessity_and_sufficiency_of_2_adic_mirror_coding.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/2a/coordinatewise_reflection_closure.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/1a2a/necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:mirror_dimensional_global_state_space_1a2a",
+    "eq:mirror_dimensional_balance_internal_coordinates_1a2a",
+    "eq:mirror_dimensional_vector_coordinates_1a2a",
+    "eq:mirror_dimensional_global_coordinate_map_1a2a",
+    "eq:mirror_dimensional_global_coordinate_inverse_1a2a",
+    "eq:mirror_dimensional_c2_definition_1a2a",
+    "eq:mirror_dimensional_binary_phase_group_1a2a",
+    "eq:mirror_dimensional_internal_reflection_1a2a",
+    "eq:mirror_dimensional_external_reflection_1a2a",
+    "eq:mirror_history_canonical_alternator_definition_1a",
+    "eq:mirror_history_canonical_alternator_closed_form_1a",
+    "eq:mirror_history_target_stream_definition_1a",
+    "eq:mirror_history_schedule_definition_1a",
+    "eq:mirror_history_cumulative_indices_definition_1a",
+    "eq:mirror_history_binary_readout_definition_1a",
+    "eq:mirror_history_realization_condition_1a",
+    "eq:mirror_history_initial_schedule_rule_1a",
+    "eq:mirror_history_recursive_schedule_rule_1a",
+    "eq:mirror_history_xor_schedule_rule_1a",
+    "eq:mirror_history_parity_transport_theorem_1a",
+    "eq:mirror_history_exact_readout_theorem_1a",
+    "eq:mirror_history_2adic_code_theorem_1a",
+    "eq:mirror_history_toggle_parity_lemma_1a",
+    "eq:mirror_history_hold_parity_lemma_1a",
+    "eq:mirror_history_involutive_return_corollary_1a",
+    "eq:mirror_history_2adic_truncation_definition_1a",
+    "eq:mirror_history_2adic_truncation_bound_1a",
+    "eq:mirror_history_first_difference_distance_1a",
+    "eq:necessary_sufficient_mirror_schedule_principle_1a",
+    "eq:necessary_sufficient_mirror_readout_principle_1a",
+    "eq:necessary_sufficient_mirror_2adic_principle_1a",
+    "eq:dimensional_reflection_elementary_operator_2a",
+    "eq:dimensional_reflection_elementary_action_2a",
+    "eq:dimensional_reflection_product_operator_2a",
+    "eq:dimensional_unification_representation_map_2a",
+    "eq:dimensional_unification_group_law_2a",
+    "eq:dimensional_unification_inverse_law_2a",
+    "eq:dimensional_unification_identity_law_2a",
+    "eq:dimensional_unification_unique_operator_form_2a",
+    "eq:dimensional_unification_coordinate_balance_2a",
+    "eq:dimensional_reflection_involution_lemma_2a",
+    "eq:dimensional_reflection_commutation_lemma_2a",
+    "eq:dimensional_reflection_normal_form_lemma_2a",
+    "eq:dimensional_reflection_explicit_action_lemma_2a",
+    "eq:dimensional_orbit_support_definition_2a",
+    "eq:dimensional_orbit_cardinality_2a",
+    "eq:dimensional_coordinate_fixed_condition_2a",
+    "eq:coordinatewise_dimensional_unification_principle_2a",
+    "eq:coordinatewise_dimensional_action_principle_2a",
+    "eq:multidimensional_mirror_stream_definition_1a2a",
+    "eq:multidimensional_mirror_stream_components_1a2a",
+    "eq:multidimensional_initial_schedule_definition_1a2a",
+    "eq:multidimensional_recursive_schedule_definition_1a2a",
+    "eq:multidimensional_cumulative_schedule_definition_1a2a",
+    "eq:multidimensional_parity_vector_definition_1a2a",
+    "eq:multidimensional_2adic_code_definition_1a2a",
+    "eq:joint_mirror_dimensional_exact_parity_transport_1a2a",
+    "eq:joint_mirror_dimensional_exact_operator_realization_1a2a",
+    "eq:joint_mirror_dimensional_exact_state_realization_1a2a",
+    "eq:joint_mirror_dimensional_balance_invariance_1a2a",
+    "eq:joint_mirror_dimensional_complete_2adic_code_1a2a",
+    "eq:joint_mirror_dimensional_stream_metric_1a2a",
+    "eq:joint_mirror_dimensional_sup_norm_1a2a",
+    "eq:joint_mirror_dimensional_isometry_1a2a",
+    "eq:joint_coordinatewise_parity_correspondence_1a2a",
+    "eq:joint_coordinatewise_sign_correspondence_1a2a",
+    "eq:joint_coordinatewise_operator_correspondence_1a2a",
+    "eq:joint_multidimensional_truncated_code_1a2a",
+    "eq:joint_multidimensional_truncation_bound_1a2a",
+    "eq:joint_mirror_dimension_principle_parity_1a2a",
+    "eq:joint_mirror_dimension_principle_action_1a2a",
+    "eq:joint_mirror_dimension_principle_code_1a2a",
+    "eq:joint_mirror_dimension_principle_temporal_identity_1a2a",
+    "eq:joint_mirror_dimension_principle_structural_identity_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/falsification_checks/test_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_falsification.py"
+  ],
+  "first_label": "app:flowpoint_2adic_dim_unification",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint_closure_interface",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/falsification_checks/test_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Necessity and Sufficiency of 2-Adic Mirror-History Coding and Coordinatewise Reflection Closure",
+    "left": "Necessity and Sufficiency of 2-Adic Mirror Coding",
+    "right": "Coordinatewise Reflection Closure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Necessity and Sufficiency of \\(2\\)-Adic Mirror-History Coding and Coordinatewise Reflection Closure \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Necessity and Sufficiency of \\(2\\)-Adic Mirror Coding",
+    "right": "Coordinatewise Reflection Closure"
+  }
+}

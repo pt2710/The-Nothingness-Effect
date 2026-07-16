@@ -13,12 +13,9 @@ Equation Name: Leibniz Formula for Pi
 This script extends the standard series computation by integrating the Flowpoint (fp) function to optimize the computation and provide an efficient approximation of Pi.
 """
 import os
-import sys
 import math
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint import fp
 
 def fp_pi(max_iterations):

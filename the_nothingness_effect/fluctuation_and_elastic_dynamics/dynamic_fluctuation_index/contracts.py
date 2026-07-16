@@ -32,7 +32,7 @@ from .dfi import (
 
 
 APPENDIX = "appendix_tne_fluctuation_and_elastic_dynamics.tex"
-APPENDIX_SHA256 = "3277f0ffffcc27dc37ed17f7ecf721ba32234706544ceb5cfbeb5538846f2ba2"
+APPENDIX_SHA256 = "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389"
 
 
 @dataclass(frozen=True)
@@ -77,6 +77,7 @@ class SpatialDFIInput:
     data: np.ndarray
     spectrum_scale: float
     tolerance: float = 1e-10
+    validation_weight: float = 1.0
 
 
 @dataclass(frozen=True)
@@ -86,6 +87,7 @@ class SpatialDFIClosure:
     local_exchange_residual: float
     boundary_leakage_residual: float
     normalization_residual: float
+    validation_residual: float
     closure_status: str
 
 
@@ -110,15 +112,19 @@ def applicability_operator(value: ApplicabilityInput) -> EntropicApplicability:
 
 
 def spatial_operator(value: SpatialDFIInput) -> SpatialDFIClosure:
+    if not np.isfinite(value.validation_weight) or value.validation_weight <= 0.0:
+        raise ValueError("validation_weight must be finite and strictly positive")
     result = require_finite_dfi(normalized_dfi(value.data, spectrum_scale=value.spectrum_scale))
     exchange, boundary = spatial_localization_residual(result)
-    closed = result.normalization_residual <= value.tolerance
+    validation_residual = abs(value.validation_weight - 1.0)
+    closed = max(result.normalization_residual, validation_residual) <= value.tolerance
     return SpatialDFIClosure(
         result,
         tuple(range(value.data.shape[0])),
         exchange,
         boundary,
         result.normalization_residual,
+        validation_residual,
         "numerical_candidate" if closed else "open",
     )
 
@@ -169,7 +175,7 @@ def remove_entropy_source(value: ApplicabilityInput) -> SourceRemovalResult:
 def remove_applicability_source(value: ApplicabilityInput) -> SourceRemovalResult:
     complete = applicability_operator(value)
     return source_removal_result(
-        ComplexId("dfi_spectrum_normalized_existence_and_normalization_breakdown"),
+        ComplexId("dfi_adaptive_applicability_and_contextual_instability"),
         complete.applicability_mask.astype(float),
         np.ones_like(complete.response),
         tolerance=1e-12,
@@ -196,11 +202,22 @@ def remove_response_source(value: SpatialDFIInput) -> SourceRemovalResult:
     )
 
 
+def remove_validation_source(value: SpatialDFIInput) -> SourceRemovalResult:
+    complete = spatial_operator(value)
+    return source_removal_result(
+        ComplexId("flowpoint_certified_dfi_validation_functional"),
+        complete.dfi.normalized_entropy * value.validation_weight,
+        np.zeros_like(complete.dfi.normalized_entropy),
+        tolerance=1e-12,
+    )
+
+
 def contracts() -> tuple[ComplexContract, ...]:
     a_ids = (
         "dfi_spectrum_normalized_existence_and_normalization_breakdown",
         "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
         "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
+        "dfi_adaptive_applicability_and_contextual_instability",
     )
     a1 = ComplexContract(
         ComplexId(a_ids[0]), APPENDIX, APPENDIX_SHA256, ComplexLevel.A, (),
@@ -225,6 +242,14 @@ def contracts() -> tuple[ComplexContract, ...]:
         dfi_operator,
         implementation_path="the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/contracts.py",
     )
+    a4 = ComplexContract(
+        ComplexId(a_ids[3]), APPENDIX, APPENDIX_SHA256, ComplexLevel.A, (),
+        DomainSpec("adaptively mapped DFI input", "finite mapped data, positive spectrum, and threshold", (ApplicabilityInput,)),
+        CodomainSpec("contextual applicability law", "response, applicability mask, and explicit instability residual", (EntropicApplicability,)),
+        applicability_operator,
+        residual=lambda _source, output: _residual("contextual applicability", (output.residual,)),
+        implementation_path="the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/contracts.py",
+    )
     b1 = ComplexContract(
         ComplexId("scale_normalized_dfi_homogeneity_invariant"), APPENDIX, APPENDIX_SHA256, ComplexLevel.B,
         (ComplexId(a_ids[0]), ComplexId(a_ids[1])),
@@ -238,28 +263,36 @@ def contracts() -> tuple[ComplexContract, ...]:
     )
     b2 = ComplexContract(
         ComplexId("entropic_applicability_response_operator"), APPENDIX, APPENDIX_SHA256, ComplexLevel.B,
-        (ComplexId(a_ids[0]), ComplexId(a_ids[2])),
+        (ComplexId(a_ids[2]), ComplexId(a_ids[3])),
         DomainSpec("entropic applicability", "complete DFI plus declared threshold", (ApplicabilityInput,)),
         CodomainSpec("applicability response", "response field, mask, and residual", (EntropicApplicability,)),
         applicability_operator,
+        residual=lambda _source, output: _residual("entropic applicability", (output.residual,)),
         source_removal_checks=(remove_entropy_source, remove_applicability_source),
         artifact_spec=ArtifactSpec(("ablation_table", "response_plot"), "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite"),
         implementation_path="the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/contracts.py",
     )
     c1 = ComplexContract(
         ComplexId("spatially_localized_dfi_consistency_closure"), APPENDIX, APPENDIX_SHA256, ComplexLevel.C,
-        (ComplexId("scale_normalized_dfi_homogeneity_invariant"), ComplexId("entropic_applicability_response_operator")),
+        (
+            ComplexId("scale_normalized_dfi_homogeneity_invariant"),
+            ComplexId("entropic_applicability_response_operator"),
+            ComplexId("flowpoint_certified_dfi_validation_functional"),
+        ),
         DomainSpec("spatial DFI samples", "finite ordered sample domain", (SpatialDFIInput,)),
         CodomainSpec("localized DFI closure", "local exchange, boundary leakage, and status", (SpatialDFIClosure,)),
         spatial_operator,
-        residual=lambda _source, output: _residual("spatial DFI normalization", (output.normalization_residual,)),
+        residual=lambda _source, output: _residual(
+            "spatial DFI normalization and validation",
+            (output.normalization_residual, output.validation_residual),
+        ),
         closure_predicate=lambda output, residual: output.closure_status == "numerical_candidate" and residual is not None and residual.passed,
-        source_removal_checks=(remove_homogeneity_source, remove_response_source),
+        source_removal_checks=(remove_homogeneity_source, remove_response_source, remove_validation_source),
         artifact_spec=ArtifactSpec(("field_csv", "boundary_plot", "animation_generator"), "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite"),
         exact_semantics=False,
         implementation_path="the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/contracts.py",
     )
-    return a1, a2, a3, b1, b2, c1
+    return a1, a2, a3, a4, b1, b2, c1
 
 
 def registered_dfi_registry(matrix: str | Path = "docs/data/theorem_complex_implementation_matrix.csv") -> TheoremComplexRegistry:

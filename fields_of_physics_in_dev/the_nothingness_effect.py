@@ -27,11 +27,7 @@ Usage:
 """
 
 import os
-import sys
 import warnings
-
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import fp
 from the_nothingness_effect.foundational_architecture.symmetry.symmetry import symmetry_equation
 from the_nothingness_effect.foundational_architecture.duality.duality import duality_equation

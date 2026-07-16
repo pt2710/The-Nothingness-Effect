@@ -18,18 +18,6 @@ import matplotlib.animation as animation
 import colorsys
 
 # --- Robust project root detection (adjust marker if needed)
-def find_project_root(marker="equations"):
-    d = os.path.abspath(__file__)
-    while True:
-        d = os.path.dirname(d)
-        if marker in os.listdir(d):
-            return d
-        if d == os.path.dirname(d):
-            break
-    raise RuntimeError(f"Could not find project root with marker '{marker}'.")
-
-project_root = find_project_root()
-sys.path.insert(0, project_root)
 
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import fp
 from the_nothingness_effect.foundational_architecture.uncountable_infinity.uncountable_infinity import uncountable_infinity

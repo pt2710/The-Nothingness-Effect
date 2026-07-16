@@ -1,0 +1,61 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery",
+      "directory": "complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality",
+      "directory": "complex_002_entropic_q_factor_suppressionconserved_ringdown_quality",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "nonlinear_overtone_generation_spectral_purity",
+      "directory": "complex_003_nonlinear_overtone_generationspectral_purity",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
+      "directory": "complex_004_subluminal_gw_transport_and_emgw_lagnull_lag_correspondence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint",
+      "directory": "complex_005_dfi_memory_kernel_in_waveformsno_extra_memory_imprint",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation",
+      "directory": "complex_006_flowpoint_boundary_mode_conversionpure_mode_propagation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "shock_onset_self_steepening_threshold_no_shock_propagation",
+      "directory": "complex_007_shock_onset_self_steepening_thresholdno_shock_propagation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
+      "directory": "complex_008_stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "environment_dependent_group_velocity_mapping_uniform_propagation",
+      "directory": "complex_009_environment_dependent_group_velocity_mappinguniform_propagation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "invertible_source_transport_detection_map_non_invertible_degeneracy",
+      "directory": "complex_010_invertible_sourcetransportdetection_mapnon_invertible_degeneracy",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i",
+      "directory": "complex_011_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts"
+}

@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "schedule_driven_generator_word_field",
+      "directory": "complex_001_schedule_driven_generator_word_field",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/symmetry"
+}

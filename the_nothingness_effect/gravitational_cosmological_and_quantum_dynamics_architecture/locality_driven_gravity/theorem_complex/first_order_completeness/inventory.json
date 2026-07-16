@@ -1,0 +1,76 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "locality_decomposition_nonlocal_entropic_divergence",
+      "directory": "complex_001_locality_decompositionnonlocal_entropic_divergence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "emergent_spiral_density_wave_spiral_dissolution",
+      "directory": "complex_002_emergent_spiral_density_wavespiral_dissolution",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "entropic_curvature_superposition_duality",
+      "directory": "complex_003_entropic_curvature_superposition_duality",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "locality_driven_gravity::elastic_entropic_energy_equivalence",
+      "directory": "complex_004_elasticentropic_energy_equivalence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "locality_driven_rotation_curve_duality",
+      "directory": "complex_005_locality_driven_rotation_curve_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "spiral_pitch_angle_gradient_duality",
+      "directory": "complex_006_spiral_pitch_angle_gradient_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "entropic_screening_nonlocal_curvature_mixing",
+      "directory": "complex_007_entropic_screeningnonlocal_curvature_mixing",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "halo_structure_formation_duality",
+      "directory": "complex_008_halo_structure_formation_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "entropic_gradient_filament_formation_duality",
+      "directory": "complex_009_entropic_gradientfilament_formation_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "locality_confinement_stability_duality",
+      "directory": "complex_010_locality_confinement_stability_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "entropic_localization_cluster_stability_duality",
+      "directory": "complex_011_entropic_localizationcluster_stability_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "localized_curvature_information_preservation_duality",
+      "directory": "complex_012_localized_curvatureinformation_preservation_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "cosmic_web_emergence_homogenization_duality",
+      "directory": "complex_013_cosmic_web_emergencehomogenization_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_interfac",
+      "directory": "complex_014_appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_inte",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity"
+}

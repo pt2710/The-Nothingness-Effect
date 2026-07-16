@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "flowpoint_resolved_cosmological_memory_resolvent",
+      "directory": "complex_001_flowpoint_resolved_cosmological_memory_resolvent",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "common_potential_observation_operator",
+      "directory": "complex_002_common_potential_observation_operator",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics"
+}

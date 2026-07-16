@@ -25,7 +25,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.types import Domain
 
 
 APPENDIX = "appendix_tne_artificial_intelligence_architechture.tex"
-APPENDIX_SHA256 = "8847de0e94ce317e52280e075e3fb42516d2b07ddb76cc6c4ff6e507545c3842"
+APPENDIX_SHA256 = "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a"
 # Source order is appendix-faithful: B19 consumes A01+A13 and B20 A02+A14.
 A_IDS = tuple(ComplexId(item) for item in (
     "motif_spectral_dual_regularity_law_for_soinets",

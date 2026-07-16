@@ -1,0 +1,107 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "screened_rotation_halo_geometry",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_002_screened_rotation_halo_geometry/1c/screened_rotation_halo_geometry_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_002_screened_rotation_halo_geometry/2c/screened_rotation_halo_geometry_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_002_screened_rotation_halo_geometry/1c2c/complete_screened_rotation_halo_geometry_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_ldg_c02_spatial_carrier",
+    "eq:drv_ldg_c02_1c",
+    "eq:drv_ldg_c02_theorem_1c",
+    "eq:drv_ldg_c02_res_1c",
+    "eq:drv_ldg_c02_2c",
+    "eq:drv_ldg_c02_res_2c",
+    "eq:drv_ldg_c02_joint",
+    "eq:drv_ldg_c02_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_002_screened_rotation_halo_geometry/falsification_checks/test_screened_rotation_halo_geometry_falsification.py"
+  ],
+  "first_label": "app:drv_ldg_c02",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "screened_rotation_halo_geometry",
+  "source_complex_ids": [
+    "rotation_pitch_coupling_invariant",
+    "screened_halo_response"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/third_order_completeness/complex_002_screened_rotation_halo_geometry/falsification_checks/test_screened_rotation_halo_geometry_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Screened Rotation-Halo Geometry Classification",
+    "left": "Screened Rotation-Halo Geometry Law",
+    "right": "Screened Rotation-Halo Geometry Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Screened Rotation-Halo Geometry Classification",
+    "left": "Screened Rotation-Halo Geometry Law",
+    "right": "Screened Rotation-Halo Geometry Failure Law"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 24,
+    "missing_audit_equation_labels": [
+      "eq:ct09_residual"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "protected_commuting_closure_transport",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/1b/commuting_conservative_transport.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/2b/coupled_misalignmentoverreach_law.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/1b2b/zero_defect_conservative_transport.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:ct09_protected_fragment",
+    "eq:ct09_protected_transport",
+    "eq:ct09_positive_conditions",
+    "eq:ct09_transport_identity",
+    "eq:ct09_transport_commutation",
+    "eq:ct09_base_reconstruction",
+    "eq:ct09_transport_synthesis",
+    "eq:ct09_transport_principle",
+    "eq:ct09_negative_witnesses",
+    "eq:ct09_overreach_transduction",
+    "eq:ct09_negative_implication",
+    "eq:ct09_coupled_failure",
+    "eq:ct09_misalignment_without_overreach",
+    "eq:ct09_overreach_certificate",
+    "eq:ct09_failure_synthesis",
+    "eq:ct09_failure_principle",
+    "eq:ct09_status_involution",
+    "eq:ct09_joint_audit",
+    "eq:ct09_joint_predicate",
+    "eq:ct09_joint_equivalence",
+    "eq:ct09_joint_source_removal",
+    "eq:ct09_pipeline_certificate",
+    "eq:ct09_joint_synthesis",
+    "eq:ct09_joint_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/falsification_checks/test_protected_commuting_closure_transport_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_09",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/1b2b/zero_defect_conservative_transport.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/1b/commuting_conservative_transport.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/2b/coupled_misalignmentoverreach_law.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/1b2b/zero_defect_conservative_transport.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine multi-source admissibility, splitting, transport, or transgression operator",
+      "name": "protected_commuting_closure_transport derived law",
+      "python_types": [
+        "CompletenessDerivedLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "protected_commuting_closure_transport",
+  "source_complex_ids": [
+    "commutation_of_closure_with_parity_soi_and_misaligned_closures",
+    "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_003_protected_commuting_closure_transport/falsification_checks/test_protected_commuting_closure_transport_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Zero-Defect Conservative Transport",
+    "left": "Commuting Conservative Transport",
+    "right": "Coupled Misalignment–Overreach Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Zero-Defect Conservative Transport",
+    "left": "Commuting Conservative Transport",
+    "right": "Coupled Misalignment–Overreach Law"
+  }
+}

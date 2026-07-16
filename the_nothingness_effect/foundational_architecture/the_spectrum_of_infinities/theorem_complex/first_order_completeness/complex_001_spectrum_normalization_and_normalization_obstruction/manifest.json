@@ -1,0 +1,140 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 43,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "spectrum_normalization_and_normalization_obstruction",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_001_spectrum_normalization_and_normalization_obstruction/1a/arbitrary_magnitude_spectrum_normalization_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_001_spectrum_normalization_and_normalization_obstruction/2a/soi_scale_consistency_obstruction_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_001_spectrum_normalization_and_normalization_obstruction/1a2a/arbitrary_magnitude_scale_calibration_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soi_normalization_canonical_operator_1a2a",
+    "eq:soi_selected_normalization_value_1a2a",
+    "eq:soi_normalization_integrated_carrier_1a2a",
+    "eq:soi_relative_probability_realization_1a2a",
+    "eq:soi_absolute_measure_1a2a",
+    "eq:soi_scaled_lebesgue_measure_1a2a",
+    "eq:soi_relative_absolute_totals_1a2a",
+    "eq:soi_percentage_amount_1a2a",
+    "eq:soi_normalization_selected_realization_1a2a",
+    "eq:soi_normalization_pushforward_hypothesis_1a2a",
+    "eq:soi_normalization_representative_identity_1a2a",
+    "eq:soi_normalization_operational_transport_1a2a",
+    "eq:soi_normalization_unit_mass_1a2a",
+    "eq:soi_dfi_scale_parametrized_equations_1a2a",
+    "eq:soi_dfi_absolute_relative_partition_1a2a",
+    "eq:soi_normalization_python_readout_1a2a",
+    "eq:soi_normalization_python_symmetric_mode_1a2a",
+    "eq:soi_normalization_realization_tuple_1a",
+    "eq:soi_normalization_definition_measure_pair_1a",
+    "eq:soi_normalization_definition_pushforward_1a",
+    "eq:soi_normalization_theorem_transport_1a",
+    "eq:soi_normalization_lp_isometry_1a",
+    "eq:soi_normalization_lemma_pushforward_1a",
+    "eq:soi_normalization_lemma_event_pair_1a",
+    "eq:soi_normalization_proof_simple_functions_1a",
+    "eq:soi_normalization_proof_lp_scaling_1a",
+    "eq:soi_normalization_corollary_dfi_scale_1a",
+    "eq:soi_normalization_corollary_relative_invariants_1a",
+    "eq:soi_normalization_synthesis_chain_1a",
+    "eq:std_soi_scale_percentage_1a",
+    "eq:soi_obstruction_conditions_2a",
+    "eq:soi_obstruction_failed_closure_relations_2a",
+    "eq:soi_obstruction_lemma_borel_witness_2a",
+    "eq:soi_obstruction_proof_event_identity_2a",
+    "eq:soi_obstruction_corollary_dfi_mismatch_2a",
+    "eq:soi_obstruction_synthesis_implication_2a",
+    "eq:std_soi_dual_calibration_2a",
+    "eq:soi_joint_layered_tuple_1a2a",
+    "eq:soi_joint_exclusive_status_1a2a",
+    "eq:soi_joint_admissible_pair_1a2a",
+    "eq:soi_joint_dfi_scale_covariance_1a2a",
+    "eq:soi_joint_synthesis_complete_closure_1a2a",
+    "eq:std_soi_scale_covariance_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_001_spectrum_normalization_and_normalization_obstruction/falsification_checks/test_spectrum_normalization_and_normalization_obstruction_falsification.py"
+  ],
+  "first_label": "subsec:spectrum_normalization_obstruction_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "spectrum_normalization_and_normalization_obstruction",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_001_spectrum_normalization_and_normalization_obstruction/falsification_checks/test_spectrum_normalization_and_normalization_obstruction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Arbitrary-Magnitude Scale Calibration Equivalence",
+    "left": "Arbitrary-Magnitude Spectrum Normalization Theorem",
+    "right": "SOI Scale-Consistency Obstruction Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Arbitrary-Magnitude Scale Calibration Equivalence",
+    "left": "Arbitrary-Magnitude Spectrum Normalization Theorem",
+    "right": "SOI Scale-Consistency Obstruction Theorem"
+  }
+}

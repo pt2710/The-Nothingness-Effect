@@ -1,0 +1,122 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 26,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "spiral_pitch_angle_gradient_duality",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_006_spiral_pitch_angle_gradient_duality/1a/spiral_pitch_angle_gradient_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_006_spiral_pitch_angle_gradient_duality/2a/pitch_angle_indeterminacy_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_006_spiral_pitch_angle_gradient_duality/1a2a/spiral_pitch_angle_gradient_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ldg06_pitch_angle_order_parameter_1a",
+    "eq:ldg06_pitch_angle_branch_condition_1a",
+    "eq:pitch_angle_unique_1a",
+    "eq:static_pitch_angle_1a",
+    "eq:gradient_pitch_lemma_1a",
+    "eq:gradient_pitch_lemma_static_1a",
+    "eq:proof_pitch_angle_unique_1a",
+    "eq:predictive_spiral_1a",
+    "eq:static_spiral_corollary_1a",
+    "eq:ldg06_pitch_angle_order_parameter_2a",
+    "eq:ldg06_pitch_angle_branch_condition_2a",
+    "eq:indeterminate_pitch_2a",
+    "eq:indeterminate_calculus_2a",
+    "eq:lemma_indeterminate_pitch_2a",
+    "eq:lemma_indeterminate_pitch_calculus_2a",
+    "eq:corollary_indeterminate_pitch_2a",
+    "eq:corollary_indeterminate_calculus_2a",
+    "eq:ldg06_pitch_angle_status_1a2a",
+    "eq:pitch_angle_unique_1a2a",
+    "eq:pitch_angle_indeterminate_1a2a",
+    "eq:theta_p_time_derivative_1a2a",
+    "eq:theta_p_static_entropy_1a2a",
+    "eq:closure_lemma_spiral_1a2a",
+    "eq:closure_lemma_spiral_calculus_1a2a",
+    "eq:dual_closure_proof_spiral_1a2a",
+    "eq:dual_corollary_spiral_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_006_spiral_pitch_angle_gradient_duality/falsification_checks/test_spiral_pitch_angle_gradient_duality_falsification.py"
+  ],
+  "first_label": "ssec:spiral_pitch_angle_gradient_duality_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "spiral_pitch_angle_gradient_duality",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_006_spiral_pitch_angle_gradient_duality/falsification_checks/test_spiral_pitch_angle_gradient_duality_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Spiral Pitch-Angle Gradient Duality",
+    "left": "Spiral Pitch-Angle Gradient Theorem",
+    "right": "Pitch-Angle Indeterminacy Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Spiral Pitch-Angle Gradient Duality",
+    "left": "Spiral Pitch-Angle Gradient Theorem",
+    "right": "Pitch-Angle Indeterminacy Theorem"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/generate_artifacts.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "locality_decomposition_nonlocal_entropic_divergence",
+    "emergent_spiral_density_wave_spiral_dissolution",
+    "entropic_curvature_superposition_duality",
+    "locality_driven_gravity::elastic_entropic_energy_equivalence",
+    "locality_driven_rotation_curve_duality",
+    "spiral_pitch_angle_gradient_duality",
+    "entropic_screening_nonlocal_curvature_mixing",
+    "halo_structure_formation_duality",
+    "entropic_gradient_filament_formation_duality",
+    "locality_confinement_stability_duality",
+    "entropic_localization_cluster_stability_duality",
+    "localized_curvature_information_preservation_duality",
+    "cosmic_web_emergence_homogenization_duality",
+    "appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_interfac",
+    "locality_weighted_spiral_order",
+    "curvature_driven_elastic_energy_production",
+    "rotation_pitch_coupling_invariant",
+    "screened_halo_response",
+    "confined_filament_persistence",
+    "information_bearing_cluster_web_stability",
+    "locality_energy_morphogenesis_closure",
+    "screened_rotation_halo_geometry",
+    "information_preserving_cosmic_network_closure"
+  ]
+}

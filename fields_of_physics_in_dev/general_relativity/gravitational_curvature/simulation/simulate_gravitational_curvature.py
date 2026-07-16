@@ -27,7 +27,6 @@ Note: This script requires the custom 'flowpoint' module to be imported.
 """
 
 import os
-import sys
 import csv
 import time
 from tqdm import tqdm
@@ -39,8 +38,6 @@ import pandas as pd
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.abspath(os.path.join(current_dir, "../../../"))
-sys.path.insert(0, root_dir)
-
 from gravitational_curvature import GravitationalCurvature
 
 def simulate_gravitational_curvature(num_particles=3, num_steps=1000, time_step=1e-3):

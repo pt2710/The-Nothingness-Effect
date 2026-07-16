@@ -1,0 +1,138 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 27,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_dubler_interferometry::elastic_gravitational_memory_instant_relaxation",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/1a/elastic_gravitational_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/2a/instant_relaxation_no_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/1a2a/elastic_gravitational_memory_instant_relaxation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:edi03_gravitational_memory_order_parameter_1a",
+    "eq:edi03_gravitational_memory_branch_condition_1a",
+    "eq:elastic_grav_memory_positive_mass_1a",
+    "eq:elastic_grav_memory_band_1a",
+    "eq:elastic_grav_memory_l1_1a",
+    "eq:elastic_grav_memory_dc_gain_1a",
+    "eq:elastic_grav_memory_diff_1a",
+    "eq:elastic_grav_memory_freq_proof_1a",
+    "eq:elastic_grav_memory_band_cor_1a",
+    "eq:elastic_grav_memory_energy_band_1a",
+    "eq:edi03_gravitational_memory_order_parameter_2a",
+    "eq:edi03_gravitational_memory_branch_condition_2a",
+    "eq:instant_relaxation_local_2a",
+    "eq:instant_relaxation_freq_2a",
+    "eq:instant_relaxation_support_2a",
+    "eq:instant_relaxation_flat_gain_2a",
+    "eq:instant_relaxation_effective_delta_2a",
+    "eq:instant_relaxation_no_pref_2a",
+    "eq:edi03_gravitational_memory_status_1a2a",
+    "eq:elastic_grav_memory_conv_1a2a",
+    "eq:elastic_grav_memory_mass_1a2a",
+    "eq:elastic_grav_memory_freq_1a2a",
+    "eq:elastic_grav_memory_zero_freq_1a2a",
+    "eq:elastic_grav_memory_partition_1a2a",
+    "eq:elastic_grav_memory_dc_1a2a",
+    "eq:elastic_grav_memory_measure_1a2a",
+    "eq:elastic_grav_memory_global_no_memory_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/falsification_checks/test_elastic_dubler_interferometry_elastic_gravitational_memory_instant_relaxation_falsification.py"
+  ],
+  "first_label": "ssec:elastic_grav_memory_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/1a/elastic_gravitational_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/2a/instant_relaxation_no_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/1a2a/elastic_gravitational_memory_instant_relaxation.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "gravitational_memory field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "elastic_gravitational_memory_instant_relaxation",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_003_elastic_gravitational_memoryinstant_relaxation/falsification_checks/test_elastic_dubler_interferometry_elastic_gravitational_memory_instant_relaxation_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic Gravitational Memory <-> Instant Relaxation",
+    "left": "Elastic Gravitational Memory",
+    "right": "Instant Relaxation (No-Memory)"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic Gravitational Memory $\\leftrightarrow$ Instant Relaxation",
+    "left": "Elastic Gravitational Memory",
+    "right": "Instant Relaxation (No-Memory)"
+  }
+}

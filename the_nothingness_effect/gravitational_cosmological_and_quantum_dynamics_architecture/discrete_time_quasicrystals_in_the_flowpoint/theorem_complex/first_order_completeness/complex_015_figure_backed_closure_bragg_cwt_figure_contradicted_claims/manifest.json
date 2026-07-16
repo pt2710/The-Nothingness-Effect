@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims/1a/figure_backed_closure_bragg_cwt_1a.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims/2a/figure_contradicted_claims_2a.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims/1a2a/figure_backed_closure_bragg_cwt_figure_contradicted_claims.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:fig_support_equality_1a",
+    "eq:fig_flux_mass_identity_1a",
+    "eq:fig_ridge_bijection_1a",
+    "eq:fig_ridge_freq_derivative_1a",
+    "eq:fig_subset_supports_1a",
+    "eq:fig_mismatch_minimum_1a",
+    "eq:fig_estimator_set_equality_1a",
+    "eq:fig_estimator_consistency_1a",
+    "eq:fig_mismatch_metrics_2a",
+    "eq:fig_mismatch_positive_2a",
+    "eq:fig_leakage_existence_2a",
+    "eq:fig_infeasible_fit_2a",
+    "eq:fig_no_stationary_dtqc_2a",
+    "eq:fig_reject_rule_2a",
+    "eq:fig_asymptotic_rejection_2a",
+    "eq:dtqc15_joint_status_1a2a",
+    "eq:fig_def_support_S_1a2a",
+    "eq:fig_def_ft_coeff_1a2a",
+    "eq:fig_def_bragg_map_1a2a",
+    "eq:fig_def_cwt_1a2a",
+    "eq:fig_def_ridge_set_1a2a",
+    "eq:fig_def_ridge_freq_set_1a2a",
+    "eq:fig_support_equality_1a2a",
+    "eq:fig_mismatch_functional_1a2a",
+    "eq:fig_wavelet_energy_parseval_1a2a",
+    "eq:fig_ridge_flux_def_1a2a",
+    "eq:fig_ridge_flux_equals_mass_1a2a",
+    "eq:fig_hausdorff_zero_eq_1a2a",
+    "eq:fig_projection_inf_sup_1a2a",
+    "eq:fig_zero_mismatch_equivalence_1a2a",
+    "eq:fig_variational_minimum_1a2a",
+    "eq:fig_certify_rule_1a2a",
+    "eq:fig_certify_variational_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims/falsification_checks/test_figure_backed_closure_bragg_cwt_figure_contradicted_claims_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_15",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims/falsification_checks/test_figure_backed_closure_bragg_cwt_figure_contradicted_claims_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Figure-Backed Closure (Bragg + CWT) <-> Figure-Contradicted Claims",
+    "left": "Figure-Backed Closure (Bragg + CWT), 1A",
+    "right": "Figure-Contradicted Claims, 2A"
+  },
+  "theorem_titles_tex": {
+    "cross": "Figure-Backed Closure (Bragg + CWT) $\\leftrightarrow$ Figure-Contradicted Claims",
+    "left": "Figure-Backed Closure (Bragg + CWT), 1A",
+    "right": "Figure-Contradicted Claims, 2A"
+  }
+}

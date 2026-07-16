@@ -28,8 +28,6 @@ import sys
 import math
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 import csv
 import logging
 import time
@@ -40,7 +38,7 @@ import matplotlib.collections as mc
 import traceback
 from typing import List, Tuple
 from tqdm import tqdm
-from fp_pi_approximation import fp_pi
+from the_nothingness_effect.mathematical_architecture.flowpoint_pi_approximation.fp_pi_approximation import fp_pi
 
 # Configure logging with timestamp
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')

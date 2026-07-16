@@ -1,0 +1,154 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 57,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "kernel_alternator",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_005_kernelalternator/1a/minimal_dual_compensation.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_005_kernelalternator/2a/orbitwise_alternator_universality.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_005_kernelalternator/1a2a/minimal_and_universal_flowpoint_kernelalternator_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:minimal_universal_flowpoint_state_space_1a2a",
+    "eq:minimal_universal_flowpoint_balance_map_1a2a",
+    "eq:minimal_universal_flowpoint_swap_1a2a",
+    "eq:minimal_universal_flowpoint_swap_involution_1a2a",
+    "eq:minimal_universal_flowpoint_coordinate_map_1a2a",
+    "eq:minimal_universal_flowpoint_coordinate_inverse_1a2a",
+    "eq:minimal_universal_flowpoint_duality_symmetry_interface_1a2a",
+    "eq:minimal_dual_transformation_kernel_definition_1a",
+    "eq:minimal_dual_transformation_balance_preservation_definition_1a",
+    "eq:minimal_dual_transformation_translation_definition_1a",
+    "eq:minimal_dual_compensation_unique_rule_1a",
+    "eq:minimal_dual_compensation_equiv_balance_1a",
+    "eq:minimal_dual_compensation_equiv_zero_1a",
+    "eq:minimal_dual_compensation_equiv_kernel_1a",
+    "eq:minimal_dual_compensation_equiv_antisymmetry_1a",
+    "eq:minimal_dual_kernel_parameterization_1a",
+    "eq:minimal_dual_kernel_diagonal_projectors_1a",
+    "eq:minimal_dual_kernel_projection_1a",
+    "eq:minimal_dual_diagonal_projection_1a",
+    "eq:minimal_dual_projector_algebra_1a",
+    "eq:minimal_dual_diagonal_kernel_decomposition_1a",
+    "eq:minimal_dual_translation_group_law_1a",
+    "eq:minimal_dual_continuous_balance_conservation_1a",
+    "eq:minimal_dual_continuous_counter_rate_1a",
+    "eq:minimal_dual_constant_balance_1a",
+    "eq:minimal_dual_compensation_principle_1a",
+    "eq:alternator_universality_involution_definition_2a",
+    "eq:alternator_universality_orbit_definition_2a",
+    "eq:alternator_universality_orientation_definition_2a",
+    "eq:alternator_universality_canonical_flip_2a",
+    "eq:orbitwise_alternator_conjugacy_2a",
+    "eq:orbitwise_alternator_sequence_2a",
+    "eq:orbitwise_alternator_sign_sequence_2a",
+    "eq:alternator_orientation_reversal_2a",
+    "eq:canonical_alternator_swap_matrix_2a",
+    "eq:orbitwise_alternator_principle_2a",
+    "eq:minimal_universal_internal_translation_definition_1a2a",
+    "eq:minimal_universal_internal_reflection_definition_1a2a",
+    "eq:minimal_universal_balance_coordinate_1a2a",
+    "eq:minimal_universal_translation_conjugacy_1a2a",
+    "eq:minimal_universal_swap_conjugacy_1a2a",
+    "eq:minimal_universal_translation_reflection_relation_1a2a",
+    "eq:minimal_universal_semidirect_product_1a2a",
+    "eq:minimal_universal_internal_conjugacy_1a2a",
+    "eq:minimal_universal_external_conjugacy_1a2a",
+    "eq:minimal_universal_joint_orbit_coordinates_1a2a",
+    "eq:minimal_universal_swap_balance_invariance_1a2a",
+    "eq:minimal_universal_swap_even_odd_orbit_1a2a",
+    "eq:minimal_universal_swap_exact_period_condition_1a2a",
+    "eq:minimal_universal_corollary_balance_coordinate_1a2a",
+    "eq:minimal_universal_corollary_internal_coordinate_1a2a",
+    "eq:minimal_universal_corollary_internal_alternation_1a2a",
+    "eq:minimal_universal_principle_minimality_1a2a",
+    "eq:minimal_universal_principle_universality_1a2a",
+    "eq:minimal_universal_principle_translation_1a2a",
+    "eq:minimal_universal_principle_alternation_1a2a",
+    "eq:minimal_universal_principle_conjugacy_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_005_kernelalternator/falsification_checks/test_kernel_alternator_falsification.py"
+  ],
+  "first_label": "app:flowpoint_duality_minimal",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint_closure_interface",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "kernel_alternator",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_005_kernelalternator/falsification_checks/test_kernel_alternator_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Minimal and Universal Flowpoint Kernel–Alternator Closure",
+    "left": "Minimal Dual Compensation",
+    "right": "Orbitwise Alternator Universality"
+  },
+  "theorem_titles_tex": {
+    "cross": "Minimal and Universal Flowpoint Kernel--Alternator Closure \\texorpdfstring{\\ensuremath{((1A\\leftrightarrow2A))}}{(1A<->2A)}",
+    "left": "Minimal Dual Compensation",
+    "right": "Orbitwise Alternator Universality"
+  }
+}

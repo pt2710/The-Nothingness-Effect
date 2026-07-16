@@ -1,0 +1,26 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "dubler_potential_current_spatial_closure",
+      "directory": "complex_001_dubler_potentialcurrent_spatial_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_elastic_spectral_spatial_closure",
+      "directory": "complex_002_parity_elastic_spectral_spatial_closure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observable_conserved_directed_transport_closure",
+      "directory": "complex_003_observable_conserved_directed_transport_closure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "spatially_calibrated_quantum_information_closure",
+      "directory": "complex_004_spatially_calibrated_quantum_information_closure",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect"
+}

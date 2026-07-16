@@ -27,14 +27,9 @@ directory structure.
 """
 
 import os
-import sys
-
 # Set up script and parent directories for imports and output paths
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
 script_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, script_dir)
-
 import numpy as np
 import csv
 import time

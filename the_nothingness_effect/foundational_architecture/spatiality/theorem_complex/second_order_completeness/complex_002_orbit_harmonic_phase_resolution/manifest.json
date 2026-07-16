@@ -1,0 +1,121 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 26,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "orbit_harmonic_phase_resolution",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_002_orbit_harmonic_phase_resolution/1b/spectral_square_root_of_spatial_exchange.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_002_orbit_harmonic_phase_resolution/2b/fourier_diagonalization_with_phase_conjugate_reflection.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_002_orbit_harmonic_phase_resolution/1b2b/reflected_spectral_half_step.py"
+  ],
+  "dependency_status": "not_directly_computable",
+  "equation_labels": [
+    "eq:spatiality_observable_space_1b",
+    "eq:spatiality_involution_pullback_1b",
+    "eq:spatiality_spectral_root_definition_1b",
+    "eq:spatiality_spectral_root_law_1b",
+    "eq:spatiality_spectral_root_eigenspaces_1b",
+    "eq:spatiality_spectral_root_exponential_1b",
+    "eq:spatiality_even_odd_coordinates_1b",
+    "eq:spatiality_harmonic_synthesis_1b",
+    "eq:spatiality_harmonic_principle_1b",
+    "eq:spatiality_orbit_shift_2b",
+    "eq:spatiality_orbit_fourier_transform_2b",
+    "eq:spatiality_fourier_reflection_2b",
+    "eq:spatiality_fourier_dihedral_relation_2b",
+    "eq:spatiality_fourier_shift_diagonal_2b",
+    "eq:spatiality_fourier_reflection_diagonal_2b",
+    "eq:spatiality_reflection_fixed_fourier_condition_2b",
+    "eq:spatiality_reflection_fixed_real_coordinate_2b",
+    "eq:spatiality_parseval_dihedral_2b",
+    "eq:spatiality_harmonic_synthesis_2b",
+    "eq:spatiality_harmonic_principle_2b",
+    "eq:spatiality_fractional_shift_definition_joint_b",
+    "eq:spatiality_fractional_shift_relations_joint_b",
+    "eq:spatiality_fractional_shift_m2_joint_b",
+    "eq:spatiality_fractional_shift_interpolation_joint_b",
+    "eq:spatiality_harmonic_joint_synthesis_b",
+    "eq:spatiality_harmonic_joint_principle_b"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_002_orbit_harmonic_phase_resolution/falsification_checks/test_orbit_harmonic_phase_resolution_falsification.py"
+  ],
+  "first_label": "app:spatiality_orbit_harmonic_b",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "orbit_harmonic_phase_resolution",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_002_orbit_harmonic_phase_resolution/falsification_checks/test_orbit_harmonic_phase_resolution_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Reflected Spectral Half-Step",
+    "left": "Spectral Square Root of Spatial Exchange",
+    "right": "Fourier Diagonalization with Phase-Conjugate Reflection"
+  },
+  "theorem_titles_tex": {
+    "cross": "Reflected Spectral Half-Step",
+    "left": "Spectral Square Root of Spatial Exchange",
+    "right": "Fourier Diagonalization with Phase-Conjugate Reflection"
+  }
+}

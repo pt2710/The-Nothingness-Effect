@@ -1,0 +1,107 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 11,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac/1a/typed_symmetric_cosmology_compositional_closure.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac/2a/symmetric_cosmology_dependency_localized_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac/1a2a/appendix_wide_symmetric_cosmology_closure_and_falsification_localization.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:sc_cross_complex_chain_1a2a1b2b1c2c",
+    "eq:sc_meta_complex_set_1a2a1b2b1c2c",
+    "eq:sc_meta_dependency_graph_1a2a1b2b1c2c",
+    "eq:sc_meta_composite_domain_1a2a1b2b1c2c",
+    "eq:sc_meta_realization_tuple_1a",
+    "eq:sc_meta_composite_map_1a",
+    "eq:sc_meta_interface_commutation_1a",
+    "eq:sc_meta_residual_vector_1a2a",
+    "eq:sc_meta_status_1a2a",
+    "eq:sc_meta_joint_closure_condition_1a2a",
+    "eq:sc_cross_complex_audit_record_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac/falsification_checks/test_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac_falsification.py"
+  ],
+  "first_label": "app:sc_cross_complex_meta_closure_1a2a1b2b1c2c",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "cosmological_spark_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py"
+  ],
+  "source_complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac/falsification_checks/test_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Appendix-Wide Symmetric-Cosmology Closure and Falsification Localization",
+    "left": "Typed Symmetric-Cosmology Compositional Closure",
+    "right": "Symmetric-Cosmology Dependency-Localized Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Appendix-Wide Symmetric-Cosmology Closure and Falsification Localization",
+    "left": "Typed Symmetric-Cosmology Compositional Closure",
+    "right": "Symmetric-Cosmology Dependency-Localized Breakdown"
+  }
+}

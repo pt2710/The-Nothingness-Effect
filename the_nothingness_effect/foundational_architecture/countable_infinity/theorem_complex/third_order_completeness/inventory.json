@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "reflected_cubical_address_space",
+      "directory": "complex_001_reflected_cubical_address_space",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/countable_infinity"
+}

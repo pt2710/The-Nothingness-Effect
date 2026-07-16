@@ -1,0 +1,120 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 23,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "definite_state_projection_and_state_ambiguity",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_007_definite_state_projection_and_state_ambiguity/1a/definite_state_projection.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_007_definite_state_projection_and_state_ambiguity/2a/projection_breakdown_and_state_ambiguity.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_007_definite_state_projection_and_state_ambiguity/1a2a/definite_state_versus_ambiguous_update_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:obs13_canonical_observation_collapse_1a2a",
+    "eq:obs13_pvm_conditions_1a",
+    "eq:obs13_born_probabilities_1a",
+    "eq:obs13_luders_update_1a",
+    "eq:obs13_probability_normalization_1a",
+    "eq:obs13_conditional_state_properties_1a",
+    "eq:obs13_repeatability_1a",
+    "eq:obs13_parseval_pvm_1a",
+    "eq:obs13_synthesis_1a",
+    "eq:std_obs13_principle_1a",
+    "eq:obs13_povm_conditions_2a",
+    "eq:obs13_povm_probabilities_2a",
+    "eq:obs13_coin_povm_2a",
+    "eq:obs13_prepare_instrument_2a",
+    "eq:obs13_same_probabilities_2a",
+    "eq:obs13_synthesis_2a",
+    "eq:std_obs13_principle_2a",
+    "eq:obs13_joint_tuple_1a2a",
+    "eq:obs13_instrument_consistency_1a2a",
+    "eq:obs13_general_conditional_state_1a2a",
+    "eq:obs13_luders_channel_1a2a",
+    "eq:obs13_joint_instrument_chain_1a2a",
+    "eq:std_obs13_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_007_definite_state_projection_and_state_ambiguity/falsification_checks/test_definite_state_projection_and_state_ambiguity_falsification.py"
+  ],
+  "first_label": "app:obs_complex_13",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "definite_state_projection_and_state_ambiguity",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_007_definite_state_projection_and_state_ambiguity/falsification_checks/test_definite_state_projection_and_state_ambiguity_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Definite-State versus Ambiguous-Update Classification",
+    "left": "Definite-State Projection",
+    "right": "Projection Breakdown and State Ambiguity"
+  },
+  "theorem_titles_tex": {
+    "cross": "Definite-State versus Ambiguous-Update Classification",
+    "left": "Definite-State Projection",
+    "right": "Projection Breakdown and State Ambiguity"
+  }
+}

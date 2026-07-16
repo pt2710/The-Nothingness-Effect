@@ -1,0 +1,168 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 73,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "kernel_recursion",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_004_kernelrecursion/1a/flowpoint_duality_principle.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_004_kernelrecursion/2a/recursive_compensation_law.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_004_kernelrecursion/1a2a/local_kernel_compensationrecursive_fiber_preservation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_recursive_compensation_state_space_1a2a",
+    "eq:flowpoint_recursive_compensation_balance_map_1a2a",
+    "eq:flowpoint_recursive_compensation_kernel_1a2a",
+    "eq:flowpoint_recursive_compensation_kernel_parameterization_1a2a",
+    "eq:flowpoint_recursive_compensation_translation_1a2a",
+    "eq:flowpoint_recursive_compensation_swap_1a2a",
+    "eq:flowpoint_recursive_compensation_swap_involution_1a2a",
+    "eq:local_flowpoint_compensation_definition_1a",
+    "eq:local_flowpoint_compensation_fiber_definition_1a",
+    "eq:flowpoint_duality_principle_balance_condition_1a",
+    "eq:flowpoint_duality_principle_counter_increment_1a",
+    "eq:flowpoint_duality_principle_equiv_balance_1a",
+    "eq:flowpoint_duality_principle_equiv_zero_1a",
+    "eq:flowpoint_duality_principle_equiv_kernel_1a",
+    "eq:flowpoint_duality_principle_equiv_pair_1a",
+    "eq:local_flowpoint_translation_composition_1a",
+    "eq:local_flowpoint_translation_identity_1a",
+    "eq:local_flowpoint_translation_inverse_1a",
+    "eq:local_flowpoint_swap_conjugacy_1a",
+    "eq:one_step_flowpoint_balance_preservation_1a",
+    "eq:one_step_flowpoint_reversal_1a",
+    "eq:local_duality_kernel_motion_synthesis_1a",
+    "eq:local_flowpoint_dual_closure_principle_1a",
+    "eq:recursive_compensation_cumulative_displacement_definition_2a",
+    "eq:recursive_compensation_state_recursion_definition_2a",
+    "eq:recursive_compensation_component_recursion_definition_2a",
+    "eq:recursive_compensation_cumulative_update_2a",
+    "eq:recursive_compensation_closed_form_2a",
+    "eq:recursive_compensation_global_balance_2a",
+    "eq:recursive_compensation_transition_map_2a",
+    "eq:recursive_compensation_reverse_chain_2a",
+    "eq:recursive_compensation_cumulative_inverse_2a",
+    "eq:recursive_compensation_increment_definition_2a",
+    "eq:recursive_compensation_prefix_invariance_2a",
+    "eq:recursive_compensation_step_invariance_2a",
+    "eq:recursive_compensation_step_kernel_2a",
+    "eq:recursive_compensation_unique_step_parameter_2a",
+    "eq:recursive_compensation_operator_recursion_2a",
+    "eq:recursive_compensation_operator_closed_form_2a",
+    "eq:recursive_compensation_continuous_balance_derivative_2a",
+    "eq:recursive_compensation_continuous_constant_balance_2a",
+    "eq:recursive_compensation_continuous_rate_law_2a",
+    "eq:recursive_compensation_higher_derivatives_2a",
+    "eq:recursive_compensation_cumulative_kernel_synthesis_2a",
+    "eq:recursive_dual_compensation_step_principle_2a",
+    "eq:recursive_dual_compensation_state_principle_2a",
+    "eq:recursive_dual_compensation_balance_principle_2a",
+    "eq:local_recursive_dual_closure_local_condition_1a2a",
+    "eq:local_recursive_dual_closure_transport_definition_1a2a",
+    "eq:local_recursive_dual_closure_global_condition_1a2a",
+    "eq:joint_recursive_compensation_step_balance_1a2a",
+    "eq:joint_recursive_compensation_prefix_balance_1a2a",
+    "eq:joint_recursive_compensation_kernel_steps_1a2a",
+    "eq:joint_recursive_compensation_unique_local_update_1a2a",
+    "eq:joint_recursive_compensation_global_form_1a2a",
+    "eq:joint_recursive_compensation_interval_transport_1a2a",
+    "eq:joint_recursive_compensation_interval_inverse_1a2a",
+    "eq:joint_recursive_compensation_swap_reversal_1a2a",
+    "eq:joint_recursive_interval_displacement_definition_1a2a",
+    "eq:joint_recursive_displacement_cocycle_1a2a",
+    "eq:joint_recursive_transport_cocycle_1a2a",
+    "eq:joint_recursive_reverse_displacement_1a2a",
+    "eq:joint_recursive_reverse_transport_1a2a",
+    "eq:joint_recursive_path_independence_condition_1a2a",
+    "eq:joint_recursive_cumulative_limit_condition_1a2a",
+    "eq:joint_recursive_state_limit_1a2a",
+    "eq:joint_recursive_limit_balance_1a2a",
+    "eq:joint_recursive_differential_kernel_closure_1a2a",
+    "eq:local_global_recursive_synthesis_equivalence_1a2a",
+    "eq:joint_recursive_closure_local_identity_1a2a",
+    "eq:joint_recursive_closure_balance_identity_1a2a",
+    "eq:joint_recursive_closure_global_identity_1a2a",
+    "eq:joint_recursive_closure_inverse_identity_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_004_kernelrecursion/falsification_checks/test_kernel_recursion_falsification.py"
+  ],
+  "first_label": "app:flowpoint_duality_principle",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint_duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "kernel_recursion",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_004_kernelrecursion/falsification_checks/test_kernel_recursion_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Local Kernel Compensation–Recursive Fiber Preservation",
+    "left": "Flowpoint Duality Principle",
+    "right": "Recursive Compensation Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Local Kernel Compensation--Recursive Fiber Preservation \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Flowpoint Duality Principle",
+    "right": "Recursive Compensation Law"
+  }
+}

@@ -5,14 +5,9 @@ Email: thenothingnesseffect@gmail.com
 
 """
 import os
-import sys
-
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
-sys.path.insert(0, parent_dir)
 equations_dir = os.path.join(parent_dir, 'equations')
-sys.path.insert(0, equations_dir)
-
 from the_nothingness_effect.foundational_architecture.symmetry.symmetry import symmetry_equation
 from the_nothingness_effect.foundational_architecture.duality.duality import duality_equation
 from the_nothingness_effect.foundational_architecture.spatiality.spatiality import spatiality_equation

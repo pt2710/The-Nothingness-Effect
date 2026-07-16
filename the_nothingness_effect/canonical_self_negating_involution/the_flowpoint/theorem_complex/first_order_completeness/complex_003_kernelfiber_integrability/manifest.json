@@ -1,0 +1,179 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 65,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "kernel_fiber_integrability",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/1a/flowpoint_forward_duality.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/2a/flowpoint_reverse_duality.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/1a2a/kernelfiber_integrability.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_completeness_balance_map_1a2a",
+    "eq:flowpoint_completeness_swap_involution_1a2a",
+    "eq:flowpoint_completeness_swap_involution_square_1a2a",
+    "eq:flowpoint_completeness_kernel_1a2a",
+    "eq:flowpoint_completeness_diagonal_1a2a",
+    "eq:flowpoint_completeness_canonical_projectors_1a2a",
+    "eq:flowpoint_completeness_kernel_projector_explicit_1a2a",
+    "eq:flowpoint_completeness_diagonal_projector_explicit_1a2a",
+    "eq:forward_flowpoint_legal_increment_definition_1a",
+    "eq:forward_flowpoint_update_definition_1a",
+    "eq:flowpoint_forward_duality_alg_oprtr_eq1_1a",
+    "eq:flowpoint_forward_balance_invariance_1a",
+    "eq:flowpoint_forward_update_inverse_1a",
+    "eq:flowpoint_forward_update_composition_1a",
+    "eq:minimal_closure_balance_condition_1a",
+    "eq:minimal_closure_kernel_condition_1a",
+    "eq:minimal_closure_membership_condition_1a",
+    "eq:minimal_closure_antisymmetry_condition_1a",
+    "eq:flowpoint_forward_conservation_derivative_1a",
+    "eq:flowpoint_forward_rate_antisymmetry_1a",
+    "eq:flowpoint_forward_affine_trajectory_1a",
+    "eq:forward_kernel_conservation_principle_1a",
+    "eq:reverse_flowpoint_legal_increment_definition_2a",
+    "eq:reverse_flowpoint_update_definition_2a",
+    "eq:flowpoint_reverse_duality_alg_oprtr_eq1_2a",
+    "eq:flowpoint_reverse_update_inverse_2a",
+    "eq:flowpoint_reverse_update_composition_2a",
+    "eq:dual_symmetry_parameter_reversal_2a",
+    "eq:dual_symmetry_swap_conjugacy_2a",
+    "eq:reverse_dual_rate_antisymmetry_2a",
+    "eq:reverse_dual_conservation_derivative_2a",
+    "eq:reverse_dual_affine_trajectory_2a",
+    "eq:reverse_kernel_conservation_principle_2a",
+    "eq:flowpoint_balance_fiber_definition_1a2a",
+    "eq:flowpoint_kernel_translation_action_1a2a",
+    "eq:kernel_fiber_completeness_definition_1a2a",
+    "eq:flowpoint_completeness_fiber_coset_1a2a",
+    "eq:flowpoint_completeness_same_fiber_kernel_1a2a",
+    "eq:flowpoint_completeness_global_trivialization_1a2a",
+    "eq:flowpoint_completeness_global_trivialization_inverse_1a2a",
+    "eq:flowpoint_completeness_projection_factorization_1a2a",
+    "eq:flowpoint_completeness_product_decomposition_1a2a",
+    "eq:flowpoint_completeness_quotient_isomorphism_1a2a",
+    "eq:flowpoint_completeness_forward_reverse_equivalence_1a2a",
+    "eq:flowpoint_kernel_diagonal_projector_idempotency_1a2a",
+    "eq:flowpoint_kernel_diagonal_projector_annihilation_1a2a",
+    "eq:flowpoint_kernel_diagonal_projector_partition_1a2a",
+    "eq:flowpoint_kernel_diagonal_projector_ranges_1a2a",
+    "eq:flowpoint_diagonal_kernel_direct_sum_1a2a",
+    "eq:flowpoint_kernel_projection_fixed_condition_1a2a",
+    "eq:flowpoint_kernel_projection_membership_1a2a",
+    "eq:flowpoint_kernel_projection_zero_balance_1a2a",
+    "eq:flowpoint_kernel_projection_antisymmetry_1a2a",
+    "eq:joint_coset_constancy_1a2a",
+    "eq:joint_fiber_affine_form_1a2a",
+    "eq:joint_continuous_conservation_1a2a",
+    "eq:joint_fiber_tangent_space_1a2a",
+    "eq:joint_operator_conservation_1a2a",
+    "eq:joint_heisenberg_conservation_1a2a",
+    "eq:kernel_fiber_principle_kernel_1a2a",
+    "eq:kernel_fiber_principle_fiber_coset_1a2a",
+    "eq:kernel_fiber_principle_unique_transport_1a2a",
+    "eq:kernel_fiber_principle_forward_update_1a2a",
+    "eq:kernel_fiber_principle_reverse_update_1a2a",
+    "eq:kernel_fiber_principle_orientation_equivalence_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/falsification_checks/test_kernel_fiber_integrability_falsification.py"
+  ],
+  "first_label": "subsec:flowpoint_completeness_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/a_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/1a/flowpoint_forward_duality.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/2a/flowpoint_reverse_duality.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/1a2a/kernelfiber_integrability.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "swapped pair in V x V",
+      "name": "balance fiber",
+      "python_types": [
+        "BalanceFiber"
+      ]
+    },
+    "domain": {
+      "description": "pair in V x V",
+      "name": "balance fiber",
+      "python_types": [
+        "BalanceFiber"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level._swap_invariant",
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level.contracts.<locals>.<lambda>",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level._balance_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "kernel_fiber_integrability",
+  "source_complex_ids": [
+    "parity_to_bit_equivalence_and_2_adic_coding"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/invariants/test_flowpoint_source_laws.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_003_kernelfiber_integrability/falsification_checks/test_kernel_fiber_integrability_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Kernel–Fiber Integrability",
+    "left": "Flowpoint Forward Duality",
+    "right": "Flowpoint Reverse Duality"
+  },
+  "theorem_titles_tex": {
+    "cross": "Kernel--Fiber Integrability \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Flowpoint Forward Duality",
+    "right": "Flowpoint Reverse Duality"
+  }
+}

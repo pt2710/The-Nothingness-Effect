@@ -1,0 +1,127 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 29,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "schedule_driven_generator_word_field",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/third_order_completeness/complex_001_schedule_driven_generator_word_field/1c/binary_controlled_generated_group_dynamics.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/third_order_completeness/complex_001_schedule_driven_generator_word_field/2c/generator_preserving_transport_of_the_spatial_word_field.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/third_order_completeness/complex_001_schedule_driven_generator_word_field/1c2c/spatial_schedule_holonomy_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:symmetry_word_field_intertwiner",
+    "eq:symmetry_word_field_generator_selection",
+    "eq:symmetry_word_field_word_x",
+    "eq:symmetry_word_field_word_y",
+    "eq:symmetry_word_field_definition_1c",
+    "eq:symmetry_word_field_local_recursion_1c",
+    "eq:symmetry_word_field_orbit_membership_1c",
+    "eq:symmetry_word_field_prefix_agreement_1c",
+    "eq:symmetry_word_field_prefix_coherence_1c",
+    "eq:symmetry_word_field_cylinder_set_1c",
+    "eq:symmetry_word_field_synthesis_1c",
+    "eq:symmetry_word_field_principle_1c",
+    "eq:symmetry_word_field_definition_2c",
+    "eq:symmetry_word_field_intertwining_2c",
+    "eq:symmetry_word_field_word_intertwining_2c",
+    "eq:symmetry_word_field_wordwise_induction_2c",
+    "eq:symmetry_word_field_orbit_transport_2c",
+    "eq:symmetry_word_field_synthesis_2c",
+    "eq:symmetry_word_field_intertwining_principle_2c",
+    "eq:symmetry_word_field_word_operators_j",
+    "eq:symmetry_word_field_joint_datum",
+    "eq:symmetry_word_field_adjoint_equivalence_j",
+    "eq:symmetry_word_field_state_equivalence_j",
+    "eq:symmetry_word_field_generator_separation_j",
+    "eq:symmetry_word_field_selector_reconstruction_j",
+    "eq:symmetry_word_field_faithful_encoding_j",
+    "eq:symmetry_word_field_joint_synthesis_j",
+    "eq:symmetry_word_field_completeness_principle_j",
+    "eq:symmetric_closure_branch_indexing_convention_1b2b"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/third_order_completeness/complex_001_schedule_driven_generator_word_field/falsification_checks/test_schedule_driven_generator_word_field_falsification.py"
+  ],
+  "first_label": "app:drv_symmetry_c01",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "symmetry",
+  "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py"
+  ],
+  "source_complex_id": "schedule_driven_generator_word_field",
+  "source_complex_ids": [
+    "schedule_controlled_orbit_transport",
+    "involutive_generator_word_closure_and_conjugacy"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/third_order_completeness/complex_001_schedule_driven_generator_word_field/falsification_checks/test_schedule_driven_generator_word_field_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Spatial Schedule-Holonomy Equivalence",
+    "left": "Binary-Controlled Generated-Group Dynamics",
+    "right": "Generator-Preserving Transport of the Spatial Word Field"
+  },
+  "theorem_titles_tex": {
+    "cross": "Spatial Schedule-Holonomy Equivalence",
+    "left": "Binary-Controlled Generated-Group Dynamics",
+    "right": "Generator-Preserving Transport of the Spatial Word Field"
+  }
+}

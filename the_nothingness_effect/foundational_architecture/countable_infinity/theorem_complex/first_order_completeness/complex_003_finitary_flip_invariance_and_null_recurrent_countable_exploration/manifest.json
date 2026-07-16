@@ -1,0 +1,151 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 56,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_003_finitary_flip_invariance_and_null_recurrent_countable_exploration/1a/cardinal_invariance_and_transitivity_of_countable_flip_actions.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_003_finitary_flip_invariance_and_null_recurrent_countable_exploration/2a/universal_recurrence_of_the_canonical_countable_flip_walk.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_003_finitary_flip_invariance_and_null_recurrent_countable_exploration/1a2a/cardinal_invariancenull_recurrence_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:aleph0_state_enumeration_1a2a",
+    "eq:aleph0_state_enumeration_bijection_1a2a",
+    "eq:aleph0_adjacent_flip_map_1a2a",
+    "eq:aleph0_adjacent_flip_definition_1a2a",
+    "eq:aleph0_adjacent_flip_involution_1a2a",
+    "eq:aleph0_finitary_flip_group_1a2a",
+    "eq:aleph0_idempotence_definition_1a2a",
+    "eq:aleph0_involution_definition_1a2a",
+    "eq:aleph0_flip_generator_alphabet_1a",
+    "eq:aleph0_finite_flip_word_1a",
+    "eq:aleph0_flip_word_evaluation_1a",
+    "eq:aleph0_admissible_flip_transformation_1a",
+    "eq:aleph0_finitary_action_1a",
+    "eq:aleph0_flip_word_bijection_1a",
+    "eq:aleph0_whole_space_cardinal_invariance_1a",
+    "eq:aleph0_subset_cardinal_invariance_1a",
+    "eq:aleph0_flip_action_transitivity_1a",
+    "eq:aleph0_finite_flip_word_group_cardinality_1a",
+    "eq:aleph0_forward_adjacent_flip_word_1a",
+    "eq:aleph0_forward_adjacent_reachability_1a",
+    "eq:aleph0_reverse_adjacent_flip_word_1a",
+    "eq:aleph0_reverse_adjacent_reachability_1a",
+    "eq:aleph0_adjacent_flip_path_length_1a",
+    "eq:aleph0_full_group_orbit_1a",
+    "eq:aleph0_corollary_cardinal_invariance_1a",
+    "eq:aleph0_flip_invariance_synthesis_1a",
+    "eq:aleph0_cardinal_neutral_action_principle_1a",
+    "eq:aleph0_finitary_transitivity_principle_1a",
+    "eq:aleph0_index_chain_2a",
+    "eq:aleph0_boundary_transition_probabilities_2a",
+    "eq:aleph0_interior_transition_probabilities_2a",
+    "eq:aleph0_state_chain_definition_2a",
+    "eq:aleph0_chain_flip_support_2a",
+    "eq:aleph0_state_hitting_time_2a",
+    "eq:aleph0_state_local_time_2a",
+    "eq:aleph0_universal_hitting_probability_2a",
+    "eq:aleph0_infinite_return_probability_2a",
+    "eq:aleph0_zero_empirical_frequency_2a",
+    "eq:aleph0_hit_zero_probability_2a",
+    "eq:aleph0_sigma_finite_invariant_measure_2a",
+    "eq:aleph0_infinite_local_time_2a",
+    "eq:aleph0_zero_state_frequency_corollary_2a",
+    "eq:aleph0_recurrence_synthesis_2a",
+    "eq:aleph0_specified_recurrence_principle_2a",
+    "eq:aleph0_joint_system_tuple_1a2a",
+    "eq:aleph0_realized_finite_path_1a2a",
+    "eq:aleph0_joint_hitting_probability_1a2a",
+    "eq:aleph0_joint_closure_statement_1a2a",
+    "eq:aleph0_positive_transition_support_1a2a",
+    "eq:aleph0_joint_finite_reachability_1a2a",
+    "eq:aleph0_joint_almost_sure_hitting_1a2a",
+    "eq:aleph0_joint_cardinal_neutrality_1a2a",
+    "eq:aleph0_joint_synthesis_1a2a",
+    "eq:aleph0_joint_static_dynamic_synthesis_1a2a",
+    "eq:aleph0_invariance_recurrence_support_principle_joint",
+    "eq:aleph0_invariance_recurrence_law_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_003_finitary_flip_invariance_and_null_recurrent_countable_exploration/falsification_checks/test_finitary_flip_invariance_and_null_recurrent_countable_exploration_falsification.py"
+  ],
+  "first_label": "subsec:countable_infinity_cardinal_invariance_recurrence_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "countable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/countable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/simulate_countable_infinity.py"
+  ],
+  "source_complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/test/test_countable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_003_finitary_flip_invariance_and_null_recurrent_countable_exploration/falsification_checks/test_finitary_flip_invariance_and_null_recurrent_countable_exploration_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Cardinal-Invariance–Null-Recurrence Correspondence",
+    "left": "Cardinal Invariance and Transitivity of Countable Flip Actions",
+    "right": "Universal Recurrence of the Canonical Countable Flip Walk"
+  },
+  "theorem_titles_tex": {
+    "cross": "Cardinal-Invariance--Null-Recurrence Correspondence",
+    "left": "Cardinal Invariance and Transitivity of Countable Flip Actions",
+    "right": "Universal Recurrence of the Canonical Countable Flip Walk"
+  }
+}

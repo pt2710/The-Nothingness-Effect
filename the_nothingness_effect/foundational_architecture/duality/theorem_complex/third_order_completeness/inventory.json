@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "invariant_anti_invariant_orbit_fields",
+      "directory": "complex_001_invariantanti_invariant_orbit_fields",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/duality"
+}

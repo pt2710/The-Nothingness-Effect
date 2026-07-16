@@ -1,0 +1,142 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 29,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "reciprocal_orbit_double_cover",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/1b/two_sheeted_reciprocity_law.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/2b/actionfiber_groupoid_reconstruction.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/1b2b/equivalence_of_reciprocal_covers_and_orbit_groupoids.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_duality_b01_1b",
+    "eq:drv_duality_b01_cover_projection",
+    "eq:drv_duality_b01_minimal_fiber",
+    "eq:drv_duality_b01_two_sheeted",
+    "eq:drv_duality_b01_unique_deck",
+    "eq:drv_duality_b01_fiber_recognition",
+    "eq:drv_duality_b01_fiber_action",
+    "eq:drv_duality_b01_fiber_code",
+    "eq:drv_duality_b01_torsor_synthesis",
+    "eq:drv_duality_b01_deck_principle",
+    "eq:drv_duality_b01_2b",
+    "eq:drv_duality_b01_pair_composition",
+    "eq:drv_duality_b01_groupoid_map",
+    "eq:drv_duality_b01_groupoid_inverse",
+    "eq:drv_duality_b01_unique_epsilon",
+    "eq:drv_duality_b01_arrow_addition",
+    "eq:drv_duality_b01_groupoid_composition_proof",
+    "eq:drv_duality_b01_recover_sigma",
+    "eq:drv_duality_b01_groupoid_synthesis",
+    "eq:drv_duality_b01_fiber_arrow_principle",
+    "eq:drv_duality_b01_fiber_arrow_inverse_principle",
+    "eq:drv_duality_b01_joint",
+    "eq:drv_duality_b01_exchange_square",
+    "eq:drv_duality_b01_quotient_map",
+    "eq:drv_duality_b01_natural_square",
+    "eq:drv_duality_b01_cardinality_transfer",
+    "eq:drv_duality_b01_joint_synthesis",
+    "eq:drv_duality_b01_cover_groupoid_principle",
+    "eq:drv_duality_b01_cover_groupoid_naturality_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/falsification_checks/test_reciprocal_orbit_double_cover_falsification.py"
+  ],
+  "first_label": "app:drv_duality_b01",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/1b2b/equivalence_of_reciprocal_covers_and_orbit_groupoids.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/1b/two_sheeted_reciprocity_law.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/2b/actionfiber_groupoid_reconstruction.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/1b2b/equivalence_of_reciprocal_covers_and_orbit_groupoids.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "projection and unique deck action",
+      "name": "two-sheeted orbit cover",
+      "python_types": [
+        "ReciprocalDoubleCover"
+      ]
+    },
+    "domain": {
+      "description": "fixed-point-free reciprocal carrier",
+      "name": "free finite involution",
+      "python_types": [
+        "FiniteInvolution"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.foundational_architecture.duality.duality.reciprocal_orbit_double_cover",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.foundational_architecture.duality.b_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/run_suite.py",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "reciprocal_orbit_double_cover",
+  "source_complex_ids": [
+    "reciprocal_relation_action_groupoid",
+    "minimal_two_state_involution_orbitwise_alternator"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_duality_contracts.py",
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_001_reciprocal_orbit_double_cover/falsification_checks/test_reciprocal_orbit_double_cover_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Equivalence of Reciprocal Covers and Orbit Groupoids",
+    "left": "Two-Sheeted Reciprocity Law",
+    "right": "Action–Fiber Groupoid Reconstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "Equivalence of Reciprocal Covers and Orbit Groupoids",
+    "left": "Two-Sheeted Reciprocity Law",
+    "right": "Action--Fiber Groupoid Reconstruction"
+  }
+}

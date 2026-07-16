@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import subprocess
 from pathlib import Path
+import re
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +42,9 @@ MODULE_MAP = {
 }
 
 BARE_IMPORT_MAP = {
+    "from fp_math_operations import ": "from the_nothingness_effect.mathematical_architecture.flowpoint_math_operations.fp_math_operations import ",
+    "from fp_pi_approximation import ": "from the_nothingness_effect.mathematical_architecture.flowpoint_pi_approximation.fp_pi_approximation import ",
+    "from fp_trigonometry import ": "from the_nothingness_effect.mathematical_architecture.flowpoint_trigonometry.fp_trigonometry import ",
     "from flowpoint import ": "from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint import ",
     "from flowpoint.flowpoint import ": "from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import ",
     "from flowpoint_pi.fp_pi_approximation import ": "from the_nothingness_effect.mathematical_architecture.flowpoint_pi_approximation.fp_pi_approximation import ",
@@ -59,26 +63,16 @@ BARE_IMPORT_MAP = {
     "from observation_and_collapse import ": "from the_nothingness_effect.foundational_architecture.observation_and_collapse import ",
 }
 
-TEXT_SUFFIXES = {
-    ".cfg",
-    ".csv",
-    ".ini",
-    ".json",
-    ".md",
-    ".py",
-    ".toml",
-    ".txt",
-    ".yaml",
-    ".yml",
-}
+TEXT_SUFFIXES = {".cfg", ".csv", ".ini", ".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml"}
+LEGACY_ROOT_FINDER = re.compile(
+    r"(?ms)^def find_project_root\([^\n]*\):.*?^sys\.path\.insert\(0, project_root\)[^\n]*\n"
+)
+PATH_MUTATION = re.compile(r"(?m)^\s*sys\.path\.(?:insert|append)\([^\n]*\)\s*\n")
 
 
 def tracked_files() -> list[Path]:
     result = subprocess.run(
-        ["git", "ls-files", "-z"],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
+        ["git", "ls-files", "-z"], cwd=ROOT, check=True, capture_output=True
     )
     return [ROOT / item.decode("utf-8") for item in result.stdout.split(b"\0") if item]
 
@@ -86,32 +80,40 @@ def tracked_files() -> list[Path]:
 def replacements() -> list[tuple[str, str]]:
     pairs: list[tuple[str, str]] = list(BARE_IMPORT_MAP.items())
     for old, new in MODULE_MAP.items():
-        pairs.append((old, new))
-        pairs.append((old.replace(".", "/"), new.replace(".", "/")))
-        pairs.append((old.replace(".", "\\"), new.replace(".", "\\")))
+        pairs.extend(
+            (
+                (old, new),
+                (old.replace(".", "/"), new.replace(".", "/")),
+                (old.replace(".", "\\"), new.replace(".", "\\")),
+            )
+        )
     return sorted(pairs, key=lambda item: len(item[0]), reverse=True)
 
 
 def migrate() -> tuple[int, int]:
     changed_files = 0
     replacement_count = 0
-    pairs = replacements()
+    this_file = Path(__file__).resolve()
     for path in tracked_files():
-        if path.suffix.lower() not in TEXT_SUFFIXES or not path.exists():
+        if path.resolve() == this_file or path.suffix.lower() not in TEXT_SUFFIXES or not path.exists():
             continue
-        raw = path.read_bytes()
         try:
-            text = raw.decode("utf-8")
+            text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
-        migrated = text
-        for old, new in pairs:
+        migrated, count = LEGACY_ROOT_FINDER.subn("", text)
+        replacement_count += count
+        migrated, count = PATH_MUTATION.subn("", migrated)
+        replacement_count += count
+        if "sys." not in migrated:
+            migrated = re.sub(r"(?m)^import sys\s*\n", "", migrated)
+        for old, new in replacements():
             count = migrated.count(old)
             if count:
                 migrated = migrated.replace(old, new)
                 replacement_count += count
         if migrated != text:
-            path.write_bytes(migrated.encode("utf-8"))
+            path.write_text(migrated, encoding="utf-8", newline="\n")
             changed_files += 1
     return changed_files, replacement_count
 

@@ -10,15 +10,12 @@ and visualizes via ThermalEntropyVisualization. All plots/animations are saved i
 """
 
 import os
-import sys
 import time
 import numpy as np
 import pandas as pd
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 proj_root   = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.insert(0, proj_root)
-
 from thermal_parts import thermal_motor_parts
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import DynamicFluctuationIndex
 from visualization import ThermalEntropyVisualization

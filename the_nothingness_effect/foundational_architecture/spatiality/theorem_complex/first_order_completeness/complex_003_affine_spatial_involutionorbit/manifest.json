@@ -1,0 +1,186 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 91,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "affine_spatial_involution_orbit",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_003_affine_spatial_involutionorbit/1a/minimal_spatial_involution_at_the_flowpoint.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_003_affine_spatial_involutionorbit/2a/periodic_spatial_recursion_law.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_003_affine_spatial_involutionorbit/1a2a/centered_affine_involutionparity_orbit_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_spatiality_global_characteristic_1a2a",
+    "eq:flowpoint_spatiality_global_linear_map_1a2a",
+    "eq:flowpoint_spatiality_global_linear_involution_1a2a",
+    "eq:flowpoint_spatiality_global_affine_involution_1a2a",
+    "eq:flowpoint_spatiality_global_sectors_1a2a",
+    "eq:flowpoint_spatiality_global_projectors_1a2a",
+    "eq:flowpoint_spatiality_relative_displacement_1a2a",
+    "eq:flowpoint_spatiality_invariant_component_1a2a",
+    "eq:flowpoint_spatiality_anti_invariant_component_1a2a",
+    "eq:flowpoint_spatiality_invariant_midpoint_1a2a",
+    "eq:flowpoint_spatiality_opposition_vector_1a2a",
+    "eq:minimal_spatial_involution_definition_1a",
+    "eq:minimal_spatial_involution_linear_condition_1a",
+    "eq:minimal_spatial_involution_nontriviality_1a",
+    "eq:minimal_spatial_involution_fixed_set_definition_1a",
+    "eq:minimal_spatial_involution_orbit_definition_1a",
+    "eq:minimal_spatial_affine_involution_theorem_1a",
+    "eq:minimal_spatial_fixed_affine_subspace_1a",
+    "eq:minimal_spatial_state_decomposition_1a",
+    "eq:minimal_spatial_midpoint_membership_1a",
+    "eq:minimal_spatial_opposition_membership_1a",
+    "eq:minimal_spatial_mirror_decomposition_1a",
+    "eq:minimal_spatial_midpoint_formula_1a",
+    "eq:minimal_spatial_opposition_formula_1a",
+    "eq:spatial_projector_algebra_lemma_1a",
+    "eq:spatial_projector_eigen_action_lemma_1a",
+    "eq:spatial_midpoint_fixed_lemma_1a",
+    "eq:spatial_opposition_reversal_lemma_1a",
+    "eq:spatial_pair_difference_lemma_1a",
+    "eq:spatial_pair_sum_lemma_1a",
+    "eq:central_spatial_reflection_corollary_1a",
+    "eq:central_spatial_reflection_fixed_point_1a",
+    "eq:central_spatial_reflection_midpoint_1a",
+    "eq:parity_spatial_reflection_corollary_1a",
+    "eq:parity_spatial_pullback_corollary_1a",
+    "eq:parity_spatial_pullback_involution_1a",
+    "eq:orthogonal_spatial_norm_preservation_1a",
+    "eq:orthogonal_spatial_sector_orthogonality_1a",
+    "eq:orthogonal_spatial_equal_distance_1a",
+    "eq:spatial_midpoint_displacement_synthesis_1a",
+    "eq:spatial_midpoint_displacement_pair_synthesis_1a",
+    "eq:minimal_flowpoint_spatiality_principle_operator_1a",
+    "eq:minimal_flowpoint_spatiality_principle_pair_1a",
+    "eq:periodic_spatial_orbit_definition_2a",
+    "eq:periodic_spatial_recursion_definition_2a",
+    "eq:periodic_spatial_closure_definition_2a",
+    "eq:periodic_spatial_recursion_closed_form_2a",
+    "eq:periodic_spatial_recursion_two_step_closure_2a",
+    "eq:periodic_spatial_recursion_even_odd_2a",
+    "eq:periodic_spatial_recursion_period_one_2a",
+    "eq:periodic_spatial_recursion_fixed_condition_2a",
+    "eq:periodic_spatial_recursion_exact_period_two_2a",
+    "eq:spatial_recursion_parity_projection_2a",
+    "eq:spatial_recursion_phase_map_2a",
+    "eq:spatial_recursion_integer_orbit_map_2a",
+    "eq:spatial_recursion_parity_factorization_2a",
+    "eq:spatial_finite_order_boundary_condition_2a",
+    "eq:spatial_finite_order_projection_2a",
+    "eq:spatial_field_pullback_definition_2a",
+    "eq:spatial_field_pullback_involution_2a",
+    "eq:spatial_field_pullback_orbit_2a",
+    "eq:spatial_tangent_recursion_2a",
+    "eq:spatial_tangent_two_step_closure_2a",
+    "eq:spatial_metric_isometry_2a",
+    "eq:periodic_spatial_recursion_synthesis_2a",
+    "eq:periodic_spatial_two_phase_synthesis_2a",
+    "eq:periodic_flowpoint_spatial_closure_principle_2a",
+    "eq:periodic_flowpoint_spatial_orbit_principle_2a",
+    "eq:joint_spatial_midpoint_definition_1a2a",
+    "eq:joint_spatial_opposition_definition_1a2a",
+    "eq:joint_spatial_orbit_definition_1a2a",
+    "eq:joint_spatial_equiv_linear_involution_1a2a",
+    "eq:joint_spatial_equiv_affine_involution_1a2a",
+    "eq:joint_spatial_equiv_orbit_periodicity_1a2a",
+    "eq:joint_spatial_equiv_pair_decomposition_1a2a",
+    "eq:joint_spatial_equiv_parity_factorization_1a2a",
+    "eq:joint_spatial_complete_orbit_1a2a",
+    "eq:joint_spatial_exact_period_condition_1a2a",
+    "eq:joint_spatial_fixed_condition_1a2a",
+    "eq:joint_spatial_midpoint_recovery_1a2a",
+    "eq:joint_spatial_opposition_recovery_1a2a",
+    "eq:joint_spatial_orbit_reconstruction_1a2a",
+    "eq:joint_spatial_central_inversion_1a2a",
+    "eq:joint_spatial_central_orbit_1a2a",
+    "eq:joint_spatial_hyperplane_reflection_operator_1a2a",
+    "eq:joint_spatial_hyperplane_reflection_involution_1a2a",
+    "eq:joint_spatial_coordinate_reflection_1a2a",
+    "eq:joint_spatiality_recursion_synthesis_1a2a",
+    "eq:flowpoint_spatial_dual_closure_operator_1a2a",
+    "eq:flowpoint_spatial_dual_closure_coordinates_1a2a",
+    "eq:flowpoint_spatial_dual_closure_orbit_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_003_affine_spatial_involutionorbit/falsification_checks/test_affine_spatial_involution_orbit_falsification.py"
+  ],
+  "first_label": "app:flowpoint_spatiality_dual",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint_spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "affine_spatial_involution_orbit",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_003_affine_spatial_involutionorbit/falsification_checks/test_affine_spatial_involution_orbit_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Centered Affine Involution–Parity Orbit Equivalence",
+    "left": "Minimal Spatial Involution at the Flowpoint",
+    "right": "Periodic Spatial Recursion Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Centered Affine Involution--Parity Orbit Equivalence \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Minimal Spatial Involution at the Flowpoint",
+    "right": "Periodic Spatial Recursion Law"
+  }
+}

@@ -6,12 +6,9 @@ Email: thenothingnesseffect@gmail.com
 """
 
 import os
-import sys
 import numpy as np
 
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 def spatiality_equation(z):
     """
     Implements the spatiality equation for Z:

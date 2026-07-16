@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 11,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_soinet_c04_master",
+      "eq:tne_spatial_soinet_c04_1c_definition",
+      "eq:tne_spatial_soinet_c04_1c_theorem",
+      "eq:tne_spatial_soinet_c04_1c_lemma",
+      "eq:tne_spatial_soinet_c04_1c_synthesis",
+      "eq:tne_spatial_soinet_c04_1c_principle",
+      "eq:tne_spatial_soinet_c04_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "stack_domain_cloning_spatial_closure",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/1c/hierarchical_soi_stack_transferdomain_generalization_generalizationcloning_universalization_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/2c/cross_regime_stackdomain_collapse_failurenon_cloning_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/1c2c/cross_hierarchical_stackdomain_generalization_soinet_universalizationcloning.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_soinet_c04_spatial_carrier",
+    "eq:drv_soinet_c04_1c",
+    "eq:drv_soinet_c04_theorem_1c",
+    "eq:drv_soinet_c04_res_1c",
+    "eq:drv_soinet_c04_2c",
+    "eq:drv_soinet_c04_res_2c",
+    "eq:drv_soinet_c04_joint",
+    "eq:drv_soinet_c04_exchange_square",
+    "eq:soinet_meta_composite_domain_1a2a",
+    "eq:soinet_meta_residual_vector_1a2a",
+    "eq:soinet_meta_normalized_residual_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/falsification_checks/test_stack_domain_cloning_spatial_closure_falsification.py"
+  ],
+  "first_label": "app:drv_soinet_c04",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/1c2c/cross_hierarchical_stackdomain_generalization_soinet_universalizationcloning.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/1c/hierarchical_soi_stack_transferdomain_generalization_generalizationcloning_universalization_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/2c/cross_regime_stackdomain_collapse_failurenon_cloning_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/1c2c/cross_hierarchical_stackdomain_generalization_soinet_universalizationcloning.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
+    "codomain": {
+      "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+      "name": "localized spatial closure",
+      "python_types": [
+        "SpatialClosureResult"
+      ]
+    },
+    "domain": {
+      "description": "finite common-shape spatial field for every declared B source",
+      "name": "common spatial B-source domain",
+      "python_types": [
+        "SpatialClosureInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "stack_domain_cloning_spatial_closure",
+  "source_complex_ids": [
+    "stack_domain_generalization_transport",
+    "universalization_cloning_obstruction_functional"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/falsification_checks/test_stack_domain_cloning_spatial_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Cross-Hierarchical Stack–Domain Generalization – SOInet Universalization–Cloning",
+    "left": "Hierarchical SOI-Stack Transfer–Domain Generalization – Generalization–Cloning Universalization – Law",
+    "right": "Cross-Regime Stack–Domain Collapse – Failure–Non-Cloning – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Cross-Hierarchical Stack--Domain Generalization -- SOInet Universalization--Cloning",
+    "left": "Hierarchical SOI-Stack Transfer--Domain Generalization -- Generalization--Cloning Universalization -- Law",
+    "right": "Cross-Regime Stack–Domain Collapse -- Failure--Non-Cloning -- Law"
+  }
+}

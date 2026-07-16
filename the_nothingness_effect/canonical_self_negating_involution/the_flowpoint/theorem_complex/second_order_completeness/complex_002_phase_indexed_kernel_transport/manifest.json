@@ -1,0 +1,158 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 43,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "phase_indexed_kernel_transport",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/1b/exact_phase_indexed_kernel_transport.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/2b/parity_factored_clock_transport.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/1b2b/exact_phaseclock_connection_factorization.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_flowpoint_b02_phase_potential",
+    "eq:drv_flowpoint_b02_phase_gauge_change",
+    "eq:drv_flowpoint_b02_connection_increment_1b",
+    "eq:drv_flowpoint_b02_phase_transport_1b",
+    "eq:drv_flowpoint_b02_phase_transport_action_1b",
+    "eq:drv_flowpoint_b02_transport_identity_1b",
+    "eq:drv_flowpoint_b02_transport_inverse_1b",
+    "eq:drv_flowpoint_b02_transport_composition_1b",
+    "eq:drv_flowpoint_b02_transport_balance_1b",
+    "eq:drv_flowpoint_b02_cocycle_identity_1b",
+    "eq:drv_flowpoint_b02_cocycle_inverse_1b",
+    "eq:drv_flowpoint_b02_cocycle_law_1b",
+    "eq:drv_flowpoint_b02_torsor_increments_1b",
+    "eq:drv_flowpoint_b02_zero_holonomy_1b",
+    "eq:drv_flowpoint_b02_gauge_invariance_paradox_1b",
+    "eq:drv_flowpoint_b02_synthesis_1b",
+    "eq:drv_flowpoint_b02_principle_1b",
+    "eq:drv_flowpoint_b02_clock_projection_2b",
+    "eq:drv_flowpoint_b02_clock_potential_2b",
+    "eq:drv_flowpoint_b02_clock_transport_2b",
+    "eq:drv_flowpoint_b02_clock_composition_2b",
+    "eq:drv_flowpoint_b02_clock_parity_factor_2b",
+    "eq:drv_flowpoint_b02_clock_balance_2b",
+    "eq:drv_flowpoint_b02_clock_cocycle_2b",
+    "eq:drv_flowpoint_b02_clock_cocycle_laws_2b",
+    "eq:drv_flowpoint_b02_clock_transport_closed_form_2b",
+    "eq:drv_flowpoint_b02_finite_transport_types_2b",
+    "eq:drv_flowpoint_b02_synthesis_2b",
+    "eq:drv_flowpoint_b02_principle_2b",
+    "eq:drv_flowpoint_b02_arrow_quotient_joint",
+    "eq:drv_flowpoint_b02_phase_representation_joint",
+    "eq:drv_flowpoint_b02_clock_representation_joint",
+    "eq:drv_flowpoint_b02_transport_residual_joint",
+    "eq:drv_flowpoint_b02_connection_factorization_joint",
+    "eq:drv_flowpoint_b02_residual_zero_joint",
+    "eq:drv_flowpoint_b02_arrow_kernel_joint",
+    "eq:drv_flowpoint_b02_gauge_connection_joint",
+    "eq:drv_flowpoint_b02_endpoint_classification_joint",
+    "eq:drv_flowpoint_b02_transport_classification_joint",
+    "eq:drv_flowpoint_b02_clock_recovery_paradox_joint",
+    "eq:drv_flowpoint_b02_synthesis_joint",
+    "eq:drv_flowpoint_b02_clock_arrow_equivalence_joint",
+    "eq:drv_flowpoint_b02_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/falsification_checks/test_phase_indexed_kernel_transport_falsification.py"
+  ],
+  "first_label": "app:drv_flowpoint_b02",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/b_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/1b/exact_phase_indexed_kernel_transport.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/2b/parity_factored_clock_transport.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/1b2b/exact_phaseclock_connection_factorization.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "translated point in the same balance fiber",
+      "name": "balance-preserving transport",
+      "python_types": [
+        "PhaseTransportResult"
+      ]
+    },
+    "domain": {
+      "description": "balance fiber, two C2 phases, and finite amplitude",
+      "name": "phase transport input",
+      "python_types": [
+        "PhaseTransportInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.b_level.phase_transport_invariant",
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.b_level.phase_transport_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.b_level.phase_transport_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "phase_indexed_kernel_transport",
+  "source_complex_ids": [
+    "kernel_fiber_integrability",
+    "phase_clock"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_flowpoint_contracts.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/second_order_completeness/complex_002_phase_indexed_kernel_transport/falsification_checks/test_phase_indexed_kernel_transport_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Exact Phase–Clock Connection Factorization",
+    "left": "Exact Phase-Indexed Kernel Transport",
+    "right": "Parity-Factored Clock Transport"
+  },
+  "theorem_titles_tex": {
+    "cross": "Exact Phase--Clock Connection Factorization",
+    "left": "Exact Phase-Indexed Kernel Transport",
+    "right": "Parity-Factored Clock Transport"
+  }
+}

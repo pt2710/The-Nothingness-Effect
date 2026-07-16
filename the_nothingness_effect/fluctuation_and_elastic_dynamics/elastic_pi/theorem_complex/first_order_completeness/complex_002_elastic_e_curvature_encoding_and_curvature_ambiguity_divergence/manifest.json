@@ -1,0 +1,136 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 26,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/1a/elastic_pi_e_curvature_encoding.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/2a/curvature_ambiguity_divergence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/1a2a/elastic_pi_e_curvature_encoding_curvature_ambiguity_divergence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:elastic_pi02_delta_1a2a",
+    "eq:omega_dualclosure_1a2a",
+    "eq:elastic_pi02_omega_1a2a",
+    "eq:metric_dualclosure_1a2a",
+    "eq:curvature_dualclosure_1a2a",
+    "eq:elastic_pi02_regular_field_1a",
+    "eq:elastic_pi02_log_field_1a",
+    "eq:curvature_1a",
+    "eq:elastic_pi02_exact_delta_curvature_1a",
+    "eq:proof_curvature_1a",
+    "eq:log_laplacian_1a",
+    "eq:lemma_log_laplacian_1a",
+    "eq:corollary_curvature_entropy_dfi_1a",
+    "eq:corollary_curvature_entropy_1a",
+    "eq:elastic_pi02_synthesis_1a",
+    "eq:elastic_pi02_divergence_witness_2a",
+    "eq:curvature_divergence_2a",
+    "eq:pi_collapse_2a",
+    "eq:elastic_pi02_log_laplacian_map_2a",
+    "eq:elastic_pi02_synthesis_2a",
+    "eq:elastic_pi02_status_set_1a2a",
+    "eq:elastic_pi02_joint_exact_proxy_1a2a",
+    "eq:lemma_log_laplacian_dualclosure_1a2a",
+    "eq:log_laplacian_dualclosure_1a2a",
+    "eq:corollary_dualclosure_regular",
+    "eq:elastic_pi02_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/falsification_checks/test_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence_falsification.py"
+  ],
+  "first_label": "app:elastic_pi_complex_02",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/1a/elastic_pi_e_curvature_encoding.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/2a/curvature_ambiguity_divergence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/1a2a/elastic_pi_e_curvature_encoding_curvature_ambiguity_divergence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "log-Laplacian proxy and entropy identity",
+      "name": "curvature encoding",
+      "python_types": [
+        "CurvatureEncoding"
+      ]
+    },
+    "domain": {
+      "description": "finite one-dimensional entropy field, K_D > 0, and declared coordinates",
+      "name": "Elastic-pi source",
+      "python_types": [
+        "ElasticPiInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.curvature_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py"
+  ],
+  "source_complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_elastic_pi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence/falsification_checks/test_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic pi_ E Curvature Encoding <-> Curvature Ambiguity/Divergence",
+    "left": "Elastic pi_ E Curvature Encoding",
+    "right": "Curvature Ambiguity/Divergence"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic $\\pi_{\\mathcal E}$ Curvature Encoding $\\longleftrightarrow$ Curvature Ambiguity/Divergence",
+    "left": "Elastic $\\pi_{\\mathcal E}$ Curvature Encoding",
+    "right": "Curvature Ambiguity/Divergence"
+  }
+}

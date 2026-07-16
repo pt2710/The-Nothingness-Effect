@@ -20,11 +20,7 @@ Usage:
 """
 
 import os
-import sys
-
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint import fp
 from the_nothingness_effect.foundational_architecture.countable_infinity.countable_infinity import countable_infinity
 from the_nothingness_effect.foundational_architecture.uncountable_infinity.uncountable_infinity import uncountable_infinity

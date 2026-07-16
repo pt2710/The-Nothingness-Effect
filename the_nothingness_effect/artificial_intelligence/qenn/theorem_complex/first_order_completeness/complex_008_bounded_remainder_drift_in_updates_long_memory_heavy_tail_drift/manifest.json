@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift/1a/bounded_remainder_drift.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift/2a/heavy_tail_long_memory_drift.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift/1a2a/bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:bounded_remainder_drift_algebraic_align_1a",
+    "eq:bounded_remainder_drift_algebraic_equation_1a",
+    "eq:bounded_remainder_drift_calculus_align_1a",
+    "eq:bounded_remainder_drift_calculus_equation_1a",
+    "eq:phase_convergence_algebraic_align_1a",
+    "eq:phase_convergence_algebraic_equation_1a",
+    "eq:phase_convergence_calculus_align_1a",
+    "eq:phase_convergence_calculus_equation_1a",
+    "eq:bounded_remainder_drift_proof_algebraic_align_1a",
+    "eq:bounded_remainder_drift_proof_algebraic_equation_1a",
+    "eq:bounded_remainder_drift_proof_calculus_align_1a",
+    "eq:bounded_remainder_drift_proof_calculus_equation_1a",
+    "eq:window_robustness_algebraic_align_1a",
+    "eq:window_robustness_algebraic_equation_1a",
+    "eq:window_robustness_calculus_align_1a",
+    "eq:window_robustness_calculus_equation_1a",
+    "eq:heavytail_drift_algebraic_align_2a",
+    "eq:heavytail_drift_algebraic_equation_2a",
+    "eq:heavytail_drift_calculus_align_2a",
+    "eq:heavytail_drift_calculus_equation_2a",
+    "eq:sideband_accumulation_algebraic_align_2a",
+    "eq:sideband_accumulation_algebraic_equation_2a",
+    "eq:sideband_accumulation_calculus_align_2a",
+    "eq:sideband_accumulation_calculus_equation_2a",
+    "eq:heavytail_drift_proof_algebraic_align_2a",
+    "eq:heavytail_drift_proof_algebraic_equation_2a",
+    "eq:heavytail_drift_proof_calculus_align_2a",
+    "eq:heavytail_drift_proof_calculus_equation_2a",
+    "eq:autocorr_heavytails_algebraic_align_2a",
+    "eq:autocorr_heavytails_algebraic_equation_2a",
+    "eq:autocorr_heavytails_calculus_align_2a",
+    "eq:autocorr_heavytails_calculus_equation_2a",
+    "eq:bounded_remainder_vs_heavytail_drift_algebraic_align_1a2a",
+    "eq:bounded_remainder_vs_heavytail_drift_algebraic_equation_1a2a",
+    "eq:bounded_remainder_vs_heavytail_drift_calculus_align_1a2a",
+    "eq:bounded_remainder_vs_heavytail_drift_calculus_equation_1a2a",
+    "eq:drift_budget_vs_spectral_purity_algebraic_align_1a2a",
+    "eq:drift_budget_vs_spectral_purity_algebraic_equation_1a2a",
+    "eq:drift_budget_vs_spectral_purity_calculus_align_1a2a",
+    "eq:drift_budget_vs_spectral_purity_calculus_equation_1a2a",
+    "eq:proof_variation_covariance_algebraic_align_1a2a",
+    "eq:proof_variation_covariance_algebraic_equation_1a2a",
+    "eq:proof_variation_covariance_calculus_align_1a2a",
+    "eq:proof_variation_covariance_calculus_equation_1a2a",
+    "eq:parseval_bijection_under_drift_algebraic_align_1a2a",
+    "eq:parseval_bijection_under_drift_algebraic_equation_1a2a",
+    "eq:parseval_bijection_under_drift_calculus_align_1a2a",
+    "eq:parseval_bijection_under_drift_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift/falsification_checks/test_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift_falsification.py"
+  ],
+  "first_label": "app:qenn_complex_08",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift/falsification_checks/test_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Bounded-Remainder Drift in Updates <-> Long-Memory / Heavy-Tail Drift",
+    "left": "Bounded-Remainder Drift",
+    "right": "Heavy-Tail/Long-Memory Drift"
+  },
+  "theorem_titles_tex": {
+    "cross": "Bounded-Remainder Drift in Updates $\\leftrightarrow$ Long-Memory / Heavy-Tail Drift (1A $\\leftrightarrow$ 2A)",
+    "left": "Bounded-Remainder Drift (1A)",
+    "right": "Heavy-Tail/Long-Memory Drift (2A)"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 35,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "signed_shortlex_cubic_transduction",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/second_order_completeness/complex_001_signed_shortlexcubic_transduction/1b/parity_locked_reachability.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/second_order_completeness/complex_001_signed_shortlexcubic_transduction/2b/canonical_addressing_of_the_parity_locked_lattice.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/second_order_completeness/complex_001_signed_shortlexcubic_transduction/1b2b/finite_word_quotientlattice_isomorphism.py"
+  ],
+  "dependency_status": "not_directly_computable",
+  "equation_labels": [
+    "eq:ci_b01_displacement_1b",
+    "eq:ci_b01_cube_action_1b",
+    "eq:ci_b01_state_operator_1b",
+    "eq:ci_b01_cube_parity_1b",
+    "eq:ci_b01_lattice_1b",
+    "eq:ci_b01_transducer_1b",
+    "eq:ci_b01_action_law_1b",
+    "eq:ci_b01_exact_image_1b",
+    "eq:ci_b01_parity_lock_1b",
+    "eq:ci_b01_double_parity_1b",
+    "eq:ci_b01_fibre_criterion_1b",
+    "eq:ci_b01_infinite_fibres_1b",
+    "eq:ci_b01_synthesis_1b",
+    "eq:ci_b01_transduction_principle_1b",
+    "eq:ci_b01_parity_principle_1b",
+    "eq:ci_b01_congruence_2b",
+    "eq:ci_b01_normal_form_2b",
+    "eq:ci_b01_address_2b",
+    "eq:ci_b01_section_2b",
+    "eq:ci_b01_address_set_2b",
+    "eq:ci_b01_address_bijection_2b",
+    "eq:ci_b01_reflection_2b",
+    "eq:ci_b01_word_reflection_2b",
+    "eq:ci_b01_countability_2b",
+    "eq:ci_b01_synthesis_2b",
+    "eq:ci_b01_minimal_address_principle_2b",
+    "eq:ci_b01_group_law_joint",
+    "eq:ci_b01_group_inverse_joint",
+    "eq:ci_b01_quotient_isomorphism_joint",
+    "eq:ci_b01_homomorphism_joint",
+    "eq:ci_b01_inverse_word_joint",
+    "eq:ci_b01_reconstruction_joint",
+    "eq:ci_b01_synthesis_joint",
+    "eq:ci_b01_quotient_group_principle_joint",
+    "eq:ci_b01_quotient_inverse_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/second_order_completeness/complex_001_signed_shortlexcubic_transduction/falsification_checks/test_signed_shortlex_cubic_transduction_falsification.py"
+  ],
+  "first_label": "app:ci_genuine_b01",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "countable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/countable_infinity",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/simulate_countable_infinity.py"
+  ],
+  "source_complex_id": "signed_shortlex_cubic_transduction",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/test/test_countable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/second_order_completeness/complex_001_signed_shortlexcubic_transduction/falsification_checks/test_signed_shortlex_cubic_transduction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Finite-Word Quotient–Lattice Isomorphism",
+    "left": "Parity-Locked Reachability",
+    "right": "Canonical Addressing of the Parity-Locked Lattice"
+  },
+  "theorem_titles_tex": {
+    "cross": "Finite-Word Quotient--Lattice Isomorphism",
+    "left": "Parity-Locked Reachability",
+    "right": "Canonical Addressing of the Parity-Locked Lattice"
+  }
+}

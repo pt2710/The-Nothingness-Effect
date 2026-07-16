@@ -28,21 +28,6 @@ try:
 except ImportError:
     pycountry_convert = None
 
-def find_project_root(marker_file_or_folder="equations"):
-    """
-    Search upwards for the project root containing the given marker folder.
-    """
-    d = os.path.abspath(__file__)
-    while True:
-        d = os.path.dirname(d)
-        if marker_file_or_folder in os.listdir(d):
-            return d
-        if d == os.path.dirname(d):
-            break
-    raise RuntimeError(f"Could not find project root with marker '{marker_file_or_folder}'.")
-
-project_root = find_project_root()
-sys.path.insert(0, project_root)
 
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.dfi import DynamicFluctuationIndex
 

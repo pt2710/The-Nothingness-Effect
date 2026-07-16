@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "signed_shortlex_cubic_transduction",
+      "directory": "complex_001_signed_shortlexcubic_transduction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "recurrent_cubical_cover_dynamics",
+      "directory": "complex_002_recurrent_cubical_cover_dynamics",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/countable_infinity"
+}

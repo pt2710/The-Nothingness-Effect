@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_pgqenn_c01_master",
+      "eq:tne_spatial_pgqenn_c01_1c_definition",
+      "eq:tne_spatial_pgqenn_c01_1c_theorem",
+      "eq:tne_spatial_pgqenn_c01_1c_lemma",
+      "eq:tne_spatial_pgqenn_c01_1c_synthesis",
+      "eq:tne_spatial_pgqenn_c01_1c_principle",
+      "eq:tne_spatial_pgqenn_c01_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "prime_motif_elastic_parity_spatial_closure",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/1c/prime_motif_boundedness_parity_locking_and_involution_law_dfi_plateau_for_pgqenn_elastic_pi_e_cu.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/2c/motif_induced_energy_divergence_leakage_from_off_diagonal_coupling_or_drift_law_dfi_divergence_s.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/1c2c/prime_motif_boundedness_motif_induced_energy_divergence_dfi_plateau_for_pgqenn_dfi_divergence_sp.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pgqenn_c01_spatial_carrier",
+    "eq:drv_pgqenn_c01_1c",
+    "eq:drv_pgqenn_c01_theorem_1c",
+    "eq:drv_pgqenn_c01_res_1c",
+    "eq:drv_pgqenn_c01_2c",
+    "eq:drv_pgqenn_c01_res_2c",
+    "eq:drv_pgqenn_c01_joint",
+    "eq:drv_pgqenn_c01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/falsification_checks/test_prime_motif_elastic_parity_spatial_closure_falsification.py"
+  ],
+  "first_label": "app:drv_pgqenn_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/1c2c/prime_motif_boundedness_motif_induced_energy_divergence_dfi_plateau_for_pgqenn_dfi_divergence_sp.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/1c/prime_motif_boundedness_parity_locking_and_involution_law_dfi_plateau_for_pgqenn_elastic_pi_e_cu.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/2c/motif_induced_energy_divergence_leakage_from_off_diagonal_coupling_or_drift_law_dfi_divergence_s.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/1c2c/prime_motif_boundedness_motif_induced_energy_divergence_dfi_plateau_for_pgqenn_dfi_divergence_sp.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "graph-local defect field with boundary, localization, coercivity, reconstruction, and observability",
+      "name": "prime_motif_elastic_parity_spatial_closure",
+      "python_types": [
+        "PGQENNSpatialClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite typed prime graph, aligned finite node features, positive K_D and residual weights",
+      "name": "PGQENN prime graph field",
+      "python_types": [
+        "PGQENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "prime_motif_elastic_parity_spatial_closure",
+  "source_complex_ids": [
+    "prime_motif_parity_stability_functional",
+    "dfi_elastic_prime_curvature_coupling"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pgqenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_001_prime_motif_elastic_parity_spatial_closure/falsification_checks/test_prime_motif_elastic_parity_spatial_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime-Motif Boundedness <-> Motif-Induced Energy Divergence – DFI Plateau for PGQENN <-> DFI Divergence/Spiking under Motif Bias",
+    "left": "Prime-Motif Boundedness – Parity Locking and Involution – Law – DFI Plateau for PGQENN – Elastic-pi_E Curvature Regularization – Law",
+    "right": "Motif-Induced Energy Divergence – Leakage from Off-Diagonal Coupling or Drift – Law – DFI Divergence/Spiking under Motif Bias – Curvature Ambiguity/Leakage – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime-Motif Boundedness $\\leftrightarrow$ Motif-Induced Energy Divergence -- DFI Plateau for PGQENN $\\leftrightarrow$ DFI Divergence/Spiking under Motif Bias",
+    "left": "Prime-Motif Boundedness -- Parity Locking and Involution -- Law -- DFI Plateau for PGQENN -- Elastic-$\\pi_{\\mathcal{E}}$ Curvature Regularization -- Law",
+    "right": "Motif-Induced Energy Divergence -- Leakage from Off-Diagonal Coupling or Drift -- Law -- DFI Divergence/Spiking under Motif Bias -- Curvature Ambiguity/Leakage -- Law"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+      "sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dynamic_fluctuation_index.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "dfi_spectrum_normalized_existence_and_normalization_breakdown",
+    "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
+    "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
+    "dfi_adaptive_applicability_and_contextual_instability",
+    "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+    "dfi_flowpoint_consistency_and_interface_inconsistency",
+    "dfi_simulation_consistency_and_simulation_breakdown",
+    "scale_normalized_dfi_homogeneity_invariant",
+    "entropic_applicability_response_operator",
+    "flowpoint_certified_dfi_validation_functional",
+    "spatially_localized_dfi_consistency_closure"
+  ]
+}

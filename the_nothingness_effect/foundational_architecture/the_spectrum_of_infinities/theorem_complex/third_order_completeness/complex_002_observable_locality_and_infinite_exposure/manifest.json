@@ -1,0 +1,116 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 16,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "observable_locality_and_infinite_exposure",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/third_order_completeness/complex_002_observable_locality_and_infinite_exposure/1c/observable_locality_by_infinite_cosmic_cancellation.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/third_order_completeness/complex_002_observable_locality_and_infinite_exposure/2c/paradox_of_infinite_exposure.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/third_order_completeness/complex_002_observable_locality_and_infinite_exposure/1c2c/local_residueexposure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soi12_source_temporal_b_1c2c",
+    "eq:soi12_source_spectral_b_1c2c",
+    "eq:soi12_positive_b_composition_1c",
+    "eq:soi12_negative_b_composition_2c",
+    "eq:soi12_branch_exchange_1c2c",
+    "eq:soi12_spatial_local_readout_1c2c",
+    "eq:soi12_spatial_exterior_residual_1c2c",
+    "eq:soi12_locality_condition_1c",
+    "eq:std_soi12_synthesis_1c",
+    "eq:std_soi12_locality_1c",
+    "eq:soi12_partial_sum_2c",
+    "eq:std_soi12_synthesis_2c",
+    "eq:std_soi12_exposure_2c",
+    "eq:soi12_joint_status_1c2c",
+    "eq:std_soi12_synthesis_joint",
+    "eq:std_soi12_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/third_order_completeness/complex_002_observable_locality_and_infinite_exposure/falsification_checks/test_observable_locality_and_infinite_exposure_falsification.py"
+  ],
+  "first_label": "app:soi_complex_12",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "observable_locality_and_infinite_exposure",
+  "source_complex_ids": [
+    "temporal_compression_and_frozen_time_obstruction",
+    "collapse_spectral_selection_and_spectral_ambiguity"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/third_order_completeness/complex_002_observable_locality_and_infinite_exposure/falsification_checks/test_observable_locality_and_infinite_exposure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Local-Residue–Exposure Classification",
+    "left": "Observable Locality by Infinite Cosmic Cancellation",
+    "right": "Paradox of Infinite Exposure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Local-Residue--Exposure Classification",
+    "left": "Observable Locality by Infinite Cosmic Cancellation",
+    "right": "Paradox of Infinite Exposure"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "elastic_dtqc_spectral_measure_dual_of_dtqc",
+    "dtqc::dual_support_equivalence_support_mismatch_leakage",
+    "parseval_energy_bijection_l_2_energy_mismatch",
+    "irrational_drive_locking_commensurate_resonance_collapse",
+    "meyer_cut_and_project_structure_non_meyer_diffuse_support",
+    "z_2_2_sign_symmetry_parity_bias_symmetry_breaking",
+    "elastic_invariance_of_support_nonlinear_leakage",
+    "ou_noise_5_d_scatter_robustness_noise_induced_smearing",
+    "autocorrelation_completeness_mixed_autocorrelation",
+    "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction",
+    "wavelet_ridge_locking_ridge_drift_shear",
+    "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
+    "drift_boundedness_criterion_unbounded_drift_breakdown",
+    "dfi_compatible_tail_control_tail_driven_mass_imbalance",
+    "figure_backed_closure_bragg_cwt_figure_contradicted_claims",
+    "elastic_gain_support_transport_isomorphism",
+    "diophantine_parseval_locking_invariant",
+    "parity_meyer_diffraction_decomposition",
+    "elastic_gain_ou_support_margin",
+    "autocorrelation_reconstruction_projector",
+    "ridge_resolved_2_adic_robustness_certificate",
+    "drift_tail_figure_certification_functional",
+    "elastic_parseval_quasicrystal_isometry",
+    "parity_meyer_noise_stable_diffraction_closure",
+    "certified_multiscale_dtqc_reconstruction_closure"
+  ]
+}

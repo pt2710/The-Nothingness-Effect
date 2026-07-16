@@ -1,0 +1,158 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/1a/parseval_energy_bijection_for_epochs.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/2a/energy_mass_imbalance.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/1a2a/parseval_energy_bijection_for_epochs_energy_mass_imbalance.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:parseval_energy_bijection_epochs_algebraic_align_1a",
+    "eq:parseval_energy_bijection_epochs_algebraic_equation_1a",
+    "eq:parseval_energy_bijection_epochs_calculus_align_1a",
+    "eq:parseval_energy_bijection_epochs_calculus_equation_1a",
+    "eq:window_scaling_consistency_algebraic_align_1a",
+    "eq:window_scaling_consistency_algebraic_equation_1a",
+    "eq:window_scaling_consistency_calculus_align_1a",
+    "eq:window_scaling_consistency_calculus_equation_1a",
+    "eq:parseval_energy_bijection_epochs_proof_algebraic_align_1a",
+    "eq:parseval_energy_bijection_epochs_proof_algebraic_equation_1a",
+    "eq:parseval_energy_bijection_epochs_proof_calculus_align_1a",
+    "eq:parseval_energy_bijection_epochs_proof_calculus_equation_1a",
+    "eq:energy_conserving_calibration_algebraic_align_1a",
+    "eq:energy_conserving_calibration_algebraic_equation_1a",
+    "eq:energy_conserving_calibration_calculus_align_1a",
+    "eq:energy_conserving_calibration_calculus_equation_1a",
+    "eq:energy_mass_imbalance_algebraic_align_2a",
+    "eq:energy_mass_imbalance_algebraic_equation_2a",
+    "eq:energy_mass_imbalance_calculus_align_2a",
+    "eq:energy_mass_imbalance_calculus_equation_2a",
+    "eq:residual_persistence_algebraic_align_2a",
+    "eq:residual_persistence_algebraic_equation_2a",
+    "eq:residual_persistence_calculus_align_2a",
+    "eq:residual_persistence_calculus_equation_2a",
+    "eq:energy_mass_imbalance_proof_algebraic_align_2a",
+    "eq:energy_mass_imbalance_proof_algebraic_equation_2a",
+    "eq:energy_mass_imbalance_proof_calculus_align_2a",
+    "eq:energy_mass_imbalance_proof_calculus_equation_2a",
+    "eq:auditability_loss_algebraic_align_2a",
+    "eq:auditability_loss_algebraic_equation_2a",
+    "eq:auditability_loss_calculus_align_2a",
+    "eq:auditability_loss_calculus_equation_2a",
+    "eq:parseval_energy_bijection_epochs_algebraic_align_1a2a",
+    "eq:parseval_energy_bijection_epochs_residual_equation_1a2a",
+    "eq:parseval_energy_bijection_epochs_calculus_align_1a2a",
+    "eq:parseval_energy_bijection_epochs_calculus_limit_equation_1a2a",
+    "eq:window_invariant_residual_algebraic_align_1a2a",
+    "eq:window_invariant_residual_algebraic_equation_1a2a",
+    "eq:window_invariant_residual_calculus_align_1a2a",
+    "eq:window_invariant_residual_calculus_equation_1a2a",
+    "eq:residual_equivalence_algebraic_align_1a2a",
+    "eq:residual_equivalence_algebraic_equation_1a2a",
+    "eq:residual_equivalence_calculus_align_1a2a",
+    "eq:residual_equivalence_calculus_equation_1a2a",
+    "eq:mass_ledger_debugging_algebraic_align_1a2a",
+    "eq:mass_ledger_debugging_algebraic_equation_1a2a",
+    "eq:mass_ledger_debugging_calculus_align_1a2a",
+    "eq:mass_ledger_debugging_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/falsification_checks/test_parseval_energy_bijection_for_epochs_energy_mass_imbalance_falsification.py"
+  ],
+  "first_label": "app:qenn_complex_04",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/contracts.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/1a/parseval_energy_bijection_for_epochs.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/2a/energy_mass_imbalance.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/1a2a/parseval_energy_bijection_for_epochs_energy_mass_imbalance.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed QENN response, invariant residual, and failure condition",
+      "name": "parseval_energy_bijection_for_epochs_energy_mass_imbalance source law",
+      "python_types": [
+        "QENNSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite rank-two training state and positive residual weights",
+      "name": "QENN training field",
+      "python_types": [
+        "QENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.qenn.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.qenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_qenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance/falsification_checks/test_parseval_energy_bijection_for_epochs_energy_mass_imbalance_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Parseval Energy Bijection for Epochs <-> Energy/Mass Imbalance",
+    "left": "Parseval Energy Bijection for Epochs",
+    "right": "Energy/Mass Imbalance"
+  },
+  "theorem_titles_tex": {
+    "cross": "Parseval Energy Bijection for Epochs $\\leftrightarrow$ Energy/Mass Imbalance (1A $\\leftrightarrow$ 2A)",
+    "left": "Parseval Energy Bijection for Epochs (1A)",
+    "right": "Energy/Mass Imbalance (2A)"
+  }
+}

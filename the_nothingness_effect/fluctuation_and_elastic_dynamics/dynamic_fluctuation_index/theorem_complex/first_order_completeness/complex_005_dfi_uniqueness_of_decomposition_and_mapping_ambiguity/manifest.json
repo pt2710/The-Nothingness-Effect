@@ -1,0 +1,113 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 16,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity/1a/dfi_uniqueness_of_decomposition_theorem.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity/2a/dfi_ambiguity_non_uniqueness_paradox.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity/1a2a/complete_dfi_decomposition_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dfi05_total_definition_1a2a",
+    "eq:dfi05_total_closed_form_1a2a",
+    "eq:dfi05_component_assignment_1a",
+    "eq:dfi05_unique_additive_decomposition_1a",
+    "eq:dfi05_additivity_identity_1a",
+    "eq:dfi05_repeatability_1a",
+    "eq:dfi05_synthesis_1a",
+    "eq:dfi05_mapping_dependent_vector_2a",
+    "eq:dfi05_component_ambiguity_2a",
+    "eq:dfi05_total_ambiguity_2a",
+    "eq:dfi05_ambiguity_norm_2a",
+    "eq:dfi05_synthesis_2a",
+    "eq:dfi05_external_residual_1a2a",
+    "eq:dfi05_permutation_covariance_1a2a",
+    "eq:dfi05_reproducibility_record_1a2a",
+    "eq:dfi05_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity/falsification_checks/test_dfi_uniqueness_of_decomposition_and_mapping_ambiguity_falsification.py"
+  ],
+  "first_label": "app:dfi_complex_05",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dfi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity/falsification_checks/test_dfi_uniqueness_of_decomposition_and_mapping_ambiguity_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete DFI Decomposition Classification",
+    "left": "DFI Uniqueness of Decomposition Theorem",
+    "right": "DFI Ambiguity/Non-Uniqueness Paradox"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete DFI Decomposition Classification",
+    "left": "DFI Uniqueness of Decomposition Theorem",
+    "right": "DFI Ambiguity/Non-Uniqueness Paradox"
+  }
+}

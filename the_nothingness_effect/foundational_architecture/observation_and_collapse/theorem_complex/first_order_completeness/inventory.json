@@ -1,0 +1,46 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "observation_induced_collapse_and_collapse_divergence",
+      "directory": "complex_001_observation_induced_collapse_and_collapse_divergence",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "collapse_attractor_stability_and_attractor_instability",
+      "directory": "complex_002_collapse_attractor_stability_and_attractor_instability",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "uniqueness_and_non_uniqueness_of_collapse",
+      "directory": "complex_003_uniqueness_and_non_uniqueness_of_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "hilbert_projection_realization_and_projection_breakdown",
+      "directory": "complex_004_hilbert_projection_realization_and_projection_breakdown",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "fixed_point_consistency_and_trivial_collapse_failure",
+      "directory": "complex_005_fixed_point_consistency_and_trivial_collapse_failure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observation_definiteness_equivalence_and_closure_failure",
+      "directory": "complex_006_observationdefiniteness_equivalence_and_closure_failure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "definite_state_projection_and_state_ambiguity",
+      "directory": "complex_007_definite_state_projection_and_state_ambiguity",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "ergodic_collapse_projection_and_non_convergence",
+      "directory": "complex_008_ergodic_collapse_projection_and_non_convergence",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/observation_and_collapse"
+}

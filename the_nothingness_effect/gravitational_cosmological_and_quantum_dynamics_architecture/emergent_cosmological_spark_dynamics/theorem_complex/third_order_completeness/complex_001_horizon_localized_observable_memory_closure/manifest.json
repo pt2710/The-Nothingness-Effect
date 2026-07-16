@@ -1,0 +1,141 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 27,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "horizon_localized_observable_memory_closure",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/1c/horizon_localized_observable_memory_closure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/2c/horizon_localized_observable_memory_closure_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/1c2c/complete_horizon_localized_observable_memory_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:sc07_source_b_complexes_1c2c",
+    "eq:sc07_positive_composite_1c",
+    "eq:sc07_dual_composite_2c",
+    "eq:sc07_positive_branch_definition_1c",
+    "eq:sc07_positive_outputs_1c",
+    "eq:sc07_positive_residual_1c",
+    "eq:sc07_positive_component_bounds_1c",
+    "eq:sc07_positive_localization_bound_1c",
+    "eq:sc07_direct_sum_identity_1c",
+    "eq:sc07_positive_horizon_profile_1c",
+    "eq:sc07_positive_synthesis_1c",
+    "eq:sc07_dual_branch_definition_2c",
+    "eq:sc07_dual_outputs_2c",
+    "eq:sc07_dual_residual_2c",
+    "eq:sc07_dual_component_bounds_2c",
+    "eq:sc07_dual_localization_bound_2c",
+    "eq:sc07_dual_horizon_profile_2c",
+    "eq:sc07_horizon_monotonicity_2c",
+    "eq:sc07_dual_synthesis_2c",
+    "eq:sc07_joint_system_1c2c",
+    "eq:sc07_interface_vector_1c2c",
+    "eq:sc07_explicit_c_composition_1c2c",
+    "eq:sc07_joint_closure_conditions_1c2c",
+    "eq:sc07_branch_exchange_1c2c",
+    "eq:sc07_total_residual_identity_1c2c",
+    "eq:sc07_total_horizon_profile_1c2c",
+    "eq:sc07_joint_synthesis_1c2c"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/falsification_checks/test_horizon_localized_observable_memory_closure_falsification.py"
+  ],
+  "first_label": "app:sc_complex_07",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/1c/horizon_localized_observable_memory_closure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/2c/horizon_localized_observable_memory_closure_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/1c2c/complete_horizon_localized_observable_memory_closure_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "codomain": {
+      "description": "local field, boundary, localization, coercivity, observability, and candidate status",
+      "name": "horizon_localized_observable_memory_closure spatial closure",
+      "python_types": [
+        "SpatialFieldClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "cosmological_spark_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py"
+  ],
+  "source_complex_id": "horizon_localized_observable_memory_closure",
+  "source_complex_ids": [
+    "flowpoint_resolved_cosmological_memory_resolvent",
+    "common_potential_observation_operator"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/third_order_completeness/complex_001_horizon_localized_observable_memory_closure/falsification_checks/test_horizon_localized_observable_memory_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Horizon-Localized Observable Memory Closure Classification",
+    "left": "Horizon-Localized Observable Memory Closure Law",
+    "right": "Horizon-Localized Observable Memory Closure Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Horizon-Localized Observable Memory Closure Classification",
+    "left": "Horizon-Localized Observable Memory Closure Law",
+    "right": "Horizon-Localized Observable Memory Closure Failure Law"
+  }
+}

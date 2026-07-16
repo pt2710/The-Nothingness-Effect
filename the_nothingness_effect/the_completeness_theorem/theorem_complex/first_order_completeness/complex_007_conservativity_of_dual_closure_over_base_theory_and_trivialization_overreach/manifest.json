@@ -1,0 +1,152 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 42,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/1a/protected_base_theory_conservativity.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/2a/trivialization_and_overreach_witness.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/1a2a/conservativity_overreach.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:cons_algebraic_equation_1a_9",
+    "eq:cons_calculus_equation_1a_9",
+    "eq:cons_quantum_equation_1a_9",
+    "eq:cons_lemma_algebraic_equation_1a_9",
+    "eq:cons_lemma_calculus_equation_1a_9",
+    "eq:cons_lemma_quantum_equation_1a_9",
+    "eq:cons_proof_algebraic_equation_1a_9",
+    "eq:cons_proof_calculus_equation_1a_9",
+    "eq:cons_proof_quantum_equation_1a_9",
+    "eq:cons_cor_algebraic_equation_1a_9",
+    "eq:cons_cor_calculus_equation_1a_9",
+    "eq:cons_cor_quantum_equation_1a_9",
+    "eq:completeness_synthesis_formal_19",
+    "eq:completeness_principle_formal_20",
+    "eq:cons_algebraic_equation_2a_9",
+    "eq:cons_calculus_equation_2a_9",
+    "eq:cons_quantum_equation_2a_9",
+    "eq:cons_lemma_algebraic_equation_2a_9",
+    "eq:cons_lemma_calculus_equation_2a_9",
+    "eq:cons_lemma_quantum_equation_2a_9",
+    "eq:cons_proof_algebraic_equation_2a_9",
+    "eq:cons_proof_calculus_equation_2a_9",
+    "eq:cons_proof_quantum_equation_2a_9",
+    "eq:cons_cor_algebraic_equation_2a_9",
+    "eq:cons_cor_calculus_equation_2a_9",
+    "eq:cons_cor_quantum_equation_2a_9",
+    "eq:completeness_synthesis_formal_20",
+    "eq:completeness_principle_formal_21",
+    "eq:cons_theorem_algebraic_equation_1a2a_9",
+    "eq:cons_theorem_calculus_equation_1a2a_9",
+    "eq:cons_theorem_quantum_equation_1a2a_9",
+    "eq:cons_lemma_algebraic_equation_1a2a_9",
+    "eq:cons_lemma_calculus_equation_1a2a_9",
+    "eq:cons_lemma_quantum_equation_1a2a_9",
+    "eq:cons_proof_algebraic_equation_1a2a_9",
+    "eq:cons_proof_calculus_equation_1a2a_9",
+    "eq:cons_proof_quantum_equation_1a2a_9",
+    "eq:cons_cor_algebraic_equation_1a2a_9",
+    "eq:cons_cor_calculus_equation_1a2a_9",
+    "eq:cons_cor_quantum_equation_1a2a_9",
+    "eq:completeness_synthesis_formal_21",
+    "eq:completeness_principle_formal_22"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/falsification_checks/test_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_06",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/1a/protected_base_theory_conservativity.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/2a/trivialization_and_overreach_witness.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/1a2a/conservativity_overreach.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed finite source law with explicit obstruction status",
+      "name": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach result",
+      "python_types": [
+        "CompletenessSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_007_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach/falsification_checks/test_conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Conservativity <-> Overreach",
+    "left": "Protected Base-Theory Conservativity",
+    "right": "Trivialization and Overreach Witness"
+  },
+  "theorem_titles_tex": {
+    "cross": "Conservativity $\\leftrightarrow$ Overreach",
+    "left": "Protected Base-Theory Conservativity",
+    "right": "Trivialization and Overreach Witness"
+  }
+}

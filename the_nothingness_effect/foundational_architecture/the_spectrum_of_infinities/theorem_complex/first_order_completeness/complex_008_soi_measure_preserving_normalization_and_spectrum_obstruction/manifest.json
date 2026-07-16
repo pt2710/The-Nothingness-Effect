@@ -1,0 +1,142 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 45,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_008_soi_measure_preserving_normalization_and_spectrum_obstruction/1a/soi_measure_preserving_normalization.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_008_soi_measure_preserving_normalization_and_spectrum_obstruction/2a/non_measurable_spectrum_obstruction.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_008_soi_measure_preserving_normalization_and_spectrum_obstruction/1a2a/soi_measure_preserving_normalization_non_measurable_spectrum_obstruction.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soi_mpn_original_soi_1a2a",
+    "eq:soi_mpn_measure_scaling_1a2a",
+    "eq:soi_mpn_pushforward_pair_1a2a",
+    "eq:soi_mpn_calculus_equation_1a",
+    "eq:soi_mpn_algebraic_equation_1a",
+    "eq:soi_mpn_absolute_norm_equation_1a",
+    "eq:soi_mpn_absolute_integral_equation_1a",
+    "eq:soi_mpn_quantum_equation_1a",
+    "eq:soi_mpn_lemma_algebraic_equation_1a",
+    "eq:soi_mpn_lemma_calculus_equation_1a",
+    "eq:soi_mpn_lemma_quantum_equation_1a",
+    "eq:soi_mpn_proof_algebraic_equation_1a",
+    "eq:soi_mpn_proof_calculus_equation_1a",
+    "eq:soi_mpn_proof_quantum_equation_1a",
+    "eq:soi_mpn_corollary_algebraic_equation_1a",
+    "eq:soi_mpn_corollary_calculus_equation_1a",
+    "eq:soi_mpn_corollary_quantum_equation_1a",
+    "eq:std_soi_pushforward_1a",
+    "eq:soi_mpn_algebraic_equation_2a",
+    "eq:soi_mpn_calculus_equation_2a",
+    "eq:soi_mpn_quantum_equation_2a",
+    "eq:soi_mpn_lemma_algebraic_equation_2a",
+    "eq:soi_mpn_lemma_calculus_equation_2a",
+    "eq:soi_mpn_lemma_quantum_equation_2a",
+    "eq:soi_mpn_proof_algebraic_equation_2a",
+    "eq:soi_mpn_proof_calculus_equation_2a",
+    "eq:soi_mpn_proof_quantum_equation_2a",
+    "eq:soi_mpn_corollary_algebraic_equation_2a",
+    "eq:soi_mpn_corollary_calculus_equation_2a",
+    "eq:soi_mpn_corollary_quantum_equation_2a",
+    "eq:std_soi_meas_domain_2a",
+    "eq:soi_mpn_algebraic_equation_1a2a",
+    "eq:soi_mpn_calculus_equation_1a2a",
+    "eq:soi_mpn_quantum_equation_1a2a",
+    "eq:soi_mpn_lemma_algebraic_equation_1a2a",
+    "eq:soi_mpn_lemma_calculus_equation_1a2a",
+    "eq:soi_mpn_lemma_quantum_equation_1a2a",
+    "eq:soi_mpn_proof_algebraic_equation_1a2a",
+    "eq:soi_mpn_proof_calculus_equation_1a2a",
+    "eq:soi_mpn_proof_quantum_equation_1a2a",
+    "eq:soi_mpn_corollary_calculus_equation_1a2a",
+    "eq:soi_mpn_corollary_algebraic_equation_1a2a",
+    "eq:soi_mpn_corollary_quantum_equation_1a2a",
+    "eq:std_soi_mpn_joint",
+    "eq:soi_mpn_absolute_scale_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_008_soi_measure_preserving_normalization_and_spectrum_obstruction/falsification_checks/test_soi_measure_preserving_normalization_and_spectrum_obstruction_falsification.py"
+  ],
+  "first_label": "ssec:soi_mpn_theorem_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_008_soi_measure_preserving_normalization_and_spectrum_obstruction/falsification_checks/test_soi_measure_preserving_normalization_and_spectrum_obstruction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOI Measure-Preserving Normalization <-> Non-Measurable Spectrum Obstruction",
+    "left": "SOI Measure-Preserving Normalization",
+    "right": "Non-Measurable Spectrum Obstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOI Measure-Preserving Normalization \\(\\leftrightarrow\\) Non-Measurable Spectrum Obstruction",
+    "left": "SOI Measure-Preserving Normalization",
+    "right": "Non-Measurable Spectrum Obstruction"
+  }
+}

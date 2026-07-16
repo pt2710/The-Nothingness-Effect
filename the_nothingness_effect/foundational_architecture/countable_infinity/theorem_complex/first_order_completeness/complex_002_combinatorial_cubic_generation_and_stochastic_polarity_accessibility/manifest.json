@@ -1,0 +1,168 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 73,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_002_combinatorial_cubic_generation_and_stochastic_polarity_accessibility/1a/combinatorial_generation_of_0.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_002_combinatorial_cubic_generation_and_stochastic_polarity_accessibility/2a/irreducible_recurrence_and_2_adic_history_coding.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_002_combinatorial_cubic_generation_and_stochastic_polarity_accessibility/1a2a/generated_orbitpositive_probability_support_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:countable_infinity_cube_vertex_space_1a2a",
+    "eq:countable_infinity_cube_flip_group_1a2a",
+    "eq:countable_infinity_cube_group_action_1a2a",
+    "eq:countable_infinity_coordinate_flip_generators_1a2a",
+    "eq:countable_infinity_cube_generator_relations_1a2a",
+    "eq:countable_infinity_flip_instruction_alphabet_1a2a",
+    "eq:countable_infinity_finite_flip_word_space_1a2a",
+    "eq:countable_infinity_axis_polarity_alphabet_cube_complex_1a2a",
+    "eq:countable_infinity_axis_polarity_word_space_cube_complex_1a2a",
+    "eq:countable_infinity_cube_word_cardinality_distinction_1a2a",
+    "eq:countable_infinity_flip_word_evaluation_1a2a",
+    "eq:countable_infinity_flip_word_parity_vector_1a2a",
+    "eq:countable_infinity_flip_word_parity_evaluation_1a2a",
+    "eq:countable_infinity_evaluated_journey_endpoint_1a",
+    "eq:countable_infinity_evaluated_journey_space_1a",
+    "eq:countable_infinity_cube_hamming_distance_1a",
+    "eq:countable_infinity_flip_word_parity_equivalence_1a",
+    "eq:countable_infinity_unique_cube_group_element_1a",
+    "eq:countable_infinity_unique_cube_difference_vector_1a",
+    "eq:countable_infinity_word_parity_map_1a",
+    "eq:countable_infinity_word_quotient_cube_group_1a",
+    "eq:countable_infinity_shortest_cube_path_length_1a",
+    "eq:countable_infinity_cube_vertex_cardinality_1a",
+    "eq:countable_infinity_flip_word_cardinality_1a",
+    "eq:countable_infinity_axis_polarity_word_cardinality_1a",
+    "eq:countable_infinity_journey_space_cardinality_1a",
+    "eq:countable_infinity_cube_word_normal_form_1a",
+    "eq:countable_infinity_cube_word_evaluation_equivalence_1a",
+    "eq:countable_infinity_cube_cayley_graph_1a",
+    "eq:countable_infinity_cube_full_reachability_1a",
+    "eq:countable_infinity_cubic_generation_synthesis_1a",
+    "eq:countable_infinity_finite_instruction_history_principle_1a",
+    "eq:countable_infinity_cube_walk_probabilities_2a",
+    "eq:countable_infinity_cube_walk_positive_generators_2a",
+    "eq:countable_infinity_cube_walk_instruction_law_2a",
+    "eq:countable_infinity_cube_random_walk_recursion_2a",
+    "eq:countable_infinity_cube_target_hitting_time_2a",
+    "eq:countable_infinity_cube_binary_coordinate_history_2a",
+    "eq:countable_infinity_cube_coordinate_2adic_code_2a",
+    "eq:countable_infinity_cube_vector_2adic_code_2a",
+    "eq:countable_infinity_cube_walk_irreducibility_2a",
+    "eq:countable_infinity_cube_walk_hitting_probability_one_2a",
+    "eq:countable_infinity_cube_uniform_stationary_distribution_2a",
+    "eq:countable_infinity_cube_walk_lazy_condition_2a",
+    "eq:countable_infinity_cube_walk_lazy_mixing_limit_2a",
+    "eq:countable_infinity_cube_history_to_2adic_code_2a",
+    "eq:countable_infinity_cube_walk_minimum_flip_probability_2a",
+    "eq:countable_infinity_cube_walk_shortest_path_probability_2a",
+    "eq:countable_infinity_cube_walk_uniform_three_step_bound_2a",
+    "eq:countable_infinity_cube_walk_geometric_hitting_tail_2a",
+    "eq:countable_infinity_cube_bipartite_parity_2a",
+    "eq:countable_infinity_cube_infinite_visits_2a",
+    "eq:countable_infinity_cube_distributional_mixing_2a",
+    "eq:countable_infinity_cube_cesaro_limit_2a",
+    "eq:countable_infinity_cube_walk_synthesis_2a",
+    "eq:countable_positive_generator_accessibility_principle_2a",
+    "eq:countable_positive_generator_period_principle_2a",
+    "eq:countable_infinity_joint_instruction_alphabet_1a2a",
+    "eq:countable_infinity_joint_word_probability_1a2a",
+    "eq:countable_infinity_joint_word_endpoint_1a2a",
+    "eq:countable_infinity_joint_support_orbit_equivalence_1a2a",
+    "eq:countable_infinity_joint_path_sum_formula_1a2a",
+    "eq:countable_infinity_joint_positive_probability_path_equivalence_1a2a",
+    "eq:countable_infinity_joint_finite_stochastic_history_cardinality_1a2a",
+    "eq:countable_infinity_joint_infinite_history_cardinality_1a2a",
+    "eq:countable_infinity_joint_combinatorial_stochastic_roles_1a2a",
+    "eq:countable_infinity_joint_positive_word_probability_1a2a",
+    "eq:countable_infinity_joint_endpoint_many_to_one_1a2a",
+    "eq:countable_infinity_joint_transition_probability_partition_1a2a",
+    "eq:countable_infinity_joint_three_information_levels_1a2a",
+    "eq:countable_infinity_joint_cube_path_synthesis_1a2a",
+    "eq:countable_infinity_joint_support_recurrence_principle_1a2a",
+    "eq:countable_infinity_joint_aperiodic_mixing_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_002_combinatorial_cubic_generation_and_stochastic_polarity_accessibility/falsification_checks/test_combinatorial_cubic_generation_and_stochastic_polarity_accessibility_falsification.py"
+  ],
+  "first_label": "subsec:countable_infinity_cubic_generation_stochastic_accessibility_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "countable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/countable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/simulate_countable_infinity.py"
+  ],
+  "source_complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/countable_infinity/test/test_countable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex/first_order_completeness/complex_002_combinatorial_cubic_generation_and_stochastic_polarity_accessibility/falsification_checks/test_combinatorial_cubic_generation_and_stochastic_polarity_accessibility_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Generated Orbit–Positive-Probability Support Equivalence",
+    "left": "Combinatorial Generation of _0",
+    "right": "Irreducible Recurrence and 2-Adic History Coding"
+  },
+  "theorem_titles_tex": {
+    "cross": "Generated Orbit--Positive-Probability Support Equivalence",
+    "left": "Combinatorial Generation of \\(\\aleph_0\\)",
+    "right": "Irreducible Recurrence and \\(2\\)-Adic History Coding"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 67,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_006_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an/1a/duality_absorption_of_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_006_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an/2a/countable_realization_theorem.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_006_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an/1a2a/equivalence_of_dual_choice_and_countable_completion_presentations.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:uncountable_dual_completion_binary_carrier_1a2a",
+    "eq:uncountable_dual_completion_ultrametric_1a2a",
+    "eq:uncountable_dual_completion_characteristic_sequence_1a2a",
+    "eq:uncountable_dual_completion_characteristic_map_1a2a",
+    "eq:uncountable_dual_completion_complement_maps_1a2a",
+    "eq:uncountable_dual_completion_complement_intertwining_1a2a",
+    "eq:uncountable_dual_completion_finite_binary_level_1a2a",
+    "eq:uncountable_dual_completion_prefix_projection_1a2a",
+    "eq:uncountable_dual_completion_bonding_map_1a2a",
+    "eq:uncountable_dual_completion_inverse_limit_1a2a",
+    "eq:uncountable_dual_completion_eventually_constant_skeleton_1a2a",
+    "eq:uncountable_duality_complete_carrier_definition_1a",
+    "eq:uncountable_duality_complete_definition_commutation_1a",
+    "eq:uncountable_coherent_dual_choice_history_definition_1a",
+    "eq:uncountable_power_set_binary_bijection_1a",
+    "eq:uncountable_power_set_complement_transport_1a",
+    "eq:uncountable_binary_inverse_limit_isomorphism_1a",
+    "eq:uncountable_duality_completion_cardinality_1a",
+    "eq:uncountable_duality_finite_level_cardinality_1a",
+    "eq:uncountable_duality_finite_level_union_countable_1a",
+    "eq:uncountable_subset_code_prefix_thread_1a",
+    "eq:uncountable_coherent_thread_coordinate_reconstruction_1a",
+    "eq:uncountable_coherent_thread_subset_reconstruction_1a",
+    "eq:uncountable_finite_level_complement_map_1a",
+    "eq:uncountable_finite_complement_bonding_commutation_1a",
+    "eq:uncountable_characteristic_surjectivity_subset_1a",
+    "eq:uncountable_complement_coordinate_identity_1a",
+    "eq:uncountable_cantor_strict_inequality_1a",
+    "eq:uncountable_power_set_cardinal_definition_1a",
+    "eq:uncountable_no_natural_surjection_powerset_1a",
+    "eq:uncountable_subset_countable_coordinate_family_1a",
+    "eq:uncountable_complement_two_element_orbit_1a",
+    "eq:uncountable_complement_orbit_quotient_cardinality_1a",
+    "eq:uncountable_paradox_finite_word_union_1a",
+    "eq:uncountable_paradox_coherent_branch_limit_1a",
+    "eq:uncountable_power_set_dual_completion_synthesis_1a",
+    "eq:uncountable_coherent_dual_choice_principle_1a",
+    "eq:uncountable_cauchy_sequence_equivalence_definition_2a",
+    "eq:uncountable_eventually_constant_completion_definition_2a",
+    "eq:uncountable_skeleton_countable_dense_invariant_2a",
+    "eq:uncountable_completion_limit_map_2a",
+    "eq:uncountable_countable_skeleton_completion_isomorphism_2a",
+    "eq:uncountable_countable_skeleton_completion_cardinality_2a",
+    "eq:uncountable_eventually_zero_approximation_2a",
+    "eq:uncountable_eventually_zero_approximation_error_2a",
+    "eq:uncountable_skeleton_complement_invariance_2a",
+    "eq:uncountable_bit_complement_isometry_2a",
+    "eq:uncountable_skeleton_countable_union_finite_sets_2a",
+    "eq:uncountable_cauchy_coordinate_stabilization_2a",
+    "eq:uncountable_real_completion_rationals_2a",
+    "eq:uncountable_general_separable_completion_2a",
+    "eq:uncountable_separable_metric_cardinality_bound_2a",
+    "eq:uncountable_paradox_topological_closure_2a",
+    "eq:uncountable_countable_skeleton_completion_synthesis_2a",
+    "eq:uncountable_countable_presentation_principle_2a",
+    "eq:uncountable_dual_countable_presentation_system_1a2a",
+    "eq:uncountable_joint_four_presentation_equivalence_1a2a",
+    "eq:uncountable_joint_complement_commuting_system_1a2a",
+    "eq:uncountable_joint_cardinality_profile_1a2a",
+    "eq:uncountable_joint_prefix_and_approximation_pair_1a2a",
+    "eq:uncountable_joint_same_limit_identity_1a2a",
+    "eq:uncountable_completion_complement_extension_1a2a",
+    "eq:uncountable_joint_no_cardinal_reduction_1a2a",
+    "eq:uncountable_joint_continuum_cardinality_corollary_1a2a",
+    "eq:uncountable_joint_quantifier_paradox_resolution_1a2a",
+    "eq:uncountable_joint_completion_synthesis_1a2a",
+    "eq:uncountable_presentation_completion_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_006_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an/falsification_checks/test_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an_falsification.py"
+  ],
+  "first_label": "subsec:uncountable_infinity_duality_absorption_countable_completion_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_006_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an/falsification_checks/test_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Equivalence of Dual-Choice and Countable-Completion Presentations",
+    "left": "Duality Absorption of Uncountable Infinity",
+    "right": "Countable Realization Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Equivalence of Dual-Choice and Countable-Completion Presentations",
+    "left": "Duality Absorption of Uncountable Infinity",
+    "right": "Countable Realization Theorem"
+  }
+}

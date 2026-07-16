@@ -1,0 +1,145 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 30,
+    "missing_audit_equation_labels": [
+      "eq:ct10_residual"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "sheaf_of_closure_certificates",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/1c/two_region_certificate_gluing.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/2c/representationinvariance_gluing.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/1c2c/unique_global_closure_certificate.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:ct10_spatial_cover",
+    "eq:ct10_spatial_reflection",
+    "eq:ct10_1c_carrier",
+    "eq:ct10_1c_matching",
+    "eq:ct10_transition_78",
+    "eq:ct10_1c_global_section",
+    "eq:ct10_gluing_78",
+    "eq:ct10_overlap_residual_78",
+    "eq:ct10_reconstruction_78",
+    "eq:ct10_synthesis_78",
+    "eq:ct10_principle_78",
+    "eq:ct10_2c_carrier",
+    "eq:ct10_2c_matching",
+    "eq:ct10_transition_89",
+    "eq:ct10_2c_global_section",
+    "eq:ct10_gluing_89",
+    "eq:ct10_overlap_residual_89",
+    "eq:ct10_reconstruction_89",
+    "eq:ct10_synthesis_89",
+    "eq:ct10_principle_89",
+    "eq:ct10_joint_carrier",
+    "eq:ct10_cocycle",
+    "eq:ct10_cocycle_residual",
+    "eq:ct10_global_spatial_section",
+    "eq:ct10_third_order_completeness",
+    "eq:ct10_global_section",
+    "eq:ct10_cocycle_law",
+    "eq:ct10_restriction_gluing_equivalence",
+    "eq:ct10_joint_synthesis",
+    "eq:ct10_joint_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/falsification_checks/test_sheaf_of_closure_certificates_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_10",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/1c2c/unique_global_closure_certificate.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/1c/two_region_certificate_gluing.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/2c/representationinvariance_gluing.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/1c2c/unique_global_closure_certificate.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "spatial certificate gluing or terminal quotient candidate",
+      "name": "sheaf_of_closure_certificates closure",
+      "python_types": [
+        "CompletenessSpatialClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "sheaf_of_closure_certificates",
+  "source_complex_ids": [
+    "typed_admissibility_instrument",
+    "idempotent_splitting_and_oscillation_obstruction"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/third_order_completeness/complex_001_sheaf_of_closure_certificates/falsification_checks/test_sheaf_of_closure_certificates_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Unique Global Closure Certificate",
+    "left": "Two-Region Certificate Gluing",
+    "right": "Representation–Invariance Gluing"
+  },
+  "theorem_titles_tex": {
+    "cross": "Unique Global Closure Certificate",
+    "left": "Two-Region Certificate Gluing",
+    "right": "Representation–Invariance Gluing"
+  }
+}

@@ -49,13 +49,10 @@ Usage:
 """
 
 import os
-import sys
 import math
 
 # Set up the parent directory so that the 'flowpoint' module is accessible.
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 from the_nothingness_effect.canonical_self_negating_involution.the_flowpoint import fp
 
 class FlowpointMath:

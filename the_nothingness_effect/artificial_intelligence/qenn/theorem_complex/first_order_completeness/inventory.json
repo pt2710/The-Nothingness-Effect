@@ -1,0 +1,66 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
+      "directory": "complex_001_lyapunov_weight_lattice_fourierpisot_spectral_purification",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_entropy_plateau_dfi_divergence_spiking",
+      "directory": "complex_002_dfi_entropy_plateau_dfi_divergence_spiking",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
+      "directory": "complex_003_pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance",
+      "directory": "complex_004_parseval_energy_bijection_for_epochs_energy_mass_imbalance",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component",
+      "directory": "complex_005_autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines",
+      "directory": "complex_006_flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "qenn::dual_support_equivalence_support_mismatch_leakage",
+      "directory": "complex_007_dual_support_equivalence_support_mismatch_leakage",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
+      "directory": "complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing",
+      "directory": "complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance",
+      "directory": "complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap",
+      "directory": "complex_011_entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "hyper_parameter_stability_wedge_instability_lobe",
+      "directory": "complex_012_hyper_parameter_stability_wedge_instability_lobe",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/qenn"
+}

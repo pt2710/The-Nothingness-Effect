@@ -1,0 +1,21 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution",
+      "directory": "complex_001_schedule_controlled_parity_coding_and_uniform_minimal_involution",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+      "directory": "complex_002_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "order_two_symmetry_recursion",
+      "directory": "complex_003_order_two_symmetryrecursion",
+      "status": "blocked"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/symmetry"
+}

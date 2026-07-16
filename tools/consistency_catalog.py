@@ -2,29 +2,7 @@
 
 from __future__ import annotations
 
-from importlib import import_module
-
-
-CONTRACT_MODULES = (
-    ("the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.contracts", "flowpoint_contracts"),
-    ("the_nothingness_effect.mathematical_architecture.contracts", "mathematical_closure_contracts"),
-    ("the_nothingness_effect.foundational_architecture.duality.contracts", "duality_contracts"),
-    ("the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.contracts", "contracts"),
-    ("the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts", "contracts"),
-    ("the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts", "contracts"),
-    ("the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.contracts", "contracts"),
-    ("the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.contracts", "contracts"),
-    ("the_nothingness_effect.the_completeness_theorem.contracts", "contracts"),
-    ("the_nothingness_effect.artificial_intelligence.qenn.contracts", "contracts"),
-    ("the_nothingness_effect.artificial_intelligence.pgqenn.contracts", "contracts"),
-    ("the_nothingness_effect.artificial_intelligence.soinets.contracts", "contracts"),
-)
+from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import active_contracts
 
 ARTIFACT_SUITES = (
     ("flowpoint", "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation.run_suite"),
@@ -49,7 +27,4 @@ ARTIFACT_SUITES = (
 
 
 def implemented_contracts():
-    contracts = []
-    for module_name, factory_name in CONTRACT_MODULES:
-        contracts.extend(getattr(import_module(module_name), factory_name)())
-    return tuple(contracts)
+    return active_contracts()

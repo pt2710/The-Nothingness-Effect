@@ -1,0 +1,16 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "end_compactified_additive_continuum_field",
+      "directory": "complex_001_end_compactified_additive_continuum_field",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "decision_weighted_complex_coverage_and_dual_repair_field",
+      "directory": "complex_002_decision_weighted_complex_coverage_and_dual_repair_field",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/uncountable_infinity"
+}

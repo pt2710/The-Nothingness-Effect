@@ -1,0 +1,40 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "appendix_sources": [
+    {
+      "filename": "appendix_the_completeness_theorem.tex",
+      "sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/the_completeness_theorem",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/the_completeness_theorem/test/generate_artifacts.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "g_delian_provability_boundary_and_declared_dual_carrier_completion",
+    "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
+    "non_manifestability_of_the_anti_circle_and_observation_collapse",
+    "dual_closure_idempotence_and_oscillatory_non_closure",
+    "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
+    "commutation_of_closure_with_parity_soi_and_misaligned_closures",
+    "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
+    "typed_admissibility_instrument",
+    "idempotent_splitting_and_oscillation_obstruction",
+    "protected_commuting_closure_transport",
+    "sheaf_of_closure_certificates",
+    "terminal_quotient_of_closure_certificates"
+  ]
+}

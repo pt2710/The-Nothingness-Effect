@@ -1,0 +1,44 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_foundational_closure_architecture.tex",
+      "sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "spectrum_normalization_and_normalization_obstruction",
+    "spectrum_dfi_duality_and_dfi_divergence",
+    "measurable_decomposition_and_non_measurable_obstruction",
+    "completeness_and_incompleteness_of_the_soi_l_p_structure",
+    "entropy_density_mapping_and_entropy_divergence",
+    "finitizable_infinity_and_the_non_finitization_boundary",
+    "dual_realizability_and_the_missing_dual_defect",
+    "soi_measure_preserving_normalization_and_spectrum_obstruction",
+    "borel_analytic_sufficiency_and_over_extension_beyond_measurability",
+    "factor_map_equivariance_and_limit_bias",
+    "spectrum_flowpoint_addressability_and_unaddressability",
+    "metric_deformation_robustness_and_deformation_fragility",
+    "2_adic_history_accessibility_and_frozen_accessibility",
+    "cosmic_matrix_address_and_ghost_spark_obstruction",
+    "observable_locality_and_infinite_exposure",
+    "elastic_curvature_probing_and_incoherent_warping"
+  ]
+}

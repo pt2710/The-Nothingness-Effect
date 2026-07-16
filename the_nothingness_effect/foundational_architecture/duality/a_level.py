@@ -25,7 +25,7 @@ from .duality import (
 
 
 APPENDIX = "appendix_tne_foundational_closure_architecture.tex"
-APPENDIX_SHA256 = "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69"
+APPENDIX_SHA256 = "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
 
 
 def _zero_residual(name: str, value: float) -> ResidualResult:

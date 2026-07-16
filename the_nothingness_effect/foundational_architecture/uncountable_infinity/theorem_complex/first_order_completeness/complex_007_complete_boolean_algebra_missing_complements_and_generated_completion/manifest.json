@@ -1,0 +1,157 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 62,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_007_complete_boolean_algebra_missing_complements_and_generated_completion/1a/completeness_of_the_dual_lattice_at_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_007_complete_boolean_algebra_missing_complements_and_generated_completion/2a/paradox_incomplete_lattice_theorem.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_007_complete_boolean_algebra_missing_complements_and_generated_completion/1a2a/complete_dual_lattice_closure_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:uncountable_complete_dual_lattice_ambient_carrier_1a2a",
+    "eq:uncountable_complete_dual_lattice_boolean_operations_1a2a",
+    "eq:uncountable_complete_dual_lattice_bounds_1a2a",
+    "eq:uncountable_complete_dual_lattice_arbitrary_join_meet_1a2a",
+    "eq:uncountable_complete_dual_lattice_empty_join_meet_1a2a",
+    "eq:uncountable_complete_dual_lattice_dual_saturation_1a2a",
+    "eq:uncountable_complete_dual_lattice_complement_defect_1a2a",
+    "eq:uncountable_complete_dual_lattice_join_defect_1a2a",
+    "eq:uncountable_complete_dual_lattice_meet_defect_1a2a",
+    "eq:uncountable_complete_dual_boolean_lattice_definition_1a",
+    "eq:uncountable_complete_dual_pair_definition_1a",
+    "eq:uncountable_dually_closed_family_definition_1a",
+    "eq:uncountable_complete_boolean_supremum_infimum_1a",
+    "eq:uncountable_complete_boolean_complement_laws_1a",
+    "eq:uncountable_complete_boolean_de_morgan_join_1a",
+    "eq:uncountable_complete_boolean_de_morgan_meet_1a",
+    "eq:uncountable_complete_boolean_no_complement_fixed_point_1a",
+    "eq:uncountable_complete_boolean_exhaustive_dual_pairs_1a",
+    "eq:uncountable_complete_boolean_lattice_cardinality_1a",
+    "eq:uncountable_complete_boolean_dual_orbit_cardinality_1a",
+    "eq:uncountable_dual_saturation_map_1a",
+    "eq:uncountable_dual_saturation_extensive_1a",
+    "eq:uncountable_dual_saturation_monotone_1a",
+    "eq:uncountable_dual_saturation_idempotent_1a",
+    "eq:uncountable_dual_saturation_fixed_point_1a",
+    "eq:uncountable_dual_saturation_not_complete_boundary_1a",
+    "eq:uncountable_complete_boolean_characteristic_bijection_proof_1a",
+    "eq:uncountable_universal_dual_join_meet_closure_1a",
+    "eq:uncountable_universal_dual_pairing_no_cardinal_collapse_1a",
+    "eq:uncountable_pairing_enumeration_paradox_resolution_1a",
+    "eq:uncountable_complete_dual_lattice_synthesis_1a",
+    "eq:uncountable_complete_boolean_duality_principle_1a",
+    "eq:uncountable_lattice_defect_profile_2a",
+    "eq:uncountable_lattice_zero_filter_sublattice_2a",
+    "eq:uncountable_lattice_finite_cofinite_algebra_2a",
+    "eq:uncountable_missing_complement_witness_2a",
+    "eq:uncountable_missing_join_meet_witness_2a",
+    "eq:uncountable_complete_not_dual_closed_example_2a",
+    "eq:uncountable_finite_cofinite_even_singletons_2a",
+    "eq:uncountable_dual_defect_zero_property_2a",
+    "eq:uncountable_lattice_defects_zero_property_2a",
+    "eq:uncountable_h0_independence_witness_2a",
+    "eq:uncountable_afc_independence_witness_2a",
+    "eq:uncountable_even_union_not_finite_cofinite_2a",
+    "eq:uncountable_finite_cofinite_smaller_upper_bound_2a",
+    "eq:uncountable_complete_boolean_subalgebra_criterion_2a",
+    "eq:uncountable_dual_pairing_not_sufficient_for_completeness_2a",
+    "eq:uncountable_defect_localized_synthesis_2a",
+    "eq:uncountable_explicit_defect_principle_2a",
+    "eq:uncountable_generated_partition_equivalence_1a2a",
+    "eq:uncountable_generated_partition_blocks_1a2a",
+    "eq:uncountable_generated_complete_boolean_closure_1a2a",
+    "eq:uncountable_point_separating_family_definition_1a2a",
+    "eq:uncountable_generated_complete_boolean_minimality_1a2a",
+    "eq:uncountable_generated_complete_boolean_zero_defect_1a2a",
+    "eq:uncountable_generated_complete_boolean_cardinality_1a2a",
+    "eq:uncountable_point_separating_full_completion_1a2a",
+    "eq:uncountable_diagnostic_families_full_completion_1a2a",
+    "eq:uncountable_partition_block_intersection_formula_1a2a",
+    "eq:uncountable_countable_generator_cardinal_jump_1a2a",
+    "eq:uncountable_joint_generated_completion_synthesis_1a2a",
+    "eq:uncountable_defect_to_completion_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_007_complete_boolean_algebra_missing_complements_and_generated_completion/falsification_checks/test_complete_boolean_algebra_missing_complements_and_generated_completion_falsification.py"
+  ],
+  "first_label": "subsec:uncountable_infinity_complete_dual_lattice_defect_closure_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_007_complete_boolean_algebra_missing_complements_and_generated_completion/falsification_checks/test_complete_boolean_algebra_missing_complements_and_generated_completion_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Dual-lattice Closure Equivalence",
+    "left": "Completeness of the Dual Lattice at Uncountable Infinity",
+    "right": "Paradox/Incomplete Lattice Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Dual-lattice Closure Equivalence",
+    "left": "Completeness of the Dual Lattice at Uncountable Infinity",
+    "right": "Paradox/Incomplete Lattice Theorem"
+  }
+}

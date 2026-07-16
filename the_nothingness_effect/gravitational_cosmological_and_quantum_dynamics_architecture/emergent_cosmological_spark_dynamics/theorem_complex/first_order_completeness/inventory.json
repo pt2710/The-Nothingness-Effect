@@ -1,0 +1,31 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "cosmic_spark_flowpoint_correspondence_and_spectral_duality",
+      "directory": "complex_001_cosmic_sparkflowpoint_correspondence_and_spectral_duality",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory",
+      "directory": "complex_002_cosmic_spark_decay_and_integrated_cosmological_memory",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer",
+      "directory": "complex_003_elastic_cosmological_geometry_and_dubler_spectral_transfer",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "wave_sector_and_expansion_sector_cosmological_projection",
+      "directory": "complex_004_wave_sector_and_expansion_sector_cosmological_projection",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface",
+      "directory": "complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac",
+      "status": "blocked"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics"
+}

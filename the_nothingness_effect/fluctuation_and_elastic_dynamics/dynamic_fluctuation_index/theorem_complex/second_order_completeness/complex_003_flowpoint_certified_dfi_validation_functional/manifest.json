@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_dfi_b03_master",
+      "eq:tne_additive_dfi_b03_1b_definition",
+      "eq:tne_additive_dfi_b03_1b_theorem",
+      "eq:tne_additive_dfi_b03_1b_lemma",
+      "eq:tne_additive_dfi_b03_1b_synthesis",
+      "eq:tne_additive_dfi_b03_1b_principle",
+      "eq:tne_additive_dfi_b03_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "flowpoint_certified_dfi_validation_functional",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/1b/dfi_uniqueness_of_decomposition_dfiflowpoint_consistency_dfi_simulation_consistency.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/2b/dfi_ambiguity_and_non_uniqueness_dfiflowpoint_inconsistency_dfi_simulation_breakdown.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/1b2b/complete_dfi_decomposition_classification_complete_dfiflowpoint_bridge_classification_complete_d.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dfi_b03_product_carrier",
+    "eq:drv_dfi_b03_1b",
+    "eq:drv_dfi_b03_theorem_1b",
+    "eq:drv_dfi_b03_res_1b",
+    "eq:drv_dfi_b03_2b",
+    "eq:drv_dfi_b03_theorem_2b",
+    "eq:drv_dfi_b03_res_2b",
+    "eq:drv_dfi_b03_joint",
+    "eq:drv_dfi_b03_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/falsification_checks/test_flowpoint_certified_dfi_validation_functional_falsification.py"
+  ],
+  "first_label": "app:drv_dfi_b03",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/1b2b/complete_dfi_decomposition_classification_complete_dfiflowpoint_bridge_classification_complete_d.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/1b/dfi_uniqueness_of_decomposition_dfiflowpoint_consistency_dfi_simulation_consistency.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/2b/dfi_ambiguity_and_non_uniqueness_dfiflowpoint_inconsistency_dfi_simulation_breakdown.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/1b2b/complete_dfi_decomposition_classification_complete_dfiflowpoint_bridge_classification_complete_d.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 3
+  },
+  "module": "dfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dfi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "flowpoint_certified_dfi_validation_functional",
+  "source_complex_ids": [
+    "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+    "dfi_flowpoint_consistency_and_interface_inconsistency",
+    "dfi_simulation_consistency_and_simulation_breakdown"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_flowpoint_certified_dfi_validation_functional/falsification_checks/test_flowpoint_certified_dfi_validation_functional_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete DFI Decomposition Classification – Complete DFI–Flowpoint Bridge Classification – Complete DFI Simulation Validation Classification",
+    "left": "DFI Uniqueness of Decomposition – DFI–Flowpoint Consistency – DFI Simulation Consistency",
+    "right": "DFI Ambiguity and Non-Uniqueness – DFI–Flowpoint Inconsistency – DFI Simulation Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete DFI Decomposition Classification -- Complete DFI--Flowpoint Bridge Classification -- Complete DFI Simulation Validation Classification",
+    "left": "DFI Uniqueness of Decomposition -- DFI--Flowpoint Consistency -- DFI Simulation Consistency",
+    "right": "DFI Ambiguity and Non-Uniqueness -- DFI--Flowpoint Inconsistency -- DFI Simulation Breakdown"
+  }
+}

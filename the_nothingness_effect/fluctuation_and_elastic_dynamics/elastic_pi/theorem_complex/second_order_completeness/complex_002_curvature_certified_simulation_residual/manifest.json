@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_elasticpi_b02_master",
+      "eq:tne_additive_elasticpi_b02_1b_definition",
+      "eq:tne_additive_elasticpi_b02_1b_theorem",
+      "eq:tne_additive_elasticpi_b02_1b_lemma",
+      "eq:tne_additive_elasticpi_b02_1b_synthesis",
+      "eq:tne_additive_elasticpi_b02_1b_principle",
+      "eq:tne_additive_elasticpi_b02_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "curvature_certified_simulation_residual",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/1b/elastic_pi_curvatureentropy_link_elastic_pi_simulation_consistency.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/2b/entropycurvature_decoupling_simulation_breakdown_non_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/1b2b/elastic_pi_curvatureentropy_duality_and_decoupling_elastic_pi_simulation_consistency_and_breakdo.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_elasticpi_b02_product_carrier",
+    "eq:drv_elasticpi_b02_1b",
+    "eq:drv_elasticpi_b02_theorem_1b",
+    "eq:drv_elasticpi_b02_res_1b",
+    "eq:drv_elasticpi_b02_2b",
+    "eq:drv_elasticpi_b02_theorem_2b",
+    "eq:drv_elasticpi_b02_res_2b",
+    "eq:drv_elasticpi_b02_joint",
+    "eq:drv_elasticpi_b02_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/falsification_checks/test_curvature_certified_simulation_residual_falsification.py"
+  ],
+  "first_label": "app:drv_elasticpi_b02",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/1b2b/elastic_pi_curvatureentropy_duality_and_decoupling_elastic_pi_simulation_consistency_and_breakdo.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/1b/elastic_pi_curvatureentropy_link_elastic_pi_simulation_consistency.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/2b/entropycurvature_decoupling_simulation_breakdown_non_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/1b2b/elastic_pi_curvatureentropy_duality_and_decoupling_elastic_pi_simulation_consistency_and_breakdo.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "reconstruction and simulation coupling",
+      "name": "curvature-certified simulation",
+      "python_types": [
+        "CurvatureCertifiedSimulation"
+      ]
+    },
+    "domain": {
+      "description": "finite one-dimensional entropy field, K_D > 0, and declared coordinates",
+      "name": "Elastic-pi source",
+      "python_types": [
+        "ElasticPiInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.certified_simulation_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "elastic_pi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py"
+  ],
+  "source_complex_id": "curvature_certified_simulation_residual",
+  "source_complex_ids": [
+    "elastic_curvature_entropy_duality_and_decoupling",
+    "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_elastic_pi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/second_order_completeness/complex_002_curvature_certified_simulation_residual/falsification_checks/test_curvature_certified_simulation_residual_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic pi Curvature–Entropy Duality and Decoupling – Elastic pi Simulation Consistency and Breakdown Classification",
+    "left": "Elastic pi Curvature–Entropy Link – Elastic pi Simulation Consistency",
+    "right": "Entropy–Curvature Decoupling – Simulation Breakdown/Non-Equivalence"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic $\\pi$ Curvature--Entropy Duality and Decoupling -- Elastic $\\pi$ Simulation Consistency and Breakdown Classification",
+    "left": "Elastic $\\pi$ Curvature--Entropy Link -- Elastic $\\pi$ Simulation Consistency",
+    "right": "Entropy--Curvature Decoupling -- Simulation Breakdown/Non-Equivalence"
+  }
+}

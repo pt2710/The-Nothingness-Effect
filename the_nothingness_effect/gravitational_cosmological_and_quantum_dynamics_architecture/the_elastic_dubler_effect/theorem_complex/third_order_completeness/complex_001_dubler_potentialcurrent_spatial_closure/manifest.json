@@ -1,0 +1,124 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "dubler_potential_current_spatial_closure",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/1c/potentialcurrent_connection_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/2c/spatial_compatibility_failure_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/1c2c/complete_potentialcurrent_spatial_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dubler_c01_spatial_carrier",
+    "eq:drv_dubler_c01_1c",
+    "eq:drv_dubler_c01_theorem_1c",
+    "eq:drv_dubler_c01_res_1c",
+    "eq:drv_dubler_c01_2c",
+    "eq:drv_dubler_c01_theorem_2c",
+    "eq:drv_dubler_c01_res_2c",
+    "eq:drv_dubler_c01_joint",
+    "eq:drv_dubler_c01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/falsification_checks/test_dubler_potential_current_spatial_closure_falsification.py"
+  ],
+  "first_label": "app:drv_dubler_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/1c/potentialcurrent_connection_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/2c/spatial_compatibility_failure_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/1c2c/complete_potentialcurrent_spatial_closure_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "codomain": {
+      "description": "local field, boundary, localization, coercivity, observability, and candidate status",
+      "name": "dubler_potential_current_spatial_closure spatial closure",
+      "python_types": [
+        "SpatialFieldClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "elastic_dubler_effect",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py"
+  ],
+  "source_complex_id": "dubler_potential_current_spatial_closure",
+  "source_complex_ids": [
+    "calibrated_pdfi_dubler_endpoint_operator",
+    "elastic_log_curvature_energy_production_law"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_the_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/third_order_completeness/complex_001_dubler_potentialcurrent_spatial_closure/falsification_checks/test_dubler_potential_current_spatial_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Potential–Current Spatial Closure Classification",
+    "left": "Potential–Current Connection Theorem",
+    "right": "Spatial Compatibility Failure Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Potential--Current Spatial Closure Classification",
+    "left": "Potential--Current Connection Theorem",
+    "right": "Spatial Compatibility Failure Theorem"
+  }
+}

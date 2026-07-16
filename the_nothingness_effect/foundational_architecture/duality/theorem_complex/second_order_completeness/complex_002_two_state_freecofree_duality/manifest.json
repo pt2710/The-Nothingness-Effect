@@ -1,0 +1,146 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "two_state_free_cofree_duality",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/1b/universal_extension_from_one_state_per_dual_pair.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/2b/universal_dual_state_observation.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/1b2b/freeforgetfulcofree_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_duality_b02_1b",
+    "eq:drv_duality_b02_free_on_maps",
+    "eq:drv_duality_b02_free_extension_map",
+    "eq:drv_duality_b02_free_extension_formula",
+    "eq:drv_duality_b02_theorem_1b",
+    "eq:drv_duality_b02_free_determination",
+    "eq:drv_duality_b02_free_equivariance",
+    "eq:drv_duality_b02_free_cardinality",
+    "eq:drv_duality_b02_free_coproduct",
+    "eq:drv_duality_b02_free_functor",
+    "eq:drv_duality_b02_free_principle",
+    "eq:drv_duality_b02_free_principle_inverse",
+    "eq:drv_duality_b02_2b",
+    "eq:drv_duality_b02_cofree_swap",
+    "eq:drv_duality_b02_cofree_map",
+    "eq:drv_duality_b02_cofree_formula",
+    "eq:drv_duality_b02_theorem_2b",
+    "eq:drv_duality_b02_observation_evaluation",
+    "eq:drv_duality_b02_observation_forced",
+    "eq:drv_duality_b02_cofree_products",
+    "eq:drv_duality_b02_paired_readout",
+    "eq:drv_duality_b02_cofree_functor",
+    "eq:drv_duality_b02_cofree_principle",
+    "eq:drv_duality_b02_cofree_principle_inverse",
+    "eq:drv_duality_b02_joint",
+    "eq:drv_duality_b02_exchange_square",
+    "eq:drv_duality_b02_free_unit",
+    "eq:drv_duality_b02_free_counit",
+    "eq:drv_duality_b02_monad_comonad",
+    "eq:drv_duality_b02_adjunction_synthesis",
+    "eq:drv_duality_b02_adjunction_hom_synthesis",
+    "eq:drv_duality_b02_joint_principle_hom",
+    "eq:drv_duality_b02_joint_principle_adjunction"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/falsification_checks/test_two_state_free_cofree_duality_falsification.py"
+  ],
+  "first_label": "app:drv_duality_b02",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/b_level.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/1b/universal_extension_from_one_state_per_dual_pair.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/2b/universal_dual_state_observation.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/1b2b/freeforgetfulcofree_duality.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "signed pairs and evaluation",
+      "name": "free-cofree duality",
+      "python_types": [
+        "FreeCofreeDuality"
+      ]
+    },
+    "domain": {
+      "description": "nonempty tuple of finite complex generators",
+      "name": "finite generators",
+      "python_types": [
+        "FreeCofreeInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.foundational_architecture.duality.duality.two_state_free_cofree_duality",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.foundational_architecture.duality.b_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/run_suite.py",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "two_state_free_cofree_duality",
+  "source_complex_ids": [
+    "minimal_two_state_involution_orbitwise_alternator",
+    "involutive_duality_c_2_action"
+  ],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_duality_contracts.py",
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/second_order_completeness/complex_002_two_state_freecofree_duality/falsification_checks/test_two_state_free_cofree_duality_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Free–Forgetful–Cofree Duality",
+    "left": "Universal Extension from One State per Dual Pair",
+    "right": "Universal Dual-State Observation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Free--Forgetful--Cofree Duality",
+    "left": "Universal Extension from One State per Dual Pair",
+    "right": "Universal Dual-State Observation"
+  }
+}

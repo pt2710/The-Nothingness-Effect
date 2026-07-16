@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "affine_history_field",
+      "directory": "complex_001_affine_history_field",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint"
+}

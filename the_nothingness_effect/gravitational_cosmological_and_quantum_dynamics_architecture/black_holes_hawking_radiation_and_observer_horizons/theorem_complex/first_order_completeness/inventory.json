@@ -1,0 +1,61 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "black_hole_dynamics::elastic_black_hole_emergence_triviality_of_breakdown",
+      "directory": "complex_001_elastic_black_hole_emergencetriviality_of_breakdown",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "bridge_duality_dual_invariant_translation",
+      "directory": "complex_002_bridge_dualitydual_invariant_translation",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "physical_singularity_absence_mathematical_failure_point_status",
+      "directory": "complex_003_physical_singularity_absencemathematical_failure_point_status",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "black_hole_observability_triviality_and_regularity",
+      "directory": "complex_004_black_hole_observabilitytriviality_and_regularity",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_hawking_emission_radiative_stasis",
+      "directory": "complex_005_elastic_hawking_emissionradiative_stasis",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "hawking_radiation_as_entropic_relaxation_stasis",
+      "directory": "complex_006_hawking_radiation_as_entropic_relaxationstasis",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observer_horizon_threshold_infinite_visibility",
+      "directory": "complex_007_observer_horizon_thresholdinfinite_visibility",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation",
+      "directory": "complex_008_elastic_gravitational_memoryinstant_relaxation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "residual_deformation_memory_perfect_relaxation",
+      "directory": "complex_009_residual_deformation_memoryperfect_relaxation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "simulation_consistency_breakdown_and_non_equivalence",
+      "directory": "complex_010_simulation_consistencybreakdown_and_non_equivalence",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat",
+      "directory": "complex_011_appendix_wide_black_holehawkingobserver_horizon_cross_complex_closure_and_computational_falsific",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons"
+}

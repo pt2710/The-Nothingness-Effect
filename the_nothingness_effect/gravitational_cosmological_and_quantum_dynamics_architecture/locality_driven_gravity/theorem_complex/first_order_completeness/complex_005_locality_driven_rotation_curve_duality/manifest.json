@@ -1,0 +1,104 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "locality_driven_rotation_curve_duality",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_005_locality_driven_rotation_curve_duality/1a/locality_driven_rotation_curve_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_005_locality_driven_rotation_curve_duality/2a/nonlocal_rotation_ambiguity_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_005_locality_driven_rotation_curve_duality/1a2a/locality_driven_rotation_curve_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ldg05_rotation_curve_order_parameter_1a",
+    "eq:ldg05_rotation_curve_branch_condition_1a",
+    "eq:rotation_local_1a",
+    "eq:ldg05_rotation_curve_order_parameter_2a",
+    "eq:ldg05_rotation_curve_branch_condition_2a",
+    "eq:ldg05_rotation_curve_status_1a2a",
+    "eq:local_potential_1a2a",
+    "eq:nonlocal_potential_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_005_locality_driven_rotation_curve_duality/falsification_checks/test_locality_driven_rotation_curve_duality_falsification.py"
+  ],
+  "first_label": "ssec:locality_driven_rotation_curve_duality_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "locality_driven_rotation_curve_duality",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_005_locality_driven_rotation_curve_duality/falsification_checks/test_locality_driven_rotation_curve_duality_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Locality-Driven Rotation Curve Duality",
+    "left": "Locality-Driven Rotation Curve Theorem",
+    "right": "Nonlocal Rotation Ambiguity Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Locality-Driven Rotation Curve Duality",
+    "left": "Locality-Driven Rotation Curve Theorem",
+    "right": "Nonlocal Rotation Ambiguity Theorem"
+  }
+}

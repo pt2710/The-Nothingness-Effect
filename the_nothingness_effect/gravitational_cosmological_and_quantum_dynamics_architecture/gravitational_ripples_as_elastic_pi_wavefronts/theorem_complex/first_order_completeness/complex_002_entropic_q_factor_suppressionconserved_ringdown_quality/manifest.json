@@ -1,0 +1,154 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 42,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/1a/entropic_q_factor_suppression.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/2a/conserved_ringdown_quality.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/1a2a/entropic_q_factor_suppression_conserved_ringdown_quality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw02_q_factor_order_parameter_1a",
+    "eq:grw02_q_factor_branch_condition_1a",
+    "eq:ode_1a",
+    "eq:q_1a",
+    "eq:gamma_link_1a",
+    "eq:q_gap_1a",
+    "eq:q_of_f_1a",
+    "eq:q_curvature_1a",
+    "eq:gamma_prime_1a",
+    "eq:proof_ode_q_1a",
+    "eq:q_diff_1a",
+    "eq:dfi_only_eq_1a",
+    "eq:dfi_only_energy_q_1a",
+    "eq:grw02_q_factor_order_parameter_2a",
+    "eq:grw02_q_factor_branch_condition_2a",
+    "eq:ode_2a",
+    "eq:q_2a",
+    "eq:q_sensitivity_2a",
+    "eq:resolution_criterion_2a",
+    "eq:resolution_bound_2a",
+    "eq:proof_ode_q_2a",
+    "eq:limit_q_2a",
+    "eq:null_condition_2a",
+    "eq:null_inverse_q_2a",
+    "eq:grw02_q_factor_status_1a2a",
+    "eq:def_mode_1a2a",
+    "eq:def_dampings_1a2a",
+    "eq:def_gamma_eff_1a2a",
+    "eq:ode_total_1a2a",
+    "eq:q_eff_1a2a",
+    "eq:q_gr_1a2a",
+    "eq:q_dfi_only_1a2a",
+    "eq:dfi_entropy_link_1a2a",
+    "eq:energy_decay_1a2a",
+    "eq:solution_form_1a2a",
+    "eq:q_inequality_1a2a",
+    "eq:ident_eqs_1a2a",
+    "eq:jacobian_1a2a",
+    "eq:epsilon_bridge_1a2a",
+    "eq:bridge_limit_1a2a",
+    "eq:population_bound_1a2a",
+    "eq:gamma_max_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/falsification_checks/test_entropic_q_factor_suppression_conserved_ringdown_quality_falsification.py"
+  ],
+  "first_label": "ssec:entropic_q_suppression_gr_quality_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/1a/entropic_q_factor_suppression.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/2a/conserved_ringdown_quality.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/1a2a/entropic_q_factor_suppression_conserved_ringdown_quality.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "ringdown_quality field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_002_entropic_q_factor_suppressionconserved_ringdown_quality/falsification_checks/test_entropic_q_factor_suppression_conserved_ringdown_quality_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Entropic Q-Factor Suppression <-> Conserved Ringdown Quality",
+    "left": "Entropic Q-Factor Suppression",
+    "right": "Conserved Ringdown Quality"
+  },
+  "theorem_titles_tex": {
+    "cross": "Entropic Q-Factor Suppression $\\leftrightarrow$ Conserved Ringdown Quality",
+    "left": "Entropic Q-Factor Suppression",
+    "right": "Conserved Ringdown Quality"
+  }
+}

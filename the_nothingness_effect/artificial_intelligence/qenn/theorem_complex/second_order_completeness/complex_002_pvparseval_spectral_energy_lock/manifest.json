@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_qenn_b02_master",
+      "eq:tne_additive_qenn_b02_1b_definition",
+      "eq:tne_additive_qenn_b02_1b_theorem",
+      "eq:tne_additive_qenn_b02_1b_lemma",
+      "eq:tne_additive_qenn_b02_1b_synthesis",
+      "eq:tne_additive_qenn_b02_1b_principle",
+      "eq:tne_additive_qenn_b02_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "pv_parseval_spectral_energy_lock",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/1b/pv_inflation_pure_point_diffraction_parseval_energy_bijection_for_epochs_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/2b/non_pv_salem_continuous_leakage_energy_mass_imbalance_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/1b2b/pv_inflation_pure_point_diffraction_non_pv_salem_leakage_parseval_energy_bijection_for_epochs_en.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_qenn_b02_product_carrier",
+    "eq:drv_qenn_b02_1b",
+    "eq:drv_qenn_b02_theorem_1b",
+    "eq:drv_qenn_b02_res_1b",
+    "eq:drv_qenn_b02_2b",
+    "eq:drv_qenn_b02_theorem_2b",
+    "eq:drv_qenn_b02_res_2b",
+    "eq:drv_qenn_b02_joint",
+    "eq:drv_qenn_b02_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/falsification_checks/test_pv_parseval_spectral_energy_lock_falsification.py"
+  ],
+  "first_label": "app:drv_qenn_b02",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/1b2b/pv_inflation_pure_point_diffraction_non_pv_salem_leakage_parseval_energy_bijection_for_epochs_en.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/1b/pv_inflation_pure_point_diffraction_parseval_energy_bijection_for_epochs_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/2b/non_pv_salem_continuous_leakage_energy_mass_imbalance_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/1b2b/pv_inflation_pure_point_diffraction_non_pv_salem_leakage_parseval_energy_bijection_for_epochs_en.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "positive non-cancelling two-source residual-energy operator",
+      "name": "pv_parseval_spectral_energy_lock residual energy",
+      "python_types": [
+        "QENNDerivedLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite rank-two training state and positive residual weights",
+      "name": "QENN training field",
+      "python_types": [
+        "QENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.qenn.contracts.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.qenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "pv_parseval_spectral_energy_lock",
+  "source_complex_ids": [
+    "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
+    "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_qenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_002_pvparseval_spectral_energy_lock/falsification_checks/test_pv_parseval_spectral_energy_lock_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "PV Inflation (Pure-Point Diffraction) <-> Non-PV/Salem Leakage – Parseval Energy Bijection for Epochs <-> Energy/Mass Imbalance",
+    "left": "PV Inflation Pure-Point Diffraction – Parseval Energy Bijection for Epochs – Law",
+    "right": "Non-PV/Salem Continuous Leakage – Energy/Mass Imbalance – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "PV Inflation (Pure-Point Diffraction) $\\leftrightarrow$ Non-PV/Salem Leakage -- Parseval Energy Bijection for Epochs $\\leftrightarrow$ Energy/Mass Imbalance",
+    "left": "PV Inflation $\\Rightarrow$ Pure-Point Diffraction -- Parseval Energy Bijection for Epochs -- Law",
+    "right": "Non-PV/Salem $\\Rightarrow$ Continuous Leakage -- Energy/Mass Imbalance -- Law"
+  }
+}

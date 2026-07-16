@@ -1,0 +1,152 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 42,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/1a/karoubi_envelope_equivalence.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/2a/missing_idempotent_splittings.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/1a2a/karoubi_equivalence_missing_splittings.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:karoubi_1a_algebraic_align_1a_73",
+    "eq:karoubi_1a_calculus_align_1a_73",
+    "eq:karoubi_1a_quantum_align_1a_73",
+    "eq:karoubi_lemma_algebraic_align_1a_73",
+    "eq:karoubi_lemma_calculus_align_1a_73",
+    "eq:karoubi_lemma_quantum_align_1a_73",
+    "eq:karoubi_proof_algebraic_align_1a_73",
+    "eq:karoubi_proof_calculus_align_1a_73",
+    "eq:karoubi_proof_quantum_align_1a_73",
+    "eq:karoubi_cor_algebraic_equation_1a_73",
+    "eq:karoubi_cor_calculus_equation_1a_73",
+    "eq:karoubi_cor_quantum_equation_1a_73",
+    "eq:completeness_synthesis_formal_13",
+    "eq:completeness_principle_formal_14",
+    "eq:karoubi_2a_algebraic_equation_2a_73",
+    "eq:karoubi_2a_calculus_equation_2a_73",
+    "eq:karoubi_2a_quantum_equation_2a_73",
+    "eq:karoubi_lemma_algebraic_equation_2a_73",
+    "eq:karoubi_lemma_calculus_equation_2a_73",
+    "eq:karoubi_lemma_quantum_equation_2a_73",
+    "eq:karoubi_proof_algebraic_equation_2a_73",
+    "eq:karoubi_proof_calculus_equation_2a_73",
+    "eq:karoubi_proof_quantum_equation_2a_73",
+    "eq:karoubi_cor_algebraic_equation_2a_73",
+    "eq:karoubi_cor_calculus_equation_2a_73",
+    "eq:karoubi_cor_quantum_equation_2a_73",
+    "eq:completeness_synthesis_formal_14",
+    "eq:completeness_principle_formal_15",
+    "eq:karoubi_theorem_algebraic_align_1a2a_73",
+    "eq:karoubi_theorem_calculus_align_1a2a_73",
+    "eq:karoubi_theorem_quantum_align_1a2a_73",
+    "eq:karoubi_lemma_algebraic_equation_1a2a_73",
+    "eq:karoubi_lemma_calculus_equation_1a2a_73",
+    "eq:karoubi_lemma_quantum_equation_1a2a_73",
+    "eq:karoubi_proof_algebraic_equation_1a2a_73",
+    "eq:karoubi_proof_calculus_equation_1a2a_73",
+    "eq:karoubi_proof_quantum_equation_1a2a_73",
+    "eq:karoubi_cor_algebraic_equation_1a2a_73",
+    "eq:karoubi_cor_calculus_equation_1a2a_73",
+    "eq:karoubi_cor_quantum_equation_1a2a_73",
+    "eq:completeness_synthesis_formal_15",
+    "eq:completeness_principle_formal_16"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/falsification_checks/test_karoubi_envelope_equivalence_and_missing_idempotent_splittings_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_04",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/1a/karoubi_envelope_equivalence.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/2a/missing_idempotent_splittings.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/1a2a/karoubi_equivalence_missing_splittings.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed finite source law with explicit obstruction status",
+      "name": "karoubi_envelope_equivalence_and_missing_idempotent_splittings result",
+      "python_types": [
+        "CompletenessSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_005_karoubi_envelope_equivalence_and_missing_idempotent_splittings/falsification_checks/test_karoubi_envelope_equivalence_and_missing_idempotent_splittings_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Karoubi Equivalence <-> Missing Splittings",
+    "left": "Karoubi Envelope Equivalence",
+    "right": "Missing Idempotent Splittings"
+  },
+  "theorem_titles_tex": {
+    "cross": "Karoubi Equivalence $\\leftrightarrow$ Missing Splittings",
+    "left": "Karoubi Envelope Equivalence",
+    "right": "Missing Idempotent Splittings"
+  }
+}

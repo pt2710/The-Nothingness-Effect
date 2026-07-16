@@ -1,0 +1,127 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 31,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "halo_structure_formation_duality",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_008_halo_structure_formation_duality/1a/halo_structure_formation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_008_halo_structure_formation_duality/2a/halo_homogenization_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_008_halo_structure_formation_duality/1a2a/halo_structure_formation_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ldg08_halo_order_parameter_1a",
+    "eq:ldg08_halo_branch_condition_1a",
+    "eq:halo_structure_config_1a",
+    "eq:halo_growth_1a",
+    "eq:halo_dissolution_lemma_1a",
+    "eq:halo_flat_field_lemma_1a",
+    "eq:halo_gradient_proof_1a",
+    "eq:halo_evolution_proof_1a",
+    "eq:halo_persistence_cor_1a",
+    "eq:halo_static_cor_1a",
+    "eq:ldg08_halo_order_parameter_2a",
+    "eq:ldg08_halo_branch_condition_2a",
+    "eq:halo_vanish_2a",
+    "eq:halo_gradient_zero_2a",
+    "eq:halo_dissolve_lemma_2a",
+    "eq:halo_flat_field_lemma_2a",
+    "eq:halo_homogenization_proof_2a",
+    "eq:halo_homogenization_collapse_2a",
+    "eq:halo_dissolution_cor_2a",
+    "eq:halo_end_state_cor_2a",
+    "eq:ldg08_halo_status_1a2a",
+    "eq:halo_grad_cond_1a2a",
+    "eq:halo_grad_vanish_1a2a",
+    "eq:halo_diff_eq_1a2a",
+    "eq:halo_gradient_decay_1a2a",
+    "eq:halo_duality_lemma_1a2a",
+    "eq:halo_integral_lemma_1a2a",
+    "eq:halo_dual_proof_1a2a",
+    "eq:halo_dual_integral_proof_1a2a",
+    "eq:halo_dual_cor_1a2a",
+    "eq:halo_dual_gradient_cor_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_008_halo_structure_formation_duality/falsification_checks/test_halo_structure_formation_duality_falsification.py"
+  ],
+  "first_label": "ssec:halo_structure_formation_duality_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "halo_structure_formation_duality",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_008_halo_structure_formation_duality/falsification_checks/test_halo_structure_formation_duality_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Halo Structure Formation Duality",
+    "left": "Halo Structure Formation",
+    "right": "Halo Homogenization Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Halo Structure Formation Duality",
+    "left": "Halo Structure Formation",
+    "right": "Halo Homogenization Theorem"
+  }
+}

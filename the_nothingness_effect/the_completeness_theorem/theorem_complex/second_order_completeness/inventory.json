@@ -1,0 +1,21 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "typed_admissibility_instrument",
+      "directory": "complex_001_typed_admissibility_instrument",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "idempotent_splitting_and_oscillation_obstruction",
+      "directory": "complex_002_idempotent_splitting_and_oscillation_obstruction",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "protected_commuting_closure_transport",
+      "directory": "complex_003_protected_commuting_closure_transport",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/the_completeness_theorem"
+}

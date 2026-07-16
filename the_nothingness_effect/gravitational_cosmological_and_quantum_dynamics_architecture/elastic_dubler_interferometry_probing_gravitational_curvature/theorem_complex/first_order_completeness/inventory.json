@@ -1,0 +1,51 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "elastic_dubler_curvature_correspondence",
+      "directory": "complex_001_elastic_dubler_curvature_correspondence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_e_curvature_encoding_curvature_ambiguity_divergence",
+      "directory": "complex_002_elastic_e_curvature_encodingcurvature_ambiguity_divergence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_dubler_interferometry::elastic_gravitational_memory_instant_relaxation",
+      "directory": "complex_003_elastic_gravitational_memoryinstant_relaxation",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown",
+      "directory": "complex_004_elastic_black_hole_emergencetriviality_of_breakdown",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "bridge_duality_and_the_2_adic_criterion",
+      "directory": "complex_005_bridge_duality_and_the_2_adic_criterion",
+      "status": "blocked"
+    },
+    {
+      "complex_id": "elastic_curvature_smoothness_curvature_singularity",
+      "directory": "complex_006_elastic_curvature_smoothnesscurvature_singularity",
+      "status": "blocked"
+    },
+    {
+      "complex_id": "elastic_entropic_stability_entropic_instability",
+      "directory": "complex_007_elastic_entropic_stabilityentropic_instability",
+      "status": "blocked"
+    },
+    {
+      "complex_id": "elastic_geometric_consistency_geometric_degeneracy",
+      "directory": "complex_008_elastic_geometric_consistencygeometric_degeneracy",
+      "status": "blocked"
+    },
+    {
+      "complex_id": "appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface",
+      "directory": "complex_009_appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface",
+      "status": "blocked"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature"
+}

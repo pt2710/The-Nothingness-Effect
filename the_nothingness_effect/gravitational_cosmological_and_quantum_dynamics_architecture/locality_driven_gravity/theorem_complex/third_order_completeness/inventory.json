@@ -1,0 +1,21 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "locality_energy_morphogenesis_closure",
+      "directory": "complex_001_locality_energy_morphogenesis_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "screened_rotation_halo_geometry",
+      "directory": "complex_002_screened_rotation_halo_geometry",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "information_preserving_cosmic_network_closure",
+      "directory": "complex_003_information_preserving_cosmic_network_closure",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity"
+}

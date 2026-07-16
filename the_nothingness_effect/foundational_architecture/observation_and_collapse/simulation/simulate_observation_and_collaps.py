@@ -36,7 +36,6 @@ New Features:
 """
 
 import os
-import sys
 import math
 import random
 
@@ -50,7 +49,6 @@ import matplotlib.pyplot as plt
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir  = os.path.dirname(current_dir)
-sys.path.insert(0, parent_dir)
 from the_nothingness_effect.foundational_architecture.observation_and_collapse import observation_and_collapse
 
 # ------------------------------------------------------------------

@@ -1,0 +1,121 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 11,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/1a/godelian_provability_boundary.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/2a/involutive_idempotent_closure_of_the_declared_tne_dual_carrier.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/1a2a/godelian_boundarydual_carrier_completion_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:completeness_synthesis_formal_01",
+    "eq:completeness_principle_formal_02",
+    "eq:universal_dual_closure_2a",
+    "eq:completeness_synthesis_formal_02",
+    "eq:completeness_principle_formal_03",
+    "eq:godel_joint_realization_1a2a",
+    "eq:incomplete_statement_1a2a",
+    "eq:dual_completion_1a2a",
+    "eq:dual_closure_derivative_1a2a",
+    "eq:completeness_synthesis_formal_03",
+    "eq:completeness_principle_formal_04"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/falsification_checks/test_g_delian_provability_boundary_and_declared_dual_carrier_completion_falsification.py"
+  ],
+  "first_label": "app:godel_boundary_first_order_completeness_01",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/1a/godelian_provability_boundary.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/2a/involutive_idempotent_closure_of_the_declared_tne_dual_carrier.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/1a2a/godelian_boundarydual_carrier_completion_correspondence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed finite source law with explicit obstruction status",
+      "name": "g_delian_provability_boundary_and_declared_dual_carrier_completion result",
+      "python_types": [
+        "CompletenessSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_001_godelian_provability_boundary_and_declared_dual_carrier_completion/falsification_checks/test_g_delian_provability_boundary_and_declared_dual_carrier_completion_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Gödelian Boundary–Dual-Carrier Completion Correspondence",
+    "left": "Gödelian Provability Boundary",
+    "right": "Involutive Idempotent Closure of the Declared TNE Dual Carrier"
+  },
+  "theorem_titles_tex": {
+    "cross": "Gödelian Boundary--Dual-Carrier Completion Correspondence",
+    "left": "Gödelian Provability Boundary",
+    "right": "Involutive Idempotent Closure of the Declared TNE Dual Carrier"
+  }
+}

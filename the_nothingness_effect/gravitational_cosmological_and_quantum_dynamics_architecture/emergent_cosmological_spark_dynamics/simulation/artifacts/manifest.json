@@ -1,0 +1,36 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "cosmic_spark_flowpoint_correspondence_and_spectral_duality",
+    "cosmic_spark_decay_and_integrated_cosmological_memory",
+    "elastic_cosmological_geometry_and_dubler_spectral_transfer",
+    "wave_sector_and_expansion_sector_cosmological_projection",
+    "flowpoint_resolved_cosmological_memory_resolvent",
+    "common_potential_observation_operator",
+    "horizon_localized_observable_memory_closure",
+    "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 25,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "hilbert_projection_realization_and_projection_breakdown",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_004_hilbert_projection_realization_and_projection_breakdown/1a/hilbert_projection_realization.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_004_hilbert_projection_realization_and_projection_breakdown/2a/projection_breakdown.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_004_hilbert_projection_realization_and_projection_breakdown/1a2a/projection_realization_boundary.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:obs04_canonical_observation_collapse_1a2a",
+    "eq:obs04_canonical_hilbert_realization_1a2a",
+    "eq:obs04_cesaro_operator_1a2a",
+    "eq:obs04_unitary_involution_conditions_1a",
+    "eq:obs04_projector_pair_1a",
+    "eq:obs04_norm_projection_limit_1a",
+    "eq:obs04_fixed_antifixed_projection_1a",
+    "eq:obs04_parity_closed_form_1a",
+    "eq:obs04_projector_properties_1a",
+    "eq:obs04_rate_proof_1a",
+    "eq:obs04_decomposition_corollary_1a",
+    "eq:obs04_synthesis_1a",
+    "eq:std_obs04_principle_1a",
+    "eq:obs04_convergence_defect_2a",
+    "eq:obs04_idempotence_defect_2a",
+    "eq:obs04_orthogonality_defect_2a",
+    "eq:obs04_exponential_divergence_2a",
+    "eq:obs04_oblique_limit_2a",
+    "eq:obs04_born_interface_2a",
+    "eq:obs04_synthesis_2a",
+    "eq:std_obs04_principle_2a",
+    "eq:obs04_joint_diagnostic_tuple_1a2a",
+    "eq:obs04_joint_positive_status_1a2a",
+    "eq:obs04_joint_projection_defect_1a2a",
+    "eq:std_obs04_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_004_hilbert_projection_realization_and_projection_breakdown/falsification_checks/test_hilbert_projection_realization_and_projection_breakdown_falsification.py"
+  ],
+  "first_label": "app:obs_complex_04",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "hilbert_projection_realization_and_projection_breakdown",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_004_hilbert_projection_realization_and_projection_breakdown/falsification_checks/test_hilbert_projection_realization_and_projection_breakdown_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Projection-Realization Boundary",
+    "left": "Hilbert Projection Realization",
+    "right": "Projection Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Projection-Realization Boundary",
+    "left": "Hilbert Projection Realization",
+    "right": "Projection Breakdown"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "spatially_localized_dfi_consistency_closure",
+      "directory": "complex_001_spatially_localized_dfi_consistency_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index"
+}

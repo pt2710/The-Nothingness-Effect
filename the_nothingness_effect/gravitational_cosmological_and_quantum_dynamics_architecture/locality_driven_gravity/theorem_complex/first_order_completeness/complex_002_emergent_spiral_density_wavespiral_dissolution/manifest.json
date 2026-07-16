@@ -1,0 +1,144 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "emergent_spiral_density_wave_spiral_dissolution",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/1a/emergent_spiral_density_wave_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/2a/spiral_dissolution_homogeneity_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/1a2a/emergent_spiral_density_wave_spiral_dissolution.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ldg02_spiral_density_wave_order_parameter_1a",
+    "eq:ldg02_spiral_density_wave_branch_condition_1a",
+    "eq:spiral_pitch_angle_1a",
+    "eq:pitch_angle_derivative_1a",
+    "eq:gradient_stability_1a",
+    "eq:curvature_gradient_lemma_1a",
+    "eq:pitch_angle_gradient_proof_1a",
+    "eq:pitch_angle_derivative_proof_1a",
+    "eq:tightening_law_1a",
+    "eq:corollary_pitch_derivative_1a",
+    "eq:ldg02_spiral_density_wave_order_parameter_2a",
+    "eq:ldg02_spiral_density_wave_branch_condition_2a",
+    "eq:gradient_zero_dissolution_2a",
+    "eq:curvature_gradient_zero_2a",
+    "eq:pitch_angle_derivative_zero_2a",
+    "eq:homogeneity_gradient_lemma_2a",
+    "eq:curvature_derivative_zero_lemma_2a",
+    "eq:curvature_constant_proof_2a",
+    "eq:gradient_derivative_zero_proof_2a",
+    "eq:corollary_curvature_constant_2a",
+    "eq:corollary_pitch_derivative_zero_2a",
+    "eq:ldg02_spiral_density_wave_status_1a2a",
+    "eq:spiral_pitch_spiral_density_wave_1a2a",
+    "eq:locality_length_spiral_density_wave_1a2a",
+    "eq:curvature_gradient_dissolution_1a2a",
+    "eq:spiral_pitch_gradient_derivative_1a2a",
+    "eq:gradient_vanishes_spiral_density_wave_1a2a",
+    "eq:existence_spiral_arms_1a2a",
+    "eq:loss_spiral_arms_1a2a",
+    "eq:lemma_pitch_gradient_1a2a",
+    "eq:proof_pitch_gradient_duality_1a2a",
+    "eq:corollary_pitch_limit_1a2a",
+    "eq:corollary_pitch_limit_calculus_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/falsification_checks/test_emergent_spiral_density_wave_spiral_dissolution_falsification.py"
+  ],
+  "first_label": "ssec:spiral_density_wave_duality_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/1a/emergent_spiral_density_wave_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/2a/spiral_dissolution_homogeneity_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/1a2a/emergent_spiral_density_wave_spiral_dissolution.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "spiral_density field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "emergent_spiral_density_wave_spiral_dissolution",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_002_emergent_spiral_density_wavespiral_dissolution/falsification_checks/test_emergent_spiral_density_wave_spiral_dissolution_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Emergent Spiral Density-Wave <-> Spiral Dissolution",
+    "left": "Emergent Spiral Density-Wave Theorem",
+    "right": "Spiral Dissolution (Homogeneity) Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Emergent Spiral Density-Wave $\\leftrightarrow$ Spiral Dissolution",
+    "left": "Emergent Spiral Density-Wave Theorem",
+    "right": "Spiral Dissolution (Homogeneity) Theorem"
+  }
+}

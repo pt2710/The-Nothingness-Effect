@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage/1a/primequasicrystal_support_equivalence.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage/2a/pgqenn_05_support_mismatch_leakage.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage/1a2a/primequasicrystal_support_equivalence_support_mismatch_leakage.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:prime_qc_unitarity_align_1a",
+    "eq:prime_qc_parseval_equation_1a",
+    "eq:prime_qc_flux_align_1a",
+    "eq:prime_qc_flux_equation_1a",
+    "eq:prime_meyer_bounds_align_1a",
+    "eq:prime_meyer_diffset_equation_1a",
+    "eq:prime_measure_deriv_align_1a",
+    "eq:prime_measure_deriv_equation_1a",
+    "eq:prime_qc_freq_resp_align_1a",
+    "eq:prime_qc_l2_equality_equation_1a",
+    "eq:prime_qc_calculus_align_1a",
+    "eq:prime_qc_calculus_equation_1a",
+    "eq:prime_qc_purity_align_1a",
+    "eq:prime_qc_purity_equation_1a",
+    "eq:prime_qc_estimator_align_1a",
+    "eq:prime_qc_estimator_equation_1a",
+    "eq:prime_qc_periodic_align_2a",
+    "eq:prime_qc_mismatch_equation_2a",
+    "eq:prime_qc_leakage_rate_align_2a",
+    "eq:prime_qc_leakage_rate_equation_2a",
+    "eq:prime_qc_geom_series_align_2a",
+    "eq:prime_qc_lines_equation_2a",
+    "eq:prime_qc_band_growth_align_2a",
+    "eq:prime_qc_band_growth_equation_2a",
+    "eq:prime_qc_leakage_increment_align_2a",
+    "eq:prime_qc_leakage_increment_equation_2a",
+    "eq:prime_qc_leakage_average_align_2a",
+    "eq:prime_qc_leakage_average_equation_2a",
+    "eq:prime_qc_threshold_align_2a",
+    "eq:prime_qc_threshold_equation_2a",
+    "eq:prime_qc_mavg_align_2a",
+    "eq:prime_qc_mavg_equation_2a",
+    "eq:prime_qc_update_align_1a2a",
+    "eq:prime_qc_parseval_equiv_1a2a",
+    "eq:prime_qc_energy_flux_align_1a2a",
+    "eq:prime_qc_energy_rate_equiv_1a2a",
+    "eq:prime_qc_slope_criterion_align_1a2a",
+    "eq:prime_qc_slope_criterion_equation_1a2a",
+    "eq:prime_qc_slope_integral_align_1a2a",
+    "eq:prime_qc_slope_integral_equation_1a2a",
+    "eq:prime_qc_indicator_align_1a2a",
+    "eq:prime_qc_indicator_equation_1a2a",
+    "eq:prime_qc_cesaro_align_1a2a",
+    "eq:prime_qc_cesaro_equation_1a2a",
+    "eq:prime_qc_ops_scores_align_1a2a",
+    "eq:prime_qc_ops_scores_equation_1a2a",
+    "eq:prime_qc_ops_smooth_align_1a2a",
+    "eq:prime_qc_ops_smooth_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage/falsification_checks/test_prime_quasicrystal_support_equivalence_support_mismatch_leakage_falsification.py"
+  ],
+  "first_label": "app:pgqenn_complex_05",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage/falsification_checks/test_prime_quasicrystal_support_equivalence_support_mismatch_leakage_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime–Quasicrystal Support Equivalence <-> Support Mismatch/Leakage",
+    "left": "Prime–Quasicrystal Support Equivalence",
+    "right": "PGQENN 05 – Support Mismatch/Leakage"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime–Quasicrystal Support Equivalence $\\leftrightarrow$ Support Mismatch/Leakage",
+    "left": "Prime–Quasicrystal Support Equivalence (1A)",
+    "right": "PGQENN 05 -- Support Mismatch/Leakage"
+  }
+}

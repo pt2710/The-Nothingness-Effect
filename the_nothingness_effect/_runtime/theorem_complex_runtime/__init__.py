@@ -1,6 +1,12 @@
 """Typed, fail-closed runtime for appendix theorem-complex implementations."""
 
 from .contracts import ContractEvaluation, evaluate_contract
+from .generated import (
+    TheoremComponent,
+    TheoremComponentResult,
+    TheoremRole,
+    UnimplementedTheoremError,
+)
 from .registry import ComplexInventoryRecord, TheoremComplexRegistry
 from .types import (
     ArtifactManifest,
@@ -39,5 +45,9 @@ __all__ = [
     "SourceRemovalResult",
     "TNEContractError",
     "TheoremComplexRegistry",
+    "TheoremComponent",
+    "TheoremComponentResult",
+    "TheoremRole",
+    "UnimplementedTheoremError",
     "evaluate_contract",
 ]

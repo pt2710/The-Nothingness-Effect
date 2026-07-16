@@ -1,0 +1,138 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 15,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_pdfi_c01_master",
+      "eq:tne_spatial_pdfi_c01_1c_definition",
+      "eq:tne_spatial_pdfi_c01_1c_theorem",
+      "eq:tne_spatial_pdfi_c01_1c_lemma",
+      "eq:tne_spatial_pdfi_c01_1c_synthesis",
+      "eq:tne_spatial_pdfi_c01_1c_principle",
+      "eq:tne_spatial_pdfi_c01_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "spatial_parity_elastic_calibration_closure",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/1c/parity_definite_fluctuation_law_entropic_fluctuation_predictability_via_pdfi_pdfielastic_pi_equi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/2c/parity_indeterminate_fluctuation_law_fluctuation_ambiguity_unpredictability_pdfielastic_pi_decou.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/1c2c/parity_definite_and_parity_indeterminate_classification_entropic_tracking_and_ambiguity_classifi.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pdfi_c01_spatial_carrier",
+    "eq:drv_pdfi_c01_1c",
+    "eq:drv_pdfi_c01_theorem_1c",
+    "eq:drv_pdfi_c01_res_1c",
+    "eq:drv_pdfi_c01_2c",
+    "eq:drv_pdfi_c01_res_2c",
+    "eq:drv_pdfi_c01_joint",
+    "eq:drv_pdfi_c01_exchange_square",
+    "eq:pdfi_properties_nonnegative_1a2a",
+    "eq:pdfi_properties_constant_parity_zero_1a2a",
+    "eq:pdfi_properties_relative_dfi_definition_1a2a",
+    "eq:pdfi_vs_dfi",
+    "eq:pdfi_properties_dfi_defect_1a2a",
+    "eq:pdfi_properties_scale_invariance_1a2a",
+    "eq:pdfi_properties_bounded_increment_bound_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/falsification_checks/test_spatial_parity_elastic_calibration_closure_falsification.py"
+  ],
+  "first_label": "app:drv_pdfi_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/1c2c/parity_definite_and_parity_indeterminate_classification_entropic_tracking_and_ambiguity_classifi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/1c/parity_definite_fluctuation_law_entropic_fluctuation_predictability_via_pdfi_pdfielastic_pi_equi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/2c/parity_indeterminate_fluctuation_law_fluctuation_ambiguity_unpredictability_pdfielastic_pi_decou.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/1c2c/parity_definite_and_parity_indeterminate_classification_entropic_tracking_and_ambiguity_classifi.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "local operator, boundary trace, leakage and candidate status",
+      "name": "spatial pDFI closure",
+      "python_types": [
+        "SpatialParityClosure"
+      ]
+    },
+    "domain": {
+      "description": "integer trajectory, nonzero predecessors, positive recurrence seed and K_D",
+      "name": "pDFI realization",
+      "python_types": [
+        "ParityDFIInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 3
+  },
+  "module": "pdfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "spatial_parity_elastic_calibration_closure",
+  "source_complex_ids": [
+    "parity_flowpoint_transport_law",
+    "predictability_observation_parity_coupling",
+    "elastic_calibration_completeness_functional"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pdfi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_parity_adapted_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/third_order_completeness/complex_001_spatial_parityelastic_calibration_closure/falsification_checks/test_spatial_parity_elastic_calibration_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Parity-Definite and Parity-Indeterminate Classification – Entropic Tracking and Ambiguity Classification – pDFI–Elastic pi Norm Equivalence and Decoupling",
+    "left": "Parity-Definite Fluctuation Law – Entropic Fluctuation Predictability via pDFI – pDFI–Elastic pi Equivalence in Dual-Aligned Systems",
+    "right": "Parity-Indeterminate Fluctuation Law – Fluctuation Ambiguity/Unpredictability – pDFI–Elastic pi Decoupling in Symmetry Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Parity-Definite and Parity-Indeterminate Classification -- Entropic Tracking and Ambiguity Classification -- pDFI--Elastic \\(\\pi\\) Norm Equivalence and Decoupling",
+    "left": "Parity-Definite Fluctuation Law -- Entropic Fluctuation Predictability via pDFI -- pDFI--Elastic \\(\\pi\\) Equivalence in Dual-Aligned Systems",
+    "right": "Parity-Indeterminate Fluctuation Law -- Fluctuation Ambiguity/Unpredictability -- pDFI--Elastic \\(\\pi\\) Decoupling in Symmetry Breakdown"
+  }
+}

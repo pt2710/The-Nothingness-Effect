@@ -22,19 +22,16 @@ Usage:
 """
 
 import os
-import sys
 import time
 import math
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from fp_math_operations import FlowpointMath
+from the_nothingness_effect.mathematical_architecture.flowpoint_math_operations.fp_math_operations import FlowpointMath
 
 # Set up the parent directory so that the 'FlowpointMath' class is accessible.
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parent_dir)
-
 # Directory where this simulation script is located.
 script_dir = os.path.dirname(os.path.abspath(__file__))
 

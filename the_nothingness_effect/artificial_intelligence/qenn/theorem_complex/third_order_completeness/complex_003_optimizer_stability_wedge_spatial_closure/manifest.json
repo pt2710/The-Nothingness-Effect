@@ -1,0 +1,134 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 15,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_qenn_c03_master",
+      "eq:tne_spatial_qenn_c03_1c_definition",
+      "eq:tne_spatial_qenn_c03_1c_theorem",
+      "eq:tne_spatial_qenn_c03_1c_lemma",
+      "eq:tne_spatial_qenn_c03_1c_synthesis",
+      "eq:tne_spatial_qenn_c03_1c_principle",
+      "eq:tne_spatial_qenn_c03_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "optimizer_stability_wedge_spatial_closure",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/1c/inflationcollapse_support_invariance_epoch_operator_closed_contraction_law_entropy_balanced_land.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/2c/nonlinear_sideband_mixing_optimiser_induced_resonance_law_sharp_minima_trap_instability_lobe_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/1c2c/inflationcollapse_support_invariance_nonlinear_sideband_mixing_entropy_balanced_landscape_no_sha.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_qenn_c03_spatial_carrier",
+    "eq:drv_qenn_c03_1c",
+    "eq:drv_qenn_c03_theorem_1c",
+    "eq:drv_qenn_c03_res_1c",
+    "eq:drv_qenn_c03_2c",
+    "eq:drv_qenn_c03_res_2c",
+    "eq:drv_qenn_c03_joint",
+    "eq:drv_qenn_c03_exchange_square",
+    "eq:qenn_meta_composite_domain_1a2a",
+    "eq:qenn_meta_dependency_graph_1a2a",
+    "eq:qenn_meta_residual_vector_1a2a",
+    "eq:qenn_meta_status_norm_1a2a",
+    "eq:qenn_meta_closure_criterion_1a2a",
+    "eq:qenn_meta_minimal_failed_set_1a2a",
+    "eq:qenn_meta_audit_record_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/falsification_checks/test_optimizer_stability_wedge_spatial_closure_falsification.py"
+  ],
+  "first_label": "app:drv_qenn_c03",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/1c2c/inflationcollapse_support_invariance_nonlinear_sideband_mixing_entropy_balanced_landscape_no_sha.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/1c/inflationcollapse_support_invariance_epoch_operator_closed_contraction_law_entropy_balanced_land.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/2c/nonlinear_sideband_mixing_optimiser_induced_resonance_law_sharp_minima_trap_instability_lobe_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/1c2c/inflationcollapse_support_invariance_nonlinear_sideband_mixing_entropy_balanced_landscape_no_sha.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
+    "codomain": {
+      "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+      "name": "localized spatial closure",
+      "python_types": [
+        "SpatialClosureResult"
+      ]
+    },
+    "domain": {
+      "description": "finite common-shape spatial field for every declared B source",
+      "name": "common spatial B-source domain",
+      "python_types": [
+        "SpatialClosureInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "optimizer_stability_wedge_spatial_closure",
+  "source_complex_ids": [
+    "epoch_support_commutator_closure",
+    "entropic_hyperparameter_stability_margin"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/falsification_checks/test_optimizer_stability_wedge_spatial_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Inflation–Collapse Support Invariance <-> Nonlinear Sideband Mixing – Entropy-Balanced Landscape (No Sharp Minima) <-> Sharp-Minima Trap",
+    "left": "Inflation–Collapse Support Invariance – Epoch-Operator Closed Contraction – Law – Entropy-Balanced Landscape – Hyper-Parameter Stability Wedge – Law",
+    "right": "Nonlinear Sideband Mixing – Optimiser-Induced Resonance – Law – Sharp-Minima Trap – Instability Lobe – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Inflation--Collapse Support Invariance $\\leftrightarrow$ Nonlinear Sideband Mixing -- Entropy-Balanced Landscape (No Sharp Minima) $\\leftrightarrow$ Sharp-Minima Trap",
+    "left": "Inflation--Collapse Support Invariance -- Epoch-Operator Closed Contraction -- Law -- Entropy-Balanced Landscape -- Hyper-Parameter Stability Wedge -- Law",
+    "right": "Nonlinear Sideband Mixing -- Optimiser-Induced Resonance -- Law -- Sharp-Minima Trap -- Instability Lobe -- Law"
+  }
+}

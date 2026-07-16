@@ -1,0 +1,126 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 30,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support/1a/meyer_cut_and_project_structure.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support/2a/non_meyer_diffuse_support.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support/1a2a/meyer_cut_and_project_structure_non_meyer_diffuse_support.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc_meyer_cap_ud_rd_1a",
+    "eq:dtqc_meyer_cap_meyer_inclusion_1a",
+    "eq:dtqc_meyer_cap_autocorr_1a",
+    "eq:dtqc_meyer_cap_pp_diffraction_1a",
+    "eq:dtqc_meyer_cap_diff_finite_cover_1a",
+    "eq:dtqc_meyer_cap_conv_window_1a",
+    "eq:dtqc_meyer_cap_proof_claims_1a",
+    "eq:dtqc_meyer_cap_poisson_1a",
+    "eq:dtqc_meyer_cap_pp_from_poisson_1a",
+    "eq:dtqc_meyer_cap_intensity_1a",
+    "eq:dtqc_meyer_cap_massadd_1a",
+    "eq:dtqc_meyer_cap_nonmeyer_criterion_2a",
+    "eq:dtqc_meyer_cap_contmass_2a",
+    "eq:dtqc_meyer_cap_paircorr_2a",
+    "eq:dtqc_meyer_cap_L2mass_2a",
+    "eq:dtqc_meyer_cap_lb_contmass_2a",
+    "eq:dtqc_meyer_cap_testfn_lb_2a",
+    "eq:dtqc05_joint_status_1a2a",
+    "eq:dtqc_meyer_cap_lattice_window_1a2a",
+    "eq:dtqc_meyer_cap_modelset_1a2a",
+    "eq:dtqc_meyer_cap_ud_rd_1a2a",
+    "eq:dtqc_meyer_cap_meyer_inclusion_1a2a",
+    "eq:dtqc_meyer_cap_autocorr_1a2a",
+    "eq:dtqc_meyer_cap_pp_diffraction_1a2a",
+    "eq:dtqc_meyer_cap_structure_factor_1a2a",
+    "eq:dtqc_meyer_cap_equiv_1a2a",
+    "eq:dtqc_meyer_cap_poisson_equiv_1a2a",
+    "eq:dtqc_meyer_cap_support_spectrum_equiv_1a2a",
+    "eq:dtqc_meyer_cap_diag_1a2a",
+    "eq:dtqc_meyer_cap_nonmeyer_indicator_2a"
+  ],
+  "falsification": {
+    "execution_status": "blocked",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support/falsification_checks/test_meyer_cut_and_project_structure_non_meyer_diffuse_support_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_05",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support",
+  "source_complex_ids": [],
+  "status": "blocked",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support/falsification_checks/test_meyer_cut_and_project_structure_non_meyer_diffuse_support_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Meyer Cut-and-Project Structure <-> Non-Meyer/Diffuse Support",
+    "left": "Meyer Cut-and-Project Structure",
+    "right": "Non-Meyer/Diffuse Support"
+  },
+  "theorem_titles_tex": {
+    "cross": "Meyer Cut-and-Project Structure $\\leftrightarrow$ Non-Meyer/Diffuse Support",
+    "left": "Meyer Cut-and-Project Structure",
+    "right": "Non-Meyer/Diffuse Support"
+  }
+}

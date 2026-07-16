@@ -1,0 +1,36 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "lyapunov_entropy_dissipation_functional",
+      "directory": "complex_001_lyapunoventropy_dissipation_functional",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pv_parseval_spectral_energy_lock",
+      "directory": "complex_002_pvparseval_spectral_energy_lock",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_resolved_autocorrelation_operator",
+      "directory": "complex_003_parity_resolved_autocorrelation_operator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "support_transport_drift_certificate",
+      "directory": "complex_004_support_transport_drift_certificate",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "epoch_support_commutator_closure",
+      "directory": "complex_005_epochsupport_commutator_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "entropic_hyperparameter_stability_margin",
+      "directory": "complex_006_entropic_hyperparameter_stability_margin",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/qenn"
+}

@@ -1,0 +1,123 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 0,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_soinet_b26_master",
+      "eq:tne_additive_soinet_b26_1b_definition",
+      "eq:tne_additive_soinet_b26_1b_theorem",
+      "eq:tne_additive_soinet_b26_1b_lemma",
+      "eq:tne_additive_soinet_b26_1b_synthesis",
+      "eq:tne_additive_soinet_b26_1b_principle",
+      "eq:tne_additive_soinet_b26_2b_definition",
+      "eq:tne_additive_soinet_b26_2b_theorem",
+      "eq:tne_additive_soinet_b26_2b_lemma",
+      "eq:tne_additive_soinet_b26_2b_synthesis",
+      "eq:tne_additive_soinet_b26_2b_principle",
+      "eq:tne_additive_soinet_b26_joint_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "expressivity_meta_learnability_stability_functional",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/1b/soinet_universal_expressivitymeta_learnability.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/2b/entropy_minimal_generalizationmeta_learning_collapse.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/1b2b/soinet_expressivitymeta_learnability_coupling.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/falsification_checks/test_expressivity_meta_learnability_stability_functional_falsification.py"
+  ],
+  "first_label": "app:soinet_complex_26",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/1b2b/soinet_expressivitymeta_learnability_coupling.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/1b/soinet_universal_expressivitymeta_learnability.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/2b/entropy_minimal_generalizationmeta_learning_collapse.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/1b2b/soinet_expressivitymeta_learnability_coupling.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "expressivity_meta_learnability_stability_functional",
+  "source_complex_ids": [
+    "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
+    "soinet_meta_learnability_dual_closure"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/falsification_checks/test_expressivity_meta_learnability_stability_functional_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOInet Expressivity–Meta-Learnability Coupling",
+    "left": "SOInet Universal Expressivity–Meta-Learnability",
+    "right": "Entropy-Minimal Generalization–Meta-Learning Collapse"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOInet Expressivity--Meta-Learnability Coupling",
+    "left": "SOInet Universal Expressivity–Meta-Learnability (1A $\\longleftrightarrow$ 2A)",
+    "right": "Entropy-Minimal Generalization–Meta-Learning Collapse (1A $\\longleftrightarrow$ 2A)"
+  }
+}

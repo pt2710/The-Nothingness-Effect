@@ -1,0 +1,133 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 34,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "decision_weighted_complex_coverage_and_dual_repair_field",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_002_decision_weighted_complex_coverage_and_dual_repair_field/1c/exact_spatial_coverage_with_decision_oriented_fractal_potential.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_002_decision_weighted_complex_coverage_and_dual_repair_field/2c/singleton_consensus_on_resolved_cells_and_reflection_pairs_on_unresolved_cells.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_002_decision_weighted_complex_coverage_and_dual_repair_field/1c2c/decision_extensionfield_section_isomorphism.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:u_c02_additive_derivation",
+    "eq:u_c02_fractal_potential_1c",
+    "eq:u_c02_prefix_chart_1c",
+    "eq:u_c02_complex_field_1c",
+    "eq:u_c02_field_involutions_1c",
+    "eq:u_c02_exact_real_coverage_1c",
+    "eq:u_c02_klein_laws_1c",
+    "eq:u_c02_group_closure_1c",
+    "eq:u_c02_complement_potential_1c",
+    "eq:u_c02_V_action_1c",
+    "eq:u_c02_N_action_1c",
+    "eq:u_c02_P_action_1c",
+    "eq:u_c02_synthesis_1c",
+    "eq:u_c02_principle_1c",
+    "eq:u_c02_extension_family_2c",
+    "eq:u_c02_extension_section_2c",
+    "eq:u_c02_set_valued_field_2c",
+    "eq:u_c02_resolved_regions_2c",
+    "eq:u_c02_unresolved_region_2c",
+    "eq:u_c02_consensus_pair_2c",
+    "eq:u_c02_cardinality_test_2c",
+    "eq:u_c02_extension_field_map_2c",
+    "eq:u_c02_conjugate_extension_2c",
+    "eq:u_c02_synthesis_2c",
+    "eq:u_c02_principle_2c",
+    "eq:u_c02_section_family_joint",
+    "eq:u_c02_section_exchange_joint",
+    "eq:u_c02_exchange_square_joint",
+    "eq:u_c02_section_evaluation_joint",
+    "eq:u_c02_residual_joint",
+    "eq:u_c02_corollary_joint",
+    "eq:u_c02_paradox_joint",
+    "eq:u_c02_synthesis_joint",
+    "eq:u_c02_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_002_decision_weighted_complex_coverage_and_dual_repair_field/falsification_checks/test_decision_weighted_complex_coverage_and_dual_repair_field_falsification.py"
+  ],
+  "first_label": "app:drv_uncountable_c02",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "decision_weighted_complex_coverage_and_dual_repair_field",
+  "source_complex_ids": [
+    "complement_invariant_fractal_skeleton_completion",
+    "boolean_decision_extension_consensus",
+    "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/third_order_completeness/complex_002_decision_weighted_complex_coverage_and_dual_repair_field/falsification_checks/test_decision_weighted_complex_coverage_and_dual_repair_field_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Decision-Extension–Field-Section Isomorphism",
+    "left": "Exact Spatial Coverage with Decision-Oriented Fractal Potential",
+    "right": "Singleton Consensus on Resolved Cells and Reflection Pairs on Unresolved Cells"
+  },
+  "theorem_titles_tex": {
+    "cross": "Decision-Extension--Field-Section Isomorphism",
+    "left": "Exact Spatial Coverage with Decision-Oriented Fractal Potential",
+    "right": "Singleton Consensus on Resolved Cells and Reflection Pairs on Unresolved Cells"
+  }
+}

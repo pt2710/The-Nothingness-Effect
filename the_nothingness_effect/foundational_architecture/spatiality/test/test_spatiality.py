@@ -10,7 +10,6 @@ Usage:
 """
 
 import os
-import sys
 import numpy as np
 import csv
 import time
@@ -21,18 +20,6 @@ from tqdm import tqdm
 from matplotlib.lines import Line2D
 
 # --- Robust project root detection (adjust marker as needed)
-def find_project_root(marker_file_or_folder="equations"):
-    d = os.path.abspath(__file__)
-    while True:
-        d = os.path.dirname(d)
-        if marker_file_or_folder in os.listdir(d):
-            return d
-        if d == os.path.dirname(d):
-            break
-    raise RuntimeError(f"Could not find project root with marker '{marker_file_or_folder}'.")
-
-project_root = find_project_root()
-sys.path.insert(0, project_root)
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 from the_nothingness_effect.foundational_architecture.spatiality.spatiality import spatiality_equation

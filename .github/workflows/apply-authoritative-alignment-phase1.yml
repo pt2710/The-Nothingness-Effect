@@ -8,6 +8,11 @@ on:
       - tools/apply_authoritative_alignment_phase1.py
       - tools/.alignment_payload/**
       - .github/workflows/apply-authoritative-alignment-phase1.yml
+  pull_request:
+    paths:
+      - tools/apply_authoritative_alignment_phase1.py
+      - tools/.alignment_payload/**
+      - .github/workflows/apply-authoritative-alignment-phase1.yml
 
 permissions:
   contents: write

@@ -1,11 +1,10 @@
-"""Recertified DFI A05--A07 sources and complete validation B law."""
+"""Complete additive DFI validation B law."""
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import (
     additive_contract,
 )
 
 from .contracts import APPENDIX, APPENDIX_SHA256
-from .extended_contracts import contracts as extended_source_contracts
 
 
 IMPLEMENTATION = (
@@ -16,7 +15,6 @@ IMPLEMENTATION = (
 
 def contracts():
     return (
-        *extended_source_contracts(),
         additive_contract(
             "flowpoint_certified_dfi_validation_functional",
             (

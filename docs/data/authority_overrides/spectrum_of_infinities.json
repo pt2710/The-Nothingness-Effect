@@ -9,8 +9,8 @@
     },
     "spectrum_dfi_duality_and_dfi_divergence": {
       "status": "implemented",
-      "reason": "Typed finite DFI increment, relative baseline, absolute scaling, finiteness, and divergence-boundary residuals.",
-      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+      "reason": "Authoritative finite SOI-DFI law V0=Omega/n, Vi=V0 sigma_i, Si=V0(sigma_i-1), exact L2 scaling, and fail-closed norm/exponential divergence boundaries.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_dfi.py"
     },
     "measurable_decomposition_and_non_measurable_obstruction": {
       "status": "implemented",

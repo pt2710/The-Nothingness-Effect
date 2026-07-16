@@ -9,7 +9,7 @@ from the_nothingness_effect.artificial_intelligence.soinets.model import SOInetM
 
 
 def run_all(output_dir: str | Path | None = None, *, seed: int = 0):
-    output = Path(output_dir) if output_dir is not None else Path(__file__).resolve().parent
+    output = Path(output_dir) if output_dir is not None else Path(__file__).resolve().parent / "artifacts"
     return run_architecture_capability_suite("soinets", SOInetModel, output, seed=seed, simulation=True)
 
 

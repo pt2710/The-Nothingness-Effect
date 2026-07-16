@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Regularized Geometry Classification',
     authoritative_title_tex='Complete Regularized Geometry Classification',
     equation_labels=('eq:drv_edi_c02_spatial_carrier', 'eq:drv_edi_c02_joint', 'eq:drv_edi_c02_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -92,7 +92,7 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=Path("artifacts/completeness"))
+    parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent / "artifacts")
     parser.add_argument("--seed", type=int, default=0)
     args = parser.parse_args()
     print(run_suite(args.output, seed=args.seed))

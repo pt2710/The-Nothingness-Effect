@@ -3,7 +3,8 @@
   "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
   "artifact_manifests": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
     "current_equation_label_count": 9,
@@ -30,7 +31,7 @@
     "eq:drv_dtqc_b03_exchange_square"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "both-source necessity",
       "additive interaction law",
@@ -43,26 +44,38 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/falsification_checks/test_parity_meyer_diffraction_decomposition_falsification.py"
   ],
   "first_label": "app:drv_dtqc_b03",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/1b2b/complete_parity_meyer_diffraction_decomposition_classification.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/1b/parity_meyer_diffraction_decomposition_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/2b/parity_meyer_diffraction_decomposition_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/1b2b/complete_parity_meyer_diffraction_decomposition_classification.py"
   ],
+  "known_limitations": [],
   "level": "B",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
     },
-    "exact_semantics": false,
-    "invariant": null,
-    "operator": null,
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
     "simulation_runner": null,
-    "source_removal_check_count": 0
+    "source_removal_check_count": 2
   },
   "module": "dtqc",
   "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -88,8 +101,8 @@
     "meyer_cut_and_project_structure_non_meyer_diffuse_support",
     "z_2_2_sign_symmetry_parity_bias_symmetry_breaking"
   ],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",

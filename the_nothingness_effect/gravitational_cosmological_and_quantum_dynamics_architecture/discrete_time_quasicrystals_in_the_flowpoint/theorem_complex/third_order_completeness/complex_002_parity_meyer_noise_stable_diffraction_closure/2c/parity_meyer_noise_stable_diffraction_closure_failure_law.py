@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Parity-Meyer Noise-Stable Diffraction Closure Failure Law',
     authoritative_title_tex='Parity-Meyer Noise-Stable Diffraction Closure Failure Law',
     equation_labels=('eq:drv_dtqc_c02_2c', 'eq:drv_dtqc_c02_res_2c'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

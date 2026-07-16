@@ -247,7 +247,7 @@ def main():
     print(f"Script directory: {script_dir}")
 
     n_points = 50
-    csv_f     = os.path.join(script_dir, 'spectrum_of_infinities_simulation_results.csv')
+    csv_f     = os.path.join(script_dir, "artifacts", 'spectrum_of_infinities_simulation_results.csv')
 
     results   = simulate_spectrum_of_infinities(n_points)
     save_results(results, csv_f)

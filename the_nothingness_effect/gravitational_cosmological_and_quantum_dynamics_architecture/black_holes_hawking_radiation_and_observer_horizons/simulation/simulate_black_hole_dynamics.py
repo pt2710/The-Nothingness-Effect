@@ -125,7 +125,7 @@ def run(
     steps: int | None = None,
     quick: bool = False,
 ) -> dict[str, object]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     params = BlackHoleParams(grid_size=96 if quick else (grid_size or 256), steps=45 if quick else (steps or 120))
     result = simulate_black_hole_dynamics(params)
     data_path = root / "section18_black_hole_trace.npz"

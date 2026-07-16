@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Barrier Classification',
     authoritative_title_tex='Complete Barrier Classification',
     equation_labels=('eq:drv_edi_b03_product_carrier', 'eq:drv_edi_b03_joint', 'eq:drv_edi_b03_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

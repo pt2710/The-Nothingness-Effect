@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Certified Multiscale DTQC Reconstruction Closure Failure Law',
     authoritative_title_tex='Certified Multiscale DTQC Reconstruction Closure Failure Law',
     equation_labels=('eq:drv_dtqc_c03_2c', 'eq:drv_dtqc_c03_res_2c'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

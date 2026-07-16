@@ -48,7 +48,7 @@ def create_figure(result):
 
 
 def run(output_dir: str | Path | None = None, steps: int | None = None, quick: bool = False) -> dict[str, Path | bool]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     params = RippleParams(n=160 if quick else 320, steps=90 if quick else (steps or 260))
     result = simulate_elastic_pi_ripple(params)
     figure_path = root / "figure7_elastic_pi_ripple_ringdown.png"

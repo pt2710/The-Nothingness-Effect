@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Ridge-Resolved 2-Adic Robustness Certificate Classification',
     authoritative_title_tex='Complete Ridge-Resolved 2-Adic Robustness Certificate Classification',
     equation_labels=('eq:drv_dtqc_b06_product_carrier', 'eq:drv_dtqc_b06_joint', 'eq:drv_dtqc_b06_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

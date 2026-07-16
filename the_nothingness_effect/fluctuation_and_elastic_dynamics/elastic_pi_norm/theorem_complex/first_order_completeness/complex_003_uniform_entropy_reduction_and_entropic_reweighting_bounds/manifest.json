@@ -104,7 +104,7 @@
   "source_complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds",
   "source_complex_ids": [],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_elastic_pi_norm_contracts.py",
     "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",

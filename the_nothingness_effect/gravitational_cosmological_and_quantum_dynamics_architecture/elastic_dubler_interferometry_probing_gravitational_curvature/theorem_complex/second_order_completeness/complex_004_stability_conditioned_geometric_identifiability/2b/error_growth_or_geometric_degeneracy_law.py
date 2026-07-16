@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Error Growth or Geometric Degeneracy Law',
     authoritative_title_tex='Error Growth or Geometric Degeneracy Law',
     equation_labels=('eq:drv_edi_b04_2b', 'eq:drv_edi_b04_theorem_2b', 'eq:drv_edi_b04_res_2b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

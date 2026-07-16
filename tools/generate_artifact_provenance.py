@@ -10,7 +10,23 @@ from pathlib import Path
 import shutil
 import subprocess
 
-from tools.consistency_catalog import ARTIFACT_SUITES
+import numpy as np
+
+if __package__:
+    from tools.consistency_catalog import ARTIFACT_SUITES
+else:
+    from consistency_catalog import ARTIFACT_SUITES
+
+from the_nothingness_effect._runtime.artifacts.io import save_csv
+from the_nothingness_effect._runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
+from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import active_contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import (
+    AdditiveDerivationInput,
+    SpatialClosureInput,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import build_manifest
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import ComplexLevel, SimulationResult
 
 
 def _implemented_ids(matrix: Path) -> set[str]:
@@ -23,18 +39,7 @@ def _commit() -> str:
 
 
 def _producer_local_files() -> list[Path]:
-    roots = [
-        Path("the_nothingness_effect/artificial_intelligence"),
-        *(Path("equations") / name for name in (
-            "cosmological_spark_dynamics",
-            "dtqc",
-            "elastic_dubler_interferometry",
-            "elastic_pi_norm",
-            "mathematical_closure",
-            "parity_dfi",
-        )),
-        Path("the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking"),
-    ]
+    roots = [Path("the_nothingness_effect")]
     allowed_suffixes = {".py", ".json", ".csv", ".png", ".gif", ".wav", ".md"}
     return sorted(
         {
@@ -44,6 +49,7 @@ def _producer_local_files() -> list[Path]:
             for path in root.rglob("*")
             if path.is_file()
             and "__pycache__" not in path.parts
+            and "artifacts" in path.parts
             and path.suffix.lower() in allowed_suffixes
         }
     )
@@ -51,13 +57,73 @@ def _producer_local_files() -> list[Path]:
 
 def _animation_generators() -> list[Path]:
     candidates = {
-        *Path("equations").glob("**/animation/animate_*.py"),
-        *Path("equations").glob("**/simulation/run_evidence.py"),
-        *Path("equations").glob("**/test/test_evidence.py"),
+        *Path("the_nothingness_effect").glob("**/animation/animate_*.py"),
+        *Path("the_nothingness_effect").glob("**/simulation/run_evidence.py"),
+        *Path("the_nothingness_effect").glob("**/test/test_evidence.py"),
         *Path("the_nothingness_effect/artificial_intelligence").glob("**/simulation/run_simulation.py"),
         *Path("the_nothingness_effect/artificial_intelligence").glob("**/simulation/run_all_capabilities.py"),
     }
     return sorted(candidates)
+
+
+def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected: set[str]) -> None:
+    """Generate deterministic residual/source-removal evidence for derived laws."""
+
+    catalog = {str(contract.complex_id): contract for contract in active_contracts()}
+    destination = output_root / "appendix_derived"
+    destination.mkdir(parents=True, exist_ok=True)
+    for identifier in sorted(expected - covered):
+        contract = catalog[identifier]
+        fields = {
+            str(source_id): np.full((6, 4), float(index + 1))
+            for index, source_id in enumerate(contract.source_ids)
+        }
+        if contract.level is ComplexLevel.B:
+            value = AdditiveDerivationInput(fields)
+        elif contract.level is ComplexLevel.C:
+            value = SpatialClosureInput(fields)
+        else:
+            raise ValueError(f"uncovered non-derived contract: {identifier}")
+        evaluation = evaluate_contract(contract, value)
+        removals = [check(value) for check in contract.source_removal_checks]
+        residual = () if evaluation.residual is None else evaluation.residual.vector
+        table = save_csv(
+            destination / f"{identifier.replace('::', '__')}_source_removal.csv",
+            [
+                {
+                    "theorem_complex_id": identifier,
+                    "source_id": str(item.source_id),
+                    "necessity_residual": item.necessity_residual,
+                    "necessary": item.necessary,
+                    "closure_status": evaluation.status.value,
+                }
+                for item in removals
+            ],
+        )
+        simulation = SimulationResult(
+            contract.complex_id,
+            evaluation.status,
+            {"fixture": "deterministic-derived-source-fields-v1"},
+            0,
+            {"absolute": 1e-10},
+            tuple(float(item) for item in residual),
+            (table.name,),
+            {"exact_semantics": contract.exact_semantics, "source_removal_count": len(removals)},
+        )
+        write_artifact_manifest(
+            destination / f"{identifier.replace('::', '__')}_manifest.json",
+            build_manifest(
+                simulation,
+                appendix_filename=contract.appendix,
+                appendix_source_sha256=contract.appendix_source_sha256,
+                repository_start_commit="b97a2da379ff9fc503c4c43185030674f887b85c",
+                repository_result_commit=_commit(),
+                regeneration_command=(
+                    "python tools/generate_artifact_provenance.py "
+                    f"--output-root {output_root.as_posix()}"
+                ),
+            ),
+        )
 
 
 def generate(output_root: Path, aggregate_path: Path, representative_dir: Path | None = None) -> dict[str, object]:
@@ -66,11 +132,18 @@ def generate(output_root: Path, aggregate_path: Path, representative_dir: Path |
         import_module(module_name).run_suite(output_root / suite_name, seed=0)
     manifest_paths = sorted(output_root.rglob("*_manifest.json"))
     manifests = [json.loads(path.read_text(encoding="utf-8")) for path in manifest_paths]
+    expected = _implemented_ids(Path("docs/data/theorem_complex_implementation_matrix.csv"))
+    _generate_uncovered_contracts(
+        output_root,
+        {item["theorem_complex_id"] for item in manifests},
+        expected,
+    )
+    manifest_paths = sorted(output_root.rglob("*_manifest.json"))
+    manifests = [json.loads(path.read_text(encoding="utf-8")) for path in manifest_paths]
     output_token = output_root.as_posix()
     for manifest in manifests:
         manifest["regeneration_command"] = manifest["regeneration_command"].replace(output_token, "<output-root>")
     identifiers = [item["theorem_complex_id"] for item in manifests]
-    expected = _implemented_ids(Path("docs/data/theorem_complex_implementation_matrix.csv"))
     if len(identifiers) != len(set(identifiers)):
         raise ValueError("duplicate theorem-complex artifact manifests")
     if set(identifiers) != expected:

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Drift-Tail Figure Certification Functional Classification',
     authoritative_title_tex='Complete Drift-Tail Figure Certification Functional Classification',
     equation_labels=('eq:drv_dtqc_b07_product_carrier', 'eq:drv_dtqc_b07_joint', 'eq:drv_dtqc_b07_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Autocorrelation Reconstruction Projector Classification',
     authoritative_title_tex='Complete Autocorrelation Reconstruction Projector Classification',
     equation_labels=('eq:drv_dtqc_b05_product_carrier', 'eq:drv_dtqc_b05_joint', 'eq:drv_dtqc_b05_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

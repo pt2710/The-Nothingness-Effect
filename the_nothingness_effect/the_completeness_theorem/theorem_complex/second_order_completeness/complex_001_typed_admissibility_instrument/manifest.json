@@ -113,7 +113,7 @@
     "non_manifestability_of_the_anti_circle_and_observation_collapse"
   ],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_completeness_contracts.py",
     "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",

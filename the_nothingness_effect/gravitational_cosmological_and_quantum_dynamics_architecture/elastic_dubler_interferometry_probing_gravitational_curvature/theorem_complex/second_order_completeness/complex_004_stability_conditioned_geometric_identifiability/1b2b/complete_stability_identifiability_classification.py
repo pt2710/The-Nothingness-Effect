@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Stability-Identifiability Classification',
     authoritative_title_tex='Complete Stability-Identifiability Classification',
     equation_labels=('eq:drv_edi_b04_product_carrier', 'eq:drv_edi_b04_joint', 'eq:drv_edi_b04_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

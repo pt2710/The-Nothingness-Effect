@@ -9,7 +9,7 @@ from the_nothingness_effect._runtime.artifacts.module_evidence import run_module
 
 def run_all(output_dir: str | Path | None = None, *, seed: int = 0):
     assert mathematical_closure_contracts()
-    output = Path(output_dir) if output_dir is not None else Path(__file__).resolve().parent
+    output = Path(output_dir) if output_dir is not None else Path(__file__).resolve().parent / "artifacts"
     return run_module_evidence("mathematical_closure", run_suite, output, seed=seed, simulation=True)
 
 

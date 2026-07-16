@@ -1,0 +1,490 @@
+{
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "entrypoint_count": 37,
+  "entrypoints": [
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py",
+      "return_code": 0,
+      "runtime_seconds": 4.930383,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py",
+      "return_code": 0,
+      "runtime_seconds": 3.973189,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py",
+      "return_code": 0,
+      "runtime_seconds": 4.062121,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation.run_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py",
+      "return_code": 0,
+      "runtime_seconds": 1.351675,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dynamic_fluctuation_index.py",
+      "return_code": 0,
+      "runtime_seconds": 1.30371,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py",
+      "return_code": 0,
+      "runtime_seconds": 1.259282,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/simulate_elastic_pi_norm.py",
+      "return_code": 0,
+      "runtime_seconds": 1.19982,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py",
+      "return_code": 0,
+      "runtime_seconds": 1.270558,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "tools/run_repository_entrypoints.py",
+        "inventory",
+        "--module",
+        "the_nothingness_effect.foundational_architecture.countable_infinity"
+      ],
+      "execution_kind": "bounded_contract_inventory_fallback",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/simulate_countable_infinity.py",
+      "return_code": 0,
+      "runtime_seconds": 0.344043,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.foundational_architecture.duality.simulation.run_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py",
+      "return_code": 0,
+      "runtime_seconds": 1.249477,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+      ],
+      "execution_kind": "producer_local_simulation",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py",
+      "return_code": 0,
+      "runtime_seconds": 0.312267,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "tools/run_repository_entrypoints.py",
+        "inventory",
+        "--module",
+        "the_nothingness_effect.foundational_architecture.spatiality"
+      ],
+      "execution_kind": "bounded_contract_inventory_fallback",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py",
+      "return_code": 0,
+      "runtime_seconds": 0.386181,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "tools/run_repository_entrypoints.py",
+        "inventory",
+        "--module",
+        "the_nothingness_effect.foundational_architecture.symmetry"
+      ],
+      "execution_kind": "bounded_contract_inventory_fallback",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py",
+      "return_code": 0,
+      "runtime_seconds": 0.358896,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+      ],
+      "execution_kind": "producer_local_simulation",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py",
+      "return_code": 0,
+      "runtime_seconds": 0.346838,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "tools/run_repository_entrypoints.py",
+        "inventory",
+        "--module",
+        "the_nothingness_effect.foundational_architecture.uncountable_infinity"
+      ],
+      "execution_kind": "bounded_contract_inventory_fallback",
+      "output_tail": "",
+      "path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py",
+      "return_code": 0,
+      "runtime_seconds": 0.335579,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py",
+      "return_code": 0,
+      "runtime_seconds": 1.295216,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py",
+      "return_code": 0,
+      "runtime_seconds": 1.187864,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+      "return_code": 0,
+      "runtime_seconds": 1.293842,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py",
+      "return_code": 0,
+      "runtime_seconds": 1.234862,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py",
+      "return_code": 0,
+      "runtime_seconds": 1.310442,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py",
+      "return_code": 0,
+      "runtime_seconds": 1.202991,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py",
+      "return_code": 0,
+      "runtime_seconds": 1.337814,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation/simulate_flowpoint_math_operations.py"
+      ],
+      "execution_kind": "producer_local_simulation",
+      "output_tail": "",
+      "path": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation/simulate_flowpoint_math_operations.py",
+      "return_code": 0,
+      "runtime_seconds": 0.357208,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/simulation/simulate_flowpoint_pi_approximation.py"
+      ],
+      "execution_kind": "producer_local_simulation",
+      "output_tail": "",
+      "path": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/simulation/simulate_flowpoint_pi_approximation.py",
+      "return_code": 0,
+      "runtime_seconds": 0.365585,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/simulate_flowpoint_trigonometry.py"
+      ],
+      "execution_kind": "producer_local_simulation",
+      "output_tail": "",
+      "path": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/simulate_flowpoint_trigonometry.py",
+      "return_code": 0,
+      "runtime_seconds": 0.354015,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.mathematical_architecture.simulation.run_evidence"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/mathematical_architecture/simulation/simulate_mathematical_architecture.py",
+      "return_code": 0,
+      "runtime_seconds": 4.978532,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation/simulate_noether_structure.py"
+      ],
+      "execution_kind": "producer_local_simulation",
+      "output_tail": "",
+      "path": "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation/simulate_noether_structure.py",
+      "return_code": 0,
+      "runtime_seconds": 0.53327,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "-m",
+        "the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite"
+      ],
+      "execution_kind": "typed_contract_or_evidence_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py",
+      "return_code": 0,
+      "runtime_seconds": 1.612716,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/color_classification/simulation/run_simulation.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/color_classification/simulation/run_simulation.py",
+      "return_code": 0,
+      "runtime_seconds": 11.141653,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/sound_classification/simulation/run_simulation.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/sound_classification/simulation/run_simulation.py",
+      "return_code": 0,
+      "runtime_seconds": 8.235965,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/simulation/run_simulation.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/simulation/run_simulation.py",
+      "return_code": 0,
+      "runtime_seconds": 12.348381,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/bidirectional_sound_classification/simulation/run_simulation.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/bidirectional_sound_classification/simulation/run_simulation.py",
+      "return_code": 0,
+      "runtime_seconds": 8.048933,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/color_cloning/simulation/run_simulation.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/color_cloning/simulation/run_simulation.py",
+      "return_code": 0,
+      "runtime_seconds": 6.111595,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/sound_cloning/simulation/run_simulation.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/sound_cloning/simulation/run_simulation.py",
+      "return_code": 0,
+      "runtime_seconds": 6.815851,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_all_capabilities.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_all_capabilities.py",
+      "return_code": 0,
+      "runtime_seconds": 35.715022,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_all_capabilities.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_all_capabilities.py",
+      "return_code": 0,
+      "runtime_seconds": 38.285605,
+      "status": "passed"
+    },
+    {
+      "executed_command": [
+        "<python>",
+        "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_all_capabilities.py"
+      ],
+      "execution_kind": "ai_six_output_or_capability_suite",
+      "output_tail": "",
+      "path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_all_capabilities.py",
+      "return_code": 0,
+      "runtime_seconds": 31.642708,
+      "status": "passed"
+    }
+  ],
+  "generated_at_utc": "2026-07-16T01:15:16.613605+00:00",
+  "mode": "simulation",
+  "python": "3.14.3",
+  "schema_version": "1.0",
+  "seed": 0,
+  "summary": {
+    "failed": 0,
+    "passed": 37,
+    "timeout": 0
+  }
+}

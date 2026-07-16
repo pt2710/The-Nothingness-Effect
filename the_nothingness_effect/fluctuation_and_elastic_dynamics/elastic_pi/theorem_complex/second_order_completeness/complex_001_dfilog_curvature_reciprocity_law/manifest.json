@@ -111,7 +111,7 @@
     "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_elastic_pi_contracts.py",
     "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Autocorrelation Reconstruction Projector Law',
     authoritative_title_tex='Autocorrelation Reconstruction Projector Law',
     equation_labels=('eq:drv_dtqc_b05_1b', 'eq:drv_dtqc_b05_theorem_1b', 'eq:drv_dtqc_b05_res_1b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -105,7 +105,7 @@
     "soi_cross_domain_generalization_and_collapse"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
     "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_003_cross_modal_generalizationcollapse_transfer/falsification_checks/test_cross_modal_generalization_collapse_transfer_falsification.py"

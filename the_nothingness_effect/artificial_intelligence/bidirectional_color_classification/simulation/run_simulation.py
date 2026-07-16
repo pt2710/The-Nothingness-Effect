@@ -1,4 +1,4 @@
-"""Simulate bidirectional color classification and keep all outputs beside this producer."""
+"""Simulate bidirectional color classification and keep all outputs under this producer's artifacts directory."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ CAPABILITY = "bidirectional_color_classification"
 
 
 def run_simulation(output_dir: str | Path | None = None, *, seed: int = 0):
-    output = Path(__file__).resolve().parent if output_dir is None else Path(output_dir)
+    output = Path(__file__).resolve().parent / "artifacts" if output_dir is None else Path(output_dir)
     return run_capability_simulation(CAPABILITY, output, seed=seed)
 
 

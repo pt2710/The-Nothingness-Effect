@@ -45,7 +45,7 @@ def test_capability_artifacts_are_colocated_and_manifested() -> None:
         assert (capability_root / "test" / "test_capability.py").is_file()
         assert (capability_root / "simulation" / "run_simulation.py").is_file()
         for mode in ("test", "simulation"):
-            output = capability_root / mode
+            output = capability_root / mode / "artifacts"
             manifest_path = output / f"{capability}_{mode}_manifest.json"
             data = json.loads(manifest_path.read_text(encoding="utf-8"))
             manifest_count += 1

@@ -112,7 +112,7 @@
     "universalization_cloning_obstruction_functional"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
     "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/falsification_checks/test_stack_domain_cloning_spatial_closure_falsification.py"

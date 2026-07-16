@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Nonattainment or Nonunique Geometry Law',
     authoritative_title_tex='Nonattainment or Nonunique Geometry Law',
     equation_labels=('eq:drv_edi_c02_2c', 'eq:drv_edi_c02_res_2c'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

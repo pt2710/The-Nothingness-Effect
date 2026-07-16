@@ -142,7 +142,7 @@ class TestFlowpointMath(unittest.TestCase):
         self.visualize_results(test_name)
 
     def save_results(self, test_name):
-        csv_file_path = os.path.join(script_dir, f'{test_name}_results.csv')
+        csv_file_path = os.path.join(script_dir, "artifacts", f'{test_name}_results.csv')
         with open(csv_file_path, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(['Operation', 'Input1', 'Input2', 'Result', 'Expected'])
@@ -191,7 +191,7 @@ class TestFlowpointMath(unittest.TestCase):
                              textcoords="offset points", xytext=(0, 10),
                              ha='center', fontsize=8, color='purple')
             plt.tight_layout()
-            image_file_path = os.path.join(script_dir, f'{test_name}_{op}_visualization.png')
+            image_file_path = os.path.join(script_dir, "artifacts", f'{test_name}_{op}_visualization.png')
             plt.savefig(image_file_path)
             plt.close()
             print(f"Visualization for {op} in {test_name} saved to {image_file_path}")

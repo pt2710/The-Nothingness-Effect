@@ -109,7 +109,7 @@
     "expressivity_meta_learnability_stability_functional"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
     "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/falsification_checks/test_modality_spectrum_meta_learnability_spatial_closure_falsification.py"

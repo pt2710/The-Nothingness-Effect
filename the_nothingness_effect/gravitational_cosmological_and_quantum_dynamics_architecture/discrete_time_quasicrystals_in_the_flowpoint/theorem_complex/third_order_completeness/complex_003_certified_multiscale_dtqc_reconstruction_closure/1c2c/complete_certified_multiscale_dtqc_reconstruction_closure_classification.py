@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Certified Multiscale DTQC Reconstruction Closure Classification',
     authoritative_title_tex='Complete Certified Multiscale DTQC Reconstruction Closure Classification',
     equation_labels=('eq:drv_dtqc_c03_spatial_carrier', 'eq:drv_dtqc_c03_joint', 'eq:drv_dtqc_c03_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -41,7 +41,7 @@ def test_fp():
     plt.xlabel("Iteration")
     plt.ylabel("Value")
     plt.grid(True)
-    osc_plot_path = os.path.join(script_dir, "test_fp_oscillation.png")
+    osc_plot_path = os.path.join(script_dir, "artifacts", "test_fp_oscillation.png")
     plt.savefig(osc_plot_path)
     plt.close()
     print(f"Flowpoint oscillation visualized and saved as '{osc_plot_path}'")
@@ -49,7 +49,7 @@ def test_fp():
         debug(f"Verified: {osc_plot_path} exists.")
     else:
         debug(f"Error: {osc_plot_path} was not created.")
-    csv_path = os.path.join(script_dir, "test_fp_results.csv")
+    csv_path = os.path.join(script_dir, "artifacts", "test_fp_results.csv")
     import csv
     with open(csv_path, mode='w', newline='') as csvfile:
         writer = csv.writer(csvfile)
@@ -87,7 +87,7 @@ def animate_fp():
     ani = animation.FuncAnimation(
         fig, update, frames=range(100), init_func=init, blit=True, interval=50, repeat=False
     )
-    gif_path = os.path.join(script_dir, "test_fp_animation.gif")
+    gif_path = os.path.join(script_dir, "artifacts", "test_fp_animation.gif")
     writer = PillowWriter(fps=20)
     ani.save(gif_path, writer=writer)
     print(f"Dynamic gif of test simulation saved as '{gif_path}'")
@@ -126,7 +126,7 @@ def run_unit_tests():
     suite = unittest.TestLoader().loadTestsFromTestCase(TestFlowpointOscillation)
     runner = unittest.TextTestRunner(resultclass=CsvTestResult, verbosity=2)
     result = runner.run(suite)
-    csv_path = os.path.join(script_dir, "unittest_results.csv")
+    csv_path = os.path.join(script_dir, "artifacts", "unittest_results.csv")
     import csv
     with open(csv_path, mode='w', newline='') as csvfile:
         fieldnames = ["Test Name", "Status", "Message"]

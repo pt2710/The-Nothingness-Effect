@@ -212,16 +212,16 @@ def main():
     """
     logging.info("Starting spatiality simulation...")
     z_values, results_z, results_neg_z, is_opposite = simulate_spatiality()
-    csv_file = os.path.join(script_dir, 'spatiality_simulation_results.csv')
+    csv_file = os.path.join(script_dir, "artifacts", 'spatiality_simulation_results.csv')
     
     save_results(z_values, results_z, results_neg_z, is_opposite, csv_file)
-    png_file = os.path.join(script_dir, 'spatiality_simulation_visualization.png')
+    png_file = os.path.join(script_dir, "artifacts", 'spatiality_simulation_visualization.png')
     logging.info("Starting creation of static PNG plot...")
     
     visualize_spatiality_static(z_values, results_z, results_neg_z, is_opposite, png_file)
     logging.info(f"Spatiality simulation static plot saved as {png_file}")
     
-    gif_file = os.path.join(script_dir, 'spatiality_simulation_animation.gif')
+    gif_file = os.path.join(script_dir, "artifacts", 'spatiality_simulation_animation.gif')
     logging.info("Starting creation of animated GIF...")
     
     visualize_spatiality_dynamic(z_values, results_z, results_neg_z, is_opposite, gif_file)

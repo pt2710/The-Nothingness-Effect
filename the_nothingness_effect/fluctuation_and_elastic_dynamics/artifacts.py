@@ -37,7 +37,10 @@ def _contracts_and_input(category: str) -> tuple[tuple[Any, ...], Any]:
                 return DFIInput(data, 7.0)
             if identifier in {"dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence", "scale_normalized_dfi_homogeneity_invariant"}:
                 return DFIRescalingInput(data, 7.0, 19.0)
-            if identifier == "entropic_applicability_response_operator":
+            if identifier in {
+                "dfi_adaptive_applicability_and_contextual_instability",
+                "entropic_applicability_response_operator",
+            }:
                 return ApplicabilityInput(data, 7.0, 0.01)
             return SpatialDFIInput(data, 7.0)
 

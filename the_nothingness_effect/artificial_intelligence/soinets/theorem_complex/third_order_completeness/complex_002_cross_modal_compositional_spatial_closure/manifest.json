@@ -109,7 +109,7 @@
     "modality_compositionality_collapse_connection"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
     "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_002_cross_modal_compositional_spatial_closure/falsification_checks/test_cross_modal_compositional_spatial_closure_falsification.py"

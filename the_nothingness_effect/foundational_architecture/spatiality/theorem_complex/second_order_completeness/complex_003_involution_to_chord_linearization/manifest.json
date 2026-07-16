@@ -3,7 +3,8 @@
   "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
   "artifact_manifests": [
     "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
-    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
     "current_equation_label_count": 33,
@@ -54,7 +55,7 @@
     "eq:distinguished_basis_chord_recursion_principle_1b2b"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "both-source necessity",
       "additive interaction law",
@@ -67,26 +68,38 @@
     "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/falsification_checks/test_involution_to_chord_linearization_falsification.py"
   ],
   "first_label": "app:tne_found_involution_chord_linearization",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b2b/abstract_orbitaffine_chord_equivalence.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b/equivariant_linearization_of_an_involution.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/2b/parity_propagation_along_the_orbit_chord.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b2b/abstract_orbitaffine_chord_equivalence.py"
   ],
+  "known_limitations": [],
   "level": "B",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
     },
-    "exact_semantics": false,
-    "invariant": null,
-    "operator": null,
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
     "simulation_runner": null,
-    "source_removal_check_count": 0
+    "source_removal_check_count": 2
   },
   "module": "flowpoint_spatiality",
   "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
@@ -112,8 +125,8 @@
     "order_two_symmetry_recursion",
     "affine_spatial_involution_orbit"
   ],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
     "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/falsification_checks/test_involution_to_chord_linearization_falsification.py"

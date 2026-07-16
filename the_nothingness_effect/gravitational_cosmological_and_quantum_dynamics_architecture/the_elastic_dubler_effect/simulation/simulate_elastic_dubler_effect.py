@@ -66,7 +66,7 @@ def create_figure(grid: dict[str, np.ndarray]):
 
 
 def run(output_dir: str | Path | None = None, quick: bool = False) -> dict[str, Path | bool]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     delta_s = np.linspace(-5.0, 5.0, 81 if quick else 201)
     kd_values = np.array([0.5, 1.0, 2.0, 5.0], dtype=float)
     grid = compute_dubler_grid(delta_s, kd_values)

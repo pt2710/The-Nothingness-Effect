@@ -14,27 +14,27 @@
     {
       "complex_id": "parity_meyer_diffraction_decomposition",
       "directory": "complex_003_parity_meyer_diffraction_decomposition",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "elastic_gain_ou_support_margin",
       "directory": "complex_004_elastic_gain_ou_support_margin",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "autocorrelation_reconstruction_projector",
       "directory": "complex_005_autocorrelation_reconstruction_projector",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "ridge_resolved_2_adic_robustness_certificate",
       "directory": "complex_006_ridge_resolved_2_adic_robustness_certificate",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "drift_tail_figure_certification_functional",
       "directory": "complex_007_drift_tail_figure_certification_functional",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint"

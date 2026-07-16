@@ -214,7 +214,7 @@ def visualize_symmetry(results, filename_static, filename_animation):
 
             # explicitly save frame 640 (1‑based index)
             if frame == 639:
-                outpng_640 = os.path.join(script_dir, "symmetry_frame_640.png")
+                outpng_640 = os.path.join(script_dir, "artifacts", "symmetry_frame_640.png")
                 plt.savefig(outpng_640, dpi=300)
                 print(f"[INFO] Frame 640 saved: {outpng_640}")
 
@@ -266,9 +266,9 @@ def main():
     print(f"Script directory: {script_dir}")
 
     n_simulations = 1000
-    csv_file = os.path.join(script_dir, 'symmetry_simulation_results.csv')
-    image_file_static = os.path.join(script_dir, 'symmetry_simulation_visualization.png')
-    image_file_animation = os.path.join(script_dir, 'symmetry_simulation_animation.gif')
+    csv_file = os.path.join(script_dir, "artifacts", 'symmetry_simulation_results.csv')
+    image_file_static = os.path.join(script_dir, "artifacts", 'symmetry_simulation_visualization.png')
+    image_file_animation = os.path.join(script_dir, "artifacts", 'symmetry_simulation_animation.gif')
 
     results = simulate_symmetry(n_simulations)
     save_results(results, csv_file)

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Existence and Stable Uniqueness of the Regularized Geometry',
     authoritative_title_tex='Existence and Stable Uniqueness of the Regularized Geometry',
     equation_labels=('eq:drv_edi_c02_1c', 'eq:drv_edi_c02_theorem_1c', 'eq:drv_edi_c02_res_1c'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

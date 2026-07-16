@@ -35,9 +35,9 @@ def _write_test_artifacts() -> dict[str, Path]:
     ax.set_ylabel("Rx")
     ax.grid(True, alpha=0.25)
     ax.legend()
-    figure = SCRIPT_DIR / "noether_tne_test_visualization.png"
-    data = SCRIPT_DIR / "noether_tne_test_data.npz"
-    results = SCRIPT_DIR / "noether_tne_test_results.csv"
+    figure = SCRIPT_DIR / "artifacts" / "noether_tne_test_visualization.png"
+    data = SCRIPT_DIR / "artifacts" / "noether_tne_test_data.npz"
+    results = SCRIPT_DIR / "artifacts" / "noether_tne_test_results.csv"
     save_figure(fig, figure)
     plt.close(fig)
     save_npz(data, time=flux["time"], rx=flux["rx"], residual=gauss["residual"])

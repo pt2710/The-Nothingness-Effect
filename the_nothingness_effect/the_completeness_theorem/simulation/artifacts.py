@@ -22,7 +22,7 @@ TRACE_FILENAMES = {
 
 
 def supplementary_root() -> Path:
-    return Path(__file__).resolve().parents[1] / "supplementary"
+    return Path(__file__).resolve().parent / "artifacts" / "supplementary"
 
 
 def prepare_output_dirs(output_root: Path | None = None) -> dict[str, Path]:

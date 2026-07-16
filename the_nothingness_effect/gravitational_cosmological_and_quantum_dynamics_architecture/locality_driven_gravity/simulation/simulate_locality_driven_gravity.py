@@ -312,7 +312,7 @@ def run(
     steps: int | None = None,
     quick: bool = False,
 ) -> dict[str, Path | bool]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     ensure_dir(root)
     default_params = _mode_params(2, quick, steps)
     default_result = simulate_locality_spiral(params=default_params, seed=seed)

@@ -460,10 +460,10 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         dependency_status = "authoritative_cross_reference"
 
         contract = contracts.get(complex_id)
-        if missing_audit_labels and contract is not None:
+        if contract is not None:
             status = "implemented"
             status_reason = (
-                "current appendix equations validated through a typed derived operator; "
+                "current appendix equations validated through a registered typed contract; "
                 "legacy carrier/product labels are non-semantic"
             )
         if row["level"] in {"B", "C"} and len(source_ids) < 2 and contract is not None:
@@ -646,6 +646,7 @@ def test_falsification_obligations_are_explicit():
                 ),
                 "test_path": test_modules[0],
                 "simulation_path": simulation_modules[0] if simulation_modules else "",
+                "visualization_path": f"{owner}/simulation/artifacts",
                 "owner_path": owner,
                 "theorem_complex_path": relative_complex,
                 "source_complex_ids": ";".join(source_ids),
@@ -788,6 +789,7 @@ def test_falsification_obligations_are_explicit():
                     ),
                     "test_path": item["test_modules"][0],
                     "simulation_path": item["simulation_modules"][0] if item["simulation_modules"] else "",
+                    "visualization_path": f"{item['owner_path']}/simulation/artifacts",
                     "owner_path": item["owner_path"],
                     "theorem_complex_path": item["manifest_path"].removesuffix("/manifest.json"),
                     "source_complex_ids": ";".join(item["source_complex_ids"]),

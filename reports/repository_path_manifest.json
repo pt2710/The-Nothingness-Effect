@@ -1,0 +1,217 @@
+{
+  "canonical_top_level_packages": [
+    "the_nothingness_effect/canonical_self_negating_involution",
+    "the_nothingness_effect/mathematical_architecture",
+    "the_nothingness_effect/foundational_architecture",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture",
+    "the_nothingness_effect/artificial_intelligence",
+    "the_nothingness_effect/the_completeness_theorem"
+  ],
+  "removed_legacy_paths": {
+    "equations": true,
+    "figures": true,
+    "figures_mccrackn": true,
+    "tne_concepts": true
+  },
+  "schema_version": "1.0",
+  "subject_module_count": 28,
+  "subject_modules": [
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+      "simulation": "the_nothingness_effect/artificial_intelligence/pgqenn/simulation",
+      "test": "the_nothingness_effect/artificial_intelligence/pgqenn/test",
+      "theorem_complex": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/artificial_intelligence/qenn",
+      "simulation": "the_nothingness_effect/artificial_intelligence/qenn/simulation",
+      "test": "the_nothingness_effect/artificial_intelligence/qenn/test",
+      "theorem_complex": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/artificial_intelligence/soinets",
+      "simulation": "the_nothingness_effect/artificial_intelligence/soinets/simulation",
+      "test": "the_nothingness_effect/artificial_intelligence/soinets/test",
+      "theorem_complex": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+      "simulation": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation",
+      "test": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test",
+      "theorem_complex": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
+      "simulation": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation",
+      "test": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test",
+      "theorem_complex": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+      "simulation": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation",
+      "test": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test",
+      "theorem_complex": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm",
+      "simulation": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation",
+      "test": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test",
+      "theorem_complex": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index",
+      "simulation": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation",
+      "test": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test",
+      "theorem_complex": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/countable_infinity",
+      "simulation": "the_nothingness_effect/foundational_architecture/countable_infinity/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/countable_infinity/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/countable_infinity/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/duality",
+      "simulation": "the_nothingness_effect/foundational_architecture/duality/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/duality/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/duality/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+      "simulation": "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/observation_and_collapse/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/spatiality",
+      "simulation": "the_nothingness_effect/foundational_architecture/spatiality/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/spatiality/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/symmetry",
+      "simulation": "the_nothingness_effect/foundational_architecture/symmetry/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/symmetry/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+      "simulation": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+      "simulation": "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation",
+      "test": "the_nothingness_effect/foundational_architecture/uncountable_infinity/test",
+      "theorem_complex": "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+      "simulation": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation",
+      "test": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test",
+      "theorem_complex": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/mathematical_architecture",
+      "simulation": "the_nothingness_effect/mathematical_architecture/simulation",
+      "test": "the_nothingness_effect/mathematical_architecture/test",
+      "theorem_complex": "the_nothingness_effect/mathematical_architecture/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations",
+      "simulation": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation",
+      "test": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/test",
+      "theorem_complex": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation",
+      "simulation": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/simulation",
+      "test": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/test",
+      "theorem_complex": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry",
+      "simulation": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation",
+      "test": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/test",
+      "theorem_complex": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/the_completeness_theorem",
+      "simulation": "the_nothingness_effect/the_completeness_theorem/simulation",
+      "test": "the_nothingness_effect/the_completeness_theorem/test",
+      "theorem_complex": "the_nothingness_effect/the_completeness_theorem/theorem_complex"
+    },
+    {
+      "exists": true,
+      "path": "the_nothingness_effect/the_completeness_theorem/noether_structure",
+      "simulation": "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation",
+      "test": "the_nothingness_effect/the_completeness_theorem/noether_structure/test",
+      "theorem_complex": "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex"
+    }
+  ]
+}

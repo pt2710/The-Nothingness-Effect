@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Parity-Meyer Diffraction Decomposition Failure Law',
     authoritative_title_tex='Parity-Meyer Diffraction Decomposition Failure Law',
     equation_labels=('eq:drv_dtqc_b03_2b', 'eq:drv_dtqc_b03_theorem_2b', 'eq:drv_dtqc_b03_res_2b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

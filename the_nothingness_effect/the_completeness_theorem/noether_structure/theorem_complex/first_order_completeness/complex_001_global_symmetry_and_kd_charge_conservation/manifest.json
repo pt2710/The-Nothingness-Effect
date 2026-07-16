@@ -103,7 +103,7 @@
   "source_complex_id": "global_symmetry_and_kd_charge_conservation",
   "source_complex_ids": [],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_completeness_contracts.py",
     "the_nothingness_effect/the_completeness_theorem/noether_structure/test/test_noether_structure.py",

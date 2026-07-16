@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Ridge-Resolved 2-Adic Robustness Certificate Failure Law',
     authoritative_title_tex='Ridge-Resolved 2-Adic Robustness Certificate Failure Law',
     equation_labels=('eq:drv_dtqc_b06_2b', 'eq:drv_dtqc_b06_theorem_2b', 'eq:drv_dtqc_b06_res_2b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

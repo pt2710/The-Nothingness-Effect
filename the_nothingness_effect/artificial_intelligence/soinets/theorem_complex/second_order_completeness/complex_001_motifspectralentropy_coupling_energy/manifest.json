@@ -106,7 +106,7 @@
     "soi_universal_entropy_plateau_theorem"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_soinets_contracts.py",
     "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",

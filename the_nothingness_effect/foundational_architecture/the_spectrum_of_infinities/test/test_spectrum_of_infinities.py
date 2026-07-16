@@ -229,10 +229,10 @@ def main():
     print(f"Script directory: {script_dir}")
 
     n_tests = 1000
-    csv_file = os.path.join(script_dir, 'spectrum_of_infinities_test_results.csv')
-    image_file_static = os.path.join(script_dir, 'spectrum_of_infinities_test_visualization.png')
-    image_file_animation_basic = os.path.join(script_dir, 'basic_spectrum_animation.gif')
-    image_file_animation_symmetric = os.path.join(script_dir, 'symmetric_spectrum_animation.gif')
+    csv_file = os.path.join(script_dir, "artifacts", 'spectrum_of_infinities_test_results.csv')
+    image_file_static = os.path.join(script_dir, "artifacts", 'spectrum_of_infinities_test_visualization.png')
+    image_file_animation_basic = os.path.join(script_dir, "artifacts", 'basic_spectrum_animation.gif')
+    image_file_animation_symmetric = os.path.join(script_dir, "artifacts", 'symmetric_spectrum_animation.gif')
 
     results = test_spectrum_of_infinities(n_tests)
     save_results(results, csv_file)

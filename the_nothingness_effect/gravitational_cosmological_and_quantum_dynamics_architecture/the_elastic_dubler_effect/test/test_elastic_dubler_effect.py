@@ -32,9 +32,9 @@ def _write_test_artifacts() -> dict[str, Path]:
     ax.set_ylabel("shift")
     ax.grid(True, alpha=0.25)
     ax.legend()
-    figure = SCRIPT_DIR / "elastic_dubler_effect_test_visualization.png"
-    data = SCRIPT_DIR / "elastic_dubler_effect_test_data.npz"
-    results = SCRIPT_DIR / "elastic_dubler_effect_test_results.csv"
+    figure = SCRIPT_DIR / "artifacts" / "elastic_dubler_effect_test_visualization.png"
+    data = SCRIPT_DIR / "artifacts" / "elastic_dubler_effect_test_data.npz"
+    results = SCRIPT_DIR / "artifacts" / "elastic_dubler_effect_test_results.csv"
     save_figure(fig, figure)
     plt.close(fig)
     save_npz(data, **grid)

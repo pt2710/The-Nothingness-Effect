@@ -149,7 +149,7 @@ def visualize_duality(results, filename_static, filename_animation):
 
     # --- Static 2D subplots of results and differences ---
     try:
-        subplots_file = os.path.join(script_dir, 'duality_simulation_subplots.png')
+        subplots_file = os.path.join(script_dir, "artifacts", 'duality_simulation_subplots.png')
         logging.info(f"Creating 2D subplots: {subplots_file}")
         start = time.time()
 
@@ -211,7 +211,7 @@ def visualize_duality(results, filename_static, filename_animation):
 
             # explicitly save frame 640 (1-based index)
             if frame == 639:
-                outpng_640 = os.path.join(script_dir, "duality_frame_640.png")
+                outpng_640 = os.path.join(script_dir, "artifacts", "duality_frame_640.png")
                 plt.savefig(outpng_640, dpi=300)
                 logging.info(f"Frame 640 saved: {outpng_640}")
 
@@ -254,9 +254,9 @@ def main():
     n = 1000
     results = simulate_duality(n)
 
-    csv_path = os.path.join(script_dir, 'duality_simulation_results.csv')
-    png_path = os.path.join(script_dir, 'duality_simulation_visualization.png')
-    gif_path = os.path.join(script_dir, 'duality_simulation_animation.gif')
+    csv_path = os.path.join(script_dir, "artifacts", 'duality_simulation_results.csv')
+    png_path = os.path.join(script_dir, "artifacts", 'duality_simulation_visualization.png')
+    gif_path = os.path.join(script_dir, "artifacts", 'duality_simulation_animation.gif')
 
     save_results(results, csv_path)
     visualize_duality(results, png_path, gif_path)

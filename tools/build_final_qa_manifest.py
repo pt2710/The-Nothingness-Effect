@@ -9,7 +9,10 @@ import json
 from pathlib import Path
 import subprocess
 
-from tools.consistency_catalog import implemented_contracts
+if __package__:
+    from tools.consistency_catalog import implemented_contracts
+else:
+    from consistency_catalog import implemented_contracts
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
@@ -59,6 +62,12 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         if str(source_id) not in implemented
     ]
     tracked_tex = _git("ls-files", "*.tex").splitlines()
+    carrier_conflicts = [
+        row for row in matrix
+        if row["level"] in {"B", "C"} and row.get("carrier_violation", "").lower() == "true"
+    ]
+    test_execution = json.loads(Path("reports/test_execution_manifest.json").read_text(encoding="utf-8"))
+    simulation_execution = json.loads(Path("reports/simulation_execution_manifest.json").read_text(encoding="utf-8"))
     payload = {
         "schema_version": "1.0",
         "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
@@ -86,11 +95,18 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
             "implemented_A": level_counts["A"],
             "implemented_B": level_counts["B"],
             "implemented_C": level_counts["C"],
-            "proxy_only": status_counts["proxy_only"],
-            "not_implemented": status_counts["not_implemented"],
+            "proxy_only": status_counts["proxy"],
+            "not_implemented": status_counts["blocked"],
+            "blocked_B": sum(row["level"] == "B" and row["implementation_status"] == "blocked" for row in matrix),
+            "blocked_C": sum(row["level"] == "C" and row["implementation_status"] == "blocked" for row in matrix),
+            "carrier_conflicts": len(carrier_conflicts),
             "duplicate_complex_ids": len(matrix) - len({row["complex_id"] for row in matrix}),
         },
         "artifact_summary": artifact["summary"],
+        "entrypoint_execution": {
+            "test": test_execution["summary"],
+            "simulation": simulation_execution["summary"],
+        },
         "repository_revision_plan": dict(sorted(revisions.items())),
         "unresolved_internal_dependencies": unresolved,
         "tracked_tex_files": tracked_tex,

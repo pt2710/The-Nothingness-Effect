@@ -153,7 +153,7 @@
   "source_complex_id": "self_negating_oscillation_and_eigenstructure",
   "source_complex_ids": [],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/invariants/test_flowpoint_source_laws.py",
     "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",

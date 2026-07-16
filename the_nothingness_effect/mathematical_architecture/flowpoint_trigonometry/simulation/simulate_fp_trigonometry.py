@@ -149,7 +149,7 @@ def save_simulation_data(data):
     print("\nSaving simulation data...")
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_file = os.path.join(script_dir, 'fp_trigonometry_simulation_data.json')
+    output_file = os.path.join(script_dir, "artifacts", 'fp_trigonometry_simulation_data.json')
     with open(output_file, 'w') as f:
         json.dump(data, f, indent=4)
 
@@ -187,11 +187,11 @@ def save_visualization_plotly(theta_values, std_values, fp_values, title, filena
     fig.update_layout(title=title, xaxis_title='θ', yaxis_title='Value')
 
     # Save HTML file
-    html_output_file = os.path.join(script_dir, f"{filename}.html")
+    html_output_file = os.path.join(script_dir, "artifacts", f"{filename}.html")
     fig.write_html(html_output_file)
 
     # Save PNG file
-    png_output_file = os.path.join(script_dir, f"{filename}.png")
+    png_output_file = os.path.join(script_dir, "artifacts", f"{filename}.png")
     # Ensure kaleido is installed for static image export
     try:
         fig.write_image(png_output_file)
@@ -219,7 +219,7 @@ def create_3d_animation(theta_values, cos_std, sin_std, cos_fp, sin_fp):
     start_time = time.time()
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_file = os.path.join(script_dir, 'fp_trigonometry_simulation_animation.gif')
+    output_file = os.path.join(script_dir, "artifacts", 'fp_trigonometry_simulation_animation.gif')
 
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(111, projection='3d')

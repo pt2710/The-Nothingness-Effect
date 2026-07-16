@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Parity-Meyer Diffraction Decomposition Classification',
     authoritative_title_tex='Complete Parity-Meyer Diffraction Decomposition Classification',
     equation_labels=('eq:drv_dtqc_b03_product_carrier', 'eq:drv_dtqc_b03_joint', 'eq:drv_dtqc_b03_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

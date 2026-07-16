@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Elastic-Gain OU Support Margin Classification',
     authoritative_title_tex='Complete Elastic-Gain OU Support Margin Classification',
     equation_labels=('eq:drv_dtqc_b04_product_carrier', 'eq:drv_dtqc_b04_joint', 'eq:drv_dtqc_b04_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

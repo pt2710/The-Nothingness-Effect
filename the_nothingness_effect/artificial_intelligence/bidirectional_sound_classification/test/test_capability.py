@@ -1,4 +1,4 @@
-"""Test bidirectional sound classification and generate evidence beside this script when run directly."""
+"""Test bidirectional sound classification and generate evidence under this test module's artifacts directory."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ CAPABILITY = "bidirectional_sound_classification"
 
 
 def run_test(output_dir: str | Path | None = None, *, seed: int = 0):
-    output = Path(__file__).resolve().parent if output_dir is None else Path(output_dir)
+    output = Path(__file__).resolve().parent / "artifacts" if output_dir is None else Path(output_dir)
     return run_capability_test(CAPABILITY, output, seed=seed)
 
 

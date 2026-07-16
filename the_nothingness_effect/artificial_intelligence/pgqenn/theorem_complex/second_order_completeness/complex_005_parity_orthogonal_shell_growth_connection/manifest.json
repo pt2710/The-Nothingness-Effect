@@ -110,7 +110,7 @@
     "prime_shell_growth_regularity_shell_instability_phase_slips"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
     "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_005_parity_orthogonal_shell_growth_connection/falsification_checks/test_parity_orthogonal_shell_growth_connection_falsification.py"

@@ -109,7 +109,7 @@
     "support_transport_drift_certificate"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
     "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_002_paritysupport_memory_field_closure/falsification_checks/test_parity_support_memory_field_closure_falsification.py"

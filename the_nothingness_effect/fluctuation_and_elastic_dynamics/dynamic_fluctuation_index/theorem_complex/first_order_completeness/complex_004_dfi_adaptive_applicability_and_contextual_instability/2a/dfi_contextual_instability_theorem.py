@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='DFI Contextual Instability Theorem',
     authoritative_title_tex='DFI Contextual Instability Theorem',
     equation_labels=('eq:dfi04_contextual_defect_2a', 'eq:dfi04_nonzero_contextual_defect_2a', 'eq:dfi04_loss_universality_2a', 'eq:dfi04_synthesis_2a'),
-    implementation_status='proxy',
+    implementation_status='implemented',
 )
 
 

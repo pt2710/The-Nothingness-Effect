@@ -14,7 +14,7 @@
     {
       "complex_id": "involution_to_chord_linearization",
       "directory": "complex_003_involution_to_chord_linearization",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/foundational_architecture/spatiality"

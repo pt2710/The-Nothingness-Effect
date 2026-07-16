@@ -67,7 +67,7 @@ def _gauss_figure(gauss_result):
 
 
 def run(output_dir: str | Path | None = None, grid_size: int = 128, quick: bool = False) -> dict[str, object]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     params = NoetherParams(grid_size=32 if quick else grid_size, time_steps=40 if quick else 120)
     flux_result = simulate_kd_flux_under_phase_shift(params)
     gauss_result = simulate_fp_gauss_identity(params.grid_size, params)

@@ -106,7 +106,7 @@ def run_suite(output_dir: str | Path, *, seed: int = 0) -> dict[str, Path | list
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent / "artifacts")
     parser.add_argument("--seed", type=int, default=0)
     args = parser.parse_args()
     outputs = run_suite(args.output, seed=args.seed)

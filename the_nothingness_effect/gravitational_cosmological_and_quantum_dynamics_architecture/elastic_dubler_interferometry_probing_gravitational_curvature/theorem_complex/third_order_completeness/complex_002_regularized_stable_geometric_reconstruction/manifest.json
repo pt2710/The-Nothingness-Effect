@@ -3,7 +3,8 @@
   "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
   "artifact_manifests": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
-    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
     "current_equation_label_count": 8,
@@ -17,7 +18,7 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/2c/nonattainment_or_nonunique_geometry_law.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c2c/complete_regularized_geometry_classification.py"
   ],
-  "dependency_status": "not_directly_computable",
+  "dependency_status": "registered_semantic_mapping",
   "equation_labels": [
     "eq:drv_edi_c02_spatial_carrier",
     "eq:drv_edi_c02_1c",
@@ -29,7 +30,7 @@
     "eq:drv_edi_c02_exchange_square"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "B-source necessity",
       "spatial closure/coercivity",
@@ -42,26 +43,38 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/falsification_checks/test_regularized_stable_geometric_reconstruction_falsification.py"
   ],
   "first_label": "app:drv_edi_c02",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c2c/complete_regularized_geometry_classification.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c/existence_and_stable_uniqueness_of_the_regularized_geometry.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/2c/nonattainment_or_nonunique_geometry_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c2c/complete_regularized_geometry_classification.py"
   ],
+  "known_limitations": [],
   "level": "C",
   "mathematical_contract": {
-    "closure_predicate": null,
+    "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+      "name": "localized spatial closure",
+      "python_types": [
+        "SpatialClosureResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "finite common-shape spatial field for every declared B source",
+      "name": "common spatial B-source domain",
+      "python_types": [
+        "SpatialClosureInput"
+      ],
+      "shape": null
     },
     "exact_semantics": false,
-    "invariant": null,
-    "operator": null,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
     "simulation_runner": null,
-    "source_removal_check_count": 0
+    "source_removal_check_count": 2
   },
   "module": "elastic_dubler_interferometry",
   "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
@@ -83,9 +96,12 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
   ],
   "source_complex_id": "regularized_stable_geometric_reconstruction",
-  "source_complex_ids": [],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "source_complex_ids": [
+    "2_adic_curvature_regularity_barrier",
+    "stability_conditioned_geometric_identifiability"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",

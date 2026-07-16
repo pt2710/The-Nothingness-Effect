@@ -1,0 +1,49 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "bidirectional_color_classification",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "bidirectional_color_classification_simulation_results.csv",
+    "bidirectional_color_classification_simulation_figure.png",
+    "bidirectional_color_classification_simulation_animation.gif",
+    "bidirectional_color_classification_simulation_manifest.json"
+  ],
+  "intended_output_group": "bidirectional color classification",
+  "metrics": {
+    "accuracy": 1.0,
+    "modality_rmse": 0.035094767808914185,
+    "roundtrip_accuracy": 1.0
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "db511527151c933c8da5d8443bb004fb3ee469dca7d0ec01b6b99e197eaecc62",
+  "parameters": {
+    "capability": "bidirectional_color_classification",
+    "mode": "simulation",
+    "producer_architecture": null,
+    "seed": 0,
+    "synthetic_fixture": true
+  },
+  "producer_architecture": null,
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.bidirectional_color_classification.simulation.run_simulation",
+  "related_theorem_complex_ids": [
+    "soi_modality_invariant_convergence_and_collapse_completeness",
+    "soi_modality_dual_closure",
+    "modality_collapse_symmetry_operator"
+  ],
+  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.035094767808914185
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

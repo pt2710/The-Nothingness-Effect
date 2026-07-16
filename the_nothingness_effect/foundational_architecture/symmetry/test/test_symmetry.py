@@ -214,9 +214,9 @@ def main():
         print("Warning: __file__ is not defined. Using current working directory instead.")
     print(f"Script directory: {script_dir}")
     n_tests = 1000
-    csv_file = os.path.join(script_dir, 'symmetry_test_results.csv')
-    image_file_static = os.path.join(script_dir, 'symmetry_test_visualization.png')
-    image_file_animation = os.path.join(script_dir, 'symmetry_test_animation.gif')
+    csv_file = os.path.join(script_dir, "artifacts", 'symmetry_test_results.csv')
+    image_file_static = os.path.join(script_dir, "artifacts", 'symmetry_test_visualization.png')
+    image_file_animation = os.path.join(script_dir, "artifacts", 'symmetry_test_animation.gif')
     results = test_symmetry(n_tests)
     save_results(results, csv_file)
     visualize_symmetry(results, image_file_static, image_file_animation)

@@ -404,10 +404,10 @@ def main():
 
     # Define file paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    csv_file_path = os.path.join(script_dir, 'pi_approx_results.csv')
-    mp4_file_path = os.path.join(script_dir, 'pi_convergence_animation.mp4')
-    static_file_path = os.path.join(script_dir, 'pi_convergence_simulation.png')
-    interactive_plot_file_path = os.path.join(script_dir, 'pi_convergence_interactive.html')
+    csv_file_path = os.path.join(script_dir, "artifacts", 'pi_approx_results.csv')
+    mp4_file_path = os.path.join(script_dir, "artifacts", 'pi_convergence_animation.mp4')
+    static_file_path = os.path.join(script_dir, "artifacts", 'pi_convergence_simulation.png')
+    interactive_plot_file_path = os.path.join(script_dir, "artifacts", 'pi_convergence_interactive.html')
 
     # Save results to CSV
     save_results_to_csv(iterations, pi_approximations, actual_pi, errors, csv_file_path)

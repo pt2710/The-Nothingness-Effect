@@ -193,9 +193,9 @@ def main():
         print("Warning: __file__ is not defined. Using current working directory instead.")
     print(f"Script directory: {script_dir}")
     n_tests = 1000
-    csv_file = os.path.join(script_dir, 'uncountable_infinity_test_results.csv')
-    image_file_static = os.path.join(script_dir, 'uncountable_infinity_test_visualization.png')
-    image_file_animation = os.path.join(script_dir, 'uncountable_infinity_test_animation.gif')
+    csv_file = os.path.join(script_dir, "artifacts", 'uncountable_infinity_test_results.csv')
+    image_file_static = os.path.join(script_dir, "artifacts", 'uncountable_infinity_test_visualization.png')
+    image_file_animation = os.path.join(script_dir, "artifacts", 'uncountable_infinity_test_animation.gif')
     results = test_uncountable_infinity(n_tests)
     save_results(results, csv_file)
     visualize_uncountable_infinity(results, image_file_static, image_file_animation)

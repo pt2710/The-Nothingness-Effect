@@ -32,9 +32,9 @@ def _write_test_artifacts() -> dict[str, Path]:
     ax.set_ylabel("normalized pi_E")
     ax.grid(True, alpha=0.25)
     ax.legend()
-    figure = SCRIPT_DIR / "black_hole_dynamics_test_visualization.png"
-    data = SCRIPT_DIR / "black_hole_dynamics_test_data.npz"
-    results = SCRIPT_DIR / "black_hole_dynamics_test_results.csv"
+    figure = SCRIPT_DIR / "artifacts" / "black_hole_dynamics_test_visualization.png"
+    data = SCRIPT_DIR / "artifacts" / "black_hole_dynamics_test_data.npz"
+    results = SCRIPT_DIR / "artifacts" / "black_hole_dynamics_test_results.csv"
     save_figure(fig, figure)
     plt.close(fig)
     save_npz(data, r=result["r"], pi_E_time=result["pi_E_time"], memory=result["memory"])

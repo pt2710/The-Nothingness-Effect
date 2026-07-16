@@ -83,7 +83,7 @@ class TestFlowpointTrigonometry(unittest.TestCase):
 
 def save_test_data(test_results):
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_file = os.path.join(script_dir, 'test_results.json')
+    output_file = os.path.join(script_dir, "artifacts", 'test_results.json')
     with open(output_file, 'w') as f:
         json.dump(test_results, f, indent=4)
     print(f"Test results saved to {output_file}")
@@ -102,7 +102,7 @@ def plot_test_results(test_results, pi_value):
     valid_indices = ~np.isclose(cos_std, 0)
     script_dir = os.path.dirname(os.path.abspath(__file__))
     filename = 'fp_modelled_trigs_math_modelled_trigs_test_comparison.png'
-    file_path = os.path.join(script_dir, filename)
+    file_path = os.path.join(script_dir, "artifacts", filename)
 
     plt.figure(figsize=(12, 14))
     plt.subplot(3, 1, 1)
@@ -177,7 +177,7 @@ def plot_trig_functions(fp_trig):
     valid_indices = ~np.isclose(cos_std, 0)
     script_dir = os.path.dirname(os.path.abspath(__file__))
     filename = 'fp_modelled_trigs_math_modelled_trigs_comparison.png'
-    file_path = os.path.join(script_dir, filename)
+    file_path = os.path.join(script_dir, "artifacts", filename)
     plt.figure(figsize=(14, 14))
     plt.subplot(3, 1, 1)
     plt.plot(theta_values, cos_std, label='Standard Cosine', linestyle='-', color='blue', linewidth=2)

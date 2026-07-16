@@ -120,7 +120,7 @@
     "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_completeness_contracts.py",
     "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",

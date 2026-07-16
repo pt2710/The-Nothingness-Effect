@@ -110,7 +110,7 @@
     "hyper_parameter_stability_wedge_instability_lobe"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
     "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/falsification_checks/test_entropic_hyperparameter_stability_margin_falsification.py"

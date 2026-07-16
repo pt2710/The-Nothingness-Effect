@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Drift-Tail Figure Certification Functional Law',
     authoritative_title_tex='Drift-Tail Figure Certification Functional Law',
     equation_labels=('eq:drv_dtqc_b07_1b', 'eq:drv_dtqc_b07_theorem_1b', 'eq:drv_dtqc_b07_res_1b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

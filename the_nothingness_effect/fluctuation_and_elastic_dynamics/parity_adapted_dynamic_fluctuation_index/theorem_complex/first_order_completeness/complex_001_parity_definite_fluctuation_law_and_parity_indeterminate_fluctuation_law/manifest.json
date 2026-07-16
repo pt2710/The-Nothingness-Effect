@@ -107,7 +107,7 @@
   "source_complex_id": "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
   "source_complex_ids": [],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/boundaries/test_pdfi_boundaries.py",
     "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",

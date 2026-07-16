@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Semidirect Compensation Law',
     authoritative_title_tex='Semidirect Compensation Law',
     equation_labels=('eq:phase_gated_compensation_operator_1b', 'eq:semidirect_compensation_law_1b', 'eq:phase_gated_balance_invariance_1b', 'eq:phase_gated_semidirect_product_1b', 'eq:phase_gated_conjugacy_1b', 'eq:phase_gated_inverse_1b', 'eq:translated_reflection_involution_1b', 'eq:translation_reflection_normal_forms_1b', 'eq:dual_motion_involutive_phase_synthesis_1b', 'eq:phase_gated_compensation_principle_1b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

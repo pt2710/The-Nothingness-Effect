@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Finite Barrier Implies Regular Nonperforating Geometry',
     authoritative_title_tex='Finite Barrier Implies Regular Nonperforating Geometry',
     equation_labels=('eq:drv_edi_b03_1b', 'eq:drv_edi_b03_theorem_1b', 'eq:drv_edi_b03_res_1b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

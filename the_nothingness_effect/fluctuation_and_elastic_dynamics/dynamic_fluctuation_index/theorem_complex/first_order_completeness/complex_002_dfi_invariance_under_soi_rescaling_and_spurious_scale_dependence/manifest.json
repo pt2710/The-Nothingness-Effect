@@ -110,7 +110,7 @@
   "source_complex_id": "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
   "source_complex_ids": [],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_dfi_contracts.py",
     "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",

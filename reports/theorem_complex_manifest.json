@@ -160,7 +160,7 @@
       "source_complex_id": "self_negating_oscillation_and_eigenstructure",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/invariants/test_flowpoint_source_laws.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -325,7 +325,7 @@
       "source_complex_id": "parity_to_bit_equivalence_and_2_adic_coding",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/invariants/test_flowpoint_source_laws.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -505,7 +505,7 @@
         "parity_to_bit_equivalence_and_2_adic_coding"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/invariants/test_flowpoint_source_laws.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -674,7 +674,7 @@
       "source_complex_id": "phase_clock",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_flowpoint_contracts.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -837,7 +837,7 @@
         "parity_to_bit_equivalence_and_2_adic_coding"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_flowpoint_contracts.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -996,7 +996,7 @@
         "phase_clock"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_flowpoint_contracts.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -1164,7 +1164,7 @@
         "phase_indexed_kernel_transport"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_flowpoint_contracts.py",
         "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
@@ -1294,7 +1294,7 @@
       "source_complex_id": "flowpoint_unity_orientation_and_integer_unfolding",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_mathematical_closure_contracts.py",
         "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
@@ -1426,7 +1426,7 @@
       "source_complex_id": "operation_covariance_and_spectral_minimization",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_mathematical_closure_contracts.py",
         "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/test/test_flowpoint_math_operations.py",
@@ -1558,7 +1558,7 @@
       "source_complex_id": "finite_approximation_and_vanishing_residual_energy",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_mathematical_closure_boundaries.py",
         "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/test/test_flowpoint_pi_approximation.py",
@@ -1689,7 +1689,7 @@
       "source_complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_mathematical_closure_contracts.py",
         "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/test/test_flowpoint_trigonometry.py",
@@ -1822,7 +1822,7 @@
         "operation_covariance_and_spectral_minimization"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_mathematical_closure_contracts.py",
         "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
@@ -1956,7 +1956,7 @@
         "complex_phase_coordinates_and_fourier_reconstruction"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_mathematical_closure_contracts.py",
         "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
@@ -2092,7 +2092,7 @@
         "addition_of_approximation_and_harmonic_geometry"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_mathematical_closure_contracts.py",
         "the_nothingness_effect/mathematical_architecture/test/test_evidence.py",
@@ -2592,7 +2592,7 @@
       "source_complex_id": "reciprocal_relation_action_groupoid",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_duality_contracts.py",
         "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
@@ -2761,7 +2761,7 @@
         "involutive_duality_c_2_action"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_duality_contracts.py",
         "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
@@ -2946,7 +2946,7 @@
       "source_complex_id": "involutive_duality_c_2_action",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_duality_contracts.py",
         "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
@@ -3089,7 +3089,7 @@
         "minimal_two_state_involution_orbitwise_alternator"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_duality_contracts.py",
         "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
@@ -3236,7 +3236,7 @@
         "involutive_duality_c_2_action"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_duality_contracts.py",
         "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
@@ -3374,7 +3374,7 @@
         "two_state_free_cofree_duality"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_duality_contracts.py",
         "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
@@ -4488,7 +4488,8 @@
       "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
       "artifact_manifests": [
         "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
-        "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 30,
@@ -4536,7 +4537,7 @@
         "eq:semidirect_normal_form_uniqueness_principle_1b2b"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -4549,27 +4550,39 @@
         "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/falsification_checks/test_phase_gated_compensation_transport_falsification.py"
       ],
       "first_label": "app:tne_found_phase_gated_compensation_transport",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/1b2b/local_generatorrecursive_cocycle_equivalence.py",
+        "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/1b/semidirect_compensation_law.py",
+        "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/2b/recursive_dihedral_compensation_law.py",
+        "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/1b2b/local_generatorrecursive_cocycle_equivalence.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "flowpoint_symmetry",
       "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
@@ -4595,8 +4608,8 @@
         "kernel_recursion",
         "order_two_symmetry_recursion"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
         "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_003_phase_gated_compensation_transport/falsification_checks/test_phase_gated_compensation_transport_falsification.py"
@@ -5459,7 +5472,8 @@
       "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
       "artifact_manifests": [
         "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
-        "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 33,
@@ -5510,7 +5524,7 @@
         "eq:distinguished_basis_chord_recursion_principle_1b2b"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -5523,27 +5537,39 @@
         "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/falsification_checks/test_involution_to_chord_linearization_falsification.py"
       ],
       "first_label": "app:tne_found_involution_chord_linearization",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b2b/abstract_orbitaffine_chord_equivalence.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b/equivariant_linearization_of_an_involution.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/2b/parity_propagation_along_the_orbit_chord.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/1b2b/abstract_orbitaffine_chord_equivalence.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "flowpoint_spatiality",
       "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
@@ -5569,8 +5595,8 @@
         "order_two_symmetry_recursion",
         "affine_spatial_involution_orbit"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
         "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/second_order_completeness/complex_003_involution_to_chord_linearization/falsification_checks/test_involution_to_chord_linearization_falsification.py"
@@ -5591,7 +5617,8 @@
       "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
       "artifact_manifests": [
         "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
-        "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 32,
@@ -5605,7 +5632,7 @@
         "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/2c/reconstruction_of_the_anti_invariant_displacement_field.py",
         "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c2c/anti_invariant_fieldtwisted_section_equivalence.py"
       ],
-      "dependency_status": "not_directly_computable",
+      "dependency_status": "registered_semantic_mapping",
       "equation_labels": [
         "eq:twisted_orbit_balance_synthesis_operator",
         "eq:balanced_center_state_1c",
@@ -5641,7 +5668,7 @@
         "eq:orbit_balance_naturality_principle_1c2c"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "B-source necessity",
           "spatial closure/coercivity",
@@ -5654,27 +5681,39 @@
         "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/falsification_checks/test_twisted_orbit_balance_bundle_falsification.py"
       ],
       "first_label": "app:tne_found_twisted_orbit_balance_bundle",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c2c/anti_invariant_fieldtwisted_section_equivalence.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c/descent_of_compensation_to_a_global_spatial_section.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/2c/reconstruction_of_the_anti_invariant_displacement_field.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c2c/anti_invariant_fieldtwisted_section_equivalence.py"
       ],
+      "known_limitations": [],
       "level": "C",
       "manifest_path": "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/manifest.json",
       "mathematical_contract": {
-        "closure_predicate": null,
+        "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+          "name": "localized spatial closure",
+          "python_types": [
+            "SpatialClosureResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "finite common-shape spatial field for every declared B source",
+          "name": "common spatial B-source domain",
+          "python_types": [
+            "SpatialClosureInput"
+          ],
+          "shape": null
         },
         "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "flowpoint_spatiality",
       "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
@@ -5696,9 +5735,12 @@
         "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
       ],
       "source_complex_id": "twisted_orbit_balance_bundle",
-      "source_complex_ids": [],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "source_complex_ids": [
+        "phase_gated_compensation_transport",
+        "involution_to_chord_linearization"
+      ],
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
         "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/falsification_checks/test_twisted_orbit_balance_bundle_falsification.py"
@@ -13145,7 +13187,7 @@
       "source_complex_id": "dfi_spectrum_normalized_existence_and_normalization_breakdown",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_dfi_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
@@ -13276,7 +13318,7 @@
       "source_complex_id": "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_dfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
@@ -13408,7 +13450,7 @@
       "source_complex_id": "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_dfi_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
@@ -13431,7 +13473,8 @@
       "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
       "artifact_manifests": [
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/artifacts/manifest.json",
-        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 14,
@@ -13463,7 +13506,7 @@
         "eq:dfi04_joint_synthesis_1a2a"
       ],
       "falsification": {
-        "execution_status": "proxy",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "domain/codomain guards",
           "theorem law",
@@ -13476,25 +13519,37 @@
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_dfi_adaptive_applicability_and_contextual_instability/falsification_checks/test_dfi_adaptive_applicability_and_contextual_instability_falsification.py"
       ],
       "first_label": "app:dfi_complex_04",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_dfi_adaptive_applicability_and_contextual_instability/1a2a/conditional_adaptive_applicability_classification.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_dfi_adaptive_applicability_and_contextual_instability/1a/dfi_adaptive_applicability_theorem.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_dfi_adaptive_applicability_and_contextual_instability/2a/dfi_contextual_instability_theorem.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_dfi_adaptive_applicability_and_contextual_instability/1a2a/conditional_adaptive_applicability_classification.py"
       ],
+      "known_limitations": [],
       "level": "A",
       "manifest_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_dfi_adaptive_applicability_and_contextual_instability/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "response, applicability mask, and explicit instability residual",
+          "name": "contextual applicability law",
+          "python_types": [
+            "EntropicApplicability"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "finite mapped data, positive spectrum, and threshold",
+          "name": "adaptively mapped DFI input",
+          "python_types": [
+            "ApplicabilityInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
+        "exact_semantics": true,
         "invariant": null,
-        "operator": null,
+        "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.contracts.applicability_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
         "simulation_runner": null,
         "source_removal_check_count": 0
       },
@@ -13520,8 +13575,8 @@
       ],
       "source_complex_id": "dfi_adaptive_applicability_and_contextual_instability",
       "source_complex_ids": [],
-      "status": "proxy",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dynamic_fluctuation_index.py",
@@ -14001,7 +14056,7 @@
         "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_dfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
@@ -14134,7 +14189,7 @@
         "dfi_adaptive_applicability_and_contextual_instability"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_dfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
@@ -14267,7 +14322,7 @@
         "dfi_simulation_consistency_and_simulation_breakdown"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dynamic_fluctuation_index.py",
@@ -14400,7 +14455,7 @@
         "flowpoint_certified_dfi_validation_functional"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_dfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",
@@ -14528,7 +14583,7 @@
       "source_complex_id": "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_pdfi_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -14654,7 +14709,7 @@
       "source_complex_id": "flowpoint_parity_correspondence_and_decoupling",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -14782,7 +14837,7 @@
       "source_complex_id": "pdfi_entropic_predictability_and_fluctuation_ambiguity",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -14907,7 +14962,7 @@
       "source_complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15032,7 +15087,7 @@
       "source_complex_id": "pdfi_elastic_equivalence_and_decoupling",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15157,7 +15212,7 @@
       "source_complex_id": "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15289,7 +15344,7 @@
         "flowpoint_parity_correspondence_and_decoupling"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15421,7 +15476,7 @@
         "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15553,7 +15608,7 @@
         "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15692,7 +15747,7 @@
         "elastic_calibration_completeness_functional"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pdfi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
@@ -15830,7 +15885,7 @@
       "source_complex_id": "dfi_elastic_equivalence_and_breakdown",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_elastic_pi_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -15967,7 +16022,7 @@
       "source_complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -16097,7 +16152,7 @@
       "source_complex_id": "elastic_curvature_entropy_duality_and_decoupling",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -16227,7 +16282,7 @@
       "source_complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_elastic_pi_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -16358,7 +16413,7 @@
         "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -16489,7 +16544,7 @@
         "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -16625,7 +16680,7 @@
         "curvature_certified_simulation_residual"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
@@ -16752,7 +16807,7 @@
       "source_complex_id": "weighted_path_functional_and_norm_admissibility",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_elastic_pi_norm_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -16874,7 +16929,7 @@
       "source_complex_id": "elastic_field_ratios_and_weight_regularity",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/boundaries/test_elastic_pi_norm_boundaries.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -16999,7 +17054,7 @@
       "source_complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_norm_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -17125,7 +17180,7 @@
         "pdfi_elastic_norm_equivalence_and_decoupling"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_norm_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -17284,7 +17339,7 @@
         "pdfi_elastic_norm_interface"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_norm_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -17416,7 +17471,7 @@
         "elastic_field_ratios_and_weight_regularity"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_norm_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -17549,7 +17604,7 @@
         "pdfi_elastic_norm_equivalence_and_decoupling"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_norm_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -17691,7 +17746,7 @@
         "entropy_pdfi_calibrated_norm_residual"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_elastic_pi_norm_contracts.py",
         "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
@@ -17814,7 +17869,7 @@
       "source_complex_id": "elastic_dubler_duality_closure",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -17936,7 +17991,7 @@
       "source_complex_id": "elastic_dubler_pdfi_frequency_shift_dual_closure",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -18061,7 +18116,7 @@
       "source_complex_id": "elastic_dubler_e_curvature_duality",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -18182,7 +18237,7 @@
       "source_complex_id": "elastic_entropic_energy_equivalence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -19718,7 +19773,7 @@
         "elastic_dubler_pdfi_frequency_shift_dual_closure"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -19843,7 +19898,7 @@
         "elastic_dubler_effect::elastic_entropic_energy_equivalence"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -20628,7 +20683,7 @@
         "elastic_log_curvature_energy_production_law"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
@@ -21103,7 +21158,7 @@
       "source_complex_id": "elastic_dubler_curvature_correspondence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -21268,7 +21323,7 @@
       "source_complex_id": "elastic_e_curvature_encoding_curvature_ambiguity_divergence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -21407,7 +21462,7 @@
       "source_complex_id": "elastic_gravitational_memory_instant_relaxation",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -21539,7 +21594,7 @@
       "source_complex_id": "elastic_black_hole_emergence_triviality_of_breakdown",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -22361,7 +22416,7 @@
         "elastic_e_curvature_encoding_curvature_ambiguity_divergence"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -22485,7 +22540,7 @@
         "elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -22508,7 +22563,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -22522,7 +22578,7 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/2b/singular_or_unmapped_barrier_failure.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b2b/complete_barrier_classification.py"
       ],
-      "dependency_status": "not_directly_computable",
+      "dependency_status": "registered_semantic_mapping",
       "equation_labels": [
         "eq:drv_edi_b03_product_carrier",
         "eq:drv_edi_b03_1b",
@@ -22535,7 +22591,7 @@
         "eq:drv_edi_b03_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -22548,27 +22604,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/falsification_checks/test_2_adic_curvature_regularity_barrier_falsification.py"
       ],
       "first_label": "app:drv_edi_b03",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b2b/complete_barrier_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b/finite_barrier_implies_regular_nonperforating_geometry.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/2b/singular_or_unmapped_barrier_failure.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b2b/complete_barrier_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
@@ -22590,9 +22658,12 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
       ],
       "source_complex_id": "2_adic_curvature_regularity_barrier",
-      "source_complex_ids": [],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "source_complex_ids": [
+        "bridge_duality_and_the_2_adic_criterion",
+        "elastic_curvature_smoothness_curvature_singularity"
+      ],
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
@@ -22614,7 +22685,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -22628,7 +22700,7 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/2b/error_growth_or_geometric_degeneracy_law.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/1b2b/complete_stability_identifiability_classification.py"
       ],
-      "dependency_status": "not_directly_computable",
+      "dependency_status": "registered_semantic_mapping",
       "equation_labels": [
         "eq:drv_edi_b04_product_carrier",
         "eq:drv_edi_b04_1b",
@@ -22641,7 +22713,7 @@
         "eq:drv_edi_b04_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -22654,27 +22726,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/falsification_checks/test_stability_conditioned_geometric_identifiability_falsification.py"
       ],
       "first_label": "app:drv_edi_b04",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/1b2b/complete_stability_identifiability_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/1b/stable_identifiable_geometry_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/2b/error_growth_or_geometric_degeneracy_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/1b2b/complete_stability_identifiability_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_004_stability_conditioned_geometric_identifiability/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
@@ -22696,9 +22780,12 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
       ],
       "source_complex_id": "stability_conditioned_geometric_identifiability",
-      "source_complex_ids": [],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "source_complex_ids": [
+        "elastic_entropic_stability_entropic_instability",
+        "elastic_geometric_consistency_geometric_degeneracy"
+      ],
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
@@ -22820,7 +22907,7 @@
         "memory_resolved_horizon_reconstruction"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
@@ -22843,7 +22930,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 8,
@@ -22857,7 +22945,7 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/2c/nonattainment_or_nonunique_geometry_law.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c2c/complete_regularized_geometry_classification.py"
       ],
-      "dependency_status": "not_directly_computable",
+      "dependency_status": "registered_semantic_mapping",
       "equation_labels": [
         "eq:drv_edi_c02_spatial_carrier",
         "eq:drv_edi_c02_1c",
@@ -22869,7 +22957,7 @@
         "eq:drv_edi_c02_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "B-source necessity",
           "spatial closure/coercivity",
@@ -22882,27 +22970,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/falsification_checks/test_regularized_stable_geometric_reconstruction_falsification.py"
       ],
       "first_label": "app:drv_edi_c02",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c2c/complete_regularized_geometry_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c/existence_and_stable_uniqueness_of_the_regularized_geometry.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/2c/nonattainment_or_nonunique_geometry_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/1c2c/complete_regularized_geometry_classification.py"
       ],
+      "known_limitations": [],
       "level": "C",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/third_order_completeness/complex_002_regularized_stable_geometric_reconstruction/manifest.json",
       "mathematical_contract": {
-        "closure_predicate": null,
+        "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+          "name": "localized spatial closure",
+          "python_types": [
+            "SpatialClosureResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "finite common-shape spatial field for every declared B source",
+          "name": "common spatial B-source domain",
+          "python_types": [
+            "SpatialClosureInput"
+          ],
+          "shape": null
         },
         "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
@@ -22924,9 +23024,12 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
       ],
       "source_complex_id": "regularized_stable_geometric_reconstruction",
-      "source_complex_ids": [],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "source_complex_ids": [
+        "2_adic_curvature_regularity_barrier",
+        "stability_conditioned_geometric_identifiability"
+      ],
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
@@ -23067,7 +23170,7 @@
       "source_complex_id": "locality_decomposition_nonlocal_entropic_divergence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -23212,7 +23315,7 @@
       "source_complex_id": "emergent_spiral_density_wave_spiral_dissolution",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -23340,7 +23443,7 @@
       "source_complex_id": "entropic_curvature_superposition_duality",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -23483,7 +23586,7 @@
       "source_complex_id": "elastic_entropic_energy_equivalence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -24810,7 +24913,7 @@
         "emergent_spiral_density_wave_spiral_dissolution"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -24934,7 +25037,7 @@
         "locality_driven_gravity::elastic_entropic_energy_equivalence"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -25494,7 +25597,7 @@
         "curvature_driven_elastic_energy_production"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
@@ -25856,7 +25959,7 @@
       "source_complex_id": "elastic_black_hole_emergence_triviality_of_breakdown",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -25978,7 +26081,7 @@
       "source_complex_id": "bridge_duality_dual_invariant_translation",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -26101,7 +26204,7 @@
       "source_complex_id": "physical_singularity_absence_mathematical_failure_point_status",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -26221,7 +26324,7 @@
       "source_complex_id": "black_hole_observability_triviality_and_regularity",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -27153,7 +27256,7 @@
         "bridge_duality_dual_invariant_translation"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -27279,7 +27382,7 @@
         "black_hole_observability_triviality_and_regularity"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -27737,7 +27840,7 @@
         "regular_observer_horizon_hypersurface"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
@@ -28023,7 +28126,7 @@
       "source_complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -28178,7 +28281,7 @@
       "source_complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -28323,7 +28426,7 @@
       "source_complex_id": "nonlinear_overtone_generation_spectral_purity",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -28460,7 +28563,7 @@
       "source_complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -29537,7 +29640,7 @@
         "entropic_q_factor_suppression_conserved_ringdown_quality"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -29662,7 +29765,7 @@
         "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -30116,7 +30219,7 @@
         "distance_corrected_harmonic_coupling"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
@@ -30346,7 +30449,7 @@
       "source_complex_id": "cosmic_spark_flowpoint_correspondence_and_spectral_duality",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -30479,7 +30582,7 @@
       "source_complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -30613,7 +30716,7 @@
       "source_complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -30745,7 +30848,7 @@
       "source_complex_id": "wave_sector_and_expansion_sector_cosmological_projection",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -30878,7 +30981,7 @@
         "cosmic_spark_decay_and_integrated_cosmological_memory"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -31010,7 +31113,7 @@
         "wave_sector_and_expansion_sector_cosmological_projection"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -31152,7 +31255,7 @@
         "common_potential_observation_operator"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
@@ -31404,7 +31507,7 @@
       "source_complex_id": "elastic_dtqc_spectral_measure_dual_of_dtqc",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -31562,7 +31665,7 @@
       "source_complex_id": "dual_support_equivalence_support_mismatch_leakage",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -31704,7 +31807,7 @@
       "source_complex_id": "parseval_energy_bijection_l_2_energy_mismatch",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -31862,7 +31965,7 @@
       "source_complex_id": "irrational_drive_locking_commensurate_resonance_collapse",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -33335,7 +33438,7 @@
         "dtqc::dual_support_equivalence_support_mismatch_leakage"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -33459,7 +33562,7 @@
         "irrational_drive_locking_commensurate_resonance_collapse"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -33482,7 +33585,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -33509,7 +33613,7 @@
         "eq:drv_dtqc_b03_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -33522,27 +33626,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/falsification_checks/test_parity_meyer_diffraction_decomposition_falsification.py"
       ],
       "first_label": "app:drv_dtqc_b03",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/1b2b/complete_parity_meyer_diffraction_decomposition_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/1b/parity_meyer_diffraction_decomposition_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/2b/parity_meyer_diffraction_decomposition_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/1b2b/complete_parity_meyer_diffraction_decomposition_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_003_parity_meyer_diffraction_decomposition/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -33568,8 +33684,8 @@
         "meyer_cut_and_project_structure_non_meyer_diffuse_support",
         "z_2_2_sign_symmetry_parity_bias_symmetry_breaking"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -33591,7 +33707,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -33618,7 +33735,7 @@
         "eq:drv_dtqc_b04_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -33631,27 +33748,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/falsification_checks/test_elastic_gain_ou_support_margin_falsification.py"
       ],
       "first_label": "app:drv_dtqc_b04",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/1b2b/complete_elastic_gain_ou_support_margin_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/1b/elastic_gain_ou_support_margin_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/2b/elastic_gain_ou_support_margin_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/1b2b/complete_elastic_gain_ou_support_margin_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_004_elastic_gain_ou_support_margin/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -33677,8 +33806,8 @@
         "elastic_invariance_of_support_nonlinear_leakage",
         "ou_noise_5_d_scatter_robustness_noise_induced_smearing"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -33700,7 +33829,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -33727,7 +33857,7 @@
         "eq:drv_dtqc_b05_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -33740,27 +33870,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/falsification_checks/test_autocorrelation_reconstruction_projector_falsification.py"
       ],
       "first_label": "app:drv_dtqc_b05",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b2b/complete_autocorrelation_reconstruction_projector_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b/autocorrelation_reconstruction_projector_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/2b/autocorrelation_reconstruction_projector_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b2b/complete_autocorrelation_reconstruction_projector_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -33786,8 +33928,8 @@
         "autocorrelation_completeness_mixed_autocorrelation",
         "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -33809,7 +33951,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -33836,7 +33979,7 @@
         "eq:drv_dtqc_b06_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -33849,27 +33992,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_006_ridge_resolved_2_adic_robustness_certificate/falsification_checks/test_ridge_resolved_2_adic_robustness_certificate_falsification.py"
       ],
       "first_label": "app:drv_dtqc_b06",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_006_ridge_resolved_2_adic_robustness_certificate/1b2b/complete_ridge_resolved_2_adic_robustness_certificate_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_006_ridge_resolved_2_adic_robustness_certificate/1b/ridge_resolved_2_adic_robustness_certificate_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_006_ridge_resolved_2_adic_robustness_certificate/2b/ridge_resolved_2_adic_robustness_certificate_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_006_ridge_resolved_2_adic_robustness_certificate/1b2b/complete_ridge_resolved_2_adic_robustness_certificate_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_006_ridge_resolved_2_adic_robustness_certificate/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -33895,8 +34050,8 @@
         "wavelet_ridge_locking_ridge_drift_shear",
         "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -33918,7 +34073,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 9,
@@ -33945,7 +34101,7 @@
         "eq:drv_dtqc_b07_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "both-source necessity",
           "additive interaction law",
@@ -33958,27 +34114,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/falsification_checks/test_drift_tail_figure_certification_functional_falsification.py"
       ],
       "first_label": "app:drv_dtqc_b07",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b2b/complete_drift_tail_figure_certification_functional_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b/drift_tail_figure_certification_functional_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/2b/drift_tail_figure_certification_functional_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b2b/complete_drift_tail_figure_certification_functional_classification.py"
       ],
+      "known_limitations": [],
       "level": "B",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/manifest.json",
       "mathematical_contract": {
         "closure_predicate": null,
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "new summed operator with residual and non-cancellation margin",
+          "name": "derived additive law",
+          "python_types": [
+            "AdditiveDerivationResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "one finite common-shape response field for every declared A source",
+          "name": "complete additive source fields",
+          "python_types": [
+            "AdditiveDerivationInput"
+          ],
+          "shape": null
         },
-        "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "exact_semantics": true,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 3
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -34005,8 +34173,8 @@
         "dfi_compatible_tail_control_tail_driven_mass_imbalance",
         "figure_backed_closure_bragg_cwt_figure_contradicted_claims"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -34128,7 +34296,7 @@
         "diophantine_parseval_locking_invariant"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_gravitational_contracts.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
@@ -34151,7 +34319,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 8,
@@ -34177,7 +34346,7 @@
         "eq:drv_dtqc_c02_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "B-source necessity",
           "spatial closure/coercivity",
@@ -34190,27 +34359,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_002_parity_meyer_noise_stable_diffraction_closure/falsification_checks/test_parity_meyer_noise_stable_diffraction_closure_falsification.py"
       ],
       "first_label": "app:drv_dtqc_c02",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_002_parity_meyer_noise_stable_diffraction_closure/1c2c/complete_parity_meyer_noise_stable_diffraction_closure_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_002_parity_meyer_noise_stable_diffraction_closure/1c/parity_meyer_noise_stable_diffraction_closure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_002_parity_meyer_noise_stable_diffraction_closure/2c/parity_meyer_noise_stable_diffraction_closure_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_002_parity_meyer_noise_stable_diffraction_closure/1c2c/complete_parity_meyer_noise_stable_diffraction_closure_classification.py"
       ],
+      "known_limitations": [],
       "level": "C",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_002_parity_meyer_noise_stable_diffraction_closure/manifest.json",
       "mathematical_contract": {
-        "closure_predicate": null,
+        "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+          "name": "localized spatial closure",
+          "python_types": [
+            "SpatialClosureResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "finite common-shape spatial field for every declared B source",
+          "name": "common spatial B-source domain",
+          "python_types": [
+            "SpatialClosureInput"
+          ],
+          "shape": null
         },
         "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 2
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -34236,8 +34417,8 @@
         "parity_meyer_diffraction_decomposition",
         "elastic_gain_ou_support_margin"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -34259,7 +34440,8 @@
       "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
       "artifact_manifests": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+        "docs/data/artifact_provenance_manifest.json"
       ],
       "audit_label_discrepancy": {
         "current_equation_label_count": 8,
@@ -34285,7 +34467,7 @@
         "eq:drv_dtqc_c03_exchange_square"
       ],
       "falsification": {
-        "execution_status": "blocked",
+        "execution_status": "executable_contract_suite",
         "obligations": [
           "B-source necessity",
           "spatial closure/coercivity",
@@ -34298,27 +34480,39 @@
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_003_certified_multiscale_dtqc_reconstruction_closure/falsification_checks/test_certified_multiscale_dtqc_reconstruction_closure_falsification.py"
       ],
       "first_label": "app:drv_dtqc_c03",
-      "implementation_modules": [],
-      "known_limitations": [
-        "retained from verified contract inventory"
+      "implementation_modules": [
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_003_certified_multiscale_dtqc_reconstruction_closure/1c2c/complete_certified_multiscale_dtqc_reconstruction_closure_classification.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_003_certified_multiscale_dtqc_reconstruction_closure/1c/certified_multiscale_dtqc_reconstruction_closure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_003_certified_multiscale_dtqc_reconstruction_closure/2c/certified_multiscale_dtqc_reconstruction_closure_failure_law.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_003_certified_multiscale_dtqc_reconstruction_closure/1c2c/complete_certified_multiscale_dtqc_reconstruction_closure_classification.py"
       ],
+      "known_limitations": [],
       "level": "C",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/third_order_completeness/complex_003_certified_multiscale_dtqc_reconstruction_closure/manifest.json",
       "mathematical_contract": {
-        "closure_predicate": null,
+        "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
         "codomain": {
-          "status": "not_directly_computable"
+          "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+          "name": "localized spatial closure",
+          "python_types": [
+            "SpatialClosureResult"
+          ]
         },
         "domain": {
-          "status": "not_directly_computable"
+          "description": "finite common-shape spatial field for every declared B source",
+          "name": "common spatial B-source domain",
+          "python_types": [
+            "SpatialClosureInput"
+          ],
+          "shape": null
         },
         "exact_semantics": false,
-        "invariant": null,
-        "operator": null,
+        "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+        "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
         "parameter_constraints": [],
-        "residual": null,
+        "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
         "simulation_runner": null,
-        "source_removal_check_count": 0
+        "source_removal_check_count": 3
       },
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
@@ -34345,8 +34539,8 @@
         "ridge_resolved_2_adic_robustness_certificate",
         "drift_tail_figure_certification_functional"
       ],
-      "status": "blocked",
-      "status_reason": "retained from verified contract inventory",
+      "status": "implemented",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
         "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
@@ -34482,7 +34676,7 @@
       "source_complex_id": "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -34641,7 +34835,7 @@
       "source_complex_id": "dfi_entropy_plateau_dfi_divergence_spiking",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -34800,7 +34994,7 @@
       "source_complex_id": "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -34959,7 +35153,7 @@
       "source_complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -36242,7 +36436,7 @@
         "dfi_entropy_plateau_dfi_divergence_spiking"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -36373,7 +36567,7 @@
         "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -36503,7 +36697,7 @@
         "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
         "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_003_parity_resolved_autocorrelation_operator/falsification_checks/test_parity_resolved_autocorrelation_operator_falsification.py"
@@ -36632,7 +36826,7 @@
         "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
         "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_004_support_transport_drift_certificate/falsification_checks/test_support_transport_drift_certificate_falsification.py"
@@ -36761,7 +36955,7 @@
         "epoch_operator_closure_backprop_optimiser_induced_resonance"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
         "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_005_epochsupport_commutator_closure/falsification_checks/test_epoch_support_commutator_closure_falsification.py"
@@ -36890,7 +37084,7 @@
         "hyper_parameter_stability_wedge_instability_lobe"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
         "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/falsification_checks/test_entropic_hyperparameter_stability_margin_falsification.py"
@@ -37019,7 +37213,7 @@
         "pv_parseval_spectral_energy_lock"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_qenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
@@ -37148,7 +37342,7 @@
         "support_transport_drift_certificate"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
         "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_002_paritysupport_memory_field_closure/falsification_checks/test_parity_support_memory_field_closure_falsification.py"
@@ -37283,7 +37477,7 @@
         "entropic_hyperparameter_stability_margin"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
         "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_003_optimizer_stability_wedge_spatial_closure/falsification_checks/test_optimizer_stability_wedge_spatial_closure_falsification.py"
@@ -37441,7 +37635,7 @@
       "source_complex_id": "prime_motif_boundedness_motif_induced_energy_divergence",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -37600,7 +37794,7 @@
       "source_complex_id": "flowpoint_parity_locking_parity_leakage",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -37759,7 +37953,7 @@
       "source_complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -37918,7 +38112,7 @@
       "source_complex_id": "elastic_e_curvature_regularization_curvature_ambiguity_leakage",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -38913,7 +39107,7 @@
         "flowpoint_parity_locking_parity_leakage"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -39044,7 +39238,7 @@
         "elastic_e_curvature_regularization_curvature_ambiguity_leakage"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -39174,7 +39368,7 @@
         "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/falsification_checks/test_quasicrystal_soi_annealing_transport_falsification.py"
@@ -39303,7 +39497,7 @@
         "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_004_exhaustionparseval_coverage_energy/falsification_checks/test_exhaustion_parseval_coverage_energy_falsification.py"
@@ -39432,7 +39626,7 @@
         "prime_shell_growth_regularity_shell_instability_phase_slips"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_005_parity_orthogonal_shell_growth_connection/falsification_checks/test_parity_orthogonal_shell_growth_connection_falsification.py"
@@ -39561,7 +39755,7 @@
         "dfi_elastic_prime_curvature_coupling"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_pgqenn_contracts.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
@@ -39698,7 +39892,7 @@
         "parity_orthogonal_shell_growth_connection"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
         "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/falsification_checks/test_multiscale_prime_shell_training_closure_falsification.py"
@@ -39807,7 +40001,7 @@
       "source_complex_id": "motif_spectral_dual_regularity_law_for_soinets",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -39917,7 +40111,7 @@
       "source_complex_id": "soi_modality_invariant_convergence_and_collapse_completeness",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -41023,7 +41217,7 @@
       "source_complex_id": "soi_universal_entropy_plateau_theorem",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -41133,7 +41327,7 @@
       "source_complex_id": "soi_modality_dual_closure",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -41648,7 +41842,7 @@
         "soi_universal_entropy_plateau_theorem"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -41774,7 +41968,7 @@
         "soi_modality_dual_closure"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -41899,7 +42093,7 @@
         "soi_cross_domain_generalization_and_collapse"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_003_cross_modal_generalizationcollapse_transfer/falsification_checks/test_cross_modal_generalization_collapse_transfer_falsification.py"
@@ -42023,7 +42217,7 @@
         "soi_modality_dual_closure"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_004_modalitycompositionality_collapse_connection/falsification_checks/test_modality_compositionality_collapse_connection_falsification.py"
@@ -42147,7 +42341,7 @@
         "soi_entropy_minimization_and_entropic_catastrophe"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_005_errorentropy_dissipation_functional/falsification_checks/test_error_entropy_dissipation_functional_falsification.py"
@@ -42271,7 +42465,7 @@
         "spectral_phase_locking_and_collapse_in_soinet"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_006_entropyspectral_phase_locking_operator/falsification_checks/test_entropy_spectral_phase_locking_operator_falsification.py"
@@ -42395,7 +42589,7 @@
         "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_007_modalityspectrum_representation_coupling/falsification_checks/test_modality_spectrum_representation_coupling_falsification.py"
@@ -42519,7 +42713,7 @@
         "soinet_meta_learnability_dual_closure"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_008_expressivitymeta_learnability_stability_functional/falsification_checks/test_expressivity_meta_learnability_stability_functional_falsification.py"
@@ -42643,7 +42837,7 @@
         "soi_cross_domain_generalization_and_collapse"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_009_stackdomain_generalization_transport/falsification_checks/test_stack_domain_generalization_transport_falsification.py"
@@ -42767,7 +42961,7 @@
         "soinet_universal_cloning_principle_cloning_failure_duality"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_010_universalizationcloning_obstruction_functional/falsification_checks/test_universalization_cloning_obstruction_functional_falsification.py"
@@ -42907,7 +43101,7 @@
         "modality_collapse_symmetry_operator"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_soinets_contracts.py",
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
@@ -43036,7 +43230,7 @@
         "modality_compositionality_collapse_connection"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_002_cross_modal_compositional_spatial_closure/falsification_checks/test_cross_modal_compositional_spatial_closure_falsification.py"
@@ -43164,7 +43358,7 @@
         "entropy_spectral_phase_locking_operator"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_003_errorentropy_phase_locking_spatial_closure/falsification_checks/test_error_entropy_phase_locking_spatial_closure_falsification.py"
@@ -43292,7 +43486,7 @@
         "expressivity_meta_learnability_stability_functional"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/falsification_checks/test_modality_spectrum_meta_learnability_spatial_closure_falsification.py"
@@ -43423,7 +43617,7 @@
         "universalization_cloning_obstruction_functional"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
         "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_005_stackdomain_cloning_spatial_closure/falsification_checks/test_stack_domain_cloning_spatial_closure_falsification.py"
@@ -43544,7 +43738,7 @@
       "source_complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -43662,7 +43856,7 @@
       "source_complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -43783,7 +43977,7 @@
       "source_complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -43936,7 +44130,7 @@
       "source_complex_id": "dual_closure_idempotence_and_oscillatory_non_closure",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44089,7 +44283,7 @@
       "source_complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44242,7 +44436,7 @@
       "source_complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44395,7 +44589,7 @@
       "source_complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44528,7 +44722,7 @@
         "non_manifestability_of_the_anti_circle_and_observation_collapse"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44669,7 +44863,7 @@
         "karoubi_envelope_equivalence_and_missing_idempotent_splittings"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44809,7 +45003,7 @@
         "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -44932,7 +45126,7 @@
       "source_complex_id": "global_symmetry_and_kd_charge_conservation",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/noether_structure/test/test_noether_structure.py",
@@ -45055,7 +45249,7 @@
       "source_complex_id": "local_gauge_symmetry_and_elastic_divergence_identity",
       "source_complex_ids": [],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/noether_structure/test/test_noether_structure.py",
@@ -45192,7 +45386,7 @@
         "local_gauge_symmetry_and_elastic_divergence_identity"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/noether_structure/test/test_noether_structure.py",
@@ -45339,7 +45533,7 @@
         "idempotent_splitting_and_oscillation_obstruction"
       ],
       "status": "implemented",
-      "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -45473,7 +45667,7 @@
         "noether_constant_to_local_transgression"
       ],
       "status": "implemented",
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "test_modules": [
         "tests/contracts/test_completeness_contracts.py",
         "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
@@ -45501,8 +45695,8 @@
   "inventory_source": "external authoritative appendices plus audited stable inventory",
   "schema_version": "1.0",
   "statuses": {
-    "blocked": 35,
-    "implemented": 159,
-    "proxy": 157
+    "blocked": 22,
+    "implemented": 173,
+    "proxy": 156
   }
 }

@@ -19,9 +19,26 @@ from the_nothingness_effect.artificial_intelligence.soinets.derived_contracts im
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.derived_contracts import (
     contracts as dfi_contracts,
 )
+from the_nothingness_effect.foundational_architecture.spatiality.derived_contracts import contracts as spatiality_contracts
+from the_nothingness_effect.foundational_architecture.symmetry.derived_contracts import contracts as symmetry_contracts
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.derived_contracts import (
+    contracts as dtqc_contracts,
+)
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.derived_contracts import (
+    contracts as edi_contracts,
+)
 
 
-CONTRACTS = dfi_contracts() + qenn_contracts() + pgqenn_contracts() + soinet_contracts()
+CONTRACTS = (
+    dfi_contracts()
+    + qenn_contracts()
+    + pgqenn_contracts()
+    + soinet_contracts()
+    + symmetry_contracts()
+    + spatiality_contracts()
+    + edi_contracts()
+    + dtqc_contracts()
+)
 
 
 def _source_fields(contract):
@@ -63,7 +80,7 @@ def test_derived_law_uses_every_source_and_is_not_a_passive_carrier(contract):
 
 def test_all_affected_generated_contracts_are_unique_and_source_complete():
     identifiers = [str(contract.complex_id) for contract in CONTRACTS]
-    assert len(identifiers) == 23
+    assert len(identifiers) == 36
     assert len(identifiers) == len(set(identifiers))
     assert all(len(contract.source_ids) >= 2 for contract in CONTRACTS)
     assert all(contract.residual is not None for contract in CONTRACTS)

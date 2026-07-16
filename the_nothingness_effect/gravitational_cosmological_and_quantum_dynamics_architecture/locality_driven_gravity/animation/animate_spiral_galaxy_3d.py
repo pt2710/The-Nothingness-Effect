@@ -29,7 +29,7 @@ def run(
     seed: int = 2710,
     arm_mode: int | str = 2,
 ) -> dict[str, object]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     params = LocalityGravityParams(
         n_particles=96 if quick else 240,
         steps=42 if quick else 160,

@@ -36,7 +36,7 @@ the_nothingness_effect/the_completeness_theorem/
     run_godel_boundary_figures.py
     run_completeness_supplementary.py
     visualization.py
-  supplementary/
+  simulation/artifacts/supplementary/
     traces/
     metrics/
     figures/
@@ -66,7 +66,7 @@ python -m pytest the_nothingness_effect/the_completeness_theorem/tests
 All generated files are written under:
 
 ```text
-the_nothingness_effect/the_completeness_theorem/supplementary/
+the_nothingness_effect/the_completeness_theorem/simulation/artifacts/supplementary/
 ```
 
 The runners create missing output directories automatically. The outputs are
@@ -76,36 +76,36 @@ deterministic and do not require network calls or local absolute paths.
 
 Godel/completeness illustrative figures:
 
-- `supplementary/figures/godel_boundary_graph.png`
-- `supplementary/figures/dual_closure_lattice.png`
-- `supplementary/figures/closure_iteration_trace.png`
-- `supplementary/figures/incompleteness_vs_dual_closure_phase.png`
+- `simulation/artifacts/supplementary/figures/godel_boundary_graph.png`
+- `simulation/artifacts/supplementary/figures/dual_closure_lattice.png`
+- `simulation/artifacts/supplementary/figures/closure_iteration_trace.png`
+- `simulation/artifacts/supplementary/figures/incompleteness_vs_dual_closure_phase.png`
 
 Completeness-theorem supplementary figures:
 
-- `supplementary/figures/closure_fixed_point_trace.png`
-- `supplementary/figures/duality_pair_coverage.png`
-- `supplementary/figures/closure_failure_modes.png`
-- `supplementary/figures/completeness_operator_convergence.png`
-- `supplementary/figures/closure_state_space_projection.png`
+- `simulation/artifacts/supplementary/figures/closure_fixed_point_trace.png`
+- `simulation/artifacts/supplementary/figures/duality_pair_coverage.png`
+- `simulation/artifacts/supplementary/figures/closure_failure_modes.png`
+- `simulation/artifacts/supplementary/figures/completeness_operator_convergence.png`
+- `simulation/artifacts/supplementary/figures/closure_state_space_projection.png`
 
 ## Trace And Metrics List
 
 JSON traces:
 
-- `supplementary/traces/godel_boundary_trace.json`
-- `supplementary/traces/fully_pairable_system_trace.json`
-- `supplementary/traces/missing_dual_system_trace.json`
-- `supplementary/traces/circular_dependency_system_trace.json`
-- `supplementary/traces/contradiction_system_trace.json`
-- `supplementary/traces/unpaired_boundary_system_trace.json`
+- `simulation/artifacts/supplementary/traces/godel_boundary_trace.json`
+- `simulation/artifacts/supplementary/traces/fully_pairable_system_trace.json`
+- `simulation/artifacts/supplementary/traces/missing_dual_system_trace.json`
+- `simulation/artifacts/supplementary/traces/circular_dependency_system_trace.json`
+- `simulation/artifacts/supplementary/traces/contradiction_system_trace.json`
+- `simulation/artifacts/supplementary/traces/unpaired_boundary_system_trace.json`
 
 CSV metrics:
 
-- `supplementary/metrics/closure_iteration_metrics.csv`
-- `supplementary/metrics/duality_pair_coverage.csv`
-- `supplementary/metrics/closure_failure_modes.csv`
-- `supplementary/metrics/fixed_point_summary.csv`
+- `simulation/artifacts/supplementary/metrics/closure_iteration_metrics.csv`
+- `simulation/artifacts/supplementary/metrics/duality_pair_coverage.csv`
+- `simulation/artifacts/supplementary/metrics/closure_failure_modes.csv`
+- `simulation/artifacts/supplementary/metrics/fixed_point_summary.csv`
 
 ## Interpretation Guide
 

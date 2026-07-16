@@ -75,7 +75,7 @@ def test_relocated_runtime_facade_audits_and_hawking_benchmarks_exist() -> None:
     assert (
         hawking / "simulation" / "theoretical_benchmarks" / "simulate_hawking_theoretical_benchmark.py"
     ).is_file()
-    assert list((hawking / "simulation").glob("*.png"))
+    assert list((hawking / "simulation" / "artifacts").rglob("*.png"))
 
 
 def test_each_ai_architecture_owns_all_six_test_and_simulation_outputs() -> None:
@@ -84,14 +84,15 @@ def test_each_ai_architecture_owns_all_six_test_and_simulation_outputs() -> None
         for mode in ("test", "simulation"):
             producer = root / mode
             assert (producer / "run_all_capabilities.py").is_file()
+            output = producer / "artifacts"
             aggregate = json.loads(
-                (producer / f"{architecture}_{mode}_six_output_manifest.json").read_text(encoding="utf-8")
+                (output / f"{architecture}_{mode}_six_output_manifest.json").read_text(encoding="utf-8")
             )
             assert aggregate["capability_count"] == 6
             assert tuple(aggregate["output_groups"]) == CAPABILITIES
-            assert (producer / f"{architecture}_{mode}_architecture_figure.png").is_file()
+            assert (output / f"{architecture}_{mode}_architecture_figure.png").is_file()
             for capability in CAPABILITIES:
-                capability_dir = producer / capability
+                capability_dir = output / capability
                 assert (capability_dir / f"{capability}_{mode}_results.csv").is_file()
                 assert (capability_dir / f"{capability}_{mode}_figure.png").is_file()
                 manifest = json.loads(
@@ -110,7 +111,7 @@ def test_requested_theorem_modules_own_test_and_simulation_evidence() -> None:
         assert (root / "test" / "test_evidence.py").is_file()
         assert (root / "simulation" / "run_evidence.py").is_file()
         for mode in ("test", "simulation"):
-            producer = root / mode
+            producer = root / mode / "artifacts"
             assert (producer / f"{module}_{mode}_evidence_manifest.json").is_file()
             movie = producer / f"{module}_{mode}_residual_animation.gif"
             with Image.open(movie) as image:
@@ -126,7 +127,7 @@ def test_dtqc_recreates_all_five_static_views_and_dynamic_phase_clock() -> None:
         "dfi_surface.png", "elastic_pi_surface.png",
     }
     for mode in ("test", "simulation"):
-        producer = LOCAL_MODULES["dtqc"] / mode
+        producer = LOCAL_MODULES["dtqc"] / mode / "artifacts"
         assert expected.issubset({path.name for path in producer.glob("*.png")})
         with Image.open(producer / "dtqc_phase_clock_animation.gif") as image:
             assert image.is_animated

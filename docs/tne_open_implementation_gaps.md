@@ -1,44 +1,34 @@
 # TNE open implementation gaps
 
-## Current boundary
+Of 351 verified complexes, 173 are implemented, 156 remain proxy-only, and 22 A-level source laws remain blocked. There are no blocked B/C rows and no carrier-label conflicts. Proxy B/C rows remain open because their complete source/operator/closure obligations are not yet certified, not because of their names.
 
-Of 351 verified theorem complexes, 136 are `implemented`, 180 remain
-`proxy_only`, and 35 are `not_implemented`. Proxy status means related legacy
-code exists but the complete source laws, required residuals, source-removal
-tests, closure obligations, or provenance are not yet certified.
+| Module | Implemented | Proxy | Blocked |
+| --- | --- | --- | --- |
+| black_hole_dynamics | 7 | 11 | 0 |
+| cosmological_spark_dynamics | 7 | 0 | 1 |
+| countable_infinity | 0 | 6 | 0 |
+| dfi | 8 | 3 | 0 |
+| dtqc | 14 | 0 | 11 |
+| elastic_dubler_effect | 7 | 22 | 0 |
+| elastic_dubler_interferometry | 10 | 0 | 5 |
+| elastic_pi_ripples | 7 | 11 | 0 |
+| flowpoint_closure_interface | 0 | 0 | 2 |
+| flowpoint_duality | 0 | 0 | 1 |
+| flowpoint_spatiality | 2 | 0 | 1 |
+| flowpoint_symmetry | 1 | 0 | 1 |
+| locality_driven_gravity | 7 | 16 | 0 |
+| observation_collapse | 0 | 16 | 0 |
+| pgqenn | 11 | 6 | 0 |
+| qenn | 13 | 8 | 0 |
+| soinets | 19 | 14 | 0 |
+| spatiality | 0 | 5 | 0 |
+| spectrum_of_infinities | 0 | 16 | 0 |
+| symmetry | 0 | 5 | 0 |
+| uncountable_infinity | 0 | 17 | 0 |
 
-| Module/family | Total | Implemented | Proxy | Not implemented |
-| --- | ---: | ---: | ---: | ---: |
-| Foundational closure appendix | 79 | 6 | 65 | 8 |
-| Gravitational/cosmological/quantum appendix | 136 | 49 | 60 | 27 |
-| AI appendix | 71 | 21 | 50 | 0 |
-| Fluctuation/elastic appendix | 36 | 31 | 5 | 0 |
+## Next safe order
 
-The 35 absent canonical implementations are concentrated in:
-
-- DTQC: 18;
-- Elastic Dubler Interferometry: 8;
-- foundational Flowpoint spatiality/symmetry/closure interfaces: 8;
-- Cosmological Spark Dynamics: 1.
-
-The largest proxy-only families are foundational symmetry, spatiality,
-countable/uncountable infinity, Spectrum of Infinities, observation/collapse,
-unselected physical derivations, and the remaining 50 AI complexes.
-
-## Next safe implementation order
-
-1. Complete the foundational symmetry, spatiality, infinity, SOI, and
-   observation/collapse A laws before deriving their B/C families.
-2. Expand physical modules only in source-complete 4A→2B→1C slices, preserving
-   toy solvers as numerical backends rather than source laws.
-3. Complete the remaining AI A dependencies before adding B residual energies
-   and C spatial fields; do not infer contracts from neural finiteness.
-4. Add property/refinement tests for every new coercivity, attainment,
-   observability, reconstruction, and boundary obligation.
-
-Every individual open row, proposed file, required test, artifact, and decision
-note is preserved in `docs/data/theorem_complex_implementation_matrix.csv`.
-The audit's 170-row repository file plan is separately recorded in
-`docs/data/repository_file_revision_status.csv`: 42 exact planned paths are
-present, 58 responsibilities are relocated or partially addressed through
-conservative alternative paths, and 70 remain explicitly open.
+1. Implement the remaining blocked A source laws directly from their authoritative equations.
+2. Upgrade proxy A laws before promoting dependent proxy B/C contracts.
+3. Preserve genuine additive and spatial semantics, deterministic source-removal tests, and fail-closed numerical boundaries.
+4. Regenerate theorem and artifact manifests after every status promotion.

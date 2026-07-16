@@ -1,0 +1,32 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "device": "cpu",
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "generated_files": [
+    "qenn_contract_metrics.csv",
+    "qenn_spatial_closure.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "8ed4f8704232742fc5199a761645fe5551ca3d0290b2202702a98629e2bb40fc",
+  "parameters": {
+    "batch_size": 6,
+    "feature_count": 16,
+    "fixture": "qenn-training-field-v1",
+    "module": "qenn"
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/qenn/simulation",
+  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    3.652345895767212
+  ],
+  "seed": 0,
+  "theorem_complex_id": "pv_inflation_pure_point_diffraction_non_pv_salem_leakage"
+}

@@ -258,13 +258,13 @@ def animate(frame_index):
 
     # Explicitly save static PNG at frame 420 (1-based index).
     if frame_index == 419:
-        outpng_420 = os.path.join(script_dir, "flowpoint_frame_420.png")
+        outpng_420 = os.path.join(script_dir, "artifacts", "flowpoint_frame_420.png")
         plt.savefig(outpng_420, dpi=300)
         print(f"[INFO] Frame 420 saved: {outpng_420}")
 
     # Explicitly save static PNG at frame 800 (final frame).
     if frame_index == LAST_FRAME:
-        outpng_800 = os.path.join(script_dir, "flowpoint_frame_800.png")
+        outpng_800 = os.path.join(script_dir, "artifacts", "flowpoint_frame_800.png")
         plt.savefig(outpng_800, dpi=300)
         print(f"[INFO] Frame 800 saved: {outpng_800}")
 
@@ -285,17 +285,17 @@ ax.set_ylim3d(-5, 5)
 ax.set_zlim3d(-5, 5)
 
 # Save the animation as an MP4 video.
-mp4_file = os.path.join(script_dir, "flowpoint_oscillation_simulation_animation.mp4")
+mp4_file = os.path.join(script_dir, "artifacts", "flowpoint_oscillation_simulation_animation.mp4")
 ani.save(mp4_file, writer=animation.FFMpegWriter(fps=30, bitrate=1800))
 print(f"[INFO] MP4 saved: {mp4_file}")
 
 # Save the animation as a GIF.
-gif_file = os.path.join(script_dir, "flowpoint_oscillation_simulation_animation.gif")
+gif_file = os.path.join(script_dir, "artifacts", "flowpoint_oscillation_simulation_animation.gif")
 ani.save(gif_file, writer=PillowWriter(fps=20))
 print(f"[INFO] GIF saved: {gif_file}")
 
 # Export the simulation data to a CSV file.
-csv_file = os.path.join(script_dir, "flowpoint_oscillation_simulation_data.csv")
+csv_file = os.path.join(script_dir, "artifacts", "flowpoint_oscillation_simulation_data.csv")
 with open(csv_file, "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerows(csv_data)
@@ -341,7 +341,7 @@ for i in range(6):
 fig.tight_layout()
 
 # Save the static subplot figure.
-fig_out = os.path.join(script_dir, "flowpoint_oscillation_simulation_subplots.png")
+fig_out = os.path.join(script_dir, "artifacts", "flowpoint_oscillation_simulation_subplots.png")
 fig.savefig(fig_out, dpi=300)
 print(f"[INFO] Single figure with 6 subplots saved: {fig_out}")
 plt.close(fig)

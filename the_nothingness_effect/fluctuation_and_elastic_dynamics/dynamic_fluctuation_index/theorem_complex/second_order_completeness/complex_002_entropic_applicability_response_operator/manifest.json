@@ -112,7 +112,7 @@
     "dfi_adaptive_applicability_and_contextual_instability"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/contracts/test_dfi_contracts.py",
     "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/test_dfi.py",

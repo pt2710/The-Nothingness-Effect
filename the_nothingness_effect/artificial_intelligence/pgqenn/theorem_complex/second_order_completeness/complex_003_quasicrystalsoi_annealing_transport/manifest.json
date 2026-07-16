@@ -110,7 +110,7 @@
     "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
     "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/falsification_checks/test_quasicrystal_soi_annealing_transport_falsification.py"

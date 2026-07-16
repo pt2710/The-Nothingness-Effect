@@ -141,9 +141,9 @@ def visualize_spatiality_dynamic(results, filename_animation):
 def main():
     print("Starting spatiality tests...")
     n_tests = 1000
-    csv_file = os.path.join(script_dir, 'spatiality_test_results.csv')
-    image_file_static = os.path.join(script_dir, 'spatiality_visualization_static.png')
-    image_file_animation = os.path.join(script_dir, 'spatiality_visualization_animation.gif')
+    csv_file = os.path.join(script_dir, "artifacts", 'spatiality_test_results.csv')
+    image_file_static = os.path.join(script_dir, "artifacts", 'spatiality_visualization_static.png')
+    image_file_animation = os.path.join(script_dir, "artifacts", 'spatiality_visualization_animation.gif')
     results = test_spatiality(n_tests)
     save_results(results, csv_file)
     visualize_spatiality_static(results, image_file_static)

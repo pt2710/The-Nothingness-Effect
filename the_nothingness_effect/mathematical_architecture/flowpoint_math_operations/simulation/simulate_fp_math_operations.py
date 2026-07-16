@@ -251,7 +251,7 @@ def save_results_csv_per_op(results):
     # Save a separate CSV file for each operation.
     for op, mapping in operations.items():
         filename = f"{op}_results.csv"
-        filepath = os.path.join(script_dir, filename)
+        filepath = os.path.join(script_dir, "artifacts", filename)
         with open(filepath, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(["Input", "FP_Result", "Standard_Result"])
@@ -271,7 +271,7 @@ def save_plot(fig, filename):
         fig (matplotlib.figure.Figure): The figure object to save.
         filename (str): The desired filename for the saved plot.
     """
-    filepath = os.path.join(script_dir, filename)
+    filepath = os.path.join(script_dir, "artifacts", filename)
     if os.path.exists(filepath):
         print(f"Plot {filepath} already exists, skipping.")
         plt.close(fig)
@@ -325,7 +325,7 @@ def create_animation(x_values, fp_results, standard_results,
                                   interval=50, repeat=False)
 
     if filename is not None:
-        anim_path = os.path.join(script_dir, filename)
+        anim_path = os.path.join(script_dir, "artifacts", filename)
         if os.path.exists(anim_path):
             print(f"Animation {anim_path} already exists, skipping.")
         else:

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Elastic-Gain OU Support Margin Failure Law',
     authoritative_title_tex='Elastic-Gain OU Support Margin Failure Law',
     equation_labels=('eq:drv_dtqc_b04_2b', 'eq:drv_dtqc_b04_theorem_2b', 'eq:drv_dtqc_b04_res_2b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

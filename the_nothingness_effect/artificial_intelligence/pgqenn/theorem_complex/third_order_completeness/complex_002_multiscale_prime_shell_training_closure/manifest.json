@@ -117,7 +117,7 @@
     "parity_orthogonal_shell_growth_connection"
   ],
   "status": "implemented",
-  "status_reason": "current appendix equations validated through a typed derived operator; legacy carrier/product labels are non-semantic",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
     "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/falsification_checks/test_multiscale_prime_shell_training_closure_falsification.py"

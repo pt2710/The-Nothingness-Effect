@@ -111,7 +111,7 @@
   "source_complex_id": "finite_approximation_and_vanishing_residual_energy",
   "source_complex_ids": [],
   "status": "implemented",
-  "status_reason": "retained from verified contract inventory",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
     "tests/boundaries/test_mathematical_closure_boundaries.py",
     "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/test/test_flowpoint_pi_approximation.py",

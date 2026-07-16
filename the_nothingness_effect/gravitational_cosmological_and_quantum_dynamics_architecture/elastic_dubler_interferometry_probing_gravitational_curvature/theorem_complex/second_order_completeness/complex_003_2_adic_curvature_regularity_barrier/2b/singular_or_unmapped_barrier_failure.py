@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Singular or Unmapped Barrier Failure',
     authoritative_title_tex='Singular or Unmapped Barrier Failure',
     equation_labels=('eq:drv_edi_b03_2b', 'eq:drv_edi_b03_theorem_2b', 'eq:drv_edi_b03_res_2b'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

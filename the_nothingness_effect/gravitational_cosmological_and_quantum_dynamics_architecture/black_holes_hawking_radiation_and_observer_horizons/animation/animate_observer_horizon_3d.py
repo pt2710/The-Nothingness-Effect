@@ -21,7 +21,7 @@ def run(
     fps: int | None = None,
     preferred_format: str = "auto",
 ) -> dict[str, object]:
-    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR
+    root = Path(output_dir) if output_dir is not None else SCRIPT_DIR / "artifacts"
     params, result = build_black_hole_result(quick=quick)
     fps_value = fps or (10 if quick else 16)
     frame_count = len(result["time"])

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Complete Parity-Meyer Noise-Stable Diffraction Closure Classification',
     authoritative_title_tex='Complete Parity-Meyer Noise-Stable Diffraction Closure Classification',
     equation_labels=('eq:drv_dtqc_c02_spatial_carrier', 'eq:drv_dtqc_c02_joint', 'eq:drv_dtqc_c02_exchange_square'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

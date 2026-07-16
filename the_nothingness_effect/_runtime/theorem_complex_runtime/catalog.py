@@ -115,6 +115,10 @@ CONTRACT_MODULES = (
     ),
     ("the_nothingness_effect.artificial_intelligence.pgqenn.contracts", "contracts"),
     (
+        "the_nothingness_effect.artificial_intelligence.pgqenn.source_contracts",
+        "contracts",
+    ),
+    (
         "the_nothingness_effect.artificial_intelligence.pgqenn.derived_contracts",
         "contracts",
     ),

@@ -59,6 +59,9 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
         for contract in source_contracts()
     ]
     evaluations = base_evaluations + source_evaluations
+    source_ids = {
+        str(contract.complex_id) for contract in source_contracts()
+    }
     rows = [
         {
             "theorem_complex_id": str(contract.complex_id),
@@ -69,7 +72,9 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
             "closure_status": evaluation.status.value,
             "exact_semantics": contract.exact_semantics,
             "source_registry": (
-                "extended_A" if (contract, evaluation) in source_evaluations else "base"
+                "extended_A"
+                if str(contract.complex_id) in source_ids
+                else "base"
             ),
         }
         for contract, evaluation in evaluations
@@ -96,9 +101,6 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
     plt.close(figure_handle)
     commit = git_commit(Path(__file__).resolve().parents[4])
     manifests = []
-    source_ids = {
-        str(contract.complex_id) for contract in source_contracts()
-    }
     for contract, evaluation in evaluations:
         residual = () if evaluation.residual is None else evaluation.residual.vector
         simulation = SimulationResult(

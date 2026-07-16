@@ -17,6 +17,9 @@ else:
     from verify_tne_repository_layout import verify
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
+    bind_inventory_rows,
+    bind_provenance_manifest,
+    default_artifact_provenance,
     provenance_binding_report,
     source_binding_report,
 )
@@ -39,7 +42,7 @@ def _git(*arguments: str) -> str:
 
 
 def _rows(path: Path):
-    with path.open(newline="", encoding="utf-8") as handle:
+    with path.open(newline="", encoding="utf-8-sig") as handle:
         return list(csv.DictReader(handle))
 
 
@@ -50,7 +53,11 @@ def _change_counts(output: Path) -> dict[str, int]:
             continue
         fields = line.split("\t")
         statuses[fields[-1]] = fields[0][0]
-    for path in _git("ls-files", "--others", "--exclude-standard").splitlines():
+    for path in _git(
+        "ls-files",
+        "--others",
+        "--exclude-standard",
+    ).splitlines():
         if path:
             statuses[path] = "A"
     statuses.setdefault(output.as_posix(), "A")
@@ -66,12 +73,16 @@ def _prior_tests() -> dict[str, object]:
     if not path.is_file():
         return {}
     try:
-        return dict(json.loads(path.read_text(encoding="utf-8")).get("tests", {}))
+        return dict(
+            json.loads(path.read_text(encoding="utf-8")).get("tests", {})
+        )
     except (json.JSONDecodeError, TypeError):
         return {}
 
 
-def _resolve_test_metrics(arguments: argparse.Namespace) -> dict[str, object]:
+def _resolve_test_metrics(
+    arguments: argparse.Namespace,
+) -> dict[str, object]:
     prior = _prior_tests()
     return {
         "passed": (
@@ -103,8 +114,13 @@ def _resolve_test_metrics(arguments: argparse.Namespace) -> dict[str, object]:
 
 
 def build(arguments: argparse.Namespace) -> dict[str, object]:
-    matrix = _rows(Path("docs/data/theorem_complex_implementation_matrix.csv"))
-    requested_counts = Counter(row["implementation_status"] for row in matrix)
+    raw_matrix = _rows(
+        Path("docs/data/theorem_complex_implementation_matrix.csv")
+    )
+    matrix = bind_inventory_rows(raw_matrix)
+    requested_counts = Counter(
+        row["implementation_status"] for row in matrix
+    )
     statuses = release_statuses()
     effective_counts = Counter(statuses.values())
     implemented_levels = Counter(
@@ -114,13 +130,20 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
     )
     downgraded = list(dependency_downgrades())
     authority = source_binding_report()
-    provenance_authority = provenance_binding_report()
 
-    artifact = json.loads(
-        Path("docs/data/artifact_provenance_manifest.json").read_text(
-            encoding="utf-8"
-        )
-    )
+    artifact_path = default_artifact_provenance()
+    raw_artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
+    artifact = bind_provenance_manifest(raw_artifact)
+    provenance_authority = provenance_binding_report(artifact_path)
+    manifests = artifact.get("manifests")
+    if not isinstance(manifests, list):
+        raise RuntimeError("effective artifact provenance lacks manifest list")
+    manifested = {
+        str(item["theorem_complex_id"])
+        for item in manifests
+        if isinstance(item, dict)
+    }
+
     verification = json.loads(
         Path("docs/data/appendix_source_verification.json").read_text(
             encoding="utf-8"
@@ -128,9 +151,16 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
     )
     revisions = Counter(
         row["revision_status"]
-        for row in _rows(Path("docs/data/repository_file_revision_status.csv"))
+        for row in _rows(
+            Path("docs/data/repository_file_revision_status.csv")
+        )
     )
 
+    requested = {
+        row["complex_id"]
+        for row in matrix
+        if row["implementation_status"] == "implemented"
+    }
     implemented = {
         identifier
         for identifier, status in statuses.items()
@@ -138,11 +168,16 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
     }
     contracts = release_implemented_contracts()
     unresolved = [
-        {"complex_id": str(contract.complex_id), "source_id": str(source_id)}
+        {
+            "complex_id": str(contract.complex_id),
+            "source_id": str(source_id),
+        }
         for contract in contracts
         for source_id in contract.source_ids
         if str(source_id) not in implemented
     ]
+    missing_provenance = sorted(implemented - manifested)
+    nonrequested_provenance = sorted(manifested - requested)
 
     tracked_tex = _git("ls-files", "*.tex").splitlines()
     carrier_conflicts = [
@@ -152,7 +187,9 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         and row.get("carrier_violation", "").lower() == "true"
     ]
     test_execution = json.loads(
-        Path("reports/test_execution_manifest.json").read_text(encoding="utf-8")
+        Path("reports/test_execution_manifest.json").read_text(
+            encoding="utf-8"
+        )
     )
     simulation_execution = json.loads(
         Path("reports/simulation_execution_manifest.json").read_text(
@@ -168,7 +205,9 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         "failed": sum(not item["passed"] for item in layout.results),
     }
 
-    duplicate_ids = len(matrix) - len({row["complex_id"] for row in matrix})
+    duplicate_ids = len(matrix) - len(
+        {row["complex_id"] for row in matrix}
+    )
     release_blockers: list[str] = []
     if int(tests["failed"]) != 0:
         release_blockers.append("test_failures")
@@ -176,12 +215,18 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         ("test_entrypoints", test_execution["summary"]),
         ("simulation_entrypoints", simulation_execution["summary"]),
     ):
-        if int(summary.get("failed", 0)) or int(summary.get("timeout", 0)):
+        if int(summary.get("failed", 0)) or int(
+            summary.get("timeout", 0)
+        ):
             release_blockers.append(kind)
     if layout_payload["failed"]:
         release_blockers.append("layout_verification")
     if unresolved:
         release_blockers.append("unresolved_internal_dependencies")
+    if missing_provenance:
+        release_blockers.append("missing_artifact_provenance")
+    if nonrequested_provenance:
+        release_blockers.append("nonrequested_artifact_provenance")
     if carrier_conflicts:
         release_blockers.append("carrier_conflicts")
     if duplicate_ids:
@@ -204,14 +249,15 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         release_blockers.append("dependency_environment")
 
     payload = {
-        "schema_version": "1.2",
+        "schema_version": "1.3",
         "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
         "default_branch": "main",
         "work_branch": _git("branch", "--show-current"),
         "repository_start_commit": START_COMMIT,
         "repository_result_commit": _git("rev-parse", "HEAD"),
         "result_commit_note": (
-            "Immutable implementation/artifact source commit used for this QA evaluation."
+            "Immutable implementation/artifact source commit used for this "
+            "QA evaluation."
         ),
         "python_version": arguments.python_version,
         "dependency_status": arguments.dependency_status,
@@ -246,6 +292,14 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         "dependency_downgrades": downgraded,
         "authoritative_source_binding": authority,
         "artifact_provenance_source_binding": provenance_authority,
+        "artifact_provenance_coverage": {
+            "effective_manifest_path": artifact_path.as_posix(),
+            "requested_implemented": len(requested),
+            "manifested": len(manifested),
+            "release_implemented": len(implemented),
+            "missing_release_implementations": missing_provenance,
+            "nonrequested_manifests": nonrequested_provenance,
+        },
         "artifact_summary": artifact["summary"],
         "entrypoint_execution": {
             "test": test_execution["summary"],
@@ -256,12 +310,16 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
         "unresolved_internal_dependencies": unresolved,
         "tracked_tex_files": tracked_tex,
         "appendix_source_checksum_verification": verification,
-        "source_law_regression_status": arguments.source_law_regression_status,
+        "source_law_regression_status": (
+            arguments.source_law_regression_status
+        ),
         "security_confirmation": (
             "No authoritative appendix .tex file was copied into, tracked by, "
             "committed to, or pushed to the GitHub repository."
         ),
-        "claim_boundary": "finite computational support; not a formal proof substitute",
+        "claim_boundary": (
+            "finite computational support; not a formal proof substitute"
+        ),
         "release_blockers": sorted(set(release_blockers)),
         "final_qa_passed": not release_blockers,
     }
@@ -281,8 +339,14 @@ if __name__ == "__main__":
     parser.add_argument("--warnings", type=int)
     parser.add_argument("--runtime-seconds", type=float)
     parser.add_argument("--python-version", default="3.14.3")
-    parser.add_argument("--dependency-status", default="pip check passed")
-    parser.add_argument("--source-law-regression-status", default="passed")
+    parser.add_argument(
+        "--dependency-status",
+        default="pip check passed",
+    )
+    parser.add_argument(
+        "--source-law-regression-status",
+        default="passed",
+    )
     parser.add_argument(
         "--check",
         action="store_true",

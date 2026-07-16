@@ -125,6 +125,14 @@ jobs:
           python tools/export_effective_theorem_matrix.py
           --output reports/effective_theorem_complex_implementation_matrix.csv
           --report reports/effective_theorem_complex_implementation_matrix.json
+      - name: Upload effective theorem matrix
+        uses: actions/upload-artifact@v4
+        with:
+          name: effective-theorem-matrix
+          path: |
+            reports/effective_theorem_complex_implementation_matrix.csv
+            reports/effective_theorem_complex_implementation_matrix.json
+          if-no-files-found: error
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
 

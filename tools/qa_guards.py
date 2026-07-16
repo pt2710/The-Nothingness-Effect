@@ -12,7 +12,7 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
-from tools.consistency_catalog import implemented_contracts
+from tools.consistency_catalog import release_implemented_contracts
 from tools.verify_tne_repository_layout import verify
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
     dependency_downgrades,
@@ -44,7 +44,7 @@ def main() -> int:
     }
     downgraded = dependency_downgrades()
 
-    contracts = implemented_contracts()
+    contracts = release_implemented_contracts()
     contract_ids = [str(contract.complex_id) for contract in contracts]
     if len(contract_ids) != len(set(contract_ids)) or set(contract_ids) != implemented:
         raise SystemExit("active contract catalog does not exactly match dependency-closed inventory")

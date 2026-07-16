@@ -48,6 +48,10 @@ CONTRACT_MODULES = (
         "contracts",
     ),
     (
+        "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.source_contracts",
+        "contracts",
+    ),
+    (
         "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.derived_contracts",
         "contracts",
     ),
@@ -101,6 +105,10 @@ CONTRACT_MODULES = (
     ),
     ("the_nothingness_effect.the_completeness_theorem.contracts", "contracts"),
     ("the_nothingness_effect.artificial_intelligence.qenn.contracts", "contracts"),
+    (
+        "the_nothingness_effect.artificial_intelligence.qenn.source_contracts",
+        "contracts",
+    ),
     (
         "the_nothingness_effect.artificial_intelligence.qenn.derived_contracts",
         "contracts",

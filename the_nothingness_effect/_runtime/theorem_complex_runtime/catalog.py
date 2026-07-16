@@ -2,8 +2,9 @@
 
 The prior catalog implementation is preserved byte-identically in
 ``_catalog_impl.py``. This adapter extends its module registry with canonical
-Countable-Infinity, Uncountable-Infinity, and Observation-and-Collapse
-contracts while delegating catalog semantics and release closure.
+Countable-Infinity, Uncountable-Infinity, Observation-and-Collapse, and
+Spectrum-of-Infinities contracts while delegating catalog semantics and release
+closure.
 """
 
 from __future__ import annotations
@@ -25,6 +26,11 @@ _FOUNDATIONAL_MODULES = (
     (
         "the_nothingness_effect.foundational_architecture.observation_and_collapse."
         "canonical_contracts",
+        "contracts",
+    ),
+    (
+        "the_nothingness_effect.foundational_architecture."
+        "the_spectrum_of_infinities.canonical_contracts",
         "contracts",
     ),
 )

@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import hashlib
+from pathlib import Path
+
 import numpy as np
 
 from the_nothingness_effect._runtime.theorem_complex_runtime import ContractStatus
@@ -114,14 +116,41 @@ def test_dtqc_robustness_drift_tail_and_figure_evidence():
     assert drift.status is ContractStatus.EXACT
     tail = evaluate_dfi_compatible_tail_control(DFITailInput(np.array([1.0, 1.0, 0.0, 0.0]), np.ones(4), np.array([True, True, False, False]), (2, 4), True))
     assert tail.status is ContractStatus.NUMERICAL_CANDIDATE
-    digest = hashlib.sha256(b"figure").hexdigest()
-    figure = evaluate_figure_backed_closure(FigureClosureInput(np.zeros((4, 2)), np.arange(4.0), np.zeros(3), (digest,), {"window": 4}, 0, True))
+
+    relative = "docs/figures/figure_provenance_fixture.svg"
+    path = Path(relative)
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    figure = evaluate_figure_backed_closure(
+        FigureClosureInput(
+            np.zeros((4, 2)),
+            np.arange(4.0),
+            np.zeros(3),
+            (digest,),
+            {"window": 4, "generated_files": [relative]},
+            0,
+            True,
+        )
+    )
     assert figure.status is ContractStatus.NUMERICAL_CANDIDATE
+    assert figure.provenance["artifact_bytes_verified"] is True
     assert figure.provenance["claim_boundary"].startswith("finite computational support")
+
+    tampered = evaluate_figure_backed_closure(
+        FigureClosureInput(
+            np.zeros((4, 2)),
+            np.arange(4.0),
+            np.zeros(3),
+            ("0" * 64,),
+            {"window": 4, "generated_files": [relative]},
+            0,
+            True,
+        )
+    )
+    assert tampered.status is ContractStatus.FALSIFIED
+    assert tampered.reason_code == "FIGURE_BYTES_OR_HASH_MISMATCH"
 
 
 def test_nonfinite_input_is_never_masked():
     assert evaluate_kernel_alternator([np.nan], [0.0]).status is ContractStatus.INVALID_INPUT
     invalid = evaluate_autocorrelation_completeness(AutocorrelationInput(np.inf, 0.0, 0.0, 0.0, True))
     assert invalid.status is ContractStatus.INVALID_INPUT
-

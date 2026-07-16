@@ -81,7 +81,7 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
             for contract, evaluation in evaluations
         ],
     )
-    commit = git_commit(Path(__file__).resolve().parents[4])
+    commit = git_commit(Path(__file__).resolve().parents[3])
     manifests = []
     for contract, evaluation in evaluations:
         simulation = SimulationResult(

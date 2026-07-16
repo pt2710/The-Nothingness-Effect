@@ -3,178 +3,52 @@
   "authority_rule": "Checksums bind repository contracts and effective inventory rows to the latest externally maintained authoritative appendix sources. The authoritative .tex files are not tracked in this repository. Implementation-status overrides are permitted only for named executable contracts with committed tests and artifact generators.",
   "binding_mode": "runtime-enforced manifest binding with generated effective matrix and provenance",
   "appendices": {
-    "appendix_canonical_self_negating_involution_flowpoint.tex": {
-      "sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
-      "status": "verified_unchanged"
-    },
-    "appendix_tne_mathematical_closure_architecture.tex": {
-      "sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
-      "status": "recertified_runtime_binding"
-    },
-    "appendix_tne_foundational_closure_architecture.tex": {
-      "sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
-      "status": "recertified_runtime_binding"
-    },
-    "appendix_the_completeness_theorem.tex": {
-      "sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
-      "status": "recertified_six_obligations_integrated"
-    }
+    "appendix_canonical_self_negating_involution_flowpoint.tex": {"sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206", "status": "verified_unchanged"},
+    "appendix_tne_mathematical_closure_architecture.tex": {"sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011", "status": "recertified_runtime_binding"},
+    "appendix_tne_foundational_closure_architecture.tex": {"sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69", "status": "recertified_symmetry_spatiality_runtime_binding"},
+    "appendix_the_completeness_theorem.tex": {"sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3", "status": "recertified_six_obligations_integrated"}
   },
   "implementation_status_overrides": {
-    "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component": {
-      "status": "implemented",
-      "reason": "Typed finite autocorrelation and continuous-mass diagnostic with targeted failure-dual tests.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift": {
-      "status": "implemented",
-      "reason": "Typed bounded-remainder, memory, and drift diagnostic with perturbation tests.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap": {
-      "status": "implemented",
-      "reason": "Typed curvature/entropy landscape certificate with explicit sharp-minimum defect.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "epoch_operator_closure_backprop_optimiser_induced_resonance": {
-      "status": "implemented",
-      "reason": "Typed epoch-operator spectral-radius certificate with expanding-trajectory obstruction test.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines": {
-      "status": "implemented",
-      "reason": "Typed Flowpoint parity spectral diagnostic with asymmetric-line failure witness.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "hyper_parameter_stability_wedge_instability_lobe": {
-      "status": "implemented",
-      "reason": "Typed finite stability-wedge margin and instability-lobe residual.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "inflation_collapse_support_invariance_nonlinear_sideband_mixing": {
-      "status": "implemented",
-      "reason": "Typed inflation-collapse support projection with nonlinear sideband leakage witness.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "qenn::dual_support_equivalence_support_mismatch_leakage": {
-      "status": "implemented",
-      "reason": "Typed dual-support intersection and leakage certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"
-    },
-    "motif_exhaustion_completeness_coverage_bias_long_memory_drift": {
-      "status": "implemented",
-      "reason": "Typed MPL-TC motif coverage and run-drift certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"
-    },
-    "parity_orthogonal_optimization_cross_parity_gradient_contamination": {
-      "status": "implemented",
-      "reason": "Typed parity-sector orthogonality and cross-gradient contamination certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"
-    },
-    "prime_quasicrystal_support_equivalence_support_mismatch_leakage": {
-      "status": "implemented",
-      "reason": "Typed prime-graph/quasicrystal support intersection and leakage certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"
-    },
-    "prime_shell_growth_regularity_shell_instability_phase_slips": {
-      "status": "implemented",
-      "reason": "Typed prime-shell reconstruction and 2-adic phase-slip certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"
-    },
-    "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy": {
-      "status": "implemented",
-      "reason": "Typed joint energy/temperature scaling invariance certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"
-    },
-    "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch": {
-      "status": "implemented",
-      "reason": "Typed layerwise Parseval energy certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"
-    },
-    "hierarchical_soi_stack_transfer_cross_regime_collapse_duality": {
-      "status": "implemented",
-      "reason": "Typed hierarchical modality-stack transfer and collapse defect.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soi_cross_domain_generalization_and_collapse": {
-      "status": "implemented",
-      "reason": "Typed leave-one-domain-out generalization and collapse certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soi_entropy_minimization_and_entropic_catastrophe": {
-      "status": "implemented",
-      "reason": "Typed modality entropy-minimization and catastrophe residual.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability": {
-      "status": "implemented",
-      "reason": "Typed spectral-centroid classification and degeneracy certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_cross_modal_compositionality_modality_invariant_collapse_principle": {
-      "status": "implemented",
-      "reason": "Typed cross-modal associativity and invariant-collapse certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_cross_modal_transfer_generalization_and_dual_stability": {
-      "status": "implemented",
-      "reason": "Typed cross-modal Gram transfer and dual-stability certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_error_contraction_and_dual_error_orthogonality": {
-      "status": "implemented",
-      "reason": "Typed error-contraction and adjacent-error orthogonality certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_meta_learnability_dual_closure": {
-      "status": "implemented",
-      "reason": "Typed meta-state rank and condition certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_modality_invariant_learning_and_universal_adaptation": {
-      "status": "implemented",
-      "reason": "Typed normalized modality-invariance and adaptation certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_universal_cloning_principle_cloning_failure_duality": {
-      "status": "implemented",
-      "reason": "Typed held-out-modality cloning and failure certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle": {
-      "status": "implemented",
-      "reason": "Typed expressivity-rank and entropy-minimal generalization certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "soinet_universal_generalization_principle_failure_brittleness_duality": {
-      "status": "implemented",
-      "reason": "Typed held-out spatial-regime brittleness certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "spectral_phase_locking_and_collapse_in_soinet": {
-      "status": "implemented",
-      "reason": "Typed dominant-spectrum phase-locking and collapse certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet": {
-      "status": "implemented",
-      "reason": "Typed entropy-spread and collapse-degeneracy certificate.",
-      "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"
-    },
-    "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": {
-      "status": "implemented",
-      "reason": "Typed decomposition, permutation-covariance, additive-total, and reproducibility contract with positive and invalid-mapping tests.",
-      "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"
-    },
-    "dfi_flowpoint_consistency_and_interface_inconsistency": {
-      "status": "implemented",
-      "reason": "Typed feature-involution, component/total consistency, and commuting-interface contract with obstruction tests.",
-      "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"
-    },
-    "dfi_simulation_consistency_and_simulation_breakdown": {
-      "status": "implemented",
-      "reason": "Typed canonical-versus-simulated DFI validation record with explicit component, total, maximum-error, and breakdown witnesses.",
-      "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"
-    }
+    "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component": {"status": "implemented", "reason": "Typed finite autocorrelation and continuous-mass diagnostic with targeted failure-dual tests.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift": {"status": "implemented", "reason": "Typed bounded-remainder, memory, and drift diagnostic with perturbation tests.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap": {"status": "implemented", "reason": "Typed curvature/entropy landscape certificate with explicit sharp-minimum defect.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "epoch_operator_closure_backprop_optimiser_induced_resonance": {"status": "implemented", "reason": "Typed epoch-operator spectral-radius certificate with expanding-trajectory obstruction test.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines": {"status": "implemented", "reason": "Typed Flowpoint parity spectral diagnostic with asymmetric-line failure witness.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "hyper_parameter_stability_wedge_instability_lobe": {"status": "implemented", "reason": "Typed finite stability-wedge margin and instability-lobe residual.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "inflation_collapse_support_invariance_nonlinear_sideband_mixing": {"status": "implemented", "reason": "Typed inflation-collapse support projection with nonlinear sideband leakage witness.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "qenn::dual_support_equivalence_support_mismatch_leakage": {"status": "implemented", "reason": "Typed dual-support intersection and leakage certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py"},
+    "motif_exhaustion_completeness_coverage_bias_long_memory_drift": {"status": "implemented", "reason": "Typed MPL-TC motif coverage and run-drift certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"},
+    "parity_orthogonal_optimization_cross_parity_gradient_contamination": {"status": "implemented", "reason": "Typed parity-sector orthogonality and cross-gradient contamination certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"},
+    "prime_quasicrystal_support_equivalence_support_mismatch_leakage": {"status": "implemented", "reason": "Typed prime-graph/quasicrystal support intersection and leakage certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"},
+    "prime_shell_growth_regularity_shell_instability_phase_slips": {"status": "implemented", "reason": "Typed prime-shell reconstruction and 2-adic phase-slip certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"},
+    "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy": {"status": "implemented", "reason": "Typed joint energy/temperature scaling invariance certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"},
+    "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch": {"status": "implemented", "reason": "Typed layerwise Parseval energy certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py"},
+    "hierarchical_soi_stack_transfer_cross_regime_collapse_duality": {"status": "implemented", "reason": "Typed hierarchical modality-stack transfer and collapse defect.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soi_cross_domain_generalization_and_collapse": {"status": "implemented", "reason": "Typed leave-one-domain-out generalization and collapse certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soi_entropy_minimization_and_entropic_catastrophe": {"status": "implemented", "reason": "Typed modality entropy-minimization and catastrophe residual.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability": {"status": "implemented", "reason": "Typed spectral-centroid classification and degeneracy certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_cross_modal_compositionality_modality_invariant_collapse_principle": {"status": "implemented", "reason": "Typed cross-modal associativity and invariant-collapse certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_cross_modal_transfer_generalization_and_dual_stability": {"status": "implemented", "reason": "Typed cross-modal Gram transfer and dual-stability certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_error_contraction_and_dual_error_orthogonality": {"status": "implemented", "reason": "Typed error-contraction and adjacent-error orthogonality certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_meta_learnability_dual_closure": {"status": "implemented", "reason": "Typed meta-state rank and condition certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_modality_invariant_learning_and_universal_adaptation": {"status": "implemented", "reason": "Typed normalized modality-invariance and adaptation certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_universal_cloning_principle_cloning_failure_duality": {"status": "implemented", "reason": "Typed held-out-modality cloning and failure certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle": {"status": "implemented", "reason": "Typed expressivity-rank and entropy-minimal generalization certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "soinet_universal_generalization_principle_failure_brittleness_duality": {"status": "implemented", "reason": "Typed held-out spatial-regime brittleness certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "spectral_phase_locking_and_collapse_in_soinet": {"status": "implemented", "reason": "Typed dominant-spectrum phase-locking and collapse certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet": {"status": "implemented", "reason": "Typed entropy-spread and collapse-degeneracy certificate.", "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py"},
+    "dfi_uniqueness_of_decomposition_and_mapping_ambiguity": {"status": "implemented", "reason": "Typed decomposition, permutation-covariance, additive-total, and reproducibility contract with positive and invalid-mapping tests.", "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"},
+    "dfi_flowpoint_consistency_and_interface_inconsistency": {"status": "implemented", "reason": "Typed feature-involution, component/total consistency, and commuting-interface contract with obstruction tests.", "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"},
+    "dfi_simulation_consistency_and_simulation_breakdown": {"status": "implemented", "reason": "Typed canonical-versus-simulated DFI validation record with explicit component, total, maximum-error, and breakdown witnesses.", "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py"},
+    "schedule_controlled_parity_coding_and_uniform_minimal_involution": {"status": "implemented", "reason": "Exact binary schedule parity encoding, involutive state history, and decoder contract.", "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py"},
+    "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action": {"status": "implemented", "reason": "Exact minimal C2 orbit action with bidirectional invariance and nonzero-state boundary.", "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py"},
+    "schedule_controlled_orbit_transport": {"status": "implemented", "reason": "Exact parity-cocycle orbit transport with identity, inverse, cocycle, and source-removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py"},
+    "involutive_generator_word_closure_and_conjugacy": {"status": "implemented", "reason": "Exact generator-word parity reduction and conjugacy certificate with source-removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py"},
+    "schedule_driven_generator_word_field": {"status": "implemented", "reason": "Exact schedule-driven word-field recurrence, conjugacy, boundary, and source-removal closure.", "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py"},
+    "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure": {"status": "implemented", "reason": "Exact reflection and finite cyclic orbit classification with closure residuals.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
+    "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection": {"status": "implemented", "reason": "Exact quarter-turn and phase-conjugate reflection law with involution and conjugacy residuals.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
+    "cyclic_square_root_lifting_and_phase_anchored_dihedralization": {"status": "implemented", "reason": "Exact cyclic square-root double-cover lift with order, dihedral, and source-removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
+    "orbit_harmonic_phase_resolution": {"status": "implemented", "reason": "Exact orbit DFT, Parseval reconstruction, half-step phase resolution, and source-removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
+    "equivariant_orbit_spectral_reconstruction": {"status": "implemented", "reason": "Exact tight-frame reconstruction and cyclic-shift equivariance with source-removal closure.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"}
   }
 }

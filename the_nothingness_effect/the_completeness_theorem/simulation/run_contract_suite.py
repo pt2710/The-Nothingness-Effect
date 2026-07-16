@@ -89,10 +89,10 @@ def fixture() -> CompletenessInput:
             descent_data_fixed=True,
         ),
         TerminalData(
-            admissibility_representation_class=np.array([0.0, 0.0]),
-            invariance_conservation_class=np.array([0.0, 0.0]),
+            admissibility_representation_class=np.array([2.0, 2.0]),
+            invariance_conservation_class=np.array([2.0, 2.0]),
             observable_samples=np.array([3.0, 3.0, 3.0]),
-            endomorphism_samples=np.array([0.0, 0.0]),
+            endomorphism_samples=np.array([2.0, 2.0]),
         ),
     )
 

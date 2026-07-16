@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from dataclasses import replace
 from pathlib import Path
 
 import numpy as np
@@ -132,8 +131,8 @@ def test_spectral_attainment_and_compression_fail_closed():
     lossy_evaluation = evaluate_contract(covariance, lossy)
     assert lossy_evaluation.status is ClosureStatus.OPEN
     assert (
-        lossy_evaluation.output.authority_certificate.
-        compression_reconstruction_residual
+        lossy_evaluation.output.authority_certificate
+        .compression_reconstruction_residual
         > 0.0
     )
 

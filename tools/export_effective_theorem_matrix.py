@@ -1,4 +1,4 @@
-"""Export the authority-bound theorem matrix and a source-binding audit report."""
+"""Export authority-bound theorem inventory and artifact provenance state."""
 
 from __future__ import annotations
 
@@ -14,7 +14,10 @@ if str(REPOSITORY_ROOT) not in sys.path:
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     bind_inventory_rows,
+    bind_provenance_manifest,
+    default_artifact_provenance,
     default_implementation_matrix,
+    provenance_binding_report,
     source_binding_report,
 )
 
@@ -54,6 +57,29 @@ def export(
     return report
 
 
+def export_provenance(
+    output: Path,
+    report_output: Path,
+    provenance: Path | None = None,
+) -> dict[str, object]:
+    source = provenance if provenance is not None else default_artifact_provenance()
+    raw = json.loads(source.read_text(encoding="utf-8"))
+    effective = bind_provenance_manifest(raw)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(
+        json.dumps(effective, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    report = provenance_binding_report(source)
+    report["effective_provenance_output"] = output.as_posix()
+    report_output.parent.mkdir(parents=True, exist_ok=True)
+    report_output.write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return report
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -67,13 +93,32 @@ if __name__ == "__main__":
         default=Path("reports/effective_theorem_complex_implementation_matrix.json"),
     )
     parser.add_argument("--matrix", type=Path)
-    args = parser.parse_args()
-    result = export(args.output, args.report, args.matrix)
-    print(
-        "effective_matrix_exported="
-        f"{args.output} rows={result['total_rows']} "
-        f"overrides={result['source_binding_overrides']} "
-        f"effective_mismatches={result['effective_source_sha_mismatches']}"
+    parser.add_argument(
+        "--provenance-output",
+        type=Path,
+        default=Path("reports/effective_artifact_provenance_manifest.json"),
     )
-    if int(result["effective_source_sha_mismatches"]):
+    parser.add_argument(
+        "--provenance-report",
+        type=Path,
+        default=Path("reports/effective_artifact_provenance_binding.json"),
+    )
+    parser.add_argument("--provenance", type=Path)
+    args = parser.parse_args()
+    matrix_result = export(args.output, args.report, args.matrix)
+    provenance_result = export_provenance(
+        args.provenance_output,
+        args.provenance_report,
+        args.provenance,
+    )
+    print(
+        "effective_authority_state_exported="
+        f"matrix={args.output} rows={matrix_result['total_rows']} "
+        f"matrix_overrides={matrix_result['source_binding_overrides']} "
+        f"provenance={args.provenance_output} "
+        f"provenance_overrides={provenance_result['source_binding_overrides']}"
+    )
+    if int(matrix_result["effective_source_sha_mismatches"]) or int(
+        provenance_result["effective_source_sha_mismatches"]
+    ):
         raise SystemExit(1)

@@ -1,5 +1,4 @@
 """Execute every implemented suite and build one aggregate provenance manifest."""
-
 from __future__ import annotations
 
 import argparse
@@ -26,6 +25,10 @@ from the_nothingness_effect._runtime.artifacts.io import save_csv
 from the_nothingness_effect._runtime.theorem_complex_runtime.artifacts import write_artifact_manifest
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import active_contracts
 from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
+from the_nothingness_effect._runtime.theorem_complex_runtime.dependency_sources import (
+    SPEC_BY_ID as DEPENDENCY_SOURCE_SPECS,
+    sample_input as dependency_source_sample,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import (
     AdditiveDerivationInput,
     SpatialClosureInput,
@@ -76,8 +79,7 @@ def _animation_generators() -> list[Path]:
 
 
 def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected: set[str]) -> None:
-    """Generate deterministic residual/source-removal evidence for derived laws."""
-
+    """Generate deterministic residual/failure evidence for uncovered contracts."""
     catalog = {str(contract.complex_id): contract for contract in active_contracts()}
     recertified_samples = sample_inputs()
     destination = output_root / "appendix_derived"
@@ -90,6 +92,8 @@ def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected
         }
         if identifier in recertified_samples:
             value = recertified_samples[identifier]
+        elif identifier in DEPENDENCY_SOURCE_SPECS:
+            value = dependency_source_sample(identifier)
         elif contract.level is ComplexLevel.B:
             value = AdditiveDerivationInput(fields)
         elif contract.level is ComplexLevel.C:
@@ -99,9 +103,19 @@ def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected
         evaluation = evaluate_contract(contract, value)
         removals = [check(value) for check in contract.source_removal_checks]
         residual = () if evaluation.residual is None else evaluation.residual.vector
-        table = save_csv(
-            destination / f"{identifier.replace('::', '__')}_source_removal.csv",
-            [
+        if identifier in DEPENDENCY_SOURCE_SPECS:
+            source_output = evaluation.output
+            records = [{
+                "theorem_complex_id": identifier,
+                "diagnostic_name": source_output.diagnostic_name,
+                "diagnostic_value": source_output.diagnostic_value,
+                "invariant_residual": source_output.invariant_residual,
+                "failure_metric": source_output.failure_metric,
+                "failure_condition": source_output.failure_condition,
+                "closure_status": evaluation.status.value,
+            }]
+        else:
+            records = [
                 {
                     "theorem_complex_id": identifier,
                     "source_id": str(item.source_id),
@@ -116,17 +130,30 @@ def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected
                 "necessity_residual": 0.0,
                 "necessary": True,
                 "closure_status": evaluation.status.value,
-            }],
+            }]
+        table = save_csv(
+            destination / f"{identifier.replace('::', '__')}_source_evidence.csv",
+            records,
         )
         simulation = SimulationResult(
             contract.complex_id,
             evaluation.status,
-            {"fixture": "deterministic-derived-source-fields-v1"},
+            {
+                "fixture": (
+                    "deterministic-dependency-source-witness-v1"
+                    if identifier in DEPENDENCY_SOURCE_SPECS
+                    else "deterministic-derived-source-fields-v1"
+                )
+            },
             0,
             {"absolute": 1e-10},
             tuple(float(item) for item in residual),
             (table.name,),
-            {"exact_semantics": contract.exact_semantics, "source_removal_count": len(removals)},
+            {
+                "exact_semantics": contract.exact_semantics,
+                "source_removal_count": len(removals),
+                "failure_dual_exposed": identifier in DEPENDENCY_SOURCE_SPECS,
+            },
         )
         write_artifact_manifest(
             destination / f"{identifier.replace('::', '__')}_manifest.json",

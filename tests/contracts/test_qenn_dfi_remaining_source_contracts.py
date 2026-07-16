@@ -17,6 +17,9 @@ from the_nothingness_effect.artificial_intelligence.qenn.source_contracts import
     contracts as qenn_source_contracts,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import all_contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
+    evaluate_contract,
+)
 
 
 def _qenn_input() -> QENNContractInput:
@@ -47,7 +50,7 @@ def test_qenn_remaining_source_laws_return_finite_typed_diagnostics():
     value = _qenn_input()
 
     for contract in qenn_source_contracts():
-        evaluation = contract.evaluate(value)
+        evaluation = evaluate_contract(contract, value)
         output = evaluation.output
 
         assert output.response.shape == value.signal.shape
@@ -66,16 +69,25 @@ def test_qenn_failure_duals_are_activated_by_targeted_perturbations():
 
     parity_signal = base.signal.clone()
     parity_signal[:, 1] += torch.linspace(0.0, 3.0, parity_signal.shape[0])
-    parity = parity_contract.evaluate(QENNContractInput(parity_signal))
+    parity = evaluate_contract(
+        parity_contract,
+        QENNContractInput(parity_signal),
+    )
 
     drift_signal = base.signal.clone()
     drift_signal[-1] += 20.0
-    drift = drift_contract.evaluate(QENNContractInput(drift_signal))
+    drift = evaluate_contract(
+        drift_contract,
+        QENNContractInput(drift_signal),
+    )
 
     expanding = torch.stack(
         [torch.arange(1.0, 7.0) * (1.7**step) for step in range(8)]
     )
-    epoch = epoch_contract.evaluate(QENNContractInput(expanding))
+    epoch = evaluate_contract(
+        epoch_contract,
+        QENNContractInput(expanding),
+    )
 
     assert parity.output.invariant_residual > 0.0
     assert drift.output.invariant_residual > 0.0

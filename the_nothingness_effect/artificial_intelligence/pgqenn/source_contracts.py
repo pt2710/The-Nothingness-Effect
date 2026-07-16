@@ -53,7 +53,9 @@ IMPLEMENTATION = "the_nothingness_effect/artificial_intelligence/pgqenn/source_c
 def _expand(value: torch.Tensor, features: torch.Tensor) -> torch.Tensor:
     if value.ndim == 0:
         return value.reshape(1, 1).expand_as(features)
-    if value.ndim == 1:
+    if value.ndim == 1 and value.numel() == features.shape[0]:
+        return value.reshape(-1, 1).expand_as(features)
+    if value.ndim == 1 and value.numel() == features.shape[1]:
         return value.reshape(1, -1).expand_as(features)
     return value.expand_as(features)
 
@@ -80,7 +82,6 @@ def _rfft_energy(spectrum: torch.Tensor, sample_count: int) -> torch.Tensor:
 
 def source_operator(index: int, value: PGQENNContractInput) -> PGQENNSourceLaw:
     features, adjacency = _validate(value)
-    eps = torch.finfo(features.dtype).eps
 
     if index == 0:
         normalized = _normalized_adjacency(adjacency)
@@ -132,7 +133,10 @@ def source_operator(index: int, value: PGQENNContractInput) -> PGQENNSourceLaw:
             else torch.zeros((), dtype=features.dtype, device=features.device)
         )
         response = _expand(coverage, features)
-        residual = _expand(missing.sum() + run_drift / (1.0 + run_tensor.abs().mean()), features)
+        residual = _expand(
+            missing.sum() + run_drift / (1.0 + run_tensor.abs().mean()),
+            features,
+        )
         failure = "motif coverage bias or long-memory drift in motif exhaustion"
     elif index == 3:
         spectrum = torch.fft.rfft(features, dim=0, norm="ortho")
@@ -144,7 +148,10 @@ def source_operator(index: int, value: PGQENNContractInput) -> PGQENNSourceLaw:
         failure = "layerwise weight--energy Parseval mismatch"
     elif index == 4:
         phase = torch.tensor(
-            [1.0 if depth.value % 2 == 0 else -1.0 for depth in value.graph.two_adic_depths],
+            [
+                1.0 if depth.value % 2 == 0 else -1.0
+                for depth in value.graph.two_adic_depths
+            ],
             dtype=features.dtype,
             device=features.device,
         ).unsqueeze(-1)
@@ -159,7 +166,9 @@ def source_operator(index: int, value: PGQENNContractInput) -> PGQENNSourceLaw:
             value.graph.primes, dtype=features.dtype, device=features.device
         )
         gaps = torch.diff(primes)
-        reconstructed = torch.cat((primes[:1], primes[:1] + torch.cumsum(gaps, dim=0)))
+        reconstructed = torch.cat(
+            (primes[:1], primes[:1] + torch.cumsum(gaps, dim=0))
+        )
         shell_residual = (reconstructed - primes).abs()
         depths = torch.tensor(
             [depth.value for depth in value.graph.two_adic_depths],
@@ -184,7 +193,9 @@ def source_operator(index: int, value: PGQENNContractInput) -> PGQENNSourceLaw:
     else:
         raise IndexError(index)
 
-    if not bool(torch.isfinite(response).all()) or not bool(torch.isfinite(residual).all()):
+    if not bool(torch.isfinite(response).all()) or not bool(
+        torch.isfinite(residual).all()
+    ):
         raise NonFiniteValueError("PGQENN source-law result contains NaN or infinity")
     return PGQENNSourceLaw(
         str(SOURCE_IDS[index]),

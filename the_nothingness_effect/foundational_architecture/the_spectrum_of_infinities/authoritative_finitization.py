@@ -1,7 +1,7 @@
 """Authoritative finite L1 specialization of SOI finitization.
 
 The witness implements relative simple-function approximation together with
-its exact absolute SOI scaling.  It remains a finite certificate and does not
+its exact absolute SOI scaling. It remains a finite certificate and does not
 replace the appendix proof of density or non-finitization boundaries.
 """
 
@@ -10,6 +10,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
+
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
+    DomainViolationError,
+)
 
 from .canonical_contracts import (
     FinitizationInput,
@@ -37,7 +41,7 @@ def soi_finitization_l1_law(
     target = _array(value.target, "target", 1)
     approximants = _array(value.approximants, "approximants", 2)
     if approximants.shape[1] != target.size:
-        raise ValueError("approximants and target must share a dimension")
+        raise DomainViolationError("approximants and target must share a dimension")
 
     relative_errors = np.sum(np.abs(approximants - target[None, :]), axis=1)
     absolute_errors = omega_soi * relative_errors

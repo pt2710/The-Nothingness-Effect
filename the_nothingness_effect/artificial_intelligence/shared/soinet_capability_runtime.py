@@ -9,7 +9,6 @@ reported classification scores.
 from __future__ import annotations
 
 from dataclasses import dataclass
-import math
 from typing import Any
 
 import torch
@@ -189,9 +188,13 @@ def _color_summary(image: torch.Tensor) -> torch.Tensor:
     pixels = image.reshape(-1, 3)
     mean = pixels.mean(dim=0)
     std = pixels.std(dim=0, unbiased=False)
-    luminance = (pixels * torch.tensor((0.2126, 0.7152, 0.0722))).sum(dim=-1)
+    luminance = (
+        pixels * torch.tensor((0.2126, 0.7152, 0.0722))
+    ).sum(dim=-1)
     chroma = pixels.max(dim=-1).values - pixels.min(dim=-1).values
-    return torch.cat((mean, std, luminance.mean().reshape(1), chroma.mean().reshape(1)))
+    return torch.cat(
+        (mean, std, luminance.mean().reshape(1), chroma.mean().reshape(1))
+    )
 
 
 def _sound_summary(waveform: torch.Tensor) -> torch.Tensor:
@@ -229,7 +232,9 @@ def _sample_summary(capability: str, sample: torch.Tensor) -> torch.Tensor:
     )
 
 
-def _graphs(capability: str, sample: torch.Tensor, *, nodes: int = 4) -> tuple[torch.Tensor, torch.Tensor]:
+def _graphs(
+    capability: str, sample: torch.Tensor, *, nodes: int = 4
+) -> tuple[torch.Tensor, torch.Tensor]:
     base = 0.15 + 0.85 * _normalize(_sample_summary(capability, sample))
     rows = []
     for index in range(nodes):
@@ -273,11 +278,17 @@ def _design(features: torch.Tensor) -> torch.Tensor:
 
 
 def _ridge_head(
-    features: torch.Tensor, targets: torch.Tensor, *, output_dim: int, ridge: float = 1e-3
+    features: torch.Tensor,
+    targets: torch.Tensor,
+    *,
+    output_dim: int,
+    ridge: float = 1e-3,
 ) -> torch.Tensor:
     design = _design(features)
     if targets.ndim == 1:
-        target_matrix = functional.one_hot(targets, output_dim).to(dtype=features.dtype)
+        target_matrix = functional.one_hot(
+            targets, output_dim
+        ).to(dtype=features.dtype)
     else:
         target_matrix = targets.to(dtype=features.dtype)
     identity = torch.eye(design.shape[1], dtype=features.dtype)
@@ -319,16 +330,30 @@ def _regression_metrics(
     signal_energy = targets.square().sum()
     error_energy = error.square().sum().clamp_min(1e-30)
     snr = 10.0 * torch.log10(signal_energy.clamp_min(1e-30) / error_energy)
-    return {"rmse": float(rmse), "mae": float(mae), "snr_db": float(snr)}, prediction
+    return {
+        "rmse": float(rmse),
+        "mae": float(mae),
+        "snr_db": float(snr),
+    }, prediction
 
 
-def _closure_summary(outputs: tuple[Any, ...]) -> tuple[list[float], str, tuple[str, ...]]:
+def _closure_summary(
+    outputs: tuple[Any, ...]
+) -> tuple[list[float], str, tuple[str, ...]]:
     norms = [
-        float(torch.linalg.vector_norm(torch.stack(tuple(output.residuals.values()))))
+        float(
+            torch.linalg.vector_norm(
+                torch.stack(tuple(output.residuals.values()))
+            )
+        )
         for output in outputs
     ]
     statuses = tuple(output.closure_status.value for output in outputs)
-    status = "numerical_candidate" if all(item == "numerical_candidate" for item in statuses) else "open"
+    status = (
+        "numerical_candidate"
+        if all(item == "numerical_candidate" for item in statuses)
+        else "open"
+    )
     return norms, status, statuses
 
 
@@ -341,7 +366,9 @@ def _bidirectional_payload(
         reconstructed = probabilities @ COLOR_PROTOTYPES
         source = samples.reshape(samples.shape[0], -1, 3).mean(dim=1)
         rmse = (reconstructed - source).square().mean().sqrt()
-        roundtrip = torch.cdist(reconstructed, COLOR_PROTOTYPES).argmin(dim=-1)
+        roundtrip = torch.cdist(
+            reconstructed, COLOR_PROTOTYPES
+        ).argmin(dim=-1)
         return {
             "reconstructed_modality": reconstructed,
             "modality_rmse": float(rmse),
@@ -350,9 +377,13 @@ def _bidirectional_payload(
     frequencies = probabilities @ SOUND_PROTOTYPE_FREQUENCIES
     sample_count = samples.shape[-1]
     time = torch.arange(sample_count, dtype=torch.float32) / 8000.0
-    reconstructed = 0.6 * torch.sin(2.0 * torch.pi * frequencies[:, None] * time)
+    reconstructed = 0.6 * torch.sin(
+        2.0 * torch.pi * frequencies[:, None] * time
+    )
     rmse = (reconstructed - samples).square().mean().sqrt()
-    roundtrip = torch.cdist(frequencies[:, None], SOUND_PROTOTYPE_FREQUENCIES[:, None]).argmin(dim=-1)
+    roundtrip = torch.cdist(
+        frequencies[:, None], SOUND_PROTOTYPE_FREQUENCIES[:, None]
+    ).argmin(dim=-1)
     return {
         "reconstructed_modality": reconstructed,
         "reconstructed_frequencies": frequencies,
@@ -393,8 +424,10 @@ def evaluate_capability_with_soinet(
         validation_metrics, _, _, _ = _classification_metrics(
             validation_features, dataset.validation_targets, head
         )
-        test_metrics, logits, probabilities, predictions = _classification_metrics(
-            test_features, dataset.test_targets, head
+        test_metrics, logits, probabilities, predictions = (
+            _classification_metrics(
+                test_features, dataset.test_targets, head
+            )
         )
         metrics = {
             "train_accuracy": train_metrics["accuracy"],
@@ -402,7 +435,9 @@ def evaluate_capability_with_soinet(
             "accuracy": test_metrics["accuracy"],
             "test_loss": test_metrics["loss"],
             "mean_confidence": test_metrics["mean_confidence"],
-            "generalization_gap": train_metrics["accuracy"] - test_metrics["accuracy"],
+            "generalization_gap": (
+                train_metrics["accuracy"] - test_metrics["accuracy"]
+            ),
         }
         payload: dict[str, Any] = {
             "metric_producer": "SOInet",
@@ -423,7 +458,9 @@ def evaluate_capability_with_soinet(
                 bidirectional["roundtrip_predictions"] == predictions
             ).float().mean()
             metrics["roundtrip_accuracy"] = float(roundtrip_accuracy)
-            metrics["modality_rmse"] = float(bidirectional["modality_rmse"])
+            metrics["modality_rmse"] = float(
+                bidirectional["modality_rmse"]
+            )
         rows = [
             {
                 "sample": index,
@@ -459,7 +496,9 @@ def evaluate_capability_with_soinet(
             "rmse": test_metrics["rmse"],
             "mae": test_metrics["mae"],
             "snr_db": test_metrics["snr_db"],
-            "generalization_gap": test_metrics["rmse"] - train_metrics["rmse"],
+            "generalization_gap": (
+                test_metrics["rmse"] - train_metrics["rmse"]
+            ),
         }
         payload = {
             "metric_producer": "SOInet",

@@ -1,8 +1,9 @@
-"""Source-removal-hardened registry for Spectrum-of-Infinities contracts.
+"""Authoritative registry and source-removal hardening for Spectrum contracts.
 
-The canonical operators remain in ``canonical_contracts.py``.  This adapter
-replaces only their ablation checks so a removed-source certificate is
-recomputed from the surviving source blocks rather than being set to zero.
+The canonical finite operators remain in ``canonical_contracts.py``. This
+adapter replaces the preliminary A2 proxy with the exact finite SOI--DFI
+scaling witness and recomputes every derived certificate after a source
+ablation instead of setting the certificate to zero.
 """
 
 from __future__ import annotations
@@ -21,6 +22,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
 )
 
 from . import canonical_contracts as _base
+from .authoritative_dfi import spectrum_dfi_regularity_law
 
 
 def _recompute_certificate(
@@ -48,7 +50,10 @@ def _source_removal_check(
 ) -> Callable[[object], object]:
     def check(value: object):
         output = operator(value)
-        blocks = tuple(np.asarray(block, dtype=float).ravel() for block in output.source_blocks)
+        blocks = tuple(
+            np.asarray(block, dtype=float).ravel()
+            for block in output.source_blocks
+        )
         if output.certificate is None:
             raise RuntimeError("derived Spectrum contract lacks a certificate")
         if source_index >= len(blocks):
@@ -78,6 +83,8 @@ def _source_removal_check(
 def contracts() -> tuple[ComplexContract, ...]:
     result: list[ComplexContract] = []
     for contract in _base.contracts():
+        if contract.complex_id == _base.A2:
+            contract = replace(contract, operator=spectrum_dfi_regularity_law)
         if not contract.source_ids:
             result.append(contract)
             continue

@@ -16,6 +16,9 @@ from the_nothingness_effect.artificial_intelligence.pgqenn.source_contracts impo
     contracts,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import all_contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
+    evaluate_contract,
+)
 
 
 def _input() -> PGQENNContractInput:
@@ -46,7 +49,7 @@ def test_pgqenn_remaining_source_laws_return_finite_graph_aligned_fields():
     value = _input()
 
     for contract in contracts():
-        evaluation = contract.evaluate(value)
+        evaluation = evaluate_contract(contract, value)
         output = evaluation.output
 
         assert output.response.shape == value.node_features.shape
@@ -61,18 +64,22 @@ def test_pgqenn_exact_finite_identities_close_at_machine_precision():
     value = _input()
     by_id = {str(contract.complex_id): contract for contract in contracts()}
 
-    annealing = by_id[
-        "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
-    ].evaluate(value)
-    parseval = by_id[
-        "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch"
-    ].evaluate(value)
-    parity = by_id[
-        "parity_orthogonal_optimization_cross_parity_gradient_contamination"
-    ].evaluate(value)
-    shell = by_id[
-        "prime_shell_growth_regularity_shell_instability_phase_slips"
-    ].evaluate(value)
+    annealing = evaluate_contract(
+        by_id["soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"],
+        value,
+    )
+    parseval = evaluate_contract(
+        by_id["weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch"],
+        value,
+    )
+    parity = evaluate_contract(
+        by_id["parity_orthogonal_optimization_cross_parity_gradient_contamination"],
+        value,
+    )
+    shell = evaluate_contract(
+        by_id["prime_shell_growth_regularity_shell_instability_phase_slips"],
+        value,
+    )
 
     assert annealing.output.invariant_residual <= 1e-6
     assert parseval.output.invariant_residual <= 1e-5
@@ -82,8 +89,9 @@ def test_pgqenn_exact_finite_identities_close_at_machine_precision():
 
 def test_pgqenn_support_and_motif_certificates_depend_on_declared_graph():
     value = _input()
-    support = contracts()[0].evaluate(value)
-    motif = contracts()[2].evaluate(value)
+    source_contracts = contracts()
+    support = evaluate_contract(source_contracts[0], value)
+    motif = evaluate_contract(source_contracts[2], value)
 
     assert support.output.response.shape[0] == len(value.graph.primes)
     assert motif.output.response.shape[0] == len(value.graph.motifs)

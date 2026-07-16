@@ -30,7 +30,7 @@ _FOUNDATIONAL_MODULES = (
     ),
     (
         "the_nothingness_effect.foundational_architecture."
-        "the_spectrum_of_infinities.canonical_contracts",
+        "the_spectrum_of_infinities.hardened_contracts",
         "contracts",
     ),
 )

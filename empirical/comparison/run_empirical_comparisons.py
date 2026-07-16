@@ -1,4 +1,4 @@
-"""Aggregate empirical-comparison runner with public-data fetch and fixture fallback support."""
+"""Aggregate empirical-comparison runner with explicit numerical-integrity semantics."""
 
 from __future__ import annotations
 
@@ -20,7 +20,6 @@ from empirical.io import repo_relative, save_rows, summary_paths, write_manifest
 
 
 ComparisonRunner = Callable[..., dict[str, object]]
-
 COMPARISON_RUNNERS: dict[str, tuple[str, ComparisonRunner]] = {
     "redshift": ("dubler_redshift", compare_dubler_redshift.run),
     "galaxy": ("spiral_rotation", compare_spiral_rotation.run),
@@ -35,13 +34,20 @@ def _selected_datasets(dataset: str) -> list[str]:
 
 
 def _fetch_dataset_arg(dataset: str) -> str:
-    mapping = {
-        "memory": "ligo",
-        "ringdown": "ligo",
-    }
     if dataset == "all":
         return "all"
-    return mapping.get(dataset, dataset)
+    return {"memory": "ligo", "ringdown": "ligo"}.get(dataset, dataset)
+
+
+def _normalize_summary(summary: dict[str, Any]) -> dict[str, Any]:
+    """Replace the legacy validation name with its actual finite-output meaning."""
+
+    normalized = dict(summary)
+    legacy = normalized.pop("passed_validation", None)
+    if "metrics_are_finite" not in normalized:
+        normalized["metrics_are_finite"] = bool(legacy)
+    normalized["validation_claim"] = False
+    return normalized
 
 
 def run_empirical_comparisons(
@@ -66,7 +72,9 @@ def run_empirical_comparisons(
             strict=False,
         )
 
-    registry = build_source_registry(str(output_dir) if output_dir is not None else None)
+    registry = build_source_registry(
+        str(output_dir) if output_dir is not None else None
+    )
     summaries: list[dict[str, Any]] = []
     outputs: dict[str, Any] = {}
 
@@ -78,10 +86,16 @@ def run_empirical_comparisons(
             quick=quick,
             parameter_sweep_level=parameter_sweep_level,
         )
-        summaries.append(dict(result["summary"]))
+        summary = _normalize_summary(dict(result["summary"]))
+        summaries.append(summary)
         outputs[slug] = {
-            "paths": {name: repo_relative(path) for name, path in dict(result["paths"]).items()},
+            "paths": {
+                name: repo_relative(path)
+                for name, path in dict(result["paths"]).items()
+            },
             "metrics": dict(result["metrics"]),
+            "metrics_are_finite": summary["metrics_are_finite"],
+            "validation_claim": False,
         }
 
     paths = summary_paths(output_dir)
@@ -92,7 +106,10 @@ def run_empirical_comparisons(
             [
                 "# Empirical Comparison Summary",
                 "",
-                "These empirical comparison scripts are preliminary reproducible comparison tools. They do not establish empirical validation of TNE. They map dimensionless TNE proxy outputs to observable quantities through explicit fitted or calibrated adapters and compare residuals against available empirical or published reference data.",
+                (
+                    "These scripts produce preliminary reproducible comparisons. "
+                    "They do not establish empirical validation of TNE."
+                ),
                 "",
                 "Run mode:",
                 f"- fetch attempted: {fetch}",
@@ -105,6 +122,7 @@ def run_empirical_comparisons(
                 "",
                 "Claim boundary:",
                 "- preliminary comparison only",
+                "- finite output is not validation",
                 "- not an empirical validation claim",
                 "- not a formal proof substitute",
                 "- Hawking is handled separately as a theoretical benchmark",
@@ -116,7 +134,7 @@ def run_empirical_comparisons(
                         f"RMSE={row['RMSE']:.6f}, "
                         f"MAE={row['MAE']:.6f}, "
                         f"status={row['data_status']}, "
-                        f"passed_validation={row['passed_validation']}"
+                        f"metrics_are_finite={row['metrics_are_finite']}"
                     )
                     for row in summaries
                 ],
@@ -136,13 +154,21 @@ def run_empirical_comparisons(
                 "parameter_sweep_level": parameter_sweep_level,
                 "dataset": dataset,
             },
-            "registry_status": {key: value["status"] for key, value in registry.items()},
+            "registry_status": {
+                key: value["status"] for key, value in registry.items()
+            },
             "summary_outputs": {
                 "metrics": repo_relative(paths["metrics"]),
                 "report": repo_relative(paths["report"]),
                 "manifest": repo_relative(paths["manifest"]),
             },
             "comparison_outputs": outputs,
+            "metric_semantics": {
+                "metrics_are_finite": (
+                    "All emitted numerical comparison metrics are finite."
+                ),
+                "validation_claim": False,
+            },
             "limitations": (
                 "Comparisons remain preliminary repository-linked support artifacts. "
                 "Residual comparisons do not establish empirical validation."
@@ -153,7 +179,11 @@ def run_empirical_comparisons(
         f"Generated empirical comparison artifacts for {len(summaries)} dataset(s) "
         f"at {repo_relative(Path(output_dir) if output_dir is not None else Path('empirical/outputs'))}."
     )
-    audit_result = generate_empirical_audit(summaries, output_dir=output_dir) if audit else None
+    audit_result = (
+        generate_empirical_audit(summaries, output_dir=output_dir)
+        if audit
+        else None
+    )
     return {
         "registry": registry,
         "summaries": summaries,
@@ -166,23 +196,51 @@ def run_empirical_comparisons(
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Run empirical comparisons with optional public-data fetches and fixture fallback. "
-            "This is not an empirical validation claim."
+            "Run empirical comparisons with optional public-data fetches and "
+            "fixture fallback. This is not an empirical validation claim."
         )
     )
-    parser.add_argument("--fetch", action="store_true", help="Attempt public data acquisition before running comparisons.")
-    parser.add_argument("--quick", action="store_true", help="Use the lightweight comparison execution path.")
-    parser.add_argument("--offline", action="store_true", help="Do not attempt network access; use cached or fixture data.")
-    parser.add_argument("--use-fixtures", action="store_true", help="Allow deterministic fixture fallback when public data are unavailable.")
-    parser.add_argument("--audit", action="store_true", help="Write the Run 6 empirical audit report and machine-readable audit summary.")
-    parser.add_argument("--improve", action="store_true", help="Record that the Run 6 mapping-improvement pass is requested.")
+    parser.add_argument(
+        "--fetch",
+        action="store_true",
+        help="Attempt public data acquisition before running comparisons.",
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help="Use the lightweight comparison execution path.",
+    )
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Do not attempt network access; use cached or fixture data.",
+    )
+    parser.add_argument(
+        "--use-fixtures",
+        action="store_true",
+        help="Allow deterministic fixture fallback when public data are unavailable.",
+    )
+    parser.add_argument(
+        "--audit",
+        action="store_true",
+        help="Write the empirical audit report and machine-readable summary.",
+    )
+    parser.add_argument(
+        "--improve",
+        action="store_true",
+        help="Record that the mapping-improvement pass is requested.",
+    )
     parser.add_argument(
         "--parameter-sweep-level",
         default="standard",
         choices=["quick", "standard", "extended"],
         help="Control bounded sweep sizes for mapping-improvement comparisons.",
     )
-    parser.add_argument("--output-dir", default=None, help="Override the empirical outputs directory.")
+    parser.add_argument(
+        "--output-dir",
+        default=None,
+        help="Override the empirical outputs directory.",
+    )
     parser.add_argument(
         "--dataset",
         default="all",
@@ -203,7 +261,9 @@ def main(argv: list[str] | None = None) -> int:
         quick=args.quick,
         audit=args.audit,
         improve=args.improve,
-        parameter_sweep_level="quick" if args.quick else args.parameter_sweep_level,
+        parameter_sweep_level=(
+            "quick" if args.quick else args.parameter_sweep_level
+        ),
     )
     return 0
 

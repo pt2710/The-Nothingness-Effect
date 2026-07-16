@@ -16,7 +16,9 @@ from tools.consistency_catalog import release_implemented_contracts
 from tools.verify_tne_repository_layout import verify
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     authoritative_bindings,
+    bind_inventory_rows,
     bind_provenance_manifest,
+    default_artifact_provenance,
     provenance_binding_report,
     source_binding_report,
 )
@@ -28,15 +30,20 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
 
 
 def _rows(path: Path):
-    with path.open(newline="", encoding="utf-8") as handle:
+    with path.open(newline="", encoding="utf-8-sig") as handle:
         return list(csv.DictReader(handle))
 
 
 def main() -> int:
-    matrix = _rows(Path("docs/data/theorem_complex_implementation_matrix.csv"))
+    raw_matrix = _rows(
+        Path("docs/data/theorem_complex_implementation_matrix.csv")
+    )
+    matrix = bind_inventory_rows(raw_matrix)
     identifiers = [row["complex_id"] for row in matrix]
     if len(matrix) != 351 or len(set(identifiers)) != 351:
-        raise SystemExit("inventory must contain 351 unique theorem-complex IDs")
+        raise SystemExit(
+            "inventory must contain 351 unique theorem-complex IDs"
+        )
 
     levels = {
         level: sum(row["level"] == level for row in matrix)
@@ -84,9 +91,12 @@ def main() -> int:
 
     contracts = release_implemented_contracts()
     contract_ids = [str(contract.complex_id) for contract in contracts]
-    if len(contract_ids) != len(set(contract_ids)) or set(contract_ids) != implemented:
+    if len(contract_ids) != len(set(contract_ids)) or set(
+        contract_ids
+    ) != implemented:
         raise SystemExit(
-            "active contract catalog does not exactly match dependency-closed inventory"
+            "active contract catalog does not exactly match "
+            "dependency-closed inventory"
         )
 
     unresolved = sorted(
@@ -97,20 +107,17 @@ def main() -> int:
     )
     if unresolved:
         raise SystemExit(
-            "dependency-closed implementation set still contains unresolved sources: "
-            f"{unresolved[:5]}"
+            "dependency-closed implementation set still contains "
+            f"unresolved sources: {unresolved[:5]}"
         )
 
-    raw_provenance = json.loads(
-        Path("docs/data/artifact_provenance_manifest.json").read_text(
-            encoding="utf-8"
-        )
-    )
-    provenance_authority = provenance_binding_report()
+    provenance_path = default_artifact_provenance()
+    raw_provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+    provenance_authority = provenance_binding_report(provenance_path)
     if int(provenance_authority["effective_source_sha_mismatches"]):
         raise SystemExit(
-            "effective artifact provenance contains authoritative source mismatches: "
-            f"{provenance_authority['effective_mismatches'][:3]}"
+            "effective artifact provenance contains authoritative source "
+            f"mismatches: {provenance_authority['effective_mismatches'][:3]}"
         )
     provenance = bind_provenance_manifest(raw_provenance)
     manifests = provenance.get("manifests")
@@ -130,7 +137,8 @@ def main() -> int:
     if not manifested_set.issubset(requested_implemented):
         unknown = sorted(manifested_set - requested_implemented)
         raise SystemExit(
-            f"artifact provenance contains non-requested implementation IDs: {unknown[:5]}"
+            "artifact provenance contains non-requested implementation IDs: "
+            f"{unknown[:5]}"
         )
     if any(
         item.get("claim_boundary")
@@ -158,7 +166,9 @@ def main() -> int:
 
     canonical_paths = sorted(
         {
-            row["implementation_path"]
+            row["implementation_status_evidence_path"]
+            if row.get("implementation_status_binding") == "manifest_override"
+            else row["implementation_path"]
             for row in matrix
             if statuses[row["complex_id"]] == "implemented"
         }
@@ -170,16 +180,18 @@ def main() -> int:
         text = path.read_text(encoding="utf-8")
         if "nan_to_num" in text:
             raise SystemExit(
-                f"NaN/Inf masking is forbidden in canonical source laws: {relative}"
+                "NaN/Inf masking is forbidden in canonical source laws: "
+                f"{relative}"
             )
         position = text.find("np.where(np.isfinite")
         if (
             position >= 0
-            and "compatibility_mode" not in text[max(0, position - 1600) : position]
+            and "compatibility_mode"
+            not in text[max(0, position - 1600) : position]
         ):
             raise SystemExit(
-                "non-finite neutralization found outside explicit compatibility mode: "
-                f"{relative}"
+                "non-finite neutralization found outside explicit "
+                f"compatibility mode: {relative}"
             )
 
     tracked = subprocess.run(
@@ -192,21 +204,29 @@ def main() -> int:
         raise SystemExit(f"tracked LaTeX files are forbidden: {tracked}")
 
     layout = verify(None)
-    layout_failures = [result for result in layout.results if not result["passed"]]
+    layout_failures = [
+        result for result in layout.results if not result["passed"]
+    ]
     if layout_failures:
         first = layout_failures[0]
         raise SystemExit(
-            f"repository layout QA failed: {first['name']}: {first['failures'][:3]}"
+            f"repository layout QA failed: {first['name']}: "
+            f"{first['failures'][:3]}"
         )
 
     print(
-        f"qa_guards=passed total=351 requested_implemented={len(requested_implemented)} "
-        f"release_implemented={len(implemented)} dependency_downgrades={len(downgraded)} "
+        f"qa_guards=passed total=351 "
+        f"requested_implemented={len(requested_implemented)} "
+        f"release_implemented={len(implemented)} "
+        f"dependency_downgrades={len(downgraded)} "
         f"unresolved_dependencies=0 provenance_manifests={len(manifested)} "
         f"matrix_authority_overrides={authority['source_binding_overrides']} "
-        f"provenance_authority_overrides={provenance_authority['source_binding_overrides']} "
-        f"authority_effective_mismatches=0 layout_checks={len(layout.results)} "
-        "tracked_tex=0"
+        f"implementation_status_overrides="
+        f"{authority['implementation_status_overrides']} "
+        f"provenance_authority_overrides="
+        f"{provenance_authority['source_binding_overrides']} "
+        f"authority_effective_mismatches=0 "
+        f"layout_checks={len(layout.results)} tracked_tex=0"
     )
     return 0
 

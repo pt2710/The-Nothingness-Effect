@@ -65,5 +65,5 @@ repository = "https://github.com/pt2710/MPL-TC.git"
 commit = "056e346824e9ec9785ab45b642b3b842c88f6e56"
 path = "dependencies/MPL-TC"
 module = "mccrackns_prime_law.py"
-module-sha256 = "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9"
+module-sha256 = "484e8a6326e99657eacc3e3a02b245e4709d51e11c5f743208632e8993124046"
 package-installable = false

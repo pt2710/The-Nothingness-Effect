@@ -18,6 +18,15 @@ from the_nothingness_effect.artificial_intelligence.shared.soinet_large_benchmar
 )
 
 
+def _fieldnames(rows: list[dict[str, object]]) -> tuple[str, ...]:
+    names: list[str] = []
+    for row in rows:
+        for name in row:
+            if name not in names:
+                names.append(name)
+    return tuple(names)
+
+
 def run(
     output_dir: str | Path | None = None,
     *,
@@ -45,7 +54,7 @@ def run(
     table = output / "soinets_six_capability_multiseed.csv"
     manifest = output / "soinets_six_capability_multiseed.json"
     with table.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=tuple(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=_fieldnames(rows))
         writer.writeheader()
         writer.writerows(rows)
     manifest.write_text(

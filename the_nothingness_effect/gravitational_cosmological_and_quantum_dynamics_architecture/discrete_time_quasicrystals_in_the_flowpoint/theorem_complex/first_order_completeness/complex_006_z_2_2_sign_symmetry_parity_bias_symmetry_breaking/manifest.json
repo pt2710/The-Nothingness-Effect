@@ -1,12 +1,13 @@
 {
   "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
   "artifact_manifests": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
-    "current_equation_label_count": 20,
+    "current_equation_label_count": 22,
     "missing_audit_equation_labels": []
   },
   "carrier_violation": false,
@@ -19,6 +20,8 @@
   ],
   "dependency_status": "authoritative_cross_reference",
   "equation_labels": [
+    "eq:dtqc06_two_generators",
+    "eq:dtqc06_four_character_sectors",
     "eq:z2_symmetry_inner_1a",
     "eq:z2_symmetry_fourier_1a",
     "eq:z2_parity_lock_zero_gap_1a",
@@ -41,7 +44,7 @@
     "eq:z2_parity_threshold_equiv_1a2a"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "domain/codomain guards",
       "theorem law",
@@ -54,24 +57,36 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking/falsification_checks/test_z_2_2_sign_symmetry_parity_bias_symmetry_breaking_falsification.py"
   ],
   "first_label": "app:dtqc_complex_06",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking/1a/z_2_2_sign_symmetry.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking/2a/parity_bias_symmetry_breaking.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking/1a2a/z_2_2_sign_symmetry_parity_bias_symmetry_breaking.py"
   ],
+  "known_limitations": [],
   "level": "A",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "fail-closed typed contract result",
+      "name": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking result",
+      "python_types": [
+        "ContractResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "typed recertified source-law input",
+      "name": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking input",
+      "python_types": [
+        "PositionalContractInput"
+      ],
+      "shape": null
     },
     "exact_semantics": false,
     "invariant": null,
-    "operator": null,
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._call_positional",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
     "simulation_runner": null,
     "source_removal_check_count": 0
   },
@@ -96,9 +111,10 @@
   ],
   "source_complex_id": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking",
   "source_complex_ids": [],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking/falsification_checks/test_z_2_2_sign_symmetry_parity_bias_symmetry_breaking_falsification.py"

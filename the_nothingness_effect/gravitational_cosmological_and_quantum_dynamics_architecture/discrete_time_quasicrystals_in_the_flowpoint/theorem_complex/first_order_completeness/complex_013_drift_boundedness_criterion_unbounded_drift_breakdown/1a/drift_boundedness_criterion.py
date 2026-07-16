@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Drift-Boundedness Criterion',
     authoritative_title_tex='Drift-Boundedness Criterion (1A)',
     equation_labels=('eq:coeff_limit_1a', 'eq:translation_bounded_consequence_1a', 'eq:coeff_bias_bound_1a', 'eq:offdiag_diag_split_1a', 'eq:parseval_1a', 'eq:support_mass_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

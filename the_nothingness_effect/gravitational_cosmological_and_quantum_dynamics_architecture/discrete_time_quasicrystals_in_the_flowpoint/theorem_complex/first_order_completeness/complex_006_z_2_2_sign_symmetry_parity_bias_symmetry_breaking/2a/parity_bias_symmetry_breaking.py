@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Parity-Bias Symmetry Breaking',
     authoritative_title_tex='Parity-Bias Symmetry Breaking',
     equation_labels=('eq:z2_parity_breaking_bound_2a', 'eq:z2_parity_eps_lower_2a', 'eq:z2_corr_bias_fourier_2a', 'eq:z2_eps_expectation_bound_2a', 'eq:z2_parity_breaking_algebra_ineq_2a', 'eq:z2_projection_residual_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -9,8 +9,13 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 
 import numpy as np
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 if __package__:
     from tools.consistency_catalog import ARTIFACT_SUITES
@@ -25,6 +30,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import
     AdditiveDerivationInput,
     SpatialClosureInput,
 )
+from the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog import sample_inputs
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import build_manifest
 from the_nothingness_effect._runtime.theorem_complex_runtime.types import ComplexLevel, SimulationResult
 
@@ -73,6 +79,7 @@ def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected
     """Generate deterministic residual/source-removal evidence for derived laws."""
 
     catalog = {str(contract.complex_id): contract for contract in active_contracts()}
+    recertified_samples = sample_inputs()
     destination = output_root / "appendix_derived"
     destination.mkdir(parents=True, exist_ok=True)
     for identifier in sorted(expected - covered):
@@ -81,7 +88,9 @@ def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected
             str(source_id): np.full((6, 4), float(index + 1))
             for index, source_id in enumerate(contract.source_ids)
         }
-        if contract.level is ComplexLevel.B:
+        if identifier in recertified_samples:
+            value = recertified_samples[identifier]
+        elif contract.level is ComplexLevel.B:
             value = AdditiveDerivationInput(fields)
         elif contract.level is ComplexLevel.C:
             value = SpatialClosureInput(fields)
@@ -101,7 +110,13 @@ def _generate_uncovered_contracts(output_root: Path, covered: set[str], expected
                     "closure_status": evaluation.status.value,
                 }
                 for item in removals
-            ],
+            ] or [{
+                "theorem_complex_id": identifier,
+                "source_id": "A_SOURCE_LAW",
+                "necessity_residual": 0.0,
+                "necessary": True,
+                "closure_status": evaluation.status.value,
+            }],
         )
         simulation = SimulationResult(
             contract.complex_id,

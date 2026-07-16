@@ -1,0 +1,325 @@
+{
+  "authority_release": "TNE_All_Appendices_Contract_Recertified.zip",
+  "authority_zip_sha256": "38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11",
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "contract_count": 22,
+  "contracts": [
+    {
+      "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/foundational_architecture/spatiality/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:flowpoint_spatiality_global_characteristic_1a2a",
+        "eq:flowpoint_spatiality_global_linear_map_1a2a",
+        "eq:flowpoint_spatiality_global_linear_involution_1a2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "affine_spatial_involution_orbit"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc10_typed_l1_fourier_pair",
+        "eq:orthogonality_lines_1a",
+        "eq:bohr_coeff_extract_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:edi_meta_dependency_release",
+        "eq:edi_cross_complex_chain_1a2a",
+        "eq:edi_meta_complex_set_1a2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:sc_cross_complex_chain_1a2a1b2b1c2c",
+        "eq:sc_meta_complex_set_1a2a1b2b1c2c",
+        "eq:sc_meta_dependency_graph_1a2a1b2b1c2c"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:projector_weight_1a",
+        "eq:double_integral_identity_1a",
+        "eq:residual_def_2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "autocorrelation_completeness_mixed_autocorrelation"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:edi05_typed_deformation_contract",
+        "eq:edi05_typed_work_and_2adic_ac",
+        "eq:edi05_bridge_duality_order_parameter_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "bridge_duality_and_the_2_adic_criterion"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc14_canonical_dfi_coupling",
+        "eq:dtqc14_ordered_tail_limit",
+        "eq:dfi_tail_purepoint_obs_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc13_typed_modulation_law",
+        "eq:coeff_limit_1a",
+        "eq:translation_bounded_consequence_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:edi06_typed_regular_contract",
+        "eq:edi06_typed_singular_contract",
+        "eq:edi06_curvature_regularity_order_parameter_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "elastic_curvature_smoothness_curvature_singularity"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:edi07_typed_semigroup_observation_contract",
+        "eq:edi07_typed_observability_contract",
+        "eq:edi07_typed_error_propagation"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "elastic_entropic_stability_entropic_instability"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:edi08_global_injectivity_contract",
+        "eq:edi08_local_regular_contract",
+        "eq:edi08_first_order_degeneracy_contract"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "elastic_geometric_consistency_geometric_degeneracy"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc07_constant_gain_active_support",
+        "eq:dtqc07_timevarying_gain_support",
+        "eq:dtqc07_polynomial_active_support"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "elastic_invariance_of_support_nonlinear_leakage"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc15_provenance_record",
+        "eq:dtqc15_tolerance_residual",
+        "eq:fig_support_equality_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc12_typed_disorder_coupling",
+        "eq:atomic_support_1a",
+        "eq:parseval_stationary_point_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability"
+    },
+    {
+      "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:minimal_universal_flowpoint_state_space_1a2a",
+        "eq:minimal_universal_flowpoint_balance_map_1a2a",
+        "eq:minimal_universal_flowpoint_swap_1a2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "kernel_alternator"
+    },
+    {
+      "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/foundational_architecture/duality/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:flowpoint_recursive_compensation_state_space_1a2a",
+        "eq:flowpoint_recursive_compensation_balance_map_1a2a",
+        "eq:flowpoint_recursive_compensation_kernel_1a2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "kernel_recursion"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc05_typed_obstruction_class",
+        "eq:dtqc_meyer_cap_ud_rd_1a",
+        "eq:dtqc_meyer_cap_meyer_inclusion_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support"
+    },
+    {
+      "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:mirror_dimensional_global_state_space_1a2a",
+        "eq:mirror_dimensional_balance_internal_coordinates_1a2a",
+        "eq:mirror_dimensional_vector_coordinates_1a2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece"
+    },
+    {
+      "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/foundational_architecture/symmetry/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:flowpoint_symmetry_global_map_1a2a",
+        "eq:flowpoint_symmetry_global_involution_1a2a",
+        "eq:flowpoint_symmetry_global_fixed_set_1a2a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "order_two_symmetry_recursion"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc08_typed_ou_process",
+        "eq:dtqc08_five_dimensional_feature",
+        "eq:threshold_sigma_star_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc11_active_line_separation",
+        "eq:dtqc11_resolution_residuals",
+        "eq:ridge_in_lattice_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "wavelet_ridge_locking_ridge_drift_shear"
+    },
+    {
+      "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "failure_witnesses_executable": true,
+      "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+      "provenance_status": "recertified",
+      "source_law_snapshot": [
+        "eq:dtqc06_two_generators",
+        "eq:dtqc06_four_character_sectors",
+        "eq:z2_symmetry_inner_1a"
+      ],
+      "test_path": "tests/contracts/test_recertified_22_contracts.py",
+      "theorem_complex_id": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking"
+    }
+  ],
+  "schema_version": "1.0",
+  "specification_zip_sha256": "397416502323f291b7779f8b220b09bd67a603f797bd9a7e9793075570ed39b7",
+  "status_vocabulary": [
+    "exact",
+    "numerical_candidate",
+    "undecided",
+    "falsified",
+    "invalid_input"
+  ]
+}

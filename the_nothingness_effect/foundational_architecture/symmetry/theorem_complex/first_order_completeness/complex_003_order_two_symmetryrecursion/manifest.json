@@ -3,7 +3,8 @@
   "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
   "artifact_manifests": [
     "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
-    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
     "current_equation_label_count": 69,
@@ -90,7 +91,7 @@
     "eq:flowpoint_symmetric_dual_closure_orbit_1a2a"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "domain/codomain guards",
       "theorem law",
@@ -103,24 +104,36 @@
     "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/falsification_checks/test_order_two_symmetry_recursion_falsification.py"
   ],
   "first_label": "app:flowpoint_symmetry_dual",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/recertified_contracts.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/1a/minimal_symmetry_involution_at_the_flowpoint.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/2a/universal_symmetric_recursion_law.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/1a2a/involutionparity_recursion_equivalence.py"
   ],
+  "known_limitations": [],
   "level": "A",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "fail-closed typed contract result",
+      "name": "order_two_symmetry_recursion result",
+      "python_types": [
+        "ContractResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "typed recertified source-law input",
+      "name": "order_two_symmetry_recursion input",
+      "python_types": [
+        "PositionalContractInput"
+      ],
+      "shape": null
     },
     "exact_semantics": false,
     "invariant": null,
-    "operator": null,
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._call_positional",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
     "simulation_runner": null,
     "source_removal_check_count": 0
   },
@@ -145,9 +158,10 @@
   ],
   "source_complex_id": "order_two_symmetry_recursion",
   "source_complex_ids": [],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
     "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
     "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/falsification_checks/test_order_two_symmetry_recursion_falsification.py"
   ],

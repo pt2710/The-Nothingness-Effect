@@ -24,12 +24,12 @@
     {
       "complex_id": "kernel_alternator",
       "directory": "complex_005_kernelalternator",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
       "directory": "complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint"

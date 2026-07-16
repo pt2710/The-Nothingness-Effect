@@ -3,7 +3,8 @@
   "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
   "artifact_manifests": [
     "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
-    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
     "current_equation_label_count": 74,
@@ -95,7 +96,7 @@
     "eq:joint_mirror_dimension_principle_structural_identity_1a2a"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "domain/codomain guards",
       "theorem law",
@@ -108,24 +109,36 @@
     "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/falsification_checks/test_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_falsification.py"
   ],
   "first_label": "app:flowpoint_2adic_dim_unification",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/1a/necessity_and_sufficiency_of_2_adic_mirror_coding.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/2a/coordinatewise_reflection_closure.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/1a2a/necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure.py"
   ],
+  "known_limitations": [],
   "level": "A",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "fail-closed typed contract result",
+      "name": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece result",
+      "python_types": [
+        "ContractResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "typed recertified source-law input",
+      "name": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
     },
     "exact_semantics": false,
     "invariant": null,
-    "operator": null,
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.recertified_contracts.evaluate_2adic_dimensional_unification",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
     "simulation_runner": null,
     "source_removal_check_count": 0
   },
@@ -151,9 +164,10 @@
   ],
   "source_complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
   "source_complex_ids": [],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
     "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
     "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
     "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/falsification_checks/test_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_falsification.py"

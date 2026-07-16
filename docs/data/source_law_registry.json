@@ -22,7 +22,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d"
+      "sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062"
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
@@ -37,8 +37,7 @@
     "carrier_conflicts": 0,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "blocked": 22,
-      "implemented": 173,
+      "implemented": 195,
       "proxy": 156
     },
     "total": 351
@@ -868,14 +867,14 @@
         "eq:minimal_universal_principle_conjugacy_1a2a"
       ],
       "first_label": "app:flowpoint_duality_minimal",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_005_kernelalternator/manifest.json",
       "module": "flowpoint_closure_interface",
       "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
       "source_complex_id": "kernel_alternator",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Minimal and Universal Flowpoint Kernel\u2013Alternator Closure"
     },
     {
@@ -959,14 +958,14 @@
         "eq:joint_mirror_dimension_principle_structural_identity_1a2a"
       ],
       "first_label": "app:flowpoint_2adic_dim_unification",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure/manifest.json",
       "module": "flowpoint_closure_interface",
       "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
       "source_complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Necessity and Sufficiency of 2-Adic Mirror-History Coding and Coordinatewise Reflection Closure"
     },
     {
@@ -1439,14 +1438,14 @@
         "eq:joint_recursive_closure_inverse_identity_1a2a"
       ],
       "first_label": "app:flowpoint_duality_principle",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_004_kernelrecursion/manifest.json",
       "module": "flowpoint_duality",
       "owner_path": "the_nothingness_effect/foundational_architecture/duality",
       "source_complex_id": "kernel_recursion",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Local Kernel Compensation\u2013Recursive Fiber Preservation"
     },
     {
@@ -1888,14 +1887,14 @@
         "eq:flowpoint_symmetric_dual_closure_orbit_1a2a"
       ],
       "first_label": "app:flowpoint_symmetry_dual",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_003_order_two_symmetryrecursion/manifest.json",
       "module": "flowpoint_symmetry",
       "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
       "source_complex_id": "order_two_symmetry_recursion",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Involution\u2013Parity Recursion Equivalence"
     },
     {
@@ -2306,14 +2305,14 @@
         "eq:flowpoint_spatial_dual_closure_orbit_1a2a"
       ],
       "first_label": "app:flowpoint_spatiality_dual",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_003_affine_spatial_involutionorbit/manifest.json",
       "module": "flowpoint_spatiality",
       "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
       "source_complex_id": "affine_spatial_involution_orbit",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Centered Affine Involution\u2013Parity Orbit Equivalence"
     },
     {
@@ -6535,7 +6534,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_duality_closure",
       "equation_labels": [
         "eq:ed01_admissible_tuple_1a",
@@ -6562,7 +6561,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_pdfi_frequency_shift_dual_closure",
       "equation_labels": [
         "eq:ed02_preserved_shift_1a2a",
@@ -6588,7 +6587,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_e_curvature_duality",
       "equation_labels": [
         "eq:ed03_preserved_proportionality_1a2a",
@@ -6617,7 +6616,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_effect::elastic_entropic_energy_equivalence",
       "equation_labels": [
         "eq:ed04_preserved_energy_law_1a2a",
@@ -6642,7 +6641,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "parity_symmetry_dubler_duality_closure",
       "equation_labels": [
         "eq:ed05_preserved_signed_integral_1a2a",
@@ -6670,7 +6669,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_nonlocality_in_the_dubler_pdfi_framework",
       "equation_labels": [
         "eq:ed06_local_response_1a",
@@ -6694,7 +6693,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "universal_elasticity_constant_k_d",
       "equation_labels": [
         "eq:ed07_response_family_1a",
@@ -6719,7 +6718,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "emergence_triviality_in_elastic_fields",
       "equation_labels": [
         "eq:ed08_operator_1a",
@@ -6743,7 +6742,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "spectral_observability_indistinguishability",
       "equation_labels": [
         "eq:ed09_observable_condition_1a",
@@ -6766,7 +6765,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "dubler_entropy_conservation",
       "equation_labels": [
         "eq:ed10_continuity_1a",
@@ -6791,7 +6790,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "temporal_asymmetry_symmetry_in_pdfi_fields",
       "equation_labels": [
         "eq:ed11_preserved_signed_asymmetry_1a2a",
@@ -6816,7 +6815,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "causality_via_elastic_dubler_e_and_causal_symmetry",
       "equation_labels": [
         "eq:ed12_preserved_current_1a2a",
@@ -6840,7 +6839,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "information_entropy_in_the_elastic_dubler_perspective",
       "equation_labels": [
         "eq:ed13_preserved_relations_1a2a",
@@ -6865,7 +6864,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "pdfi_e_quantum_entanglement_interface",
       "equation_labels": [
         "eq:ed14_hamiltonian_family_1a",
@@ -6890,7 +6889,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "spatial_homogeneity_heterogeneity_duality",
       "equation_labels": [
         "eq:ed15_heterogeneity_1a",
@@ -6915,7 +6914,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "universal_domain_specific_k_d_duality",
       "equation_labels": [
         "eq:ed16_preserved_deviation_1a2a",
@@ -6944,7 +6943,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "appendix_wide_elastic_dubler_cross_complex_closure_and_computational_falsification_interface",
       "equation_labels": [
         "eq:ed_cross_complex_chain_1a2a",
@@ -7000,7 +6999,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "calibrated_pdfi_dubler_endpoint_operator",
       "equation_labels": [
         "eq:drv_dubler_b01_product_carrier",
@@ -7029,7 +7028,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_log_curvature_energy_production_law",
       "equation_labels": [
         "eq:drv_dubler_b02_product_carrier",
@@ -7058,7 +7057,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "parity_localized_pdfi_response_operator",
       "equation_labels": [
         "eq:drv_dubler_b03_product_carrier",
@@ -7087,7 +7086,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elasticity_scaled_spectral_operator_flow",
       "equation_labels": [
         "eq:drv_dubler_b04_product_carrier",
@@ -7116,7 +7115,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "observable_entropy_redistribution_channel",
       "equation_labels": [
         "eq:drv_dubler_b05_product_carrier",
@@ -7145,7 +7144,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "temporal_directed_elastic_transport",
       "equation_labels": [
         "eq:drv_dubler_b06_product_carrier",
@@ -7174,7 +7173,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "information_calibrated_quantum_spectral_response",
       "equation_labels": [
         "eq:drv_dubler_b07_product_carrier",
@@ -7203,7 +7202,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elasticity_weighted_spatial_heterogeneity",
       "equation_labels": [
         "eq:drv_dubler_b08_product_carrier",
@@ -7232,7 +7231,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "dubler_potential_current_spatial_closure",
       "equation_labels": [
         "eq:drv_dubler_c01_spatial_carrier",
@@ -7261,7 +7260,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "parity_elastic_spectral_spatial_closure",
       "equation_labels": [
         "eq:drv_dubler_c02_spatial_carrier",
@@ -7290,7 +7289,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "observable_conserved_directed_transport_closure",
       "equation_labels": [
         "eq:drv_dubler_c03_spatial_carrier",
@@ -7319,7 +7318,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "spatially_calibrated_quantum_information_closure",
       "equation_labels": [
         "eq:drv_dubler_c04_spatial_carrier",
@@ -7348,7 +7347,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_curvature_correspondence",
       "equation_labels": [
         "eq:edi01_curvature_correspondence_order_parameter_1a",
@@ -7398,7 +7397,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_e_curvature_encoding_curvature_ambiguity_divergence",
       "equation_labels": [
         "eq:edi02_elastic_pi_curvature_encoding_order_parameter_1a",
@@ -7468,7 +7467,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_interferometry::elastic_gravitational_memory_instant_relaxation",
       "equation_labels": [
         "eq:edi03_gravitational_memory_order_parameter_1a",
@@ -7512,7 +7511,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown",
       "equation_labels": [
         "eq:edi04_black_hole_emergence_order_parameter_1a",
@@ -7549,9 +7548,11 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "bridge_duality_and_the_2_adic_criterion",
       "equation_labels": [
+        "eq:edi05_typed_deformation_contract",
+        "eq:edi05_typed_work_and_2adic_ac",
         "eq:edi05_bridge_duality_order_parameter_1a",
         "eq:edi05_bridge_duality_branch_condition_1a",
         "eq:bridge_duality_2adic_boundary_1a",
@@ -7611,21 +7612,23 @@
         "eq:bridge_duality_2adic_corcalc2_1a2a"
       ],
       "first_label": "ssec:bridge_duality_2adic_1a2a",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_005_bridge_duality_and_the_2_adic_criterion/manifest.json",
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
       "source_complex_id": "bridge_duality_and_the_2_adic_criterion",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Bridge Duality and the 2-adic Criterion"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_curvature_smoothness_curvature_singularity",
       "equation_labels": [
+        "eq:edi06_typed_regular_contract",
+        "eq:edi06_typed_singular_contract",
         "eq:edi06_curvature_regularity_order_parameter_1a",
         "eq:edi06_curvature_regularity_branch_condition_1a",
         "eq:invertibility_1a",
@@ -7664,8 +7667,8 @@
         "eq:corollary_distributional_split_2a",
         "eq:corollary_bounded_functional_2a",
         "eq:edi06_curvature_regularity_status_1a2a",
-        "eq:regular_regime_1a2a",
         "eq:singular_regime_1a2a",
+        "eq:regular_regime_1a2a",
         "eq:laplacian_definition_1a2a",
         "eq:divergence_theorem_1a2a",
         "eq:singular_flux_1a2a",
@@ -7683,21 +7686,24 @@
         "eq:bulk_boundary_equivalence_1a2a"
       ],
       "first_label": "ssec:elastic_curvature_smoothness_singularity_1a2a",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/manifest.json",
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
       "source_complex_id": "elastic_curvature_smoothness_curvature_singularity",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Elastic Curvature Smoothness <-> Curvature Singularity"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_entropic_stability_entropic_instability",
       "equation_labels": [
+        "eq:edi07_typed_semigroup_observation_contract",
+        "eq:edi07_typed_observability_contract",
+        "eq:edi07_typed_error_propagation",
         "eq:edi07_entropic_stability_order_parameter_1a",
         "eq:edi07_entropic_stability_branch_condition_1a",
         "eq:ees_bound_1a",
@@ -7731,21 +7737,24 @@
         "eq:ees_coercivity_restore_1a2a"
       ],
       "first_label": "ssec:elastic_entropic_stability_1a2a",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_007_elastic_entropic_stabilityentropic_instability/manifest.json",
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
       "source_complex_id": "elastic_entropic_stability_entropic_instability",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Elastic Entropic Stability <-> Entropic Instability"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_geometric_consistency_geometric_degeneracy",
       "equation_labels": [
+        "eq:edi08_global_injectivity_contract",
+        "eq:edi08_local_regular_contract",
+        "eq:edi08_first_order_degeneracy_contract",
         "eq:edi08_geometric_consistency_order_parameter_1a",
         "eq:edi08_geometric_consistency_branch_condition_1a",
         "eq:full_rank_stability_1a",
@@ -7803,21 +7812,22 @@
         "eq:generic_restoration_1a2a"
       ],
       "first_label": "ssec:elastic_geometric_consistency_1a2a",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_008_elastic_geometric_consistencygeometric_degeneracy/manifest.json",
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
       "source_complex_id": "elastic_geometric_consistency_geometric_degeneracy",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Elastic Geometric Consistency <-> Geometric Degeneracy"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface",
       "equation_labels": [
+        "eq:edi_meta_dependency_release",
         "eq:edi_cross_complex_chain_1a2a",
         "eq:edi_meta_complex_set_1a2a",
         "eq:edi_meta_dependency_graph_1a2a",
@@ -7835,19 +7845,19 @@
         "eq:edi_meta_joint_closure_1a2a"
       ],
       "first_label": "app:edi_cross_complex_meta_closure_1a2a",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_009_appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface/manifest.json",
       "module": "elastic_dubler_interferometry",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
       "source_complex_id": "appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Complete EDI Cross-Complex Closure Classification"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "phase_elliptic_curvature_reconstruction",
       "equation_labels": [
         "eq:drv_edi_b01_product_carrier",
@@ -7876,7 +7886,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "memory_resolved_horizon_reconstruction",
       "equation_labels": [
         "eq:drv_edi_b02_product_carrier",
@@ -7905,7 +7915,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "2_adic_curvature_regularity_barrier",
       "equation_labels": [
         "eq:drv_edi_b03_product_carrier",
@@ -7934,7 +7944,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "stability_conditioned_geometric_identifiability",
       "equation_labels": [
         "eq:drv_edi_b04_product_carrier",
@@ -7963,7 +7973,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "memory_aware_phase_curvature_tomography",
       "equation_labels": [
         "eq:drv_edi_c01_spatial_carrier",
@@ -7991,7 +8001,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "regularized_stable_geometric_reconstruction",
       "equation_labels": [
         "eq:drv_edi_c02_spatial_carrier",
@@ -8019,7 +8029,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_decomposition_nonlocal_entropic_divergence",
       "equation_labels": [
         "eq:ldg01_locality_decomposition_order_parameter_1a",
@@ -8066,7 +8076,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "emergent_spiral_density_wave_spiral_dissolution",
       "equation_labels": [
         "eq:ldg02_spiral_density_wave_order_parameter_1a",
@@ -8116,7 +8126,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "entropic_curvature_superposition_duality",
       "equation_labels": [
         "eq:ldg03_curvature_superposition_order_parameter_1a",
@@ -8149,7 +8159,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_driven_gravity::elastic_entropic_energy_equivalence",
       "equation_labels": [
         "eq:ldg04_energy_equivalence_order_parameter_1a",
@@ -8197,7 +8207,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_driven_rotation_curve_duality",
       "equation_labels": [
         "eq:ldg05_rotation_curve_order_parameter_1a",
@@ -8222,7 +8232,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "spiral_pitch_angle_gradient_duality",
       "equation_labels": [
         "eq:ldg06_pitch_angle_order_parameter_1a",
@@ -8265,7 +8275,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "entropic_screening_nonlocal_curvature_mixing",
       "equation_labels": [
         "eq:ldg07_screening_order_parameter_1a",
@@ -8293,7 +8303,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "halo_structure_formation_duality",
       "equation_labels": [
         "eq:ldg08_halo_order_parameter_1a",
@@ -8341,7 +8351,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "entropic_gradient_filament_formation_duality",
       "equation_labels": [
         "eq:ldg09_filament_order_parameter_1a",
@@ -8376,7 +8386,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_confinement_stability_duality",
       "equation_labels": [
         "eq:ldg10_confinement_order_parameter_1a",
@@ -8425,7 +8435,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "entropic_localization_cluster_stability_duality",
       "equation_labels": [
         "eq:ldg11_cluster_order_parameter_1a",
@@ -8471,7 +8481,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "localized_curvature_information_preservation_duality",
       "equation_labels": [
         "eq:ldg12_information_order_parameter_1a",
@@ -8520,7 +8530,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "cosmic_web_emergence_homogenization_duality",
       "equation_labels": [
         "eq:ldg13_cosmic_web_order_parameter_1a",
@@ -8568,7 +8578,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_interfac",
       "equation_labels": [
         "eq:ldg_cross_complex_chain_1a2a",
@@ -8600,7 +8610,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_weighted_spiral_order",
       "equation_labels": [
         "eq:drv_ldg_b01_product_carrier",
@@ -8629,7 +8639,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "curvature_driven_elastic_energy_production",
       "equation_labels": [
         "eq:drv_ldg_b02_product_carrier",
@@ -8658,7 +8668,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "rotation_pitch_coupling_invariant",
       "equation_labels": [
         "eq:drv_ldg_b03_product_carrier",
@@ -8687,7 +8697,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "screened_halo_response",
       "equation_labels": [
         "eq:drv_ldg_b04_product_carrier",
@@ -8716,7 +8726,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "confined_filament_persistence",
       "equation_labels": [
         "eq:drv_ldg_b05_product_carrier",
@@ -8745,7 +8755,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "information_bearing_cluster_web_stability",
       "equation_labels": [
         "eq:drv_ldg_b06_product_carrier",
@@ -8775,7 +8785,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "locality_energy_morphogenesis_closure",
       "equation_labels": [
         "eq:drv_ldg_c01_spatial_carrier",
@@ -8803,7 +8813,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "screened_rotation_halo_geometry",
       "equation_labels": [
         "eq:drv_ldg_c02_spatial_carrier",
@@ -8831,7 +8841,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "information_preserving_cosmic_network_closure",
       "equation_labels": [
         "eq:drv_ldg_c03_spatial_carrier",
@@ -8859,7 +8869,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "black_hole_dynamics::elastic_black_hole_emergence_triviality_of_breakdown",
       "equation_labels": [
         "eq:bhhr01_elastic_pi_black_hole_order_parameter_1a",
@@ -8909,7 +8919,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "bridge_duality_dual_invariant_translation",
       "equation_labels": [
         "eq:bhhr02_bridge_duality_order_parameter_1a",
@@ -8934,7 +8944,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "physical_singularity_absence_mathematical_failure_point_status",
       "equation_labels": [
         "eq:bhhr03_singularity_status_order_parameter_1a",
@@ -8960,7 +8970,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "black_hole_observability_triviality_and_regularity",
       "equation_labels": [
         "eq:bhhr04_black_hole_observability_order_parameter_1a",
@@ -8983,7 +8993,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_hawking_emission_radiative_stasis",
       "equation_labels": [
         "eq:bhhr05_elastic_pi_hawking_boundary_order_parameter_1a",
@@ -9035,7 +9045,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "hawking_radiation_as_entropic_relaxation_stasis",
       "equation_labels": [
         "eq:bhhr06_hawking_relaxation_order_parameter_1a",
@@ -9058,7 +9068,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "observer_horizon_threshold_infinite_visibility",
       "equation_labels": [
         "eq:bhhr07_observer_horizon_order_parameter_1a",
@@ -9081,7 +9091,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation",
       "equation_labels": [
         "eq:bhhr08_elastic_pi_gravitational_memory_order_parameter_1a",
@@ -9137,7 +9147,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "residual_deformation_memory_perfect_relaxation",
       "equation_labels": [
         "eq:bhhr09_residual_memory_order_parameter_1a",
@@ -9160,7 +9170,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "simulation_consistency_breakdown_and_non_equivalence",
       "equation_labels": [
         "eq:bhhr10_simulation_consistency_order_parameter_1a",
@@ -9183,7 +9193,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat",
       "equation_labels": [
         "eq:bhhr_cross_complex_chain_1a2a",
@@ -9215,7 +9225,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "entropy_invariant_horizon_translation",
       "equation_labels": [
         "eq:drv_bhhr_b01_product_carrier",
@@ -9244,7 +9254,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "regular_observer_horizon_hypersurface",
       "equation_labels": [
         "eq:drv_bhhr_b02_product_carrier",
@@ -9273,7 +9283,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "spatiotemporal_hawking_flux_density",
       "equation_labels": [
         "eq:drv_bhhr_b03_product_carrier",
@@ -9302,7 +9312,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "observer_accessible_curvature_memory",
       "equation_labels": [
         "eq:drv_bhhr_b04_product_carrier",
@@ -9331,7 +9341,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "certified_residual_memory_lower_bound",
       "equation_labels": [
         "eq:drv_bhhr_b05_product_carrier",
@@ -9360,7 +9370,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "regular_nonperforating_horizon_geometry",
       "equation_labels": [
         "eq:drv_bhhr_c01_spatial_carrier",
@@ -9388,7 +9398,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "observable_hawking_memory_certification",
       "equation_labels": [
         "eq:drv_bhhr_c02_spatial_carrier",
@@ -9417,7 +9427,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery",
       "equation_labels": [
         "eq:grw01_ripple_propagation_order_parameter_1a",
@@ -9495,7 +9505,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality",
       "equation_labels": [
         "eq:grw02_q_factor_order_parameter_1a",
@@ -9554,7 +9564,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "nonlinear_overtone_generation_spectral_purity",
       "equation_labels": [
         "eq:grw03_overtone_purity_order_parameter_1a",
@@ -9603,7 +9613,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
       "equation_labels": [
         "eq:grw04_gw_lag_order_parameter_1a",
@@ -9644,7 +9654,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint",
       "equation_labels": [
         "eq:grw05_dfi_memory_order_parameter_1a",
@@ -9711,7 +9721,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation",
       "equation_labels": [
         "eq:grw06_mode_conversion_order_parameter_1a",
@@ -9762,7 +9772,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "shock_onset_self_steepening_threshold_no_shock_propagation",
       "equation_labels": [
         "eq:grw07_shock_threshold_order_parameter_1a",
@@ -9825,7 +9835,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
       "equation_labels": [
         "eq:grw08_stochastic_tilt_order_parameter_1a",
@@ -9879,7 +9889,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "environment_dependent_group_velocity_mapping_uniform_propagation",
       "equation_labels": [
         "eq:grw09_group_velocity_order_parameter_1a",
@@ -9929,7 +9939,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "invertible_source_transport_detection_map_non_invertible_degeneracy",
       "equation_labels": [
         "eq:grw10_source_transport_detection_order_parameter_1a",
@@ -9997,7 +10007,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i",
       "equation_labels": [
         "eq:grw_cross_complex_chain_1a2a",
@@ -10029,7 +10039,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "wave_energy_quality_invariant",
       "equation_labels": [
         "eq:drv_grw_b01_product_carrier",
@@ -10058,7 +10068,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "distance_corrected_harmonic_coupling",
       "equation_labels": [
         "eq:drv_grw_b02_product_carrier",
@@ -10087,7 +10097,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "flowpoint_resolved_dfi_memory_transfer",
       "equation_labels": [
         "eq:drv_grw_b03_product_carrier",
@@ -10116,7 +10126,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "shock_gated_stochastic_tilt_production",
       "equation_labels": [
         "eq:drv_grw_b04_product_carrier",
@@ -10145,7 +10155,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "environment_tomography_information_metric",
       "equation_labels": [
         "eq:drv_grw_b05_product_carrier",
@@ -10174,7 +10184,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "damping_and_lag_corrected_harmonic_clock",
       "equation_labels": [
         "eq:drv_grw_c01_spatial_carrier",
@@ -10202,7 +10212,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "memory_shock_environmental_reconstruction",
       "equation_labels": [
         "eq:drv_grw_c02_spatial_carrier",
@@ -10235,7 +10245,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "cosmic_spark_flowpoint_correspondence_and_spectral_duality",
       "equation_labels": [
         "eq:sc01_branch_condition_1a",
@@ -10256,7 +10266,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory",
       "equation_labels": [
         "eq:sc02_spark_field_1a2a",
@@ -10294,7 +10304,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer",
       "equation_labels": [
         "eq:sc03_elastic_field_1a2a",
@@ -10333,7 +10343,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "wave_sector_and_expansion_sector_cosmological_projection",
       "equation_labels": [
         "eq:sc04_observation_operators_1a2a",
@@ -10370,7 +10380,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "flowpoint_resolved_cosmological_memory_resolvent",
       "equation_labels": [
         "eq:sc05_source_complexes_1b2b",
@@ -10408,7 +10418,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "common_potential_observation_operator",
       "equation_labels": [
         "eq:sc06_source_complexes_1b2b",
@@ -10445,7 +10455,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "horizon_localized_observable_memory_closure",
       "equation_labels": [
         "eq:sc07_source_b_complexes_1c2c",
@@ -10492,7 +10502,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface",
       "equation_labels": [
         "eq:sc_cross_complex_chain_1a2a1b2b1c2c",
@@ -10508,19 +10518,19 @@
         "eq:sc_cross_complex_audit_record_1a2a"
       ],
       "first_label": "app:sc_cross_complex_meta_closure_1a2a1b2b1c2c",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_005_appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interfac/manifest.json",
       "module": "cosmological_spark_dynamics",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
       "source_complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Appendix-Wide Symmetric-Cosmology Closure and Falsification Localization"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_dtqc_spectral_measure_dual_of_dtqc",
       "equation_labels": [
         "eq:dtqc_first_deriv_1a",
@@ -10569,7 +10579,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "dtqc::dual_support_equivalence_support_mismatch_leakage",
       "equation_labels": [
         "eq:occupancy_equivalence_1a",
@@ -10632,7 +10642,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "parseval_energy_bijection_l_2_energy_mismatch",
       "equation_labels": [
         "eq:psv_parseval_identity_1a",
@@ -10679,7 +10689,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "irrational_drive_locking_commensurate_resonance_collapse",
       "equation_labels": [
         "eq:diophantine_1a",
@@ -10742,9 +10752,10 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support",
       "equation_labels": [
+        "eq:dtqc05_typed_obstruction_class",
         "eq:dtqc_meyer_cap_ud_rd_1a",
         "eq:dtqc_meyer_cap_meyer_inclusion_1a",
         "eq:dtqc_meyer_cap_autocorr_1a",
@@ -10777,21 +10788,23 @@
         "eq:dtqc_meyer_cap_nonmeyer_indicator_2a"
       ],
       "first_label": "app:dtqc_complex_05",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Meyer Cut-and-Project Structure <-> Non-Meyer/Diffuse Support"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking",
       "equation_labels": [
+        "eq:dtqc06_two_generators",
+        "eq:dtqc06_four_character_sectors",
         "eq:z2_symmetry_inner_1a",
         "eq:z2_symmetry_fourier_1a",
         "eq:z2_parity_lock_zero_gap_1a",
@@ -10814,21 +10827,24 @@
         "eq:z2_parity_threshold_equiv_1a2a"
       ],
       "first_label": "app:dtqc_complex_06",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Z_2^ 2 Sign Symmetry <-> Parity-Bias Symmetry Breaking"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_invariance_of_support_nonlinear_leakage",
       "equation_labels": [
+        "eq:dtqc07_constant_gain_active_support",
+        "eq:dtqc07_timevarying_gain_support",
+        "eq:dtqc07_polynomial_active_support",
         "eq:epsi_support_preservation_1a",
         "eq:epsi_support_preservation_calculus_1a",
         "eq:epsi_indicator_projection_1a",
@@ -10858,21 +10874,23 @@
         "eq:epsi_continuity_threshold_1a2a"
       ],
       "first_label": "app:dtqc_complex_07",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "elastic_invariance_of_support_nonlinear_leakage",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Elastic-pi Invariance of Support <-> Nonlinear Leakage"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing",
       "equation_labels": [
+        "eq:dtqc08_typed_ou_process",
+        "eq:dtqc08_five_dimensional_feature",
         "eq:threshold_sigma_star_1a",
         "eq:peak_contrast_positive_1a",
         "eq:windowed_parseval_tolerance_1a",
@@ -10901,19 +10919,19 @@
         "eq:design_criterion_1a2a"
       ],
       "first_label": "app:dtqc_complex_08",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "OU-Noise (5-D Scatter) Robustness <-> Noise-Induced Smearing"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "autocorrelation_completeness_mixed_autocorrelation",
       "equation_labels": [
         "eq:projector_weight_1a",
@@ -10947,21 +10965,22 @@
         "eq:calc_certification_1a2a"
       ],
       "first_label": "app:dtqc_complex_09",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_009_autocorrelation_completeness_mixed_autocorrelation/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "autocorrelation_completeness_mixed_autocorrelation",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Autocorrelation Completeness <-> Mixed Autocorrelation"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction",
       "equation_labels": [
+        "eq:dtqc10_typed_l1_fourier_pair",
         "eq:orthogonality_lines_1a",
         "eq:bohr_coeff_extract_1a",
         "eq:kernel_triviality_1a",
@@ -10987,21 +11006,23 @@
         "eq:compression_certificate_1a2a"
       ],
       "first_label": "app:dtqc_complex_10",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Algebraic\u2013Analytic Reconstruction Equivalence <-> Non-Invertible Reconstruction"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "wavelet_ridge_locking_ridge_drift_shear",
       "equation_labels": [
+        "eq:dtqc11_active_line_separation",
+        "eq:dtqc11_resolution_residuals",
         "eq:ridge_in_lattice_1a",
         "eq:ridge_bias_local_1a",
         "eq:ridge_ifr_stability_1a",
@@ -11032,21 +11053,22 @@
         "eq:fft_cwt_consistency_1a2a"
       ],
       "first_label": "app:dtqc_complex_11",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "wavelet_ridge_locking_ridge_drift_shear",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Wavelet Ridge Locking <-> Ridge Drift/Shear"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
       "equation_labels": [
+        "eq:dtqc12_typed_disorder_coupling",
         "eq:atomic_support_1a",
         "eq:parseval_stationary_point_1a",
         "eq:w_mn_drift_1a",
@@ -11071,21 +11093,22 @@
         "eq:disorder_case_1a2a"
       ],
       "first_label": "app:dtqc_complex_12",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Floquet-Free Robustness (Dual 2-Adic Criterionicity) <-> Disorder-Reliant Stability"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown",
       "equation_labels": [
+        "eq:dtqc13_typed_modulation_law",
         "eq:coeff_limit_1a",
         "eq:translation_bounded_consequence_1a",
         "eq:coeff_bias_bound_1a",
@@ -11108,21 +11131,23 @@
         "eq:boxed_equivalence_1a2a"
       ],
       "first_label": "app:dtqc_complex_13",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
-      "title": "Drift-Boundedness Criterion <-> Unbounded-Drift Breakdown"
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+      "title": "Drift-Boundedness Criterion <-> Stochastic-Drift Spectral Breakdown"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance",
       "equation_labels": [
+        "eq:dtqc14_canonical_dfi_coupling",
+        "eq:dtqc14_ordered_tail_limit",
         "eq:dfi_tail_purepoint_obs_1a",
         "eq:dfi_tail_limit_zero_1a",
         "eq:dfi_tail_monotone_1a",
@@ -11149,21 +11174,23 @@
         "eq:dfi_binary_cert_1a2a"
       ],
       "first_label": "app:dtqc_complex_14",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "DFI-Compatible Tail Control <-> Tail-Driven Mass Imbalance"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims",
       "equation_labels": [
+        "eq:dtqc15_provenance_record",
+        "eq:dtqc15_tolerance_residual",
         "eq:fig_support_equality_1a",
         "eq:fig_flux_mass_identity_1a",
         "eq:fig_ridge_bijection_1a",
@@ -11199,19 +11226,19 @@
         "eq:fig_certify_variational_1a2a"
       ],
       "first_label": "app:dtqc_complex_15",
-      "implementation_status": "blocked",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims/manifest.json",
       "module": "dtqc",
       "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
       "source_complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
       "title": "Figure-Backed Closure (Bragg + CWT) <-> Figure-Contradicted Claims"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_gain_support_transport_isomorphism",
       "equation_labels": [
         "eq:drv_dtqc_b01_product_carrier",
@@ -11240,7 +11267,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "diophantine_parseval_locking_invariant",
       "equation_labels": [
         "eq:drv_dtqc_b02_product_carrier",
@@ -11269,7 +11296,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "parity_meyer_diffraction_decomposition",
       "equation_labels": [
         "eq:drv_dtqc_b03_product_carrier",
@@ -11298,7 +11325,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_gain_ou_support_margin",
       "equation_labels": [
         "eq:drv_dtqc_b04_product_carrier",
@@ -11327,7 +11354,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "autocorrelation_reconstruction_projector",
       "equation_labels": [
         "eq:drv_dtqc_b05_product_carrier",
@@ -11356,7 +11383,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "ridge_resolved_2_adic_robustness_certificate",
       "equation_labels": [
         "eq:drv_dtqc_b06_product_carrier",
@@ -11385,7 +11412,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "drift_tail_figure_certification_functional",
       "equation_labels": [
         "eq:drv_dtqc_b07_product_carrier",
@@ -11415,7 +11442,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "elastic_parseval_quasicrystal_isometry",
       "equation_labels": [
         "eq:drv_dtqc_c01_spatial_carrier",
@@ -11443,7 +11470,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "parity_meyer_noise_stable_diffraction_closure",
       "equation_labels": [
         "eq:drv_dtqc_c02_spatial_carrier",
@@ -11471,7 +11498,7 @@
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-      "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+      "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
       "complex_id": "certified_multiscale_dtqc_reconstruction_closure",
       "equation_labels": [
         "eq:drv_dtqc_c03_spatial_carrier",

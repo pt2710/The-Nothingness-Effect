@@ -8,8 +8,8 @@ COMPONENT = TheoremComponent(
     role=TheoremRole.CROSS,
     authoritative_title='Z_2^ 2 Sign Symmetry <-> Parity-Bias Symmetry Breaking',
     authoritative_title_tex='$\\mathbb{Z}_2^{\\,2}$ Sign Symmetry $\\leftrightarrow$ Parity-Bias Symmetry Breaking',
-    equation_labels=('eq:dtqc06_joint_status_1a2a', 'eq:z2_parity_corr_def_1a2a', 'eq:z2_parity_gap_identity_1a2a', 'eq:z2_parity_bias_modulus_1a2a', 'eq:z2_fourier_shift_1a2a', 'eq:z2_corr_fourier_1a2a', 'eq:z2_parity_identity_eq_1a2a', 'eq:z2_parity_equivalence_chain_1a2a', 'eq:z2_parity_threshold_equiv_1a2a'),
-    implementation_status='blocked',
+    equation_labels=('eq:dtqc06_two_generators', 'eq:dtqc06_four_character_sectors', 'eq:dtqc06_joint_status_1a2a', 'eq:z2_parity_corr_def_1a2a', 'eq:z2_parity_gap_identity_1a2a', 'eq:z2_parity_bias_modulus_1a2a', 'eq:z2_fourier_shift_1a2a', 'eq:z2_corr_fourier_1a2a', 'eq:z2_parity_identity_eq_1a2a', 'eq:z2_parity_equivalence_chain_1a2a', 'eq:z2_parity_threshold_equiv_1a2a'),
+    implementation_status='implemented',
 )
 
 

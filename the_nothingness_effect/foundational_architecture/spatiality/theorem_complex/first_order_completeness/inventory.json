@@ -14,7 +14,7 @@
     {
       "complex_id": "affine_spatial_involution_orbit",
       "directory": "complex_003_affine_spatial_involutionorbit",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/foundational_architecture/spatiality"

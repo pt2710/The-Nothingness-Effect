@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Elastic-pi Invariance of Support',
     authoritative_title_tex='Elastic-$\\pi$ Invariance of Support',
     equation_labels=('eq:epsi_support_preservation_1a', 'eq:epsi_support_preservation_calculus_1a', 'eq:epsi_indicator_projection_1a', 'eq:epsi_projection_test_function_1a', 'eq:epsi_projection_argument_1a', 'eq:epsi_energy_scale_1a', 'eq:epsi_parseval_scale_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

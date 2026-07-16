@@ -24,27 +24,27 @@
     {
       "complex_id": "bridge_duality_and_the_2_adic_criterion",
       "directory": "complex_005_bridge_duality_and_the_2_adic_criterion",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "elastic_curvature_smoothness_curvature_singularity",
       "directory": "complex_006_elastic_curvature_smoothnesscurvature_singularity",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "elastic_entropic_stability_entropic_instability",
       "directory": "complex_007_elastic_entropic_stabilityentropic_instability",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "elastic_geometric_consistency_geometric_degeneracy",
       "directory": "complex_008_elastic_geometric_consistencygeometric_degeneracy",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface",
       "directory": "complex_009_appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature"

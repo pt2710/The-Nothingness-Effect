@@ -24,57 +24,57 @@
     {
       "complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support",
       "directory": "complex_005_meyer_cut_and_project_structure_non_meyer_diffuse_support",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking",
       "directory": "complex_006_z_2_2_sign_symmetry_parity_bias_symmetry_breaking",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "elastic_invariance_of_support_nonlinear_leakage",
       "directory": "complex_007_elastic_invariance_of_support_nonlinear_leakage",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing",
       "directory": "complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "autocorrelation_completeness_mixed_autocorrelation",
       "directory": "complex_009_autocorrelation_completeness_mixed_autocorrelation",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction",
       "directory": "complex_010_algebraicanalytic_reconstruction_equivalence_non_invertible_reconstruction",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "wavelet_ridge_locking_ridge_drift_shear",
       "directory": "complex_011_wavelet_ridge_locking_ridge_drift_shear",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
       "directory": "complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown",
       "directory": "complex_013_drift_boundedness_criterion_unbounded_drift_breakdown",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance",
       "directory": "complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance",
-      "status": "blocked"
+      "status": "implemented"
     },
     {
       "complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims",
       "directory": "complex_015_figure_backed_closure_bragg_cwt_figure_contradicted_claims",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint"

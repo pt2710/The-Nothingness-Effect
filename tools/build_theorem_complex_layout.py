@@ -14,8 +14,13 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import sys
 import unicodedata
 from typing import Any
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import all_contracts
 
@@ -459,7 +464,16 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         source_ids = list(dict.fromkeys(source_ids))
         dependency_status = "authoritative_cross_reference"
 
-        contract = contracts.get(complex_id)
+        contract = (
+            contracts.get(complex_id)
+            or contracts.get(row["source_complex_id"])
+            or contracts.get(prior_row.get("complex_id", ""))
+        )
+        if "recertified_contracts.py" in prior_row.get("implementation_path", "") and contract is None:
+            raise RuntimeError(
+                f"recertified contract missing from catalog: complex={complex_id!r} "
+                f"source={row['source_complex_id']!r} prior={prior_row.get('complex_id')!r}"
+            )
         if contract is not None:
             status = "implemented"
             status_reason = (

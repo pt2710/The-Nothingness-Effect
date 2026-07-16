@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Elastic Entropic Stability',
     authoritative_title_tex='Elastic Entropic Stability (1A)',
     equation_labels=('eq:edi07_entropic_stability_order_parameter_1a', 'eq:edi07_entropic_stability_branch_condition_1a', 'eq:ees_bound_1a', 'eq:ees_energy_decay_1a', 'eq:ees_lipschitz_1a', 'eq:ees_frechet_1a', 'eq:ees_gronwall_1a', 'eq:ees_energy_integral_1a', 'eq:ees_noise_robust_1a', 'eq:ees_energy_convexity_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Typed Symmetric-Cosmology Compositional Closure',
     authoritative_title_tex='Typed Symmetric-Cosmology Compositional Closure',
     equation_labels=('eq:sc_meta_realization_tuple_1a', 'eq:sc_meta_composite_map_1a', 'eq:sc_meta_interface_commutation_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

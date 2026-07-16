@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Disorder-Reliant Stability',
     authoritative_title_tex='Disorder-Reliant Stability (2A)',
     equation_labels=('eq:disorder_tuned_zero_2a', 'eq:continuous_or_mismatch_2a', 'eq:threshold_derivative_2a', 'eq:spectral_split_2a', 'eq:test_function_witness_2a', 'eq:classification_threshold_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

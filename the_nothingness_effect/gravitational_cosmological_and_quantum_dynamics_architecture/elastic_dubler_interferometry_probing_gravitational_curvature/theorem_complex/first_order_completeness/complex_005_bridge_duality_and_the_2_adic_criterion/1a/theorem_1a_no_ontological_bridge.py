@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Theorem 1A: No Ontological Bridge',
     authoritative_title_tex='Theorem 1A: No Ontological Bridge',
     equation_labels=('eq:edi05_bridge_duality_order_parameter_1a', 'eq:edi05_bridge_duality_branch_condition_1a', 'eq:bridge_duality_2adic_boundary_1a', 'eq:bridge_duality_2adic_translation_1a', 'eq:bridge_duality_2adic_nojump_1a', 'eq:bridge_duality_2adic_infwork_1a', 'eq:bridge_duality_2adic_diffeo_1a', 'eq:bridge_duality_2adic_smallloop_1a', 'eq:bridge_duality_2adic_loopcalc_1a', 'eq:bridge_duality_2adic_loopq_1a', 'eq:bridge_duality_2adic_chain_1a', 'eq:bridge_duality_2adic_contra_1a', 'eq:bridge_duality_2adic_abscont_1a', 'eq:bridge_duality_2adic_absimp_1a', 'eq:bridge_duality_2adic_boundworkhop_1a', 'eq:bridge_duality_2adic_noboundary_1a', 'eq:bridge_duality_2adic_c2along_1a', 'eq:bridge_duality_2adic_dqae_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

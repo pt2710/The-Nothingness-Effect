@@ -1,6 +1,6 @@
 # TNE test and simulation report
 
-Full pytest gate: **820 passed**, **0 failed**, **0 skipped**, **8 warnings** in **617.17 seconds**.
+Full pytest gate: **827 passed**, **0 failed**, **0 skipped**, **8 warnings** in **627.79 seconds**.
 
 Producer entrypoints: test 37/37 passed; simulation 37/37 passed. Legacy heavy renderers with canonical-name collisions are recorded as bounded contract-inventory fallbacks; typed contract/evidence suites are preferred when present.
 

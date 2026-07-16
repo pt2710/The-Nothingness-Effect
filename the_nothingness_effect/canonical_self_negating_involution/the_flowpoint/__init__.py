@@ -14,6 +14,13 @@ from .flowpoint import (
     phase_indexed_kernel_transport,
     scheduled_spectral_history,
 )
+from .recertified_contracts import (
+    KernelAlternatorResult,
+    TwoAdicUnificationInput,
+    TwoAdicUnificationResult,
+    evaluate_2adic_dimensional_unification,
+    evaluate_kernel_alternator,
+)
 
 __all__ = [
     "AffineHistoryField",
@@ -30,4 +37,9 @@ __all__ = [
     "invariant_projector",
     "phase_indexed_kernel_transport",
     "scheduled_spectral_history",
+    "KernelAlternatorResult",
+    "TwoAdicUnificationInput",
+    "TwoAdicUnificationResult",
+    "evaluate_2adic_dimensional_unification",
+    "evaluate_kernel_alternator",
 ]

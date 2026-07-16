@@ -19,7 +19,7 @@
     {
       "complex_id": "kernel_recursion",
       "directory": "complex_004_kernelrecursion",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/foundational_architecture/duality"

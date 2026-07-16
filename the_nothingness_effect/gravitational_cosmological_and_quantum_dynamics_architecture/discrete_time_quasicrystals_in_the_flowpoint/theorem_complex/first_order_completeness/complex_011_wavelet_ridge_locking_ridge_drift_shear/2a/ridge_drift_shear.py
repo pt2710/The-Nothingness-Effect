@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Ridge Drift/Shear',
     authoritative_title_tex='Ridge Drift/Shear (2A)',
     equation_labels=('eq:drift_positive_gap_2a', 'eq:modulated_shift_2a', 'eq:effective_shift_2a', 'eq:shear_leakage_equivalence_2a', 'eq:jensen_bound_2a', 'eq:shear_statistic_2a', 'eq:shear_gradient_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

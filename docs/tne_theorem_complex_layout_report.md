@@ -4,7 +4,7 @@ The verified inventory contains **351** unique complexes: 204 A, 98 B, and 49 C.
 
 | Level | Inventory | Implemented | Proxy | Blocked |
 | --- | --- | --- | --- | --- |
-| A | 204 | 79 | 103 | 22 |
+| A | 204 | 101 | 103 | 0 |
 | B | 98 | 64 | 34 | 0 |
 | C | 49 | 30 | 19 | 0 |
 

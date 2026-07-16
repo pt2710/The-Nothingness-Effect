@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Non-Invertible Reconstruction',
     authoritative_title_tex='Non-Invertible Reconstruction (2A)',
     equation_labels=('eq:residual_off_support_2a', 'eq:residual_energy_2a', 'eq:single_line_mismatch_2a', 'eq:residual_characterization_2a', 'eq:detect_violation_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

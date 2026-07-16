@@ -14,7 +14,7 @@
     {
       "complex_id": "order_two_symmetry_recursion",
       "directory": "complex_003_order_two_symmetryrecursion",
-      "status": "blocked"
+      "status": "implemented"
     }
   ],
   "module": "the_nothingness_effect/foundational_architecture/symmetry"

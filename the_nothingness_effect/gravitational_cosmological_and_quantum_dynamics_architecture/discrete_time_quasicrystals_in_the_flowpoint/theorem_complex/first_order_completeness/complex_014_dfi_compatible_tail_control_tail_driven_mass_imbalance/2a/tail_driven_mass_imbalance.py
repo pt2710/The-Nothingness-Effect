@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Tail-Driven Mass Imbalance',
     authoritative_title_tex='Tail-Driven Mass Imbalance',
     equation_labels=('eq:dfi_cont_mass_bound_2a', 'eq:dfi_tail_lower_bound_2a', 'eq:dfi_tail_persistence_2a', 'eq:dfi_cont_survive_2a', 'eq:dfi_cont_derivative_2a', 'eq:dfi_mass_imbalance_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

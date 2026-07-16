@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Symmetric-Cosmology Dependency-Localized Breakdown',
     authoritative_title_tex='Symmetric-Cosmology Dependency-Localized Breakdown',
     equation_labels=(),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

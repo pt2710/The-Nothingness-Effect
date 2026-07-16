@@ -1,24 +1,27 @@
 {
   "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
   "artifact_manifests": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
-    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
-    "current_equation_label_count": 26,
+    "current_equation_label_count": 28,
     "missing_audit_equation_labels": []
   },
   "carrier_violation": false,
   "completeness_order": "first_order_completeness",
   "complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing",
   "component_modules": [
-    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/1a/ou_noise_robustness_pure_point_preservation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/1a/ou_noise_latent_line_identifiability.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/2a/noise_induced_smearing.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/1a2a/ou_noise_5_d_scatter_robustness_noise_induced_smearing.py"
   ],
   "dependency_status": "authoritative_cross_reference",
   "equation_labels": [
+    "eq:dtqc08_typed_ou_process",
+    "eq:dtqc08_five_dimensional_feature",
     "eq:threshold_sigma_star_1a",
     "eq:peak_contrast_positive_1a",
     "eq:windowed_parseval_tolerance_1a",
@@ -47,7 +50,7 @@
     "eq:design_criterion_1a2a"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "domain/codomain guards",
       "theorem law",
@@ -60,24 +63,36 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/falsification_checks/test_ou_noise_5_d_scatter_robustness_noise_induced_smearing_falsification.py"
   ],
   "first_label": "app:dtqc_complex_08",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/1a/ou_noise_latent_line_identifiability.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/2a/noise_induced_smearing.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/1a2a/ou_noise_5_d_scatter_robustness_noise_induced_smearing.py"
   ],
+  "known_limitations": [],
   "level": "A",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "fail-closed typed contract result",
+      "name": "ou_noise_5_d_scatter_robustness_noise_induced_smearing result",
+      "python_types": [
+        "ContractResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "typed recertified source-law input",
+      "name": "ou_noise_5_d_scatter_robustness_noise_induced_smearing input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
     },
     "exact_semantics": false,
     "invariant": null,
-    "operator": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts.evaluate_ou_noise_5d_scatter",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
     "simulation_runner": null,
     "source_removal_check_count": 0
   },
@@ -102,21 +117,22 @@
   ],
   "source_complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing",
   "source_complex_ids": [],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_008_ou_noise_5_d_scatter_robustness_noise_induced_smearing/falsification_checks/test_ou_noise_5_d_scatter_robustness_noise_induced_smearing_falsification.py"
   ],
   "theorem_titles": {
     "cross": "OU-Noise (5-D Scatter) Robustness <-> Noise-Induced Smearing",
-    "left": "OU-Noise Robustness (Pure-Point Preservation)",
+    "left": "OU-Noise Latent-Line Identifiability",
     "right": "Noise-Induced Smearing"
   },
   "theorem_titles_tex": {
     "cross": "OU-Noise (5-D Scatter) Robustness $\\leftrightarrow$ Noise-Induced Smearing",
-    "left": "OU-Noise Robustness (Pure-Point Preservation)",
+    "left": "OU-Noise Latent-Line Identifiability",
     "right": "Noise-Induced Smearing"
   }
 }

@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='DFI-Compatible Tail Control',
     authoritative_title_tex='DFI-Compatible Tail Control',
     equation_labels=('eq:dfi_tail_purepoint_obs_1a', 'eq:dfi_tail_limit_zero_1a', 'eq:dfi_tail_monotone_1a', 'eq:dfi_weakstar_pp_1a', 'eq:dfi_ai_derivative_1a', 'eq:dfi_tail_vanish_conclude_1a', 'eq:dfi_parseval_dirac_only_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

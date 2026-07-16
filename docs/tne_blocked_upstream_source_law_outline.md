@@ -1,17 +1,15 @@
-# Upstream review outline for 22 AI-blocking A contracts
+# Recertification closure record for the former 22 blocked A contracts
 
 ## Status correction
 
-These 22 rows are `blocked` in the repository implementation inventory, but
-they are **not 22 missing appendix theorem statements**. Every row has a
-verified A-level appendix label and associated equations. The current block is
-that no certified typed repository contract has yet been extracted and tested.
+These 22 rows are no longer blocked. The contract-recertified appendix release
+certified their A-level source laws, and the repository now exposes typed,
+fail-closed implementations with executable source, boundary, failure and
+provenance tests. This document is retained as the bounded review history.
 
-Use this document as an upstream review checklist. Edit an authoritative
-appendix only when review at the named label confirms that one of the contract
-elements below is genuinely absent or ambiguous. Otherwise the next action is
-repository implementation. This outline contains identifiers and bounded
-paraphrases only; no appendix source text is copied.
+No appendix source text is copied here. The recertified appendix files remain
+external to Git; only filenames, hashes, labels and bounded contract summaries
+are tracked.
 
 For every A contract, the minimum certifiable interface is:
 
@@ -29,10 +27,10 @@ For every A contract, the minimum certifiable interface is:
 
 | Authoritative appendix | Area | Rows | Current finding |
 | --- | --- | ---: | --- |
-| `appendix_tne_foundational_closure_architecture.tex` | Flowpoint closure, duality, symmetry and spatiality | 5 | Labels and equations present; typed A contracts not certified. |
-| `appendix_tne_gravitational_cosmological_quantum_dynamics.tex` | EDI | 5 | Labels and equations present; typed bridge/regularity contracts not certified. |
-| same | symmetric cosmology | 1 | Cross-complex source ownership and closure interface need certification. |
-| same | DTQC | 11 | Spectral/stochastic/reconstruction A interfaces need certification. |
+| `appendix_tne_foundational_closure_architecture.tex` | Flowpoint closure, duality, symmetry and spatiality | 5 | Recertified and implemented. |
+| `appendix_tne_gravitational_cosmological_quantum_dynamics.tex` | EDI | 5 | Recertified and implemented. |
+| same | symmetric cosmology | 1 | Recertified genuine spatial aggregation interface implemented. |
+| same | DTQC | 11 | Recertified spectral/stochastic/reconstruction interfaces implemented. |
 
 ## Foundational closure architecture — 5
 
@@ -76,23 +74,17 @@ For every A contract, the minimum certifiable interface is:
 | 21 | `dfi_compatible_tail_control_tail_driven_mass_imbalance` | `app:dtqc_complex_14` | Fix normalized DFI interface, spectral decomposition/measure, tail functional, vanishing criterion and mass-imbalance obstruction. | Reuse canonical fail-closed DFI; implement tail/mass residuals and normalization guards. |
 | 22 | `figure_backed_closure_bragg_cwt_figure_contradicted_claims` | `app:dtqc_complex_15` | Define Bragg/CWT estimators, data/provenance assumptions, mismatch functional, threshold/decision rule and figure-contradiction boundary. A figure alone must not be the source law. | Implement estimator agreement and falsification tests with producer-local data, figures and manifests. |
 
-## Recommended handoff order
+## Completed implementation order
 
-1. Review rows 1–5 first because their typed Flowpoint interfaces are reused by
-   several later AI candidates.
-2. Review and implement DTQC rows 12–22 before promoting additional QENN
-   spectral-memory claims.
-3. Review EDI rows 6–9 before the EDI meta-interface in row 10.
-4. Treat the cosmology meta-interface in row 11 last, after every declared
-   source contract is executable.
-5. After each promotion, regenerate the theorem matrix, AI matrix, provenance
-   manifests and source-removal evidence. Never mark a row implemented solely
-   because its appendix equations are present.
+1. Foundational rows 1–5 were implemented first.
+2. EDI rows 6–9 were implemented before the positive-definite meta-interface.
+3. The cosmology interface was implemented as a spatial source aggregation.
+4. DTQC rows 12–22 were implemented with explicit finite/limit claim boundaries.
+5. The theorem matrix, AI matrix, layouts, provenance and QA were regenerated.
 
 ## Machine-readable source
 
-The exact 22-row selection is reproducible from
-`docs/data/theorem_complex_implementation_matrix.csv` with
-`implementation_status == blocked`. AI enablement state is in
-`docs/data/ai_derivation_integration_matrix.csv` under
-`use_decision == implement_authoritative_source_contract`.
+The exact 22-row recertification is recorded in
+`docs/data/recertified_contract_provenance.json`. The 351-row inventory now has
+zero blocked rows, and the AI matrix classifies these rows as typed contract
+candidates rather than missing source contracts.

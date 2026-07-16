@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Typed EDI Compositional Closure',
     authoritative_title_tex='Typed EDI Compositional Closure',
     equation_labels=('eq:edi_meta_realization_tuple_1a', 'eq:edi_meta_composite_map_1a', 'eq:edi_meta_interface_commutation_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

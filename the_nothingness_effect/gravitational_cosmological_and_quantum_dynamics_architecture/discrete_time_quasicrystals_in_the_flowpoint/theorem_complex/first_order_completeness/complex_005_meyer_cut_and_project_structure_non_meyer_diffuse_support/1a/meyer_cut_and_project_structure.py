@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Meyer Cut-and-Project Structure',
     authoritative_title_tex='Meyer Cut-and-Project Structure',
     equation_labels=('eq:dtqc_meyer_cap_ud_rd_1a', 'eq:dtqc_meyer_cap_meyer_inclusion_1a', 'eq:dtqc_meyer_cap_autocorr_1a', 'eq:dtqc_meyer_cap_pp_diffraction_1a', 'eq:dtqc_meyer_cap_diff_finite_cover_1a', 'eq:dtqc_meyer_cap_conv_window_1a', 'eq:dtqc_meyer_cap_proof_claims_1a', 'eq:dtqc_meyer_cap_poisson_1a', 'eq:dtqc_meyer_cap_pp_from_poisson_1a', 'eq:dtqc_meyer_cap_intensity_1a', 'eq:dtqc_meyer_cap_massadd_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

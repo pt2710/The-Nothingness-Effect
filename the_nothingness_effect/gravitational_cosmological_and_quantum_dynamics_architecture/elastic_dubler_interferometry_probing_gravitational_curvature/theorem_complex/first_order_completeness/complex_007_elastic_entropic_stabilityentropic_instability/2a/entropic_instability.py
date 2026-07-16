@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Entropic Instability',
     authoritative_title_tex='Entropic Instability (2A)',
     equation_labels=('eq:edi07_entropic_stability_order_parameter_2a', 'eq:edi07_entropic_stability_branch_condition_2a', 'eq:ees_error_floor_2a', 'eq:ees_unbounded_variation_2a', 'eq:ees_growth_2a', 'eq:ees_linear_growth_2a', 'eq:ees_exponential_growth_2a', 'eq:ees_noncoercive_2a', 'eq:ees_noise_amplification_2a', 'eq:ees_linear_amplification_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

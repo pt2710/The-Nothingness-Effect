@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Non-Meyer/Diffuse Support',
     authoritative_title_tex='Non-Meyer/Diffuse Support',
     equation_labels=('eq:dtqc_meyer_cap_nonmeyer_criterion_2a', 'eq:dtqc_meyer_cap_contmass_2a', 'eq:dtqc_meyer_cap_paircorr_2a', 'eq:dtqc_meyer_cap_L2mass_2a', 'eq:dtqc_meyer_cap_lb_contmass_2a', 'eq:dtqc_meyer_cap_testfn_lb_2a', 'eq:dtqc_meyer_cap_nonmeyer_indicator_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

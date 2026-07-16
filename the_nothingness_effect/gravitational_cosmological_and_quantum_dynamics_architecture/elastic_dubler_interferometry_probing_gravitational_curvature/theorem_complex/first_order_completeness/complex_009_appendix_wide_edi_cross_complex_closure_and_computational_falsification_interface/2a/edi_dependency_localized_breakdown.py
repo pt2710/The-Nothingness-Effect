@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='EDI Dependency-Localized Breakdown',
     authoritative_title_tex='EDI Dependency-Localized Breakdown',
     equation_labels=(),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

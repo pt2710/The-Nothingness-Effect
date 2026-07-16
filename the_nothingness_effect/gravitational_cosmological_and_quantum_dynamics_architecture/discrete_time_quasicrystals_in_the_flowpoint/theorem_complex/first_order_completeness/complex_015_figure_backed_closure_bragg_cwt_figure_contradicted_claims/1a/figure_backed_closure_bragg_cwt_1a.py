@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Figure-Backed Closure (Bragg + CWT), 1A',
     authoritative_title_tex='Figure-Backed Closure (Bragg + CWT), 1A',
     equation_labels=('eq:fig_support_equality_1a', 'eq:fig_flux_mass_identity_1a', 'eq:fig_ridge_bijection_1a', 'eq:fig_ridge_freq_derivative_1a', 'eq:fig_subset_supports_1a', 'eq:fig_mismatch_minimum_1a', 'eq:fig_estimator_set_equality_1a', 'eq:fig_estimator_consistency_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

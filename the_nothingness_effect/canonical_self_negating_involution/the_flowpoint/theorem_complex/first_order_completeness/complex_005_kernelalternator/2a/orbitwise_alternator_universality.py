@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Orbitwise Alternator Universality',
     authoritative_title_tex='Orbitwise Alternator Universality',
     equation_labels=('eq:alternator_universality_involution_definition_2a', 'eq:alternator_universality_orbit_definition_2a', 'eq:alternator_universality_orientation_definition_2a', 'eq:alternator_universality_canonical_flip_2a', 'eq:orbitwise_alternator_conjugacy_2a', 'eq:orbitwise_alternator_sequence_2a', 'eq:orbitwise_alternator_sign_sequence_2a', 'eq:alternator_orientation_reversal_2a', 'eq:canonical_alternator_swap_matrix_2a', 'eq:orbitwise_alternator_principle_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

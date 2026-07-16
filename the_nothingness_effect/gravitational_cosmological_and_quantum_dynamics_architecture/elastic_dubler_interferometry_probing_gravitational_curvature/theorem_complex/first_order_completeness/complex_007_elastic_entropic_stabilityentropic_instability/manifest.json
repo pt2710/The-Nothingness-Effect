@@ -1,12 +1,13 @@
 {
   "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
-  "appendix_source_sha256": "c946e19a4266f8c5c3e3dd49ed6b98740d3764cac729536e5b84c42fefba304d",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
   "artifact_manifests": [
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
-    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json"
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
-    "current_equation_label_count": 31,
+    "current_equation_label_count": 34,
     "missing_audit_equation_labels": []
   },
   "carrier_violation": false,
@@ -19,6 +20,9 @@
   ],
   "dependency_status": "authoritative_cross_reference",
   "equation_labels": [
+    "eq:edi07_typed_semigroup_observation_contract",
+    "eq:edi07_typed_observability_contract",
+    "eq:edi07_typed_error_propagation",
     "eq:edi07_entropic_stability_order_parameter_1a",
     "eq:edi07_entropic_stability_branch_condition_1a",
     "eq:ees_bound_1a",
@@ -52,7 +56,7 @@
     "eq:ees_coercivity_restore_1a2a"
   ],
   "falsification": {
-    "execution_status": "blocked",
+    "execution_status": "executable_contract_suite",
     "obligations": [
       "domain/codomain guards",
       "theorem law",
@@ -65,24 +69,36 @@
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_007_elastic_entropic_stabilityentropic_instability/falsification_checks/test_elastic_entropic_stability_entropic_instability_falsification.py"
   ],
   "first_label": "ssec:elastic_entropic_stability_1a2a",
-  "implementation_modules": [],
-  "known_limitations": [
-    "retained from verified contract inventory"
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_007_elastic_entropic_stabilityentropic_instability/1a/elastic_entropic_stability.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_007_elastic_entropic_stabilityentropic_instability/2a/entropic_instability.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_007_elastic_entropic_stabilityentropic_instability/1a2a/elastic_entropic_stability_entropic_instability.py"
   ],
+  "known_limitations": [],
   "level": "A",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "fail-closed typed contract result",
+      "name": "elastic_entropic_stability_entropic_instability result",
+      "python_types": [
+        "ContractResult"
+      ]
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "typed recertified source-law input",
+      "name": "elastic_entropic_stability_entropic_instability input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
     },
     "exact_semantics": false,
     "invariant": null,
-    "operator": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.recertified_contracts.evaluate_elastic_entropic_stability",
     "parameter_constraints": [],
-    "residual": null,
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
     "simulation_runner": null,
     "source_removal_check_count": 0
   },
@@ -107,9 +123,10 @@
   ],
   "source_complex_id": "elastic_entropic_stability_entropic_instability",
   "source_complex_ids": [],
-  "status": "blocked",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
   "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_007_elastic_entropic_stabilityentropic_instability/falsification_checks/test_elastic_entropic_stability_entropic_instability_falsification.py"

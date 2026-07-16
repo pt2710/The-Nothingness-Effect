@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Figure-Contradicted Claims, 2A',
     authoritative_title_tex='Figure-Contradicted Claims, 2A',
     equation_labels=('eq:fig_mismatch_metrics_2a', 'eq:fig_mismatch_positive_2a', 'eq:fig_leakage_existence_2a', 'eq:fig_infeasible_fit_2a', 'eq:fig_no_stationary_dtqc_2a', 'eq:fig_reject_rule_2a', 'eq:fig_asymptotic_rejection_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

@@ -17,6 +17,7 @@ from .types import ComplexContract
 
 
 CONTRACT_MODULES = (
+    ("the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog", "contracts"),
     ("the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.contracts", "flowpoint_contracts"),
     ("the_nothingness_effect.mathematical_architecture.contracts", "mathematical_closure_contracts"),
     ("the_nothingness_effect.foundational_architecture.duality.contracts", "duality_contracts"),

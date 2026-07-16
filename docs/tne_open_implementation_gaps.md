@@ -1,21 +1,14 @@
 # TNE open implementation gaps
 
-Of 351 verified complexes, 173 are implemented, 156 remain proxy-only, and 22 verified A-level source contracts are not yet implemented. There are no blocked B/C rows and no carrier-label conflicts. Proxy B/C rows remain open because their complete source/operator/closure obligations are not yet certified, not because of their names.
+Of 351 verified complexes, 195 are implemented, 156 remain proxy-only, and 0 verified A-level source contracts are not yet implemented. There are no blocked B/C rows and no carrier-label conflicts. Proxy B/C rows remain open because their complete source/operator/closure obligations are not yet certified, not because of their names.
 
 | Module | Implemented | Proxy | Blocked |
 | --- | --- | --- | --- |
 | black_hole_dynamics | 7 | 11 | 0 |
-| cosmological_spark_dynamics | 7 | 0 | 1 |
 | countable_infinity | 0 | 6 | 0 |
 | dfi | 8 | 3 | 0 |
-| dtqc | 14 | 0 | 11 |
 | elastic_dubler_effect | 7 | 22 | 0 |
-| elastic_dubler_interferometry | 10 | 0 | 5 |
 | elastic_pi_ripples | 7 | 11 | 0 |
-| flowpoint_closure_interface | 0 | 0 | 2 |
-| flowpoint_duality | 0 | 0 | 1 |
-| flowpoint_spatiality | 2 | 0 | 1 |
-| flowpoint_symmetry | 1 | 0 | 1 |
 | locality_driven_gravity | 7 | 16 | 0 |
 | observation_collapse | 0 | 16 | 0 |
 | pgqenn | 11 | 6 | 0 |

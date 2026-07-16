@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Noise-Induced Smearing',
     authoritative_title_tex='Noise-Induced Smearing',
     equation_labels=('eq:peak_merging_2a', 'eq:threshold_sigma_star_2a', 'eq:energy_drift_ct_2a', 'eq:fwhm_bound_2a', 'eq:fwhm_growth_proof_2a', 'eq:energy_drift_calc_2a', 'eq:l2_bias_from_broadening_2a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

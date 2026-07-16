@@ -9,7 +9,7 @@ COMPONENT = TheoremComponent(
     authoritative_title='Z_2^ 2 Sign Symmetry',
     authoritative_title_tex='$\\mathbb{Z}_2^{\\,2}$ Sign Symmetry',
     equation_labels=('eq:z2_symmetry_inner_1a', 'eq:z2_symmetry_fourier_1a', 'eq:z2_parity_lock_zero_gap_1a', 'eq:z2_parity_symmetry_core_1a', 'eq:z2_parity_zero_reg_penalty_1a'),
-    implementation_status='blocked',
+    implementation_status='implemented',
 )
 
 

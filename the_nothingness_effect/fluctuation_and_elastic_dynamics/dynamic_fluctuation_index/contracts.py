@@ -32,7 +32,7 @@ from .dfi import (
 
 
 APPENDIX = "appendix_tne_fluctuation_and_elastic_dynamics.tex"
-APPENDIX_SHA256 = "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389"
+APPENDIX_SHA256 = "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b"
 
 
 @dataclass(frozen=True)

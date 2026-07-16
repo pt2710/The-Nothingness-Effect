@@ -6,19 +6,19 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      "sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3"
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a"
+      "sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de"
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389"
+      "sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b"
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      "sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69"
     },
     {
       "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
@@ -26,7 +26,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      "sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011"
     }
   ],
   "authority": "seven externally stored authoritative appendices; no LaTeX source is repository data",
@@ -545,7 +545,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "flowpoint_unity_orientation_and_integer_unfolding",
       "equation_labels": [
         "eq:tne_mpl_tc_chi_plus_1a",
@@ -580,7 +580,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "operation_covariance_and_spectral_minimization",
       "equation_labels": [
         "eq:fp_ops_operation_family_1a2a",
@@ -616,7 +616,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "finite_approximation_and_vanishing_residual_energy",
       "equation_labels": [
         "eq:fp_pi_definition_partial_sum_1a",
@@ -652,7 +652,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
       "equation_labels": [
         "eq:fm_trig_phase_coordinate_1a",
@@ -687,7 +687,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory",
       "equation_labels": [
         "eq:fm_baa_transport_1b",
@@ -725,7 +725,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "addition_of_approximation_and_harmonic_geometry",
       "equation_labels": [
         "eq:fm_bag_phase_clocks",
@@ -764,7 +764,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "complex_id": "addition_of_the_two_complete_b_level_operator_families",
       "equation_labels": [
         "eq:fm_signed_polar_equivalence",
@@ -805,7 +805,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "kernel_alternator",
       "equation_labels": [
         "eq:minimal_universal_flowpoint_state_space_1a2a",
@@ -879,7 +879,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
       "equation_labels": [
         "eq:mirror_dimensional_global_state_space_1a2a",
@@ -970,7 +970,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "reciprocal_relation_action_groupoid",
       "equation_labels": [
         "eq:duality_invariance_global_map_1a2a",
@@ -1048,7 +1048,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "minimal_two_state_involution_orbitwise_alternator",
       "equation_labels": [
         "eq:minimal_universal_duality_c2_definition_1a2a",
@@ -1123,7 +1123,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "involutive_duality_c_2_action",
       "equation_labels": [
         "eq:duality_category_c2_definition_1a2a",
@@ -1214,7 +1214,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "reciprocal_orbit_double_cover",
       "equation_labels": [
         "eq:drv_duality_b01_1b",
@@ -1263,7 +1263,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "two_state_free_cofree_duality",
       "equation_labels": [
         "eq:drv_duality_b02_1b",
@@ -1316,7 +1316,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "invariant_anti_invariant_orbit_fields",
       "equation_labels": [
         "eq:drv_duality_c01_1c",
@@ -1360,7 +1360,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "kernel_recursion",
       "equation_labels": [
         "eq:flowpoint_recursive_compensation_state_space_1a2a",
@@ -1450,7 +1450,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution",
       "equation_labels": [
         "eq:the_symmetry_theorem_c2_definition_1a2a",
@@ -1510,7 +1510,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
       "equation_labels": [
         "eq:reciprocal_pair_symmetry_global_map_1a2a",
@@ -1592,7 +1592,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "schedule_controlled_orbit_transport",
       "equation_labels": [
         "eq:symmetry_transport_involution",
@@ -1644,7 +1644,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "involutive_generator_word_closure_and_conjugacy",
       "equation_labels": [
         "eq:symmetric_closure_duality_symmetry_generators_1b2b",
@@ -1764,7 +1764,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "schedule_driven_generator_word_field",
       "equation_labels": [
         "eq:symmetry_word_field_intertwiner",
@@ -1813,7 +1813,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "order_two_symmetry_recursion",
       "equation_labels": [
         "eq:flowpoint_symmetry_global_map_1a2a",
@@ -1899,7 +1899,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "phase_gated_compensation_transport",
       "equation_labels": [
         "eq:phase_gated_compensation_operator_1b",
@@ -1949,7 +1949,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
       "equation_labels": [
         "eq:minimal_cyclic_spatiality_global_map_1a2a",
@@ -2009,7 +2009,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
       "equation_labels": [
         "eq:imaginary_phase_spatiality_complex_plane_identification_1a2a",
@@ -2079,7 +2079,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization",
       "equation_labels": [
         "eq:spatiality_root_lift_carrier_1b",
@@ -2123,7 +2123,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "orbit_harmonic_phase_resolution",
       "equation_labels": [
         "eq:spatiality_observable_space_1b",
@@ -2166,7 +2166,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "equivariant_orbit_spectral_reconstruction",
       "equation_labels": [
         "eq:spatiality_two_complete_b_inputs_c",
@@ -2209,7 +2209,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "affine_spatial_involution_orbit",
       "equation_labels": [
         "eq:flowpoint_spatiality_global_characteristic_1a2a",
@@ -2317,7 +2317,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "involution_to_chord_linearization",
       "equation_labels": [
         "eq:involution_chord_synthesis_operator",
@@ -2370,7 +2370,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "twisted_orbit_balance_bundle",
       "equation_labels": [
         "eq:twisted_orbit_balance_synthesis_operator",
@@ -2422,7 +2422,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "bidirectional_integer_rays_and_finite_polarity_enumeration",
       "equation_labels": [
         "eq:countable_infinity_natural_numbers_1a2a",
@@ -2491,7 +2491,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
       "equation_labels": [
         "eq:countable_infinity_cube_vertex_space_1a2a",
@@ -2581,7 +2581,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration",
       "equation_labels": [
         "eq:aleph0_state_enumeration_1a2a",
@@ -2654,7 +2654,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "signed_shortlex_cubic_transduction",
       "equation_labels": [
         "eq:ci_b01_displacement_1b",
@@ -2706,7 +2706,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "recurrent_cubical_cover_dynamics",
       "equation_labels": [
         "eq:ci_b02_cover_1b",
@@ -2749,7 +2749,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "reflected_cubical_address_space",
       "equation_labels": [
         "eq:ci_c01_graph_edges_1c",
@@ -2794,7 +2794,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "continuum_trajectory_cardinality_and_countable_phase_cell_collapse",
       "equation_labels": [
         "eq:uncountable_infinity_continuous_trajectory_carrier_1a2a",
@@ -2876,7 +2876,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "power_set_continuum_and_atomic_quotient_collapse",
       "equation_labels": [
         "eq:powerset_atomicity_global_binary_space_1a2a",
@@ -2945,7 +2945,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "dense_flowpoint_traces_and_nowhere_dense_quantized_collapse",
       "equation_labels": [
         "eq:uncountable_density_global_rational_binary_spaces_1a2a",
@@ -3010,7 +3010,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse",
       "equation_labels": [
         "eq:uncountable_recursive_binary_code_space_1a2a",
@@ -3076,7 +3076,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
       "equation_labels": [
         "eq:uncountable_fractal_binary_code_space_1a2a",
@@ -3170,7 +3170,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
       "equation_labels": [
         "eq:uncountable_dual_completion_binary_carrier_1a2a",
@@ -3254,7 +3254,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion",
       "equation_labels": [
         "eq:uncountable_complete_dual_lattice_ambient_carrier_1a2a",
@@ -3333,7 +3333,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
       "equation_labels": [
         "eq:uncountable_operational_collapse_cantor_carrier_1a2a",
@@ -3405,7 +3405,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse",
       "equation_labels": [
         "eq:uncountable_2adic_global_binary_space_1a2a",
@@ -3486,7 +3486,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "dual_realizability_invariant_closure_and_defect_repair",
       "equation_labels": [
         "eq:uncountable_dual_realizability_ambient_duality_map_1a2a",
@@ -3574,7 +3574,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "binary_supported_continuous_superposition_and_atom_phase_translation",
       "equation_labels": [
         "eq:u_b01_additive_derivation",
@@ -3624,7 +3624,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "prefix_tree_dense_reconstruction",
       "equation_labels": [
         "eq:p7_b02_additive_derivation",
@@ -3656,7 +3656,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "complement_invariant_fractal_skeleton_completion",
       "equation_labels": [
         "eq:p7_b03_additive_derivation",
@@ -3686,7 +3686,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "boolean_decision_extension_consensus",
       "equation_labels": [
         "eq:p7_b04_additive_derivation",
@@ -3717,7 +3717,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization",
       "equation_labels": [
         "eq:p7_b05_additive_derivation",
@@ -3748,7 +3748,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "end_compactified_additive_continuum_field",
       "equation_labels": [
         "eq:u_c01_additive_derivation",
@@ -3799,7 +3799,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "decision_weighted_complex_coverage_and_dual_repair_field",
       "equation_labels": [
         "eq:u_c02_additive_derivation",
@@ -3854,7 +3854,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "spectrum_normalization_and_normalization_obstruction",
       "equation_labels": [
         "eq:soi_normalization_canonical_operator_1a2a",
@@ -3914,7 +3914,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "spectrum_dfi_duality_and_dfi_divergence",
       "equation_labels": [
         "eq:soi_dfi_original_soi_1a2a",
@@ -3940,7 +3940,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "measurable_decomposition_and_non_measurable_obstruction",
       "equation_labels": [
         "eq:soi_measurable_original_soi_1a2a",
@@ -3965,7 +3965,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "completeness_and_incompleteness_of_the_soi_l_p_structure",
       "equation_labels": [
         "eq:soi_lp_original_soi_1a2a",
@@ -3991,7 +3991,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "entropy_density_mapping_and_entropy_divergence",
       "equation_labels": [
         "eq:soi_entropy_original_soi_1a2a",
@@ -4017,7 +4017,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "finitizable_infinity_and_the_non_finitization_boundary",
       "equation_labels": [
         "eq:soi_finitization_original_soi_1a2a",
@@ -4044,7 +4044,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "dual_realizability_and_the_missing_dual_defect",
       "equation_labels": [
         "eq:soi_dual_realizability_original_soi_1a2a",
@@ -4069,7 +4069,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction",
       "equation_labels": [
         "eq:soi_mpn_original_soi_1a2a",
@@ -4131,7 +4131,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "borel_analytic_sufficiency_and_over_extension_beyond_measurability",
       "equation_labels": [
         "eq:soi_bas_original_soi_1a2a",
@@ -4193,7 +4193,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "factor_map_equivariance_and_limit_bias",
       "equation_labels": [
         "eq:fmcea_soi_operator_1a2a",
@@ -4270,7 +4270,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "spectrum_flowpoint_addressability_and_unaddressability",
       "equation_labels": [
         "eq:soi_flowpoint_address_original_soi_1b2b",
@@ -4335,7 +4335,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "metric_deformation_robustness_and_deformation_fragility",
       "equation_labels": [
         "eq:soi_metric_original_soi_1b2b",
@@ -4414,7 +4414,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "2_adic_history_accessibility_and_frozen_accessibility",
       "equation_labels": [
         "eq:soi_hist_original_soi_1b2b",
@@ -4497,7 +4497,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "cosmic_matrix_address_and_ghost_spark_obstruction",
       "equation_labels": [
         "eq:soi11_source_address_b_1c2c",
@@ -4533,7 +4533,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "observable_locality_and_infinite_exposure",
       "equation_labels": [
         "eq:soi12_source_temporal_b_1c2c",
@@ -4569,7 +4569,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "elastic_curvature_probing_and_incoherent_warping",
       "equation_labels": [
         "eq:soi13_source_metric_b_1c2c",
@@ -4604,7 +4604,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "observation_induced_collapse_and_collapse_divergence",
       "equation_labels": [
         "eq:obs01_canonical_observation_collapse_1a2a",
@@ -4646,7 +4646,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "collapse_attractor_stability_and_attractor_instability",
       "equation_labels": [
         "eq:obs02_canonical_observation_collapse_1a2a",
@@ -4683,7 +4683,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "uniqueness_and_non_uniqueness_of_collapse",
       "equation_labels": [
         "eq:obs03_canonical_observation_collapse_1a2a",
@@ -4720,7 +4720,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "hilbert_projection_realization_and_projection_breakdown",
       "equation_labels": [
         "eq:obs04_canonical_observation_collapse_1a2a",
@@ -4762,7 +4762,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "fixed_point_consistency_and_trivial_collapse_failure",
       "equation_labels": [
         "eq:obs05_canonical_observation_collapse_1a2a",
@@ -4806,7 +4806,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "observation_definiteness_equivalence_and_closure_failure",
       "equation_labels": [
         "eq:obs09_canonical_observation_collapse_1a2a",
@@ -4844,7 +4844,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "definite_state_projection_and_state_ambiguity",
       "equation_labels": [
         "eq:obs13_canonical_observation_collapse_1a2a",
@@ -4884,7 +4884,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "ergodic_collapse_projection_and_non_convergence",
       "equation_labels": [
         "eq:ecp_canonical_observation_collapse_1a2a",
@@ -4959,7 +4959,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "outcome_conditioned_closure_instrument",
       "equation_labels": [
         "eq:drv_oac_b01_product_carrier",
@@ -4985,7 +4985,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift",
       "equation_labels": [
         "eq:isp_canonical_observation_collapse_1b2b",
@@ -5043,7 +5043,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "temporal_compression_and_frozen_time_obstruction",
       "equation_labels": [
         "eq:temp_canonical_observation_collapse_1b2b",
@@ -5089,7 +5089,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "collapse_spectral_selection_and_spectral_ambiguity",
       "equation_labels": [
         "eq:specsel_canonical_observation_collapse_1b2b",
@@ -5137,7 +5137,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "observation_dimensional_binding_and_dimensional_non_binding",
       "equation_labels": [
         "eq:obs06_canonical_observation_collapse_1c2c",
@@ -5195,7 +5195,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "observable_locality_and_collapse_inaccessibility",
       "equation_labels": [
         "eq:obs10_canonical_observation_collapse_1c2c",
@@ -5248,7 +5248,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "local_horizon_boundary_and_non_locality_divergence",
       "equation_labels": [
         "eq:obs12_canonical_observation_collapse_1c2c",
@@ -5300,7 +5300,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "complex_id": "closure_conditioned_spectral_outcome_field",
       "equation_labels": [
         "eq:drv_oac_c01_spatial_carrier",
@@ -5325,7 +5325,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_spectrum_normalized_existence_and_normalization_breakdown",
       "equation_labels": [
         "eq:dfi_soi",
@@ -5366,7 +5366,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
       "equation_labels": [
         "eq:dfi02_global_rescaling_1a2a",
@@ -5401,7 +5401,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
       "equation_labels": [
         "eq:dfi03_exponential_response_1a2a",
@@ -5437,7 +5437,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_adaptive_applicability_and_contextual_instability",
       "equation_labels": [
         "eq:dfi04_scalarization_maps_1a2a",
@@ -5468,7 +5468,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
       "equation_labels": [
         "eq:dfi05_total_definition_1a2a",
@@ -5501,7 +5501,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency",
       "equation_labels": [
         "eq:dfi06_interface_maps_1a2a",
@@ -5537,7 +5537,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_simulation_consistency_and_simulation_breakdown",
       "equation_labels": [
         "eq:dfi07_sim_total_1a2a",
@@ -5573,7 +5573,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "scale_normalized_dfi_homogeneity_invariant",
       "equation_labels": [
         "eq:drv_dfi_b01_product_carrier",
@@ -5602,7 +5602,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "entropic_applicability_response_operator",
       "equation_labels": [
         "eq:drv_dfi_b02_product_carrier",
@@ -5631,7 +5631,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "flowpoint_certified_dfi_validation_functional",
       "equation_labels": [
         "eq:drv_dfi_b03_product_carrier",
@@ -5661,7 +5661,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "spatially_localized_dfi_consistency_closure",
       "equation_labels": [
         "eq:drv_dfi_c01_spatial_carrier",
@@ -5691,7 +5691,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
       "equation_labels": [
         "eq:reversible_fluctuation_pDFI_1a2a",
@@ -5724,7 +5724,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "flowpoint_parity_correspondence_and_decoupling",
       "equation_labels": [
         "eq:flowpoint_parity_commute_1a2a",
@@ -5755,7 +5755,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "pdfi_entropic_predictability_and_fluctuation_ambiguity",
       "equation_labels": [
         "eq:pDFI_def_1a2a",
@@ -5788,7 +5788,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
       "equation_labels": [
         "eq:pdfi04_observation_handoff_1a2a",
@@ -5818,7 +5818,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "pdfi_elastic_equivalence_and_decoupling",
       "equation_labels": [
         "eq:pdfi_pi_equivalence_1a2a",
@@ -5848,7 +5848,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations",
       "equation_labels": [
         "eq:pdfi06_closure_gap_definition_1a2a",
@@ -5878,7 +5878,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "parity_flowpoint_transport_law",
       "equation_labels": [
         "eq:drv_pdfi_b01_product_carrier",
@@ -5907,7 +5907,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "predictability_observation_parity_coupling",
       "equation_labels": [
         "eq:drv_pdfi_b02_product_carrier",
@@ -5936,7 +5936,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "elastic_calibration_completeness_functional",
       "equation_labels": [
         "eq:drv_pdfi_b03_product_carrier",
@@ -5965,7 +5965,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "spatial_parity_elastic_calibration_closure",
       "equation_labels": [
         "eq:drv_pdfi_c01_spatial_carrier",
@@ -6001,7 +6001,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_elastic_equivalence_and_breakdown",
       "equation_labels": [
         "eq:elastic_pi01_log_variable_1a2a",
@@ -6044,7 +6044,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
       "equation_labels": [
         "eq:elastic_pi02_delta_1a2a",
@@ -6087,7 +6087,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "elastic_curvature_entropy_duality_and_decoupling",
       "equation_labels": [
         "eq:elastic_pi03_preserved_field_1a2a",
@@ -6123,7 +6123,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
       "equation_labels": [
         "eq:elastic_pi04_log_field_1a2a",
@@ -6159,7 +6159,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "dfi_log_curvature_reciprocity_law",
       "equation_labels": [
         "eq:drv_elasticpi_b01_product_carrier",
@@ -6188,7 +6188,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "curvature_certified_simulation_residual",
       "equation_labels": [
         "eq:drv_elasticpi_b02_product_carrier",
@@ -6217,7 +6217,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "spatial_reciprocal_curvature_validation_closure",
       "equation_labels": [
         "eq:drv_elasticpi_c01_spatial_carrier",
@@ -6251,7 +6251,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "weighted_path_functional_and_norm_admissibility",
       "equation_labels": [
         "eq:epinorm_c1_preserved_path_functional_1a2a",
@@ -6284,7 +6284,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "elastic_field_ratios_and_weight_regularity",
       "equation_labels": [
         "eq:epinorm_c2_preserved_ratio_1a2a",
@@ -6311,7 +6311,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds",
       "equation_labels": [
         "eq:epinorm_c3_increment_bounds_1a",
@@ -6341,7 +6341,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "pdfi_elastic_norm_interface",
       "equation_labels": [
         "eq:epinorm_c4_calibrated_output_1a",
@@ -6372,7 +6372,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "pdfi_elastic_norm_equivalence_and_decoupling",
       "equation_labels": [
         "eq:pdfi_pi_equiv_algebraic_1a2a",
@@ -6436,7 +6436,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "weighted_path_ratio_regularity_functional",
       "equation_labels": [
         "eq:drv_epinorm_b01_product_carrier",
@@ -6465,7 +6465,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "entropy_pdfi_calibrated_norm_residual",
       "equation_labels": [
         "eq:drv_epinorm_b02_product_carrier",
@@ -6495,7 +6495,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "complex_id": "spatial_weighted_calibration_closure",
       "equation_labels": [
         "eq:drv_epinorm_c01_spatial_carrier",
@@ -11527,7 +11527,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
       "equation_labels": [
         "eq:delta_recursive_bound_1a",
@@ -11569,7 +11569,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "dfi_entropy_plateau_dfi_divergence_spiking",
       "equation_labels": [
         "eq:dfi_entropy_plateau_algebraic_align_1a",
@@ -11634,7 +11634,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
       "equation_labels": [
         "eq:pv_inflation_pure_point_algebraic_align_1a",
@@ -11699,7 +11699,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance",
       "equation_labels": [
         "eq:parseval_energy_bijection_epochs_algebraic_align_1a",
@@ -11764,7 +11764,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component",
       "equation_labels": [
         "eq:almost_periodic_to_pure_point_1a",
@@ -11829,7 +11829,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines",
       "equation_labels": [
         "eq:flowpoint_flip_parity_constraint_algebraic_align_1a",
@@ -11894,7 +11894,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "qenn::dual_support_equivalence_support_mismatch_leakage",
       "equation_labels": [
         "eq:dual_support_equality_algebraic_align_1a",
@@ -11959,7 +11959,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
       "equation_labels": [
         "eq:bounded_remainder_drift_algebraic_align_1a",
@@ -12024,7 +12024,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing",
       "equation_labels": [
         "eq:inflation_collapse_support_invariance_algebraic_align_1a",
@@ -12089,7 +12089,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance",
       "equation_labels": [
         "eq:epoch_operator_closed_contraction_algebraic_align_1a",
@@ -12154,7 +12154,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap",
       "equation_labels": [
         "eq:entropy_balanced_landscape_algebraic_align_1a",
@@ -12219,7 +12219,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "hyper_parameter_stability_wedge_instability_lobe",
       "equation_labels": [
         "eq:hyperparam_wedge_convexity_1a",
@@ -12284,7 +12284,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "lyapunov_entropy_dissipation_functional",
       "equation_labels": [
         "eq:drv_qenn_b01_product_carrier",
@@ -12313,7 +12313,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "pv_parseval_spectral_energy_lock",
       "equation_labels": [
         "eq:drv_qenn_b02_product_carrier",
@@ -12342,7 +12342,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "parity_resolved_autocorrelation_operator",
       "equation_labels": [
         "eq:drv_qenn_b03_product_carrier",
@@ -12371,7 +12371,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "support_transport_drift_certificate",
       "equation_labels": [
         "eq:drv_qenn_b04_product_carrier",
@@ -12400,7 +12400,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "epoch_support_commutator_closure",
       "equation_labels": [
         "eq:drv_qenn_b05_product_carrier",
@@ -12429,7 +12429,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "entropic_hyperparameter_stability_margin",
       "equation_labels": [
         "eq:drv_qenn_b06_product_carrier",
@@ -12458,7 +12458,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "lyapunov_parseval_training_isometry_closure",
       "equation_labels": [
         "eq:drv_qenn_c01_spatial_carrier",
@@ -12486,7 +12486,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "parity_support_memory_field_closure",
       "equation_labels": [
         "eq:drv_qenn_c02_spatial_carrier",
@@ -12514,7 +12514,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "optimizer_stability_wedge_spatial_closure",
       "equation_labels": [
         "eq:drv_qenn_c03_spatial_carrier",
@@ -12549,7 +12549,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "prime_motif_boundedness_motif_induced_energy_divergence",
       "equation_labels": [
         "eq:prime_motif_boundedness_cycle_product_1a",
@@ -12614,7 +12614,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "flowpoint_parity_locking_parity_leakage",
       "equation_labels": [
         "eq:flowpoint_parity_locking_algebraic_align_1a",
@@ -12679,7 +12679,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
       "equation_labels": [
         "eq:dfi_pgqenn_algebraic_align_1a",
@@ -12744,7 +12744,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "elastic_e_curvature_regularization_curvature_ambiguity_leakage",
       "equation_labels": [
         "eq:elastic_pi_curvature_regularization_algebraic_align_1a",
@@ -12809,7 +12809,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
       "equation_labels": [
         "eq:prime_qc_unitarity_align_1a",
@@ -12874,7 +12874,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy",
       "equation_labels": [
         "eq:soi_theorem_algebraic_align_1a",
@@ -12939,7 +12939,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift",
       "equation_labels": [
         "eq:motif_exhaustion_algebraic_align_1a",
@@ -13004,7 +13004,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch",
       "equation_labels": [
         "eq:we_theorem_algebraic_align_1a",
@@ -13069,7 +13069,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination",
       "equation_labels": [
         "eq:pgqenn_parity_orth_opt_commute_align_1a",
@@ -13134,7 +13134,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips",
       "equation_labels": [
         "eq:psgr10_1a_algebraic_align_1a",
@@ -13199,7 +13199,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "prime_motif_parity_stability_functional",
       "equation_labels": [
         "eq:drv_pgqenn_b01_product_carrier",
@@ -13228,7 +13228,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "dfi_elastic_prime_curvature_coupling",
       "equation_labels": [
         "eq:drv_pgqenn_b02_product_carrier",
@@ -13257,7 +13257,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "quasicrystal_soi_annealing_transport",
       "equation_labels": [
         "eq:drv_pgqenn_b03_product_carrier",
@@ -13286,7 +13286,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "exhaustion_parseval_coverage_energy",
       "equation_labels": [
         "eq:drv_pgqenn_b04_product_carrier",
@@ -13315,7 +13315,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "parity_orthogonal_shell_growth_connection",
       "equation_labels": [
         "eq:drv_pgqenn_b05_product_carrier",
@@ -13344,7 +13344,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "prime_motif_elastic_parity_spatial_closure",
       "equation_labels": [
         "eq:drv_pgqenn_c01_spatial_carrier",
@@ -13372,7 +13372,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "multiscale_prime_shell_training_closure",
       "equation_labels": [
         "eq:drv_pgqenn_c02_spatial_carrier",
@@ -13408,7 +13408,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "motif_spectral_dual_regularity_law_for_soinets",
       "equation_labels": [],
       "first_label": "app:soinet_complex_01",
@@ -13424,7 +13424,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_modality_invariant_convergence_and_collapse_completeness",
       "equation_labels": [],
       "first_label": "app:soinet_complex_02",
@@ -13440,7 +13440,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_cross_modal_transfer_generalization_and_dual_stability",
       "equation_labels": [],
       "first_label": "app:soinet_complex_03",
@@ -13456,7 +13456,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_error_contraction_and_dual_error_orthogonality",
       "equation_labels": [],
       "first_label": "app:soinet_complex_04",
@@ -13472,7 +13472,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet",
       "equation_labels": [],
       "first_label": "app:soinet_complex_05",
@@ -13488,7 +13488,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_modality_invariant_learning_and_universal_adaptation",
       "equation_labels": [],
       "first_label": "app:soinet_complex_06",
@@ -13504,7 +13504,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
       "equation_labels": [],
       "first_label": "app:soinet_complex_07",
@@ -13520,7 +13520,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
       "equation_labels": [
         "eq:soinet_crossmodal_1a",
@@ -13557,7 +13557,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
       "equation_labels": [
         "eq:soinet_map_1a",
@@ -13593,7 +13593,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_universal_generalization_principle_failure_brittleness_duality",
       "equation_labels": [],
       "first_label": "app:soinet_complex_10",
@@ -13609,7 +13609,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_universal_cloning_principle_cloning_failure_duality",
       "equation_labels": [],
       "first_label": "app:soinet_complex_11",
@@ -13625,7 +13625,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "spectral_phase_locking_and_collapse_in_soinet",
       "equation_labels": [
         "eq:spectral_decomp_1a2a",
@@ -13646,7 +13646,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_universal_entropy_plateau_theorem",
       "equation_labels": [],
       "first_label": "app:soinet_complex_13",
@@ -13662,7 +13662,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_modality_dual_closure",
       "equation_labels": [],
       "first_label": "app:soinet_complex_14",
@@ -13678,7 +13678,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability",
       "equation_labels": [],
       "first_label": "app:soinet_complex_15",
@@ -13694,7 +13694,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_cross_domain_generalization_and_collapse",
       "equation_labels": [
         "eq:soi_generalization_algebraic_1a",
@@ -13719,7 +13719,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soi_entropy_minimization_and_entropic_catastrophe",
       "equation_labels": [],
       "first_label": "app:soinet_complex_17",
@@ -13735,7 +13735,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "soinet_meta_learnability_dual_closure",
       "equation_labels": [],
       "first_label": "app:soinet_complex_18",
@@ -13751,7 +13751,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "motif_spectral_entropy_coupling_energy",
       "equation_labels": [],
       "first_label": "app:soinet_complex_19",
@@ -13770,7 +13770,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "modality_collapse_symmetry_operator",
       "equation_labels": [],
       "first_label": "app:soinet_complex_20",
@@ -13789,7 +13789,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "cross_modal_generalization_collapse_transfer",
       "equation_labels": [],
       "first_label": "app:soinet_complex_21",
@@ -13808,7 +13808,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "modality_compositionality_collapse_connection",
       "equation_labels": [],
       "first_label": "app:soinet_complex_22",
@@ -13827,7 +13827,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "error_entropy_dissipation_functional",
       "equation_labels": [],
       "first_label": "app:soinet_complex_23",
@@ -13846,7 +13846,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "entropy_spectral_phase_locking_operator",
       "equation_labels": [],
       "first_label": "app:soinet_complex_24",
@@ -13865,7 +13865,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "modality_spectrum_representation_coupling",
       "equation_labels": [],
       "first_label": "app:soinet_complex_25",
@@ -13884,7 +13884,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "expressivity_meta_learnability_stability_functional",
       "equation_labels": [],
       "first_label": "app:soinet_complex_26",
@@ -13903,7 +13903,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "stack_domain_generalization_transport",
       "equation_labels": [],
       "first_label": "app:soinet_complex_27",
@@ -13922,7 +13922,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "universalization_cloning_obstruction_functional",
       "equation_labels": [],
       "first_label": "app:soinet_complex_28",
@@ -13941,7 +13941,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "motif_spectral_modality_collapse_spatial_field",
       "equation_labels": [
         "eq:soinet29_b19_source_1c2c",
@@ -13980,7 +13980,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "cross_modal_compositional_spatial_closure",
       "equation_labels": [
         "eq:drv_soinet_c01_spatial_carrier",
@@ -14008,7 +14008,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "error_entropy_phase_locking_spatial_closure",
       "equation_labels": [
         "eq:drv_soinet_c02_spatial_carrier",
@@ -14036,7 +14036,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "modality_spectrum_meta_learnability_spatial_closure",
       "equation_labels": [
         "eq:drv_soinet_c03_spatial_carrier",
@@ -14064,7 +14064,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "complex_id": "stack_domain_cloning_spatial_closure",
       "equation_labels": [
         "eq:drv_soinet_c04_spatial_carrier",
@@ -14095,7 +14095,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion",
       "equation_labels": [
         "eq:completeness_synthesis_formal_01",
@@ -14123,7 +14123,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
       "equation_labels": [
         "eq:ct01_typed_dynamical_realization",
@@ -14147,7 +14147,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse",
       "equation_labels": [
         "eq:anti_circle_geometric_locus",
@@ -14174,7 +14174,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "dual_closure_idempotence_and_oscillatory_non_closure",
       "equation_labels": [
         "eq:dcid_algebraic_equation_1a",
@@ -14233,7 +14233,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
       "equation_labels": [
         "eq:karoubi_1a_algebraic_align_1a_73",
@@ -14292,7 +14292,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures",
       "equation_labels": [
         "eq:cps_algebraic_equation_1a_8",
@@ -14351,7 +14351,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
       "equation_labels": [
         "eq:cons_algebraic_equation_1a_9",
@@ -14410,7 +14410,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "typed_admissibility_instrument",
       "equation_labels": [
         "eq:ct07_manifestability_gate",
@@ -14449,7 +14449,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "idempotent_splitting_and_oscillation_obstruction",
       "equation_labels": [
         "eq:ct08_positive_realization",
@@ -14494,7 +14494,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "protected_commuting_closure_transport",
       "equation_labels": [
         "eq:ct09_protected_fragment",
@@ -14538,7 +14538,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "global_symmetry_and_kd_charge_conservation",
       "equation_labels": [
         "eq:noether_global_predicate_1a",
@@ -14566,7 +14566,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "local_gauge_symmetry_and_elastic_divergence_identity",
       "equation_labels": [
         "eq:noether_local_predicate_2a",
@@ -14593,7 +14593,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "noether_constant_to_local_transgression",
       "equation_labels": [
         "eq:noether_constant_injection",
@@ -14634,7 +14634,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "sheaf_of_closure_certificates",
       "equation_labels": [
         "eq:ct10_spatial_cover",
@@ -14684,7 +14684,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "complex_id": "terminal_quotient_of_closure_certificates",
       "equation_labels": [
         "eq:nothingness_ar_quotient",

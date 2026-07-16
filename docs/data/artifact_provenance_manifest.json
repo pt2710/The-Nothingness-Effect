@@ -4,7 +4,7 @@
   "manifests": [
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -67,7 +67,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": true
       },
@@ -102,7 +102,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": true
       },
@@ -137,7 +137,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": true
       },
@@ -209,7 +209,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 0
@@ -907,7 +907,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -942,7 +942,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -971,7 +971,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": true
       },
@@ -1006,7 +1006,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -1227,7 +1227,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -1259,7 +1259,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -1287,7 +1287,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -1449,7 +1449,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -1507,7 +1507,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -1540,7 +1540,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -1574,7 +1574,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -1601,7 +1601,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -1633,7 +1633,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -1662,7 +1662,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -1695,7 +1695,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -1729,7 +1729,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -2094,7 +2094,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -2160,7 +2160,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -2282,7 +2282,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -3087,7 +3087,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -3213,7 +3213,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -3369,7 +3369,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -3704,7 +3704,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -3835,7 +3835,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -3957,7 +3957,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4171,7 +4171,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -4203,7 +4203,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4231,7 +4231,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4259,7 +4259,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4287,7 +4287,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -4319,7 +4319,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4347,7 +4347,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4403,7 +4403,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": true
       },
@@ -4466,7 +4466,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 3
@@ -4494,7 +4494,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -4528,7 +4528,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -4655,7 +4655,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": false
       },
@@ -4690,7 +4690,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -4725,7 +4725,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -4786,7 +4786,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -4827,7 +4827,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {},
       "claim_boundary": "finite computational support; not a formal proof substitute",
       "closure_status": "closed",
@@ -4853,7 +4853,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -4881,7 +4881,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {},
       "claim_boundary": "finite computational support; not a formal proof substitute",
       "closure_status": "satisfied",
@@ -5000,7 +5000,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -5035,7 +5035,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 0
@@ -5103,7 +5103,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 0
@@ -5132,7 +5132,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -5472,7 +5472,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -5504,7 +5504,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": false
@@ -5537,7 +5537,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -5722,7 +5722,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {},
       "claim_boundary": "finite computational support; not a formal proof substitute",
       "closure_status": "satisfied",
@@ -5748,7 +5748,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -5780,7 +5780,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -5808,7 +5808,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -5840,7 +5840,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -5868,7 +5868,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -5900,7 +5900,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -5932,7 +5932,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": false
@@ -5965,7 +5965,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 3
@@ -5997,7 +5997,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 0
@@ -6025,7 +6025,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -6056,7 +6056,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -6184,7 +6184,7 @@
     },
     {
       "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-      "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+      "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
       "approximation_metadata": {
         "candidate_not_minimizer": false
       },
@@ -6219,7 +6219,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -6251,7 +6251,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 0
@@ -6309,7 +6309,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6346,7 +6346,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6440,7 +6440,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -6468,7 +6468,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -6496,7 +6496,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -6565,7 +6565,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -6690,7 +6690,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6719,7 +6719,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6748,7 +6748,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6777,7 +6777,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6806,7 +6806,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -6969,7 +6969,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -7127,7 +7127,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -7160,7 +7160,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7194,7 +7194,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": false
@@ -7229,7 +7229,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7263,7 +7263,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -7304,7 +7304,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7336,7 +7336,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7368,7 +7368,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -7396,7 +7396,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {},
       "claim_boundary": "finite computational support; not a formal proof substitute",
       "closure_status": "satisfied",
@@ -7422,7 +7422,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {},
       "claim_boundary": "finite computational support; not a formal proof substitute",
       "closure_status": "satisfied",
@@ -7632,7 +7632,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -7735,7 +7735,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": false,
         "formal_proof_substitute": false
@@ -7767,7 +7767,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7799,7 +7799,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7831,7 +7831,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "device": "cpu",
         "exact_semantics": true
@@ -7863,7 +7863,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": false
       },
@@ -7893,7 +7893,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": false
       },
@@ -7923,7 +7923,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": false
       },
@@ -7952,7 +7952,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": false
       },
@@ -8010,7 +8010,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -8042,7 +8042,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -8163,7 +8163,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -8191,7 +8191,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": false,
         "formal_proof_substitute": false
@@ -8223,7 +8223,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {
         "exact_semantics": false,
         "source_removal_count": 2
@@ -8255,7 +8255,7 @@
     },
     {
       "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
-      "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
       "approximation_metadata": {},
       "claim_boundary": "finite computational support; not a formal proof substitute",
       "closure_status": "satisfied",
@@ -8281,7 +8281,7 @@
     },
     {
       "appendix_filename": "appendix_the_completeness_theorem.tex",
-      "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
       "approximation_metadata": {
         "exact_semantics": true,
         "formal_proof_substitute": false
@@ -8328,7 +8328,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -8358,7 +8358,7 @@
     },
     {
       "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-      "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
       "approximation_metadata": {
         "exact_semantics": true,
         "source_removal_count": 2
@@ -8601,7 +8601,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },
@@ -8628,7 +8628,7 @@
     },
     {
       "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
-      "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_source_sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
       "approximation_metadata": {
         "exact_semantics": true
       },

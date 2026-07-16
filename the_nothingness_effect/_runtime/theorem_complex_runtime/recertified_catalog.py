@@ -23,7 +23,7 @@ from .types import (
 
 
 FOUNDATIONAL = "appendix_tne_foundational_closure_architecture.tex"
-FOUNDATIONAL_SHA256 = "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+FOUNDATIONAL_SHA256 = "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69"
 GRAVITATIONAL = "appendix_tne_gravitational_cosmological_quantum_dynamics.tex"
 GRAVITATIONAL_SHA256 = "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062"
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]

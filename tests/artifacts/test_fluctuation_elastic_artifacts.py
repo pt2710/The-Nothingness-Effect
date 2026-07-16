@@ -20,5 +20,5 @@ def test_fluctuation_elastic_artifacts_have_theorem_manifests(tmp_path, category
     for path in outputs["manifests"]:
         payload = json.loads(path.read_text(encoding="utf-8"))
         assert payload["seed"] == 0
-        assert payload["appendix_source_sha256"] == "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389"
+        assert payload["appendix_source_sha256"] == "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b"
         assert payload["claim_boundary"] == "finite computational support; not a formal proof substitute"

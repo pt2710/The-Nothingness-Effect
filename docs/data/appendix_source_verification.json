@@ -44,6 +44,17 @@
       "total": 7
     }
   },
+  "appendix_source_sha256": {
+    "appendix_canonical_self_negating_involution_flowpoint.tex": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+    "appendix_the_completeness_theorem.tex": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+    "appendix_tne_artificial_intelligence_architechture.tex": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
+    "appendix_tne_fluctuation_and_elastic_dynamics.tex": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
+    "appendix_tne_foundational_closure_architecture.tex": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+    "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+    "appendix_tne_mathematical_closure_architecture.tex": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011"
+  },
+  "carried_forward_appendix_files": 3,
+  "current_byte_verified_appendix_files": 4,
   "level_counts": {
     "A": 204,
     "B": 98,
@@ -51,6 +62,8 @@
   },
   "missing_equation_labels": 0,
   "missing_first_labels": 0,
+  "source_bindings_file": "docs/data/authoritative_appendix_source_bindings.json",
+  "verification_scope": "Four current theorem-bearing uploads byte-verified; three unchanged bindings carried forward from the preceding authoritative seven-appendix snapshot.",
   "verified_appendix_files": 7,
   "verified_equation_labels": 3722,
   "verified_first_labels": 351

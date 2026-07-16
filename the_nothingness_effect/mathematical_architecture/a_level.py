@@ -21,7 +21,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.validation import e
 
 
 APPENDIX = "appendix_tne_mathematical_closure_architecture.tex"
-APPENDIX_SHA256 = "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+APPENDIX_SHA256 = "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011"
 
 
 @dataclass(frozen=True)

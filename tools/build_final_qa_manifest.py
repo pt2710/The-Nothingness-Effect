@@ -10,10 +10,10 @@ from pathlib import Path
 import subprocess
 
 if __package__:
-    from tools.consistency_catalog import implemented_contracts
+    from tools.consistency_catalog import release_implemented_contracts
     from tools.verify_tne_repository_layout import verify
 else:
-    from consistency_catalog import implemented_contracts
+    from consistency_catalog import release_implemented_contracts
     from verify_tne_repository_layout import verify
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
@@ -108,7 +108,7 @@ def build(arguments: argparse.Namespace) -> dict[str, object]:
     implemented = {
         identifier for identifier, status in statuses.items() if status == "implemented"
     }
-    contracts = implemented_contracts()
+    contracts = release_implemented_contracts()
     unresolved = [
         {"complex_id": str(contract.complex_id), "source_id": str(source_id)}
         for contract in contracts

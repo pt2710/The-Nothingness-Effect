@@ -9,10 +9,12 @@ from pathlib import Path
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     authoritative_bindings,
     bind_inventory_rows,
+    bind_provenance_manifest,
+    provenance_binding_report,
     source_binding_report,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import all_contracts
-from tools.export_effective_theorem_matrix import export
+from tools.export_effective_theorem_matrix import export, export_provenance
 
 
 EXPECTED = {
@@ -87,3 +89,43 @@ def test_effective_matrix_export_is_machine_readable(tmp_path: Path):
         for row in rows
         if row["appendix_file"] in EXPECTED
     )
+
+
+def test_effective_provenance_uses_same_authoritative_bindings(tmp_path: Path):
+    output = tmp_path / "effective-provenance.json"
+    report_output = tmp_path / "effective-provenance-report.json"
+
+    report = export_provenance(output, report_output)
+    payload = json.loads(output.read_text(encoding="utf-8"))
+    stored_report = json.loads(report_output.read_text(encoding="utf-8"))
+
+    assert report["effective_source_sha_mismatches"] == 0
+    assert stored_report["effective_provenance_output"] == output.as_posix()
+    assert all(
+        item["appendix_source_sha256"] == EXPECTED[item["appendix_filename"]]
+        for item in payload["manifests"]
+        if item["appendix_filename"] in EXPECTED
+    )
+
+
+def test_provenance_binding_preserves_recorded_digest():
+    raw = {
+        "manifests": [
+            {
+                "theorem_complex_id": "fixture",
+                "appendix_filename": "appendix_the_completeness_theorem.tex",
+                "appendix_source_sha256": "0" * 64,
+            }
+        ]
+    }
+
+    effective = bind_provenance_manifest(raw)
+    report = provenance_binding_report()
+    item = effective["manifests"][0]
+
+    assert item["recorded_appendix_source_sha256"] == "0" * 64
+    assert item["appendix_source_sha256"] == EXPECTED[
+        "appendix_the_completeness_theorem.tex"
+    ]
+    assert item["source_binding_status"] == "manifest_override"
+    assert report["effective_source_sha_mismatches"] == 0

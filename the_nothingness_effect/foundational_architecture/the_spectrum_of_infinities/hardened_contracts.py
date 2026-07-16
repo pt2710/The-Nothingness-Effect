@@ -1,9 +1,9 @@
 """Authoritative registry and source-removal hardening for Spectrum contracts.
 
 The canonical finite operators remain in ``canonical_contracts.py``. This
-adapter replaces the preliminary A2 proxy with the exact finite SOI--DFI
-scaling witness and recomputes every derived certificate after a source
-ablation instead of setting the certificate to zero.
+adapter replaces preliminary A2/A6 proxies with exact finite SOI laws and
+recomputes every derived certificate after a source ablation instead of
+setting the certificate to zero.
 """
 
 from __future__ import annotations
@@ -19,14 +19,23 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.invariants import (
 from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
     ComplexContract,
     ComplexId,
+    DomainSpec,
 )
 
 from . import canonical_contracts as _base
 from .authoritative_dfi import spectrum_dfi_regularity_law
+from .authoritative_finitization import (
+    ScaledFinitizationInput,
+    soi_finitization_l1_law,
+)
 
 DFI_IMPLEMENTATION = (
     "the_nothingness_effect/foundational_architecture/"
     "the_spectrum_of_infinities/authoritative_dfi.py"
+)
+FINITIZATION_IMPLEMENTATION = (
+    "the_nothingness_effect/foundational_architecture/"
+    "the_spectrum_of_infinities/authoritative_finitization.py"
 )
 
 
@@ -93,6 +102,17 @@ def contracts() -> tuple[ComplexContract, ...]:
                 contract,
                 operator=spectrum_dfi_regularity_law,
                 implementation_path=DFI_IMPLEMENTATION,
+            )
+        elif contract.complex_id == _base.A6:
+            contract = replace(
+                contract,
+                domain=DomainSpec(
+                    str(contract.complex_id),
+                    "finite SOI L1 approximation with explicit absolute scaling",
+                    (_base.FinitizationInput, ScaledFinitizationInput),
+                ),
+                operator=soi_finitization_l1_law,
+                implementation_path=FINITIZATION_IMPLEMENTATION,
             )
         if not contract.source_ids:
             result.append(contract)

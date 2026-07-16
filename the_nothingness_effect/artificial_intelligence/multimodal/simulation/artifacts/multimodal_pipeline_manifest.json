@@ -1,0 +1,102 @@
+{
+  "architecture": "TNE Trainable Multimodal SOInet",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "open",
+  "dependency_chain": [
+    "DTQC->QENN",
+    "QENN+MPL-TC->PGQENN",
+    "QENN+PGQENN->SOInet"
+  ],
+  "evaluation_metrics": {
+    "accuracy": 1.0,
+    "brier_score": 0.048181500285863876,
+    "cross_entropy": 0.30844536423683167,
+    "expected_calibration_error": 0.23703205585479736,
+    "mean_confidence": 0.7629678845405579,
+    "mean_reconstruction_rmse": 0.42147769530614215,
+    "predictive_entropy": 0.4489234387874603
+  },
+  "generated_files": [
+    "training_history.csv",
+    "test_evaluation_metrics.csv",
+    "tne_residuals.csv",
+    "source_removal_ablation.csv",
+    "test_confusion_matrix.csv",
+    "modality_similarity_matrix.csv",
+    "modality_reconstruction_metrics.csv",
+    "training_loss_curves.png",
+    "training_accuracy_curve.png",
+    "gradient_norm_curve.png",
+    "modality_weight_trajectories.png",
+    "test_confusion_matrix.png",
+    "calibration_reliability.png",
+    "latent_space_pca.png",
+    "modality_similarity_heatmap.png",
+    "elastic_dubler_ratio_heatmap.png",
+    "reconstruction_rmse.png",
+    "residual_spectrum.png",
+    "source_removal_ablation.png",
+    "training_loss_evolution.gif",
+    "latent_space_evolution.gif",
+    "modality_weight_evolution.gif",
+    "confusion_matrix_evolution.gif",
+    "cross_modal_reconstruction_evolution.gif"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-05
+  },
+  "parameter_hash": "54ae35322b227cb9f577dac73428f77b322dbd88e016ed55d7a0eaab656614cb",
+  "parameters": {
+    "architecture": "TNE Trainable Multimodal SOInet",
+    "classes": [
+      "red-low",
+      "green-mid",
+      "blue-high",
+      "amber-pulse"
+    ],
+    "epochs": 40,
+    "modalities": [
+      "color",
+      "sound",
+      "vision"
+    ],
+    "seed": 0,
+    "simulation": true,
+    "synthetic_samples_per_class": 8
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.multimodal.simulation.run_pipeline",
+  "repository_result_commit": "712510df91d01487151b4804a27c79a0a3d96a02",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    4.842304406338371e-07,
+    4.4403924448488397e-07,
+    2.9376991506069317e-07,
+    4.840185852117429e-07,
+    0.0,
+    4.539354563348752e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    0.0,
+    0.5466607809066772,
+    3.0665881633758545,
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    0.13875322043895721
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_training_fixture"
+}

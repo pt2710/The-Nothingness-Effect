@@ -1,0 +1,8 @@
+metric,value
+accuracy,0.75
+cross_entropy,1.1967962980270386
+brier_score,0.16294069588184357
+mean_confidence,0.3043042719364166
+predictive_entropy,1.3717340230941772
+expected_calibration_error,0.4456957280635834
+mean_reconstruction_rmse,0.17509949952363968

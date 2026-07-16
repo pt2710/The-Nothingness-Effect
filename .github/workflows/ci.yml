@@ -43,6 +43,7 @@ jobs:
           --ignore=tests/artifacts/test_qenn_artifacts.py
           --ignore=tests/artifacts/test_pgqenn_artifacts.py
           --ignore=tests/artifacts/test_soinets_artifacts.py
+          --ignore=tests/artifacts/test_soinets_runtime_simulation.py
           --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/*
 
   theorem-contracts:

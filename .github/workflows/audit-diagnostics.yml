@@ -1,0 +1,75 @@
+name: audit-diagnostics
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  layout-first-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
+      - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
+
+  theorem-first-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pytest -q -x --tb=short tests/contracts tests/invariants tests/boundaries tests/source_removal
+
+  artifact-first-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pytest -q -x --tb=short tests/artifacts
+
+  core-first-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -q -r requirements-dev.txt
+      - run: >-
+          python -m pytest -q -x --tb=short
+          --ignore=tests/numerical
+          --ignore=tests/contracts/test_qenn_contracts.py
+          --ignore=tests/contracts/test_pgqenn_contracts.py
+          --ignore=tests/contracts/test_soinets_contracts.py
+          --ignore=tests/contracts/test_mpl_tc_dependency.py
+          --ignore=tests/invariants/test_elastic_dubler_ai.py
+          --ignore=tests/invariants/test_observation_collapse_readout.py
+          --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py
+          --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py
+          --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py
+          --ignore=tests/artifacts/test_qenn_artifacts.py
+          --ignore=tests/artifacts/test_pgqenn_artifacts.py
+          --ignore=tests/artifacts/test_soinets_artifacts.py
+          --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/*

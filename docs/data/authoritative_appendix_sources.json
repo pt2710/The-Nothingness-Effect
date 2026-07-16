@@ -5,7 +5,7 @@
   "appendices": {
     "appendix_canonical_self_negating_involution_flowpoint.tex": {"sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206", "status": "verified_unchanged"},
     "appendix_tne_mathematical_closure_architecture.tex": {"sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011", "status": "recertified_runtime_binding"},
-    "appendix_tne_foundational_closure_architecture.tex": {"sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69", "status": "recertified_symmetry_spatiality_runtime_binding"},
+    "appendix_tne_foundational_closure_architecture.tex": {"sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69", "status": "recertified_countable_symmetry_spatiality_runtime_binding"},
     "appendix_the_completeness_theorem.tex": {"sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3", "status": "recertified_six_obligations_integrated"}
   },
   "implementation_status_overrides": {
@@ -49,6 +49,12 @@
     "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection": {"status": "implemented", "reason": "Exact quarter-turn and phase-conjugate reflection law with involution and conjugacy residuals.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
     "cyclic_square_root_lifting_and_phase_anchored_dihedralization": {"status": "implemented", "reason": "Exact cyclic square-root double-cover lift with order, dihedral, and source-removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
     "orbit_harmonic_phase_resolution": {"status": "implemented", "reason": "Exact orbit DFT, Parseval reconstruction, half-step phase resolution, and source-removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
-    "equivariant_orbit_spectral_reconstruction": {"status": "implemented", "reason": "Exact tight-frame reconstruction and cyclic-shift equivariance with source-removal closure.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"}
+    "equivariant_orbit_spectral_reconstruction": {"status": "implemented", "reason": "Exact tight-frame reconstruction and cyclic-shift equivariance with source-removal closure.", "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py"},
+    "bidirectional_integer_rays_and_finite_polarity_enumeration": {"status": "implemented", "reason": "Exact bidirectional ray reflection and finite six-letter shortlex encode/decode contract.", "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py"},
+    "combinatorial_cubic_generation_and_stochastic_polarity_accessibility": {"status": "implemented", "reason": "Exact cubic parity evaluation, full finite orbit reachability, and positive finite-word probability contract.", "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py"},
+    "finitary_flip_invariance_and_null_recurrent_countable_exploration": {"status": "implemented", "reason": "Exact finitary adjacent-flip inverse, lazy reflected-kernel normalization, reversibility, and resistance-increment certificate.", "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py"},
+    "signed_shortlex_cubic_transduction": {"status": "implemented", "reason": "Parity-locked signed cubic transducer with exact action, reflection, canonical section, and both-source removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py"},
+    "recurrent_cubical_cover_dynamics": {"status": "implemented", "reason": "Parity-class cubical support path with positive Markov weight, reversible kernel, resistance certificate, and both-source removal gates.", "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py"},
+    "reflected_cubical_address_space": {"status": "implemented", "reason": "Exact signed address graph, reflection quotient kernel, canonical section, orientation reconstruction, and both-source closure.", "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py"}
   }
 }

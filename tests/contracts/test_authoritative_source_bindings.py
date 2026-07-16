@@ -59,6 +59,10 @@ EXPECTED_PROMOTION_PATH_COUNTS = {
         "the_nothingness_effect/foundational_architecture/"
         "spatiality/canonical_contracts.py"
     ): 5,
+    (
+        "the_nothingness_effect/foundational_architecture/"
+        "countable_infinity/canonical_contracts.py"
+    ): 6,
 }
 
 
@@ -95,11 +99,11 @@ def test_foundational_binding_promotes_only_reviewed_complexes():
     ]
 
     assert len(rows) == 79
-    assert len(foundational_contracts) == 24
+    assert len(foundational_contracts) == 30
     assert sum(
         statuses[row["complex_id"]] == "implemented" for row in rows
-    ) == 24
-    assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 55
+    ) == 30
+    assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 49
 
 
 def test_all_source_promotions_are_named_auditable_and_dependency_closed():
@@ -109,7 +113,7 @@ def test_all_source_promotions_are_named_auditable_and_dependency_closed():
     effective_by_id = {row["complex_id"]: row for row in effective}
     statuses = release_statuses()
 
-    assert len(overrides) == 41
+    assert len(overrides) == 47
     assert Counter(
         record["evidence_path"] for record in overrides.values()
     ) == EXPECTED_PROMOTION_PATH_COUNTS
@@ -126,9 +130,9 @@ def test_all_source_promotions_are_named_auditable_and_dependency_closed():
     assert PROMOTED_DFI.issubset(overrides)
     assert sum(
         row["implementation_status"] == "implemented" for row in effective
-    ) == 236
-    assert sum(status == "implemented" for status in statuses.values()) == 236
-    assert sum(status == "proxy" for status in statuses.values()) == 115
+    ) == 242
+    assert sum(status == "implemented" for status in statuses.values()) == 242
+    assert sum(status == "proxy" for status in statuses.values()) == 109
     assert len(dependency_downgrades()) == 0
     assert statuses["flowpoint_certified_dfi_validation_functional"] == "implemented"
     assert statuses["spatially_localized_dfi_consistency_closure"] == "implemented"
@@ -141,8 +145,8 @@ def test_effective_matrix_has_no_authoritative_source_mismatch():
     assert report["managed_appendices"] == 4
     assert report["managed_rows"] == 108
     assert report["effective_source_sha_mismatches"] == 0
-    assert report["implementation_status_overrides"] == 41
-    assert len(report["implementation_status_changes"]) == 41
+    assert report["implementation_status_overrides"] == 47
+    assert len(report["implementation_status_changes"]) == 47
     assert not report["effective_mismatches"]
 
 
@@ -179,11 +183,11 @@ def test_effective_matrix_export_is_machine_readable(tmp_path: Path):
     stored_report = json.loads(report_output.read_text(encoding="utf-8"))
     assert len(rows) == 351
     assert report["effective_source_sha_mismatches"] == 0
-    assert report["implementation_status_overrides"] == 41
+    assert report["implementation_status_overrides"] == 47
     assert stored_report["effective_matrix_output"] == output.as_posix()
     assert sum(
         row["implementation_status"] == "implemented" for row in rows
-    ) == 236
+    ) == 242
     assert all(
         row["appendix_source_sha256"] == EXPECTED[row["appendix_file"]]
         for row in rows

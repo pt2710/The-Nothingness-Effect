@@ -34,6 +34,20 @@ from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation
     DFIFlowpointInterfaceInput,
     DFISimulationInput,
 )
+from the_nothingness_effect.foundational_architecture.countable_infinity.canonical_contracts import (
+    A1 as COUNTABLE_A1,
+    A2 as COUNTABLE_A2,
+    A3 as COUNTABLE_A3,
+    B1 as COUNTABLE_B1,
+    B2 as COUNTABLE_B2,
+    C1 as COUNTABLE_C1,
+    CountableEnumerationInput,
+    CoverDynamicsInput,
+    CubicAccessibilityInput,
+    FinitaryRecurrenceInput,
+    ReflectedAddressInput,
+    SignedCubicTransductionInput,
+)
 from the_nothingness_effect.foundational_architecture.spatiality.canonical_contracts import (
     A1 as SPATIALITY_A1,
     A2 as SPATIALITY_A2,
@@ -178,6 +192,22 @@ def _spatiality_samples() -> dict[str, object]:
     }
 
 
+def _countable_samples() -> dict[str, object]:
+    base = (0, 0, 0)
+    return {
+        str(COUNTABLE_A1): CountableEnumerationInput(7, (0, 5, 2)),
+        str(COUNTABLE_A2): CubicAccessibilityInput(
+            base,
+            (0, 2, 1, 2),
+            (0.2, 0.3, 0.5),
+        ),
+        str(COUNTABLE_A3): FinitaryRecurrenceInput(1, 4, 8),
+        str(COUNTABLE_B1): SignedCubicTransductionInput(base, (3, 1, 5)),
+        str(COUNTABLE_B2): CoverDynamicsInput(base, 0, (1, 1, 1), 3),
+        str(COUNTABLE_C1): ReflectedAddressInput(base, (0, 4, 5)),
+    }
+
+
 def sample_inputs() -> dict[str, object]:
     """Return one deterministic typed witness for every promoted contract."""
 
@@ -191,7 +221,8 @@ def sample_inputs() -> dict[str, object]:
         **_dfi_samples(),
         **_symmetry_samples(),
         **_spatiality_samples(),
+        **_countable_samples(),
     }
-    if len(result) != 41:
-        raise RuntimeError(f"expected 41 recertified samples, found {len(result)}")
+    if len(result) != 47:
+        raise RuntimeError(f"expected 47 recertified samples, found {len(result)}")
     return result

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120">
+  <rect x="1" y="1" width="318" height="118" fill="none" stroke="black"/>
+  <path d="M24 88 L88 32 L152 88 L216 32 L296 88" fill="none" stroke="black"/>
+  <text x="160" y="108" text-anchor="middle" font-family="sans-serif" font-size="12">TNE figure provenance fixture</text>
+</svg>

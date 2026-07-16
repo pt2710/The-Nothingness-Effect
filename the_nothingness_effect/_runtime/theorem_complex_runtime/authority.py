@@ -2,13 +2,14 @@
 
 The authoritative LaTeX files are intentionally not tracked in this repository.
 Their externally computed SHA-256 digests are recorded in
-``docs/data/authoritative_appendix_sources.json``.  Runtime contracts and
-inventory consumers are bound to that manifest so a stale source digest cannot
-silently survive in an otherwise green release.
+``docs/data/authoritative_appendix_sources.json``. Runtime contracts, inventory
+rows, and artifact provenance are bound to that manifest so a stale source
+digest cannot silently survive in an otherwise green release.
 """
 
 from __future__ import annotations
 
+from copy import deepcopy
 import csv
 from dataclasses import replace
 import json
@@ -32,6 +33,10 @@ def default_authority_manifest() -> Path:
 
 def default_implementation_matrix() -> Path:
     return repository_root() / "docs" / "data" / "theorem_complex_implementation_matrix.csv"
+
+
+def default_artifact_provenance() -> Path:
+    return repository_root() / "docs" / "data" / "artifact_provenance_manifest.json"
 
 
 def load_authority_manifest(path: str | Path | None = None) -> dict[str, object]:
@@ -105,6 +110,32 @@ def bind_inventory_rows(
     return result
 
 
+def bind_provenance_manifest(
+    payload: Mapping[str, object],
+    bindings: Mapping[str, str] | None = None,
+) -> dict[str, object]:
+    active = authoritative_bindings() if bindings is None else dict(bindings)
+    result = deepcopy(dict(payload))
+    manifests = result.get("manifests")
+    if not isinstance(manifests, list):
+        raise RuntimeError("artifact provenance manifest must contain a manifest list")
+    for item in manifests:
+        if not isinstance(item, dict):
+            raise RuntimeError("artifact provenance entries must be objects")
+        appendix = str(item.get("appendix_filename", ""))
+        recorded = str(item.get("appendix_source_sha256", ""))
+        expected = active.get(appendix)
+        item["recorded_appendix_source_sha256"] = recorded
+        if expected is None:
+            item["source_binding_status"] = "unmanaged"
+        elif recorded == expected:
+            item["source_binding_status"] = "verified"
+        else:
+            item["source_binding_status"] = "manifest_override"
+            item["appendix_source_sha256"] = expected
+    return result
+
+
 def source_binding_report(
     matrix_path: str | Path | None = None,
     manifest_path: str | Path | None = None,
@@ -170,4 +201,56 @@ def source_binding_report(
         "raw_mismatches": raw_mismatches,
         "effective_mismatches": effective_mismatches,
         "appendices": dict(sorted(appendix_counts.items())),
+    }
+
+
+def provenance_binding_report(
+    provenance_path: str | Path | None = None,
+    manifest_path: str | Path | None = None,
+) -> dict[str, object]:
+    path = Path(provenance_path) if provenance_path is not None else default_artifact_provenance()
+    raw_payload = json.loads(path.read_text(encoding="utf-8"))
+    bindings = authoritative_bindings(manifest_path)
+    effective_payload = bind_provenance_manifest(raw_payload, bindings)
+    raw_items = raw_payload.get("manifests")
+    effective_items = effective_payload.get("manifests")
+    if not isinstance(raw_items, list) or not isinstance(effective_items, list):
+        raise RuntimeError("artifact provenance manifest must contain a manifest list")
+
+    raw_mismatches: list[dict[str, str]] = []
+    effective_mismatches: list[dict[str, str]] = []
+    for raw, effective in zip(raw_items, effective_items, strict=True):
+        assert isinstance(raw, dict) and isinstance(effective, dict)
+        appendix = str(raw.get("appendix_filename", ""))
+        expected = bindings.get(appendix)
+        if expected is None:
+            continue
+        if raw.get("appendix_source_sha256") != expected:
+            raw_mismatches.append(
+                {
+                    "theorem_complex_id": str(raw.get("theorem_complex_id", "")),
+                    "appendix_filename": appendix,
+                    "recorded_sha256": str(raw.get("appendix_source_sha256", "")),
+                    "authoritative_sha256": expected,
+                }
+            )
+        if effective.get("appendix_source_sha256") != expected:
+            effective_mismatches.append(
+                {
+                    "theorem_complex_id": str(effective.get("theorem_complex_id", "")),
+                    "appendix_filename": appendix,
+                    "effective_sha256": str(effective.get("appendix_source_sha256", "")),
+                    "authoritative_sha256": expected,
+                }
+            )
+
+    return {
+        "schema_version": "1.0",
+        "provenance_path": path.as_posix(),
+        "total_manifests": len(raw_items),
+        "raw_source_sha_mismatches": len(raw_mismatches),
+        "effective_source_sha_mismatches": len(effective_mismatches),
+        "source_binding_overrides": len(raw_mismatches),
+        "raw_mismatches": raw_mismatches,
+        "effective_mismatches": effective_mismatches,
     }

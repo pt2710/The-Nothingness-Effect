@@ -1,0 +1,77 @@
+name: activate-dependency-sources-phase2
+
+on:
+  push:
+    branches:
+      - codex/tne-authoritative-appendix-alignment-fixes
+    paths:
+      - .github/workflows/activate-dependency-sources-phase2.yml
+      - tools/activate_dependency_sources_phase2.py
+      - tools/generate_artifact_provenance.py
+      - tests/contracts/test_dependency_source_contracts.py
+      - the_nothingness_effect/_runtime/theorem_complex_runtime/dependency_sources.py
+      - the_nothingness_effect/_runtime/theorem_complex_runtime/catalog.py
+      - the_nothingness_effect/artificial_intelligence/qenn/dependency_sources.py
+      - the_nothingness_effect/artificial_intelligence/pgqenn/dependency_sources.py
+      - the_nothingness_effect/artificial_intelligence/soinets/dependency_sources.py
+      - the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/dependency_sources.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activate-dependency-sources-phase2
+  cancel-in-progress: true
+
+jobs:
+  activate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/tne-authoritative-appendix-alignment-fixes
+          fetch-depth: 0
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pip install -e .
+      - name: Activate 31 dependency sources
+        run: python tools/activate_dependency_sources_phase2.py
+      - name: Verify typed sources and dependency closure
+        run: python -m pytest -q tests/contracts/test_dependency_source_contracts.py
+      - name: Regenerate aggregate artifact provenance
+        run: >-
+          python tools/generate_artifact_provenance.py
+          --output-root .qa_artifacts/phase2
+          --aggregate docs/data/artifact_provenance_manifest.json
+      - name: Synchronize report artifact manifest
+        run: cp docs/data/artifact_provenance_manifest.json reports/artifact_manifest.json
+      - name: Run fail-closed QA guards
+        run: python -m tools.qa_guards
+      - name: Commit activated inventories and evidence
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/data/theorem_complex_implementation_matrix.csv \
+            docs/data/source_law_registry.json \
+            docs/data/artifact_provenance_manifest.json \
+            reports/theorem_complex_implementation_matrix.csv \
+            reports/source_law_registry.json \
+            reports/theorem_complex_manifest.json \
+            reports/artifact_manifest.json \
+            the_nothingness_effect/artificial_intelligence/qenn/theorem_complex \
+            the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex \
+            the_nothingness_effect/artificial_intelligence/soinets/theorem_complex \
+            the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex
+          if git diff --cached --quiet; then
+            echo "phase_two_activation=no_changes"
+            exit 0
+          fi
+          git commit -m "Activate dependency-closing A-level source laws"
+          git push origin HEAD:codex/tne-authoritative-appendix-alignment-fixes

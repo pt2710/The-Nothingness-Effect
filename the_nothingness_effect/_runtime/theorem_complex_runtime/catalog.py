@@ -40,7 +40,15 @@ CONTRACT_MODULES = (
         "contracts",
     ),
     (
+        "the_nothingness_effect.foundational_architecture.symmetry.canonical_contracts",
+        "contracts",
+    ),
+    (
         "the_nothingness_effect.foundational_architecture.spatiality.derived_contracts",
+        "contracts",
+    ),
+    (
+        "the_nothingness_effect.foundational_architecture.spatiality.canonical_contracts",
         "contracts",
     ),
     (

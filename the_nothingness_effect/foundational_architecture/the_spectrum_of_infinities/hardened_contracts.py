@@ -24,6 +24,11 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
 from . import canonical_contracts as _base
 from .authoritative_dfi import spectrum_dfi_regularity_law
 
+DFI_IMPLEMENTATION = (
+    "the_nothingness_effect/foundational_architecture/"
+    "the_spectrum_of_infinities/authoritative_dfi.py"
+)
+
 
 def _recompute_certificate(
     complete_certificate: np.ndarray,
@@ -84,7 +89,11 @@ def contracts() -> tuple[ComplexContract, ...]:
     result: list[ComplexContract] = []
     for contract in _base.contracts():
         if contract.complex_id == _base.A2:
-            contract = replace(contract, operator=spectrum_dfi_regularity_law)
+            contract = replace(
+                contract,
+                operator=spectrum_dfi_regularity_law,
+                implementation_path=DFI_IMPLEMENTATION,
+            )
         if not contract.source_ids:
             result.append(contract)
             continue

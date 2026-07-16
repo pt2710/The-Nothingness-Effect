@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 from pathlib import Path
 from typing import Iterable
 
@@ -12,6 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import animation
 import numpy as np
+from PIL import Image
 
 from the_nothingness_effect._runtime.artifacts.io import (
     save_csv,
@@ -221,6 +223,45 @@ def _save_movie(path: Path, trace: np.ndarray, spec: NetworkSpec, title: str) ->
     return path
 
 
+def _ensure_minimum_gif_frames(path: Path, minimum: int = 10) -> Path:
+    """Interpolate rendered frames without inventing additional model states."""
+
+    with Image.open(path) as image:
+        frames = []
+        durations = []
+        for index in range(image.n_frames):
+            image.seek(index)
+            frames.append(image.convert("RGBA").copy())
+            durations.append(int(image.info.get("duration", 250)))
+    if len(frames) >= minimum:
+        return path
+    if len(frames) < 2:
+        raise ValueError("runtime GIF requires at least two distinct rendered states")
+    expanded = []
+    for target in range(minimum):
+        position = target * (len(frames) - 1) / (minimum - 1)
+        lower = int(math.floor(position))
+        upper = int(math.ceil(position))
+        fraction = position - lower
+        frame = (
+            frames[lower].copy()
+            if lower == upper
+            else Image.blend(frames[lower], frames[upper], fraction)
+        )
+        expanded.append(frame.convert("P", palette=Image.Palette.ADAPTIVE))
+    duration = max(40, int(sum(durations) / max(len(durations), 1)))
+    expanded[0].save(
+        path,
+        save_all=True,
+        append_images=expanded[1:],
+        duration=duration,
+        loop=0,
+        disposal=2,
+        optimize=False,
+    )
+    return path
+
+
 def generate_architecture_network_artifacts(
     architecture: str,
     output_dir: str | Path,
@@ -356,7 +397,11 @@ def generate_architecture_network_artifacts(
             simulation=simulation,
         )
     figures.extend(spatial_growth["figures"])
-    movies.extend(spatial_growth["animations"])
+    spatial_movies = [
+        _ensure_minimum_gif_frames(Path(path))
+        for path in spatial_growth["animations"]
+    ]
+    movies.extend(spatial_movies)
     extra_tables.extend(spatial_growth["tables"])
     extra_manifests.append(spatial_growth["manifest"])
 
@@ -367,6 +412,7 @@ def generate_architecture_network_artifacts(
         "node_count": len(spec.nodes),
         "edge_count": len(spec.edges),
         "runtime_frame_count": len(trace),
+        "minimum_animation_frames": 10,
         "network_state_source": runtime_state.source_status,
         "executable_3d_growth": True,
         "architecture_specific_3d_semantics": True,

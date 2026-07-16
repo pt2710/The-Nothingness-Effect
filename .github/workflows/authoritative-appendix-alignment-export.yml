@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - codex/tne-authoritative-appendix-alignment-audit
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: authoritative-appendix-alignment-${{ github.ref_name }}
+  group: authoritative-appendix-alignment-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:

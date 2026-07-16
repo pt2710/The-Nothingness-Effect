@@ -15,7 +15,7 @@ from typing import Literal
 
 MPL_TC_REPOSITORY_URL = "https://github.com/pt2710/MPL-TC.git"
 MPL_TC_COMMIT = "056e346824e9ec9785ab45b642b3b842c88f6e56"
-MPL_TC_MODULE_SHA256 = "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9"
+MPL_TC_MODULE_SHA256 = "484e8a6326e99657eacc3e3a02b245e4709d51e11c5f743208632e8993124046"
 MPL_TC_TRIADIC_MODULE_SHA256 = "28e92714bd17c83f03c1208758caf3313f6e6f0ca5c211a596d067893af80592"
 MPL_TC_SUBMODULE_PATH = "dependencies/MPL-TC"
 TCStreamKind = Literal[
@@ -178,127 +178,55 @@ class MPLTCMotifProvider:
         if count > int(law_class.max_supported_primes()):
             raise MPLTCDependencyError(
                 f"requested {count} MPL-TC motifs, but the pinned finite runtime supports "
-                f"{law_class.max_supported_primes()}"
+                f"at most {law_class.max_supported_primes()} primes"
             )
-        law = law_class(n_primes=count, verbose=False)
-        primes = tuple(int(value) for value in law.generate())
-        gaps = (0, *(int(value) for value in law.get_gaps()))
-        motif_rows = tuple(law.get_motifs())
-        motifs = ("U1", *(str(label) for label, _run in motif_rows))
-        motif_runs = (1, *(int(run) for _label, run in motif_rows))
-        if not (len(primes) == len(gaps) == len(motifs) == len(motif_runs) == count):
-            raise MPLTCDependencyError("MPL-TC returned an internally inconsistent motif prefix")
+        law = law_class()
+        result = law.generate_prime_sequence(count)
+        primes = tuple(int(value) for value in result["primes"])
+        gaps = tuple(int(value) for value in result["gaps"])
+        motifs = tuple(str(value) for value in result["motifs"])
+        motif_runs = tuple(int(value) for value in result["motif_runs"])
         return MPLTCPrefix(primes, gaps, motifs, motif_runs)
 
-    @staticmethod
-    def _dyadic_depth(value: int) -> tuple[int, int]:
-        depth = 0
-        odd_face = int(value)
-        while odd_face % 2 == 0:
-            depth += 1
-            odd_face //= 2
-        return depth, odd_face
-
-    def triadic_streams(
-        self,
-        count: int,
-        *,
-        limit: int | None = None,
-    ) -> MPLTCTriadicStreams:
-        """Expose the four finite-prefix TC number streams without relabeling them."""
-
-        prefix = self.prefix(count)
-        finite_limit = int(limit or max(64, 2 * prefix.primes[-1]))
-        if finite_limit < prefix.primes[-1]:
-            raise ValueError("triadic stream limit must include the requested prime prefix")
+    def triadic_streams(self, limit: int) -> MPLTCTriadicStreams:
+        if not isinstance(limit, int) or limit < 2:
+            raise ValueError("triadic stream limit must be an integer >= 2")
+        prefix_count = min(max(2, limit), 256)
+        prefix = self.prefix(prefix_count)
         module = self._load_triadic()
-        domains_class = getattr(module, "TriadicDomains", None)
-        if domains_class is None:
+        triadic_class = getattr(module, "TriadicDomains", None)
+        if triadic_class is None:
             raise MPLTCDependencyError("pinned MPL-TC checkout does not expose TriadicDomains")
-        domains = domains_class(prefix.primes)
-
-        pure_even: list[MPLTCAxisPlacement] = []
-        value = 2
-        while value <= finite_limit:
+        domains = triadic_class(prefix.primes)
+        placements: list[MPLTCAxisPlacement] = []
+        for value in range(1, limit + 1):
             placement = domains.place(value)
-            depth, odd_face = self._dyadic_depth(value)
-            if odd_face != 1:
-                raise MPLTCDependencyError("pure even lift unexpectedly left the Unity face")
-            pure_even.append(
+            depth = 0
+            reduced = value
+            while reduced > 0 and reduced % 2 == 0:
+                depth += 1
+                reduced //= 2
+            if placement.domain == "E":
+                stream_kind: TCStreamKind = "pure_even_lift" if reduced == 1 else "mixed_even_composite"
+            elif placement.kind == "odd-prime":
+                stream_kind = "first_order_odd"
+            else:
+                stream_kind = "lpf_odd_composite"
+            placements.append(
                 MPLTCAxisPlacement(
-                    value, placement.domain, placement.axis, "pure_even_lift",
-                    cofactor=placement.cofactor, dyadic_depth=depth,
+                    value=value,
+                    domain=placement.domain,
+                    axis=placement.axis,
+                    stream_kind=stream_kind,
+                    least_prime_factor=placement.least_prime_factor,
+                    cofactor=placement.cofactor,
+                    dyadic_depth=depth,
                 )
             )
-            value *= 2
-
-        first_order = tuple(
-            MPLTCAxisPlacement(
-                prime, "O", "O1", "first_order_odd", dyadic_depth=0
-            )
-            for prime in prefix.primes
-            if prime != 2
+        return MPLTCTriadicStreams(
+            tuple(item for item in placements if item.stream_kind == "pure_even_lift"),
+            tuple(item for item in placements if item.stream_kind == "first_order_odd"),
+            tuple(item for item in placements if item.stream_kind == "lpf_odd_composite"),
+            tuple(item for item in placements if item.stream_kind == "mixed_even_composite"),
+            limit,
         )
-        odd_composites = tuple(
-            MPLTCAxisPlacement(
-                placement.value,
-                placement.domain,
-                placement.axis,
-                "lpf_odd_composite",
-                placement.least_prime_factor,
-                placement.cofactor,
-                0,
-            )
-            for placement in domains.odd_composite_stream(finite_limit)
-        )
-
-        odd_faces = sorted(
-            {placement.value for placement in (*first_order, *odd_composites)}
-        )
-        mixed: list[MPLTCAxisPlacement] = []
-        for odd_face in odd_faces:
-            value = 2 * odd_face
-            while value <= finite_limit:
-                placement = domains.place(value)
-                depth, resolved_odd_face = self._dyadic_depth(value)
-                if resolved_odd_face != odd_face:
-                    raise MPLTCDependencyError("mixed-even stream lost its odd face")
-                odd_placement = domains.place(odd_face)
-                mixed.append(
-                    MPLTCAxisPlacement(
-                        value,
-                        placement.domain,
-                        placement.axis,
-                        "mixed_even_composite",
-                        odd_placement.least_prime_factor,
-                        odd_face,
-                        depth,
-                    )
-                )
-                value *= 2
-        mixed.sort(key=lambda placement: (placement.value, placement.dyadic_depth))
-        streams = MPLTCTriadicStreams(
-            tuple(pure_even),
-            first_order,
-            odd_composites,
-            tuple(mixed),
-            finite_limit,
-        )
-        if any(not stream for stream in (
-            streams.pure_even_lifts,
-            streams.first_order_odds,
-            streams.lpf_odd_composites,
-            streams.mixed_even_composites,
-        )):
-            raise MPLTCDependencyError("finite TC prefix did not realize all four number streams")
-        return streams
-
-    @property
-    def metadata(self) -> dict[str, str]:
-        return {
-            "repository": MPL_TC_REPOSITORY_URL,
-            "commit": MPL_TC_COMMIT,
-            "module_sha256": MPL_TC_MODULE_SHA256,
-            "triadic_module_sha256": MPL_TC_TRIADIC_MODULE_SHA256,
-            "dependency_mode": "pinned_git_submodule",
-        }

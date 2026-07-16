@@ -16,6 +16,8 @@ from tools.consistency_catalog import release_implemented_contracts
 from tools.verify_tne_repository_layout import verify
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     authoritative_bindings,
+    bind_provenance_manifest,
+    provenance_binding_report,
     source_binding_report,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
@@ -99,12 +101,22 @@ def main() -> int:
             f"{unresolved[:5]}"
         )
 
-    provenance = json.loads(
+    raw_provenance = json.loads(
         Path("docs/data/artifact_provenance_manifest.json").read_text(
             encoding="utf-8"
         )
     )
-    manifested = [item["theorem_complex_id"] for item in provenance["manifests"]]
+    provenance_authority = provenance_binding_report()
+    if int(provenance_authority["effective_source_sha_mismatches"]):
+        raise SystemExit(
+            "effective artifact provenance contains authoritative source mismatches: "
+            f"{provenance_authority['effective_mismatches'][:3]}"
+        )
+    provenance = bind_provenance_manifest(raw_provenance)
+    manifests = provenance.get("manifests")
+    if not isinstance(manifests, list):
+        raise SystemExit("aggregate artifact provenance lacks manifest list")
+    manifested = [item["theorem_complex_id"] for item in manifests]
     if len(manifested) != len(set(manifested)):
         raise SystemExit(
             "aggregate artifact provenance contains duplicate theorem-complex IDs"
@@ -123,9 +135,26 @@ def main() -> int:
     if any(
         item.get("claim_boundary")
         != "finite computational support; not a formal proof substitute"
-        for item in provenance["manifests"]
+        for item in manifests
     ):
         raise SystemExit("artifact manifest claim boundary missing or altered")
+    provenance_binding_mismatches = [
+        (
+            item.get("theorem_complex_id"),
+            item.get("appendix_filename"),
+            item.get("appendix_source_sha256"),
+            bindings[item["appendix_filename"]],
+        )
+        for item in manifests
+        if item.get("appendix_filename") in bindings
+        and item.get("appendix_source_sha256")
+        != bindings[item["appendix_filename"]]
+    ]
+    if provenance_binding_mismatches:
+        raise SystemExit(
+            "artifact provenance source binding mismatch: "
+            f"{provenance_binding_mismatches[:3]}"
+        )
 
     canonical_paths = sorted(
         {
@@ -174,7 +203,8 @@ def main() -> int:
         f"qa_guards=passed total=351 requested_implemented={len(requested_implemented)} "
         f"release_implemented={len(implemented)} dependency_downgrades={len(downgraded)} "
         f"unresolved_dependencies=0 provenance_manifests={len(manifested)} "
-        f"authority_overrides={authority['source_binding_overrides']} "
+        f"matrix_authority_overrides={authority['source_binding_overrides']} "
+        f"provenance_authority_overrides={provenance_authority['source_binding_overrides']} "
         f"authority_effective_mismatches=0 layout_checks={len(layout.results)} "
         "tracked_tex=0"
     )

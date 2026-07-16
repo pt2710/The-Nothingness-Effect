@@ -37,8 +37,8 @@
     "carrier_conflicts": 0,
     "duplicate_complex_ids": 0,
     "implementation_status_counts": {
-      "implemented": 195,
-      "proxy": 156
+      "implemented": 226,
+      "proxy": 125
     },
     "total": 351
   },
@@ -5489,14 +5489,14 @@
         "eq:dfi05_joint_synthesis_1a2a"
       ],
       "first_label": "app:dfi_complex_05",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity/manifest.json",
       "module": "dfi",
       "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
       "source_complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Complete DFI Decomposition Classification"
     },
     {
@@ -5525,14 +5525,14 @@
         "eq:dfi06_joint_synthesis_1a2a"
       ],
       "first_label": "app:dfi_complex_06",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_006_dfiflowpoint_consistency_and_interface_inconsistency/manifest.json",
       "module": "dfi",
       "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
       "source_complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Complete DFI\u2013Flowpoint Bridge Classification"
     },
     {
@@ -5561,14 +5561,14 @@
         "eq:dfi07_joint_synthesis_1a2a"
       ],
       "first_label": "app:dfi_complex_07",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_007_dfi_simulation_consistency_and_simulation_breakdown/manifest.json",
       "module": "dfi",
       "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index",
       "source_complex_id": "dfi_simulation_consistency_and_simulation_breakdown",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Complete DFI Simulation Validation Classification"
     },
     {
@@ -11817,14 +11817,14 @@
         "eq:gateaux_derivative_phi_1a2a"
       ],
       "first_label": "app:qenn_complex_05",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_005_autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Autocorrelation Completeness of Weight Trajectories <-> Continuous Mixing Component"
     },
     {
@@ -11882,14 +11882,14 @@
         "eq:flowpoint_parity_equivalent_diagnostics_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_06",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_006_flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Flowpoint Flip-Parity Constraint <-> Parity-Broken Bias / Spurious Lines"
     },
     {
@@ -11947,14 +11947,14 @@
         "eq:golden_test_dual_closure_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_07",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_007_dual_support_equivalence_support_mismatch_leakage/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "dual_support_equivalence_support_mismatch_leakage",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "QENN 07 \u2013 Dual Support Equivalence <-> Support Mismatch/Leakage"
     },
     {
@@ -12012,14 +12012,14 @@
         "eq:parseval_bijection_under_drift_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_08",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_008_bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Bounded-Remainder Drift in Updates <-> Long-Memory / Heavy-Tail Drift"
     },
     {
@@ -12077,14 +12077,14 @@
         "eq:regularized_training_objective_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_09",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_009_inflationcollapse_support_invariance_nonlinear_sideband_mixing/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Inflation\u2013Collapse Support Invariance <-> Nonlinear Sideband Mixing"
     },
     {
@@ -12142,14 +12142,14 @@
         "eq:contractivity_preserving_presets_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_10",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Epoch-Operator Closure (Backprop _) <-> Optimiser-Induced Resonance"
     },
     {
@@ -12207,14 +12207,14 @@
         "eq:curvature_aware_scheduling_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_11",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_011_entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Entropy-Balanced Landscape (No Sharp Minima) <-> Sharp-Minima Trap"
     },
     {
@@ -12272,14 +12272,14 @@
         "eq:screening_portability_calculus_equation_1a2a"
       ],
       "first_label": "app:qenn_complex_12",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_012_hyper_parameter_stability_wedge_instability_lobe/manifest.json",
       "module": "qenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
       "source_complex_id": "hyper_parameter_stability_wedge_instability_lobe",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Hyper-Parameter Stability Wedge <-> Instability Lobe"
     },
     {
@@ -12862,14 +12862,14 @@
         "eq:prime_qc_ops_smooth_equation_1a2a"
       ],
       "first_label": "app:pgqenn_complex_05",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_005_primequasicrystal_support_equivalence_support_mismatch_leakage/manifest.json",
       "module": "pgqenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
       "source_complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Prime\u2013Quasicrystal Support Equivalence <-> Support Mismatch/Leakage"
     },
     {
@@ -12927,14 +12927,14 @@
         "eq:soi_scaling_laws_calculus_equation_1a2a"
       ],
       "first_label": "app:pgqenn_complex_06",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_006_soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy/manifest.json",
       "module": "pgqenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
       "source_complex_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOI-Scaled Annealing Invariance <-> SOI Mis-Scaling / Spurious Entropy"
     },
     {
@@ -12992,14 +12992,14 @@
         "eq:motif_exhaustion_cor_calculus_equation_1a2a"
       ],
       "first_label": "app:pgqenn_complex_07",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_007_motif_exhaustion_completeness_coverage_bias_long_memory_drift/manifest.json",
       "module": "pgqenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
       "source_complex_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Motif Exhaustion Completeness <-> Coverage Bias / Long-Memory Drift"
     },
     {
@@ -13057,14 +13057,14 @@
         "eq:we_cor_calculus_equation_1a2a"
       ],
       "first_label": "app:pgqenn_complex_08",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_008_weightenergy_parseval_equivalence_layerwise_l_2_energy_mismatch/manifest.json",
       "module": "pgqenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
       "source_complex_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Weight\u2013Energy Parseval Equivalence (Layerwise) <-> L^2 Energy Mismatch"
     },
     {
@@ -13122,14 +13122,14 @@
         "eq:pgqenn_parity_orth_opt_cor_gen_eq_1a2a"
       ],
       "first_label": "app:pgqenn_complex_09",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination/manifest.json",
       "module": "pgqenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
       "source_complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Parity-Orthogonal Optimization <-> Cross-Parity Gradient Contamination"
     },
     {
@@ -13187,14 +13187,14 @@
         "eq:psgr10_cor_1a2a_calculus_equation_1a2a"
       ],
       "first_label": "app:pgqenn_complex_10",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_010_prime_shell_growth_regularity_shell_instability_phase_slips/manifest.json",
       "module": "pgqenn",
       "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
       "source_complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Prime-Shell Growth Regularity <-> Shell Instability / Phase Slips"
     },
     {
@@ -13444,14 +13444,14 @@
       "complex_id": "soinet_cross_modal_transfer_generalization_and_dual_stability",
       "equation_labels": [],
       "first_label": "app:soinet_complex_03",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_003_soinet_cross_modal_transfer_generalization_and_dual_stability/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_cross_modal_transfer_generalization_and_dual_stability",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Cross-Modal Transfer Generalization and Dual Stability"
     },
     {
@@ -13460,14 +13460,14 @@
       "complex_id": "soinet_error_contraction_and_dual_error_orthogonality",
       "equation_labels": [],
       "first_label": "app:soinet_complex_04",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_004_soinet_error_contraction_and_dual_error_orthogonality/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_error_contraction_and_dual_error_orthogonality",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Error Contraction and Dual Error Orthogonality"
     },
     {
@@ -13476,14 +13476,14 @@
       "complex_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet",
       "equation_labels": [],
       "first_label": "app:soinet_complex_05",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_005_universal_entropy_minimization_and_collapsedegeneracy_duality_in_soinet/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Universal Entropy Minimization and Collapse\u2013Degeneracy Duality in SOInet"
     },
     {
@@ -13492,14 +13492,14 @@
       "complex_id": "soinet_modality_invariant_learning_and_universal_adaptation",
       "equation_labels": [],
       "first_label": "app:soinet_complex_06",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_006_soinet_modality_invariant_learning_and_universal_adaptation/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_modality_invariant_learning_and_universal_adaptation",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Modality-Invariant Learning and Universal Adaptation"
     },
     {
@@ -13508,14 +13508,14 @@
       "complex_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
       "equation_labels": [],
       "first_label": "app:soinet_complex_07",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_007_soinet_universal_expressivity_bound_entropy_minimal_generalization_principle/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Universal Expressivity Bound, Entropy-Minimal Generalization Principle"
     },
     {
@@ -13545,14 +13545,14 @@
         "eq:modality_invariance_corollary_derivative_1a2a"
       ],
       "first_label": "app:soinet_complex_08",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Cross-Modal Compositionality , Modality-Invariant Collapse Principle"
     },
     {
@@ -13581,14 +13581,14 @@
         "eq:soinet_stacktransfer_collapse_calc_1a2a"
       ],
       "first_label": "app:soinet_complex_09",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Hierarchical SOI-Stack Transfer , Cross-Regime Collapse Duality"
     },
     {
@@ -13597,14 +13597,14 @@
       "complex_id": "soinet_universal_generalization_principle_failure_brittleness_duality",
       "equation_labels": [],
       "first_label": "app:soinet_complex_10",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_010_soinet_universal_generalization_principle_failure_brittleness_duality/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_universal_generalization_principle_failure_brittleness_duality",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Universal Generalization Principle , Failure/Brittleness Duality"
     },
     {
@@ -13613,14 +13613,14 @@
       "complex_id": "soinet_universal_cloning_principle_cloning_failure_duality",
       "equation_labels": [],
       "first_label": "app:soinet_complex_11",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_011_soinet_universal_cloning_principle_cloning_failure_duality/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_universal_cloning_principle_cloning_failure_duality",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Universal Cloning Principle , Cloning Failure Duality"
     },
     {
@@ -13634,14 +13634,14 @@
         "eq:calculus_dual_1a2a"
       ],
       "first_label": "app:soinet_complex_12",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_012_spectral_phase_locking_and_collapse_in_soinet/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "spectral_phase_locking_and_collapse_in_soinet",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "Spectral Phase-Locking and Collapse in SOInet"
     },
     {
@@ -13682,14 +13682,14 @@
       "complex_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability",
       "equation_labels": [],
       "first_label": "app:soinet_complex_15",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_015_soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOI-Spectrum Learning and Classification , SOI-Spectrum Degeneracy (Dual Instability)"
     },
     {
@@ -13707,14 +13707,14 @@
         "eq:soi_crossdomain_deriv_unbounded_1a2a"
       ],
       "first_label": "app:soinet_complex_16",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_016_soi_cross_domain_generalization_and_collapse/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soi_cross_domain_generalization_and_collapse",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOI Cross-Domain Generalization and Collapse"
     },
     {
@@ -13723,14 +13723,14 @@
       "complex_id": "soi_entropy_minimization_and_entropic_catastrophe",
       "equation_labels": [],
       "first_label": "app:soinet_complex_17",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_017_soi_entropy_minimization_and_entropic_catastrophe/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soi_entropy_minimization_and_entropic_catastrophe",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOI Entropy Minimization and Entropic Catastrophe"
     },
     {
@@ -13739,14 +13739,14 @@
       "complex_id": "soinet_meta_learnability_dual_closure",
       "equation_labels": [],
       "first_label": "app:soinet_complex_18",
-      "implementation_status": "proxy",
+      "implementation_status": "implemented",
       "level": "A",
       "manifest_path": "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_018_soinet_meta_learnability_dual_closure/manifest.json",
       "module": "soinets",
       "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
       "source_complex_id": "soinet_meta_learnability_dual_closure",
       "source_complex_ids": [],
-      "status_reason": "retained from verified contract inventory",
+      "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
       "title": "SOInet Meta-Learnability Dual Closure"
     },
     {

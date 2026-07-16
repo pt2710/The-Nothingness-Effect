@@ -1,0 +1,24 @@
+{
+  "dependency": "MPL-TC",
+  "repository": "https://github.com/pt2710/MPL-TC.git",
+  "path": "dependencies/MPL-TC",
+  "pinned_commit": "056e346824e9ec9785ab45b642b3b842c88f6e56",
+  "python_module": "mccrackns_prime_law.py",
+  "python_module_sha256": "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9",
+  "upstream_api": [
+    "McCracknsPrimeLaw",
+    "RegimeMotifScheduler"
+  ],
+  "consumer": "the_nothingness_effect.artificial_intelligence.pgqenn.mpl_tc_dependency.MPLTCMotifProvider",
+  "dependency_chain": [
+    "DTQC -> QENN",
+    "QENN + MPL-TC -> PGQENN",
+    "QENN + PGQENN -> SOInets"
+  ],
+  "verification": {
+    "commit_must_match": true,
+    "module_hash_must_match": true,
+    "non_finite_or_missing_dependency_policy": "fail_closed"
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute"
+}

@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -27,6 +29,11 @@ jobs:
           --ignore=tests/contracts/test_qenn_contracts.py
           --ignore=tests/contracts/test_pgqenn_contracts.py
           --ignore=tests/contracts/test_soinets_contracts.py
+          --ignore=tests/contracts/test_mpl_tc_dependency.py
+          --ignore=tests/invariants/test_elastic_dubler_ai.py
+          --ignore=tests/invariants/test_observation_collapse_readout.py
+          --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py
+          --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py
           --ignore=tests/artifacts/test_qenn_artifacts.py
           --ignore=tests/artifacts/test_pgqenn_artifacts.py
           --ignore=tests/artifacts/test_soinets_artifacts.py
@@ -36,6 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -47,6 +56,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -58,6 +69,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -68,6 +81,10 @@ jobs:
           tests/numerical/test_qenn_model.py
           tests/numerical/test_pgqenn_model.py
           tests/numerical/test_soinets_model.py
+          tests/numerical/test_multimodal_soinet_model.py
+          tests/contracts/test_mpl_tc_dependency.py
+          tests/invariants/test_observation_collapse_readout.py
+          tests/source_removal/test_ai_architecture_dependency_removal.py
           the_nothingness_effect/artificial_intelligence/color_classification/test
           the_nothingness_effect/artificial_intelligence/sound_classification/test
           the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/test
@@ -82,6 +99,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"

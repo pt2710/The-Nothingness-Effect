@@ -37,3 +37,22 @@ def parity_conditioned_dfi(sequence: torch.Tensor, parity_mask: torch.Tensor) ->
         raise AIObstructionError("pDFI zero predecessor obstruction")
     increments = torch.abs((sequence[1:] - predecessors) / predecessors)
     return require_finite_tensor(torch.mean(parity_mask * increments), "pDFI output")
+
+
+def batch_parity_conditioned_dfi(sequence: torch.Tensor) -> torch.Tensor:
+    """Evaluate pDFI independently across each row of a feature trajectory."""
+
+    if sequence.ndim != 2 or sequence.shape[1] < 2:
+        raise AIObstructionError(
+            "batched pDFI expects [samples, features] with at least two features"
+        )
+    require_finite_tensor(sequence, "batched pDFI sequence")
+    predecessors = sequence[:, :-1]
+    if bool((predecessors == 0).any()):
+        raise AIObstructionError("batched pDFI zero predecessor obstruction")
+    parity_mask = (
+        torch.arange(1, sequence.shape[1], device=sequence.device) % 2
+    ).to(dtype=sequence.dtype)
+    increments = torch.abs((sequence[:, 1:] - predecessors) / predecessors)
+    result = torch.mean(increments * parity_mask.unsqueeze(0), dim=-1, keepdim=True)
+    return require_finite_tensor(result, "batched pDFI output")

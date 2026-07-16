@@ -50,7 +50,7 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
     axis.scatter(x, y, c=[depth.value for depth in value.graph.two_adic_depths], cmap="viridis", s=90)
     for index, prime in enumerate(value.graph.primes):
         axis.text(float(x[index]), float(y[index]), str(prime), ha="center", va="center", fontsize=7)
-    axis.set(title="Canonical prime/parity PGQENN graph", aspect="equal")
+    axis.set(title="Canonical MPL-TC prime/motif PGQENN graph", aspect="equal")
     axis.axis("off")
     figure = save_figure(figure_handle, output / "pgqenn_prime_graph.png", dpi=160)
     plt.close(figure_handle)
@@ -60,7 +60,14 @@ def run_suite(output_dir: str | Path, *, seed: int = 0):
         residual = () if evaluation.residual is None else evaluation.residual.vector
         simulation = SimulationResult(
             ComplexId(str(contract.complex_id)), evaluation.status,
-            {"module": "pgqenn", "fixture": "prime-graph-v1", "node_count": len(value.graph.primes), "growth_mode": value.graph.growth_mode},
+            {
+                "module": "pgqenn",
+                "fixture": "prime-graph-v1",
+                "node_count": len(value.graph.primes),
+                "growth_mode": value.graph.growth_mode,
+                "mpl_tc_commit": value.graph.dependency_commit,
+                "mpl_tc_module_sha256": value.graph.dependency_sha256,
+            },
             seed, {"absolute": value.tolerance}, tuple(float(item) for item in residual),
             (metrics.name, figure.name), {"exact_semantics": contract.exact_semantics, "device": "cpu"},
         )

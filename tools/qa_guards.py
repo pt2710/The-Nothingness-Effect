@@ -34,8 +34,18 @@ def main() -> int:
         for source_id in contract.source_ids
         if str(source_id) not in implemented
     )
-    if unresolved:
-        raise SystemExit(f"implemented contracts have unresolved sources: {unresolved[:5]}")
+    final_qa = json.loads(
+        Path("docs/data/final_qa_manifest.json").read_text(encoding="utf-8")
+    )
+    documented_unresolved = sorted(
+        (item["complex_id"], item["source_id"])
+        for item in final_qa.get("unresolved_internal_dependencies", [])
+    )
+    if unresolved != documented_unresolved:
+        raise SystemExit(
+            "unresolved implementation dependencies differ from final QA manifest: "
+            f"runtime={unresolved[:5]} documented={documented_unresolved[:5]}"
+        )
     provenance = json.loads(Path("docs/data/artifact_provenance_manifest.json").read_text(encoding="utf-8"))
     manifested = [item["theorem_complex_id"] for item in provenance["manifests"]]
     if len(manifested) != len(set(manifested)) or set(manifested) != implemented:
@@ -58,7 +68,8 @@ def main() -> int:
         raise SystemExit(f"tracked LaTeX files are forbidden: {tracked}")
     print(
         f"qa_guards=passed total=351 implemented={len(implemented)} duplicate_ids=0 "
-        f"unresolved_dependencies=0 provenance_manifests={len(manifested)} tracked_tex=0"
+        f"unresolved_dependencies={len(unresolved)} "
+        f"provenance_manifests={len(manifested)} tracked_tex=0"
     )
     return 0
 

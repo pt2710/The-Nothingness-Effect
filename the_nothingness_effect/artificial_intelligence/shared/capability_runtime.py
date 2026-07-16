@@ -19,6 +19,7 @@ from .closure_losses import arbitrate
 from .elastic_pi_gates import ElasticPiGate
 from .entropy_gates import normalized_dfi
 from .flowpoint_layers import FlowpointLayer, anti_invariant_projector
+from .observation_collapse import ObservationCollapseReadout
 from .provenance import backend_metadata
 from .types import AIClosureStatus, AIObstructionError, require_finite_tensor
 
@@ -97,6 +98,7 @@ class TNEPrototypeClassifier(nn.Module):
         self.labels = tuple(str(label) for label in labels)
         self.flowpoint = FlowpointLayer()
         self.elastic_gate = ElasticPiGate(K_D)
+        self.observer = ObservationCollapseReadout(temperature=temperature)
         self.temperature = float(temperature)
 
     def forward(self, features: torch.Tensor, *, tolerance: float = 1e-6) -> ClassificationOutput:
@@ -114,12 +116,13 @@ class TNEPrototypeClassifier(nn.Module):
         elastic = self.elastic_gate(torch.abs(dfi))
         gain = torch.mean(elastic / torch.pi, dim=-1, keepdim=True)
         distances = torch.cdist(anti, self.prototypes)
-        scores = require_finite_tensor(-(distances * gain) / self.temperature, "classification scores")
-        observation = require_finite_tensor(torch.softmax(scores, dim=-1), "classification observation")
-        indices = torch.argmax(observation, dim=-1)
+        scores = require_finite_tensor(-(distances * gain), "classification scores")
+        observation_state = self.observer(scores)
+        observation = observation_state.probabilities
+        indices = observation_state.selected_indices
         residuals = {
             "flowpoint_involution": self.flowpoint.involution_residual(features),
-            "observation_normalization": torch.max(torch.abs(observation.sum(dim=-1) - 1.0)),
+            **observation_state.residuals,
         }
         status = arbitrate(residuals, tolerance)
         return ClassificationOutput(

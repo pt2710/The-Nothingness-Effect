@@ -55,6 +55,13 @@ QENN, PGQENN, and SOInets also each own an architecture-level `test/` and
 native residuals and observation/collapse output, then run all six capability
 groups into architecture-local subdirectories.
 
+SOInets additionally owns a canonical multimodal wrapper. Named color, sound,
+vision, or other finite tensor modalities pass through observation/collapse,
+one shared encoder, exact Elastic-Dubler weighting, latent fusion/collapse,
+and the complete QENN/PGQENN SOInet backbone. Its metrics, figure, simulation
+GIF, and manifest are written under `soinets/test/artifacts/multimodal` and
+`soinets/simulation/artifacts/multimodal`.
+
 ## Implemented semantics
 
 - Color classification consumes normalized RGB images and observes one of six
@@ -111,4 +118,6 @@ python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_cap
 python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_all_capabilities
 python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities
 python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_all_capabilities
+python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_multimodal
+python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_multimodal
 ```

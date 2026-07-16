@@ -19,7 +19,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
 
 
 def _modalities(*, identical: bool = False) -> torch.Tensor:
-    axis = torch.linspace(0.0, 2.0 * torch.pi, 8)
+    axis = torch.linspace(0.0, 2.0 * torch.pi, 8, dtype=torch.float64)
     base = torch.stack(
         (
             1.2 + torch.sin(axis),

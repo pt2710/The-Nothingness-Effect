@@ -114,6 +114,7 @@ jobs:
             tests/numerical/test_multimodal_soinet_model.py \
             tests/numerical/test_trainable_multimodal_model.py \
             tests/contracts/test_mpl_tc_dependency.py \
+            tests/contracts/test_dependency_source_contracts.py \
             tests/invariants/test_observation_collapse_readout.py \
             tests/source_removal/test_ai_architecture_dependency_removal.py \
             the_nothingness_effect/artificial_intelligence/color_classification/test \
@@ -157,6 +158,7 @@ jobs:
             --ignore=tests/contracts/test_pgqenn_contracts.py \
             --ignore=tests/contracts/test_soinets_contracts.py \
             --ignore=tests/contracts/test_mpl_tc_dependency.py \
+            --ignore=tests/contracts/test_dependency_source_contracts.py \
             --ignore=tests/invariants/test_elastic_dubler_ai.py \
             --ignore=tests/invariants/test_observation_collapse_readout.py \
             --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py \
@@ -166,6 +168,7 @@ jobs:
             --ignore=tests/artifacts/test_qenn_artifacts.py \
             --ignore=tests/artifacts/test_pgqenn_artifacts.py \
             --ignore=tests/artifacts/test_soinets_artifacts.py \
+            --ignore=tests/artifacts/test_soinets_runtime_simulation.py \
             --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/* \
             > core-diagnostic.log 2>&1
           echo "$?" > core-exit-code.txt

@@ -25,7 +25,7 @@ from .elastic_pi import ElasticPiEvaluation, evaluate_elastic_pi, require_elasti
 
 
 APPENDIX = "appendix_tne_fluctuation_and_elastic_dynamics.tex"
-APPENDIX_SHA256 = "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389"
+APPENDIX_SHA256 = "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b"
 
 A1 = ComplexId("dfi_elastic_equivalence_and_breakdown")
 A2 = ComplexId("elastic_e_curvature_encoding_and_curvature_ambiguity_divergence")

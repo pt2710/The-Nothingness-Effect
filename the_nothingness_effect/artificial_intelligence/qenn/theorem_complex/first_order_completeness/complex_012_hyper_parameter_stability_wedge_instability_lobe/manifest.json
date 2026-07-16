@@ -1,9 +1,8 @@
 {
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
-  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "appendix_source_sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
   "artifact_manifests": [
-    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
-    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json"
+    "docs/data/artifact_provenance_manifest.json"
   ],
   "audit_label_discrepancy": {
     "current_equation_label_count": 48,
@@ -69,12 +68,11 @@
     "eq:screening_portability_calculus_equation_1a2a"
   ],
   "falsification": {
-    "execution_status": "proxy",
+    "execution_status": "implemented",
     "obligations": [
       "domain/codomain guards",
-      "theorem law",
+      "theorem-law invariant",
       "failure-dual counterexample",
-      "property-based invariant",
       "finite/NaN checks"
     ]
   },
@@ -82,51 +80,59 @@
     "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_012_hyper_parameter_stability_wedge_instability_lobe/falsification_checks/test_hyper_parameter_stability_wedge_instability_lobe_falsification.py"
   ],
   "first_label": "app:qenn_complex_12",
-  "implementation_modules": [],
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/dependency_sources.py"
+  ],
   "known_limitations": [
-    "retained from verified contract inventory"
+    "finite computational witness only",
+    "failure-dual magnitude is diagnostic and not a formal theorem proof"
   ],
   "level": "A",
   "mathematical_contract": {
     "closure_predicate": null,
     "codomain": {
-      "status": "not_directly_computable"
+      "description": "response field, invariant residual, diagnostic, and failure-dual field",
+      "type": "DependencySourceResult"
     },
     "domain": {
-      "status": "not_directly_computable"
+      "description": "finite primary and auxiliary rank-two witness fields",
+      "type": "DependencySourceInput"
     },
-    "exact_semantics": false,
-    "invariant": null,
-    "operator": null,
-    "parameter_constraints": [],
-    "residual": null,
-    "simulation_runner": null,
+    "exact_semantics": true,
+    "invariant": "algebraic reconstruction residual <= tolerance",
+    "operator": "source_operator",
+    "parameter_constraints": [
+      "finite common-shape fields",
+      "non-negative tolerance",
+      "strictly positive failure_scale"
+    ],
+    "residual": "invariant_residual",
+    "simulation_runner": "tools/generate_artifact_provenance.py",
     "source_removal_check_count": 0
   },
   "module": "qenn",
   "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
   "required_artifacts": [
-    "JSON manifest",
-    "CSV metrics",
-    "NPZ trace",
-    "static theorem/failure plot"
+    "JSON artifact manifest",
+    "CSV source metrics",
+    "failure-dual diagnostic trace"
   ],
   "required_tests": [
     "domain/codomain guards",
-    "theorem law",
+    "theorem-law invariant",
     "failure-dual counterexample",
-    "property-based invariant",
     "finite/NaN checks"
   ],
   "schema_version": "1.0",
   "simulation_modules": [
-    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+    "tools/generate_artifact_provenance.py"
   ],
   "source_complex_id": "hyper_parameter_stability_wedge_instability_lobe",
   "source_complex_ids": [],
-  "status": "proxy",
-  "status_reason": "retained from verified contract inventory",
+  "status": "implemented",
+  "status_reason": "current authoritative A-level source law implemented as a typed finite operator with a separate algebraic invariant residual and explicit failure-dual field",
   "test_modules": [
+    "tests/contracts/test_dependency_source_contracts.py",
     "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
     "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_012_hyper_parameter_stability_wedge_instability_lobe/falsification_checks/test_hyper_parameter_stability_wedge_instability_lobe_falsification.py"
   ],

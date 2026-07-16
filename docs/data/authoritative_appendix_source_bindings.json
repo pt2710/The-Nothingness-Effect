@@ -1,0 +1,40 @@
+{
+  "appendices": {
+    "appendix_canonical_self_negating_involution_flowpoint.tex": {
+      "sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+      "verification": "byte-verified against the current authoritative upload"
+    },
+    "appendix_the_completeness_theorem.tex": {
+      "sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+      "verification": "byte-verified against the current authoritative upload"
+    },
+    "appendix_tne_artificial_intelligence_architechture.tex": {
+      "sha256": "2f2e67b68c18c75f8fe0e8f78c243ca585c0ef8413c579752c3299816e5bc8de",
+      "verification": "carried forward from the preceding authoritative seven-appendix snapshot"
+    },
+    "appendix_tne_fluctuation_and_elastic_dynamics.tex": {
+      "sha256": "e37d7583d56287f0cc48d819afadf06ab7f1d8cbccce1790c8b8f18f1b96f30b",
+      "verification": "carried forward from the preceding authoritative seven-appendix snapshot"
+    },
+    "appendix_tne_foundational_closure_architecture.tex": {
+      "sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+      "verification": "byte-verified against the current authoritative upload"
+    },
+    "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": {
+      "sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "verification": "carried forward from the preceding authoritative seven-appendix snapshot"
+    },
+    "appendix_tne_mathematical_closure_architecture.tex": {
+      "sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+      "verification": "byte-verified against the current authoritative upload"
+    }
+  },
+  "current_byte_verified_appendix_files": [
+    "appendix_canonical_self_negating_involution_flowpoint.tex",
+    "appendix_the_completeness_theorem.tex",
+    "appendix_tne_foundational_closure_architecture.tex",
+    "appendix_tne_mathematical_closure_architecture.tex"
+  ],
+  "schema_version": "1.0",
+  "security_boundary": "authoritative .tex bytes are not tracked in this repository"
+}

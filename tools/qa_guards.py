@@ -110,6 +110,11 @@ def main() -> int:
     if tracked:
         raise SystemExit(f"tracked LaTeX files are forbidden: {tracked}")
 
+    subprocess.run(
+        [sys.executable, "tools/verify_authoritative_source_bindings.py"],
+        check=True,
+    )
+
     layout = verify(None)
     layout_failures = [result for result in layout.results if not result["passed"]]
     if layout_failures:

@@ -29,8 +29,8 @@
     },
     "finitizable_infinity_and_the_non_finitization_boundary": {
       "status": "implemented",
-      "reason": "Typed finite approximation chain with monotone error, terminal attainment, and non-finitization boundary certificates.",
-      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+      "reason": "Authoritative finite L1 approximation with monotone relative error and exact absolute SOI scaling ||e||_Omega=Omega||e||_1, including backward-compatible Omega=1 witnesses.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_finitization.py"
     },
     "dual_realizability_and_the_missing_dual_defect": {
       "status": "implemented",

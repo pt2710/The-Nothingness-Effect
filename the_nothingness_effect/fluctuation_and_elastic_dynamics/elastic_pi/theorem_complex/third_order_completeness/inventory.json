@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "spatial_reciprocal_curvature_validation_closure",
+      "directory": "complex_001_spatial_reciprocal_curvature_validation_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi"
+}

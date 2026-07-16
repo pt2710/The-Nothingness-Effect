@@ -1,0 +1,157 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 46,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "irrational_drive_locking_commensurate_resonance_collapse",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/1a/irrational_drive_locking_paired_with_2a_theorem_thm_commensurate_resonance_collapse_2a.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/2a/commensurate_resonance_collapse_paired_with_1a_theorem_thm_irrational_drive_locking_1a.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/1a2a/irrational_drive_locking_commensurate_resonance_collapse.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:diophantine_1a",
+    "eq:bohr_coefficients_1a",
+    "eq:autocorr_perturbed_1a",
+    "eq:rho_definition_1a",
+    "eq:vanishing_pairing_1a",
+    "eq:pure_point_lines_1a",
+    "eq:uniform_separation_1a",
+    "eq:cesaro_average_equals_coeff_1a",
+    "eq:orthogonality_exponentials_1a",
+    "eq:implication_chain_1a",
+    "eq:calc_Sx_def_1a",
+    "eq:calc_Sx_conv_1a",
+    "eq:rho_ft_mean_1a",
+    "eq:rho_hat_decomp_1a",
+    "eq:Sx_convolution_rho_1a",
+    "eq:Sx_atomic_plus_reg_1a",
+    "eq:parseval_quasicrystal_1a",
+    "eq:parseval_from_wk_1a",
+    "eq:periodic_fourier_series_2a",
+    "eq:drift_broadening_convolution_2a",
+    "eq:period_autocorrelation_2a",
+    "eq:harmonics_close_2a",
+    "eq:parseval_periodic_2a",
+    "eq:mu_support_rat_2a",
+    "eq:support_subset_rat_2a",
+    "eq:Sx_broadened_2a",
+    "eq:periodic_Rx_2a",
+    "eq:fourier_period_block_2a",
+    "eq:finite_collapse_2a",
+    "eq:parseval_finite_period_2a",
+    "eq:dtqc04_joint_status_1a2a",
+    "eq:half_lattice_definition_1a2a",
+    "eq:bohr_expansion_1a2a",
+    "eq:spectral_measure_pure_point_1a2a",
+    "eq:rational_sublattice_1a2a",
+    "eq:autocorrelation_definition_1a2a",
+    "eq:wiener_khinchine_1a2a",
+    "eq:pairing_definition_1a2a",
+    "eq:pairing_characterization_1a",
+    "eq:pairing_implication_2a",
+    "eq:pairing_to_lines_1a",
+    "eq:pairing_to_broadened_2a",
+    "eq:pairing_coeff_mapping_1a2a",
+    "eq:cases_spectrum_1a2a",
+    "eq:support_cases_1a2a",
+    "eq:cases_fourier_relation_1a2a_small"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/falsification_checks/test_irrational_drive_locking_commensurate_resonance_collapse_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_04",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/1a/irrational_drive_locking_paired_with_2a_theorem_thm_commensurate_resonance_collapse_2a.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/2a/commensurate_resonance_collapse_paired_with_1a_theorem_thm_irrational_drive_locking_1a.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/1a2a/irrational_drive_locking_commensurate_resonance_collapse.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "irrational_locking field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "irrational_drive_locking_commensurate_resonance_collapse",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_004_irrational_drive_locking_commensurate_resonance_collapse/falsification_checks/test_irrational_drive_locking_commensurate_resonance_collapse_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Irrational-Drive Locking <-> Commensurate Resonance Collapse",
+    "left": "Irrational-Drive Locking (paired with 2A: Theorem thm:commensurate_resonance_collapse_2a)",
+    "right": "Commensurate Resonance Collapse (paired with 1A: Theorem thm:irrational_drive_locking_1a)"
+  },
+  "theorem_titles_tex": {
+    "cross": "Irrational-Drive Locking $\\leftrightarrow$ Commensurate Resonance Collapse",
+    "left": "Irrational-Drive Locking (paired with 2A: Theorem~\\ref{thm:commensurate_resonance_collapse_2a})",
+    "right": "Commensurate Resonance Collapse (paired with 1A: Theorem~\\ref{thm:irrational_drive_locking_1a})"
+  }
+}

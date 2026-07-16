@@ -1,0 +1,125 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 0,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_soinet_b19_master",
+      "eq:tne_additive_soinet_b19_1b_definition",
+      "eq:tne_additive_soinet_b19_1b_theorem",
+      "eq:tne_additive_soinet_b19_1b_lemma",
+      "eq:tne_additive_soinet_b19_1b_synthesis",
+      "eq:tne_additive_soinet_b19_1b_principle",
+      "eq:tne_additive_soinet_b19_2b_definition",
+      "eq:tne_additive_soinet_b19_2b_theorem",
+      "eq:tne_additive_soinet_b19_2b_lemma",
+      "eq:tne_additive_soinet_b19_2b_synthesis",
+      "eq:tne_additive_soinet_b19_2b_principle",
+      "eq:tne_additive_soinet_b19_joint_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "motif_spectral_entropy_coupling_energy",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/1b/motifspectral_synthesis_law_1b.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/2b/entropy_duality_law_2b.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/1b2b/soinet_motifspectralentropy_complete_dual_closure_law_1b_2b.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/falsification_checks/test_motif_spectral_entropy_coupling_energy_falsification.py"
+  ],
+  "first_label": "app:soinet_complex_19",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/1b2b/soinet_motifspectralentropy_complete_dual_closure_law_1b_2b.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/1b/motifspectral_synthesis_law_1b.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/2b/entropy_duality_law_2b.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/1b2b/soinet_motifspectralentropy_complete_dual_closure_law_1b_2b.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "positive non-cancelling two-source SOInet residual energy",
+      "name": "motif_spectral_entropy_coupling_energy",
+      "python_types": [
+        "SOInetDerivedLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite multi-modality spatial feature field and positive residual weights",
+      "name": "SOInet modality field",
+      "python_types": [
+        "SOInetContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.soinets.contracts.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.soinets.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "motif_spectral_entropy_coupling_energy",
+  "source_complex_ids": [
+    "motif_spectral_dual_regularity_law_for_soinets",
+    "soi_universal_entropy_plateau_theorem"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_soinets_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/second_order_completeness/complex_001_motifspectralentropy_coupling_energy/falsification_checks/test_motif_spectral_entropy_coupling_energy_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOInet Motif–Spectral–Entropy Complete Dual Closure Law 1B, 2B",
+    "left": "Motif–Spectral Synthesis Law 1B",
+    "right": "Entropy Duality Law 2B"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOInet Motif–Spectral–Entropy Complete Dual Closure Law 1B, 2B",
+    "left": "Motif–Spectral Synthesis Law 1B",
+    "right": "Entropy Duality Law 2B"
+  }
+}

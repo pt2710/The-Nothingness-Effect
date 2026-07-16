@@ -1,0 +1,108 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "rotation_pitch_coupling_invariant",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_003_rotation_pitch_coupling_invariant/1b/rotation_pitch_coupling_invariant_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_003_rotation_pitch_coupling_invariant/2b/rotation_pitch_coupling_invariant_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_003_rotation_pitch_coupling_invariant/1b2b/complete_rotation_pitch_coupling_invariant_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_ldg_b03_product_carrier",
+    "eq:drv_ldg_b03_1b",
+    "eq:drv_ldg_b03_theorem_1b",
+    "eq:drv_ldg_b03_res_1b",
+    "eq:drv_ldg_b03_2b",
+    "eq:drv_ldg_b03_theorem_2b",
+    "eq:drv_ldg_b03_res_2b",
+    "eq:drv_ldg_b03_joint",
+    "eq:drv_ldg_b03_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_003_rotation_pitch_coupling_invariant/falsification_checks/test_rotation_pitch_coupling_invariant_falsification.py"
+  ],
+  "first_label": "app:drv_ldg_b03",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "rotation_pitch_coupling_invariant",
+  "source_complex_ids": [
+    "locality_driven_rotation_curve_duality",
+    "spiral_pitch_angle_gradient_duality"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/second_order_completeness/complex_003_rotation_pitch_coupling_invariant/falsification_checks/test_rotation_pitch_coupling_invariant_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Rotation-Pitch Coupling Invariant Classification",
+    "left": "Rotation-Pitch Coupling Invariant Law",
+    "right": "Rotation-Pitch Coupling Invariant Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Rotation-Pitch Coupling Invariant Classification",
+    "left": "Rotation-Pitch Coupling Invariant Law",
+    "right": "Rotation-Pitch Coupling Invariant Failure Law"
+  }
+}

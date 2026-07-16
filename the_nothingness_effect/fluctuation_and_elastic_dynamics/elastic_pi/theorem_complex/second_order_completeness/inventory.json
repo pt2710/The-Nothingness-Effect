@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "dfi_log_curvature_reciprocity_law",
+      "directory": "complex_001_dfilog_curvature_reciprocity_law",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "curvature_certified_simulation_residual",
+      "directory": "complex_002_curvature_certified_simulation_residual",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi"
+}

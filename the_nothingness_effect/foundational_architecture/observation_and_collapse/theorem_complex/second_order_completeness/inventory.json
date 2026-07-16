@@ -1,0 +1,26 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "outcome_conditioned_closure_instrument",
+      "directory": "complex_001_outcome_conditioned_closure_instrument",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift",
+      "directory": "complex_002_involutive_collapsespectral_pinning_and_spectral_drift",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "temporal_compression_and_frozen_time_obstruction",
+      "directory": "complex_003_temporal_compression_and_frozen_time_obstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "collapse_spectral_selection_and_spectral_ambiguity",
+      "directory": "complex_004_collapse_spectral_selection_and_spectral_ambiguity",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/observation_and_collapse"
+}

@@ -1,0 +1,11 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
+      "directory": "complex_001_complex_phase_coordinates_and_fourier_reconstruction",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry"
+}

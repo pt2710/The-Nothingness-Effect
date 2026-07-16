@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "theoretical benchmark; repository-linked computational artifact; not an empirical validation claim; not a formal proof substitute",
+  "limitations": "Analytic Hawking benchmark only; not an empirical validation layer.",
+  "mass_range_kg": [
+    100000000000.0,
+    1000000000000000.0
+  ],
+  "slope_evaporation": 3.0,
+  "slope_power": -2.0000000000000004,
+  "slope_temperature": -1.0
+}

@@ -1,0 +1,122 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "drift_tail_figure_certification_functional",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b/drift_tail_figure_certification_functional_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/2b/drift_tail_figure_certification_functional_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b2b/complete_drift_tail_figure_certification_functional_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dtqc_b07_product_carrier",
+    "eq:drv_dtqc_b07_1b",
+    "eq:drv_dtqc_b07_theorem_1b",
+    "eq:drv_dtqc_b07_res_1b",
+    "eq:drv_dtqc_b07_2b",
+    "eq:drv_dtqc_b07_theorem_2b",
+    "eq:drv_dtqc_b07_res_2b",
+    "eq:drv_dtqc_b07_joint",
+    "eq:drv_dtqc_b07_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/falsification_checks/test_drift_tail_figure_certification_functional_falsification.py"
+  ],
+  "first_label": "app:drv_dtqc_b07",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b2b/complete_drift_tail_figure_certification_functional_classification.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b/drift_tail_figure_certification_functional_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/2b/drift_tail_figure_certification_functional_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/1b2b/complete_drift_tail_figure_certification_functional_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 3
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "drift_tail_figure_certification_functional",
+  "source_complex_ids": [
+    "drift_boundedness_criterion_unbounded_drift_breakdown",
+    "dfi_compatible_tail_control_tail_driven_mass_imbalance",
+    "figure_backed_closure_bragg_cwt_figure_contradicted_claims"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_007_drift_tail_figure_certification_functional/falsification_checks/test_drift_tail_figure_certification_functional_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Drift-Tail Figure Certification Functional Classification",
+    "left": "Drift-Tail Figure Certification Functional Law",
+    "right": "Drift-Tail Figure Certification Functional Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Drift-Tail Figure Certification Functional Classification",
+    "left": "Drift-Tail Figure Certification Functional Law",
+    "right": "Drift-Tail Figure Certification Functional Failure Law"
+  }
+}

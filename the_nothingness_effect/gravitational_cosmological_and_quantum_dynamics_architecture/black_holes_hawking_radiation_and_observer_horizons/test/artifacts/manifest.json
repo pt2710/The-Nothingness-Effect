@@ -1,0 +1,46 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/generate_artifacts.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "black_hole_dynamics::elastic_black_hole_emergence_triviality_of_breakdown",
+    "bridge_duality_dual_invariant_translation",
+    "physical_singularity_absence_mathematical_failure_point_status",
+    "black_hole_observability_triviality_and_regularity",
+    "elastic_hawking_emission_radiative_stasis",
+    "hawking_radiation_as_entropic_relaxation_stasis",
+    "observer_horizon_threshold_infinite_visibility",
+    "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation",
+    "residual_deformation_memory_perfect_relaxation",
+    "simulation_consistency_breakdown_and_non_equivalence",
+    "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat",
+    "entropy_invariant_horizon_translation",
+    "regular_observer_horizon_hypersurface",
+    "spatiotemporal_hawking_flux_density",
+    "observer_accessible_curvature_memory",
+    "certified_residual_memory_lower_bound",
+    "regular_nonperforating_horizon_geometry",
+    "observable_hawking_memory_certification"
+  ]
+}

@@ -1,0 +1,3 @@
+[submodule "dependencies/MPL-TC"]
+	path = dependencies/MPL-TC
+	url = https://github.com/pt2710/MPL-TC.git

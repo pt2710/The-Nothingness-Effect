@@ -1,0 +1,34 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "device": "cpu",
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "generated_files": [
+    "pgqenn_contract_metrics.csv",
+    "pgqenn_prime_graph.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "b405532432e021cddbe08dc7e4d18293f8e674038a832cee70a10852738f7c36",
+  "parameters": {
+    "fixture": "prime-graph-v1",
+    "growth_mode": "mpl_tc_prime_motif",
+    "module": "pgqenn",
+    "mpl_tc_commit": "056e346824e9ec9785ab45b642b3b842c88f6e56",
+    "mpl_tc_module_sha256": "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9",
+    "node_count": 11
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts",
+  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.47745829820632935
+  ],
+  "seed": 0,
+  "theorem_complex_id": "dfi_elastic_prime_curvature_coupling"
+}

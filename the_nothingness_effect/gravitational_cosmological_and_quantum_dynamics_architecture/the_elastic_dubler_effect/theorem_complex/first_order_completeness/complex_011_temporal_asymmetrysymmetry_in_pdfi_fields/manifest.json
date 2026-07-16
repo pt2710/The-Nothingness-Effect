@@ -1,0 +1,105 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "temporal_asymmetry_symmetry_in_pdfi_fields",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_011_temporal_asymmetrysymmetry_in_pdfi_fields/1a/temporal_asymmetry_produces_a_calibrated_shift.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_011_temporal_asymmetrysymmetry_in_pdfi_fields/2a/temporal_symmetry_nullifies_the_calibrated_shift.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_011_temporal_asymmetrysymmetry_in_pdfi_fields/1a2a/complete_temporal_symmetry_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ed11_preserved_signed_asymmetry_1a2a",
+    "eq:ed11_asymmetry_norm_1a",
+    "eq:ed11_shift_iff_1a",
+    "eq:ed11_signed_cancellation_1a",
+    "eq:ed11_symmetric_null_2a",
+    "eq:ed11_temporal_status_1a2a",
+    "eq:ed11_temporal_projectors_1a2a",
+    "eq:ed11_temporal_closure_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_011_temporal_asymmetrysymmetry_in_pdfi_fields/falsification_checks/test_temporal_asymmetry_symmetry_in_pdfi_fields_falsification.py"
+  ],
+  "first_label": "ssec:ed11_temporal_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_effect",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py"
+  ],
+  "source_complex_id": "temporal_asymmetry_symmetry_in_pdfi_fields",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_the_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_011_temporal_asymmetrysymmetry_in_pdfi_fields/falsification_checks/test_temporal_asymmetry_symmetry_in_pdfi_fields_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Temporal Symmetry Classification",
+    "left": "Temporal Asymmetry Produces a Calibrated Shift",
+    "right": "Temporal Symmetry Nullifies the Calibrated Shift"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Temporal Symmetry Classification",
+    "left": "Temporal Asymmetry Produces a Calibrated Shift",
+    "right": "Temporal Symmetry Nullifies the Calibrated Shift"
+  }
+}

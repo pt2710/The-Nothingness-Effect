@@ -1,0 +1,21 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "lyapunov_parseval_training_isometry_closure",
+      "directory": "complex_001_lyapunovparseval_training_isometry_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_support_memory_field_closure",
+      "directory": "complex_002_paritysupport_memory_field_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "optimizer_stability_wedge_spatial_closure",
+      "directory": "complex_003_optimizer_stability_wedge_spatial_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/qenn"
+}

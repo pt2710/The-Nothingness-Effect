@@ -1,0 +1,123 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 11,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "global_symmetry_and_kd_charge_conservation",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/1a/global_entropic_flowpoint_phase_symmetry.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/2a/entropic_symmetry_kd_charge_conservation.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/1a2a/global_symmetrykd_charge_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:noether_global_predicate_1a",
+    "eq:noether_global_symmetry_1a",
+    "eq:completeness_synthesis_formal_31",
+    "eq:completeness_principle_formal_32",
+    "eq:noether_global_conservation_2a",
+    "eq:kd_conservation_appendix",
+    "eq:completeness_synthesis_formal_32",
+    "eq:completeness_principle_formal_33",
+    "eq:noether_global_joint_1a2a",
+    "eq:completeness_synthesis_formal_33",
+    "eq:completeness_principle_formal_34"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/falsification_checks/test_global_symmetry_and_kd_charge_conservation_falsification.py"
+  ],
+  "first_label": "app:noether_global_a_level_complex",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/1a/global_entropic_flowpoint_phase_symmetry.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/2a/entropic_symmetry_kd_charge_conservation.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/1a2a/global_symmetrykd_charge_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed finite source law with explicit obstruction status",
+      "name": "global_symmetry_and_kd_charge_conservation result",
+      "python_types": [
+        "CompletenessSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem/noether_structure",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation/simulate_noether_structure.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation/simulate_noether_tne.py"
+  ],
+  "source_complex_id": "global_symmetry_and_kd_charge_conservation",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/test/test_noether_structure.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/test/test_noether_tne.py",
+    "the_nothingness_effect/the_completeness_theorem/noether_structure/theorem_complex/first_order_completeness/complex_001_global_symmetry_and_kd_charge_conservation/falsification_checks/test_global_symmetry_and_kd_charge_conservation_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Global Symmetry–KD-Charge Equivalence",
+    "left": "Global Entropic Flowpoint-Phase Symmetry",
+    "right": "Entropic Symmetry KD-Charge Conservation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Global Symmetry--KD-Charge Equivalence",
+    "left": "Global Entropic Flowpoint-Phase Symmetry",
+    "right": "Entropic Symmetry \\(\\Longrightarrow\\) KD-Charge Conservation"
+  }
+}

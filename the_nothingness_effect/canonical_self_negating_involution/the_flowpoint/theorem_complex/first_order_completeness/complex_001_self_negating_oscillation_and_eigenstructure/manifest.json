@@ -1,0 +1,173 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 55,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "self_negating_oscillation_and_eigenstructure",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/1a/self_negating_oscillation.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/2a/flowpoint_involution_spectral_decomposition.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/1a2a/self_negating_oscillation_and_eigenstructure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_global_involution_1a2a",
+    "eq:flowpoint_global_self_adjointness_1a2a",
+    "eq:self_negating_flowpoint_sector_1a",
+    "eq:self_negating_flowpoint_orbit_definition_1a",
+    "eq:self_negating_flowpoint_orbit_recursion_definition_1a",
+    "eq:self_negating_flowpoint_oscillation_closed_form_1a",
+    "eq:self_negating_flowpoint_oscillation_periodicity_1a",
+    "eq:self_negating_flowpoint_two_state_orbit_1a",
+    "eq:fp_recursion_step_algebraic_1a",
+    "eq:fp_recursion_even_odd_1a",
+    "eq:flowpoint_harmonic_interpolation_1a",
+    "eq:flowpoint_harmonic_sampling_1a",
+    "eq:flowpoint_harmonic_ode_corrected_1a",
+    "eq:anti_invariant_flowpoint_equivalence_1a",
+    "eq:flowpoint_spectral_sectors_definition_2a",
+    "eq:flowpoint_canonical_projectors_definition_2a",
+    "eq:flowpoint_projected_components_definition_2a",
+    "eq:flowpoint_unique_spectral_decomposition_2a",
+    "eq:flowpoint_spectral_eigen_action_2a",
+    "eq:flowpoint_direct_sum_decomposition_2a",
+    "eq:flowpoint_spectrum_containment_2a",
+    "eq:flowpoint_orthogonal_spectral_decomposition_2a",
+    "eq:flowpoint_projector_idempotency_2a",
+    "eq:flowpoint_projector_annihilation_2a",
+    "eq:flowpoint_projector_partition_2a",
+    "eq:flowpoint_projector_eigen_action_2a",
+    "eq:flowpoint_projector_ranges_2a",
+    "eq:flowpoint_norm_decomposition_2a",
+    "eq:flowpoint_expectation_spectral_weights_2a",
+    "eq:flowpoint_operator_neutrality_2a",
+    "eq:spectral_flowpoint_principle_2a",
+    "eq:flowpoint_alternation_spectral_correspondence_definition_1a2a",
+    "eq:flowpoint_general_orbit_definition_1a2a",
+    "eq:flowpoint_parity_components_definition_1a2a",
+    "eq:flowpoint_hilbert_projectors_definition_1a2a",
+    "eq:flowpoint_oscillation_eigenstructure_projectors_algebraic_1a2a",
+    "eq:flowpoint_oscillation_eigenstructure_orbit_1a2a",
+    "eq:flowpoint_pure_self_negating_equivalence_1a2a",
+    "eq:flowpoint_pure_invariant_equivalence_1a2a",
+    "eq:flowpoint_period_dividing_two_1a2a",
+    "eq:flowpoint_exact_period_two_condition_1a2a",
+    "eq:flowpoint_parity_orbit_1a2a",
+    "eq:flowpoint_hilbert_orbit_1a2a",
+    "eq:flowpoint_joint_projector_algebra_1a2a",
+    "eq:flowpoint_joint_projector_action_1a2a",
+    "eq:flowpoint_component_recovery_1a2a",
+    "eq:flowpoint_joint_orthogonal_norm_split_1a2a",
+    "eq:flowpoint_joint_expectation_1a2a",
+    "eq:flowpoint_unitary_interpolation_1a2a",
+    "eq:flowpoint_unitary_sampling_1a2a",
+    "eq:flowpoint_interpolation_hamiltonian_1a2a",
+    "eq:flowpoint_joint_principle_involution_1a2a",
+    "eq:flowpoint_joint_principle_projectors_1a2a",
+    "eq:flowpoint_joint_principle_decomposition_1a2a",
+    "eq:flowpoint_joint_principle_orbit_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/falsification_checks/test_self_negating_oscillation_and_eigenstructure_falsification.py"
+  ],
+  "first_label": "subsec:flowpoint_oscillation_eigenstructure_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/a_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/1a/self_negating_oscillation.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/2a/flowpoint_involution_spectral_decomposition.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/1a2a/self_negating_oscillation_and_eigenstructure.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "finite value with source shape",
+      "name": "same numeric vector space",
+      "python_types": [
+        "int",
+        "float",
+        "complex",
+        "ndarray"
+      ]
+    },
+    "domain": {
+      "description": "finite numeric scalar or array",
+      "name": "non-Boolean numeric vector space",
+      "python_types": [
+        "int",
+        "float",
+        "complex",
+        "ndarray"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level._self_negating_invariant",
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint.canonical_involution",
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "self_negating_oscillation_and_eigenstructure",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/invariants/test_flowpoint_source_laws.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_001_self_negating_oscillation_and_eigenstructure/falsification_checks/test_self_negating_oscillation_and_eigenstructure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Self-Negating Oscillation and Eigenstructure",
+    "left": "Self-Negating Oscillation",
+    "right": "Flowpoint Involution Spectral Decomposition"
+  },
+  "theorem_titles_tex": {
+    "cross": "Self-Negating Oscillation and Eigenstructure \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Self-Negating Oscillation",
+    "right": "Flowpoint Involution Spectral Decomposition"
+  }
+}

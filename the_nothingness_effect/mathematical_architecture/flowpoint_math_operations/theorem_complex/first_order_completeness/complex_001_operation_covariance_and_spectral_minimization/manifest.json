@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "artifact_manifests": [
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/test/artifacts/manifest.json",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "operation_covariance_and_spectral_minimization",
+  "component_modules": [
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/1a/operation_specific_phase_covariance.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/2a/existence_and_conditional_uniqueness_of_spectral_minimizers.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/1a2a/covariant_minimized_operation_realization.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:fp_ops_operation_family_1a2a",
+    "eq:fm_alg_covariance_residual_1a",
+    "eq:fm_alg_covariance_criterion_1a",
+    "eq:fm_alg_parity_composition_1a",
+    "eq:fm_alg_trig_parity_1a",
+    "eq:fm_alg_covariance_synthesis_1a",
+    "eq:fm_alg_covariance_principle_1a",
+    "eq:fm_alg_minimizer_set_2a",
+    "eq:fm_alg_unique_minimizer_2a",
+    "eq:fm_alg_minimizer_transport_2a",
+    "eq:fm_alg_phase_fixed_optimizer_2a",
+    "eq:fm_alg_minimizer_synthesis_2a",
+    "eq:fm_alg_minimizer_principle_2a",
+    "eq:fm_alg_represented_operation_joint",
+    "eq:fm_alg_joint_intertwining",
+    "eq:fm_alg_operation_reconstruction_joint",
+    "eq:fm_alg_operation_certificate_joint",
+    "eq:fm_alg_joint_synthesis_1a2a",
+    "eq:fm_alg_joint_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/falsification_checks/test_operation_covariance_and_spectral_minimization_falsification.py"
+  ],
+  "first_label": "ssec:fm_alg_complex",
+  "implementation_modules": [
+    "the_nothingness_effect/mathematical_architecture/a_level.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/1a/operation_specific_phase_covariance.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/2a/existence_and_conditional_uniqueness_of_spectral_minimizers.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/1a2a/covariant_minimized_operation_realization.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "finite operation residual",
+      "name": "covariance result",
+      "python_types": [
+        "OperationCovarianceResult"
+      ]
+    },
+    "domain": {
+      "description": "callable and admitted operands",
+      "name": "typed partial operation",
+      "python_types": [
+        "OperationCovarianceInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.mathematical_architecture.a_level.operation_covariance",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.mathematical_architecture.a_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "mathematical_closure",
+  "owner_path": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/mathematical_architecture/simulation/run_suite.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation/simulate_flowpoint_math_operations.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation/simulate_fp_math_operations.py"
+  ],
+  "source_complex_id": "operation_covariance_and_spectral_minimization",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_mathematical_closure_contracts.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/test/test_flowpoint_math_operations.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/test/test_fp_math_operations.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/theorem_complex/first_order_completeness/complex_001_operation_covariance_and_spectral_minimization/falsification_checks/test_operation_covariance_and_spectral_minimization_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Covariant Minimized Operation Realization",
+    "left": "Operation-Specific Phase Covariance",
+    "right": "Existence and Conditional Uniqueness of Spectral Minimizers"
+  },
+  "theorem_titles_tex": {
+    "cross": "Covariant Minimized Operation Realization",
+    "left": "Operation-Specific Phase Covariance",
+    "right": "Existence and Conditional Uniqueness of Spectral Minimizers"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "wave_energy_quality_invariant",
+      "directory": "complex_001_wave_energy_quality_invariant",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "distance_corrected_harmonic_coupling",
+      "directory": "complex_002_distance_corrected_harmonic_coupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "flowpoint_resolved_dfi_memory_transfer",
+      "directory": "complex_003_flowpoint_resolved_dfi_memory_transfer",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "shock_gated_stochastic_tilt_production",
+      "directory": "complex_004_shock_gated_stochastic_tilt_production",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "environment_tomography_information_metric",
+      "directory": "complex_005_environment_tomography_information_metric",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts"
+}

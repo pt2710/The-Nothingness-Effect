@@ -1,0 +1,198 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 98,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "involutive_generator_word_closure_and_conjugacy",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_002_involutive_generator_word_closure_and_conjugacy/1b/dihedral_word_normal_form.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_002_involutive_generator_word_closure_and_conjugacy/2b/dihedral_orbit_normal_form.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_002_involutive_generator_word_closure_and_conjugacy/1b2b/generator_preserving_word_conjugacy.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:symmetric_closure_duality_symmetry_generators_1b2b",
+    "eq:symmetric_closure_duality_symmetry_generators_1a2a",
+    "eq:symmetric_closure_spatiality_flowpoint_generators_1b2b",
+    "eq:symmetric_closure_spatiality_flowpoint_generators_1a2a",
+    "eq:symmetric_closure_global_involution_assumptions_1b2b",
+    "eq:symmetric_closure_global_involution_assumptions_1a2a",
+    "eq:symmetric_closure_ds_generated_group_1b2b",
+    "eq:symmetric_closure_ds_generated_group_1a2a",
+    "eq:symmetric_closure_pf_generated_group_1b2b",
+    "eq:symmetric_closure_pf_generated_group_1a2a",
+    "eq:symmetric_closure_ds_word_monoid_1b2b",
+    "eq:symmetric_closure_ds_word_monoid_1a2a",
+    "eq:symmetric_closure_ds_evaluation_map_1b2b",
+    "eq:symmetric_closure_ds_evaluation_map_1a2a",
+    "eq:symmetric_closure_ds_evaluation_generators_1b2b",
+    "eq:symmetric_closure_ds_evaluation_generators_1a2a",
+    "eq:symmetric_closure_pf_word_monoid_1b2b",
+    "eq:symmetric_closure_pf_word_monoid_1a2a",
+    "eq:symmetric_closure_pf_evaluation_generators_1b2b",
+    "eq:symmetric_closure_pf_evaluation_generators_1a2a",
+    "eq:duality_symmetry_generated_closure_definition_1b",
+    "eq:duality_symmetry_generated_closure_definition_1a",
+    "eq:duality_symmetry_product_generator_1b",
+    "eq:duality_symmetry_product_generator_1a",
+    "eq:duality_symmetry_alternating_normal_form_1b",
+    "eq:duality_symmetry_alternating_normal_form_1a",
+    "eq:duality_symmetry_dihedral_relation_1b",
+    "eq:duality_symmetry_dihedral_relation_1a",
+    "eq:duality_symmetry_dihedral_quotient_1b",
+    "eq:duality_symmetry_dihedral_quotient_1a",
+    "eq:duality_symmetry_finite_order_bound_1b",
+    "eq:duality_symmetry_finite_order_bound_1a",
+    "eq:reduced_alternating_word_cancellations_1b",
+    "eq:reduced_alternating_word_cancellations_1a",
+    "eq:reduced_alternating_word_forms_1b",
+    "eq:reduced_alternating_word_forms_1a",
+    "eq:duality_symmetry_finite_family_1b",
+    "eq:duality_symmetry_finite_family_1a",
+    "eq:duality_symmetry_external_operation_boundary_1b",
+    "eq:duality_symmetry_external_operation_boundary_1a",
+    "eq:duality_symmetry_word_closure_synthesis_1b",
+    "eq:duality_symmetry_word_closure_synthesis_1a",
+    "eq:generator_relative_ds_principle_1b",
+    "eq:generator_relative_ds_principle_1a",
+    "eq:spatiality_flowpoint_orbit_definition_2b",
+    "eq:spatiality_flowpoint_orbit_definition_2a",
+    "eq:spatiality_flowpoint_invariant_subset_2b",
+    "eq:spatiality_flowpoint_invariant_subset_2a",
+    "eq:spatiality_flowpoint_product_generator_2b",
+    "eq:spatiality_flowpoint_product_generator_2a",
+    "eq:spatiality_flowpoint_orbit_normal_form_2b",
+    "eq:spatiality_flowpoint_orbit_normal_form_2a",
+    "eq:spatiality_flowpoint_finite_orbit_bound_2b",
+    "eq:spatiality_flowpoint_finite_orbit_bound_2a",
+    "eq:spatiality_flowpoint_orbit_relation_2b",
+    "eq:spatiality_flowpoint_orbit_relation_2a",
+    "eq:spatiality_flowpoint_orbit_minimality_2b",
+    "eq:spatiality_flowpoint_orbit_minimality_2a",
+    "eq:spatiality_flowpoint_stabilizer_2b",
+    "eq:spatiality_flowpoint_stabilizer_2a",
+    "eq:spatiality_flowpoint_orbit_stabilizer_2b",
+    "eq:spatiality_flowpoint_orbit_stabilizer_2a",
+    "eq:spatiality_flowpoint_orbit_quotient_2b",
+    "eq:spatiality_flowpoint_orbit_quotient_2a",
+    "eq:spatiality_flowpoint_reachability_synthesis_2b",
+    "eq:spatiality_flowpoint_reachability_synthesis_2a",
+    "eq:generator_relative_pf_principle_2b",
+    "eq:generator_relative_pf_principle_2a",
+    "eq:generator_paired_intertwiner_map_1b2b",
+    "eq:generator_paired_intertwiner_map_1a2a",
+    "eq:generator_paired_intertwining_relations_1b2b",
+    "eq:generator_paired_intertwining_relations_1a2a",
+    "eq:generator_paired_conjugacy_relations_1b2b",
+    "eq:generator_paired_conjugacy_relations_1a2a",
+    "eq:generator_paired_group_isomorphism_1b2b",
+    "eq:generator_paired_group_isomorphism_1a2a",
+    "eq:generator_paired_word_transport_1b2b",
+    "eq:generator_paired_word_transport_1a2a",
+    "eq:generator_paired_orbit_transport_1b2b",
+    "eq:generator_paired_orbit_transport_1a2a",
+    "eq:generator_paired_ds_orbit_definition_1b2b",
+    "eq:generator_paired_ds_orbit_definition_1a2a",
+    "eq:generator_paired_stabilizer_transport_1b2b",
+    "eq:generator_paired_stabilizer_transport_1a2a",
+    "eq:wordwise_intertwining_identity_1b2b",
+    "eq:wordwise_intertwining_identity_1a2a",
+    "eq:wordwise_graph_relation_definition_1b2b",
+    "eq:wordwise_graph_relation_definition_1a2a",
+    "eq:wordwise_graph_relation_transport_1b2b",
+    "eq:wordwise_graph_relation_transport_1a2a",
+    "eq:generator_paired_fixed_set_transport_1b2b",
+    "eq:generator_paired_fixed_set_transport_1a2a",
+    "eq:generator_paired_product_order_transport_1b2b",
+    "eq:generator_paired_product_order_transport_1a2a",
+    "eq:generator_paired_symmetric_closure_synthesis_1b2b",
+    "eq:generator_paired_symmetric_closure_synthesis_1a2a",
+    "eq:generator_preserving_symmetric_closure_principle_1b2b",
+    "eq:generator_preserving_symmetric_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_002_involutive_generator_word_closure_and_conjugacy/falsification_checks/test_involutive_generator_word_closure_and_conjugacy_falsification.py"
+  ],
+  "first_label": "app:symmetric_closure",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "symmetry",
+  "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py"
+  ],
+  "source_complex_id": "involutive_generator_word_closure_and_conjugacy",
+  "source_complex_ids": [
+    "reciprocal_relation_action_groupoid",
+    "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+    "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+    "self_negating_oscillation_and_eigenstructure"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_002_involutive_generator_word_closure_and_conjugacy/falsification_checks/test_involutive_generator_word_closure_and_conjugacy_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Generator-Preserving Word Conjugacy",
+    "left": "Dihedral Word Normal Form",
+    "right": "Dihedral Orbit Normal Form"
+  },
+  "theorem_titles_tex": {
+    "cross": "Generator-Preserving Word Conjugacy",
+    "left": "Dihedral Word Normal Form",
+    "right": "Dihedral Orbit Normal Form"
+  }
+}

@@ -1,0 +1,11 @@
+node,layer,family,activation,out_degree,in_degree
+QENN state,0,qenn,0.16688582616115624,1,0
+MPL-TC motifs,0,dependency,0.23838867026575622,1,0
+prime/parity router,1,prime,0.3253469533421453,2,2
+motif growth,2,growth,0.39268448571316206,1,1
+2-adic depth,2,prime,0.4584463137288202,1,1
+message passing,3,graph,0.5472756505202494,2,2
+pDFI gate,4,tne,0.6367820957439296,1,1
+Elastic-pi edges,4,tne,0.7067986798842865,1,1
+graph closure,5,closure,0.7574068072706133,1,2
+observation,6,output,0.8243518841123979,0,1

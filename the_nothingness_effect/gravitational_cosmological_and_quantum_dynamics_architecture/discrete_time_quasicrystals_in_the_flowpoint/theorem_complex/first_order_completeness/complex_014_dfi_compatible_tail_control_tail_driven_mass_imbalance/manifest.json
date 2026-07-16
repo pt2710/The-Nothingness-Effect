@@ -1,0 +1,136 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 26,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/1a/dfi_compatible_tail_control.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/2a/tail_driven_mass_imbalance.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/1a2a/dfi_compatible_tail_control_tail_driven_mass_imbalance.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc14_canonical_dfi_coupling",
+    "eq:dtqc14_ordered_tail_limit",
+    "eq:dfi_tail_purepoint_obs_1a",
+    "eq:dfi_tail_limit_zero_1a",
+    "eq:dfi_tail_monotone_1a",
+    "eq:dfi_weakstar_pp_1a",
+    "eq:dfi_ai_derivative_1a",
+    "eq:dfi_tail_vanish_conclude_1a",
+    "eq:dfi_parseval_dirac_only_1a",
+    "eq:dfi_cont_mass_bound_2a",
+    "eq:dfi_tail_lower_bound_2a",
+    "eq:dfi_tail_persistence_2a",
+    "eq:dfi_cont_survive_2a",
+    "eq:dfi_cont_derivative_2a",
+    "eq:dfi_mass_imbalance_2a",
+    "eq:dtqc14_joint_status_1a2a",
+    "eq:dfi_support_def_1a2a",
+    "eq:dfi_mu_spec_def_1a2a",
+    "eq:dfi_window_conv_1a2a",
+    "eq:dfi_masses_def_1a2a",
+    "eq:dfi_parseval_mass_1a2a",
+    "eq:dfi_tail_mass_def_1a2a",
+    "eq:dfi_ai_limit_spec_1a2a",
+    "eq:dfi_tail_derivative_1a2a",
+    "eq:dfi_equivalence_statement_1a2a",
+    "eq:dfi_binary_cert_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/falsification_checks/test_dfi_compatible_tail_control_tail_driven_mass_imbalance_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_14",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/1a/dfi_compatible_tail_control.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/2a/tail_driven_mass_imbalance.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/1a2a/dfi_compatible_tail_control_tail_driven_mass_imbalance.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fail-closed typed contract result",
+      "name": "dfi_compatible_tail_control_tail_driven_mass_imbalance result",
+      "python_types": [
+        "ContractResult"
+      ]
+    },
+    "domain": {
+      "description": "typed recertified source-law input",
+      "name": "dfi_compatible_tail_control_tail_driven_mass_imbalance input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts.evaluate_dfi_compatible_tail_control",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_014_dfi_compatible_tail_control_tail_driven_mass_imbalance/falsification_checks/test_dfi_compatible_tail_control_tail_driven_mass_imbalance_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "DFI-Compatible Tail Control <-> Tail-Driven Mass Imbalance",
+    "left": "DFI-Compatible Tail Control",
+    "right": "Tail-Driven Mass Imbalance"
+  },
+  "theorem_titles_tex": {
+    "cross": "DFI-Compatible Tail Control $\\leftrightarrow$ Tail-Driven Mass Imbalance",
+    "left": "DFI-Compatible Tail Control",
+    "right": "Tail-Driven Mass Imbalance"
+  }
+}

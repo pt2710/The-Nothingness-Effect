@@ -1,0 +1,124 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "wave_energy_quality_invariant",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/1b/wave_energy_quality_invariant_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/2b/wave_energy_quality_invariant_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/1b2b/complete_wave_energy_quality_invariant_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_grw_b01_product_carrier",
+    "eq:drv_grw_b01_1b",
+    "eq:drv_grw_b01_theorem_1b",
+    "eq:drv_grw_b01_res_1b",
+    "eq:drv_grw_b01_2b",
+    "eq:drv_grw_b01_theorem_2b",
+    "eq:drv_grw_b01_res_2b",
+    "eq:drv_grw_b01_joint",
+    "eq:drv_grw_b01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/falsification_checks/test_wave_energy_quality_invariant_falsification.py"
+  ],
+  "first_label": "app:drv_grw_b01",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/1b/wave_energy_quality_invariant_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/2b/wave_energy_quality_invariant_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/1b2b/complete_wave_energy_quality_invariant_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine bilinear two-source response",
+      "name": "wave_energy_quality_invariant interaction",
+      "python_types": [
+        "DerivedFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "wave_energy_quality_invariant",
+  "source_complex_ids": [
+    "elastic_e_ripple_propagation_gr_linear_wave_recovery",
+    "entropic_q_factor_suppression_conserved_ringdown_quality"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/second_order_completeness/complex_001_wave_energy_quality_invariant/falsification_checks/test_wave_energy_quality_invariant_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Wave-Energy Quality Invariant Classification",
+    "left": "Wave-Energy Quality Invariant Law",
+    "right": "Wave-Energy Quality Invariant Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Wave-Energy Quality Invariant Classification",
+    "left": "Wave-Energy Quality Invariant Law",
+    "right": "Wave-Energy Quality Invariant Failure Law"
+  }
+}

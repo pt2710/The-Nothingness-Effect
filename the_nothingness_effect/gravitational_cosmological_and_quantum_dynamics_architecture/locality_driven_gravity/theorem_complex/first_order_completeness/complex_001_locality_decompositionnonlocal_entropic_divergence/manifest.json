@@ -1,0 +1,141 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 30,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "locality_decomposition_nonlocal_entropic_divergence",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/1a/locality_decomposition_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/2a/nonlocal_entropic_divergence_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/1a2a/locality_decomposition_nonlocal_entropic_divergence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ldg01_locality_decomposition_order_parameter_1a",
+    "eq:ldg01_locality_decomposition_branch_condition_1a",
+    "eq:locality_decomposition_sum_1a",
+    "eq:locality_length_formula_1a",
+    "eq:locality_length_lemma_1a",
+    "eq:locality_gradient_derivative_1a",
+    "eq:cross_exponential_decay_1a",
+    "eq:proof_calculus_decay_1a",
+    "eq:spiral_pitch_law_1a",
+    "eq:spiral_pitch_derivative_1a",
+    "eq:ldg01_locality_decomposition_order_parameter_2a",
+    "eq:ldg01_locality_decomposition_branch_condition_2a",
+    "eq:nonlocal_curvature_2a",
+    "eq:nonlocal_calculus_flat_2a",
+    "eq:global_collapse_flat_2a",
+    "eq:collapse_grad_vanish_2a",
+    "eq:nonlocal_constant_integral_2a",
+    "eq:proof_flat_grad_2a",
+    "eq:pattern_loss_algebraic_2a",
+    "eq:pattern_loss_calculus_2a",
+    "eq:ldg01_locality_decomposition_status_1a2a",
+    "eq:locality_decomposition_sum_1a2a",
+    "eq:nonlocal_entropic_integral_1a2a",
+    "eq:locality_length_formula_1a2a",
+    "eq:global_flatness_limit_1a2a",
+    "eq:locality_limit_lemma_1a2a",
+    "eq:locality_limit_calculus_1a2a",
+    "eq:locality_nonlocality_proof_calculus_1a2a",
+    "eq:survival_loss_algebraic_1a2a",
+    "eq:survival_loss_calculus_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/falsification_checks/test_locality_decomposition_nonlocal_entropic_divergence_falsification.py"
+  ],
+  "first_label": "ssec:locality_decomposition_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/1a/locality_decomposition_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/2a/nonlocal_entropic_divergence_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/1a2a/locality_decomposition_nonlocal_entropic_divergence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "locality_decomposition field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "locality_decomposition_nonlocal_entropic_divergence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_001_locality_decompositionnonlocal_entropic_divergence/falsification_checks/test_locality_decomposition_nonlocal_entropic_divergence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Locality Decomposition <-> Nonlocal Entropic Divergence",
+    "left": "Locality Decomposition Theorem",
+    "right": "Nonlocal Entropic Divergence Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Locality Decomposition $\\leftrightarrow$ Nonlocal Entropic Divergence",
+    "left": "Locality Decomposition Theorem",
+    "right": "Nonlocal Entropic Divergence Theorem"
+  }
+}

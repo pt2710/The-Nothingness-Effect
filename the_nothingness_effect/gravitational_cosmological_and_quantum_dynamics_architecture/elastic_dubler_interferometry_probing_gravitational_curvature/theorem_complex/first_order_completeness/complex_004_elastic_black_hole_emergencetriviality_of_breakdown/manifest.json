@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 20,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/1a/elastic_black_hole_emergence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/2a/triviality_of_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/1a2a/elastic_black_hole_emergence_triviality_of_breakdown.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:edi04_black_hole_emergence_order_parameter_1a",
+    "eq:edi04_black_hole_emergence_branch_condition_1a",
+    "eq:elastic_black_invertible_patch_1a",
+    "eq:elastic_black_surface_balance_1a",
+    "eq:elastic_black_inverse_function_1a",
+    "eq:elastic_black_stability_1a",
+    "eq:elastic_black_indicator_1a",
+    "eq:elastic_black_horizon_stability_1a",
+    "eq:edi04_black_hole_emergence_order_parameter_2a",
+    "eq:edi04_black_hole_emergence_branch_condition_2a",
+    "eq:trivial_breakdown_noninvertible_2a",
+    "eq:trivial_breakdown_identity_logic_2a",
+    "eq:edi04_black_hole_emergence_status_1a2a",
+    "eq:elastic_black_map_def_1a2a",
+    "eq:elastic_black_horizon_cond_1a2a",
+    "eq:elastic_black_trivial_cond_1a2a",
+    "eq:elastic_black_euler_1a2a",
+    "eq:elastic_black_dual_condition_1a2a",
+    "eq:elastic_black_joint_logic_1a2a",
+    "eq:elastic_black_false_positive_rate_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/falsification_checks/test_elastic_dubler_interferometry_elastic_black_hole_emergence_triviality_of_breakdown_falsification.py"
+  ],
+  "first_label": "ssec:elastic_black_hole_emergence_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/1a/elastic_black_hole_emergence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/2a/triviality_of_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/1a2a/elastic_black_hole_emergence_triviality_of_breakdown.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "horizon_response field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "elastic_black_hole_emergence_triviality_of_breakdown",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_004_elastic_black_hole_emergencetriviality_of_breakdown/falsification_checks/test_elastic_dubler_interferometry_elastic_black_hole_emergence_triviality_of_breakdown_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic Black Hole Emergence <-> Triviality of Breakdown",
+    "left": "Elastic Black Hole Emergence",
+    "right": "Triviality of Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic Black Hole Emergence $\\leftrightarrow$ Triviality of Breakdown",
+    "left": "Elastic Black Hole Emergence",
+    "right": "Triviality of Breakdown"
+  }
+}

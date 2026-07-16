@@ -7,13 +7,10 @@ Defines the synthetic 4-cylinder engine model with dynamic thermodynamic feature
 """
 
 import os
-import sys
 import numpy as np
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.abspath(os.path.join(current_dir, '..', '..'))
-sys.path.insert(0, project_root)
-
 def thermal_motor_parts(time_array, element_scaling_factor):
     """
     Build a dictionary modeling a 4-cylinder engine setup with 4 cylinders, 4 pistons, and 1 crankshaft.

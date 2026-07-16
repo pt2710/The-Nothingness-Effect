@@ -1,0 +1,32 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "device": "cpu",
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "generated_files": [
+    "soinets_contract_metrics.csv",
+    "soinets_spatial_closure.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "f94dd3cfa01d5fbbc7f345b6148c0d5063d425fa9f9c6f4e8e16d65ad0c520b0",
+  "parameters": {
+    "fixture": "modality-field-v1",
+    "modality_count": 3,
+    "module": "soinets",
+    "spatial_samples": 18
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/soinets/simulation",
+  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    6.389484405517578
+  ],
+  "seed": 0,
+  "theorem_complex_id": "motif_spectral_dual_regularity_law_for_soinets"
+}

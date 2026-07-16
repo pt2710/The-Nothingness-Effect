@@ -1,0 +1,124 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 13,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/1a/pdfi_meta_observation_in_parity_structured_systems.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/2a/collapse_of_meta_observation_via_parity_breakdown.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/1a2a/joint_domain_principle_for_pdfi_driven_meta_observation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:pdfi04_observation_handoff_1a2a",
+    "eq:meta_pDFI_def_1a2a",
+    "eq:meta_pDFI_full_1a",
+    "eq:pdfi04_meta_telescoping_1a",
+    "eq:meta_pDFI_continuous_1a",
+    "eq:pdfi04_synthesis_1a",
+    "eq:pdfi04_meta_omitted_residual_2a",
+    "eq:meta_pDFI_zero_2a",
+    "eq:lemma_no_injective_meta_2a",
+    "eq:pdfi04_synthesis_2a",
+    "eq:pdfi04_status_set_1a2a",
+    "eq:lemma_meta_probabilistic_1a2a",
+    "eq:pdfi04_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/falsification_checks/test_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown_falsification.py"
+  ],
+  "first_label": "ssec:dual_closure_principle_pdfi_metaobservation_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/1a/pdfi_meta_observation_in_parity_structured_systems.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/2a/collapse_of_meta_observation_via_parity_breakdown.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/1a2a/joint_domain_principle_for_pdfi_driven_meta_observation.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed pDFI source-law result",
+      "name": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown output",
+      "python_types": [
+        "MetaObservationLaw"
+      ]
+    },
+    "domain": {
+      "description": "integer trajectory, nonzero predecessors, positive recurrence seed and K_D",
+      "name": "pDFI realization",
+      "python_types": [
+        "ParityDFIInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.observation_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pdfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pdfi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_parity_adapted_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_004_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown/falsification_checks/test_pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Joint Domain Principle for pDFI-Driven Meta-Observation",
+    "left": "pDFI Meta-Observation in Parity-Structured Systems",
+    "right": "Collapse of Meta-Observation via Parity Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Joint Domain Principle for pDFI-Driven Meta-Observation",
+    "left": "pDFI Meta-Observation in Parity-Structured Systems",
+    "right": "Collapse of Meta-Observation via Parity Breakdown"
+  }
+}

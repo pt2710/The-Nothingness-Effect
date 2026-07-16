@@ -1,0 +1,21 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "spectrum_flowpoint_addressability_and_unaddressability",
+      "directory": "complex_001_spectrumflowpoint_addressability_and_unaddressability",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "metric_deformation_robustness_and_deformation_fragility",
+      "directory": "complex_002_metric_deformation_robustness_and_deformation_fragility",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "2_adic_history_accessibility_and_frozen_accessibility",
+      "directory": "complex_003_2_adic_history_accessibility_and_frozen_accessibility",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities"
+}

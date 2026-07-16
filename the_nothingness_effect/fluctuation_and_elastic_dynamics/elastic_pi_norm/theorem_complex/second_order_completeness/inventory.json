@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "weighted_path_ratio_regularity_functional",
+      "directory": "complex_001_weighted_path_ratio_regularity_functional",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "entropy_pdfi_calibrated_norm_residual",
+      "directory": "complex_002_entropypdfi_calibrated_norm_residual",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm"
+}

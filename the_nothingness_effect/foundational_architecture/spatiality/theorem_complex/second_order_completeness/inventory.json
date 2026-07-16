@@ -1,0 +1,21 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization",
+      "directory": "complex_001_cyclic_square_root_lifting_and_phase_anchored_dihedralization",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "orbit_harmonic_phase_resolution",
+      "directory": "complex_002_orbit_harmonic_phase_resolution",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "involution_to_chord_linearization",
+      "directory": "complex_003_involution_to_chord_linearization",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/spatiality"
+}

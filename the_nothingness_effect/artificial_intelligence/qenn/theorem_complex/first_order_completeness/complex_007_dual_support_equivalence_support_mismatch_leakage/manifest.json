@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "qenn::dual_support_equivalence_support_mismatch_leakage",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_007_dual_support_equivalence_support_mismatch_leakage/1a/dual_support_equality.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_007_dual_support_equivalence_support_mismatch_leakage/2a/qenn_07_support_mismatch_leakage.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_007_dual_support_equivalence_support_mismatch_leakage/1a2a/qenn_07_dual_support_equivalence_support_mismatch_leakage.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dual_support_equality_algebraic_align_1a",
+    "eq:dual_support_equality_algebraic_equation_1a",
+    "eq:dual_support_equality_calculus_align_1a",
+    "eq:dual_support_equality_calculus_equation_1a",
+    "eq:window_convolution_concentration_algebraic_align_1a",
+    "eq:window_convolution_concentration_algebraic_equation_1a",
+    "eq:window_convolution_concentration_calculus_align_1a",
+    "eq:window_convolution_concentration_calculus_equation_1a",
+    "eq:support_convergence_algebraic_align_1a",
+    "eq:support_convergence_algebraic_equation_1a",
+    "eq:support_convergence_calculus_align_1a",
+    "eq:support_convergence_calculus_equation_1a",
+    "eq:pv_stationarity_algebraic_align_1a",
+    "eq:pv_stationarity_algebraic_equation_1a",
+    "eq:pv_stationarity_calculus_align_1a",
+    "eq:pv_stationarity_calculus_equation_1a",
+    "eq:support_mismatch_algebraic_align_2a",
+    "eq:support_mismatch_algebraic_equation_2a",
+    "eq:support_mismatch_calculus_align_2a",
+    "eq:support_mismatch_calculus_equation_2a",
+    "eq:drift_sidebanding_algebraic_align_2a",
+    "eq:drift_sidebanding_algebraic_equation_2a",
+    "eq:drift_sidebanding_calculus_align_2a",
+    "eq:drift_sidebanding_calculus_equation_2a",
+    "eq:contrapositive_dual_equality_algebraic_align_2a",
+    "eq:contrapositive_dual_equality_algebraic_equation_2a",
+    "eq:contrapositive_dual_equality_calculus_align_2a",
+    "eq:contrapositive_dual_equality_calculus_equation_2a",
+    "eq:parity_breaking_algebraic_align_2a",
+    "eq:parity_breaking_algebraic_equation_2a",
+    "eq:parity_breaking_calculus_align_2a",
+    "eq:parity_breaking_calculus_equation_2a",
+    "eq:dual_support_equivalence_algebraic_align_1a2a",
+    "eq:dual_support_equivalence_algebraic_equation_1a2a",
+    "eq:dual_support_equivalence_calculus_align_1a2a",
+    "eq:dual_support_equivalence_calculus_equation_1a2a",
+    "eq:window_deconvolution_equivalence_algebraic_align_1a2a",
+    "eq:window_deconvolution_equivalence_algebraic_equation_1a2a",
+    "eq:window_deconvolution_equivalence_calculus_align_1a2a",
+    "eq:window_deconvolution_equivalence_calculus_equation_1a2a",
+    "eq:dual_equivalence_via_limits_algebraic_align_1a2a",
+    "eq:dual_equivalence_via_limits_algebraic_equation_1a2a",
+    "eq:dual_equivalence_via_limits_calculus_align_1a2a",
+    "eq:dual_equivalence_via_limits_calculus_equation_1a2a",
+    "eq:golden_test_dual_closure_algebraic_align_1a2a",
+    "eq:golden_test_dual_closure_algebraic_equation_1a2a",
+    "eq:golden_test_dual_closure_calculus_align_1a2a",
+    "eq:golden_test_dual_closure_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_007_dual_support_equivalence_support_mismatch_leakage/falsification_checks/test_qenn_dual_support_equivalence_support_mismatch_leakage_falsification.py"
+  ],
+  "first_label": "app:qenn_complex_07",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "dual_support_equivalence_support_mismatch_leakage",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_007_dual_support_equivalence_support_mismatch_leakage/falsification_checks/test_qenn_dual_support_equivalence_support_mismatch_leakage_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "QENN 07 – Dual Support Equivalence <-> Support Mismatch/Leakage",
+    "left": "Dual Support Equality",
+    "right": "QENN 07 – Support Mismatch/Leakage"
+  },
+  "theorem_titles_tex": {
+    "cross": "QENN 07 -- Dual Support Equivalence $\\leftrightarrow$ Support Mismatch/Leakage",
+    "left": "Dual Support Equality (1A)",
+    "right": "QENN 07 -- Support Mismatch/Leakage"
+  }
+}

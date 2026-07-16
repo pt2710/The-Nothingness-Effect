@@ -1,19 +1,19 @@
 {
   "benchmark_paths": {
-    "data": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_theoretical_benchmark_data.csv",
-    "evaporation_time_s": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_evaporation_timescale_vs_mass.png",
-    "metadata": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_theoretical_benchmark_metadata.json",
-    "metrics": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_theoretical_benchmark_metrics.csv",
-    "power_W": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_power_vs_mass.png",
-    "spectrum": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_normalized_spectrum.png",
-    "temperature_K": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\simulation\\hawking_temperature_vs_mass.png"
+    "data": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_theoretical_benchmark_data.csv",
+    "evaporation_time_s": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_evaporation_timescale_vs_mass.png",
+    "metadata": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_theoretical_benchmark_metadata.json",
+    "metrics": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_theoretical_benchmark_metrics.csv",
+    "power_W": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_power_vs_mass.png",
+    "spectrum": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_normalized_spectrum.png",
+    "temperature_K": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/hawking_temperature_vs_mass.png"
   },
   "claim_boundary": "fixture-backed comparison; empirical comparison pipeline; not an empirical validation claim; not a formal proof substitute",
   "comparison": "hawking_like_flux",
-  "comparison_manifest": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\comparison\\tne_vs_hawking_manifest.json",
-  "comparison_report": "C:\\Users\\PT-Xb\\Desktop\\Arbejde_og_Udvikling_af_Machine_learning_og_software\\the_nothingness_effect\\theoretical_benchmarks\\hawking\\comparison\\tne_vs_hawking_report.md",
+  "comparison_manifest": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/tne_vs_hawking_manifest.json",
+  "comparison_report": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking/simulation/theoretical_benchmarks/tne_vs_hawking_report.md",
   "compatibility_figure": "empirical/outputs/figures/hawking_like_flux_comparison.png",
   "data_status": "theoretical_benchmark",
   "deprecated": true,
-  "redirected_to": "theoretical_benchmarks/hawking"
+  "redirected_to": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/hawking"
 }

@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 34,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_006_flowpoint_boundary_mode_conversionpure_mode_propagation/1a/flowpoint_boundary_mode_conversion.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_006_flowpoint_boundary_mode_conversionpure_mode_propagation/2a/pure_mode_propagation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_006_flowpoint_boundary_mode_conversionpure_mode_propagation/1a2a/flowpoint_boundary_mode_conversion_pure_mode_propagation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw06_mode_conversion_order_parameter_1a",
+    "eq:grw06_mode_conversion_branch_condition_1a",
+    "eq:scattering_matrix_1a",
+    "eq:conversion_coefficients_1a",
+    "eq:power_balance_1a",
+    "eq:mode_power_rate_1a",
+    "eq:monotonicity_probability_1a",
+    "eq:monotonicity_derivative_1a",
+    "eq:dyson_series_1a",
+    "eq:nonzero_Sji_1a",
+    "eq:two_mode_system_1a",
+    "eq:polarization_arcs_1a",
+    "eq:arc_derivative_1a",
+    "eq:grw06_mode_conversion_order_parameter_2a",
+    "eq:grw06_mode_conversion_branch_condition_2a",
+    "eq:pure_mode_power_constancy_2a",
+    "eq:diagonal_S_2a",
+    "eq:two_mode_constancy_2a",
+    "eq:proof_diagonal_2a",
+    "eq:zero_amplitude_2a",
+    "eq:discriminant_2a",
+    "eq:disc_constancy_2a",
+    "eq:grw06_mode_conversion_status_1a2a",
+    "eq:flowpoint_evolution_1a2a",
+    "eq:flowpoint_conversion_operator_1a2a",
+    "eq:pure_mode_limit_1a2a",
+    "eq:born_amplitude_1a2a",
+    "eq:conversion_probability_1a2a",
+    "eq:dual_diagnostic_1a2a",
+    "eq:angular_integral_1a2a",
+    "eq:switching_kernel_1a2a",
+    "eq:gate_derivative_1a2a",
+    "eq:global_discriminant_1a2a",
+    "eq:disc_derivative_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_006_flowpoint_boundary_mode_conversionpure_mode_propagation/falsification_checks/test_flowpoint_boundary_mode_conversion_pure_mode_propagation_falsification.py"
+  ],
+  "first_label": "ssec:flowpoint_mode_conversion_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_006_flowpoint_boundary_mode_conversionpure_mode_propagation/falsification_checks/test_flowpoint_boundary_mode_conversion_pure_mode_propagation_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Flowpoint Boundary Mode Conversion <-> Pure-Mode Propagation",
+    "left": "Flowpoint Boundary Mode Conversion",
+    "right": "Pure-Mode Propagation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Flowpoint Boundary Mode Conversion $\\leftrightarrow$ Pure-Mode Propagation",
+    "left": "Flowpoint Boundary Mode Conversion",
+    "right": "Pure-Mode Propagation"
+  }
+}

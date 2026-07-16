@@ -1,0 +1,133 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 23,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/1a/floquet_free_robustness.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/2a/disorder_reliant_stability.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/1a2a/floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc12_typed_disorder_coupling",
+    "eq:atomic_support_1a",
+    "eq:parseval_stationary_point_1a",
+    "eq:w_mn_drift_1a",
+    "eq:drift_bound_1a",
+    "eq:point_masses_1a",
+    "eq:parseval_orthogonality_1a",
+    "eq:low_disorder_quadratic_1a",
+    "eq:disorder_tuned_zero_2a",
+    "eq:continuous_or_mismatch_2a",
+    "eq:threshold_derivative_2a",
+    "eq:spectral_split_2a",
+    "eq:test_function_witness_2a",
+    "eq:classification_threshold_2a",
+    "eq:dtqc12_joint_status_1a2a",
+    "eq:coeff_def_floquet_free_1a2a",
+    "eq:spec_measure_def_floquet_free_1a2a",
+    "eq:two_adic_criterionicity_floquet_free_1a2a",
+    "eq:energy_mismatch_floquet_free_1a2a",
+    "eq:parseval_and_stationarity_floquet_free_1a2a",
+    "eq:joint_equivalence_1a2a",
+    "eq:intrinsic_case_1a2a",
+    "eq:disorder_case_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/falsification_checks/test_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_12",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/1a/floquet_free_robustness.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/2a/disorder_reliant_stability.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/1a2a/floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fail-closed typed contract result",
+      "name": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability result",
+      "python_types": [
+        "ContractResult"
+      ]
+    },
+    "domain": {
+      "description": "typed recertified source-law input",
+      "name": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts.evaluate_floquet_free_robustness",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_012_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability/falsification_checks/test_floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Floquet-Free Robustness (Dual 2-Adic Criterionicity) <-> Disorder-Reliant Stability",
+    "left": "Floquet-Free Robustness",
+    "right": "Disorder-Reliant Stability"
+  },
+  "theorem_titles_tex": {
+    "cross": "Floquet-Free Robustness (Dual 2-Adic Criterionicity) $\\leftrightarrow$ Disorder-Reliant Stability",
+    "left": "Floquet-Free Robustness (1A)",
+    "right": "Disorder-Reliant Stability (2A)"
+  }
+}

@@ -15,8 +15,8 @@ import numpy as np
 
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle, rmse
-from equations.artifact_io import save_figure
-from equations.locality_driven_gravity.locality_driven_gravity import (
+from the_nothingness_effect._runtime.artifacts.io import save_figure
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.locality_driven_gravity import (
     LocalityGravityParams,
     compute_spiral_metrics,
     radial_velocity_profile,

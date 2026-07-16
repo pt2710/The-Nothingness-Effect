@@ -1,0 +1,184 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 74,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "involutive_duality_c_2_action",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/1a/dualityc_2_category_equivalence.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/2a/free_flowpoint_representation_and_canonical_presentation.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/1a2a/category_equivalencefree_presentation_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:duality_category_c2_definition_1a2a",
+    "eq:duality_category_invdual_category_1a2a",
+    "eq:duality_category_invdual_object_1a2a",
+    "eq:duality_category_invdual_morphism_1a2a",
+    "eq:duality_category_involution_preserving_morphism_1a2a",
+    "eq:duality_category_c2set_category_1a2a",
+    "eq:duality_category_functor_category_form_1a2a",
+    "eq:duality_category_equivalence_functor_definition_1a",
+    "eq:duality_category_action_from_involution_1a",
+    "eq:duality_category_equivalence_functor_morphism_1a",
+    "eq:duality_category_reconstruction_functor_definition_1a",
+    "eq:duality_category_involution_from_action_1a",
+    "eq:duality_category_reconstruction_functor_morphism_1a",
+    "eq:duality_category_inverse_functors_invdual_1a",
+    "eq:duality_category_inverse_functors_c2set_1a",
+    "eq:duality_category_isomorphism_1a",
+    "eq:duality_category_morphism_involution_condition_1a",
+    "eq:duality_category_morphism_equivariance_condition_1a",
+    "eq:duality_category_action_identity_proof_1a",
+    "eq:duality_category_action_composition_proof_1a",
+    "eq:duality_category_invdual_endofunctor_1a",
+    "eq:duality_category_transported_functor_1a",
+    "eq:duality_category_recovered_functor_1a",
+    "eq:involutive_duality_c2_action_synthesis_1a",
+    "eq:c2_action_involution_recovery_synthesis_1a",
+    "eq:categorical_c2_realization_principle_1a",
+    "eq:regular_flowpoint_object_definition_2a",
+    "eq:regular_flowpoint_left_action_2a",
+    "eq:regular_flowpoint_involution_form_2a",
+    "eq:free_flowpoint_forgetful_functor_2a",
+    "eq:free_flowpoint_unique_map_2a",
+    "eq:free_flowpoint_generator_image_2a",
+    "eq:free_flowpoint_map_formula_2a",
+    "eq:free_flowpoint_representing_bijection_2a",
+    "eq:free_c2set_functor_2a",
+    "eq:free_c2set_object_2a",
+    "eq:free_c2set_action_2a",
+    "eq:free_forgetful_adjunction_2a",
+    "eq:free_forgetful_adjunction_bijection_2a",
+    "eq:free_flowpoint_canonical_presentation_2a",
+    "eq:regular_flowpoint_evaluation_map_2a",
+    "eq:regular_flowpoint_evaluation_inverse_2a",
+    "eq:regular_flowpoint_involution_map_2a",
+    "eq:free_c2set_extension_formula_proof_2a",
+    "eq:free_involutive_duality_object_2a",
+    "eq:free_involutive_duality_map_2a",
+    "eq:free_involutive_duality_extension_2a",
+    "eq:free_involutive_duality_extension_formula_2a",
+    "eq:free_involutive_duality_canonical_presentation_2a",
+    "eq:free_flowpoint_generation_synthesis_2a",
+    "eq:free_flowpoint_extension_synthesis_2a",
+    "eq:free_flowpoint_universal_property_principle_2a",
+    "eq:free_flowpoint_adjunction_principle_2a",
+    "eq:joint_category_equivalence_forgetful_intertwining_1a2a",
+    "eq:joint_category_equivalence_free_intertwining_1a2a",
+    "eq:joint_invdual_free_forgetful_adjunction_1a2a",
+    "eq:joint_c2set_free_forgetful_adjunction_1a2a",
+    "eq:joint_category_equivalence_canonical_presentation_1a2a",
+    "eq:joint_category_equivalence_presentation_formula_1a2a",
+    "eq:joint_free_presentation_morphism_1a2a",
+    "eq:joint_free_presentation_naturality_1a2a",
+    "eq:joint_free_presentation_naturality_elementwise_1a2a",
+    "eq:joint_category_equivalence_action_groupoid_1a2a",
+    "eq:joint_category_equivalence_groupoid_functor_1a2a",
+    "eq:joint_category_equivalence_groupoid_arrow_map_1a2a",
+    "eq:joint_category_equivalence_synthesis_structural_1a2a",
+    "eq:joint_category_equivalence_synthesis_operational_1a2a",
+    "eq:joint_category_equivalence_synthesis_presentation_1a2a",
+    "eq:categorical_flowpoint_dual_closure_equivalence_1a2a",
+    "eq:categorical_flowpoint_dual_closure_adjunction_1a2a",
+    "eq:categorical_flowpoint_dual_closure_generator_1a2a",
+    "eq:categorical_flowpoint_dual_closure_presentation_1a2a",
+    "eq:categorical_flowpoint_dual_closure_1a_identity_1a2a",
+    "eq:categorical_flowpoint_dual_closure_2a_identity_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/falsification_checks/test_involutive_duality_c_2_action_falsification.py"
+  ],
+  "first_label": "app:duality_category_equiv",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/a_level.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/1a/dualityc_2_category_equivalence.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/2a/free_flowpoint_representation_and_canonical_presentation.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/1a2a/category_equivalencefree_presentation_duality.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "identity and nontrivial involution actions",
+      "name": "C2 action",
+      "python_types": [
+        "C2ActionResult"
+      ]
+    },
+    "domain": {
+      "description": "finite C2 carrier",
+      "name": "finite involution",
+      "python_types": [
+        "FiniteInvolution"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.foundational_architecture.duality.duality.involutive_c2_action",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.foundational_architecture.duality.a_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/run_suite.py",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "involutive_duality_c_2_action",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_duality_contracts.py",
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_003_involutive_dualityc_2_action/falsification_checks/test_involutive_duality_c_2_action_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Category Equivalence–Free Presentation Duality",
+    "left": "Duality–C_2 Category Equivalence",
+    "right": "Free Flowpoint Representation and Canonical Presentation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Category Equivalence--Free Presentation Duality",
+    "left": "Duality--\\(C_2\\) Category Equivalence",
+    "right": "Free Flowpoint Representation and Canonical Presentation"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 52,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "affine_history_field",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/1c/affine_realization_of_scheduled_spectral_history.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/2c/exact_recovery_of_balance_center_amplitude_and_history.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/1c2c/exact_affine_historyfield_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_flowpoint_c01_interface_data",
+    "eq:drv_flowpoint_c01_balance_internal_map",
+    "eq:drv_flowpoint_c01_balance_internal_inverse",
+    "eq:drv_flowpoint_c01_internal_affine_reflection",
+    "eq:drv_flowpoint_c01_spatial_involution",
+    "eq:drv_flowpoint_c01_spatial_center",
+    "eq:drv_flowpoint_c01_field_type_1c",
+    "eq:drv_flowpoint_c01_field_definition_1c",
+    "eq:drv_flowpoint_c01_anchor_zero_1c",
+    "eq:drv_flowpoint_c01_anchor_one_1c",
+    "eq:drv_flowpoint_c01_field_states_1c",
+    "eq:drv_flowpoint_c01_field_transport_1c",
+    "eq:drv_flowpoint_c01_field_balance_1c",
+    "eq:drv_flowpoint_c01_complement_reflection_1c",
+    "eq:drv_flowpoint_c01_spatial_involution_law_1c",
+    "eq:drv_flowpoint_c01_reflection_translation_identity_1c",
+    "eq:drv_flowpoint_c01_nontriviality_1c",
+    "eq:drv_flowpoint_c01_field_metric_1c",
+    "eq:drv_flowpoint_c01_field_isometry_1c",
+    "eq:drv_flowpoint_c01_balance_opposition_paradox_1c",
+    "eq:drv_flowpoint_c01_synthesis_1c",
+    "eq:drv_flowpoint_c01_principle_1c",
+    "eq:drv_flowpoint_c01_internal_anchors_2c",
+    "eq:drv_flowpoint_c01_recovered_balance_2c",
+    "eq:drv_flowpoint_c01_recovered_offset_2c",
+    "eq:drv_flowpoint_c01_recovered_anchor_2c",
+    "eq:drv_flowpoint_c01_recovered_history_2c",
+    "eq:drv_flowpoint_c01_reconstruction_map_2c",
+    "eq:drv_flowpoint_c01_recovered_nontriviality_2c",
+    "eq:drv_flowpoint_c01_exact_reconstruction_2c",
+    "eq:drv_flowpoint_c01_recovered_reflection_2c",
+    "eq:drv_flowpoint_c01_midpoint_halfdifference_2c",
+    "eq:drv_flowpoint_c01_anchor_decomposition_2c",
+    "eq:drv_flowpoint_c01_field_2adic_address_2c",
+    "eq:drv_flowpoint_c01_field_address_injectivity_2c",
+    "eq:drv_flowpoint_c01_orientation_change_2c",
+    "eq:drv_flowpoint_c01_synthesis_2c",
+    "eq:drv_flowpoint_c01_principle_2c",
+    "eq:drv_flowpoint_c01_construction_map_joint",
+    "eq:drv_flowpoint_c01_reconstruction_type_joint",
+    "eq:drv_flowpoint_c01_orientation_involution_joint",
+    "eq:drv_flowpoint_c01_forget_orientation_joint",
+    "eq:drv_flowpoint_c01_field_residual_joint",
+    "eq:drv_flowpoint_c01_inverse_maps_joint",
+    "eq:drv_flowpoint_c01_orientation_gauge_joint",
+    "eq:drv_flowpoint_c01_residual_characterization_joint",
+    "eq:drv_flowpoint_c01_gauge_components_joint",
+    "eq:drv_flowpoint_c01_gauge_field_identity_joint",
+    "eq:drv_flowpoint_c01_unoriented_quotient_joint",
+    "eq:drv_flowpoint_c01_two_records_paradox_joint",
+    "eq:drv_flowpoint_c01_synthesis_joint",
+    "eq:drv_flowpoint_c01_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/falsification_checks/test_affine_history_field_falsification.py"
+  ],
+  "first_label": "app:drv_flowpoint_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/c_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/1c/affine_realization_of_scheduled_spectral_history.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/2c/exact_recovery_of_balance_center_amplitude_and_history.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/1c2c/exact_affine_historyfield_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.c_level.affine_closure_predicate",
+    "codomain": {
+      "description": "history-indexed states with local gradients and boundary traces",
+      "name": "closed affine balance field",
+      "python_types": [
+        "AffineHistoryField"
+      ]
+    },
+    "domain": {
+      "description": "binary field on a nonempty discrete spatial domain",
+      "name": "finite discrete spatial history",
+      "python_types": [
+        "AffineHistoryInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.c_level.affine_history_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.c_level.affine_history_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "affine_history_field",
+  "source_complex_ids": [
+    "scheduled_spectral_history",
+    "phase_indexed_kernel_transport"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_flowpoint_contracts.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/third_order_completeness/complex_001_affine_history_field/falsification_checks/test_affine_history_field_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Exact Affine History–Field Equivalence",
+    "left": "Affine Realization of Scheduled Spectral History",
+    "right": "Exact Recovery of Balance, Center, Amplitude, and History"
+  },
+  "theorem_titles_tex": {
+    "cross": "Exact Affine History--Field Equivalence",
+    "left": "Affine Realization of Scheduled Spectral History",
+    "right": "Exact Recovery of Balance, Center, Amplitude, and History"
+  }
+}

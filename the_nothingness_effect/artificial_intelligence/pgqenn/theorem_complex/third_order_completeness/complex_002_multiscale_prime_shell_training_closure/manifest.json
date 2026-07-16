@@ -1,0 +1,135 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 15,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_pgqenn_c02_master",
+      "eq:tne_spatial_pgqenn_c02_1c_definition",
+      "eq:tne_spatial_pgqenn_c02_1c_theorem",
+      "eq:tne_spatial_pgqenn_c02_1c_lemma",
+      "eq:tne_spatial_pgqenn_c02_1c_synthesis",
+      "eq:tne_spatial_pgqenn_c02_1c_principle",
+      "eq:tne_spatial_pgqenn_c02_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "multiscale_prime_shell_training_closure",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/1c/primequasicrystal_support_equivalence_soi_scaled_annealing_invariance_law_motif_exhaustion_compl.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/2c/pgqenn_05_support_mismatch_leakage_soi_mis_scaling_spurious_entropy_coverage_bias_long_memory_dr.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/1c2c/primequasicrystal_support_equivalence_support_mismatch_leakage_motif_exhaustion_completeness_cov.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pgqenn_c02_spatial_carrier",
+    "eq:drv_pgqenn_c02_1c",
+    "eq:drv_pgqenn_c02_theorem_1c",
+    "eq:drv_pgqenn_c02_res_1c",
+    "eq:drv_pgqenn_c02_2c",
+    "eq:drv_pgqenn_c02_res_2c",
+    "eq:drv_pgqenn_c02_joint",
+    "eq:drv_pgqenn_c02_exchange_square",
+    "eq:pgqenn_meta_composite_domain_1a2a",
+    "eq:pgqenn_meta_dependency_graph_1a2a",
+    "eq:pgqenn_meta_residual_vector_1a2a",
+    "eq:pgqenn_meta_status_norm_1a2a",
+    "eq:pgqenn_meta_closure_criterion_1a2a",
+    "eq:pgqenn_meta_minimal_failed_set_1a2a",
+    "eq:pgqenn_meta_audit_record_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/falsification_checks/test_multiscale_prime_shell_training_closure_falsification.py"
+  ],
+  "first_label": "app:drv_pgqenn_c02",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/1c2c/primequasicrystal_support_equivalence_support_mismatch_leakage_motif_exhaustion_completeness_cov.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/1c/primequasicrystal_support_equivalence_soi_scaled_annealing_invariance_law_motif_exhaustion_compl.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/2c/pgqenn_05_support_mismatch_leakage_soi_mis_scaling_spurious_entropy_coverage_bias_long_memory_dr.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/1c2c/primequasicrystal_support_equivalence_support_mismatch_leakage_motif_exhaustion_completeness_cov.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
+    "codomain": {
+      "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+      "name": "localized spatial closure",
+      "python_types": [
+        "SpatialClosureResult"
+      ]
+    },
+    "domain": {
+      "description": "finite common-shape spatial field for every declared B source",
+      "name": "common spatial B-source domain",
+      "python_types": [
+        "SpatialClosureInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 3
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "multiscale_prime_shell_training_closure",
+  "source_complex_ids": [
+    "quasicrystal_soi_annealing_transport",
+    "exhaustion_parseval_coverage_energy",
+    "parity_orthogonal_shell_growth_connection"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/third_order_completeness/complex_002_multiscale_prime_shell_training_closure/falsification_checks/test_multiscale_prime_shell_training_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime–Quasicrystal Support Equivalence <-> Support Mismatch/Leakage – Motif Exhaustion Completeness <-> Coverage Bias / Long-Memory Drift – Parity-Orthogonal Optimization <-> Cross-Parity Gradient Contamination",
+    "left": "Prime–Quasicrystal Support Equivalence – SOI-Scaled Annealing Invariance – Law – Motif Exhaustion Completeness – Weight–Energy Parseval Equivalence (Layerwise) – Law – Parity-Orthogonal Optimization – Prime-Shell Growth Regularity – Law",
+    "right": "PGQENN 05 – Support Mismatch/Leakage – SOI Mis-Scaling / Spurious Entropy – Coverage Bias / Long-Memory Drift – PGQENN 08 – L^2 Energy Mismatch – Cross-Parity Gradient Contamination – Shell Instability / Phase Slips – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime–Quasicrystal Support Equivalence $\\leftrightarrow$ Support Mismatch/Leakage -- Motif Exhaustion Completeness $\\leftrightarrow$ Coverage Bias / Long-Memory Drift -- Parity-Orthogonal Optimization $\\leftrightarrow$ Cross-Parity Gradient Contamination",
+    "left": "Prime–Quasicrystal Support Equivalence -- SOI-Scaled Annealing Invariance -- Law -- Motif Exhaustion Completeness -- Weight--Energy Parseval Equivalence (Layerwise) -- Law -- Parity-Orthogonal Optimization -- Prime-Shell Growth Regularity -- Law",
+    "right": "PGQENN 05 -- Support Mismatch/Leakage -- SOI Mis-Scaling / Spurious Entropy -- Coverage Bias / Long-Memory Drift -- PGQENN 08 -- $L^2$ Energy Mismatch -- Cross-Parity Gradient Contamination -- Shell Instability / Phase Slips -- Law"
+  }
+}

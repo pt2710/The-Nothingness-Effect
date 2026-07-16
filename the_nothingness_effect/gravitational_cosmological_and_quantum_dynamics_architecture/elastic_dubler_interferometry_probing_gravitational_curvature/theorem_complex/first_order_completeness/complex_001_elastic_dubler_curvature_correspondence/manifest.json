@@ -1,0 +1,144 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_dubler_curvature_correspondence",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/1a/elastic_dubler_curvature_determinacy.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/2a/elastic_dubler_curvature_indeterminacy.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/1a2a/elastic_dubler_curvature_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:edi01_curvature_correspondence_order_parameter_1a",
+    "eq:edi01_curvature_correspondence_branch_condition_1a",
+    "eq:edi_jacobian_invert_1a",
+    "eq:edi_reconstruction_1a",
+    "eq:edi_phase_evolution_1a",
+    "eq:edi_lemma_inv_1a",
+    "eq:edi_lemma_monotonic_1a",
+    "eq:edi_proof_unique_1a",
+    "eq:edi_proof_one2one_1a",
+    "eq:edi_corollary_imaging_1a",
+    "eq:edi_corollary_partial_1a",
+    "eq:edi01_curvature_correspondence_order_parameter_2a",
+    "eq:edi01_curvature_correspondence_branch_condition_2a",
+    "eq:edi_jacobian_singular_2a",
+    "eq:edi_noninv_2a",
+    "eq:edi_phase_noninj_2a",
+    "eq:edi_lemma_noninv_2a",
+    "eq:edi_lemma_nonunique_2a",
+    "eq:edi_proof_multiple_sol_2a",
+    "eq:edi_proof_overlap_2a",
+    "eq:edi_nonunique_2a",
+    "eq:edi_corollary_nonunique_2a",
+    "eq:edi01_curvature_correspondence_status_1a2a",
+    "eq:edi_forward_map_1a2a",
+    "eq:edi_jacobian_1a2a",
+    "eq:edi_invertibility_1a2a",
+    "eq:edi_phase_evolution_1a2a",
+    "eq:edi_lemma_bijection_1a2a",
+    "eq:edi_lemma_invert_1a2a",
+    "eq:edi_dual_proof_1a2a",
+    "eq:edi_dual_proof_invert_1a2a",
+    "eq:edi_dual_corollary_1a2a",
+    "eq:edi_dual_corollary_lock_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/falsification_checks/test_elastic_dubler_curvature_correspondence_falsification.py"
+  ],
+  "first_label": "ssec:elastic_dubler_curvature_correspondence_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/1a/elastic_dubler_curvature_determinacy.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/2a/elastic_dubler_curvature_indeterminacy.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/1a2a/elastic_dubler_curvature_correspondence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "phase_curvature field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "elastic_dubler_curvature_correspondence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_001_elastic_dubler_curvature_correspondence/falsification_checks/test_elastic_dubler_curvature_correspondence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic Dubler Curvature Correspondence",
+    "left": "Elastic Dubler Curvature Determinacy",
+    "right": "Elastic Dubler Curvature Indeterminacy"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic Dubler Curvature Correspondence (1A $\\leftrightarrow$ 2A)",
+    "left": "Elastic Dubler Curvature Determinacy (1A)",
+    "right": "Elastic Dubler Curvature Indeterminacy (2A)"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_pdfi_b01_master",
+      "eq:tne_additive_pdfi_b01_1b_definition",
+      "eq:tne_additive_pdfi_b01_1b_theorem",
+      "eq:tne_additive_pdfi_b01_1b_lemma",
+      "eq:tne_additive_pdfi_b01_1b_synthesis",
+      "eq:tne_additive_pdfi_b01_1b_principle",
+      "eq:tne_additive_pdfi_b01_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "parity_flowpoint_transport_law",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/1b/parity_definite_fluctuation_law_flowpointparity_correspondence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/2b/parity_indeterminate_fluctuation_law_parity_collapse_decoupling.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/1b2b/parity_definite_and_parity_indeterminate_classification_flowpointparity_correspondence_and_decou.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pdfi_b01_product_carrier",
+    "eq:drv_pdfi_b01_1b",
+    "eq:drv_pdfi_b01_theorem_1b",
+    "eq:drv_pdfi_b01_res_1b",
+    "eq:drv_pdfi_b01_2b",
+    "eq:drv_pdfi_b01_theorem_2b",
+    "eq:drv_pdfi_b01_res_2b",
+    "eq:drv_pdfi_b01_joint",
+    "eq:drv_pdfi_b01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/falsification_checks/test_parity_flowpoint_transport_law_falsification.py"
+  ],
+  "first_label": "app:drv_pdfi_b01",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/1b2b/parity_definite_and_parity_indeterminate_classification_flowpointparity_correspondence_and_decou.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/1b/parity_definite_fluctuation_law_flowpointparity_correspondence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/2b/parity_indeterminate_fluctuation_law_parity_collapse_decoupling.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/1b2b/parity_definite_and_parity_indeterminate_classification_flowpointparity_correspondence_and_decou.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine two-source transport operator",
+      "name": "parity Flowpoint transport",
+      "python_types": [
+        "ParityFlowpointTransport"
+      ]
+    },
+    "domain": {
+      "description": "integer trajectory, nonzero predecessors, positive recurrence seed and K_D",
+      "name": "pDFI realization",
+      "python_types": [
+        "ParityDFIInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.transport_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "pdfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "parity_flowpoint_transport_law",
+  "source_complex_ids": [
+    "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law",
+    "flowpoint_parity_correspondence_and_decoupling"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pdfi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_parity_adapted_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_001_parityflowpoint_transport_law/falsification_checks/test_parity_flowpoint_transport_law_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Parity-Definite and Parity-Indeterminate Classification – Flowpoint–Parity Correspondence and Decoupling",
+    "left": "Parity-Definite Fluctuation Law – Flowpoint–Parity Correspondence",
+    "right": "Parity-Indeterminate Fluctuation Law – Parity Collapse/Decoupling"
+  },
+  "theorem_titles_tex": {
+    "cross": "Parity-Definite and Parity-Indeterminate Classification -- Flowpoint--Parity Correspondence and Decoupling",
+    "left": "Parity-Definite Fluctuation Law -- Flowpoint--Parity Correspondence",
+    "right": "Parity-Indeterminate Fluctuation Law -- Parity Collapse/Decoupling"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 12,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "pdfi_elastic_norm_interface",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/1a/calibrated_interface_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/2a/interface_decoupling.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/1a2a/calibrated_equivalencedecoupling_dichotomy.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:epinorm_c4_calibrated_output_1a",
+    "eq:epinorm_c4_interface_residual_1a",
+    "eq:epinorm_c4_equivalence_1a",
+    "eq:epinorm_c4_zero_residual_1a",
+    "eq:epinorm_c4_equivalence_proof_1a",
+    "eq:epinorm_c4_statistic_transfer_1a",
+    "eq:epinorm_c4_synthesis_1a",
+    "eq:epinorm_c4_synthesis_2a",
+    "eq:epinorm_c4_interface_state_1a2a",
+    "eq:epinorm_c4_zero_defect_criterion_1a2a",
+    "eq:epinorm_c4_tolerance_classification_1a2a",
+    "eq:epinorm_c4_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/falsification_checks/test_pdfi_elastic_norm_interface_falsification.py"
+  ],
+  "first_label": "ssec:epinorm_complex_iv_pdfi_interface",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/1a/calibrated_interface_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/2a/interface_decoupling.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/1a2a/calibrated_equivalencedecoupling_dichotomy.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "common-input calibrated residual",
+      "name": "pDFI norm interface",
+      "python_types": [
+        "PdfiNormInterface"
+      ]
+    },
+    "domain": {
+      "description": "anchored metric path, entropy sequence, K_D > 0 and p >= 1",
+      "name": "Elastic-pi norm source",
+      "python_types": [
+        "ElasticPiNormInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.interface_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_norm",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/simulate_elastic_pi_norm.py"
+  ],
+  "source_complex_id": "pdfi_elastic_norm_interface",
+  "source_complex_ids": [
+    "pdfi_elastic_norm_equivalence_and_decoupling"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_elastic_pi_norm_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/first_order_completeness/complex_004_pdfielastic_norm_interface/falsification_checks/test_pdfi_elastic_norm_interface_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Calibrated Equivalence–Decoupling Dichotomy",
+    "left": "Calibrated Interface Equivalence",
+    "right": "Interface Decoupling"
+  },
+  "theorem_titles_tex": {
+    "cross": "Calibrated Equivalence--Decoupling Dichotomy",
+    "left": "Calibrated Interface Equivalence",
+    "right": "Interface Decoupling"
+  }
+}

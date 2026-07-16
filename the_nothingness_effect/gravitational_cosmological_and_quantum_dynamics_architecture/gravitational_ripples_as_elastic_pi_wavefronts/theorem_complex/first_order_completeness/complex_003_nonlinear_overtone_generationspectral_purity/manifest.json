@@ -1,0 +1,144 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 32,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "nonlinear_overtone_generation_spectral_purity",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/1a/nonlinear_overtone_generation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/2a/spectral_purity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/1a2a/nonlinear_overtone_generation_spectral_purity.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw03_overtone_purity_order_parameter_1a",
+    "eq:grw03_overtone_purity_branch_condition_1a",
+    "eq:ratio_3f_2f_1a",
+    "eq:amp_eqs_1a",
+    "eq:phase_bound_1a",
+    "eq:phase_sensitivity_1a",
+    "eq:cos_identity_1a",
+    "eq:harm_proj_1a",
+    "eq:dP_dA_1a",
+    "eq:limit_small_amp_1a",
+    "eq:grw03_overtone_purity_order_parameter_2a",
+    "eq:grw03_overtone_purity_branch_condition_2a",
+    "eq:undefined_phase_2a",
+    "eq:lin_fourier_2a",
+    "eq:limit_zero_coupling_2a",
+    "eq:proj_zero_2a",
+    "eq:diagonal_evolution_2a",
+    "eq:orthogonality_2a",
+    "eq:xi_bound_2a",
+    "eq:small_amp_limit_2a",
+    "eq:grw03_overtone_purity_status_1a2a",
+    "eq:overtone_power_2f_1a2a",
+    "eq:overtone_power_3f_1a2a",
+    "eq:phase_locking_1a2a",
+    "eq:fourier_split_1a2a",
+    "eq:nonlinear_terms_1a2a",
+    "eq:indicator_equiv_1a2a",
+    "eq:deriv_equiv_1a2a-appendix_gravitational_ripples_as_entropic_wavefronts",
+    "eq:case_split_1a2a",
+    "eq:dP_dXi_1a2a",
+    "eq:xi_estimator_1a2a",
+    "eq:xi_closed_form_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/falsification_checks/test_nonlinear_overtone_generation_spectral_purity_falsification.py"
+  ],
+  "first_label": "ssec:nonlinear_overtone_spectral_purity_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/1a/nonlinear_overtone_generation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/2a/spectral_purity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/1a2a/nonlinear_overtone_generation_spectral_purity.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "overtone_generation field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "nonlinear_overtone_generation_spectral_purity",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_003_nonlinear_overtone_generationspectral_purity/falsification_checks/test_nonlinear_overtone_generation_spectral_purity_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Nonlinear Overtone Generation <-> Spectral Purity",
+    "left": "Nonlinear Overtone Generation",
+    "right": "Spectral Purity"
+  },
+  "theorem_titles_tex": {
+    "cross": "Nonlinear Overtone Generation $\\leftrightarrow$ Spectral Purity",
+    "left": "Nonlinear Overtone Generation",
+    "right": "Spectral Purity"
+  }
+}

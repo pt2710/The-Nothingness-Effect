@@ -1,0 +1,8 @@
+step,theorem_complex_id,residual,cumulative_residual_norm,closure_status
+0,cosmic_spark_flowpoint_correspondence_and_spectral_duality,0.0,0.0,satisfied
+1,cosmic_spark_decay_and_integrated_cosmological_memory,0.0,0.0,satisfied
+2,elastic_cosmological_geometry_and_dubler_spectral_transfer,0.0,0.0,satisfied
+3,wave_sector_and_expansion_sector_cosmological_projection,0.0,0.0,satisfied
+4,flowpoint_resolved_cosmological_memory_resolvent,0.0,0.0,satisfied
+5,common_potential_observation_operator,0.0,0.0,satisfied
+6,horizon_localized_observable_memory_closure,1.4419869668612788e-14,1.4419869668612788e-14,numerical_candidate

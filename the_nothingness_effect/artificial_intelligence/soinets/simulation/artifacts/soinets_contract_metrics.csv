@@ -1,0 +1,8 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics
+motif_spectral_dual_regularity_law_for_soinets,A,6.389484405517578,open,True
+soi_universal_entropy_plateau_theorem,A,0.8860153555870056,open,True
+soi_modality_invariant_convergence_and_collapse_completeness,A,0.9907820820808411,open,True
+soi_modality_dual_closure,A,1.9737184047698975,open,True
+motif_spectral_entropy_coupling_energy,B,53.855709075927734,open,True
+modality_collapse_symmetry_operator,B,5.4259138107299805,open,True
+motif_spectral_modality_collapse_spatial_field,C,2.4169989387701207e-07,numerical_candidate,False

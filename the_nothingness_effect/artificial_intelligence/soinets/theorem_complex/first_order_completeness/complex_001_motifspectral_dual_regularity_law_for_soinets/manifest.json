@@ -1,0 +1,109 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 0,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "motif_spectral_dual_regularity_law_for_soinets",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/1a/soi_motif_boundedness_1a.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/2a/spectral_dual_stability_of_soinet_2a.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/1a2a/motifspectral_dual_regularity_law_for_soinets_1a_2a.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/falsification_checks/test_motif_spectral_dual_regularity_law_for_soinets_falsification.py"
+  ],
+  "first_label": "app:soinet_complex_01",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/1a/soi_motif_boundedness_1a.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/2a/spectral_dual_stability_of_soinet_2a.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/1a2a/motifspectral_dual_regularity_law_for_soinets_1a_2a.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed modality response, residual field, and failure condition",
+      "name": "motif_spectral_dual_regularity_law_for_soinets",
+      "python_types": [
+        "SOInetSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite multi-modality spatial feature field and positive residual weights",
+      "name": "SOInet modality field",
+      "python_types": [
+        "SOInetContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.soinets.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.soinets.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "motif_spectral_dual_regularity_law_for_soinets",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_soinets_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/first_order_completeness/complex_001_motifspectral_dual_regularity_law_for_soinets/falsification_checks/test_motif_spectral_dual_regularity_law_for_soinets_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Motif–Spectral Dual Regularity Law for SOInets 1A <-> 2A",
+    "left": "SOI-Motif Boundedness 1a",
+    "right": "Spectral Dual-Stability of SOInet 2a"
+  },
+  "theorem_titles_tex": {
+    "cross": "Motif–Spectral Dual Regularity Law for SOInets 1A $\\longleftrightarrow$ 2A",
+    "left": "SOI-Motif Boundedness 1a",
+    "right": "Spectral Dual-Stability of SOInet 2a"
+  }
+}

@@ -1,0 +1,1 @@
+"""2a theorem component."""

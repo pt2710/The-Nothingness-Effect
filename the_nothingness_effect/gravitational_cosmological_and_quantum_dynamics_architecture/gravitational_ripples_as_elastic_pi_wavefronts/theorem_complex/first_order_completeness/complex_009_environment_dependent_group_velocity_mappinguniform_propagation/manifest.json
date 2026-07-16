@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "environment_dependent_group_velocity_mapping_uniform_propagation",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_009_environment_dependent_group_velocity_mappinguniform_propagation/1a/environment_dependent_group_velocity_mapping.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_009_environment_dependent_group_velocity_mappinguniform_propagation/2a/uniform_propagation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_009_environment_dependent_group_velocity_mappinguniform_propagation/1a2a/environment_dependent_group_velocity_mapping_uniform_propagation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw09_group_velocity_order_parameter_1a",
+    "eq:grw09_group_velocity_branch_condition_1a",
+    "eq:delta_tau_linear_1a",
+    "eq:spectral_slope_1a",
+    "eq:spectral_curvature_1a",
+    "eq:lemma_linearization_1a",
+    "eq:lemma_spectral_derivative_1a",
+    "eq:proof_tau_expansion_1a",
+    "eq:proof_delta_tau_1a",
+    "eq:proof_spectral_derivative_1a",
+    "eq:path_diff_1a",
+    "eq:path_diff_spectral_1a",
+    "eq:grw09_group_velocity_order_parameter_2a",
+    "eq:grw09_group_velocity_branch_condition_2a",
+    "eq:delta_tau_zero_2a",
+    "eq:delta_tau_zero_derivatives_2a",
+    "eq:uniform_zero_residual_2a",
+    "eq:uniform_zero_derivatives_2a",
+    "eq:proof_uniform_2a",
+    "eq:proof_uniform_derivatives_2a",
+    "eq:bound_integral_2a",
+    "eq:bound_spectral_2a",
+    "eq:grw09_group_velocity_status_1a2a",
+    "eq:group_delay_def_1a2a",
+    "eq:delta_tau_linear_1a2a",
+    "eq:spectral_corrugation_1a2a",
+    "eq:path_gradient_1a2a",
+    "eq:dual_representation_1a2a",
+    "eq:dual_representation_spectral_1a2a",
+    "eq:dual_core_identity_1a2a",
+    "eq:dual_core_spectral_1a2a",
+    "eq:inference_or_bound_1a2a",
+    "eq:inference_or_bound_spectral_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_009_environment_dependent_group_velocity_mappinguniform_propagation/falsification_checks/test_environment_dependent_group_velocity_mapping_uniform_propagation_falsification.py"
+  ],
+  "first_label": "ssec:group_velocity_mapping_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "environment_dependent_group_velocity_mapping_uniform_propagation",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_009_environment_dependent_group_velocity_mappinguniform_propagation/falsification_checks/test_environment_dependent_group_velocity_mapping_uniform_propagation_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Environment-Dependent Group Velocity Mapping <-> Uniform Propagation",
+    "left": "Environment-Dependent Group Velocity Mapping",
+    "right": "Uniform Propagation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Environment-Dependent Group Velocity Mapping $\\leftrightarrow$ Uniform Propagation",
+    "left": "Environment-Dependent Group Velocity Mapping (1A)",
+    "right": "Uniform Propagation (2A)"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "elastic_dubler_duality_closure",
+      "directory": "complex_001_elastic_dubler_duality_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_dubler_pdfi_frequency_shift_dual_closure",
+      "directory": "complex_002_elastic_dublerpdfi_frequency_shift_dual_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_dubler_e_curvature_duality",
+      "directory": "complex_003_elastic_dubler_e_curvature_duality",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_dubler_effect::elastic_entropic_energy_equivalence",
+      "directory": "complex_004_elasticentropic_energy_equivalence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_symmetry_dubler_duality_closure",
+      "directory": "complex_005_parity_symmetrydubler_duality_closure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "locality_nonlocality_in_the_dubler_pdfi_framework",
+      "directory": "complex_006_localitynonlocality_in_the_dublerpdfi_framework",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "universal_elasticity_constant_k_d",
+      "directory": "complex_007_universal_elasticity_constant_k_d",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "emergence_triviality_in_elastic_fields",
+      "directory": "complex_008_emergencetriviality_in_elastic_fields",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "spectral_observability_indistinguishability",
+      "directory": "complex_009_spectral_observabilityindistinguishability",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "dubler_entropy_conservation",
+      "directory": "complex_010_dublerentropy_conservation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "temporal_asymmetry_symmetry_in_pdfi_fields",
+      "directory": "complex_011_temporal_asymmetrysymmetry_in_pdfi_fields",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "causality_via_elastic_dubler_e_and_causal_symmetry",
+      "directory": "complex_012_causality_via_elastic_dubler_e_and_causal_symmetry",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "information_entropy_in_the_elastic_dubler_perspective",
+      "directory": "complex_013_informationentropy_in_the_elastic_dubler_perspective",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "pdfi_e_quantum_entanglement_interface",
+      "directory": "complex_014_pdfi_e_quantum_entanglement_interface",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "spatial_homogeneity_heterogeneity_duality",
+      "directory": "complex_015_spatial_homogeneityheterogeneity_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "universal_domain_specific_k_d_duality",
+      "directory": "complex_016_universaldomain_specific_k_d_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "appendix_wide_elastic_dubler_cross_complex_closure_and_computational_falsification_interface",
+      "directory": "complex_017_appendix_wide_elastic_dubler_cross_complex_closure_and_computational_falsification_interface",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect"
+}

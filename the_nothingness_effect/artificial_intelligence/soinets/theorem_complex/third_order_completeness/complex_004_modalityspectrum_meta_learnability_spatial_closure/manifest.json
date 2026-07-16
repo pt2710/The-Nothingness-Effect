@@ -1,0 +1,127 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_soinet_c03_master",
+      "eq:tne_spatial_soinet_c03_1c_definition",
+      "eq:tne_spatial_soinet_c03_1c_theorem",
+      "eq:tne_spatial_soinet_c03_1c_lemma",
+      "eq:tne_spatial_soinet_c03_1c_synthesis",
+      "eq:tne_spatial_soinet_c03_1c_principle",
+      "eq:tne_spatial_soinet_c03_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "modality_spectrum_meta_learnability_spatial_closure",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/1c/modality_invariant_spectral_learning_soinet_universal_expressivitymeta_learnability_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/2c/universal_degeneracy_and_collapse_entropy_minimal_generalizationmeta_learning_collapse_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/1c2c/soinet_modalityspectrum_coupling_soinet_expressivitymeta_learnability_coupling.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_soinet_c03_spatial_carrier",
+    "eq:drv_soinet_c03_1c",
+    "eq:drv_soinet_c03_theorem_1c",
+    "eq:drv_soinet_c03_res_1c",
+    "eq:drv_soinet_c03_2c",
+    "eq:drv_soinet_c03_res_2c",
+    "eq:drv_soinet_c03_joint",
+    "eq:drv_soinet_c03_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/falsification_checks/test_modality_spectrum_meta_learnability_spatial_closure_falsification.py"
+  ],
+  "first_label": "app:drv_soinet_c03",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/1c2c/soinet_modalityspectrum_coupling_soinet_expressivitymeta_learnability_coupling.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/1c/modality_invariant_spectral_learning_soinet_universal_expressivitymeta_learnability_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/2c/universal_degeneracy_and_collapse_entropy_minimal_generalizationmeta_learning_collapse_law.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/1c2c/soinet_modalityspectrum_coupling_soinet_expressivitymeta_learnability_coupling.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
+    "codomain": {
+      "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+      "name": "localized spatial closure",
+      "python_types": [
+        "SpatialClosureResult"
+      ]
+    },
+    "domain": {
+      "description": "finite common-shape spatial field for every declared B source",
+      "name": "common spatial B-source domain",
+      "python_types": [
+        "SpatialClosureInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "modality_spectrum_meta_learnability_spatial_closure",
+  "source_complex_ids": [
+    "modality_spectrum_representation_coupling",
+    "expressivity_meta_learnability_stability_functional"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_004_modalityspectrum_meta_learnability_spatial_closure/falsification_checks/test_modality_spectrum_meta_learnability_spatial_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOInet Modality–Spectrum Coupling – SOInet Expressivity–Meta-Learnability Coupling",
+    "left": "Modality-Invariant Spectral Learning – SOInet Universal Expressivity–Meta-Learnability – Law",
+    "right": "Universal Degeneracy and Collapse – Entropy-Minimal Generalization–Meta-Learning Collapse – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOInet Modality--Spectrum Coupling -- SOInet Expressivity--Meta-Learnability Coupling",
+    "left": "Modality-Invariant Spectral Learning -- SOInet Universal Expressivity–Meta-Learnability -- Law",
+    "right": "Universal Degeneracy and Collapse -- Entropy-Minimal Generalization–Meta-Learning Collapse -- Law"
+  }
+}

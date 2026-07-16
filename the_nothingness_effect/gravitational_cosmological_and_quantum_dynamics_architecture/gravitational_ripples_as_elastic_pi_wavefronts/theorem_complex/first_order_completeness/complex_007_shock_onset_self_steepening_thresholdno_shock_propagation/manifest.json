@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 46,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "shock_onset_self_steepening_threshold_no_shock_propagation",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_007_shock_onset_self_steepening_thresholdno_shock_propagation/1a/shock_onset_self_steepening_threshold.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_007_shock_onset_self_steepening_thresholdno_shock_propagation/2a/no_shock_propagation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_007_shock_onset_self_steepening_thresholdno_shock_propagation/1a2a/shock_onset_self_steepening_threshold_no_shock_propagation.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw07_shock_threshold_order_parameter_1a",
+    "eq:grw07_shock_threshold_branch_condition_1a",
+    "eq:skew_growth_1a",
+    "eq:width_growth_1a",
+    "eq:bispectrum_scaling_1a",
+    "eq:g_eqn_1a",
+    "eq:gmax_ineq_1a",
+    "eq:ts_bound_1a",
+    "eq:superlinear_S_1a",
+    "eq:Skew_integral_1a",
+    "eq:finite_ts_1a",
+    "eq:sep_ode_1a",
+    "eq:sep_integrated_1a",
+    "eq:sep_ts_bound_1a",
+    "eq:leakage_1a",
+    "eq:leakage_integral_1a",
+    "eq:grw07_shock_threshold_order_parameter_2a",
+    "eq:grw07_shock_threshold_branch_condition_2a",
+    "eq:skew_width_bounds_2a",
+    "eq:g_bound_2a",
+    "eq:g_tanh_2a",
+    "eq:energy_decay_2a",
+    "eq:E_decay_integral_2a",
+    "eq:g_exact_2a",
+    "eq:gmax_ineq_raw_2a",
+    "eq:gmax_delta_beta_2a",
+    "eq:delta_beta_defs_2a",
+    "eq:logistic_comp_2a",
+    "eq:int_logistic_2a",
+    "eq:comparison_solution_2a",
+    "eq:W_bound_2a",
+    "eq:W_growth_bound_2a",
+    "eq:grw07_shock_threshold_status_1a2a",
+    "eq:governing_shock_1a2a",
+    "eq:rates_shock_1a2a",
+    "eq:threshold_shock_1a2a",
+    "eq:threshold_freq_shock_1a2a",
+    "eq:char_X_1a2a",
+    "eq:char_pi_1a2a",
+    "eq:gradient_blowup_1a2a",
+    "eq:shock_time_1a2a",
+    "eq:I_II_equiv_1a2a",
+    "eq:sign_partition_1a2a",
+    "eq:ts_partition_1a2a",
+    "eq:template_switch_1a2a",
+    "eq:mismatch_rate_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_007_shock_onset_self_steepening_thresholdno_shock_propagation/falsification_checks/test_shock_onset_self_steepening_threshold_no_shock_propagation_falsification.py"
+  ],
+  "first_label": "ssec:shock_self_steepening_threshold_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "shock_onset_self_steepening_threshold_no_shock_propagation",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_007_shock_onset_self_steepening_thresholdno_shock_propagation/falsification_checks/test_shock_onset_self_steepening_threshold_no_shock_propagation_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Shock-Onset Self-Steepening Threshold <-> No-Shock Propagation",
+    "left": "Shock-Onset Self-Steepening Threshold",
+    "right": "No-Shock Propagation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Shock-Onset Self-Steepening Threshold $\\leftrightarrow$ No-Shock Propagation",
+    "left": "Shock-Onset Self-Steepening Threshold",
+    "right": "No-Shock Propagation"
+  }
+}

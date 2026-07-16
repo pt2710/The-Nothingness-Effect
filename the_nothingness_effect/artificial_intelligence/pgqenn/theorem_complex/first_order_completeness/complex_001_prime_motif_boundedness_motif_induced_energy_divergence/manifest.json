@@ -1,0 +1,158 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "prime_motif_boundedness_motif_induced_energy_divergence",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/1a/prime_motif_boundedness.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/2a/motif_induced_energy_divergence.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/1a2a/prime_motif_boundedness_motif_induced_energy_divergence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:prime_motif_boundedness_cycle_product_1a",
+    "eq:prime_motif_boundedness_uniform_cap_1a",
+    "eq:prime_motif_boundedness_calculus_avg_1a",
+    "eq:prime_motif_boundedness_final_calc_1a",
+    "eq:prime_motif_uniform_coverage_count_1a",
+    "eq:prime_motif_uniform_coverage_inf_1a",
+    "eq:prime_motif_uniform_coverage_integral_1a",
+    "eq:prime_motif_uniform_coverage_avg_1a",
+    "eq:prime_motif_boundedness_proof_product_1a",
+    "eq:prime_motif_boundedness_proof_conclusion_1a",
+    "eq:prime_motif_boundedness_proof_calculus_1a",
+    "eq:prime_motif_boundedness_proof_calc_cap_1a",
+    "eq:safe_lr_envelope_align_1a",
+    "eq:safe_lr_envelope_equation_1a",
+    "eq:safe_lr_envelope_calculus_align_1a",
+    "eq:safe_lr_envelope_calculus_equation_1a",
+    "eq:motif_induced_divergence_supermult_2a",
+    "eq:motif_induced_divergence_limsup_2a",
+    "eq:motif_induced_divergence_calculus_growth_2a",
+    "eq:motif_induced_divergence_eventual_exp_2a",
+    "eq:coverage_failure_bias_product_2a",
+    "eq:coverage_failure_bias_divergence_2a",
+    "eq:coverage_failure_bias_growth_2a",
+    "eq:coverage_failure_bias_exp_growth_2a",
+    "eq:motif_induced_divergence_proof_sum_2a",
+    "eq:motif_induced_divergence_proof_conclusion_2a",
+    "eq:motif_induced_divergence_proof_calc_growth_2a",
+    "eq:motif_induced_divergence_proof_unbounded_2a",
+    "eq:robustness_loss_align_2a",
+    "eq:robustness_loss_equation_2a",
+    "eq:robustness_loss_calculus_align_2a",
+    "eq:robustness_loss_calculus_equation_2a",
+    "eq:prime_motif_boundedness_algebraic_align_1a2a",
+    "eq:prime_motif_boundedness_energy_cap_1a2a",
+    "eq:prime_motif_boundedness_calculus_align_1a2a",
+    "eq:prime_motif_boundedness_calculus_cap_1a2a",
+    "eq:cycle_bound_divergence_trigger_align_1a2a",
+    "eq:cycle_bound_divergence_trigger_equation_1a2a",
+    "eq:cycle_bound_divergence_trigger_calculus_align_1a2a",
+    "eq:cycle_bound_divergence_trigger_calculus_equation_1a2a",
+    "eq:unified_product_growth_align_1a2a",
+    "eq:unified_product_growth_equation_1a2a",
+    "eq:unified_product_growth_calculus_align_1a2a",
+    "eq:unified_product_growth_calculus_equation_1a2a",
+    "eq:stability_certificates_failure_diagnostics_align_1a2a",
+    "eq:stability_certificates_failure_diagnostics_equation_1a2a",
+    "eq:stability_certificates_failure_diagnostics_calculus_align_1a2a",
+    "eq:stability_certificates_failure_diagnostics_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/falsification_checks/test_prime_motif_boundedness_motif_induced_energy_divergence_falsification.py"
+  ],
+  "first_label": "app:pgqenn_complex_01",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/1a/prime_motif_boundedness.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/2a/motif_induced_energy_divergence.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/1a2a/prime_motif_boundedness_motif_induced_energy_divergence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed prime-graph response, residual field, and failure condition",
+      "name": "prime_motif_boundedness_motif_induced_energy_divergence",
+      "python_types": [
+        "PGQENNSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite typed prime graph, aligned finite node features, positive K_D and residual weights",
+      "name": "PGQENN prime graph field",
+      "python_types": [
+        "PGQENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "prime_motif_boundedness_motif_induced_energy_divergence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pgqenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_001_prime_motif_boundedness_motif_induced_energy_divergence/falsification_checks/test_prime_motif_boundedness_motif_induced_energy_divergence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime-Motif Boundedness <-> Motif-Induced Energy Divergence",
+    "left": "Prime-Motif Boundedness",
+    "right": "Motif-Induced Energy Divergence"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime-Motif Boundedness $\\leftrightarrow$ Motif-Induced Energy Divergence (1A $\\leftrightarrow$ 2A)",
+    "left": "Prime-Motif Boundedness (1A)",
+    "right": "Motif-Induced Energy Divergence (2A)"
+  }
+}

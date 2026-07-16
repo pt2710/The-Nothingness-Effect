@@ -1,0 +1,46 @@
+{
+  "complex_phase_coordinates_and_fourier_reconstruction": {
+    "integration_evidence": "QENN spectral memory and SOInet spectral arbitration use orthonormal finite Fourier reconstruction.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence": {
+    "integration_evidence": "QENN, PGQENN, and SOInet consume the fail-closed differentiable DFI gate.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "dfi_spectrum_normalized_existence_and_normalization_breakdown": {
+    "integration_evidence": "Canonical AI entropy gates reject zero denominators and non-finite normalized DFI states.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence": {
+    "integration_evidence": "PGQENN source contracts use Elastic-pi-conditioned graph curvature and leakage residuals.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "flowpoint_parity_correspondence_and_decoupling": {
+    "integration_evidence": "PGQENN growth and message passing combine typed parity phases with Flowpoint-equivariant transitions.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "invariant_anti_invariant_orbit_fields": {
+    "integration_evidence": "QENN exposes invariant and anti-invariant projector channels and SOInet aggregates their subnetworks.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law": {
+    "integration_evidence": "PGQENN evaluates a typed binary parity-conditioned pDFI loss and rejects zero predecessors.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "parity_to_bit_equivalence_and_2_adic_coding": {
+    "integration_evidence": "Canonical PGQENN growth records a typed finite 2-adic depth for every prime node.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "pdfi_elastic_equivalence_and_decoupling": {
+    "integration_evidence": "PGQENN keeps pDFI and Elastic-pi as separate typed sources before their gated coupling.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "scheduled_spectral_history": {
+    "integration_evidence": "QENN spectral memory and SOInet memory transfer provide finite scheduled reconstruction evidence.",
+    "integration_status": "integrated_shared_primitive"
+  },
+  "self_negating_oscillation_and_eigenstructure": {
+    "integration_evidence": "QENN and PGQENN use exact F(x)=-x transitions and bias-free C2-equivariant layers.",
+    "integration_status": "integrated_shared_primitive"
+  }
+}

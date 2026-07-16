@@ -1,0 +1,11 @@
+node,layer,family,activation,out_degree,in_degree
+QENN A,0,qenn,0.11438056358625759,1,0
+QENN B,0,qenn,0.1858834082013603,1,0
+PGQENN A,0,pgqenn,0.2728416917882521,1,0
+PGQENN B,0,pgqenn,0.3401792246697716,1,0
+bidirectional closure,1,closure,0.40594105319593254,2,5
+memory transfer,2,memory,0.49477039049786453,2,1
+spectral/spatial,2,closure,0.5842768362320474,1,1
+meta-network,3,meta,0.6542934208829071,1,2
+completeness arbiter,4,closure,0.7049015487797367,1,1
+observation,5,output,0.7718466261320239,0,1

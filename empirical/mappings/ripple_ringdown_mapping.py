@@ -17,8 +17,8 @@ from scipy.signal import hilbert
 
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle, rmse
-from equations.artifact_io import save_figure
-from equations.elastic_pi_ripples.elastic_pi_ripples import RippleParams, prepare_tne_ringdown_projection
+from the_nothingness_effect._runtime.artifacts.io import save_figure
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.elastic_pi_ripples import RippleParams, prepare_tne_ringdown_projection
 
 
 PARAMETER_SWEEP_LEVELS: dict[str, dict[str, list[float]]] = {

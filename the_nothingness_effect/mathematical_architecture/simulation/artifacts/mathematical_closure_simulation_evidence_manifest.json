@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_statuses": [
+    "satisfied",
+    "satisfied",
+    "numerical_candidate",
+    "numerical_candidate",
+    "numerical_candidate",
+    "numerical_candidate",
+    "numerical_candidate"
+  ],
+  "generated_files": [
+    "mathematical_closure_metrics.csv",
+    "mathematical_closure_trace.png",
+    "mathematical_closure_simulation_residual_trace.csv",
+    "mathematical_closure_simulation_residual_animation.gif",
+    "flowpoint_unity_orientation_and_integer_unfolding_manifest.json",
+    "operation_covariance_and_spectral_minimization_manifest.json",
+    "finite_approximation_and_vanishing_residual_energy_manifest.json",
+    "complex_phase_coordinates_and_fourier_reconstruction_manifest.json",
+    "addition_of_arithmetic_orientation_and_typed_operation_theory_manifest.json",
+    "addition_of_approximation_and_harmonic_geometry_manifest.json",
+    "addition_of_the_two_complete_b_level_operator_families_manifest.json"
+  ],
+  "mode": "simulation",
+  "module": "mathematical_closure",
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "f1c668fa96642e666fda7350cbe735eb2e77c32ff533ebb255ed09db0148916d",
+  "parameters": {
+    "contract_count": 7,
+    "mode": "simulation",
+    "module": "mathematical_closure",
+    "seed": 0
+  },
+  "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation.run_evidence",
+  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.030296081647354534,
+    0.0,
+    0.0,
+    0.03597560219624253,
+    0.0
+  ],
+  "seed": 0,
+  "source_status": "canonical_contract_evaluation"
+}

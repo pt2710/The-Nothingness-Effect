@@ -1,0 +1,140 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 30,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "wavelet_ridge_locking_ridge_drift_shear",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/1a/wavelet_ridge_locking.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/2a/ridge_drift_shear.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/1a2a/wavelet_ridge_locking_ridge_drift_shear.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc11_active_line_separation",
+    "eq:dtqc11_resolution_residuals",
+    "eq:ridge_in_lattice_1a",
+    "eq:ridge_bias_local_1a",
+    "eq:ridge_ifr_stability_1a",
+    "eq:ridge_ifr_bound_1a",
+    "eq:scale_separation_1a",
+    "eq:local_concavity_width_1a",
+    "eq:newton_contraction_1a",
+    "eq:scale_invariance_1a",
+    "eq:drift_positive_gap_2a",
+    "eq:modulated_shift_2a",
+    "eq:effective_shift_2a",
+    "eq:shear_leakage_equivalence_2a",
+    "eq:jensen_bound_2a",
+    "eq:shear_statistic_2a",
+    "eq:shear_gradient_2a",
+    "eq:dtqc11_joint_status_1a2a",
+    "eq:qp_rep_1a2a",
+    "eq:cwt_def_1a2a",
+    "eq:ridge_def_1a2a",
+    "eq:ridge_lock_freq_1a2a",
+    "eq:ridge_bias_bound_1a2a",
+    "eq:cwt_sp_1a2a",
+    "eq:stationary_a_1a2a",
+    "eq:drift_linear_bound_1a2a",
+    "eq:geodesic_curvature_1a2a",
+    "eq:ridge_chain_rule_1a2a",
+    "eq:ridge_shear_curvature_1a2a",
+    "eq:fft_cwt_consistency_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/falsification_checks/test_wavelet_ridge_locking_ridge_drift_shear_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_11",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/1a/wavelet_ridge_locking.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/2a/ridge_drift_shear.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/1a2a/wavelet_ridge_locking_ridge_drift_shear.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fail-closed typed contract result",
+      "name": "wavelet_ridge_locking_ridge_drift_shear result",
+      "python_types": [
+        "ContractResult"
+      ]
+    },
+    "domain": {
+      "description": "typed recertified source-law input",
+      "name": "wavelet_ridge_locking_ridge_drift_shear input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts.evaluate_wavelet_ridge_locking",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "wavelet_ridge_locking_ridge_drift_shear",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_011_wavelet_ridge_locking_ridge_drift_shear/falsification_checks/test_wavelet_ridge_locking_ridge_drift_shear_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Wavelet Ridge Locking <-> Ridge Drift/Shear",
+    "left": "Wavelet Ridge Locking",
+    "right": "Ridge Drift/Shear"
+  },
+  "theorem_titles_tex": {
+    "cross": "Wavelet Ridge Locking $\\leftrightarrow$ Ridge Drift/Shear",
+    "left": "Wavelet Ridge Locking (1A)",
+    "right": "Ridge Drift/Shear (2A)"
+  }
+}

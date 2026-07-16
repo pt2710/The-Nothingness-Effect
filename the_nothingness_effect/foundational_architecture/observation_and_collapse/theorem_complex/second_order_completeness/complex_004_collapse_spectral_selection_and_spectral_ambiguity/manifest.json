@@ -1,0 +1,128 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 27,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "collapse_spectral_selection_and_spectral_ambiguity",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_004_collapse_spectral_selection_and_spectral_ambiguity/1b/collapse_spectral_selection.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_004_collapse_spectral_selection_and_spectral_ambiguity/2b/spectral_ambiguity_and_selection_failure.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_004_collapse_spectral_selection_and_spectral_ambiguity/1b2b/spectral_selection_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:specsel_canonical_observation_collapse_1b2b",
+    "eq:specsel_unitary_spectral_setting_1b2b",
+    "eq:specsel_vector_spectral_measure_1b2b",
+    "eq:specsel_source_dual_complexes_1b2b",
+    "eq:specsel_source_branch_identification_1b2b",
+    "eq:specsel_positive_branch_composition_1b",
+    "eq:specsel_negative_branch_composition_2b",
+    "eq:specsel_branch_exchange_1b2b",
+    "eq:specsel_branch_exchange_closure_1b2b",
+    "eq:specsel_selected_vector_1b",
+    "eq:specsel_mean_ergodic_selection_1b",
+    "eq:specsel_canonical_selected_output_1b",
+    "eq:specsel_multiplier_definition_1b",
+    "eq:specsel_multiplier_limit_1b",
+    "eq:specsel_multiplier_integral_1b",
+    "eq:specsel_synthesis_1b",
+    "eq:std_specsel_principle_1b",
+    "eq:specsel_defect_profile_2b",
+    "eq:specsel_entropy_definition_2b",
+    "eq:specsel_synthesis_2b",
+    "eq:std_specsel_principle_2b",
+    "eq:specsel_joint_status_tuple_1b2b",
+    "eq:specsel_joint_classification_1b2b",
+    "eq:specsel_preparation_independent_vector_1b2b",
+    "eq:specsel_involutive_specialization_1b2b",
+    "eq:specsel_joint_synthesis_1b2b",
+    "eq:std_specsel_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_004_collapse_spectral_selection_and_spectral_ambiguity/falsification_checks/test_collapse_spectral_selection_and_spectral_ambiguity_falsification.py"
+  ],
+  "first_label": "app:obs_complex_08",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "collapse_spectral_selection_and_spectral_ambiguity",
+  "source_complex_ids": [
+    "hilbert_projection_realization_and_projection_breakdown",
+    "ergodic_collapse_projection_and_non_convergence",
+    "observation_definiteness_equivalence_and_closure_failure"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_004_collapse_spectral_selection_and_spectral_ambiguity/falsification_checks/test_collapse_spectral_selection_and_spectral_ambiguity_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Spectral-Selection Classification",
+    "left": "Collapse Spectral Selection",
+    "right": "Spectral Ambiguity and Selection Failure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Spectral-Selection Classification",
+    "left": "Collapse Spectral Selection",
+    "right": "Spectral Ambiguity and Selection Failure"
+  }
+}

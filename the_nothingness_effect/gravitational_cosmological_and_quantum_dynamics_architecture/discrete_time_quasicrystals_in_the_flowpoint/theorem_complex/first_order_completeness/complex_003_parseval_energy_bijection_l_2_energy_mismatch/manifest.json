@@ -1,0 +1,141 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 30,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "parseval_energy_bijection_l_2_energy_mismatch",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/1a/parseval_energy_bijection.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/2a/dtqc_03_l_2_energy_mismatch.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/1a2a/parseval_energy_bijection_l_2_energy_mismatch.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:psv_parseval_identity_1a",
+    "eq:psv_hessian_zero_residual_1a",
+    "eq:psv_projection_formula_1a",
+    "eq:psv_cross_kill_1a",
+    "eq:J_value_at_w_1a",
+    "eq:Jmin_zero_implies_parseval_1a",
+    "eq:psv_energy_partition_1a",
+    "eq:hessian_identity_1a",
+    "eq:strict_convexity_unique_1a",
+    "eq:psv_positive_gap_2a",
+    "eq:psv_gap_as_minresid_2a",
+    "eq:l2_gap_equals_resid_2a",
+    "eq:Jmin_equals_resnorm_2a",
+    "eq:l2_gap_positive_algebraic_2a",
+    "eq:gap_positive_iff_residual_2a",
+    "eq:coeff_energy_leq_signal_energy_2a",
+    "eq:lower_bound_fit_error_2a",
+    "eq:dtqc03_joint_status_1a2a",
+    "eq:psv_basis_orthonormality_1a2a",
+    "eq:psv_coeff_def_1a2a",
+    "eq:psv_projection_residual_1a2a",
+    "eq:psv_energy_decomposition_1a2a",
+    "eq:psv_energy_mismatch_nonneg_1a2a",
+    "eq:psv_normal_equations_1a2a",
+    "eq:gram_energy_identity_1a2a",
+    "eq:Gnormal_1a2a",
+    "eq:gram_expand_proof_1a2a",
+    "eq:grad_G_b_1a2a",
+    "eq:parseval_equivalence_statement_1a2a",
+    "eq:Jmin_zero_equiv_resid_zero_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/falsification_checks/test_parseval_energy_bijection_l_2_energy_mismatch_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_03",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/1a/parseval_energy_bijection.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/2a/dtqc_03_l_2_energy_mismatch.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/1a2a/parseval_energy_bijection_l_2_energy_mismatch.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "parseval_energy field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "parseval_energy_bijection_l_2_energy_mismatch",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_003_parseval_energy_bijection_l_2_energy_mismatch/falsification_checks/test_parseval_energy_bijection_l_2_energy_mismatch_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Parseval Energy Bijection <-> L^2 Energy Mismatch",
+    "left": "Parseval Energy Bijection",
+    "right": "DTQC 03 – L^2 Energy Mismatch"
+  },
+  "theorem_titles_tex": {
+    "cross": "Parseval Energy Bijection $\\leftrightarrow$ $L^2$ Energy Mismatch",
+    "left": "Parseval Energy Bijection (1A)",
+    "right": "DTQC 03 -- $L^2$ Energy Mismatch"
+  }
+}

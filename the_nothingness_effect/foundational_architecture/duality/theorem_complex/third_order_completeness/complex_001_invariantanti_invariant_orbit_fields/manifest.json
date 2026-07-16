@@ -1,0 +1,137 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 24,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "invariant_anti_invariant_orbit_fields",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/1c/invariant_functions_as_sections_of_the_quotient_field.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/2c/anti_invariant_functions_as_sections_of_the_sign_field.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/1c2c/spatial_decomposition_into_quotient_and_sign_fields.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_duality_c01_1c",
+    "eq:drv_duality_c01_theorem_1c",
+    "eq:drv_duality_c01_invariant_section",
+    "eq:drv_duality_c01_invariant_recovery",
+    "eq:drv_duality_c01_invariant_trivialization",
+    "eq:drv_duality_c01_invariant_synthesis",
+    "eq:drv_duality_c01_invariant_field_principle",
+    "eq:drv_duality_c01_2c",
+    "eq:drv_duality_c01_theorem_2c",
+    "eq:drv_duality_c01_anti_section",
+    "eq:drv_duality_c01_sign_compensation",
+    "eq:drv_duality_c01_sign_triviality",
+    "eq:drv_duality_c01_anti_synthesis",
+    "eq:drv_duality_c01_sign_field_principle",
+    "eq:drv_duality_c01_joint",
+    "eq:drv_duality_c01_decomposition_map",
+    "eq:drv_duality_c01_field_reconstruction",
+    "eq:drv_duality_c01_projector_algebra",
+    "eq:drv_duality_c01_projector_parity",
+    "eq:drv_duality_c01_spatial_projectors_synthesis",
+    "eq:drv_duality_c01_spatial_synthesis",
+    "eq:drv_duality_c01_orbit_field_principle",
+    "eq:drv_duality_c01_orbit_field_projector_principle",
+    "eq:drv_duality_c01_orbit_field_residual_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/falsification_checks/test_invariant_anti_invariant_orbit_fields_falsification.py"
+  ],
+  "first_label": "app:drv_duality_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/c_level.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/1c/invariant_functions_as_sections_of_the_quotient_field.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/2c/anti_invariant_functions_as_sections_of_the_sign_field.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/1c2c/spatial_decomposition_into_quotient_and_sign_fields.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.foundational_architecture.duality.c_level.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "invariant and anti-invariant sections with reconstruction",
+      "name": "closed orbit field",
+      "python_types": [
+        "OrbitField"
+      ]
+    },
+    "domain": {
+      "description": "finite involution with spatial orbit index",
+      "name": "finite orbit field",
+      "python_types": [
+        "FiniteInvolution"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.foundational_architecture.duality.duality.invariant_anti_invariant_orbit_field",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.foundational_architecture.duality.c_level.field_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/run_suite.py",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "invariant_anti_invariant_orbit_fields",
+  "source_complex_ids": [
+    "reciprocal_orbit_double_cover",
+    "two_state_free_cofree_duality"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_duality_contracts.py",
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/third_order_completeness/complex_001_invariantanti_invariant_orbit_fields/falsification_checks/test_invariant_anti_invariant_orbit_fields_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Spatial Decomposition into Quotient and Sign Fields",
+    "left": "Invariant Functions as Sections of the Quotient Field",
+    "right": "Anti-Invariant Functions as Sections of the Sign Field"
+  },
+  "theorem_titles_tex": {
+    "cross": "Spatial Decomposition into Quotient and Sign Fields",
+    "left": "Invariant Functions as Sections of the Quotient Field",
+    "right": "Anti-Invariant Functions as Sections of the Sign Field"
+  }
+}

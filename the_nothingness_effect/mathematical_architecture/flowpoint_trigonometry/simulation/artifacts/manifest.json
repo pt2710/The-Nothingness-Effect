@@ -1,0 +1,29 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_mathematical_closure_architecture.tex",
+      "sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/simulate_flowpoint_trigonometry.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "complex_phase_coordinates_and_fourier_reconstruction"
+  ]
+}

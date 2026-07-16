@@ -1,0 +1,132 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 18,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "flowpoint_resolved_cosmological_memory_resolvent",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/1b/flowpoint_resolved_cosmological_memory_resolvent_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/2b/flowpoint_resolved_cosmological_memory_resolvent_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/1b2b/complete_flowpoint_resolved_cosmological_memory_resolvent_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:sc05_source_complexes_1b2b",
+    "eq:sc05_history_field_1b2b",
+    "eq:sc05_history_two_cycle_1b",
+    "eq:sc05_history_decay_1b",
+    "eq:sc05_temporal_commutation_1b",
+    "eq:sc05_scalar_envelope_1b",
+    "eq:sc05_equal_branch_norm_1b",
+    "eq:sc05_temporal_synthesis_1b",
+    "eq:sc05_integrated_history_2b",
+    "eq:sc05_integrated_two_cycle_2b",
+    "eq:sc05_integrated_limit_2b",
+    "eq:sc05_transform_integral_commutation_2b",
+    "eq:sc05_spectral_synthesis_2b",
+    "eq:sc05_joint_system_1b2b",
+    "eq:sc05_explicit_b_composition_1b2b",
+    "eq:sc05_branch_exchange_1b2b",
+    "eq:sc05_interface_residual_1b2b",
+    "eq:sc05_joint_synthesis_1b2b"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/falsification_checks/test_flowpoint_resolved_cosmological_memory_resolvent_falsification.py"
+  ],
+  "first_label": "app:sc_complex_05",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/1b/flowpoint_resolved_cosmological_memory_resolvent_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/2b/flowpoint_resolved_cosmological_memory_resolvent_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/1b2b/complete_flowpoint_resolved_cosmological_memory_resolvent_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine bilinear two-source response",
+      "name": "flowpoint_resolved_cosmological_memory_resolvent interaction",
+      "python_types": [
+        "DerivedFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "cosmological_spark_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py"
+  ],
+  "source_complex_id": "flowpoint_resolved_cosmological_memory_resolvent",
+  "source_complex_ids": [
+    "cosmic_spark_flowpoint_correspondence_and_spectral_duality",
+    "cosmic_spark_decay_and_integrated_cosmological_memory"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/second_order_completeness/complex_001_flowpoint_resolved_cosmological_memory_resolvent/falsification_checks/test_flowpoint_resolved_cosmological_memory_resolvent_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Flowpoint-Resolved Cosmological Memory Resolvent Classification",
+    "left": "Flowpoint-Resolved Cosmological Memory Resolvent Law",
+    "right": "Flowpoint-Resolved Cosmological Memory Resolvent Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Flowpoint-Resolved Cosmological Memory Resolvent Classification",
+    "left": "Flowpoint-Resolved Cosmological Memory Resolvent Law",
+    "right": "Flowpoint-Resolved Cosmological Memory Resolvent Failure Law"
+  }
+}

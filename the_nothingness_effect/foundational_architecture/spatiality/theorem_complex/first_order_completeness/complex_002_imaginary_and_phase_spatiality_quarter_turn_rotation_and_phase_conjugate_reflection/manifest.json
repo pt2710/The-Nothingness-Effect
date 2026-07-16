@@ -1,0 +1,148 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 53,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_002_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection/1a/imaginary_unit_as_quarter_turn_rotation.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_002_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection/2a/phase_conjugate_reflection_involution.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_002_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection/1a2a/complex_rotationreflection_dihedral_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:imaginary_phase_spatiality_complex_plane_identification_1a2a",
+    "eq:imaginary_phase_spatiality_rotation_definition_1a2a",
+    "eq:imaginary_phase_spatiality_phase_conjugate_reflection_definition_1a2a",
+    "eq:imaginary_phase_spatiality_rotation_matrix_1a2a",
+    "eq:imaginary_phase_spatiality_reflection_matrix_1a2a",
+    "eq:imaginary_phase_spatiality_quarter_turn_definition_1a2a",
+    "eq:imaginary_phase_spatiality_quarter_turn_order_boundary_1a2a",
+    "eq:imaginary_phase_spatiality_reflection_involution_boundary_1a2a",
+    "eq:complex_quarter_turn_spatial_phase_definition_1a",
+    "eq:complex_quarter_turn_matrix_definition_1a",
+    "eq:imaginary_unit_quarter_turn_action_1a",
+    "eq:imaginary_unit_quarter_turn_powers_1a",
+    "eq:imaginary_unit_quarter_turn_metric_invariance_1a",
+    "eq:imaginary_unit_quarter_turn_determinant_1a",
+    "eq:imaginary_unit_quarter_turn_orbit_1a",
+    "eq:complex_rotation_operator_group_law_1a",
+    "eq:complex_rotation_operator_orthogonality_1a",
+    "eq:complex_rotation_operator_harmonic_signal_1a",
+    "eq:complex_rotation_operator_phase_time_shift_1a",
+    "eq:real_axis_projection_1a",
+    "eq:imaginary_axis_projection_1a",
+    "eq:real_imaginary_projection_decomposition_1a",
+    "eq:imaginary_unit_order_four_synthesis_1a",
+    "eq:quarter_turn_complex_spatiality_principle_1a",
+    "eq:phase_conjugate_spatial_reflection_definition_2a",
+    "eq:phase_conjugate_reflection_fixed_line_definition_2a",
+    "eq:phase_conjugate_reflection_square_2a",
+    "eq:phase_conjugate_reflection_metric_invariance_2a",
+    "eq:phase_conjugate_reflection_determinant_2a",
+    "eq:phase_conjugate_reflection_fixed_line_2a",
+    "eq:phase_conjugate_reflection_antifixed_line_2a",
+    "eq:phase_conjugate_reflection_real_axis_2a",
+    "eq:phase_conjugate_reflection_imaginary_axis_2a",
+    "eq:phase_conjugate_projectors_2a",
+    "eq:phase_conjugate_projector_relations_2a",
+    "eq:phase_conjugate_axis_decomposition_2a",
+    "eq:phase_conjugate_axis_eigenrelations_2a",
+    "eq:phase_conjugate_direction_decomposition_2a",
+    "eq:phase_conjugation_oriented_reflection_synthesis_2a",
+    "eq:phase_conjugate_reflection_principle_2a",
+    "eq:complex_rotation_reflection_generated_group_1a2a",
+    "eq:complex_rotation_reflection_defining_relation_1a2a",
+    "eq:complex_rotation_reflection_product_of_reflections_1a2a",
+    "eq:complex_rotation_reflection_mixed_composition_1a2a",
+    "eq:complex_rotation_reflection_dihedral_conjugacy_1a2a",
+    "eq:complex_rotation_reflection_word_normal_form_1a2a",
+    "eq:complex_rotation_reflection_finite_order_condition_1a2a",
+    "eq:complex_rotation_reflection_finite_dihedral_group_1a2a",
+    "eq:complex_rotation_reflection_infinite_dihedral_group_1a2a",
+    "eq:complex_rotation_reflection_quarter_turn_dihedral_1a2a",
+    "eq:reflection_product_word_commutation_1a2a",
+    "eq:complex_phase_rotation_reflection_synthesis_1a2a",
+    "eq:complex_rotation_reflection_closure_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_002_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection/falsification_checks/test_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection_falsification.py"
+  ],
+  "first_label": "app:spatiality_imaginary_phase",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/first_order_completeness/complex_002_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection/falsification_checks/test_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complex Rotation–Reflection Dihedral Correspondence",
+    "left": "Imaginary Unit as Quarter-Turn Rotation",
+    "right": "Phase-Conjugate Reflection Involution"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complex Rotation--Reflection Dihedral Correspondence",
+    "left": "Imaginary Unit as Quarter-Turn Rotation",
+    "right": "Phase-Conjugate Reflection Involution"
+  }
+}

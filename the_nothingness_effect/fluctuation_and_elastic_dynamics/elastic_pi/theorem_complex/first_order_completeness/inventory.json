@@ -1,0 +1,26 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "dfi_elastic_equivalence_and_breakdown",
+      "directory": "complex_001_dfielastic_equivalence_and_breakdown",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
+      "directory": "complex_002_elastic_e_curvature_encoding_and_curvature_ambiguity_divergence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_curvature_entropy_duality_and_decoupling",
+      "directory": "complex_003_elastic_curvatureentropy_duality_and_decoupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
+      "directory": "complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi"
+}

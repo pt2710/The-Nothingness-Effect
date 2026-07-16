@@ -1,0 +1,122 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 25,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "observation_induced_collapse_and_collapse_divergence",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_001_observation_induced_collapse_and_collapse_divergence/1a/observation_induced_ces_aro_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_001_observation_induced_collapse_and_collapse_divergence/2a/collapse_divergence.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_001_observation_induced_collapse_and_collapse_divergence/1a2a/complete_convergence_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:obs01_canonical_observation_collapse_1a2a",
+    "eq:obs01_canonical_average_realization_1a2a",
+    "eq:obs01_empirical_average_1a2a",
+    "eq:obs01_collapse_value_definition_1a",
+    "eq:obs01_collapse_convergence_1a",
+    "eq:obs01_observation_operator_1a",
+    "eq:obs01_ergodic_constant_1a",
+    "eq:obs01_fixed_subspace_1a",
+    "eq:obs01_projection_properties_1a",
+    "eq:obs01_von_neumann_mean_ergodic_1a",
+    "eq:obs01_unique_collapse_corollary_1a",
+    "eq:obs01_synthesis_1a",
+    "eq:std_obs01_principle_1a",
+    "eq:obs01_general_average_2a",
+    "eq:obs01_non_cauchy_witness_2a",
+    "eq:obs01_no_collapse_limit_2a",
+    "eq:obs01_liminf_limsup_gap_2a",
+    "eq:obs01_synthesis_2a",
+    "eq:std_obs01_principle_2a",
+    "eq:obs01_joint_status_set_1a2a",
+    "eq:obs01_joint_status_definition_1a2a",
+    "eq:obs01_exclusive_dichotomy_1a2a",
+    "eq:obs01_limit_defect_equivalence_1a2a",
+    "eq:obs01_joint_synthesis_1a2a",
+    "eq:std_obs01_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_001_observation_induced_collapse_and_collapse_divergence/falsification_checks/test_observation_induced_collapse_and_collapse_divergence_falsification.py"
+  ],
+  "first_label": "app:obs_complex_01",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "observation_induced_collapse_and_collapse_divergence",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_001_observation_induced_collapse_and_collapse_divergence/falsification_checks/test_observation_induced_collapse_and_collapse_divergence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Convergence Classification",
+    "left": "Observation-Induced Ces\\`aro Collapse",
+    "right": "Collapse Divergence"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Convergence Classification",
+    "left": "Observation-Induced Ces\\`aro Collapse",
+    "right": "Collapse Divergence"
+  }
+}

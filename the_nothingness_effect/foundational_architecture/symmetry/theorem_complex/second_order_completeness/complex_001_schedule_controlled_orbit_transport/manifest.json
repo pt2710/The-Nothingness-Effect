@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 33,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "schedule_controlled_orbit_transport",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_001_schedule_controlled_orbit_transport/1b/flat_schedule_controlled_reciprocal_transport.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_001_schedule_controlled_orbit_transport/2b/reconstruction_of_schedule_and_phase_tape.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_001_schedule_controlled_orbit_transport/1b2b/scheduleflat_transport_equivalence.py"
+  ],
+  "dependency_status": "not_directly_computable",
+  "equation_labels": [
+    "eq:symmetry_transport_involution",
+    "eq:symmetry_transport_schedule_parity",
+    "eq:symmetry_transport_tape_recursion",
+    "eq:symmetry_transport_parity_cocycle",
+    "eq:symmetry_transport_definition_1b",
+    "eq:symmetry_transport_path_1b",
+    "eq:symmetry_transport_cocycle_law_1b",
+    "eq:symmetry_transport_functor_law_1b",
+    "eq:symmetry_transport_local_update_1b",
+    "eq:symmetry_transport_prefix_locality_1b",
+    "eq:symmetry_transport_eventual_stabilization_1b",
+    "eq:symmetry_transport_principle_1b",
+    "eq:symmetry_transport_record_definition_2b",
+    "eq:symmetry_transport_record_flatness_2b",
+    "eq:symmetry_transport_record_local_exponent_2b",
+    "eq:symmetry_transport_schedule_reconstruction_2b",
+    "eq:symmetry_transport_record_reconstruction_2b",
+    "eq:symmetry_transport_faithful_readout_2b",
+    "eq:symmetry_transport_phase_complement_2b",
+    "eq:symmetry_transport_phase_gauge_invariance_2b",
+    "eq:symmetry_transport_code_complement_2b",
+    "eq:symmetry_transport_reconstructible_geometry_2b",
+    "eq:symmetry_transport_reconstruction_principle_2b",
+    "eq:symmetry_transport_forward_map_j",
+    "eq:symmetry_transport_reverse_map_j",
+    "eq:symmetry_transport_equivalence_j",
+    "eq:symmetry_transport_bijection_j",
+    "eq:symmetry_transport_intertwiner_j",
+    "eq:symmetry_transport_naturality_j",
+    "eq:symmetry_transport_closed_path_holonomy_j",
+    "eq:symmetry_transport_mutual_reconstruction_synthesis_j",
+    "eq:symmetry_transport_equivalence_principle_j",
+    "eq:symmetry_transport_completeness_principle_j"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_001_schedule_controlled_orbit_transport/falsification_checks/test_schedule_controlled_orbit_transport_falsification.py"
+  ],
+  "first_label": "app:drv_symmetry_b01",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "symmetry",
+  "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py"
+  ],
+  "source_complex_id": "schedule_controlled_orbit_transport",
+  "source_complex_ids": [
+    "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/second_order_completeness/complex_001_schedule_controlled_orbit_transport/falsification_checks/test_schedule_controlled_orbit_transport_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Schedule–Flat-Transport Equivalence",
+    "left": "Flat Schedule-Controlled Reciprocal Transport",
+    "right": "Reconstruction of Schedule and Phase Tape"
+  },
+  "theorem_titles_tex": {
+    "cross": "Schedule--Flat-Transport Equivalence",
+    "left": "Flat Schedule-Controlled Reciprocal Transport",
+    "right": "Reconstruction of Schedule and Phase Tape"
+  }
+}

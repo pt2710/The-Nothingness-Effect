@@ -1,0 +1,145 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "spectrum_flowpoint_addressability_and_unaddressability",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_001_spectrumflowpoint_addressability_and_unaddressability/1b/spectrumflowpoint_address_reconstruction_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_001_spectrumflowpoint_addressability_and_unaddressability/2b/spectrumflowpoint_address_defect_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_001_spectrumflowpoint_addressability_and_unaddressability/1b2b/address_reconstructiondefect_classification.py"
+  ],
+  "dependency_status": "not_directly_computable",
+  "equation_labels": [
+    "eq:soi_flowpoint_address_original_soi_1b2b",
+    "eq:soi_flowpoint_address_scale_1b2b",
+    "eq:soi_flowpoint_address_scaled_lebesgue_1b2b",
+    "eq:soi_flowpoint_address_relative_absolute_total_1b2b",
+    "eq:soi_flowpoint_declared_state_family_1b2b",
+    "eq:soi_flowpoint_state_measure_pair_1b2b",
+    "eq:soi_flowpoint_source_dual_complexes_1b2b",
+    "eq:soi_flowpoint_source_normalization_pair_1b2b",
+    "eq:soi_flowpoint_source_measurable_pair_1b2b",
+    "eq:soi_flowpoint_source_realizability_pair_1b2b",
+    "eq:soi_flowpoint_history_coder_1b2b",
+    "eq:soi_flowpoint_binary_evaluation_1b2b",
+    "eq:soi_flowpoint_compatibility_composition_symbol_1b2b",
+    "eq:soi_flowpoint_branch_composition_1b",
+    "eq:soi_flowpoint_branch_composition_2b",
+    "eq:soi_flowpoint_branch_exchange_involution_1b2b",
+    "eq:soi_flowpoint_branch_exchange_closure_1b2b",
+    "eq:soi_flowpoint_address_definition_pushforward_1b",
+    "eq:soi_flowpoint_unique_address_1b",
+    "eq:soi_flowpoint_unique_retrieval_1b",
+    "eq:soi_flowpoint_relative_address_isomorphism_1b",
+    "eq:soi_flowpoint_absolute_address_isomorphism_1b",
+    "eq:soi_flowpoint_singleton_fibre_1b",
+    "eq:soi_flowpoint_address_injective_1b",
+    "eq:soi_flowpoint_history_injective_1b",
+    "eq:soi_flowpoint_proof_normalization_input_1b",
+    "eq:soi_flowpoint_inverse_address_1b",
+    "eq:soi_flowpoint_address_scale_covariance_1b",
+    "eq:soi_flowpoint_positive_symmetric_synthesis_1b",
+    "eq:std_soi_address_1b",
+    "eq:soi_flowpoint_omission_set_2b",
+    "eq:soi_flowpoint_collision_set_2b",
+    "eq:soi_flowpoint_range_gap_2b",
+    "eq:soi_flowpoint_calibration_defect_2b",
+    "eq:soi_flowpoint_representation_residual_2b",
+    "eq:soi_flowpoint_unaddressability_modes_2b",
+    "eq:soi_flowpoint_absolute_calibration_defect_2b",
+    "eq:soi_flowpoint_complete_address_criterion_2b",
+    "eq:soi_flowpoint_negative_symmetric_synthesis_2b",
+    "eq:std_soi_address_defect_2b",
+    "eq:soi_flowpoint_address_status_1b2b",
+    "eq:soi_flowpoint_exclusive_symmetric_status_1b2b",
+    "eq:soi_flowpoint_symmetric_involution_1b2b",
+    "eq:soi_flowpoint_general_symmetric_composition_1b2b",
+    "eq:soi_flowpoint_componentwise_branch_exchange_1b2b",
+    "eq:soi_flowpoint_address_defect_tuple_1b2b",
+    "eq:soi_flowpoint_complete_symmetric_hierarchy_1b2b",
+    "eq:std_soi_address_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_001_spectrumflowpoint_addressability_and_unaddressability/falsification_checks/test_spectrum_flowpoint_addressability_and_unaddressability_falsification.py"
+  ],
+  "first_label": "app:soi_complex_06",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "spectrum_flowpoint_addressability_and_unaddressability",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_001_spectrumflowpoint_addressability_and_unaddressability/falsification_checks/test_spectrum_flowpoint_addressability_and_unaddressability_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Address Reconstruction–Defect Classification",
+    "left": "Spectrum–Flowpoint Address Reconstruction Theorem",
+    "right": "Spectrum–Flowpoint Address-Defect Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Address Reconstruction--Defect Classification",
+    "left": "Spectrum--Flowpoint Address Reconstruction Theorem",
+    "right": "Spectrum--Flowpoint Address-Defect Theorem"
+  }
+}

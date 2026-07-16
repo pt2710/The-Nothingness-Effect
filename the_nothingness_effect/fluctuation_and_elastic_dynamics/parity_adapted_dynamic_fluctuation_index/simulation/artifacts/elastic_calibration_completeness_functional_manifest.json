@@ -1,0 +1,29 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "approximation_metadata": {
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "pdfi_contract_metrics.csv",
+    "pdfi_contract_residuals.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "1183c31d89d1642b46c47c200f62639f63afe1ccd61daa94d36c197e988e6e27",
+  "parameters": {
+    "category": "pdfi",
+    "fixture": "deterministic-contract-v1"
+  },
+  "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation",
+  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "elastic_calibration_completeness_functional"
+}

@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination/1a/parity_orthogonal_optimization.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination/2a/cross_parity_gradient_contamination.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination/1a2a/parity_orthogonal_optimization_cross_parity_gradient_contamination.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:pgqenn_parity_orth_opt_commute_align_1a",
+    "eq:pgqenn_parity_orth_opt_orthogonality_eq_1a",
+    "eq:pgqenn_parity_orth_opt_calculus_align_1a",
+    "eq:pgqenn_parity_orth_opt_inner_product_invariant_eq_1a",
+    "eq:pgqenn_parity_orth_opt_lemma_invariance_align_1a",
+    "eq:pgqenn_parity_orth_opt_lemma_cross_proj_eq_1a",
+    "eq:pgqenn_parity_orth_opt_lemma_calculus_align_1a",
+    "eq:pgqenn_parity_orth_opt_lemma_cross_constancy_eq_1a",
+    "eq:pgqenn_parity_orth_opt_proof_comm_diff_align_1a",
+    "eq:pgqenn_parity_orth_opt_proof_inner_eq_1a",
+    "eq:pgqenn_parity_orth_opt_proof_calculus_align_1a",
+    "eq:pgqenn_parity_orth_opt_proof_const_eq_1a",
+    "eq:pgqenn_parity_orth_opt_cor_comm_align_1a",
+    "eq:pgqenn_parity_orth_opt_cor_loss_rate_eq_1a",
+    "eq:pgqenn_parity_orth_opt_cor_calculus_align_1a",
+    "eq:pgqenn_parity_orth_opt_cor_calculus_partial_eq_1a",
+    "eq:pgqenn_parity_orth_opt_commutator_align_2a",
+    "eq:pgqenn_parity_orth_opt_cross_ip_eq_2a",
+    "eq:pgqenn_parity_orth_opt_coupled_drift_align_2a",
+    "eq:pgqenn_parity_orth_opt_coupled_nonconst_eq_2a",
+    "eq:pgqenn_parity_orth_opt_lemma_blocks_align_2a",
+    "eq:pgqenn_parity_orth_opt_lemma_norm_eq_2a",
+    "eq:pgqenn_parity_orth_opt_lemma_calculus_align_2a",
+    "eq:pgqenn_parity_orth_opt_lemma_calculus_exist_eq_2a",
+    "eq:pgqenn_parity_orth_opt_proof_noncomm_align_2a",
+    "eq:pgqenn_parity_orth_opt_proof_crosscorr_eq_2a",
+    "eq:pgqenn_parity_orth_opt_proof_calculus_align_2a",
+    "eq:pgqenn_parity_orth_opt_proof_calculus_drift_eq_2a",
+    "eq:pgqenn_parity_orth_opt_cor_loss_align_2a",
+    "eq:pgqenn_parity_orth_opt_cor_less_descent_eq_2a",
+    "eq:pgqenn_parity_orth_opt_cor_stoch_align_2a",
+    "eq:pgqenn_parity_orth_opt_cor_variance_eq_2a",
+    "eq:pgqenn_parity_orth_opt_commute_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_contam_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_calculus_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_calculus_coupled_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_lemma_equiv_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_lemma_comm_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_lemma_calculus_equiv_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_lemma_calculus_witness_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_dual_implications_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_dual_block_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_dual_calculus_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_dual_exhaustive_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_cor_cert_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_cor_cert_eq_1a2a",
+    "eq:pgqenn_parity_orth_opt_cor_gen_align_1a2a",
+    "eq:pgqenn_parity_orth_opt_cor_gen_eq_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination/falsification_checks/test_parity_orthogonal_optimization_cross_parity_gradient_contamination_falsification.py"
+  ],
+  "first_label": "app:pgqenn_complex_09",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_009_parity_orthogonal_optimization_cross_parity_gradient_contamination/falsification_checks/test_parity_orthogonal_optimization_cross_parity_gradient_contamination_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Parity-Orthogonal Optimization <-> Cross-Parity Gradient Contamination",
+    "left": "Parity-Orthogonal Optimization",
+    "right": "Cross-Parity Gradient Contamination"
+  },
+  "theorem_titles_tex": {
+    "cross": "Parity-Orthogonal Optimization $\\leftrightarrow$ Cross-Parity Gradient Contamination",
+    "left": "Parity-Orthogonal Optimization",
+    "right": "Cross-Parity Gradient Contamination"
+  }
+}

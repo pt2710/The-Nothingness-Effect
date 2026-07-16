@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 32,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_dtqc_spectral_measure_dual_of_dtqc",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/1a/elastic_pi_dtqc_operational.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/2a/spectral_measure_dual_of_dtqc.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/1a2a/elastic_pi_dtqc_spectral_measure_dual_of_dtqc.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc_first_deriv_1a",
+    "eq:dtqc_second_deriv_1a",
+    "eq:support_invariance_scalar_1a",
+    "eq:diff_support_preservation_1a",
+    "eq:algebraic_spec_equals_support_1a",
+    "eq:apply_elastic_pi_invariance_1a",
+    "eq:proof_first_deriv_repeat_1a",
+    "eq:proof_second_deriv_repeat_1a",
+    "eq:proof_spec_preserve_1a",
+    "eq:neighbor_spacings_1a",
+    "eq:windowed_derivative_sampling_1a",
+    "eq:fourier_synthesis_measure_2a",
+    "eq:measure_derivative_interchange_2a",
+    "eq:lebesgue_decomposition_2a",
+    "eq:parseval_pp_only_2a",
+    "eq:series_via_measure_2a",
+    "eq:series_via_coeffs_2a",
+    "eq:coeff_support_identity_2a",
+    "eq:measure_derivative_interchange_2a_proof",
+    "eq:parseval_decomposition_2a",
+    "eq:translation_boundedness_2a",
+    "eq:bounded_derivative_functionals_2a",
+    "eq:dtqc01_joint_status_1a2a",
+    "eq:dtqc_support_amp_def_1a2a",
+    "eq:dtqc_time_series_theorem_1a2a",
+    "eq:dtqc_derivative_theorem_1a2a",
+    "eq:weights_equal_coeffs_1a2a",
+    "eq:fourier_duality_atomic_1a2a",
+    "eq:spec_support_equality_1a2a",
+    "eq:parseval_dual_closure_1a2a",
+    "eq:invertible_map_1a2a",
+    "eq:test_function_pairing_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/falsification_checks/test_elastic_dtqc_spectral_measure_dual_of_dtqc_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_01",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/1a/elastic_pi_dtqc_operational.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/2a/spectral_measure_dual_of_dtqc.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/1a2a/elastic_pi_dtqc_spectral_measure_dual_of_dtqc.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "dtqc_spectrum field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "elastic_dtqc_spectral_measure_dual_of_dtqc",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_001_elastic_dtqc_spectral_measure_dual_of_dtqc/falsification_checks/test_elastic_dtqc_spectral_measure_dual_of_dtqc_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic-pi DTQC <-> Spectral-Measure Dual of DTQC",
+    "left": "Elastic-pi DTQC (Operational)",
+    "right": "Spectral-Measure Dual of DTQC"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic-$\\pi$ DTQC $\\leftrightarrow$ Spectral-Measure Dual of DTQC",
+    "left": "Elastic-$\\pi$ DTQC (Operational)",
+    "right": "Spectral-Measure Dual of DTQC"
+  }
+}

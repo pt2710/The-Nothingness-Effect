@@ -1,0 +1,31 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "motif_spectral_modality_collapse_spatial_field",
+      "directory": "complex_001_motifspectralmodalitycollapse_spatial_field",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "cross_modal_compositional_spatial_closure",
+      "directory": "complex_002_cross_modal_compositional_spatial_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "error_entropy_phase_locking_spatial_closure",
+      "directory": "complex_003_errorentropy_phase_locking_spatial_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "modality_spectrum_meta_learnability_spatial_closure",
+      "directory": "complex_004_modalityspectrum_meta_learnability_spatial_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "stack_domain_cloning_spatial_closure",
+      "directory": "complex_005_stackdomain_cloning_spatial_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/soinets"
+}

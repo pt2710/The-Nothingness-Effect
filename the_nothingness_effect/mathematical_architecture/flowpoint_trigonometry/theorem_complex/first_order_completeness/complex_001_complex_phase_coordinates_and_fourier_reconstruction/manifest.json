@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
+  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "artifact_manifests": [
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/test/artifacts/manifest.json",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 18,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
+  "component_modules": [
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/1a/euler_reconstruction_and_periodic_phase_transport.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/2a/fourier_isometry_and_reconstruction.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/1a2a/complex_phasefirst_harmonic_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:fm_trig_phase_coordinate_1a",
+    "eq:fm_trig_euler_reconstruction_1a",
+    "eq:fm_trig_tangent_reflection_1a",
+    "eq:fm_trig_signed_radius_gauge_1a",
+    "eq:fm_trig_phase_synthesis_1a",
+    "eq:fm_trig_phase_principle_1a",
+    "eq:fm_trig_harmonic_maps_2a",
+    "eq:fm_trig_fourier_isometry_2a",
+    "eq:fm_trig_harmonic_tail_2a",
+    "eq:fm_trig_harmonic_certificate_2a",
+    "eq:fm_trig_harmonic_synthesis_2a",
+    "eq:fm_trig_harmonic_principle_2a",
+    "eq:fm_trig_first_harmonic_embedding_joint",
+    "eq:fm_trig_first_harmonic_equivalence_joint",
+    "eq:fm_trig_amplitude_phase_separation_joint",
+    "eq:fm_trig_amplitude_recovery_joint",
+    "eq:fm_trig_joint_synthesis_1a2a",
+    "eq:fm_trig_joint_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/falsification_checks/test_complex_phase_coordinates_and_fourier_reconstruction_falsification.py"
+  ],
+  "first_label": "ssec:fm_trig_complex",
+  "implementation_modules": [
+    "the_nothingness_effect/mathematical_architecture/a_level.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/1a/euler_reconstruction_and_periodic_phase_transport.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/2a/fourier_isometry_and_reconstruction.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/1a2a/complex_phasefirst_harmonic_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "unitary finite transform result",
+      "name": "phase/Fourier reconstruction",
+      "python_types": [
+        "PhaseCoordinateResult"
+      ]
+    },
+    "domain": {
+      "description": "finite amplitude, phase, and sample",
+      "name": "complex phase and finite samples",
+      "python_types": [
+        "PhaseCoordinateInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.mathematical_architecture.a_level.phase_coordinates",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.mathematical_architecture.a_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "mathematical_closure",
+  "owner_path": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/mathematical_architecture/simulation/run_suite.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/simulate_flowpoint_trigonometry.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/simulate_fp_trigonometry.py"
+  ],
+  "source_complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_mathematical_closure_contracts.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/test/test_flowpoint_trigonometry.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/test/test_fp_trigonometry.py",
+    "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/theorem_complex/first_order_completeness/complex_001_complex_phase_coordinates_and_fourier_reconstruction/falsification_checks/test_complex_phase_coordinates_and_fourier_reconstruction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complex Phase–First-Harmonic Equivalence",
+    "left": "Euler Reconstruction and Periodic Phase Transport",
+    "right": "Fourier Isometry and Reconstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complex Phase--First-Harmonic Equivalence",
+    "left": "Euler Reconstruction and Periodic Phase Transport",
+    "right": "Fourier Isometry and Reconstruction"
+  }
+}

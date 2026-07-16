@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_qenn_c01_master",
+      "eq:tne_spatial_qenn_c01_1c_definition",
+      "eq:tne_spatial_qenn_c01_1c_theorem",
+      "eq:tne_spatial_qenn_c01_1c_lemma",
+      "eq:tne_spatial_qenn_c01_1c_synthesis",
+      "eq:tne_spatial_qenn_c01_1c_principle",
+      "eq:tne_spatial_qenn_c01_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "lyapunov_parseval_training_isometry_closure",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/1c/lyapunov_weight_lattice_contraction_dfi_entropy_plateau_law_pv_inflation_pure_point_diffraction.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/2c/fourierpisot_spectral_purification_dfi_divergence_spiking_law_non_pv_salem_continuous_leakage_en.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/1c2c/lyapunov_weight_lattice_fourierpisot_spectral_purification_pv_inflation_pure_point_diffraction_n.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_qenn_c01_spatial_carrier",
+    "eq:drv_qenn_c01_1c",
+    "eq:drv_qenn_c01_theorem_1c",
+    "eq:drv_qenn_c01_res_1c",
+    "eq:drv_qenn_c01_2c",
+    "eq:drv_qenn_c01_res_2c",
+    "eq:drv_qenn_c01_joint",
+    "eq:drv_qenn_c01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/falsification_checks/test_lyapunov_parseval_training_isometry_closure_falsification.py"
+  ],
+  "first_label": "app:drv_qenn_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/1c2c/lyapunov_weight_lattice_fourierpisot_spectral_purification_pv_inflation_pure_point_diffraction_n.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/1c/lyapunov_weight_lattice_contraction_dfi_entropy_plateau_law_pv_inflation_pure_point_diffraction.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/2c/fourierpisot_spectral_purification_dfi_divergence_spiking_law_non_pv_salem_continuous_leakage_en.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/1c2c/lyapunov_weight_lattice_fourierpisot_spectral_purification_pv_inflation_pure_point_diffraction_n.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.artificial_intelligence.qenn.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "one spatial defect field with boundary, localization, coercivity, reconstruction, and observability diagnostics",
+      "name": "lyapunov_parseval_training_isometry_closure",
+      "python_types": [
+        "QENNSpatialClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite rank-two training state and positive residual weights",
+      "name": "QENN training field",
+      "python_types": [
+        "QENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.qenn.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.qenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "lyapunov_parseval_training_isometry_closure",
+  "source_complex_ids": [
+    "lyapunov_entropy_dissipation_functional",
+    "pv_parseval_spectral_energy_lock"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_qenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/third_order_completeness/complex_001_lyapunovparseval_training_isometry_closure/falsification_checks/test_lyapunov_parseval_training_isometry_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Lyapunov Weight Lattice <-> Fourier–Pisot Spectral Purification – PV Inflation (Pure-Point Diffraction) <-> Non-PV/Salem Leakage",
+    "left": "Lyapunov Weight Lattice Contraction – DFI Entropy Plateau – Law – PV Inflation Pure-Point Diffraction – Parseval Energy Bijection for Epochs – Law",
+    "right": "Fourier–Pisot Spectral Purification – DFI Divergence / Spiking – Law – Non-PV/Salem Continuous Leakage – Energy/Mass Imbalance – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Lyapunov Weight Lattice $\\leftrightarrow$ Fourier--Pisot Spectral Purification -- PV Inflation (Pure-Point Diffraction) $\\leftrightarrow$ Non-PV/Salem Leakage",
+    "left": "Lyapunov Weight Lattice Contraction -- DFI Entropy Plateau -- Law -- PV Inflation $\\Rightarrow$ Pure-Point Diffraction -- Parseval Energy Bijection for Epochs -- Law",
+    "right": "Fourier--Pisot Spectral Purification -- DFI Divergence / Spiking -- Law -- Non-PV/Salem $\\Rightarrow$ Continuous Leakage -- Energy/Mass Imbalance -- Law"
+  }
+}

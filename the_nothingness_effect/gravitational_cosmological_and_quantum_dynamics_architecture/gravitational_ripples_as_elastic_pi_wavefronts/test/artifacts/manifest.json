@@ -1,0 +1,46 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+      "sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/generate_artifacts.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "elastic_e_ripple_propagation_gr_linear_wave_recovery",
+    "entropic_q_factor_suppression_conserved_ringdown_quality",
+    "nonlinear_overtone_generation_spectral_purity",
+    "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence",
+    "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint",
+    "flowpoint_boundary_mode_conversion_pure_mode_propagation",
+    "shock_onset_self_steepening_threshold_no_shock_propagation",
+    "stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
+    "environment_dependent_group_velocity_mapping_uniform_propagation",
+    "invertible_source_transport_detection_map_non_invertible_degeneracy",
+    "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i",
+    "wave_energy_quality_invariant",
+    "distance_corrected_harmonic_coupling",
+    "flowpoint_resolved_dfi_memory_transfer",
+    "shock_gated_stochastic_tilt_production",
+    "environment_tomography_information_metric",
+    "damping_and_lag_corrected_harmonic_clock",
+    "memory_shock_environmental_reconstruction"
+  ]
+}

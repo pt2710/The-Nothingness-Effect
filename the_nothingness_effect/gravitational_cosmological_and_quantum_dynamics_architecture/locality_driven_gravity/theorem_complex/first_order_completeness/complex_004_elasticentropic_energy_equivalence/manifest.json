@@ -1,0 +1,142 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 31,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "locality_driven_gravity::elastic_entropic_energy_equivalence",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/1a/elastic_dubler_shift_enables_local_energy_transfer.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/2a/thermodynamic_equilibrium_forbids_dubler_transport.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/1a2a/elasticentropic_energy_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ldg04_energy_equivalence_order_parameter_1a",
+    "eq:ldg04_energy_equivalence_branch_condition_1a",
+    "eq:energy_flux_by_dubler_1a",
+    "eq:energy_flux_by_dubler_calculus_1a",
+    "eq:lemma_1a_dubler",
+    "eq:lemma_1a_dubler_calc",
+    "eq:proof_1a_flux",
+    "eq:proof_1a_flux_calc",
+    "eq:corollary_1a_dubler",
+    "eq:corollary_1a_dubler_calc",
+    "eq:ldg04_energy_equivalence_order_parameter_2a",
+    "eq:ldg04_energy_equivalence_branch_condition_2a",
+    "eq:2a_equilibrium_forbids_flux",
+    "eq:2a_equilibrium_forbids_flux_calc",
+    "eq:lemma_2a_stasis",
+    "eq:lemma_2a_stasis_calc",
+    "eq:proof_2a_equilibrium",
+    "eq:proof_2a_equilibrium_calc",
+    "eq:corollary_2a_equilibrium",
+    "eq:corollary_2a_equilibrium_calc",
+    "eq:ldg04_energy_equivalence_status_1a2a",
+    "eq:energy_flux_by_dubler_1a2a",
+    "eq:null_gradient_no_transfer_1a2a",
+    "eq:partial_flux_equation_1a2a",
+    "eq:partial_flux_equation_null_1a2a",
+    "eq:lemma_1a2a_energy_iff",
+    "eq:lemma_1a2a_energy_iff_calc",
+    "eq:proof_1a2a_energy_iff",
+    "eq:proof_1a2a_energy_iff_calc",
+    "eq:corollary_1a2a_gradient_null",
+    "eq:corollary_1a2a_gradient_null_calc"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/falsification_checks/test_locality_driven_gravity_elastic_entropic_energy_equivalence_falsification.py"
+  ],
+  "first_label": "ssec:locality_driven_gravity_entropic_energy_equivalence_lemma_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/1a/elastic_dubler_shift_enables_local_energy_transfer.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/2a/thermodynamic_equilibrium_forbids_dubler_transport.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/1a2a/elasticentropic_energy_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "gravity_energy field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "locality_driven_gravity",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py"
+  ],
+  "source_complex_id": "elastic_entropic_energy_equivalence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_locality_driven_gravity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/test_spiral_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/theorem_complex/first_order_completeness/complex_004_elasticentropic_energy_equivalence/falsification_checks/test_locality_driven_gravity_elastic_entropic_energy_equivalence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic–Entropic Energy Equivalence",
+    "left": "Elastic Dubler Shift Enables Local Energy Transfer",
+    "right": "Thermodynamic Equilibrium Forbids Dubler Transport"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic–Entropic Energy Equivalence (1A $\\leftrightarrow$ 2A)",
+    "left": "Elastic Dubler Shift Enables Local Energy Transfer (1A)",
+    "right": "Thermodynamic Equilibrium Forbids Dubler Transport (2A)"
+  }
+}

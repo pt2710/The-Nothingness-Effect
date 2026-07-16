@@ -1,0 +1,11 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "finite_approximation_and_vanishing_residual_energy",
+      "directory": "complex_001_finite_approximation_and_vanishing_residual_energy",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation"
+}

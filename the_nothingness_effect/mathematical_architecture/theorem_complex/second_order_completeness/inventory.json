@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory",
+      "directory": "complex_001_addition_of_arithmetic_orientation_and_typed_operation_theory",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "addition_of_approximation_and_harmonic_geometry",
+      "directory": "complex_002_addition_of_approximation_and_harmonic_geometry",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/mathematical_architecture"
+}

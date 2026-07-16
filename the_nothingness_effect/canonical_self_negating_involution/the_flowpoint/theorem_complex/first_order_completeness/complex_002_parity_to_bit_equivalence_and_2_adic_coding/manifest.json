@@ -1,0 +1,164 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 51,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "parity_to_bit_equivalence_and_2_adic_coding",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/1a/flowpoint_as_a_2_adic_sequence_generator.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/2a/orbitwise_universality_of_flowpoint_involution.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/1a2a/parity_to_bit_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:parity_bit_global_flowpoint_clock_1a2a",
+    "eq:parity_bit_global_flowpoint_closed_form_1a2a",
+    "eq:parity_bit_global_sampling_times_1a2a",
+    "eq:parity_bit_global_binary_readout_1a2a",
+    "eq:flowpoint_schedule_initial_step_definition_1a",
+    "eq:flowpoint_schedule_recursive_definition_1a",
+    "eq:flowpoint_schedule_xor_definition_1a",
+    "eq:flowpoint_2adic_coding_map_definition_1a",
+    "eq:flowpoint_target_bit_realization_1a",
+    "eq:flowpoint_exact_2adic_realization_1a",
+    "eq:2adic_bit_flip_initial_parity_1a",
+    "eq:2adic_bit_flip_increment_parity_1a",
+    "eq:2adic_bit_flip_cumulative_parity_1a",
+    "eq:2adic_bit_flip_readout_identity_1a",
+    "eq:2adic_bit_flip_toggle_hold_identity_1a",
+    "eq:2adic_sequence_partial_sum_1a",
+    "eq:2adic_sequence_error_bound_1a",
+    "eq:2adic_sequence_convergence_1a",
+    "eq:2adic_sequence_isometry_1a",
+    "eq:involutive_orbit_structure_definition_2a",
+    "eq:involutive_orbit_definition_2a",
+    "eq:flowpoint_orbitwise_conjugacy_2a",
+    "eq:joint_flowpoint_orbit_definition_1a2a",
+    "eq:joint_flowpoint_orbit_closed_form_1a2a",
+    "eq:joint_sampling_times_definition_1a2a",
+    "eq:joint_binary_readout_definition_1a2a",
+    "eq:joint_parity_bit_initial_schedule_1a2a",
+    "eq:joint_parity_bit_recursive_schedule_1a2a",
+    "eq:joint_parity_equivalence_time_1a2a",
+    "eq:joint_parity_equivalence_sign_1a2a",
+    "eq:joint_parity_equivalence_bit_1a2a",
+    "eq:joint_parity_bit_identity_1a2a",
+    "eq:joint_parity_bit_2adic_code_1a2a",
+    "eq:2adic_universal_involution_orbit_1a2a",
+    "eq:2adic_universal_involution_sampled_orbit_1a2a",
+    "eq:2adic_universal_involution_extractor_1a2a",
+    "eq:joint_underlying_orbit_periodicity_1a2a",
+    "eq:joint_prefix_congruence_1a2a",
+    "eq:joint_prefix_stability_1a2a",
+    "eq:joint_linear_algebraic_realization_1a2a",
+    "eq:joint_linear_operator_realization_1a2a",
+    "eq:joint_quantum_compatible_realization_1a2a",
+    "eq:joint_geometric_holonomy_realization_1a2a",
+    "eq:joint_geometric_bit_readout_1a2a",
+    "eq:joint_2adic_analytic_realization_1a2a",
+    "eq:joint_principle_involution_1a2a",
+    "eq:joint_principle_conjugacy_1a2a",
+    "eq:joint_principle_flowpoint_clock_1a2a",
+    "eq:joint_principle_sampling_schedule_1a2a",
+    "eq:joint_principle_bit_readout_1a2a",
+    "eq:joint_principle_parity_bit_identity_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/falsification_checks/test_parity_to_bit_equivalence_and_2_adic_coding_falsification.py"
+  ],
+  "first_label": "subsec:parity_to_bit_equivalence_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/a_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/1a/flowpoint_as_a_2_adic_sequence_generator.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/2a/orbitwise_universality_of_flowpoint_involution.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/1a2a/parity_to_bit_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "exact parity schedule with explicit prefix length",
+      "name": "scheduled finite 2-adic prefix",
+      "python_types": [
+        "FlowpointSchedule"
+      ]
+    },
+    "domain": {
+      "description": "nonempty sequence containing only 0 and 1",
+      "name": "finite binary prefix",
+      "python_types": [
+        "tuple",
+        "list"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level._schedule_invariant",
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.flowpoint.FlowpointSchedule.from_bits",
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "parity_to_bit_equivalence_and_2_adic_coding",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/invariants/test_flowpoint_source_laws.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_002_parity_to_bit_equivalence_and_2_adic_coding/falsification_checks/test_parity_to_bit_equivalence_and_2_adic_coding_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Parity-to-Bit Equivalence",
+    "left": "Flowpoint as a 2-Adic Sequence Generator",
+    "right": "Orbitwise Universality of Flowpoint Involution"
+  },
+  "theorem_titles_tex": {
+    "cross": "Parity-to-Bit Equivalence \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Flowpoint as a \\(2\\)-Adic Sequence Generator",
+    "right": "Orbitwise Universality of Flowpoint Involution"
+  }
+}

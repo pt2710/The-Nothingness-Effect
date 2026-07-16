@@ -1,0 +1,56 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "continuum_trajectory_cardinality_and_countable_phase_cell_collapse",
+      "directory": "complex_001_continuum_trajectory_cardinality_and_countable_phase_cell_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "power_set_continuum_and_atomic_quotient_collapse",
+      "directory": "complex_002_power_set_continuum_and_atomic_quotient_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "dense_flowpoint_traces_and_nowhere_dense_quantized_collapse",
+      "directory": "complex_003_dense_flowpoint_traces_and_nowhere_dense_quantized_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse",
+      "directory": "complex_004_recursive_cantor_space_universality_and_finite_resolution_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+      "directory": "complex_005_fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
+      "directory": "complex_006_duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_an",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion",
+      "directory": "complex_007_complete_boolean_algebra_missing_complements_and_generated_completion",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+      "directory": "complex_008_operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse",
+      "directory": "complex_009_2_adic_coded_continuum_coverage_and_singleton_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "dual_realizability_invariant_closure_and_defect_repair",
+      "directory": "complex_010_dual_realizability_invariant_closure_and_defect_repair",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/uncountable_infinity"
+}

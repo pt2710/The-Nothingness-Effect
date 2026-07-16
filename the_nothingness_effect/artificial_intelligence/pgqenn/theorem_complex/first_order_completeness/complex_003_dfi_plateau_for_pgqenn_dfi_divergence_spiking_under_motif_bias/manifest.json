@@ -1,0 +1,158 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/1a/dfi_plateau_for_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/2a/dfi_divergence_spiking_under_motif_bias.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/1a2a/dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dfi_pgqenn_algebraic_align_1a",
+    "eq:dfi_pgqenn_algebraic_equation_1a",
+    "eq:dfi_pgqenn_calculus_align_1a",
+    "eq:dfi_pgqenn_calculus_equation_1a",
+    "eq:dfi_pgqenn_lemma_algebraic_align_1a",
+    "eq:dfi_pgqenn_lemma_algebraic_equation_1a",
+    "eq:dfi_pgqenn_lemma_calculus_align_1a",
+    "eq:dfi_pgqenn_lemma_calculus_equation_1a",
+    "eq:dfi_pgqenn_proof_algebraic_align_1a",
+    "eq:dfi_pgqenn_proof_algebraic_equation_1a",
+    "eq:dfi_pgqenn_proof_calculus_align_1a",
+    "eq:dfi_pgqenn_proof_calculus_equation_1a",
+    "eq:dfi_pgqenn_cor_algebraic_align_1a",
+    "eq:dfi_pgqenn_cor_algebraic_equation_1a",
+    "eq:dfi_pgqenn_cor_calculus_align_1a",
+    "eq:dfi_pgqenn_cor_calculus_equation_1a",
+    "eq:dfi_pgqenn_algebraic_align_2a",
+    "eq:dfi_pgqenn_algebraic_equation_2a",
+    "eq:dfi_pgqenn_calculus_align_2a",
+    "eq:dfi_pgqenn_calculus_equation_2a",
+    "eq:dfi_pgqenn_lemma_algebraic_align_2a",
+    "eq:dfi_pgqenn_lemma_algebraic_equation_2a",
+    "eq:dfi_pgqenn_lemma_calculus_align_2a",
+    "eq:dfi_pgqenn_lemma_calculus_equation_2a",
+    "eq:dfi_pgqenn_proof_algebraic_align_2a",
+    "eq:dfi_pgqenn_proof_algebraic_equation_2a",
+    "eq:dfi_pgqenn_proof_calculus_align_2a",
+    "eq:dfi_pgqenn_proof_calculus_equation_2a",
+    "eq:dfi_pgqenn_cor_algebraic_align_2a",
+    "eq:dfi_pgqenn_cor_algebraic_equation_2a",
+    "eq:dfi_pgqenn_cor_calculus_align_2a",
+    "eq:dfi_pgqenn_cor_calculus_equation_2a",
+    "eq:dfi_pgqenn_algebraic_align_1a2a",
+    "eq:dfi_pgqenn_algebraic_equation_1a2a",
+    "eq:dfi_pgqenn_calculus_align_1a2a",
+    "eq:dfi_pgqenn_calculus_equation_1a2a",
+    "eq:dfi_pgqenn_lemma_algebraic_align_1a2a",
+    "eq:dfi_pgqenn_lemma_algebraic_equation_1a2a",
+    "eq:dfi_pgqenn_lemma_calculus_align_1a2a",
+    "eq:dfi_pgqenn_lemma_calculus_equation_1a2a",
+    "eq:dfi_pgqenn_proof_algebraic_align_1a2a",
+    "eq:dfi_pgqenn_proof_algebraic_equation_1a2a",
+    "eq:dfi_pgqenn_proof_calculus_align_1a2a",
+    "eq:dfi_pgqenn_proof_calculus_equation_1a2a",
+    "eq:dfi_pgqenn_cor_algebraic_align_1a2a",
+    "eq:dfi_pgqenn_cor_algebraic_equation_1a2a",
+    "eq:dfi_pgqenn_cor_calculus_align_1a2a",
+    "eq:dfi_pgqenn_cor_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/falsification_checks/test_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias_falsification.py"
+  ],
+  "first_label": "app:pgqenn_complex_03",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/1a/dfi_plateau_for_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/2a/dfi_divergence_spiking_under_motif_bias.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/1a2a/dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed prime-graph response, residual field, and failure condition",
+      "name": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
+      "python_types": [
+        "PGQENNSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite typed prime graph, aligned finite node features, positive K_D and residual weights",
+      "name": "PGQENN prime graph field",
+      "python_types": [
+        "PGQENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pgqenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_003_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias/falsification_checks/test_dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "DFI Plateau for PGQENN <-> DFI Divergence/Spiking under Motif Bias",
+    "left": "DFI Plateau for PGQENN",
+    "right": "DFI Divergence/Spiking under Motif Bias"
+  },
+  "theorem_titles_tex": {
+    "cross": "DFI Plateau for PGQENN $\\leftrightarrow$ DFI Divergence/Spiking under Motif Bias (1A $\\leftrightarrow$ 2A)",
+    "left": "DFI Plateau for PGQENN (1A)",
+    "right": "DFI Divergence/Spiking under Motif Bias (2A)"
+  }
+}

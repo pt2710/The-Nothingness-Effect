@@ -1,0 +1,31 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "weighted_path_functional_and_norm_admissibility",
+      "directory": "complex_001_weighted_path_functional_and_norm_admissibility",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_field_ratios_and_weight_regularity",
+      "directory": "complex_002_elastic_field_ratios_and_weight_regularity",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds",
+      "directory": "complex_003_uniform_entropy_reduction_and_entropic_reweighting_bounds",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pdfi_elastic_norm_interface",
+      "directory": "complex_004_pdfielastic_norm_interface",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "pdfi_elastic_norm_equivalence_and_decoupling",
+      "directory": "complex_005_pdfielastic_norm_equivalence_and_decoupling",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm"
+}

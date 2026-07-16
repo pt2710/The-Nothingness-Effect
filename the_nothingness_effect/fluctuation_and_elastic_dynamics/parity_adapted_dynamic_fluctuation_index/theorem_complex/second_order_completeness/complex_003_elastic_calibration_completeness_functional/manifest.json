@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_pdfi_b03_master",
+      "eq:tne_additive_pdfi_b03_1b_definition",
+      "eq:tne_additive_pdfi_b03_1b_theorem",
+      "eq:tne_additive_pdfi_b03_1b_lemma",
+      "eq:tne_additive_pdfi_b03_1b_synthesis",
+      "eq:tne_additive_pdfi_b03_1b_principle",
+      "eq:tne_additive_pdfi_b03_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "elastic_calibration_completeness_functional",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/1b/pdfielastic_pi_equivalence_in_dual_aligned_systems_completeness_of_parity_driven_fluctuation_syn.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/2b/pdfielastic_pi_decoupling_in_symmetry_breakdown_incompleteness_paradox_of_parity_driven_fluctuat.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/1b2b/pdfielastic_pi_norm_equivalence_and_decoupling_completeness_and_incompleteness_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pdfi_b03_product_carrier",
+    "eq:drv_pdfi_b03_1b",
+    "eq:drv_pdfi_b03_theorem_1b",
+    "eq:drv_pdfi_b03_res_1b",
+    "eq:drv_pdfi_b03_2b",
+    "eq:drv_pdfi_b03_theorem_2b",
+    "eq:drv_pdfi_b03_res_2b",
+    "eq:drv_pdfi_b03_joint",
+    "eq:drv_pdfi_b03_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/falsification_checks/test_elastic_calibration_completeness_functional_falsification.py"
+  ],
+  "first_label": "app:drv_pdfi_b03",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/1b2b/pdfielastic_pi_norm_equivalence_and_decoupling_completeness_and_incompleteness_classification.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/1b/pdfielastic_pi_equivalence_in_dual_aligned_systems_completeness_of_parity_driven_fluctuation_syn.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/2b/pdfielastic_pi_decoupling_in_symmetry_breakdown_incompleteness_paradox_of_parity_driven_fluctuat.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/1b2b/pdfielastic_pi_norm_equivalence_and_decoupling_completeness_and_incompleteness_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine calibrated completeness response",
+      "name": "elastic completeness functional",
+      "python_types": [
+        "ElasticCompletenessFunctional"
+      ]
+    },
+    "domain": {
+      "description": "integer trajectory, nonzero predecessors, positive recurrence seed and K_D",
+      "name": "pDFI realization",
+      "python_types": [
+        "ParityDFIInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.elastic_completeness_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "pdfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "elastic_calibration_completeness_functional",
+  "source_complex_ids": [
+    "pdfi_elastic_equivalence_and_decoupling",
+    "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pdfi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_parity_adapted_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/second_order_completeness/complex_003_elastic_calibration_completeness_functional/falsification_checks/test_elastic_calibration_completeness_functional_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "pDFI–Elastic pi Norm Equivalence and Decoupling – Completeness and Incompleteness Classification",
+    "left": "pDFI–Elastic pi Equivalence in Dual-Aligned Systems – Completeness of Parity-Driven Fluctuation Synthesis",
+    "right": "pDFI–Elastic pi Decoupling in Symmetry Breakdown – Incompleteness/Paradox of Parity-Driven Fluctuations"
+  },
+  "theorem_titles_tex": {
+    "cross": "pDFI--Elastic \\(\\pi\\) Norm Equivalence and Decoupling -- Completeness and Incompleteness Classification",
+    "left": "pDFI--Elastic \\(\\pi\\) Equivalence in Dual-Aligned Systems -- Completeness of Parity-Driven Fluctuation Synthesis",
+    "right": "pDFI--Elastic \\(\\pi\\) Decoupling in Symmetry Breakdown -- Incompleteness/Paradox of Parity-Driven Fluctuations"
+  }
+}

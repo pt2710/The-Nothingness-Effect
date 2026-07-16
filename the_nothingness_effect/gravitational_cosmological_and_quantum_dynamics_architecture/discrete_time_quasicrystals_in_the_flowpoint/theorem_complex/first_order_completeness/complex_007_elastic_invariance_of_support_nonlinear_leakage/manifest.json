@@ -1,0 +1,140 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 30,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_invariance_of_support_nonlinear_leakage",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/1a/elastic_pi_invariance_of_support.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/2a/nonlinear_leakage.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/1a2a/elastic_pi_invariance_of_support_nonlinear_leakage.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc07_constant_gain_active_support",
+    "eq:dtqc07_timevarying_gain_support",
+    "eq:dtqc07_polynomial_active_support",
+    "eq:epsi_support_preservation_1a",
+    "eq:epsi_support_preservation_calculus_1a",
+    "eq:epsi_indicator_projection_1a",
+    "eq:epsi_projection_test_function_1a",
+    "eq:epsi_projection_argument_1a",
+    "eq:epsi_energy_scale_1a",
+    "eq:epsi_parseval_scale_1a",
+    "eq:epsi_support_minkowski_2a",
+    "eq:epsi_leakage_set_def_2a",
+    "eq:epsi_leakage_bias_lower_bound_2a",
+    "eq:epsi_single_shift_leak_2a",
+    "eq:epsi_persistence_offlattice_2a",
+    "eq:epsi_support_difference_2a",
+    "eq:epsi_best_approx_error_2a",
+    "eq:epsi_bias_floor_calc_2a",
+    "eq:dtqc07_joint_status_1a2a",
+    "eq:epsi_support_set_def_1a2a",
+    "eq:epsi_dtqc_series_def_1a2a",
+    "eq:epsi_linear_stationary_1a2a",
+    "eq:epsi_linear_timevarying_1a2a",
+    "eq:epsi_product_rule_fourier_1a2a",
+    "eq:epsi_cubic_nonlinear_1a2a",
+    "eq:epsi_dichotomy_statement_1a2a",
+    "eq:epsi_time_avg_equivalence_1a2a",
+    "eq:epsi_case_split_1a2a",
+    "eq:epsi_near_lattice_threshold_1a2a",
+    "eq:epsi_continuity_threshold_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/falsification_checks/test_elastic_invariance_of_support_nonlinear_leakage_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_07",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/1a/elastic_pi_invariance_of_support.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/2a/nonlinear_leakage.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/1a2a/elastic_pi_invariance_of_support_nonlinear_leakage.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fail-closed typed contract result",
+      "name": "elastic_invariance_of_support_nonlinear_leakage result",
+      "python_types": [
+        "ContractResult"
+      ]
+    },
+    "domain": {
+      "description": "typed recertified source-law input",
+      "name": "elastic_invariance_of_support_nonlinear_leakage input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts.evaluate_elastic_invariance_of_support",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "elastic_invariance_of_support_nonlinear_leakage",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_007_elastic_invariance_of_support_nonlinear_leakage/falsification_checks/test_elastic_invariance_of_support_nonlinear_leakage_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic-pi Invariance of Support <-> Nonlinear Leakage",
+    "left": "Elastic-pi Invariance of Support",
+    "right": "Nonlinear Leakage"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic-$\\pi$ Invariance of Support $\\leftrightarrow$ Nonlinear Leakage",
+    "left": "Elastic-$\\pi$ Invariance of Support",
+    "right": "Nonlinear Leakage"
+  }
+}

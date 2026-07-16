@@ -1,0 +1,159 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 64,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_009_2_adic_coded_continuum_coverage_and_singleton_collapse/1a/2_adic_criterionicity_of_flowpoint_trajectories.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_009_2_adic_coded_continuum_coverage_and_singleton_collapse/2a/trivial_2_adic_criterionicity_collapse_to_point.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_009_2_adic_coded_continuum_coverage_and_singleton_collapse/1a2a/2_adic_coveragecollapse_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:uncountable_2adic_global_binary_space_1a2a",
+    "eq:uncountable_2adic_global_canonical_binary_space_1a2a",
+    "eq:uncountable_2adic_global_binary_evaluation_1a2a",
+    "eq:uncountable_2adic_global_2adic_encoder_1a2a",
+    "eq:uncountable_2adic_global_coordinate_code_space_1a2a",
+    "eq:uncountable_2adic_global_euclidean_decoder_1a2a",
+    "eq:uncountable_2adic_global_constant_trajectory_1a2a",
+    "eq:uncountable_2adic_global_coverage_ensemble_1a2a",
+    "eq:uncountable_2adic_global_trace_definition_1a2a",
+    "eq:uncountable_2adic_global_singleton_collapse_1a2a",
+    "eq:uncountable_2adic_global_induced_trajectory_collapse_1a2a",
+    "eq:uncountable_2adic_global_collapsed_family_1a2a",
+    "eq:uncountable_2adic_coverage_definition_pair_1a",
+    "eq:uncountable_2adic_coverage_definition_exact_coverage_1a",
+    "eq:uncountable_2adic_coverage_decoder_map_1a",
+    "eq:uncountable_2adic_coverage_cardinality_1a",
+    "eq:uncountable_2adic_coverage_trace_equals_space_1a",
+    "eq:uncountable_2adic_coverage_unique_code_per_point_1a",
+    "eq:uncountable_2adic_coverage_continuum_paths_open_set_1a",
+    "eq:uncountable_2adic_coverage_beta_bijection_1a",
+    "eq:uncountable_2adic_coverage_prefix_congruence_1a",
+    "eq:uncountable_2adic_coverage_prefix_metric_1a",
+    "eq:uncountable_2adic_coverage_euclidean_prefix_error_1a",
+    "eq:uncountable_2adic_coverage_proof_integer_fraction_split_1a",
+    "eq:uncountable_2adic_coverage_proof_unique_code_1a",
+    "eq:uncountable_2adic_coverage_proof_three_way_bijection_1a",
+    "eq:uncountable_2adic_coverage_proof_cardinality_1a",
+    "eq:uncountable_2adic_coverage_proof_trace_1a",
+    "eq:uncountable_2adic_coverage_corollary_point_coverage_1a",
+    "eq:uncountable_2adic_coverage_corollary_closed_dense_1a",
+    "eq:uncountable_2adic_coverage_synthesis_1a",
+    "eq:uncountable_2adic_coverage_principle_1a",
+    "eq:uncountable_2adic_singleton_equivalence_2a",
+    "eq:uncountable_2adic_singleton_image_2a",
+    "eq:uncountable_2adic_singleton_trace_2a",
+    "eq:uncountable_2adic_singleton_quotient_2a",
+    "eq:uncountable_2adic_singleton_idempotence_2a",
+    "eq:uncountable_2adic_singleton_open_set_failure_2a",
+    "eq:uncountable_2adic_singleton_fibre_2a",
+    "eq:uncountable_2adic_singleton_proof_constant_output_2a",
+    "eq:uncountable_2adic_singleton_proof_idempotence_2a",
+    "eq:uncountable_2adic_singleton_relative_completeness_2a",
+    "eq:uncountable_2adic_singleton_collapse_synthesis_2a",
+    "eq:uncountable_2adic_singleton_principle_2a",
+    "eq:uncountable_2adic_joint_grid_definition_1a2a",
+    "eq:uncountable_2adic_joint_quantizer_1a2a",
+    "eq:uncountable_2adic_joint_trajectory_quantizer_1a2a",
+    "eq:uncountable_2adic_joint_bonding_map_1a2a",
+    "eq:uncountable_2adic_joint_canonical_inverse_limit_1a2a",
+    "eq:uncountable_2adic_joint_ladder_1a2a",
+    "eq:uncountable_2adic_joint_quantization_error_1a2a",
+    "eq:uncountable_2adic_joint_quantizer_coherence_1a2a",
+    "eq:uncountable_2adic_joint_grid_fibre_cardinality_1a2a",
+    "eq:uncountable_2adic_joint_inverse_limit_1a2a",
+    "eq:uncountable_2adic_joint_cardinal_profile_1a2a",
+    "eq:uncountable_2adic_joint_equal_prefixes_1a2a",
+    "eq:uncountable_2adic_joint_equal_grid_output_1a2a",
+    "eq:uncountable_2adic_joint_grid_fibre_geometry_1a2a",
+    "eq:uncountable_2adic_joint_unique_reconstruction_1a2a",
+    "eq:uncountable_2adic_joint_proof_coordinate_error_1a2a",
+    "eq:uncountable_2adic_joint_corollary_cardinalities_1a2a",
+    "eq:uncountable_2adic_joint_corollary_convergence_1a2a",
+    "eq:uncountable_2adic_joint_synthesis_summary_1a2a",
+    "eq:uncountable_2adic_joint_principle_distinctions_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_009_2_adic_coded_continuum_coverage_and_singleton_collapse/falsification_checks/test_2_adic_coded_continuum_coverage_and_singleton_collapse_falsification.py"
+  ],
+  "first_label": "subsec:uncountable_infinity_2adic_coverage_singleton_collapse_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_009_2_adic_coded_continuum_coverage_and_singleton_collapse/falsification_checks/test_2_adic_coded_continuum_coverage_and_singleton_collapse_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "2-Adic Coverage–Collapse Closure",
+    "left": "2-adic Criterionicity of Flowpoint Trajectories",
+    "right": "Trivial 2-adic Criterionicity (Collapse to Point)"
+  },
+  "theorem_titles_tex": {
+    "cross": "2-Adic Coverage--Collapse Closure",
+    "left": "2-adic Criterionicity of Flowpoint Trajectories",
+    "right": "Trivial 2-adic Criterionicity (Collapse to Point)"
+  }
+}

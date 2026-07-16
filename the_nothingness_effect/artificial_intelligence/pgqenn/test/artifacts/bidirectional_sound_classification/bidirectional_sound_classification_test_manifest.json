@@ -1,0 +1,48 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "bidirectional_sound_classification",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "bidirectional_sound_classification_test_results.csv",
+    "bidirectional_sound_classification_test_figure.png",
+    "bidirectional_sound_classification_test_manifest.json"
+  ],
+  "intended_output_group": "bidirectional sound classification",
+  "metrics": {
+    "accuracy": 1.0,
+    "modality_rmse": 0.6184673309326172,
+    "roundtrip_accuracy": 1.0
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "b985f65bc15a4d9c70af960d013a2fd586465d55a3a2676784f98c9349ebe2b5",
+  "parameters": {
+    "capability": "bidirectional_sound_classification",
+    "mode": "test",
+    "producer_architecture": "pgqenn",
+    "seed": 3,
+    "synthetic_fixture": true
+  },
+  "producer_architecture": "pgqenn",
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_capabilities",
+  "related_theorem_complex_ids": [
+    "motif_spectral_dual_regularity_law_for_soinets",
+    "soi_modality_dual_closure",
+    "motif_spectral_modality_collapse_spatial_field"
+  ],
+  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.6184673309326172
+  ],
+  "seed": 3,
+  "source_status": "synthetic_deterministic_fixture"
+}

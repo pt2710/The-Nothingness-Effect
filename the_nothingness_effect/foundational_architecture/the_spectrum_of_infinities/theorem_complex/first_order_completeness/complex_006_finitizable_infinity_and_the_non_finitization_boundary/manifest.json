@@ -1,0 +1,107 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 10,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "finitizable_infinity_and_the_non_finitization_boundary",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_006_finitizable_infinity_and_the_non_finitization_boundary/1a/duality_of_infinite_finitizable_structure.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_006_finitizable_infinity_and_the_non_finitization_boundary/2a/absolute_infinity_paradox.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_006_finitizable_infinity_and_the_non_finitization_boundary/1a2a/finitizationapproximation_classification_theorem.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soi_finitization_original_soi_1a2a",
+    "eq:soi_finitization_measure_scaling_1a2a",
+    "eq:soi_finitization_pushforward_pair_1a2a",
+    "eq:soi_finitization_relative_absolute_integrals_1a",
+    "eq:soi_finitization_absolute_error_1a",
+    "eq:std_soi_finitization_1a",
+    "eq:std_soi_approx_domain_2a",
+    "eq:soi_finitization_joint_absolute_error_1a2a",
+    "eq:std_soi_finite_rep_joint",
+    "eq:soi_finitization_absolute_scale_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_006_finitizable_infinity_and_the_non_finitization_boundary/falsification_checks/test_finitizable_infinity_and_the_non_finitization_boundary_falsification.py"
+  ],
+  "first_label": "app:soi_complex_08",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "finitizable_infinity_and_the_non_finitization_boundary",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_006_finitizable_infinity_and_the_non_finitization_boundary/falsification_checks/test_finitizable_infinity_and_the_non_finitization_boundary_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Finitization–Approximation Classification Theorem",
+    "left": "Duality of Infinite/Finitizable Structure",
+    "right": "Absolute Infinity Paradox"
+  },
+  "theorem_titles_tex": {
+    "cross": "Finitization--Approximation Classification Theorem",
+    "left": "Duality of Infinite/Finitizable Structure",
+    "right": "Absolute Infinity Paradox"
+  }
+}

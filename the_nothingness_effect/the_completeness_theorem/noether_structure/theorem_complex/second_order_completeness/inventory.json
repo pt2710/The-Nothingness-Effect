@@ -1,0 +1,11 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "noether_constant_to_local_transgression",
+      "directory": "complex_001_noether_constant_to_local_transgression",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/the_completeness_theorem/noether_structure"
+}

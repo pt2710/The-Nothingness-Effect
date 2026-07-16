@@ -1,0 +1,21 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+      "directory": "complex_001_minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
+      "directory": "complex_002_imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "affine_spatial_involution_orbit",
+      "directory": "complex_003_affine_spatial_involutionorbit",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/spatiality"
+}

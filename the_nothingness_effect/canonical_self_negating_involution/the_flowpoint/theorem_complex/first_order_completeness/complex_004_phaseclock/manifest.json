@@ -1,0 +1,168 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "artifact_manifests": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 56,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "phase_clock",
+  "component_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/1a/intrinsic_cyclic_flowpoint_time.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/2a/universal_linear_clock_projection.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/1a2a/flowpoint_as_nonlinear_time_phaseclock_duality.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_time_global_c2_1a2a",
+    "eq:flowpoint_time_global_involution_1a2a",
+    "eq:flowpoint_time_global_nonfixed_state_1a2a",
+    "eq:flowpoint_time_global_phase_space_1a2a",
+    "eq:flowpoint_time_global_c2_action_1a2a",
+    "eq:origin_free_phase_time_torsor_definition_1a",
+    "eq:origin_free_phase_time_shift_definition_1a",
+    "eq:origin_free_phase_time_shift_properties_1a",
+    "eq:intrinsic_cyclic_time_recursion_1a",
+    "eq:intrinsic_cyclic_time_periodicity_1a",
+    "eq:intrinsic_cyclic_time_order_invariance_1a",
+    "eq:torsor_origin_coordinate_bijection_1a",
+    "eq:torsor_origin_shift_1a",
+    "eq:torsor_origin_coordinate_shift_1a",
+    "eq:torsor_no_invariant_origin_1a",
+    "eq:phase_origin_clock_sequence_1a",
+    "eq:phase_origin_gauge_shift_1a",
+    "eq:phase_origin_period_invariance_1a",
+    "eq:intrinsic_flowpoint_time_principle_involution_1a",
+    "eq:linear_clock_parity_projection_definition_2a",
+    "eq:linear_clock_lift_definition_2a",
+    "eq:universal_linear_clock_recursion_2a",
+    "eq:universal_linear_clock_factorization_2a",
+    "eq:universal_linear_clock_factorization_map_2a",
+    "eq:universal_linear_clock_equal_phase_2a",
+    "eq:universal_linear_clock_no_section_map_2a",
+    "eq:parity_projection_kernel_2a",
+    "eq:parity_projection_quotient_2a",
+    "eq:linear_clock_coset_constancy_2a",
+    "eq:phase_retention_parity_recovery_2a",
+    "eq:phase_retention_cycle_loss_2a",
+    "eq:extrinsic_clock_lift_principle_factorization_2a",
+    "eq:flowpoint_phase_clock_exact_sequence_1a2a",
+    "eq:flowpoint_phase_clock_origin_map_1a2a",
+    "eq:flowpoint_phase_clock_clock_map_1a2a",
+    "eq:flowpoint_nonlinear_time_intrinsic_phase_1a2a",
+    "eq:flowpoint_nonlinear_time_clock_map_1a2a",
+    "eq:flowpoint_nonlinear_time_clock_recursion_1a2a",
+    "eq:flowpoint_nonlinear_time_clock_factorization_1a2a",
+    "eq:flowpoint_nonlinear_time_phase_equivalence_1a2a",
+    "eq:flowpoint_nonlinear_time_intrinsic_identity_1a2a",
+    "eq:flowpoint_nonlinear_time_linear_identity_1a2a",
+    "eq:commuting_phase_clock_identity_1a2a",
+    "eq:commuting_phase_clock_cycle_invariance_1a2a",
+    "eq:commuting_phase_clock_origin_shift_1a2a",
+    "eq:originlessness_clock_gauge_equivalence_1a2a",
+    "eq:originlessness_spectral_clock_orbit_1a2a",
+    "eq:originlessness_spectral_phase_action_1a2a",
+    "eq:originlessness_continuous_unitary_lift_1a2a",
+    "eq:originlessness_continuous_unitary_sampling_1a2a",
+    "eq:quotient_lift_synthesis_projection_1a2a",
+    "eq:quotient_lift_synthesis_lift_1a2a",
+    "eq:flowpoint_phase_clock_principle_phase_1a2a",
+    "eq:flowpoint_phase_clock_principle_projection_1a2a",
+    "eq:flowpoint_phase_clock_principle_factorization_1a2a",
+    "eq:flowpoint_phase_clock_principle_periodicity_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/falsification_checks/test_phase_clock_falsification.py"
+  ],
+  "first_label": "subsec:flowpoint_nonlinear_time_phase_clock_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/a_level.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/1a/intrinsic_cyclic_flowpoint_time.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/2a/universal_linear_clock_projection.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/1a2a/flowpoint_as_nonlinear_time_phaseclock_duality.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "shifted phase",
+      "name": "C2 phase torsor",
+      "python_types": [
+        "PhaseClock"
+      ]
+    },
+    "domain": {
+      "description": "phase in {0,1}",
+      "name": "C2 phase torsor",
+      "python_types": [
+        "PhaseClock"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level._phase_invariant",
+    "operator": "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.a_level.contracts.<locals>.<lambda>",
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "flowpoint",
+  "owner_path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/run_suite.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py"
+  ],
+  "source_complex_id": "phase_clock",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_flowpoint_contracts.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/test_the_flowpoint.py",
+    "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/theorem_complex/first_order_completeness/complex_004_phaseclock/falsification_checks/test_phase_clock_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Flowpoint as Nonlinear Time: Phase–Clock Duality",
+    "left": "Intrinsic Cyclic Flowpoint Time",
+    "right": "Universal Linear Clock Projection"
+  },
+  "theorem_titles_tex": {
+    "cross": "Flowpoint as Nonlinear Time: Phase--Clock Duality \\texorpdfstring{\\((1A\\leftrightarrow2A)\\)}{(1A<->2A)}",
+    "left": "Intrinsic Cyclic Flowpoint Time",
+    "right": "Universal Linear Clock Projection"
+  }
+}

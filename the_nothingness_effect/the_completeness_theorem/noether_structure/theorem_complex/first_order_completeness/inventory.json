@@ -1,0 +1,16 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "global_symmetry_and_kd_charge_conservation",
+      "directory": "complex_001_global_symmetry_and_kd_charge_conservation",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "local_gauge_symmetry_and_elastic_divergence_identity",
+      "directory": "complex_002_local_gauge_symmetry_and_elastic_divergence_identity",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/the_completeness_theorem/noether_structure"
+}

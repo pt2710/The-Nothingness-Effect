@@ -1,0 +1,132 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 21,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/1a/exponential_cosmic_spark_decay.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/2a/finite_integrated_cosmological_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/1a2a/exact_decaymemory_dual_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:sc02_spark_field_1a2a",
+    "eq:sc02_minimum_decay_1a2a",
+    "eq:sc02_memory_definitions_1a2a",
+    "eq:sc02_decay_bound_1a",
+    "eq:sc02_decay_limit_1a",
+    "eq:sc02_derivative_decay_1a",
+    "eq:sc02_domination_1a",
+    "eq:sc02_quiescence_time_1a",
+    "eq:sc02_decay_synthesis_1a",
+    "eq:sc02_finite_memory_2a",
+    "eq:sc02_memory_limit_2a",
+    "eq:sc02_memory_error_2a",
+    "eq:sc02_single_memory_2a",
+    "eq:sc02_memory_horizon_2a",
+    "eq:sc02_memory_synthesis_2a",
+    "eq:sc02_joint_state_1a2a",
+    "eq:sc02_memory_derivative_1a2a",
+    "eq:sc02_exact_tail_1a2a",
+    "eq:sc02_laplace_memory_1a2a",
+    "eq:sc02_memory_reconstruction_1a2a",
+    "eq:sc02_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/falsification_checks/test_cosmic_spark_decay_and_integrated_cosmological_memory_falsification.py"
+  ],
+  "first_label": "app:sc_complex_02",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/1a/exponential_cosmic_spark_decay.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/2a/finite_integrated_cosmological_memory.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/1a2a/exact_decaymemory_dual_closure.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "spark_memory field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "cosmological_spark_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py"
+  ],
+  "source_complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_emergent_cosmological_spark_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/theorem_complex/first_order_completeness/complex_002_cosmic_spark_decay_and_integrated_cosmological_memory/falsification_checks/test_cosmic_spark_decay_and_integrated_cosmological_memory_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Exact Decay–Memory Dual Closure",
+    "left": "Exponential Cosmic-Spark Decay",
+    "right": "Finite Integrated Cosmological Memory"
+  },
+  "theorem_titles_tex": {
+    "cross": "Exact Decay--Memory Dual Closure",
+    "left": "Exponential Cosmic-Spark Decay",
+    "right": "Finite Integrated Cosmological Memory"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_pgqenn_b03_master",
+      "eq:tne_additive_pgqenn_b03_1b_definition",
+      "eq:tne_additive_pgqenn_b03_1b_theorem",
+      "eq:tne_additive_pgqenn_b03_1b_lemma",
+      "eq:tne_additive_pgqenn_b03_1b_synthesis",
+      "eq:tne_additive_pgqenn_b03_1b_principle",
+      "eq:tne_additive_pgqenn_b03_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "quasicrystal_soi_annealing_transport",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/1b/primequasicrystal_support_equivalence_soi_scaled_annealing_invariance_law.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/2b/pgqenn_05_support_mismatch_leakage_soi_mis_scaling_spurious_entropy.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/1b2b/primequasicrystal_support_equivalence_support_mismatch_leakage_soi_scaled_annealing_invariance_s.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pgqenn_b03_product_carrier",
+    "eq:drv_pgqenn_b03_1b",
+    "eq:drv_pgqenn_b03_theorem_1b",
+    "eq:drv_pgqenn_b03_res_1b",
+    "eq:drv_pgqenn_b03_2b",
+    "eq:drv_pgqenn_b03_theorem_2b",
+    "eq:drv_pgqenn_b03_res_2b",
+    "eq:drv_pgqenn_b03_joint",
+    "eq:drv_pgqenn_b03_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/falsification_checks/test_quasicrystal_soi_annealing_transport_falsification.py"
+  ],
+  "first_label": "app:drv_pgqenn_b03",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/1b2b/primequasicrystal_support_equivalence_support_mismatch_leakage_soi_scaled_annealing_invariance_s.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/1b/primequasicrystal_support_equivalence_soi_scaled_annealing_invariance_law.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/2b/pgqenn_05_support_mismatch_leakage_soi_mis_scaling_spurious_entropy.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/1b2b/primequasicrystal_support_equivalence_support_mismatch_leakage_soi_scaled_annealing_invariance_s.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "quasicrystal_soi_annealing_transport",
+  "source_complex_ids": [
+    "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
+    "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_003_quasicrystalsoi_annealing_transport/falsification_checks/test_quasicrystal_soi_annealing_transport_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime–Quasicrystal Support Equivalence <-> Support Mismatch/Leakage – SOI-Scaled Annealing Invariance <-> SOI Mis-Scaling / Spurious Entropy",
+    "left": "Prime–Quasicrystal Support Equivalence – SOI-Scaled Annealing Invariance – Law",
+    "right": "PGQENN 05 – Support Mismatch/Leakage – SOI Mis-Scaling / Spurious Entropy"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime–Quasicrystal Support Equivalence $\\leftrightarrow$ Support Mismatch/Leakage -- SOI-Scaled Annealing Invariance $\\leftrightarrow$ SOI Mis-Scaling / Spurious Entropy",
+    "left": "Prime–Quasicrystal Support Equivalence -- SOI-Scaled Annealing Invariance -- Law",
+    "right": "PGQENN 05 -- Support Mismatch/Leakage -- SOI Mis-Scaling / Spurious Entropy"
+  }
+}

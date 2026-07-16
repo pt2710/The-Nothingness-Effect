@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "addition_of_the_two_complete_b_level_operator_families",
+      "directory": "complex_001_addition_of_the_two_complete_b_level_operator_families",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/mathematical_architecture"
+}

@@ -1,1 +1,0 @@
-from .spatiality import spatiality_equation

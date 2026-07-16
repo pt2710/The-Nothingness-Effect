@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 32,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "twisted_orbit_balance_bundle",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c/descent_of_compensation_to_a_global_spatial_section.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/2c/reconstruction_of_the_anti_invariant_displacement_field.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c2c/anti_invariant_fieldtwisted_section_equivalence.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:twisted_orbit_balance_synthesis_operator",
+    "eq:balanced_center_state_1c",
+    "eq:twisted_balance_bundle_1c",
+    "eq:anti_invariant_displacement_field_1c",
+    "eq:twisted_balance_section_1c",
+    "eq:twisted_section_representative_invariance_1c",
+    "eq:twisted_section_gluing_identity_1c",
+    "eq:twisted_section_gluing_chain_1c",
+    "eq:fixed_orbit_section_extension_1c",
+    "eq:dual_compensation_twisted_section_synthesis_1c",
+    "eq:dual_compensation_representative_synthesis_1c",
+    "eq:compensated_orbit_descent_principle_1c",
+    "eq:compensated_orbit_section_invariance_principle_1c",
+    "eq:normalized_twisted_section_2c",
+    "eq:section_displacement_reconstruction_2c",
+    "eq:reconstructed_anti_invariance_2c",
+    "eq:fiber_coordinate_uniqueness_2c",
+    "eq:spatial_section_dual_motion_synthesis_2c",
+    "eq:twisted_balance_field_reconstruction_map_2c",
+    "eq:twisted_balance_field_reconstruction_principle_2c",
+    "eq:twisted_balance_coordinate_uniqueness_principle_2c",
+    "eq:anti_invariant_field_space_1c2c",
+    "eq:normalized_section_space_1c2c",
+    "eq:anti_invariant_section_bijection_1c2c",
+    "eq:anti_invariant_field_naturality_1c2c",
+    "eq:orbit_balance_fiber_map_compatibility_1c2c",
+    "eq:orbit_balance_induced_bundle_map_1c2c",
+    "eq:orbit_balance_section_naturality_1c2c",
+    "eq:orbit_balance_field_section_synthesis_1c2c",
+    "eq:orbit_balance_mutual_inverse_synthesis_1c2c",
+    "eq:orbit_balance_descent_reconstruction_principle_1c2c",
+    "eq:orbit_balance_naturality_principle_1c2c"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/falsification_checks/test_twisted_orbit_balance_bundle_falsification.py"
+  ],
+  "first_label": "app:tne_found_twisted_orbit_balance_bundle",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c2c/anti_invariant_fieldtwisted_section_equivalence.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c/descent_of_compensation_to_a_global_spatial_section.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/2c/reconstruction_of_the_anti_invariant_displacement_field.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/1c2c/anti_invariant_fieldtwisted_section_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_predicate",
+    "codomain": {
+      "description": "local operator, boundary/leakage, reconstruction, coercivity, and status",
+      "name": "localized spatial closure",
+      "python_types": [
+        "SpatialClosureResult"
+      ]
+    },
+    "domain": {
+      "description": "finite common-shape spatial field for every declared B source",
+      "name": "common spatial B-source domain",
+      "python_types": [
+        "SpatialClosureInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.spatial_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "flowpoint_spatiality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/spatiality",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py"
+  ],
+  "source_complex_id": "twisted_orbit_balance_bundle",
+  "source_complex_ids": [
+    "phase_gated_compensation_transport",
+    "involution_to_chord_linearization"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/spatiality/test/test_spatiality.py",
+    "the_nothingness_effect/foundational_architecture/spatiality/theorem_complex/third_order_completeness/complex_002_twisted_orbit_balance_bundle/falsification_checks/test_twisted_orbit_balance_bundle_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Anti-Invariant Field–Twisted Section Equivalence",
+    "left": "Descent of Compensation to a Global Spatial Section",
+    "right": "Reconstruction of the Anti-Invariant Displacement Field"
+  },
+  "theorem_titles_tex": {
+    "cross": "Anti-Invariant Field--Twisted Section Equivalence",
+    "left": "Descent of Compensation to a Global Spatial Section",
+    "right": "Reconstruction of the Anti-Invariant Displacement Field"
+  }
+}

@@ -1,0 +1,8 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics
+elastic_dtqc_spectral_measure_dual_of_dtqc,A,0.0,satisfied,True
+dtqc::dual_support_equivalence_support_mismatch_leakage,A,0.0,satisfied,True
+parseval_energy_bijection_l_2_energy_mismatch,A,0.0,satisfied,True
+irrational_drive_locking_commensurate_resonance_collapse,A,0.0,satisfied,True
+elastic_gain_support_transport_isomorphism,B,0.0,satisfied,True
+diophantine_parseval_locking_invariant,B,0.0,satisfied,True
+elastic_parseval_quasicrystal_isometry,C,3.1700384815269117e-15,numerical_candidate,False

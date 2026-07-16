@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_epinorm_b01_master",
+      "eq:tne_additive_epinorm_b01_1b_definition",
+      "eq:tne_additive_epinorm_b01_1b_theorem",
+      "eq:tne_additive_epinorm_b01_1b_lemma",
+      "eq:tne_additive_epinorm_b01_1b_synthesis",
+      "eq:tne_additive_epinorm_b01_1b_principle",
+      "eq:tne_additive_epinorm_b01_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "weighted_path_ratio_regularity_functional",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/1b/anchored_elastic_pi_norm_positive_ratio.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/2b/failure_of_positive_definiteness_on_unanchored_sequences_weight_breakdown_under_singular_input.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/1b2b/normseminorm_domain_dichotomy_weight_regularity_dichotomy.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_epinorm_b01_product_carrier",
+    "eq:drv_epinorm_b01_1b",
+    "eq:drv_epinorm_b01_theorem_1b",
+    "eq:drv_epinorm_b01_res_1b",
+    "eq:drv_epinorm_b01_2b",
+    "eq:drv_epinorm_b01_theorem_2b",
+    "eq:drv_epinorm_b01_res_2b",
+    "eq:drv_epinorm_b01_joint",
+    "eq:drv_epinorm_b01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/falsification_checks/test_weighted_path_ratio_regularity_functional_falsification.py"
+  ],
+  "first_label": "app:drv_epinorm_b01",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/1b2b/normseminorm_domain_dichotomy_weight_regularity_dichotomy.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/1b/anchored_elastic_pi_norm_positive_ratio.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/2b/failure_of_positive_definiteness_on_unanchored_sequences_weight_breakdown_under_singular_input.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/1b2b/normseminorm_domain_dichotomy_weight_regularity_dichotomy.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine path-weight interaction",
+      "name": "path ratio regularity",
+      "python_types": [
+        "PathRatioRegularity"
+      ]
+    },
+    "domain": {
+      "description": "anchored metric path, entropy sequence, K_D > 0 and p >= 1",
+      "name": "Elastic-pi norm source",
+      "python_types": [
+        "ElasticPiNormInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.ratio_regularity_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "elastic_pi_norm",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/simulate_elastic_pi_norm.py"
+  ],
+  "source_complex_id": "weighted_path_ratio_regularity_functional",
+  "source_complex_ids": [
+    "weighted_path_functional_and_norm_admissibility",
+    "elastic_field_ratios_and_weight_regularity"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_elastic_pi_norm_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/second_order_completeness/complex_001_weighted_path_ratio_regularity_functional/falsification_checks/test_weighted_path_ratio_regularity_functional_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Norm–Seminorm Domain Dichotomy – Weight Regularity Dichotomy",
+    "left": "Anchored Elastic pi Norm – Positive Ratio",
+    "right": "Failure of Positive Definiteness on Unanchored Sequences – Weight Breakdown under Singular Input"
+  },
+  "theorem_titles_tex": {
+    "cross": "Norm--Seminorm Domain Dichotomy -- Weight Regularity Dichotomy",
+    "left": "Anchored Elastic $\\pi$ Norm -- Positive Ratio",
+    "right": "Failure of Positive Definiteness on Unanchored Sequences -- Weight Breakdown under Singular Input"
+  }
+}

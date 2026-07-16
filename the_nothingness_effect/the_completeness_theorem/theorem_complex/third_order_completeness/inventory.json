@@ -1,0 +1,16 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "sheaf_of_closure_certificates",
+      "directory": "complex_001_sheaf_of_closure_certificates",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "terminal_quotient_of_closure_certificates",
+      "directory": "complex_002_terminal_quotient_of_closure_certificates",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/the_completeness_theorem"
+}

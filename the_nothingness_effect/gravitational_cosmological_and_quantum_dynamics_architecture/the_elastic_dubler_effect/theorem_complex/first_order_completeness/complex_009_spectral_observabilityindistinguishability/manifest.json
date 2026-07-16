@@ -1,0 +1,103 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 6,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "spectral_observability_indistinguishability",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_009_spectral_observabilityindistinguishability/1a/observable_dubler_differentiation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_009_spectral_observabilityindistinguishability/2a/gradient_nullity_implies_channel_indistinguishability.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_009_spectral_observabilityindistinguishability/1a2a/complete_internalobserved_spectral_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ed09_observable_condition_1a",
+    "eq:ed09_observation_kernel_1a",
+    "eq:ed09_null_chain_2a",
+    "eq:ed09_observability_status_1a2a",
+    "eq:ed09_observability_kernel_1a2a",
+    "eq:ed09_observability_closure_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_009_spectral_observabilityindistinguishability/falsification_checks/test_spectral_observability_indistinguishability_falsification.py"
+  ],
+  "first_label": "ssec:ed09_observability_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_effect",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py"
+  ],
+  "source_complex_id": "spectral_observability_indistinguishability",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_the_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_009_spectral_observabilityindistinguishability/falsification_checks/test_spectral_observability_indistinguishability_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Internal–Observed Spectral Classification",
+    "left": "Observable Dubler Differentiation",
+    "right": "Gradient Nullity Implies Channel Indistinguishability"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Internal--Observed Spectral Classification",
+    "left": "Observable Dubler Differentiation",
+    "right": "Gradient Nullity Implies Channel Indistinguishability"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 55,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_008_operational_coarse_graining_and_persistence_of_unresolved_distinctions/1a/operational_collapse_of_uncountable_distinctions.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_008_operational_coarse_graining_and_persistence_of_unresolved_distinctions/2a/persistence_of_unresolved_distinctions.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_008_operational_coarse_graining_and_persistence_of_unresolved_distinctions/1a2a/totalization_and_unresolved_fibre_reconstruction.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:uncountable_operational_collapse_cantor_carrier_1a2a",
+    "eq:uncountable_operational_collapse_ultrametric_1a2a",
+    "eq:uncountable_operational_collapse_carrier_cardinality_1a2a",
+    "eq:uncountable_operational_collapse_prefix_space_1a2a",
+    "eq:uncountable_operational_collapse_prefix_projection_1a2a",
+    "eq:uncountable_operational_collapse_cylinder_definition_1a2a",
+    "eq:uncountable_operational_collapse_cylinder_properties_1a2a",
+    "eq:uncountable_operational_collapse_outcome_set_1a2a",
+    "eq:uncountable_operational_collapse_total_prefix_rule_1a2a",
+    "eq:uncountable_operational_collapse_total_observable_1a2a",
+    "eq:uncountable_operational_collapse_partial_prefix_rule_1a2a",
+    "eq:uncountable_operational_collapse_resolved_region_1a2a",
+    "eq:uncountable_operational_collapse_unresolved_region_1a2a",
+    "eq:uncountable_operational_collapse_partial_observable_1a2a",
+    "eq:uncountable_operational_collapse_extension_set_1a2a",
+    "eq:uncountable_total_operational_collapse_definition_1a",
+    "eq:uncountable_operational_equivalence_definition_1a",
+    "eq:uncountable_operational_outcome_fibre_definition_1a",
+    "eq:uncountable_operational_collapse_nonempty_fibre_partition_1a",
+    "eq:uncountable_operational_collapse_quotient_image_1a",
+    "eq:uncountable_operational_collapse_quotient_cardinality_1a",
+    "eq:uncountable_operational_collapse_fibre_cardinality_1a",
+    "eq:uncountable_operational_collapse_carrier_preservation_1a",
+    "eq:uncountable_operational_collapse_prefix_determinacy_1a",
+    "eq:uncountable_operational_collapse_fibre_cylinder_union_1a",
+    "eq:uncountable_operational_collapse_quotient_isomorphism_map_1a",
+    "eq:uncountable_operational_collapse_full_domain_corollary_1a",
+    "eq:uncountable_operational_collapse_information_loss_corollary_1a",
+    "eq:uncountable_operational_collapse_synthesis_1a",
+    "eq:uncountable_operational_totality_principle_1a",
+    "eq:uncountable_partial_rule_proper_domain_2a",
+    "eq:uncountable_unresolved_prefix_count_2a",
+    "eq:uncountable_totalization_definition_2a",
+    "eq:uncountable_partial_rule_resolved_unresolved_partition_2a",
+    "eq:uncountable_partial_rule_unresolved_cardinality_2a",
+    "eq:uncountable_partial_rule_extension_count_2a",
+    "eq:uncountable_unresolved_region_disjoint_cylinders_2a",
+    "eq:uncountable_extension_space_product_bijection_2a",
+    "eq:uncountable_partial_rule_proper_observable_domain_2a",
+    "eq:uncountable_unresolved_persistence_synthesis_2a",
+    "eq:uncountable_rule_relative_unresolvedness_principle_2a",
+    "eq:uncountable_default_completion_operator_definition_1a2a",
+    "eq:uncountable_default_completed_observable_1a2a",
+    "eq:uncountable_operational_extension_closure_family_1a2a",
+    "eq:uncountable_joint_extension_parameterization_1a2a",
+    "eq:uncountable_default_completion_extension_property_1a2a",
+    "eq:uncountable_default_completion_idempotence_1a2a",
+    "eq:uncountable_joint_total_domain_equivalence_a_1a2a",
+    "eq:uncountable_joint_total_domain_equivalence_b_1a2a",
+    "eq:uncountable_joint_total_domain_equivalence_c_1a2a",
+    "eq:uncountable_extensions_agree_resolved_region_1a2a",
+    "eq:uncountable_extensions_differ_unresolved_prefix_1a2a",
+    "eq:uncountable_operational_completion_cardinality_profile_1a2a",
+    "eq:uncountable_operational_rule_completion_synthesis_1a2a",
+    "eq:uncountable_operational_extension_reconstruction_principle_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_008_operational_coarse_graining_and_persistence_of_unresolved_distinctions/falsification_checks/test_operational_coarse_graining_and_persistence_of_unresolved_distinctions_falsification.py"
+  ],
+  "first_label": "subsec:uncountable_infinity_operational_collapse_unresolved_extension_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "uncountable_infinity",
+  "owner_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+  ],
+  "source_complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/test_uncountable_infinity.py",
+    "the_nothingness_effect/foundational_architecture/uncountable_infinity/theorem_complex/first_order_completeness/complex_008_operational_coarse_graining_and_persistence_of_unresolved_distinctions/falsification_checks/test_operational_coarse_graining_and_persistence_of_unresolved_distinctions_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Totalization and Unresolved-Fibre Reconstruction",
+    "left": "Operational Collapse of Uncountable Distinctions",
+    "right": "Persistence of Unresolved Distinctions"
+  },
+  "theorem_titles_tex": {
+    "cross": "Totalization and Unresolved-Fibre Reconstruction",
+    "left": "Operational Collapse of Uncountable Distinctions",
+    "right": "Persistence of Unresolved Distinctions"
+  }
+}

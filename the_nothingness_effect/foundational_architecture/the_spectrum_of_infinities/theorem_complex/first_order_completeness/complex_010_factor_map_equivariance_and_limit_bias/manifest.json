@@ -1,0 +1,157 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 60,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "factor_map_equivariance_and_limit_bias",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_010_factor_map_equivariance_and_limit_bias/1a/factor_map_equivariance_of_ces_aro_averages.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_010_factor_map_equivariance_and_limit_bias/2a/non_equivariance_and_statistical_bias.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_010_factor_map_equivariance_and_limit_bias/1a2a/factor_map_equivariance_of_ces_aro_averages_dynamic_and_statistical_bias.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:fmcea_soi_operator_1a2a",
+    "eq:fmcea_soi_scale_1a2a",
+    "eq:fmcea_relative_spaces_1a2a",
+    "eq:fmcea_absolute_measures_1a2a",
+    "eq:fmcea_measure_totals_1a2a",
+    "eq:fmcea_interval_target_1a2a",
+    "eq:fmcea_involutions_1a2a",
+    "eq:fmcea_involution_relations_1a2a",
+    "eq:fmcea_koopman_operators_1a2a",
+    "eq:fmcea_factor_candidate_1a2a",
+    "eq:fmcea_pullback_1a2a",
+    "eq:fmcea_cesaro_averages_1a2a",
+    "eq:fmcea_projectors_1a2a",
+    "eq:fmcea_factor_conditions_1a2a",
+    "eq:fmcea_absolute_factor_measure_1a2a",
+    "eq:fmcea_definition_equivariance_1a",
+    "eq:fmcea_definition_measure_pair_1a",
+    "eq:fmcea_theorem_intertwining_1a",
+    "eq:fmcea_theorem_cesaro_commutation_1a",
+    "eq:fmcea_theorem_projector_commutation_1a",
+    "eq:fmcea_theorem_relative_absolute_isometry_1a",
+    "eq:fmcea_theorem_interval_scaling_1a",
+    "eq:fmcea_lemma_power_intertwining_1a",
+    "eq:fmcea_lemma_cesaro_commutation_1a",
+    "eq:fmcea_lemma_involution_limit_1a",
+    "eq:fmcea_proof_one_step_1a",
+    "eq:fmcea_proof_cesaro_1a",
+    "eq:fmcea_proof_projector_1a",
+    "eq:fmcea_corollary_fixed_part_1a",
+    "eq:fmcea_corollary_relative_statistics_1a",
+    "eq:fmcea_paradox_scale_invariant_commutation_1a",
+    "eq:fmcea_synthesis_1a",
+    "eq:std_soi_factor_1a",
+    "eq:fmcea_dynamic_defect_2a",
+    "eq:fmcea_relative_measure_defect_2a",
+    "eq:fmcea_absolute_measure_defect_2a",
+    "eq:fmcea_short_statement_equation_2a",
+    "eq:fmcea_lemma_half_commutator_2a",
+    "eq:fmcea_lemma_operator_norm_2a",
+    "eq:fmcea_lemma_vector_bias_2a",
+    "eq:fmcea_proof_half_commutator_2a",
+    "eq:fmcea_proof_limit_bias_2a",
+    "eq:fmcea_proof_relative_statistical_bias_2a",
+    "eq:fmcea_proof_absolute_statistical_bias_2a",
+    "eq:fmcea_corollary_limit_bias_2a",
+    "eq:fmcea_corollary_relative_expectation_defect_2a",
+    "eq:fmcea_corollary_absolute_expectation_defect_2a",
+    "eq:fmcea_paradox_equivariance_only_2a",
+    "eq:fmcea_paradox_measure_failure_2a",
+    "eq:fmcea_synthesis_2a",
+    "eq:std_soi_factor_defects_2a",
+    "eq:fmcea_joint_status_1a2a",
+    "eq:fmcea_joint_exclusive_status_1a2a",
+    "eq:fmcea_joint_positive_closure_1a2a",
+    "eq:fmcea_joint_negative_closure_1a2a",
+    "eq:fmcea_joint_dynamic_equivalences_1a2a",
+    "eq:fmcea_joint_measure_equivalence_1a2a",
+    "eq:fmcea_joint_scale_covariance_1a2a",
+    "eq:fmcea_joint_synthesis_1a2a",
+    "eq:std_soi_factor_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_010_factor_map_equivariance_and_limit_bias/falsification_checks/test_factor_map_equivariance_and_limit_bias_falsification.py"
+  ],
+  "first_label": "ssec:fmcea_theorem_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "factor_map_equivariance_and_limit_bias",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_010_factor_map_equivariance_and_limit_bias/falsification_checks/test_factor_map_equivariance_and_limit_bias_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Factor-Map Equivariance of Ces\\`aro Averages <-> Dynamic and Statistical Bias",
+    "left": "Factor-Map Equivariance of Ces\\`aro Averages",
+    "right": "Non-Equivariance and Statistical Bias"
+  },
+  "theorem_titles_tex": {
+    "cross": "Factor-Map Equivariance of Ces\\`aro Averages \\(\\leftrightarrow\\) Dynamic and Statistical Bias",
+    "left": "Factor-Map Equivariance of Ces\\`aro Averages",
+    "right": "Non-Equivariance and Statistical Bias"
+  }
+}

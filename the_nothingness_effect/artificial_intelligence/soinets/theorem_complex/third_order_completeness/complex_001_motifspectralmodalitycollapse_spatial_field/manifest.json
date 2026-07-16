@@ -1,0 +1,140 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/soinets/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_soinet_c29_master",
+      "eq:tne_spatial_soinet_c29_1c_definition",
+      "eq:tne_spatial_soinet_c29_1c_theorem",
+      "eq:tne_spatial_soinet_c29_1c_lemma",
+      "eq:tne_spatial_soinet_c29_1c_synthesis",
+      "eq:tne_spatial_soinet_c29_1c_principle",
+      "eq:tne_spatial_soinet_c29_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "motif_spectral_modality_collapse_spatial_field",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/1c/spatial_motifspectralentropy_preservation_1c.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/2c/spatial_modalitycollapse_preservation_2c.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/1c2c/soinet_spatial_motifspectralmodalitycollapse_closure_1c_2c.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soinet29_b19_source_1c2c",
+    "eq:soinet29_b20_source_1c2c",
+    "eq:soinet29_spatial_carrier_1c2c",
+    "eq:soinet29_clevel_fiber_product_1c2c",
+    "eq:soinet29_definition_1c",
+    "eq:soinet29_residual_1c",
+    "eq:soinet29_theorem_1c",
+    "eq:soinet29_lemma_1c",
+    "eq:soinet29_corollary_1c",
+    "eq:soinet29_definition_2c",
+    "eq:soinet29_residual_2c",
+    "eq:soinet29_theorem_2c",
+    "eq:soinet29_lemma_2c",
+    "eq:soinet29_corollary_2c",
+    "eq:soinet29_definition_1c2c",
+    "eq:soinet29_residual_1c2c",
+    "eq:soinet29_theorem_1c2c",
+    "eq:soinet29_lemma_1c2c",
+    "eq:soinet29_corollary_1c2c"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/falsification_checks/test_motif_spectral_modality_collapse_spatial_field_falsification.py"
+  ],
+  "first_label": "app:soinet_complex_29",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/1c2c/soinet_spatial_motifspectralmodalitycollapse_closure_1c_2c.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/1c/spatial_motifspectralentropy_preservation_1c.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/2c/spatial_modalitycollapse_preservation_2c.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/1c2c/soinet_spatial_motifspectralmodalitycollapse_closure_1c_2c.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.artificial_intelligence.soinets.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "single modality-spatial field with boundary, localization, coercivity, reconstruction, and observability",
+      "name": "motif_spectral_modality_collapse_spatial_field",
+      "python_types": [
+        "SOInetSpatialClosure"
+      ]
+    },
+    "domain": {
+      "description": "finite multi-modality spatial feature field and positive residual weights",
+      "name": "SOInet modality field",
+      "python_types": [
+        "SOInetContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.soinets.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.soinets.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "soinets",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/soinets",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py"
+  ],
+  "source_complex_id": "motif_spectral_modality_collapse_spatial_field",
+  "source_complex_ids": [
+    "motif_spectral_entropy_coupling_energy",
+    "modality_collapse_symmetry_operator"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_soinets_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/test/test_soinets.py",
+    "the_nothingness_effect/artificial_intelligence/soinets/theorem_complex/third_order_completeness/complex_001_motifspectralmodalitycollapse_spatial_field/falsification_checks/test_motif_spectral_modality_collapse_spatial_field_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "SOInet Spatial Motif–Spectral–Modality–Collapse Closure 1C<->2C",
+    "left": "Spatial Motif–Spectral–Entropy Preservation 1C",
+    "right": "Spatial Modality–Collapse Preservation 2C"
+  },
+  "theorem_titles_tex": {
+    "cross": "SOInet Spatial Motif--Spectral--Modality--Collapse Closure 1C$\\leftrightarrow$2C",
+    "left": "Spatial Motif--Spectral--Entropy Preservation 1C",
+    "right": "Spatial Modality--Collapse Preservation 2C"
+  }
+}

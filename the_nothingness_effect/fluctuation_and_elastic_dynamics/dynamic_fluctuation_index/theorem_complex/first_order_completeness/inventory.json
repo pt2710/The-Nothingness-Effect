@@ -1,0 +1,41 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "dfi_spectrum_normalized_existence_and_normalization_breakdown",
+      "directory": "complex_001_dfi_spectrum_normalized_existence_and_normalization_breakdown",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
+      "directory": "complex_002_dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
+      "directory": "complex_003_dfi_entropic_fluctuation_encoding_and_fluctuation_divergence",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_adaptive_applicability_and_contextual_instability",
+      "directory": "complex_004_dfi_adaptive_applicability_and_contextual_instability",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+      "directory": "complex_005_dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency",
+      "directory": "complex_006_dfiflowpoint_consistency_and_interface_inconsistency",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "dfi_simulation_consistency_and_simulation_breakdown",
+      "directory": "complex_007_dfi_simulation_consistency_and_simulation_breakdown",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index"
+}

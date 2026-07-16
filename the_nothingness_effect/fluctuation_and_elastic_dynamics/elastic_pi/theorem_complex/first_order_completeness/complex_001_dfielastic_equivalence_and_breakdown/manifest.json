@@ -1,0 +1,136 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 26,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_elastic_equivalence_and_breakdown",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/1a/dfielastic_pi_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/2a/dfielastic_pi_breakdown.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/1a2a/dfielastic_pi_dual_equivalence_and_breakdown.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:elastic_pi01_log_variable_1a2a",
+    "eq:elastic_pi01_bounded_deformation_1a2a",
+    "eq:algebraic_pi_exp_1a2a",
+    "eq:algebraic_pi_frac_1a2a",
+    "eq:algebraic_delta_1a2a",
+    "eq:elastic_pi01_admissibility_map_1a",
+    "eq:algebraic_pi_exp_1a",
+    "eq:algebraic_pi_frac_1a",
+    "eq:elastic_pi01_reciprocal_dfi_1a",
+    "eq:hyperbolic_identity_1a",
+    "eq:elastic_pi01_inverse_hyperbolic_1a",
+    "eq:proof_deriv_exp_pi_1a",
+    "eq:calculus_deriv_exp_1a",
+    "eq:simulation_overlay_1a",
+    "eq:deriv_simulation_overlay_1a",
+    "eq:elastic_pi01_synthesis_1a",
+    "eq:algebraic_breakdown_delta_2a",
+    "eq:elastic_pi01_negative_boundary_2a",
+    "eq:algebraic_breakdown_pi_2a",
+    "eq:elastic_pi01_representation_defect_2a",
+    "eq:elastic_pi01_synthesis_2a",
+    "eq:elastic_pi01_status_set_1a2a",
+    "eq:joint_lemma_equiv_1a2a",
+    "eq:joint_lemma_deriv_1a2a",
+    "eq:cor_equiv_overlay_1a2a",
+    "eq:elastic_pi01_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/falsification_checks/test_dfi_elastic_equivalence_and_breakdown_falsification.py"
+  ],
+  "first_label": "app:elastic_pi_complex_01",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/1a/dfielastic_pi_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/2a/dfielastic_pi_breakdown.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/1a2a/dfielastic_pi_dual_equivalence_and_breakdown.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "positive field with DFI reciprocity residual",
+      "name": "reciprocal Elastic-pi field",
+      "python_types": [
+        "ElasticPiReciprocity"
+      ]
+    },
+    "domain": {
+      "description": "finite one-dimensional entropy field, K_D > 0, and declared coordinates",
+      "name": "Elastic-pi source",
+      "python_types": [
+        "ElasticPiInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.reciprocity_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py"
+  ],
+  "source_complex_id": "dfi_elastic_equivalence_and_breakdown",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/boundaries/test_elastic_pi_boundaries.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_001_dfielastic_equivalence_and_breakdown/falsification_checks/test_dfi_elastic_equivalence_and_breakdown_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "DFI–Elastic pi Dual Equivalence and Breakdown",
+    "left": "DFI–Elastic pi Equivalence",
+    "right": "DFI–Elastic pi Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "DFI--Elastic $\\pi$ Dual Equivalence and Breakdown",
+    "left": "DFI--Elastic $\\pi$ Equivalence",
+    "right": "DFI--Elastic $\\pi$ Breakdown"
+  }
+}

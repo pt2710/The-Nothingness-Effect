@@ -1,0 +1,105 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "pdfi_e_quantum_entanglement_interface",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_014_pdfi_e_quantum_entanglement_interface/1a/pdfi_coupling_produces_a_spectral_shift_under_nonzero_sensitivity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_014_pdfi_e_quantum_entanglement_interface/2a/vanishing_first_order_dubler_shift.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_014_pdfi_e_quantum_entanglement_interface/1a2a/complete_quantum_responsewitness_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ed14_hamiltonian_family_1a",
+    "eq:ed14_hf_shift_1a",
+    "eq:ed14_time_accumulation_1a",
+    "eq:ed14_protected_definition_2a",
+    "eq:ed14_zero_first_order_2a",
+    "eq:ed14_quantum_status_1a2a",
+    "eq:ed14_quantum_two_axis_1a2a",
+    "eq:ed14_quantum_closure_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_014_pdfi_e_quantum_entanglement_interface/falsification_checks/test_pdfi_e_quantum_entanglement_interface_falsification.py"
+  ],
+  "first_label": "ssec:ed14_quantum_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_effect",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py"
+  ],
+  "source_complex_id": "pdfi_e_quantum_entanglement_interface",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_the_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/first_order_completeness/complex_014_pdfi_e_quantum_entanglement_interface/falsification_checks/test_pdfi_e_quantum_entanglement_interface_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Quantum Response–Witness Classification",
+    "left": "pDFI Coupling Produces a Spectral Shift under Nonzero Sensitivity",
+    "right": "Vanishing First-Order Dubler Shift"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Quantum Response--Witness Classification",
+    "left": "pDFI Coupling Produces a Spectral Shift under Nonzero Sensitivity",
+    "right": "Vanishing First-Order Dubler Shift"
+  }
+}

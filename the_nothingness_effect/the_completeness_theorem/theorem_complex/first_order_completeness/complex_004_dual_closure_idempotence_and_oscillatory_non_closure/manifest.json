@@ -1,0 +1,152 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 42,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dual_closure_idempotence_and_oscillatory_non_closure",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/1a/dual_closure_idempotence.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/2a/oscillatory_non_closure.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/1a2a/idempotent_closure_oscillatory_non_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dcid_algebraic_equation_1a",
+    "eq:dcid_calculus_equation_1a",
+    "eq:dcid_quantum_equation_1a",
+    "eq:dcid_lemma_algebraic_equation_1a",
+    "eq:dcid_lemma_calculus_equation_1a",
+    "eq:dcid_lemma_quantum_equation_1a",
+    "eq:dcid_proof_algebraic_equation_1a",
+    "eq:dcid_proof_calculus_equation_1a",
+    "eq:dcid_proof_quantum_equation_1a",
+    "eq:dcid_cor_algebraic_equation_1a",
+    "eq:dcid_cor_calculus_equation_1a",
+    "eq:dcid_cor_quantum_equation_1a",
+    "eq:completeness_synthesis_formal_10",
+    "eq:completeness_principle_formal_11",
+    "eq:dcid_algebraic_equation_2a",
+    "eq:dcid_calculus_equation_2a",
+    "eq:dcid_quantum_equation_2a",
+    "eq:dcid_lemma_algebraic_equation_2a",
+    "eq:dcid_lemma_calculus_equation_2a",
+    "eq:dcid_lemma_quantum_equation_2a",
+    "eq:dcid_proof_algebraic_equation_2a",
+    "eq:dcid_proof_calculus_equation_2a",
+    "eq:dcid_proof_quantum_equation_2a",
+    "eq:dcid_cor_algebraic_equation_2a",
+    "eq:dcid_cor_calculus_equation_2a",
+    "eq:dcid_cor_quantum_equation_2a",
+    "eq:completeness_synthesis_formal_11",
+    "eq:completeness_principle_formal_12",
+    "eq:dcid_theorem_algebraic_equation_1a2a",
+    "eq:dcid_theorem_calculus_equation_1a2a",
+    "eq:dcid_theorem_quantum_equation_1a2a",
+    "eq:dcid_lemma_algebraic_equation_1a2a",
+    "eq:dcid_lemma_calculus_equation_1a2a",
+    "eq:dcid_lemma_quantum_equation_1a2a",
+    "eq:dcid_proof_algebraic_equation_1a2a",
+    "eq:dcid_proof_calculus_equation_1a2a",
+    "eq:dcid_proof_quantum_equation_1a2a",
+    "eq:dcid_cor_algebraic_equation_1a2a",
+    "eq:dcid_cor_calculus_equation_1a2a",
+    "eq:dcid_cor_quantum_equation_1a2a",
+    "eq:completeness_synthesis_formal_12",
+    "eq:completeness_principle_formal_13"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/falsification_checks/test_dual_closure_idempotence_and_oscillatory_non_closure_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_03",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/1a/dual_closure_idempotence.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/2a/oscillatory_non_closure.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/1a2a/idempotent_closure_oscillatory_non_closure.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed finite source law with explicit obstruction status",
+      "name": "dual_closure_idempotence_and_oscillatory_non_closure result",
+      "python_types": [
+        "CompletenessSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "dual_closure_idempotence_and_oscillatory_non_closure",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_004_dual_closure_idempotence_and_oscillatory_non_closure/falsification_checks/test_dual_closure_idempotence_and_oscillatory_non_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Idempotent Closure <-> Oscillatory Non-Closure",
+    "left": "Dual-Closure Idempotence",
+    "right": "Oscillatory Non-Closure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Idempotent Closure $\\leftrightarrow$ Oscillatory Non-Closure",
+    "left": "Dual-Closure Idempotence",
+    "right": "Oscillatory Non-Closure"
+  }
+}

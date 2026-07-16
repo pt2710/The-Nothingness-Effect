@@ -1,0 +1,45 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "appendix_sources": [
+    {
+      "filename": "appendix_tne_artificial_intelligence_architechture.tex",
+      "sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "prime_motif_boundedness_motif_induced_energy_divergence",
+    "flowpoint_parity_locking_parity_leakage",
+    "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias",
+    "elastic_e_curvature_regularization_curvature_ambiguity_leakage",
+    "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
+    "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy",
+    "motif_exhaustion_completeness_coverage_bias_long_memory_drift",
+    "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch",
+    "parity_orthogonal_optimization_cross_parity_gradient_contamination",
+    "prime_shell_growth_regularity_shell_instability_phase_slips",
+    "prime_motif_parity_stability_functional",
+    "dfi_elastic_prime_curvature_coupling",
+    "quasicrystal_soi_annealing_transport",
+    "exhaustion_parseval_coverage_energy",
+    "parity_orthogonal_shell_growth_connection",
+    "prime_motif_elastic_parity_spatial_closure",
+    "multiscale_prime_shell_training_closure"
+  ]
+}

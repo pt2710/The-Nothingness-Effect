@@ -1,0 +1,138 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 43,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_001_schedule_controlled_parity_coding_and_uniform_minimal_involution/1a/schedule_controlled_2_adic_completeness.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_001_schedule_controlled_parity_coding_and_uniform_minimal_involution/2a/minimal_involutive_uniform_clock.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_001_schedule_controlled_parity_coding_and_uniform_minimal_involution/1a2a/scheduleinvolution_paired_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:the_symmetry_theorem_c2_definition_1a2a",
+    "eq:the_symmetry_theorem_sign_set_1a2a",
+    "eq:the_symmetry_theorem_sign_involution_1a2a",
+    "eq:the_symmetry_theorem_schedule_definition_1a2a",
+    "eq:the_symmetry_theorem_arrival_times_1a2a",
+    "eq:the_symmetry_theorem_uniform_clock_1a2a",
+    "eq:the_symmetry_theorem_sampled_sign_1a2a",
+    "eq:the_symmetry_theorem_sampled_bit_1a2a",
+    "eq:the_symmetry_theorem_schedule_control_bit_1a2a",
+    "eq:the_symmetry_theorem_sampled_sign_recursion_1a2a",
+    "eq:the_symmetry_theorem_sampled_bit_recursion_1a2a",
+    "eq:the_symmetry_theorem_2adic_coder_1a2a",
+    "eq:the_symmetry_theorem_balance_counter_edit_1a2a",
+    "eq:the_symmetry_theorem_schedule_tape_definition_1a",
+    "eq:the_symmetry_theorem_schedule_to_tape_1a",
+    "eq:the_symmetry_theorem_tape_to_schedule_1a",
+    "eq:local_entropic_compensation_prefix_congruence_1a",
+    "eq:local_entropic_compensation_prefix_bound_1a",
+    "eq:local_entropic_compensation_exact_distance_1a",
+    "eq:the_symmetry_theorem_schedule_principle_1a",
+    "eq:the_symmetry_theorem_uniform_involution_definition_2a",
+    "eq:the_symmetry_theorem_uniform_clock_closed_form_2a",
+    "eq:local_involution_action_group_law_2a",
+    "eq:uniform_clock_minimal_c2_synthesis_2a",
+    "eq:the_symmetry_theorem_uniform_principle_2a",
+    "eq:the_symmetry_theorem_joint_definition_involution_1a2a",
+    "eq:the_symmetry_theorem_joint_definition_uniform_orbit_1a2a",
+    "eq:the_symmetry_theorem_joint_definition_arrival_times_1a2a",
+    "eq:the_symmetry_theorem_joint_definition_sampled_tape_1a2a",
+    "eq:the_symmetry_theorem_joint_definition_coder_1a2a",
+    "eq:the_symmetry_theorem_joint_definition_mutual_reconstruction_1a2a",
+    "eq:the_symmetry_theorem_local_clock_of_entropic_completeness_symmetry_and_uniform_clock_of_minimal_involutive_symmetry_dual_closure_times_bits_coder_1a2a",
+    "eq:the_symmetry_theorem_joint_forward_recursion_1a2a",
+    "eq:the_symmetry_theorem_joint_schedule_reconstruction_1a2a",
+    "eq:the_symmetry_theorem_local_clock_of_entropic_completeness_symmetry_and_uniform_clock_of_minimal_involutive_symmetry_dual_closure_main_equivalence_1a2a",
+    "eq:the_symmetry_theorem_local_clock_of_entropic_completeness_symmetry_and_uniform_clock_of_minimal_involutive_symmetry_dual_closure_conjugacy_1a2a",
+    "eq:the_symmetry_theorem_local_clock_of_entropic_completeness_symmetry_and_uniform_clock_of_minimal_involutive_symmetry_dual_closure_coder_continuity_1a2a",
+    "eq:local_schedule_involution_compensation_net_parity_1a2a",
+    "eq:the_symmetry_theorem_joint_synthesis_1a2a",
+    "eq:the_symmetry_theorem_close_commute_1a2a",
+    "eq:the_symmetry_theorem_close_factor_1a2a",
+    "eq:the_symmetry_theorem_close_an_1a2a",
+    "eq:the_symmetry_theorem_close_alg_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_001_schedule_controlled_parity_coding_and_uniform_minimal_involution/falsification_checks/test_schedule_controlled_parity_coding_and_uniform_minimal_involution_falsification.py"
+  ],
+  "first_label": "subsec:the_symmetry_theorem_schedule_controlled_parity_uniform_involution_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "symmetry",
+  "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py"
+  ],
+  "source_complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_001_schedule_controlled_parity_coding_and_uniform_minimal_involution/falsification_checks/test_schedule_controlled_parity_coding_and_uniform_minimal_involution_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Schedule–Involution Paired Correspondence",
+    "left": "Schedule-Controlled 2-Adic Completeness",
+    "right": "Minimal Involutive Uniform Clock"
+  },
+  "theorem_titles_tex": {
+    "cross": "Schedule--Involution Paired Correspondence",
+    "left": "Schedule-Controlled \\(2\\)-Adic Completeness",
+    "right": "Minimal Involutive Uniform Clock"
+  }
+}

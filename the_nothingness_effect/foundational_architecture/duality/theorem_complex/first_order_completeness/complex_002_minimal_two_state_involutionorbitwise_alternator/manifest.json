@@ -1,0 +1,168 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/duality/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 55,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "minimal_two_state_involution_orbitwise_alternator",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/1a/minimal_involutive_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/2a/universality_of_the_two_state_duality_representation.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/1a2a/minimal_dualityuniversal_orbit_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:minimal_universal_duality_c2_definition_1a2a",
+    "eq:minimal_universal_duality_sign_set_1a2a",
+    "eq:minimal_universal_duality_sign_involution_1a2a",
+    "eq:minimal_universal_duality_system_1a2a",
+    "eq:minimal_universal_duality_isomorphism_map_1a2a",
+    "eq:minimal_universal_duality_equivariance_1a2a",
+    "eq:minimal_two_state_cardinality_1a",
+    "eq:minimal_two_state_involution_1a",
+    "eq:minimal_two_state_nonidentity_1a",
+    "eq:minimal_duality_equiv_nontrivial_involution_1a",
+    "eq:minimal_duality_equiv_fixed_point_free_1a",
+    "eq:minimal_duality_equiv_sign_coordinate_1a",
+    "eq:minimal_duality_equiv_sign_conjugacy_1a",
+    "eq:minimal_duality_equiv_recursion_1a",
+    "eq:minimal_duality_equiv_parity_orbit_1a",
+    "eq:minimal_duality_sign_recursion_1a",
+    "eq:minimal_duality_c2_action_1a",
+    "eq:minimal_duality_free_action_1a",
+    "eq:minimal_duality_transitive_action_1a",
+    "eq:minimal_duality_swap_action_proof_1a",
+    "eq:minimal_duality_two_orientations_1a",
+    "eq:minimal_duality_reverse_orientation_1a",
+    "eq:minimal_two_state_flowpoint_synthesis_1a",
+    "eq:minimal_involutive_duality_principle_1a",
+    "eq:orbitwise_universal_involution_definition_2a",
+    "eq:orbitwise_universal_orbit_definition_2a",
+    "eq:universal_duality_orbit_decomposition_2a",
+    "eq:universal_duality_fixed_set_2a",
+    "eq:universal_duality_orbit_coordinate_2a",
+    "eq:universal_duality_orbit_conjugacy_2a",
+    "eq:universal_duality_orbit_recursion_2a",
+    "eq:universal_duality_orbit_equivalence_relation_2a",
+    "eq:universal_duality_restricted_system_2a",
+    "eq:universal_duality_finite_classification_pair_2a",
+    "eq:universal_duality_finite_cardinality_2a",
+    "eq:universal_duality_cycle_type_2a",
+    "eq:orbitwise_universality_flowpoint_synthesis_2a",
+    "eq:orbitwise_universal_duality_principle_2a",
+    "eq:minimal_universal_joint_equiv_involution_1a2a",
+    "eq:minimal_universal_joint_equiv_c2_action_1a2a",
+    "eq:minimal_universal_joint_equiv_periodicity_1a2a",
+    "eq:minimal_universal_joint_orbit_map_1a2a",
+    "eq:minimal_universal_joint_parity_projection_1a2a",
+    "eq:minimal_universal_joint_graph_reciprocity_1a2a",
+    "eq:orbit_partition_reconstruction_map_1a2a",
+    "eq:minimal_universal_joint_discrete_canonical_form_1a2a",
+    "eq:minimal_universal_joint_cosine_lift_1a2a",
+    "eq:minimal_universal_joint_cosine_samples_1a2a",
+    "eq:minimal_universal_joint_antiperiodic_lift_1a2a",
+    "eq:minimal_universal_joint_continuous_nonuniqueness_1a2a",
+    "eq:minimal_block_universal_orbit_synthesis_1a2a",
+    "eq:minimal_universal_duality_closure_decomposition_1a2a",
+    "eq:minimal_universal_duality_closure_orbit_model_1a2a",
+    "eq:minimal_universal_duality_closure_minimality_1a2a",
+    "eq:minimal_universal_duality_closure_universality_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/falsification_checks/test_minimal_two_state_involution_orbitwise_alternator_falsification.py"
+  ],
+  "first_label": "app:duality_minimal_universal",
+  "implementation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/a_level.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/1a/minimal_involutive_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/2a/universality_of_the_two_state_duality_representation.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/1a2a/minimal_dualityuniversal_orbit_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fixed-point-free alternator",
+      "name": "minimal two-state orbit",
+      "python_types": [
+        "TwoStateOrbit"
+      ]
+    },
+    "domain": {
+      "description": "nonzero complex source",
+      "name": "nonzero two-state generator",
+      "python_types": [
+        "TwoStateInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.foundational_architecture.duality.duality.minimal_two_state_orbit",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.foundational_architecture.duality.a_level.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "duality",
+  "owner_path": "the_nothingness_effect/foundational_architecture/duality",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/duality/simulation/run_suite.py",
+    "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py"
+  ],
+  "source_complex_id": "minimal_two_state_involution_orbitwise_alternator",
+  "source_complex_ids": [
+    "reciprocal_relation_action_groupoid",
+    "involutive_duality_c_2_action"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_duality_contracts.py",
+    "the_nothingness_effect/foundational_architecture/duality/test/test_duality.py",
+    "the_nothingness_effect/foundational_architecture/duality/theorem_complex/first_order_completeness/complex_002_minimal_two_state_involutionorbitwise_alternator/falsification_checks/test_minimal_two_state_involution_orbitwise_alternator_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Minimal Duality–Universal Orbit Equivalence",
+    "left": "Minimal Involutive Duality",
+    "right": "Universality of the Two-State Duality Representation"
+  },
+  "theorem_titles_tex": {
+    "cross": "Minimal Duality--Universal Orbit Equivalence",
+    "left": "Minimal Involutive Duality",
+    "right": "Universality of the Two-State Duality Representation"
+  }
+}

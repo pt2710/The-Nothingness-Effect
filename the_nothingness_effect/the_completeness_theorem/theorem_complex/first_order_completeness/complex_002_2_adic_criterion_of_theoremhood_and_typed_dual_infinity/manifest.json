@@ -1,0 +1,117 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 7,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/1a/2_adic_criterion_of_theoremhood.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/2a/dual_absorption_of_infinity_in_a_declared_tne_carrier.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/1a2a/typed_dual_closure_of_theoremhood_and_infinity.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:ct01_typed_dynamical_realization",
+    "eq:completeness_synthesis_formal_04",
+    "eq:completeness_principle_formal_05",
+    "eq:completeness_synthesis_formal_05",
+    "eq:completeness_principle_formal_06",
+    "eq:completeness_synthesis_formal_06",
+    "eq:completeness_principle_formal_07"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/falsification_checks/test_2_adic_criterion_of_theoremhood_and_typed_dual_infinity_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_01",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/1a/2_adic_criterion_of_theoremhood.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/2a/dual_absorption_of_infinity_in_a_declared_tne_carrier.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/1a2a/typed_dual_closure_of_theoremhood_and_infinity.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed finite source law with explicit obstruction status",
+      "name": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity result",
+      "python_types": [
+        "CompletenessSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/first_order_completeness/complex_002_2_adic_criterion_of_theoremhood_and_typed_dual_infinity/falsification_checks/test_2_adic_criterion_of_theoremhood_and_typed_dual_infinity_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Typed Dual Closure of Theoremhood and Infinity",
+    "left": "2-Adic Criterion of Theoremhood",
+    "right": "Dual Absorption of Infinity in a Declared TNE Carrier"
+  },
+  "theorem_titles_tex": {
+    "cross": "Typed Dual Closure of Theoremhood and Infinity",
+    "left": "2-Adic Criterion of Theoremhood",
+    "right": "Dual Absorption of Infinity in a Declared TNE Carrier"
+  }
+}

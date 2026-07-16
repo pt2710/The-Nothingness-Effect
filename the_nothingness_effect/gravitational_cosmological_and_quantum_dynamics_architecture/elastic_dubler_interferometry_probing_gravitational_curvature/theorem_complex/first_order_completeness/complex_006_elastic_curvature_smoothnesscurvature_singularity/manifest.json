@@ -1,0 +1,167 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 57,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_curvature_smoothness_curvature_singularity",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/1a/elastic_curvature_smoothness.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/2a/curvature_singularity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/1a2a/elastic_curvature_smoothness_curvature_singularity.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:edi06_typed_regular_contract",
+    "eq:edi06_typed_singular_contract",
+    "eq:edi06_curvature_regularity_order_parameter_1a",
+    "eq:edi06_curvature_regularity_branch_condition_1a",
+    "eq:invertibility_1a",
+    "eq:curvature_bound_1a",
+    "eq:laplacian_trace_1a",
+    "eq:greens_identity_1a",
+    "eq:flux_bound_1a",
+    "eq:lemma_trace_bound_1a",
+    "eq:lemma_sup_bound_1a",
+    "eq:lemma_integral_bound_1a",
+    "eq:lemma_L1_bound_1a",
+    "eq:proof_trace_bound_1a",
+    "eq:proof_no_sing_1a",
+    "eq:proof_integral_finite_1a",
+    "eq:proof_flux_finite_1a",
+    "eq:corollary_stability_1a",
+    "eq:corollary_sup_stability_1a",
+    "eq:corollary_L1_stability_1a",
+    "eq:corollary_L1_bound_1a",
+    "eq:edi06_curvature_regularity_order_parameter_2a",
+    "eq:edi06_curvature_regularity_branch_condition_2a",
+    "eq:fundamental_solution_2a",
+    "eq:flux_diverges_2a",
+    "eq:distributional_action_2a",
+    "eq:dirac_component_2a",
+    "eq:fundamental_profiles_2a",
+    "eq:atomic_K_2a",
+    "eq:test_function_action_2a",
+    "eq:isolated_mass_2a",
+    "eq:proof_flux_diverges_2a",
+    "eq:proof_dirac_or_diverge_2a",
+    "eq:proof_distributional_2a",
+    "eq:proof_positive_mass_2a",
+    "eq:corollary_atomic_jump_2a",
+    "eq:corollary_measure_decomp_2a",
+    "eq:corollary_distributional_split_2a",
+    "eq:corollary_bounded_functional_2a",
+    "eq:edi06_curvature_regularity_status_1a2a",
+    "eq:singular_regime_1a2a",
+    "eq:regular_regime_1a2a",
+    "eq:laplacian_definition_1a2a",
+    "eq:divergence_theorem_1a2a",
+    "eq:singular_flux_1a2a",
+    "eq:exclusion_logic_1a2a",
+    "eq:exclusion_measure_1a2a",
+    "eq:exclusion_test_action_1a2a",
+    "eq:exclusion_consequence_1a2a",
+    "eq:dual_partition_1a2a",
+    "eq:dual_neg_regular_1a2a",
+    "eq:dual_flux_split_1a2a",
+    "eq:dual_logic_closure_1a2a",
+    "eq:finite_flux_characterization_1a2a",
+    "eq:infinite_flux_characterization_1a2a",
+    "eq:ball_flux_relation_1a2a",
+    "eq:bulk_boundary_equivalence_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/falsification_checks/test_elastic_curvature_smoothness_curvature_singularity_falsification.py"
+  ],
+  "first_label": "ssec:elastic_curvature_smoothness_singularity_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/1a/elastic_curvature_smoothness.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/2a/curvature_singularity.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/1a2a/elastic_curvature_smoothness_curvature_singularity.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fail-closed typed contract result",
+      "name": "elastic_curvature_smoothness_curvature_singularity result",
+      "python_types": [
+        "ContractResult"
+      ]
+    },
+    "domain": {
+      "description": "typed recertified source-law input",
+      "name": "elastic_curvature_smoothness_curvature_singularity input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.recertified_contracts.evaluate_elastic_curvature_smoothness",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "elastic_curvature_smoothness_curvature_singularity",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/first_order_completeness/complex_006_elastic_curvature_smoothnesscurvature_singularity/falsification_checks/test_elastic_curvature_smoothness_curvature_singularity_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic Curvature Smoothness <-> Curvature Singularity",
+    "left": "Elastic Curvature Smoothness",
+    "right": "Curvature Singularity"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic Curvature Smoothness $\\leftrightarrow$ Curvature Singularity",
+    "left": "Elastic Curvature Smoothness (1A)",
+    "right": "Curvature Singularity (2A)"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": [
+      "eq:tne_spatial_epinorm_c01_master",
+      "eq:tne_spatial_epinorm_c01_1c_definition",
+      "eq:tne_spatial_epinorm_c01_1c_theorem",
+      "eq:tne_spatial_epinorm_c01_1c_lemma",
+      "eq:tne_spatial_epinorm_c01_1c_synthesis",
+      "eq:tne_spatial_epinorm_c01_1c_principle",
+      "eq:tne_spatial_epinorm_c01_2c_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "third_order_completeness",
+  "complex_id": "spatial_weighted_calibration_closure",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/1c/anchored_elastic_pi_norm_positive_ratio_elastic_pi_bound_equivalence_calibrated_interface_equiva.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/2c/failure_of_positive_definiteness_on_unanchored_sequences_weight_breakdown_under_singular_input_f.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/1c2c/normseminorm_domain_dichotomy_weight_regularity_dichotomy_entropic_reweighting_dichotomy_calibra.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_epinorm_c01_spatial_carrier",
+    "eq:drv_epinorm_c01_1c",
+    "eq:drv_epinorm_c01_theorem_1c",
+    "eq:drv_epinorm_c01_res_1c",
+    "eq:drv_epinorm_c01_2c",
+    "eq:drv_epinorm_c01_res_2c",
+    "eq:drv_epinorm_c01_joint",
+    "eq:drv_epinorm_c01_exchange_square",
+    "eq:elastic_pi_norm_properties_nonnegative_1a2a",
+    "eq:elastic_pi_norm_properties_translation_invariance_1a2a",
+    "eq:elastic_pi_norm_properties_homogeneity_1a2a",
+    "eq:elastic_pi_norm_properties_triangle_1a2a",
+    "eq:elastic_pi_norm_properties_entropy_shift_1a2a",
+    "eq:elastic_pi_norm_properties_weight_product_1a2a",
+    "eq:elastic_pi_norm_properties_uniform_reduction_1a2a",
+    "eq:elastic_pi_norm_properties_large_k_limit_1a2a",
+    "eq:elastic_pi_norm_properties_increment_monotonicity_1a2a",
+    "eq:elastic_pi_norm_properties_weight_comparison_1a2a",
+    "eq:elastic_pi_norm_properties_interface_residual_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "B-source necessity",
+      "spatial closure/coercivity",
+      "boundary-leakage witness",
+      "involution/exchange test",
+      "mesh/refinement convergence"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/falsification_checks/test_spatial_weighted_calibration_closure_falsification.py"
+  ],
+  "first_label": "app:drv_epinorm_c01",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/1c2c/normseminorm_domain_dichotomy_weight_regularity_dichotomy_entropic_reweighting_dichotomy_calibra.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/1c/anchored_elastic_pi_norm_positive_ratio_elastic_pi_bound_equivalence_calibrated_interface_equiva.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/2c/failure_of_positive_definiteness_on_unanchored_sequences_weight_breakdown_under_singular_input_f.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/1c2c/normseminorm_domain_dichotomy_weight_regularity_dichotomy_entropic_reweighting_dichotomy_calibra.py"
+  ],
+  "known_limitations": [],
+  "level": "C",
+  "mathematical_contract": {
+    "closure_predicate": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.contracts.<locals>.<lambda>",
+    "codomain": {
+      "description": "local operator, boundary trace, coercivity, and candidate status",
+      "name": "spatial weighted calibration",
+      "python_types": [
+        "SpatialWeightedClosure"
+      ]
+    },
+    "domain": {
+      "description": "anchored metric path, entropy sequence, K_D > 0 and p >= 1",
+      "name": "Elastic-pi norm source",
+      "python_types": [
+        "ElasticPiNormInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.spatial_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "elastic_pi_norm",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm",
+  "required_artifacts": [
+    "2D/3D field data",
+    "boundary residual map",
+    "closure animation",
+    "spatial dependency diagram"
+  ],
+  "required_tests": [
+    "B-source necessity",
+    "spatial closure/coercivity",
+    "boundary-leakage witness",
+    "involution/exchange test",
+    "mesh/refinement convergence"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/simulate_elastic_pi_norm.py"
+  ],
+  "source_complex_id": "spatial_weighted_calibration_closure",
+  "source_complex_ids": [
+    "weighted_path_ratio_regularity_functional",
+    "entropy_pdfi_calibrated_norm_residual"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_elastic_pi_norm_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_elastic_pi_norm.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/theorem_complex/third_order_completeness/complex_001_spatial_weighted_calibration_closure/falsification_checks/test_spatial_weighted_calibration_closure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Norm–Seminorm Domain Dichotomy – Weight Regularity Dichotomy – Entropic Reweighting Dichotomy – Calibrated Equivalence–Decoupling Dichotomy – pDFI–Elastic pi Equivalence and Decoupling",
+    "left": "Anchored Elastic pi Norm – Positive Ratio – Elastic pi Bound Equivalence – Calibrated Interface Equivalence – pDFI–Elastic pi Equivalence in Dual-Aligned Systems",
+    "right": "Failure of Positive Definiteness on Unanchored Sequences – Weight Breakdown under Singular Input – Failure of Uniform Bound Equivalence – Interface Decoupling – pDFI–Elastic pi Decoupling in Symmetry Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Norm--Seminorm Domain Dichotomy -- Weight Regularity Dichotomy -- Entropic Reweighting Dichotomy -- Calibrated Equivalence--Decoupling Dichotomy -- pDFI--Elastic \\texorpdfstring{\\(\\pi\\)}{pi} Equivalence and Decoupling",
+    "left": "Anchored Elastic $\\pi$ Norm -- Positive Ratio -- Elastic $\\pi$ Bound Equivalence -- Calibrated Interface Equivalence -- pDFI--Elastic \\texorpdfstring{\\(\\pi\\)}{pi} Equivalence in Dual-Aligned Systems",
+    "right": "Failure of Positive Definiteness on Unanchored Sequences -- Weight Breakdown under Singular Input -- Failure of Uniform Bound Equivalence -- Interface Decoupling -- pDFI--Elastic \\texorpdfstring{\\(\\pi\\)}{pi} Decoupling in Symmetry Breakdown"
+  }
+}

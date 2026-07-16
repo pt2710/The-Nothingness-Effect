@@ -1,0 +1,173 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 61,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/1a/elastic_pi_e_ripple_propagation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/2a/gr_linear_wave_recovery.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/1a2a/elastic_pi_e_ripples_with_entropic_coupling_linear_gr_wave_limit.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw01_ripple_propagation_order_parameter_1a",
+    "eq:grw01_ripple_propagation_branch_condition_1a",
+    "eq:def_state_1a",
+    "eq:pde_1a",
+    "eq:energy_1a",
+    "eq:energy_decay_1a",
+    "eq:ms_ansatz_1a",
+    "eq:ms_u1_1a",
+    "eq:ms_u3_1a",
+    "eq:overtone_scaling_1a",
+    "eq:plane_wave_u1_1a",
+    "eq:cubic_identity_1a",
+    "eq:averages_1a",
+    "eq:overtone_result_1a",
+    "eq:galerkin_approx_1a",
+    "eq:galerkin_system_1a",
+    "eq:galerkin_energy_1a",
+    "eq:galerkin_energy_decay_1a",
+    "eq:ratios_cor_1a",
+    "eq:xi_estimator_1a",
+    "eq:grw01_ripple_propagation_order_parameter_2a",
+    "eq:grw01_ripple_propagation_branch_condition_2a",
+    "eq:def_state_2a",
+    "eq:pde_2a",
+    "eq:dispersion_2a",
+    "eq:energy_2a",
+    "eq:energy_const_2a",
+    "eq:gr_bounds_2a",
+    "eq:eps_vec_2a",
+    "eq:pde_eps_2a",
+    "eq:uniform_bounds_2a",
+    "eq:weak_limit_2a",
+    "eq:residual_2a",
+    "eq:residual_to_zero_2a",
+    "eq:weak_limit_eq_2a",
+    "eq:proof_energy_gr_2a",
+    "eq:bounds_2a",
+    "eq:gr_obs_relations_2a",
+    "eq:post_concentration_2a",
+    "eq:grw01_ripple_propagation_status_1a2a",
+    "eq:def_state_1a2a",
+    "eq:def_params_1a2a",
+    "eq:joint_pde_1a2a",
+    "eq:decoupling_map_1a2a",
+    "eq:gr_limit_pde_1a2a",
+    "eq:energy_def_1a2a",
+    "eq:energy_dissipation_1a2a",
+    "eq:dispersion_1a2a",
+    "eq:energy_gr_1a2a",
+    "eq:ident_map_1a2a",
+    "eq:full_rank_1a2a",
+    "eq:sensitivities_1a2a",
+    "eq:lag_derivative_1a2a",
+    "eq:homotopy_params_1a2a",
+    "eq:homotopy_pde_1a2a",
+    "eq:homotopy_energy_1a2a",
+    "eq:homotopy_energy_decay_1a2a",
+    "eq:homotopy_limit_1a2a",
+    "eq:bounds_triplet_1a2a",
+    "eq:lag_int_1a2a",
+    "eq:param_extract_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/falsification_checks/test_elastic_e_ripple_propagation_gr_linear_wave_recovery_falsification.py"
+  ],
+  "first_label": "ssec:elastic_pi_ripple_gr_recovery_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/1a/elastic_pi_e_ripple_propagation.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/2a/gr_linear_wave_recovery.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/1a2a/elastic_pi_e_ripples_with_entropic_coupling_linear_gr_wave_limit.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed source response, invariant residual, and boundary trace",
+      "name": "ripple_wave field",
+      "python_types": [
+        "SourceFieldLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite uniformly sampled spatial field and positive parameters",
+      "name": "physical field law",
+      "python_types": [
+        "FieldLawInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_runtime.contracts_for.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_gravitational_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_001_elastic_e_ripple_propagationgr_linear_wave_recovery/falsification_checks/test_elastic_e_ripple_propagation_gr_linear_wave_recovery_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic-pi_E Ripples with Entropic Coupling <-> Linear GR Wave Limit",
+    "left": "Elastic-pi_E Ripple Propagation",
+    "right": "GR Linear-Wave Recovery"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic-$\\pi_{\\mathcal{E}}$ Ripples with Entropic Coupling $\\leftrightarrow$ Linear GR Wave Limit",
+    "left": "Elastic-$\\pi_{\\mathcal{E}}$ Ripple Propagation",
+    "right": "GR Linear-Wave Recovery"
+  }
+}

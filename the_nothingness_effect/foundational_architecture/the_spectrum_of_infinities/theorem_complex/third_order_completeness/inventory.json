@@ -1,0 +1,21 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "cosmic_matrix_address_and_ghost_spark_obstruction",
+      "directory": "complex_001_cosmic_matrix_address_and_ghost_spark_obstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observable_locality_and_infinite_exposure",
+      "directory": "complex_002_observable_locality_and_infinite_exposure",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "elastic_curvature_probing_and_incoherent_warping",
+      "directory": "complex_003_elastic_curvature_probing_and_incoherent_warping",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities"
+}

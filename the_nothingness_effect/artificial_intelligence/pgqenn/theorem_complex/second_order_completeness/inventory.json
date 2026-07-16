@@ -1,0 +1,31 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "prime_motif_parity_stability_functional",
+      "directory": "complex_001_prime_motif_parity_stability_functional",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "dfi_elastic_prime_curvature_coupling",
+      "directory": "complex_002_dfielastic_prime_curvature_coupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "quasicrystal_soi_annealing_transport",
+      "directory": "complex_003_quasicrystalsoi_annealing_transport",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "exhaustion_parseval_coverage_energy",
+      "directory": "complex_004_exhaustionparseval_coverage_energy",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_orthogonal_shell_growth_connection",
+      "directory": "complex_005_parity_orthogonal_shell_growth_connection",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/pgqenn"
+}

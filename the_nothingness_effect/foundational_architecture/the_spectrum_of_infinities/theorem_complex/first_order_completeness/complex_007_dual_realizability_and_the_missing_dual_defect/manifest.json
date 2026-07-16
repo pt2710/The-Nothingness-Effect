@@ -1,0 +1,105 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 8,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dual_realizability_and_the_missing_dual_defect",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_007_dual_realizability_and_the_missing_dual_defect/1a/dual_realizability_of_spectral_structures.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_007_dual_realizability_and_the_missing_dual_defect/2a/absence_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_007_dual_realizability_and_the_missing_dual_defect/1a2a/coordinate_projectionresidual_classification_theorem.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:soi_dual_realizability_original_soi_1a2a",
+    "eq:soi_dual_realizability_measure_scaling_1a2a",
+    "eq:soi_dual_realizability_pushforward_pair_1a2a",
+    "eq:std_soi_coordinate_realizability_1a",
+    "eq:std_soi_missing_coordinate_2a",
+    "eq:std_soi_projection_joint",
+    "eq:soi_dual_realizability_absolute_scale_1a2a",
+    "eq:soi_dual_realizability_residual_scale_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_007_dual_realizability_and_the_missing_dual_defect/falsification_checks/test_dual_realizability_and_the_missing_dual_defect_falsification.py"
+  ],
+  "first_label": "app:soi_complex_10",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "dual_realizability_and_the_missing_dual_defect",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/first_order_completeness/complex_007_dual_realizability_and_the_missing_dual_defect/falsification_checks/test_dual_realizability_and_the_missing_dual_defect_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Coordinate Projection–Residual Classification Theorem",
+    "left": "Dual Realizability of Spectral Structures",
+    "right": "Absence Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Coordinate Projection--Residual Classification Theorem",
+    "left": "Dual Realizability of Spectral Structures",
+    "right": "Absence Theorem"
+  }
+}

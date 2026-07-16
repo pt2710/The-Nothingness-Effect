@@ -1,0 +1,147 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 50,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_005_dfi_memory_kernel_in_waveformsno_extra_memory_imprint/1a/dfi_memory_kernel_in_waveforms.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_005_dfi_memory_kernel_in_waveformsno_extra_memory_imprint/2a/no_extra_memory_imprint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_005_dfi_memory_kernel_in_waveformsno_extra_memory_imprint/1a2a/dfi_memory_kernel_in_waveforms_no_extra_memory_imprint.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw05_dfi_memory_order_parameter_1a",
+    "eq:grw05_dfi_memory_branch_condition_1a",
+    "eq:dfi_tail_ode_1a",
+    "eq:h_decomp_1a",
+    "eq:q_eff_shift_1a",
+    "eq:freq_tail_1a",
+    "eq:phase_tail_1a",
+    "eq:ident_ratio_1a",
+    "eq:phase_slope_1a",
+    "eq:lti_convolution_1a",
+    "eq:fourier_tail_1a",
+    "eq:residual_model_1a",
+    "eq:likelihood_1a",
+    "eq:grw05_dfi_memory_order_parameter_2a",
+    "eq:grw05_dfi_memory_branch_condition_2a",
+    "eq:decouple_time_2a",
+    "eq:decouple_freq_2a",
+    "eq:q_eff_limit_2a",
+    "eq:residual_vanish_2a",
+    "eq:continuity_summaries_2a",
+    "eq:l2_continuity_2a",
+    "eq:decouple_set_gamma_zero_2a",
+    "eq:algebraic_consequence_h_2a",
+    "eq:algebraic_consequence_q_2a",
+    "eq:freq_decouple_2a",
+    "eq:residual_power_zero_2a",
+    "eq:periodogram_noise_2a",
+    "eq:band_integral_null_2a",
+    "eq:grw05_dfi_memory_status_1a2a",
+    "eq:dfi_tail_convolution_1a2a",
+    "eq:dfi_tail_ode_1a2a",
+    "eq:q_eff_shift_1a2a",
+    "eq:freq_tail_1a2a",
+    "eq:spectrum_sum_1a2a",
+    "eq:causality_1a2a",
+    "eq:lowpass_1a2a",
+    "eq:vanish_1a2a",
+    "eq:energy_relation_1a2a",
+    "eq:kernel_def_1a2a",
+    "eq:dual_param_model_1a2a",
+    "eq:ode_recover_1a2a",
+    "eq:dual_param_qeff_1a2a",
+    "eq:gr_limit_1a2a",
+    "eq:fourier_dual_model_1a2a",
+    "eq:fourier_partials_1a2a",
+    "eq:spectral_identity_expand_1a2a",
+    "eq:spectral_derivative_gamma_1a2a",
+    "eq:path_differentiability_1a2a",
+    "eq:likelihood_ratio_1a2a",
+    "eq:score_test_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_005_dfi_memory_kernel_in_waveformsno_extra_memory_imprint/falsification_checks/test_dfi_memory_kernel_in_waveforms_no_extra_memory_imprint_falsification.py"
+  ],
+  "first_label": "ssec:dfi_memory_kernel_waveforms_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_005_dfi_memory_kernel_in_waveformsno_extra_memory_imprint/falsification_checks/test_dfi_memory_kernel_in_waveforms_no_extra_memory_imprint_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "DFI Memory Kernel in Waveforms <-> No Extra-Memory Imprint",
+    "left": "DFI Memory Kernel in Waveforms",
+    "right": "No Extra-Memory Imprint"
+  },
+  "theorem_titles_tex": {
+    "cross": "DFI Memory Kernel in Waveforms $\\leftrightarrow$ No Extra-Memory Imprint",
+    "left": "DFI Memory Kernel in Waveforms",
+    "right": "No Extra-Memory Imprint"
+  }
+}

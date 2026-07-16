@@ -1,0 +1,125 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 14,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "flowpoint_parity_correspondence_and_decoupling",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/1a/flowpointparity_correspondence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/2a/parity_collapse_decoupling.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/1a2a/flowpointparity_correspondence_parity_collapse_decoupling.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_parity_commute_1a2a",
+    "eq:flowpoint_parity_decouple_1a2a",
+    "eq:pdfi02_zero_coupling_defect_1a",
+    "eq:flowpoint_parity_commute_1a",
+    "eq:flowpoint_parity_coupling_lemma_1a",
+    "eq:flowpoint_parity_entropy_jump_corollary_1a",
+    "eq:pdfi02_synthesis_1a",
+    "eq:parity_collapse_commutator_2a",
+    "eq:flowpoint_parity_independent_lemma_2a",
+    "eq:parity_collapse_entropy_flat_corollary_2a",
+    "eq:pdfi02_synthesis_2a",
+    "eq:pdfi02_status_set_1a2a",
+    "eq:flowpoint_parity_coupling_lemma_1a2a",
+    "eq:pdfi02_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/falsification_checks/test_flowpoint_parity_correspondence_and_decoupling_falsification.py"
+  ],
+  "first_label": "ssec:flowpoint_parity_correspondence_1a2a",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/1a/flowpointparity_correspondence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/2a/parity_collapse_decoupling.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/1a2a/flowpointparity_correspondence_parity_collapse_decoupling.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed pDFI source-law result",
+      "name": "flowpoint_parity_correspondence_and_decoupling output",
+      "python_types": [
+        "FlowpointParityLaw"
+      ]
+    },
+    "domain": {
+      "description": "integer trajectory, nonzero predecessors, positive recurrence seed and K_D",
+      "name": "pDFI realization",
+      "python_types": [
+        "ParityDFIInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.flowpoint_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pdfi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py"
+  ],
+  "source_complex_id": "flowpoint_parity_correspondence_and_decoupling",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pdfi_contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_evidence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/test_parity_adapted_dynamic_fluctuation_index.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/theorem_complex/first_order_completeness/complex_002_flowpointparity_correspondence_and_decoupling/falsification_checks/test_flowpoint_parity_correspondence_and_decoupling_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Flowpoint–Parity Correspondence <-> Parity Collapse/Decoupling",
+    "left": "Flowpoint–Parity Correspondence",
+    "right": "Parity Collapse/Decoupling"
+  },
+  "theorem_titles_tex": {
+    "cross": "Flowpoint--Parity Correspondence $\\longleftrightarrow$ Parity Collapse/Decoupling",
+    "left": "Flowpoint--Parity Correspondence",
+    "right": "Parity Collapse/Decoupling"
+  }
+}

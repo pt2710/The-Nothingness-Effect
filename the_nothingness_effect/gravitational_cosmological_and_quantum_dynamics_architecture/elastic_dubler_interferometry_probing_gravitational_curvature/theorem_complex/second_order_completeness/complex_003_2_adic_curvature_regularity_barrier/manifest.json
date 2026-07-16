@@ -1,0 +1,121 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "2_adic_curvature_regularity_barrier",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b/finite_barrier_implies_regular_nonperforating_geometry.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/2b/singular_or_unmapped_barrier_failure.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b2b/complete_barrier_classification.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:drv_edi_b03_product_carrier",
+    "eq:drv_edi_b03_1b",
+    "eq:drv_edi_b03_theorem_1b",
+    "eq:drv_edi_b03_res_1b",
+    "eq:drv_edi_b03_2b",
+    "eq:drv_edi_b03_theorem_2b",
+    "eq:drv_edi_b03_res_2b",
+    "eq:drv_edi_b03_joint",
+    "eq:drv_edi_b03_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/falsification_checks/test_2_adic_curvature_regularity_barrier_falsification.py"
+  ],
+  "first_label": "app:drv_edi_b03",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b2b/complete_barrier_classification.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b/finite_barrier_implies_regular_nonperforating_geometry.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/2b/singular_or_unmapped_barrier_failure.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/1b2b/complete_barrier_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "elastic_dubler_interferometry",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py"
+  ],
+  "source_complex_id": "2_adic_curvature_regularity_barrier",
+  "source_complex_ids": [
+    "bridge_duality_and_the_2_adic_criterion",
+    "elastic_curvature_smoothness_curvature_singularity"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/theorem_complex/second_order_completeness/complex_003_2_adic_curvature_regularity_barrier/falsification_checks/test_2_adic_curvature_regularity_barrier_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Barrier Classification",
+    "left": "Finite Barrier Implies Regular Nonperforating Geometry",
+    "right": "Singular or Unmapped Barrier Failure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Barrier Classification",
+    "left": "Finite Barrier Implies Regular Nonperforating Geometry",
+    "right": "Singular or Unmapped Barrier Failure"
+  }
+}

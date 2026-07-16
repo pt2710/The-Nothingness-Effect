@@ -1,0 +1,118 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 21,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "observation_definiteness_equivalence_and_closure_failure",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_006_observationdefiniteness_equivalence_and_closure_failure/1a/observationdefiniteness_equivalence.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_006_observationdefiniteness_equivalence_and_closure_failure/2a/observation_closure_failure.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_006_observationdefiniteness_equivalence_and_closure_failure/1a2a/observation_definiteness_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:obs09_canonical_observation_collapse_1a2a",
+    "eq:obs09_canonical_stabilization_1a2a",
+    "eq:obs09_observation_map_1a2a",
+    "eq:obs09_local_definiteness_1a",
+    "eq:obs09_stable_state_1a",
+    "eq:obs09_global_equivalence_1a",
+    "eq:obs09_output_fixedness_1a",
+    "eq:obs09_eventual_idempotence_1a",
+    "eq:obs09_synthesis_1a",
+    "eq:std_obs09_principle_1a",
+    "eq:obs09_failure_set_2a",
+    "eq:obs09_stabilization_time_2a",
+    "eq:obs09_cycle_example_2a",
+    "eq:obs09_synthesis_2a",
+    "eq:std_obs09_principle_2a",
+    "eq:obs09_depth_partition_1a2a",
+    "eq:obs09_partition_identity_1a2a",
+    "eq:obs09_global_one_step_1a2a",
+    "eq:obs09_eventual_idempotence_equivalence_1a2a",
+    "eq:obs09_joint_stabilization_partition_1a2a",
+    "eq:std_obs09_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_006_observationdefiniteness_equivalence_and_closure_failure/falsification_checks/test_observation_definiteness_equivalence_and_closure_failure_falsification.py"
+  ],
+  "first_label": "app:obs_complex_09",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "observation_definiteness_equivalence_and_closure_failure",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/first_order_completeness/complex_006_observationdefiniteness_equivalence_and_closure_failure/falsification_checks/test_observation_definiteness_equivalence_and_closure_failure_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Observation-Definiteness Closure Classification",
+    "left": "Observation–Definiteness Equivalence",
+    "right": "Observation Closure Failure"
+  },
+  "theorem_titles_tex": {
+    "cross": "Observation-Definiteness Closure Classification",
+    "left": "Observation--Definiteness Equivalence",
+    "right": "Observation Closure Failure"
+  }
+}

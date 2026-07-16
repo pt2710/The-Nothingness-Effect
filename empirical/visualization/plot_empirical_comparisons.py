@@ -11,7 +11,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from equations.artifact_io import save_figure
+from the_nothingness_effect._runtime.artifacts.io import save_figure
 
 
 def plot_series_comparison(

@@ -1,0 +1,8 @@
+theorem_complex_id,residual,closure_status,claim_boundary
+flowpoint_unity_orientation_and_integer_unfolding,0.0,satisfied,finite computational support; not a formal proof substitute
+operation_covariance_and_spectral_minimization,0.0,satisfied,finite computational support; not a formal proof substitute
+finite_approximation_and_vanishing_residual_energy,0.030296081647354534,numerical_candidate,finite computational support; not a formal proof substitute
+complex_phase_coordinates_and_fourier_reconstruction,0.0,numerical_candidate,finite computational support; not a formal proof substitute
+addition_of_arithmetic_orientation_and_typed_operation_theory,0.0,numerical_candidate,finite computational support; not a formal proof substitute
+addition_of_approximation_and_harmonic_geometry,0.03597560219624253,numerical_candidate,finite computational support; not a formal proof substitute
+addition_of_the_two_complete_b_level_operator_families,0.0,numerical_candidate,finite computational support; not a formal proof substitute

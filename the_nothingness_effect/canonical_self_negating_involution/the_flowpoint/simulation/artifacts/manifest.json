@@ -1,0 +1,41 @@
+{
+  "appendix_filename": "multiple",
+  "appendix_source_sha256": "multiple",
+  "appendix_sources": [
+    {
+      "filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+      "sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206"
+    },
+    {
+      "filename": "appendix_tne_foundational_closure_architecture.tex",
+      "sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+    }
+  ],
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "exact_or_approximate": "structural_metadata",
+  "generated_files": [],
+  "invariant_results": {},
+  "module": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint",
+  "numeric_tolerances": {},
+  "parameter_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "parameters": {},
+  "regeneration_command": "python the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py",
+  "repository_result_commit": "pending",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [],
+  "schema_version": "1.0",
+  "seed": 0,
+  "theorem_complex_id": "module_inventory",
+  "theorem_complex_ids": [
+    "self_negating_oscillation_and_eigenstructure",
+    "parity_to_bit_equivalence_and_2_adic_coding",
+    "kernel_fiber_integrability",
+    "phase_clock",
+    "scheduled_spectral_history",
+    "phase_indexed_kernel_transport",
+    "affine_history_field",
+    "kernel_alternator",
+    "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece"
+  ]
+}

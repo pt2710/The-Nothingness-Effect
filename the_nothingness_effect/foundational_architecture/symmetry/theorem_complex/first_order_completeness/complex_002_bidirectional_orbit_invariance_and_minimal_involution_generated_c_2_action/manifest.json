@@ -1,0 +1,160 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 65,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_002_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action/1a/bidirectional_orbit_invariance.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_002_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action/2a/minimal_involution_generated_symmetry_group.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_002_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action/1a2a/bidirectional_orbitminimal_action_correspondence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:reciprocal_pair_symmetry_global_map_1a2a",
+    "eq:reciprocal_pair_symmetry_graph_definition_1a2a",
+    "eq:reciprocal_pair_symmetry_pair_reversal_1a2a",
+    "eq:reciprocal_pair_symmetry_diagonal_1a2a",
+    "eq:reciprocal_pair_symmetry_orbit_pair_1a2a",
+    "eq:reciprocal_pair_symmetry_c2_definition_1a2a",
+    "eq:reciprocal_pair_symmetry_generated_transformation_group_1a2a",
+    "eq:reciprocal_pair_symmetry_scope_involution_1a2a",
+    "eq:reciprocal_pair_symmetry_real_sign_reflection_1a2a",
+    "eq:reciprocal_pair_symmetry_ordered_pair_reversal_1a2a",
+    "eq:reciprocal_pair_symmetry_ordered_pair_equality_boundary_1a2a",
+    "eq:reciprocal_pair_symmetry_unordered_orbit_invariance_1a2a",
+    "eq:reciprocal_pair_symmetry_orbit_reciprocity_definition_1a",
+    "eq:reciprocal_pair_symmetry_graph_reciprocity_definition_1a",
+    "eq:bidirectional_orbit_invariance_reversed_pair_1a",
+    "eq:bidirectional_orbit_invariance_orbit_identity_1a",
+    "eq:bidirectional_orbit_invariance_fixed_point_condition_1a",
+    "eq:bidirectional_orbit_invariance_two_state_condition_1a",
+    "eq:bidirectional_orbit_invariance_real_fixed_set_1a",
+    "eq:bidirectional_orbit_invariance_real_orbit_1a",
+    "eq:involution_symmetry_orbit_relation_1a",
+    "eq:involution_symmetry_equivalence_class_1a",
+    "eq:involution_symmetry_graph_self_inverse_1a",
+    "eq:involution_symmetry_graph_square_diagonal_1a",
+    "eq:reflection_operator_definition_1a",
+    "eq:reflection_operator_involution_1a",
+    "eq:reflection_operator_projectors_1a",
+    "eq:reflection_operator_even_odd_decomposition_1a",
+    "eq:reflection_operator_even_odd_eigenrelations_1a",
+    "eq:reflection_operator_derivative_parity_1a",
+    "eq:bidirectional_symmetry_reciprocal_orbit_synthesis_1a",
+    "eq:reciprocal_orbit_invariance_principle_1a",
+    "eq:involution_generated_transformation_group_2a",
+    "eq:minimal_involution_generated_group_elements_2a",
+    "eq:minimal_involution_generated_trivial_case_2a",
+    "eq:minimal_involution_generated_nontrivial_case_2a",
+    "eq:uniqueness_two_state_nonidentity_bijection_2a",
+    "eq:uniqueness_two_state_involution_2a",
+    "eq:minimal_involution_generated_power_reduction_proof_2a",
+    "eq:minimal_involution_generated_group_law_proof_2a",
+    "eq:minimal_faithful_action_extension_boundary_2a",
+    "eq:minimal_symmetry_generated_action_synthesis_2a",
+    "eq:minimal_involution_generated_symmetry_principle_2a",
+    "eq:reciprocal_relation_minimal_action_definition_involution_1a2a",
+    "eq:reciprocal_relation_minimal_action_definition_relation_1a2a",
+    "eq:reciprocal_relation_minimal_action_definition_action_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_involution_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_reversal_invariance_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_self_inverse_relation_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_relation_square_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_c2_action_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_orbit_decomposition_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_generated_group_classification_1a2a",
+    "eq:reciprocal_pair_symmetry_joint_regular_orbit_model_1a2a",
+    "eq:relation_action_correspondence_action_groupoid_1a2a",
+    "eq:orbit_type_action_groupoid_decomposition_1a2a",
+    "eq:orbit_type_action_groupoid_realization_1a2a",
+    "eq:finite_orbit_type_classification_pair_1a2a",
+    "eq:finite_orbit_type_cardinality_1a2a",
+    "eq:finite_orbit_type_fixed_parity_1a2a",
+    "eq:reciprocal_relation_minimal_action_synthesis_1a2a",
+    "eq:reciprocal_pair_symmetry_closure_principle_1a2a",
+    "eq:reciprocal_pair_symmetry_closure_generated_group_1a2a",
+    "eq:reciprocal_pair_symmetry_closure_orbit_alternatives_1a2a",
+    "eq:reciprocal_pair_symmetry_consolidated_closure_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_002_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action/falsification_checks/test_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action_falsification.py"
+  ],
+  "first_label": "app:symmetry_invariance",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "symmetry",
+  "owner_path": "the_nothingness_effect/foundational_architecture/symmetry",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py"
+  ],
+  "source_complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/symmetry/test/test_symmetry.py",
+    "the_nothingness_effect/foundational_architecture/symmetry/theorem_complex/first_order_completeness/complex_002_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action/falsification_checks/test_bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Bidirectional Orbit–Minimal Action Correspondence",
+    "left": "Bidirectional Orbit Invariance",
+    "right": "Minimal Involution-Generated Symmetry Group"
+  },
+  "theorem_titles_tex": {
+    "cross": "Bidirectional Orbit--Minimal Action Correspondence",
+    "left": "Bidirectional Orbit Invariance",
+    "right": "Minimal Involution-Generated Symmetry Group"
+  }
+}

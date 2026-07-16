@@ -1,0 +1,140 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+  "artifact_manifests": [
+    "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
+    "the_nothingness_effect/the_completeness_theorem/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 25,
+    "missing_audit_equation_labels": [
+      "eq:ct08_residual"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "idempotent_splitting_and_oscillation_obstruction",
+  "component_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/1b/closuresplitting_reconstruction.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/2b/independent_and_coupled_obstruction_law.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/1b2b/zero_defect_retraction_domain.py"
+  ],
+  "dependency_status": "registered_semantic_mapping",
+  "equation_labels": [
+    "eq:ct08_positive_realization",
+    "eq:ct08_retraction_normal_form",
+    "eq:ct08_attainment_representation",
+    "eq:ct08_retraction_reconstruction",
+    "eq:ct08_splitting_isomorphism",
+    "eq:ct08_closed_decoder",
+    "eq:ct08_retraction_synthesis",
+    "eq:ct08_retraction_principle",
+    "eq:ct08_negative_realization",
+    "eq:ct08_cycle_residual",
+    "eq:ct08_split_residual",
+    "eq:ct08_negative_witness",
+    "eq:ct08_coupled_obstruction",
+    "eq:ct08_obstruction_independence",
+    "eq:ct08_obstruction_support",
+    "eq:ct08_obstruction_synthesis",
+    "eq:ct08_obstruction_principle",
+    "eq:ct08_status_involution",
+    "eq:ct08_joint_diagnostic",
+    "eq:ct08_joint_predicate",
+    "eq:ct08_joint_dichotomy",
+    "eq:ct08_joint_source_removal",
+    "eq:ct08_completion_certificate",
+    "eq:ct08_joint_synthesis",
+    "eq:ct08_joint_principle"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/falsification_checks/test_idempotent_splitting_and_oscillation_obstruction_falsification.py"
+  ],
+  "first_label": "app:completeness_complex_08",
+  "implementation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/1b2b/zero_defect_retraction_domain.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/1b/closuresplitting_reconstruction.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/2b/independent_and_coupled_obstruction_law.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/1b2b/zero_defect_retraction_domain.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "genuine multi-source admissibility, splitting, transport, or transgression operator",
+      "name": "idempotent_splitting_and_oscillation_obstruction derived law",
+      "python_types": [
+        "CompletenessDerivedLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite formal system, typed operators, finite-prefix bits, and spatial carrier",
+      "name": "completeness realization",
+      "python_types": [
+        "CompletenessInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.the_completeness_theorem.contracts.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.the_completeness_theorem.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "completeness_theorem",
+  "owner_path": "the_nothingness_effect/the_completeness_theorem",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/the_completeness_theorem/simulation/run_contract_suite.py",
+    "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+  ],
+  "source_complex_id": "idempotent_splitting_and_oscillation_obstruction",
+  "source_complex_ids": [
+    "dual_closure_idempotence_and_oscillatory_non_closure",
+    "karoubi_envelope_equivalence_and_missing_idempotent_splittings"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_completeness_contracts.py",
+    "the_nothingness_effect/the_completeness_theorem/test/test_the_completeness_theorem.py",
+    "the_nothingness_effect/the_completeness_theorem/theorem_complex/second_order_completeness/complex_002_idempotent_splitting_and_oscillation_obstruction/falsification_checks/test_idempotent_splitting_and_oscillation_obstruction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Zero-Defect Retraction Domain",
+    "left": "Closure–Splitting Reconstruction",
+    "right": "Independent and Coupled Obstruction Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Zero-Defect Retraction Domain",
+    "left": "Closure–Splitting Reconstruction",
+    "right": "Independent and Coupled Obstruction Law"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "operation_covariance_and_spectral_minimization",
+      "directory": "complex_001_operation_covariance_and_spectral_minimization",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations"
+}

@@ -1,0 +1,21 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "schedule_controlled_orbit_transport",
+      "directory": "complex_001_schedule_controlled_orbit_transport",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "involutive_generator_word_closure_and_conjugacy",
+      "directory": "complex_002_involutive_generator_word_closure_and_conjugacy",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "phase_gated_compensation_transport",
+      "directory": "complex_003_phase_gated_compensation_transport",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/symmetry"
+}

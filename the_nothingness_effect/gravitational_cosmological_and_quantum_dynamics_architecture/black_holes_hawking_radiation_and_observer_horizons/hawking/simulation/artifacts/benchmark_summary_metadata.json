@@ -1,0 +1,30 @@
+{
+  "claim_boundary": "theoretical benchmark; repository-linked computational artifact; not an empirical validation claim; not a formal proof substitute",
+  "note": "Hawking is handled as a theoretical benchmark rather than an empirical fetched-data target.",
+  "rows": [
+    {
+      "MAE": 0.20847529290953934,
+      "R2": 0.17006701777732336,
+      "RMSE": 0.24892563196550854,
+      "benchmark_name": "hawking_theoretical_benchmark",
+      "comparison_type": "theoretical consistency comparison",
+      "consistency_status": "preliminary_proxy_consistency",
+      "data_status": "theoretical_benchmark",
+      "fitted_parameters": {
+        "power_scale": 0.16197482143438624,
+        "temperature_scale": 0.38719370096676436
+      },
+      "formulas_used": "temperature,power,mass_loss,evaporation,spectrum",
+      "limitations": "Toy proxy only; not full GR/QFT and not empirical validation.",
+      "model": "black_hole_dynamics",
+      "passed_benchmark_checks": true,
+      "power_RMSE": 0.2377843154163,
+      "sign_direction_consistency": true,
+      "slope_evaporation": 3.0,
+      "slope_power": -0.44494041872902296,
+      "slope_temperature": -0.024579260829750395,
+      "spectrum_RMSE": 0.5030057311729305,
+      "temperature_RMSE": 0.24892563196550854
+    }
+  ]
+}

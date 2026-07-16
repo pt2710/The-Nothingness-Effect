@@ -4,10 +4,7 @@ Email: thenothingnesseffect@gmail.com
 ...
 
 """
-import sys
 import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from entanglement_model import EntanglementModel

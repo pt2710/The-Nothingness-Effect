@@ -1,0 +1,57 @@
+{
+  "appendix_checksum_verified": true,
+  "appendix_counts": {
+    "appendix_canonical_self_negating_involution_flowpoint.tex": {
+      "A": 4,
+      "B": 2,
+      "C": 1,
+      "total": 7
+    },
+    "appendix_the_completeness_theorem.tex": {
+      "A": 9,
+      "B": 4,
+      "C": 2,
+      "total": 15
+    },
+    "appendix_tne_artificial_intelligence_architechture.tex": {
+      "A": 40,
+      "B": 21,
+      "C": 10,
+      "total": 71
+    },
+    "appendix_tne_fluctuation_and_elastic_dynamics.tex": {
+      "A": 22,
+      "B": 10,
+      "C": 4,
+      "total": 36
+    },
+    "appendix_tne_foundational_closure_architecture.tex": {
+      "A": 43,
+      "B": 22,
+      "C": 14,
+      "total": 79
+    },
+    "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": {
+      "A": 82,
+      "B": 37,
+      "C": 17,
+      "total": 136
+    },
+    "appendix_tne_mathematical_closure_architecture.tex": {
+      "A": 4,
+      "B": 2,
+      "C": 1,
+      "total": 7
+    }
+  },
+  "level_counts": {
+    "A": 204,
+    "B": 98,
+    "C": 49
+  },
+  "missing_equation_labels": 0,
+  "missing_first_labels": 0,
+  "verified_appendix_files": 7,
+  "verified_equation_labels": 3722,
+  "verified_first_labels": 351
+}

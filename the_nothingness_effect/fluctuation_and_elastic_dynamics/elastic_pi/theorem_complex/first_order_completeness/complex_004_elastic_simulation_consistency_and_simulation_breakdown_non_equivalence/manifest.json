@@ -1,0 +1,129 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "artifact_manifests": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/artifacts/manifest.json",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 19,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
+  "component_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/1a/elastic_pi_simulation_consistency.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/2a/simulation_breakdown_non_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/1a2a/elastic_pi_simulation_consistency_simulation_breakdown_non_equivalence.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:elastic_pi04_log_field_1a2a",
+    "eq:elastic_pi04_delta_1a2a",
+    "eq:elastic_pi04_exp_route_1a2a",
+    "eq:pi_dfi_exp_conformal_1a2a",
+    "eq:elastic_pi04_overlay_residual_1a2a",
+    "eq:elastic_pi04_transform_residual_1a2a",
+    "eq:elastic_pi04_curvature_residual_1a2a",
+    "eq:elastic_pi_sim_dfi_conf_1a",
+    "eq:curvature_field_match_1a",
+    "eq:overlay_sup_convergence_1a",
+    "eq:overlay_int_convergence_1a",
+    "eq:proof_pi_equality_1a",
+    "eq:elastic_pi04_synthesis_1a",
+    "eq:elastic_pi04_breakdown_statuses_2a",
+    "eq:elastic_pi04_range_threshold_2a",
+    "eq:elastic_pi04_synthesis_2a",
+    "eq:elastic_pi04_validation_record_1a2a",
+    "eq:overlay_convergence_equivalence_1a2a",
+    "eq:elastic_pi04_joint_synthesis_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/falsification_checks/test_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence_falsification.py"
+  ],
+  "first_label": "app:elastic_pi_complex_04",
+  "implementation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/contracts.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/1a/elastic_pi_simulation_consistency.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/2a/simulation_breakdown_non_equivalence.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/1a2a/elastic_pi_simulation_consistency_simulation_breakdown_non_equivalence.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "independent evaluation and diagnostics",
+      "name": "simulation certification",
+      "python_types": [
+        "ElasticSimulationCertification"
+      ]
+    },
+    "domain": {
+      "description": "finite one-dimensional entropy field, K_D > 0, and declared coordinates",
+      "name": "Elastic-pi source",
+      "python_types": [
+        "ElasticPiInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.simulation_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi",
+  "owner_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/run_contract_suite.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py"
+  ],
+  "source_complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/boundaries/test_elastic_pi_boundaries.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/test_elastic_pi.py",
+    "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/theorem_complex/first_order_completeness/complex_004_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence/falsification_checks/test_elastic_simulation_consistency_and_simulation_breakdown_non_equivalence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Elastic pi Simulation Consistency <-> Simulation Breakdown/Non-Equivalence",
+    "left": "Elastic pi Simulation Consistency",
+    "right": "Simulation Breakdown/Non-Equivalence"
+  },
+  "theorem_titles_tex": {
+    "cross": "Elastic $\\pi$ Simulation Consistency $\\leftrightarrow$ Simulation Breakdown/Non-Equivalence",
+    "left": "Elastic $\\pi$ Simulation Consistency",
+    "right": "Simulation Breakdown/Non-Equivalence"
+  }
+}

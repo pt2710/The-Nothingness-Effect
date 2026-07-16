@@ -1,0 +1,158 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "flowpoint_parity_locking_parity_leakage",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/1a/parity_locking_and_involution.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/2a/leakage_from_off_diagonal_coupling_or_drift.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/1a2a/flowpoint_parity_locking_parity_leakage.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:flowpoint_parity_locking_algebraic_align_1a",
+    "eq:flowpoint_parity_locking_algebraic_equation_1a",
+    "eq:flowpoint_parity_locking_calculus_align_1a",
+    "eq:flowpoint_parity_locking_calculus_equation_1a",
+    "eq:eigen_flowpoint_reduction_algebraic_align_1a",
+    "eq:eigen_flowpoint_reduction_algebraic_equation_1a",
+    "eq:eigen_flowpoint_reduction_calculus_align_1a",
+    "eq:eigen_flowpoint_reduction_calculus_equation_1a",
+    "eq:flowpoint_parity_locking_proof_algebraic_align_1a",
+    "eq:flowpoint_parity_locking_proof_algebraic_equation_1a",
+    "eq:flowpoint_parity_locking_proof_calculus_align_1a",
+    "eq:flowpoint_parity_locking_proof_calculus_equation_1a",
+    "eq:bounded_stacking_algebraic_align_1a",
+    "eq:bounded_stacking_algebraic_equation_1a",
+    "eq:bounded_stacking_calculus_align_1a",
+    "eq:bounded_stacking_calculus_equation_1a",
+    "eq:parity_leakage_interference_algebraic_align_2a",
+    "eq:parity_leakage_interference_algebraic_equation_2a",
+    "eq:parity_leakage_interference_calculus_align_2a",
+    "eq:parity_leakage_interference_calculus_equation_2a",
+    "eq:leakage_commutator_algebraic_align_2a",
+    "eq:leakage_commutator_algebraic_equation_2a",
+    "eq:leakage_commutator_calculus_align_2a",
+    "eq:leakage_commutator_calculus_equation_2a",
+    "eq:parity_leakage_interference_proof_algebraic_align_2a",
+    "eq:parity_leakage_interference_proof_algebraic_equation_2a",
+    "eq:parity_leakage_interference_proof_calculus_align_2a",
+    "eq:parity_leakage_interference_proof_calculus_equation_2a",
+    "eq:interference_amplification_algebraic_align_2a",
+    "eq:interference_amplification_algebraic_equation_2a",
+    "eq:interference_amplification_calculus_align_2a",
+    "eq:interference_amplification_calculus_equation_2a",
+    "eq:flowpoint_parity_locking_algebraic_align_1a2a",
+    "eq:flowpoint_parity_locking_algebraic_equation_1a2a",
+    "eq:flowpoint_parity_locking_calculus_align_1a2a",
+    "eq:flowpoint_parity_locking_calculus_equation_1a2a",
+    "eq:eigen_flowpoint_lemma_algebraic_align_1a2a",
+    "eq:eigen_flowpoint_lemma_algebraic_equation_1a2a",
+    "eq:eigen_flowpoint_lemma_calculus_align_1a2a",
+    "eq:eigen_flowpoint_lemma_calculus_equation_1a2a",
+    "eq:flowpoint_parity_locking_dual_proof_algebraic_align_1a2a",
+    "eq:flowpoint_parity_locking_dual_proof_algebraic_equation_1a2a",
+    "eq:flowpoint_parity_locking_dual_proof_calculus_align_1a2a",
+    "eq:flowpoint_parity_locking_dual_proof_calculus_equation_1a2a",
+    "eq:dual_phase_diagnostics_algebraic_align_1a2a",
+    "eq:dual_phase_diagnostics_algebraic_equation_1a2a",
+    "eq:dual_phase_diagnostics_calculus_align_1a2a",
+    "eq:dual_phase_diagnostics_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/falsification_checks/test_flowpoint_parity_locking_parity_leakage_falsification.py"
+  ],
+  "first_label": "app:pgqenn_complex_02",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/1a/parity_locking_and_involution.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/2a/leakage_from_off_diagonal_coupling_or_drift.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/1a2a/flowpoint_parity_locking_parity_leakage.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "typed prime-graph response, residual field, and failure condition",
+      "name": "flowpoint_parity_locking_parity_leakage",
+      "python_types": [
+        "PGQENNSourceLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite typed prime graph, aligned finite node features, positive K_D and residual weights",
+      "name": "PGQENN prime graph field",
+      "python_types": [
+        "PGQENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.source_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "flowpoint_parity_locking_parity_leakage",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pgqenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_002_flowpoint_parity_locking_parity_leakage/falsification_checks/test_flowpoint_parity_locking_parity_leakage_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Flowpoint Parity Locking <-> Parity Leakage",
+    "left": "Parity Locking and Involution",
+    "right": "Leakage from Off-Diagonal Coupling or Drift"
+  },
+  "theorem_titles_tex": {
+    "cross": "Flowpoint Parity Locking $\\leftrightarrow$ Parity Leakage",
+    "left": "Parity Locking and Involution (1A)",
+    "right": "Leakage from Off-Diagonal Coupling or Drift (2A)"
+  }
+}

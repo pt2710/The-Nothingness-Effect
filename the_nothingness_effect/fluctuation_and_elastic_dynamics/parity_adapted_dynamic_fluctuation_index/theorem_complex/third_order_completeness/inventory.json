@@ -1,0 +1,11 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "spatial_parity_elastic_calibration_closure",
+      "directory": "complex_001_spatial_parityelastic_calibration_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index"
+}

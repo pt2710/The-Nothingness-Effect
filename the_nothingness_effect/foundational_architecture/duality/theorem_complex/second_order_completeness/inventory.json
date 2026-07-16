@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "reciprocal_orbit_double_cover",
+      "directory": "complex_001_reciprocal_orbit_double_cover",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "two_state_free_cofree_duality",
+      "directory": "complex_002_two_state_freecofree_duality",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/duality"
+}

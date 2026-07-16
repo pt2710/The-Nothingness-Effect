@@ -1,0 +1,21 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "parity_flowpoint_transport_law",
+      "directory": "complex_001_parityflowpoint_transport_law",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "predictability_observation_parity_coupling",
+      "directory": "complex_002_predictabilityobservation_parity_coupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "elastic_calibration_completeness_functional",
+      "directory": "complex_003_elastic_calibration_completeness_functional",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index"
+}

@@ -1,0 +1,96 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "motif_spectral_dual_regularity_law_for_soinets",
+      "directory": "complex_001_motifspectral_dual_regularity_law_for_soinets",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "soi_modality_invariant_convergence_and_collapse_completeness",
+      "directory": "complex_002_soi_modality_invariant_convergence_and_collapse_completeness",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "soinet_cross_modal_transfer_generalization_and_dual_stability",
+      "directory": "complex_003_soinet_cross_modal_transfer_generalization_and_dual_stability",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_error_contraction_and_dual_error_orthogonality",
+      "directory": "complex_004_soinet_error_contraction_and_dual_error_orthogonality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet",
+      "directory": "complex_005_universal_entropy_minimization_and_collapsedegeneracy_duality_in_soinet",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_modality_invariant_learning_and_universal_adaptation",
+      "directory": "complex_006_soinet_modality_invariant_learning_and_universal_adaptation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
+      "directory": "complex_007_soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
+      "directory": "complex_008_soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
+      "directory": "complex_009_hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_universal_generalization_principle_failure_brittleness_duality",
+      "directory": "complex_010_soinet_universal_generalization_principle_failure_brittleness_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_universal_cloning_principle_cloning_failure_duality",
+      "directory": "complex_011_soinet_universal_cloning_principle_cloning_failure_duality",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "spectral_phase_locking_and_collapse_in_soinet",
+      "directory": "complex_012_spectral_phase_locking_and_collapse_in_soinet",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soi_universal_entropy_plateau_theorem",
+      "directory": "complex_013_soi_universal_entropy_plateau_theorem",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "soi_modality_dual_closure",
+      "directory": "complex_014_soi_modality_dual_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability",
+      "directory": "complex_015_soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soi_cross_domain_generalization_and_collapse",
+      "directory": "complex_016_soi_cross_domain_generalization_and_collapse",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soi_entropy_minimization_and_entropic_catastrophe",
+      "directory": "complex_017_soi_entropy_minimization_and_entropic_catastrophe",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "soinet_meta_learnability_dual_closure",
+      "directory": "complex_018_soinet_meta_learnability_dual_closure",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/soinets"
+}

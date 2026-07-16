@@ -9,7 +9,7 @@ import warnings
 from pathlib import Path
 from typing import Any
 
-from equations.artifact_io import save_json
+from the_nothingness_effect._runtime.artifacts.io import save_json
 from empirical.io import write_report
 
 
@@ -72,7 +72,7 @@ AUDIT_TARGETS: list[dict[str, str]] = [
         "reusable_for": "elastic_pi_ripples|ringdown_projection|hawking_spectrum_proxy",
         "recommended_action": "integrate_now",
         "risk_level": "medium",
-        "notes": "Core fp_pi wave concept was selectively integrated into equations/elastic_pi_ripples/wave_adapters.py with tests.",
+        "notes": "Core fp_pi wave concept was selectively integrated into the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/wave_adapters.py with tests.",
     },
     {
         "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_sine_wave",
@@ -80,7 +80,7 @@ AUDIT_TARGETS: list[dict[str, str]] = [
         "reusable_for": "ringdown_projection|wave_helpers",
         "recommended_action": "integrate_now",
         "risk_level": "medium",
-        "notes": "Sine-wave helper concept was selectively integrated into equations/elastic_pi_ripples/wave_adapters.py with tests.",
+        "notes": "Sine-wave helper concept was selectively integrated into the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/wave_adapters.py with tests.",
     },
     {
         "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_wave_Interference",
@@ -88,7 +88,7 @@ AUDIT_TARGETS: list[dict[str, str]] = [
         "reusable_for": "elastic_pi_ripples|ringdown_projection|observer_memory_wavefronts",
         "recommended_action": "integrate_now",
         "risk_level": "medium",
-        "notes": "Interference concept was selectively integrated into equations/elastic_pi_ripples/wave_adapters.py with tests.",
+        "notes": "Interference concept was selectively integrated into the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/wave_adapters.py with tests.",
     },
     {
         "path": "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_waves",
@@ -158,8 +158,8 @@ def run() -> dict[str, Any]:
             }
         )
 
-    csv_path = Path("fields_of_physics_in_dev_audit.csv")
-    json_path = Path("fields_of_physics_in_dev_audit.json")
+    csv_path = Path("fields_of_physics_in_dev/fields_of_physics_in_dev_audit.csv")
+    json_path = Path("fields_of_physics_in_dev/fields_of_physics_in_dev_audit.json")
     report_path = Path("docs/fields_of_physics_in_dev_audit.md")
 
     import csv
@@ -196,7 +196,7 @@ def run() -> dict[str, Any]:
             "",
             "## Integrated Now",
             "",
-            "- `fp_pi_wave`, `fp_sine_wave`, and `fp_wave_Interference` concepts were selectively integrated into `equations/elastic_pi_ripples/wave_adapters.py` for ringdown/spectral proxy helpers.",
+            "- `fp_pi_wave`, `fp_sine_wave`, and `fp_wave_Interference` concepts were selectively integrated into `the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/wave_adapters.py` for ringdown/spectral proxy helpers.",
             "",
             "## Deferred / Experimental",
             "",

@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_010_prime_shell_growth_regularity_shell_instability_phase_slips/1a/prime_shell_growth_regularity.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_010_prime_shell_growth_regularity_shell_instability_phase_slips/2a/shell_instability_phase_slips.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_010_prime_shell_growth_regularity_shell_instability_phase_slips/1a2a/prime_shell_growth_regularity_shell_instability_phase_slips.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:psgr10_1a_algebraic_align_1a",
+    "eq:psgr10_1a_algebraic_equation_1a",
+    "eq:psgr10_1a_calculus_align_1a",
+    "eq:psgr10_1a_calculus_equation_1a",
+    "eq:psgr10_lemma1a_algebraic_align_1a",
+    "eq:psgr10_lemma1a_algebraic_equation_1a",
+    "eq:psgr10_lemma1a_calculus_align_1a",
+    "eq:psgr10_lemma1a_calculus_equation_1a",
+    "eq:psgr10_proof1a_algebraic_align_1a",
+    "eq:psgr10_proof1a_algebraic_equation_1a",
+    "eq:psgr10_proof1a_calculus_align_1a",
+    "eq:psgr10_proof1a_calculus_equation_1a",
+    "eq:psgr10_cor1a_algebraic_align_1a",
+    "eq:psgr10_cor1a_algebraic_equation_1a",
+    "eq:psgr10_cor1a_calculus_align_1a",
+    "eq:psgr10_cor1a_calculus_equation_1a",
+    "eq:psgr10_2a_algebraic_align_2a",
+    "eq:psgr10_2a_algebraic_equation_2a",
+    "eq:psgr10_2a_calculus_align_2a",
+    "eq:psgr10_2a_calculus_equation_2a",
+    "eq:psgr10_lemma2a_algebraic_align_2a",
+    "eq:psgr10_lemma2a_algebraic_equation_2a",
+    "eq:psgr10_lemma2a_calculus_align_2a",
+    "eq:psgr10_lemma2a_calculus_equation_2a",
+    "eq:psgr10_proof2a_algebraic_align_2a",
+    "eq:psgr10_proof2a_algebraic_equation_2a",
+    "eq:psgr10_proof2a_calculus_align_2a",
+    "eq:psgr10_proof2a_calculus_equation_2a",
+    "eq:psgr10_cor2a_algebraic_align_2a",
+    "eq:psgr10_cor2a_algebraic_equation_2a",
+    "eq:psgr10_cor2a_calculus_align_2a",
+    "eq:psgr10_cor2a_calculus_equation_2a",
+    "eq:psgr10_main_algebraic_align_1a2a",
+    "eq:psgr10_main_algebraic_equation_1a2a",
+    "eq:psgr10_main_calculus_align_1a2a",
+    "eq:psgr10_main_calculus_equation_1a2a",
+    "eq:psgr10_lemma_1a2a_algebraic_align_1a2a",
+    "eq:psgr10_lemma_1a2a_algebraic_equation_1a2a",
+    "eq:psgr10_lemma_1a2a_calculus_align_1a2a",
+    "eq:psgr10_lemma_1a2a_calculus_equation_1a2a",
+    "eq:psgr10_proof_1a2a_algebraic_align_1a2a",
+    "eq:psgr10_proof_1a2a_algebraic_equation_1a2a",
+    "eq:psgr10_proof_1a2a_calculus_align_1a2a",
+    "eq:psgr10_proof_1a2a_calculus_equation_1a2a",
+    "eq:psgr10_cor_1a2a_algebraic_align_1a2a",
+    "eq:psgr10_cor_1a2a_algebraic_equation_1a2a",
+    "eq:psgr10_cor_1a2a_calculus_align_1a2a",
+    "eq:psgr10_cor_1a2a_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_010_prime_shell_growth_regularity_shell_instability_phase_slips/falsification_checks/test_prime_shell_growth_regularity_shell_instability_phase_slips_falsification.py"
+  ],
+  "first_label": "app:pgqenn_complex_10",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/first_order_completeness/complex_010_prime_shell_growth_regularity_shell_instability_phase_slips/falsification_checks/test_prime_shell_growth_regularity_shell_instability_phase_slips_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime-Shell Growth Regularity <-> Shell Instability / Phase Slips",
+    "left": "Prime-Shell Growth Regularity",
+    "right": "Shell Instability / Phase Slips"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime-Shell Growth Regularity $\\leftrightarrow$ Shell Instability / Phase Slips",
+    "left": "Prime-Shell Growth Regularity (1A)",
+    "right": "Shell Instability / Phase Slips (2A)"
+  }
+}

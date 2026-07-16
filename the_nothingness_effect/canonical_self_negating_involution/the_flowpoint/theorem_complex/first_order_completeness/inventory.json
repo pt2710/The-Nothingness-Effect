@@ -1,0 +1,36 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "self_negating_oscillation_and_eigenstructure",
+      "directory": "complex_001_self_negating_oscillation_and_eigenstructure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "parity_to_bit_equivalence_and_2_adic_coding",
+      "directory": "complex_002_parity_to_bit_equivalence_and_2_adic_coding",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "kernel_fiber_integrability",
+      "directory": "complex_003_kernelfiber_integrability",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "phase_clock",
+      "directory": "complex_004_phaseclock",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "kernel_alternator",
+      "directory": "complex_005_kernelalternator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
+      "directory": "complex_006_necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint"
+}

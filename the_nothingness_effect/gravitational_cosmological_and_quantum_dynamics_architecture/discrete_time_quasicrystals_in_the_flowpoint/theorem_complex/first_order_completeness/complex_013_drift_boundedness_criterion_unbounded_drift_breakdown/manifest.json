@@ -1,0 +1,131 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 21,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/1a/drift_boundedness_criterion.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/2a/stochastic_drift_spectral_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/1a2a/drift_boundedness_criterion_stochastic_drift_spectral_breakdown.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:dtqc13_typed_modulation_law",
+    "eq:coeff_limit_1a",
+    "eq:translation_bounded_consequence_1a",
+    "eq:coeff_bias_bound_1a",
+    "eq:offdiag_diag_split_1a",
+    "eq:parseval_1a",
+    "eq:support_mass_1a",
+    "eq:modulation_kernel_2a",
+    "eq:sideband_convolution_2a",
+    "eq:phase_decorrelation_2a",
+    "eq:test_function_positive_mass_2a",
+    "eq:parseval_gap_2a",
+    "eq:support_mismatch_energy_gap_2a",
+    "eq:dtqc13_joint_status_1a2a",
+    "eq:drift_window_coeffs_1a2a",
+    "eq:translation_boundedness_def_1a2a",
+    "eq:parseval_energy_1a2a",
+    "eq:drift_bound_1a2a",
+    "eq:iff_forward_1a2a",
+    "eq:iff_reverse_1a2a",
+    "eq:boxed_equivalence_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/falsification_checks/test_drift_boundedness_criterion_unbounded_drift_breakdown_falsification.py"
+  ],
+  "first_label": "app:dtqc_complex_13",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/recertified_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/1a/drift_boundedness_criterion.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/2a/stochastic_drift_spectral_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/1a2a/drift_boundedness_criterion_stochastic_drift_spectral_breakdown.py"
+  ],
+  "known_limitations": [],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "fail-closed typed contract result",
+      "name": "drift_boundedness_criterion_unbounded_drift_breakdown result",
+      "python_types": [
+        "ContractResult"
+      ]
+    },
+    "domain": {
+      "description": "typed recertified source-law input",
+      "name": "drift_boundedness_criterion_unbounded_drift_breakdown input",
+      "python_types": [
+        "object"
+      ],
+      "shape": null
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.recertified_contracts.evaluate_drift_boundedness",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog._residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown",
+  "source_complex_ids": [],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_recertified_22_contracts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/first_order_completeness/complex_013_drift_boundedness_criterion_unbounded_drift_breakdown/falsification_checks/test_drift_boundedness_criterion_unbounded_drift_breakdown_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Drift-Boundedness Criterion <-> Stochastic-Drift Spectral Breakdown",
+    "left": "Drift-Boundedness Criterion",
+    "right": "Stochastic-Drift Spectral Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Drift-Boundedness Criterion $\\leftrightarrow$ Stochastic-Drift Spectral Breakdown",
+    "left": "Drift-Boundedness Criterion (1A)",
+    "right": "Stochastic-Drift Spectral Breakdown (2A)"
+  }
+}

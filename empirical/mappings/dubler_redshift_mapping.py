@@ -14,8 +14,8 @@ import numpy as np
 
 from empirical.io import fixture_path, read_csv_rows
 from empirical.metrics import metric_bundle, rmse
-from equations.artifact_io import save_figure
-from equations.elastic_dubler_effect.elastic_dubler_effect import dubler_shift
+from the_nothingness_effect._runtime.artifacts.io import save_figure
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.elastic_dubler_effect import dubler_shift
 
 
 def prepare_empirical_observable(path: str | Path | None = None) -> dict[str, Any]:

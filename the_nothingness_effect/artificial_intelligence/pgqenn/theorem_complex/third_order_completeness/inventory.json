@@ -1,0 +1,16 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "prime_motif_elastic_parity_spatial_closure",
+      "directory": "complex_001_prime_motif_elastic_parity_spatial_closure",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "multiscale_prime_shell_training_closure",
+      "directory": "complex_002_multiscale_prime_shell_training_closure",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/pgqenn"
+}

@@ -1,0 +1,24 @@
+{
+  "source_filename": "tne_multimodal.zip",
+  "source_sha256": "EE6A04D89EBE5DA78D4F93950789A8833A904FF29A8F03DECDC97C621199ADB4",
+  "archive_bytes": 19790481,
+  "archive_entries": 668,
+  "unsafe_archive_entries": 0,
+  "authoritative_source": false,
+  "usage": "read-only architecture and gap-analysis context",
+  "reimplemented_concepts": [
+    "raw modality observation/collapse before shared encoding",
+    "one shared modality encoder",
+    "Elastic Dubler modality comparison",
+    "weighted multimodal superposition",
+    "latent collapse and shared token reconstruction"
+  ],
+  "rejected_as_authority": [
+    "clipped Elastic-pi proxy",
+    "minimal additive QENN perturbation proxy",
+    "local random PGQENN mixing proxy",
+    "sample artifacts and cached bytecode"
+  ],
+  "copy_policy": "No source file, cache, sample artifact, nested archive, or PDF from the reference project was copied into the repository.",
+  "claim_boundary": "finite computational support; not a formal proof substitute"
+}

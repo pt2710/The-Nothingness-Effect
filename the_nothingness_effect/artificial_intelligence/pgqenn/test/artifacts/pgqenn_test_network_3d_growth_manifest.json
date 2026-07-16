@@ -1,0 +1,65 @@
+{
+  "architecture": "PGQENN",
+  "artifact_family": "executable_3d_growth_matrix",
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "generated_files": [
+    "pgqenn_test_network_3d_growth.png",
+    "pgqenn_test_network_3d_matrix_occupancy.png",
+    "pgqenn_test_network_3d_axis_projections.png",
+    "pgqenn_test_network_3d_locality_adjacency.png",
+    "pgqenn_test_network_3d_triadic_stream_growth.png",
+    "pgqenn_test_network_3d_triadic_stream_matrix.png",
+    "pgqenn_test_network_3d_signed_spectrum_growth.png",
+    "pgqenn_test_network_3d_signed_spectrum_adjacency.png",
+    "pgqenn_test_network_3d_signed_spectrum_projections.png",
+    "pgqenn_test_network_3d_nodes.csv",
+    "pgqenn_test_network_3d_edges.csv",
+    "pgqenn_test_network_3d_triadic_stream_nodes.csv",
+    "pgqenn_test_network_3d_triadic_stream_edges.csv",
+    "pgqenn_test_network_3d_signed_spectrum_nodes.csv",
+    "pgqenn_test_network_3d_signed_spectrum_edges.csv",
+    "pgqenn_test_network_3d_growth.gif",
+    "pgqenn_test_network_3d_matrix_growth.gif",
+    "pgqenn_test_network_3d_signal_propagation.gif",
+    "pgqenn_test_network_3d_triadic_stream_growth.gif",
+    "pgqenn_test_network_3d_triadic_stream_signal.gif",
+    "pgqenn_test_network_3d_signed_spectrum_growth.gif",
+    "pgqenn_test_network_3d_signed_spectrum_signal.gif"
+  ],
+  "parameter_hash": "856a68a7c86b868da1c3e3b0caf486a3f7520aca0dcd3f436953cfbd570f32a9",
+  "parameters": {
+    "architecture": "PGQENN",
+    "axis_labels": [
+      "prime_shell",
+      "mpl_tc_motif",
+      "two_adic_run_depth"
+    ],
+    "growth_mode": "mpl_tc_prime_motif",
+    "matrix_bins": 6,
+    "mode": "test",
+    "mpl_tc_commit": "056e346824e9ec9785ab45b642b3b842c88f6e56",
+    "negative_spectrum_authority": "TNE Flowpoint neural lift; MPL-TC remains positive-only",
+    "node_count": 18,
+    "seed": 0,
+    "signed_coordinate_asymmetry": 16.71316909790039,
+    "signed_spectrum_counts": {
+      "negative": 109,
+      "positive": 109
+    },
+    "signed_value_involution_residual": 0.0,
+    "triadic_bridge_status": "experimental_finite_prefix_structural_bridge",
+    "triadic_finite_limit": 122,
+    "triadic_module_sha256": "28e92714bd17c83f03c1208758caf3313f6e6f0ca5c211a596d067893af80592",
+    "triadic_stream_counts": {
+      "first_order_odd": 17,
+      "lpf_odd_composite": 31,
+      "mixed_even_composite": 55,
+      "pure_even_lift": 6
+    }
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_capabilities",
+  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "seed": 0,
+  "source_status": "verified positive MPL-TC growth plus TNE Flowpoint signed lift"
+}

@@ -1,0 +1,26 @@
+{
+  "completeness_order": "first_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "reciprocal_relation_action_groupoid",
+      "directory": "complex_001_reciprocal_relationaction_groupoid",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "minimal_two_state_involution_orbitwise_alternator",
+      "directory": "complex_002_minimal_two_state_involutionorbitwise_alternator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "involutive_duality_c_2_action",
+      "directory": "complex_003_involutive_dualityc_2_action",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "kernel_recursion",
+      "directory": "complex_004_kernelrecursion",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/duality"
+}

@@ -1,0 +1,394 @@
+{
+  "black_hole_dynamics::elastic_black_hole_emergence_triviality_of_breakdown": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "black_hole_observability_triviality_and_regularity": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "bridge_duality_dual_invariant_translation": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "calibrated_pdfi_dubler_endpoint_operator": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "common_potential_observation_operator": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "cosmic_spark_decay_and_integrated_cosmological_memory": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "cosmic_spark_flowpoint_correspondence_and_spectral_duality": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "curvature_driven_elastic_energy_production": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "damping_and_lag_corrected_harmonic_clock": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "diophantine_parseval_locking_invariant": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "distance_corrected_harmonic_coupling": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "dtqc::dual_support_equivalence_support_mismatch_leakage": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "dubler_potential_current_spatial_closure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_cosmological_geometry_and_dubler_spectral_transfer": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dtqc_spectral_measure_dual_of_dtqc": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_curvature_correspondence": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_duality_closure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_e_curvature_duality": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_effect::elastic_entropic_energy_equivalence": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_interferometry::elastic_gravitational_memory_instant_relaxation": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_dubler_pdfi_frequency_shift_dual_closure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_e_curvature_encoding_curvature_ambiguity_divergence": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_e_ripple_propagation_gr_linear_wave_recovery": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_gain_support_transport_isomorphism": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_log_curvature_energy_production_law": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "elastic_parseval_quasicrystal_isometry": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "emergent_spiral_density_wave_spiral_dissolution": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "entropic_curvature_superposition_duality": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "entropic_q_factor_suppression_conserved_ringdown_quality": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "entropy_invariant_horizon_translation": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "flowpoint_resolved_cosmological_memory_resolvent": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "horizon_localized_observable_memory_closure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "irrational_drive_locking_commensurate_resonance_collapse": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "locality_decomposition_nonlocal_entropic_divergence": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "locality_driven_gravity::elastic_entropic_energy_equivalence": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "locality_energy_morphogenesis_closure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "locality_weighted_spiral_order": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "memory_aware_phase_curvature_tomography": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "memory_resolved_horizon_reconstruction": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "nonlinear_overtone_generation_spectral_purity": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "parseval_energy_bijection_l_2_energy_mismatch": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "phase_elliptic_curvature_reconstruction": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "physical_singularity_absence_mathematical_failure_point_status": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "regular_nonperforating_horizon_geometry": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Spatial closure has a local operator, boundary/localization diagnostics, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "regular_observer_horizon_hypersurface": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "wave_energy_quality_invariant": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Genuine bilinear derivation of two complete A laws with non-cancellation energy and both-source ablations.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  },
+  "wave_sector_and_expansion_sector_cosmological_projection": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed physical source law with explicit spatial domain, boundary trace, invariant residual, and parameter failures.",
+    "implementation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_gravitational_contracts.py"
+  }
+}

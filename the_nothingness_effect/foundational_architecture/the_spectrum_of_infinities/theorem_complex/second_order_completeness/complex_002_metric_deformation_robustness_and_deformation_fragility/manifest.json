@@ -1,0 +1,159 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 62,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "metric_deformation_robustness_and_deformation_fragility",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_002_metric_deformation_robustness_and_deformation_fragility/1b/robustness_under_metric_deformation.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_002_metric_deformation_robustness_and_deformation_fragility/2b/fragility_under_deformation_theorem.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_002_metric_deformation_robustness_and_deformation_fragility/1b2b/metric_deformation_robustnessdefect_classification.py"
+  ],
+  "dependency_status": "not_directly_computable",
+  "equation_labels": [
+    "eq:soi_metric_original_soi_1b2b",
+    "eq:soi_metric_scale_1b2b",
+    "eq:soi_metric_base_space_1b2b",
+    "eq:soi_metric_absolute_measure_1b2b",
+    "eq:soi_metric_measure_totals_1b2b",
+    "eq:soi_metric_base_normalization_coordinate_1b2b",
+    "eq:soi_metric_base_pushforward_pair_1b2b",
+    "eq:soi_metric_deformation_map_1b2b",
+    "eq:soi_metric_transform_1b2b",
+    "eq:soi_metric_transform_conditions_1b2b",
+    "eq:soi_metric_deformed_metric_1b2b",
+    "eq:soi_metric_distortion_constants_1b2b",
+    "eq:soi_metric_bilipschitz_bounds_1b2b",
+    "eq:soi_metric_transported_measures_1b2b",
+    "eq:soi_metric_transported_coordinate_1b2b",
+    "eq:soi_metric_transported_dynamics_1b2b",
+    "eq:soi_metric_transported_observable_1b2b",
+    "eq:soi_metric_transport_operator_1b2b",
+    "eq:soi_metric_dynamic_intertwining_1b2b",
+    "eq:soi_metric_source_dual_complexes_1b2b",
+    "eq:soi_metric_source_branch_meanings_1b2b",
+    "eq:soi_metric_compatibility_composition_symbol_1b2b",
+    "eq:soi_metric_positive_branch_composition_1b",
+    "eq:soi_metric_negative_branch_composition_2b",
+    "eq:soi_metric_branch_exchange_1b2b",
+    "eq:soi_metric_branch_exchange_closure_1b2b",
+    "eq:soi_metric_theorem_pushforward_1b",
+    "eq:soi_metric_theorem_lp_isometry_1b",
+    "eq:soi_metric_theorem_entropy_transport_1b",
+    "eq:soi_metric_theorem_dynamic_transport_1b",
+    "eq:soi_metric_theorem_representation_transport_1b",
+    "eq:soi_metric_lemma_pushforward_identity_1b",
+    "eq:soi_metric_lemma_change_variables_1b",
+    "eq:soi_metric_lemma_dynamic_identity_1b",
+    "eq:soi_metric_proof_pushforward_1b",
+    "eq:soi_metric_proof_intertwining_1b",
+    "eq:soi_metric_proof_factorization_1b",
+    "eq:soi_metric_corollary_dfi_baseline_1b",
+    "eq:soi_metric_corollary_dfi_fluctuation_1b",
+    "eq:soi_metric_corollary_address_map_1b",
+    "eq:soi_metric_synthesis_positive_1b",
+    "eq:std_soi_metric_robust_1b",
+    "eq:soi_metric_defect_tuple_2b",
+    "eq:soi_metric_collision_defect_2b",
+    "eq:soi_metric_gap_defect_2b",
+    "eq:soi_metric_metric_defect_2b",
+    "eq:soi_metric_normalization_defect_2b",
+    "eq:soi_metric_lp_defect_2b",
+    "eq:soi_metric_entropy_defect_2b",
+    "eq:soi_metric_dynamic_commutator_2b",
+    "eq:soi_metric_representation_residual_2b",
+    "eq:soi_metric_nonzero_defect_condition_2b",
+    "eq:soi_metric_corollary_independent_defects_2b",
+    "eq:soi_metric_synthesis_negative_2b",
+    "eq:std_soi_metric_defect_2b",
+    "eq:soi_metric_joint_system_tuple_1b2b",
+    "eq:soi_metric_joint_status_1b2b",
+    "eq:soi_metric_joint_exclusive_status_1b2b",
+    "eq:soi_metric_general_symmetric_lift_1b2b",
+    "eq:soi_metric_joint_zero_defect_1b2b",
+    "eq:soi_metric_joint_synthesis_hierarchy_1b2b",
+    "eq:std_soi_metric_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_002_metric_deformation_robustness_and_deformation_fragility/falsification_checks/test_metric_deformation_robustness_and_deformation_fragility_falsification.py"
+  ],
+  "first_label": "app:soi_complex_07",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "spectrum_of_infinities",
+  "owner_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py"
+  ],
+  "source_complex_id": "metric_deformation_robustness_and_deformation_fragility",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/test_the_spectrum_of_infinities.py",
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/theorem_complex/second_order_completeness/complex_002_metric_deformation_robustness_and_deformation_fragility/falsification_checks/test_metric_deformation_robustness_and_deformation_fragility_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Metric-Deformation Robustness–Defect Classification",
+    "left": "Robustness under Metric Deformation",
+    "right": "Fragility under Deformation Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Metric-Deformation Robustness--Defect Classification",
+    "left": "Robustness under Metric Deformation",
+    "right": "Fragility under Deformation Theorem"
+  }
+}

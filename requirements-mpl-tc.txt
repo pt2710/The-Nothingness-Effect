@@ -1,0 +1,6 @@
+-r requirements-ai.txt
+
+# MPL-TC is an upstream source dependency, pinned as the Git submodule at
+# dependencies/MPL-TC.  The upstream repository has no Python package metadata,
+# so it is validated and loaded by the fail-closed MPLTCMotifProvider instead of
+# being represented as an invalid pip requirement.

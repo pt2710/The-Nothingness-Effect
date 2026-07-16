@@ -49,7 +49,6 @@ then please update your TBB version (for example, using conda:
 """
 
 import os
-import sys
 import unittest
 import numpy as np
 import matplotlib.pyplot as plt
@@ -65,8 +64,6 @@ from numba import njit, prange
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 root_dir = os.path.abspath(os.path.join(parent_dir, "../../../"))
-sys.path.insert(0, root_dir)
-
 # Import GravitationalCurvature from the equations directory
 from fields_of_physics_in_dev.general_relativity.gravitational_curvature.gravitational_curvature import GravitationalCurvature
 

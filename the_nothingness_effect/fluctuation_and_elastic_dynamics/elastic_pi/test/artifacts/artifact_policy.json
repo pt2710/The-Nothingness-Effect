@@ -1,0 +1,7 @@
+{
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "large_binary_policy": "local-only",
+  "mode": "test",
+  "module": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi",
+  "policy": "generated outputs belong in this directory"
+}

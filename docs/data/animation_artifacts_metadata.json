@@ -1,0 +1,91 @@
+{
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "format": "gif",
+  "fps": null,
+  "quick": true,
+  "rows": [
+    {
+      "animation": "entropic_horizon_2d",
+      "component": "black_holes_hawking_radiation_and_observer_horizons",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\entropic_horizon_crossing_2d_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\entropic_horizon_crossing_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\entropic_horizon_crossing_2d.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "hawking_like_flux_2d",
+      "component": "black_holes_hawking_radiation_and_observer_horizons",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\hawking_like_flux_2d_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\hawking_like_flux_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\hawking_like_flux_2d.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "observer_horizon_memory_2d",
+      "component": "black_holes_hawking_radiation_and_observer_horizons",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\observer_horizon_memory_2d_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\observer_horizon_memory_2d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\observer_horizon_memory_2d.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "entropic_tension_3d",
+      "component": "black_holes_hawking_radiation_and_observer_horizons",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\entropic_tension_3d_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\entropic_tension_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\entropic_tension_3d.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "hawking_flux_from_entropic_tension_3d",
+      "component": "black_holes_hawking_radiation_and_observer_horizons",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\hawking_flux_from_entropic_tension_3d_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\hawking_flux_from_entropic_tension_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\hawking_flux_from_entropic_tension_3d.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "observer_horizon_appear_disappear_3d",
+      "component": "black_holes_hawking_radiation_and_observer_horizons",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\observer_horizon_appear_disappear_3d_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\observer_horizon_appear_disappear_3d_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\black_holes_hawking_radiation_and_observer_horizons\\simulation\\artifacts\\animations\\observer_horizon_appear_disappear_3d.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "spiral_galaxy_formation_2d",
+      "component": "locality_driven_gravity",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\locality_driven_gravity\\simulation\\artifacts\\animations\\spiral_galaxy_formation_2d_arm_mode_2_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\locality_driven_gravity\\simulation\\artifacts\\animations\\spiral_galaxy_formation_2d_arm_mode_2_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\locality_driven_gravity\\simulation\\artifacts\\animations\\spiral_galaxy_formation_2d_arm_mode_2.gif",
+      "passed_validation": true
+    },
+    {
+      "animation": "spiral_galaxy_formation_3d",
+      "component": "locality_driven_gravity",
+      "data_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\locality_driven_gravity\\simulation\\artifacts\\animations\\spiral_galaxy_formation_3d_arm_mode_2_data.npz",
+      "fallback_mode": "gif",
+      "metadata_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\locality_driven_gravity\\simulation\\artifacts\\animations\\spiral_galaxy_formation_3d_arm_mode_2_metadata.json",
+      "notes": "quick-mode aggregate run",
+      "output_path": "the_nothingness_effect\\gravitational_cosmological_and_quantum_dynamics_architecture\\locality_driven_gravity\\simulation\\artifacts\\animations\\spiral_galaxy_formation_3d_arm_mode_2.gif",
+      "passed_validation": true
+    }
+  ],
+  "script": "tools.run_animation_artifacts",
+  "seed": 2710,
+  "summary_path": "docs/data/animation_artifacts_summary.csv"
+}

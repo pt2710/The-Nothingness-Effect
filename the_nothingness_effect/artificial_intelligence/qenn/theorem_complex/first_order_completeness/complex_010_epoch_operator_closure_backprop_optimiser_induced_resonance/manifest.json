@@ -1,0 +1,143 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 48,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance/1a/epoch_operator_closed_contraction.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance/2a/optimiser_induced_resonance.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance/1a2a/epoch_operator_closure_backprop_optimiser_induced_resonance.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:epoch_operator_closed_contraction_algebraic_align_1a",
+    "eq:epoch_operator_closed_contraction_algebraic_equation_1a",
+    "eq:epoch_operator_closed_contraction_calculus_align_1a",
+    "eq:epoch_operator_closed_contraction_calculus_equation_1a",
+    "eq:pv_compatible_spectral_bound_algebraic_align_1a",
+    "eq:pv_compatible_spectral_bound_algebraic_equation_1a",
+    "eq:pv_compatible_spectral_bound_calculus_align_1a",
+    "eq:pv_compatible_spectral_bound_calculus_equation_1a",
+    "eq:banach_fixed_point_pv_jacobian_algebraic_align_1a",
+    "eq:banach_fixed_point_pv_jacobian_algebraic_equation_1a",
+    "eq:banach_fixed_point_pv_jacobian_calculus_align_1a",
+    "eq:banach_fixed_point_pv_jacobian_calculus_equation_1a",
+    "eq:geometric_convergence_rate_algebraic_align_1a",
+    "eq:geometric_convergence_rate_algebraic_equation_1a",
+    "eq:geometric_convergence_rate_calculus_align_1a",
+    "eq:geometric_convergence_rate_calculus_equation_1a",
+    "eq:optimiser_induced_resonance_algebraic_align_2a",
+    "eq:optimiser_induced_resonance_algebraic_equation_2a",
+    "eq:optimiser_induced_resonance_calculus_align_2a",
+    "eq:optimiser_induced_resonance_calculus_equation_2a",
+    "eq:resonant_companion_roots_algebraic_align_2a",
+    "eq:resonant_companion_roots_algebraic_equation_2a",
+    "eq:resonant_companion_roots_calculus_align_2a",
+    "eq:resonant_companion_roots_calculus_equation_2a",
+    "eq:instability_spectral_crossing_algebraic_align_2a",
+    "eq:instability_spectral_crossing_algebraic_equation_2a",
+    "eq:instability_spectral_crossing_calculus_align_2a",
+    "eq:instability_spectral_crossing_calculus_equation_2a",
+    "eq:safe_schedule_region_algebraic_align_2a",
+    "eq:safe_schedule_region_algebraic_equation_2a",
+    "eq:safe_schedule_region_calculus_align_2a",
+    "eq:safe_schedule_region_calculus_equation_2a",
+    "eq:epoch_operator_closure_algebraic_align_1a2a",
+    "eq:epoch_operator_closure_algebraic_equation_1a2a",
+    "eq:epoch_operator_closure_calculus_align_1a2a",
+    "eq:epoch_operator_closure_calculus_equation_1a2a",
+    "eq:pv_optimiser_spectral_factorisation_algebraic_align_1a2a",
+    "eq:pv_optimiser_spectral_factorisation_algebraic_equation_1a2a",
+    "eq:pv_optimiser_spectral_factorisation_calculus_align_1a2a",
+    "eq:pv_optimiser_spectral_factorisation_calculus_equation_1a2a",
+    "eq:contraction_vs_resonance_dichotomy_algebraic_align_1a2a",
+    "eq:contraction_vs_resonance_dichotomy_algebraic_equation_1a2a",
+    "eq:contraction_vs_resonance_dichotomy_calculus_align_1a2a",
+    "eq:contraction_vs_resonance_dichotomy_calculus_equation_1a2a",
+    "eq:contractivity_preserving_presets_algebraic_align_1a2a",
+    "eq:contractivity_preserving_presets_algebraic_equation_1a2a",
+    "eq:contractivity_preserving_presets_calculus_align_1a2a",
+    "eq:contractivity_preserving_presets_calculus_equation_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance/falsification_checks/test_epoch_operator_closure_backprop_optimiser_induced_resonance_falsification.py"
+  ],
+  "first_label": "app:qenn_complex_10",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/first_order_completeness/complex_010_epoch_operator_closure_backprop_optimiser_induced_resonance/falsification_checks/test_epoch_operator_closure_backprop_optimiser_induced_resonance_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Epoch-Operator Closure (Backprop _) <-> Optimiser-Induced Resonance",
+    "left": "Epoch-Operator Closed Contraction",
+    "right": "Optimiser-Induced Resonance"
+  },
+  "theorem_titles_tex": {
+    "cross": "Epoch-Operator Closure (Backprop $\\circ$ $\\Psi_\\varphi$) $\\leftrightarrow$ Optimiser-Induced Resonance (1A $\\leftrightarrow$ 2A)",
+    "left": "Epoch-Operator Closed Contraction (1A)",
+    "right": "Optimiser-Induced Resonance (2A)"
+  }
+}

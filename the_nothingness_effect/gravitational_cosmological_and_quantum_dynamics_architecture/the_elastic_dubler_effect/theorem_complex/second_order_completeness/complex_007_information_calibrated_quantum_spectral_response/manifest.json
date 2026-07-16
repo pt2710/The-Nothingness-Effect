@@ -1,0 +1,109 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "information_calibrated_quantum_spectral_response",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/second_order_completeness/complex_007_information_calibrated_quantum_spectral_response/1b/information_to_spectral_sensitivity_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/second_order_completeness/complex_007_information_calibrated_quantum_spectral_response/2b/informationquantum_inference_defect_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/second_order_completeness/complex_007_information_calibrated_quantum_spectral_response/1b2b/complete_information_calibrated_quantum_response_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dubler_b07_product_carrier",
+    "eq:drv_dubler_b07_1b",
+    "eq:drv_dubler_b07_theorem_1b",
+    "eq:drv_dubler_b07_res_1b",
+    "eq:drv_dubler_b07_2b",
+    "eq:drv_dubler_b07_theorem_2b",
+    "eq:drv_dubler_b07_res_2b",
+    "eq:drv_dubler_b07_joint",
+    "eq:drv_dubler_b07_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/second_order_completeness/complex_007_information_calibrated_quantum_spectral_response/falsification_checks/test_information_calibrated_quantum_spectral_response_falsification.py"
+  ],
+  "first_label": "app:drv_dubler_b07",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_dubler_effect",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py"
+  ],
+  "source_complex_id": "information_calibrated_quantum_spectral_response",
+  "source_complex_ids": [
+    "information_entropy_in_the_elastic_dubler_perspective",
+    "pdfi_e_quantum_entanglement_interface"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/test_the_elastic_dubler_effect.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/theorem_complex/second_order_completeness/complex_007_information_calibrated_quantum_spectral_response/falsification_checks/test_information_calibrated_quantum_spectral_response_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Information-Calibrated Quantum Response Classification",
+    "left": "Information-to-Spectral Sensitivity Law",
+    "right": "Information–Quantum Inference Defect Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Information-Calibrated Quantum Response Classification",
+    "left": "Information-to-Spectral Sensitivity Law",
+    "right": "Information--Quantum Inference Defect Law"
+  }
+}

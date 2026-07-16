@@ -1,0 +1,130 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_pgqenn_b01_master",
+      "eq:tne_additive_pgqenn_b01_1b_definition",
+      "eq:tne_additive_pgqenn_b01_1b_theorem",
+      "eq:tne_additive_pgqenn_b01_1b_lemma",
+      "eq:tne_additive_pgqenn_b01_1b_synthesis",
+      "eq:tne_additive_pgqenn_b01_1b_principle",
+      "eq:tne_additive_pgqenn_b01_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "prime_motif_parity_stability_functional",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/1b/prime_motif_boundedness_parity_locking_and_involution_law.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/2b/motif_induced_energy_divergence_leakage_from_off_diagonal_coupling_or_drift_law.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/1b2b/prime_motif_boundedness_motif_induced_energy_divergence_flowpoint_parity_locking_parity_leakage.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_pgqenn_b01_product_carrier",
+    "eq:drv_pgqenn_b01_1b",
+    "eq:drv_pgqenn_b01_theorem_1b",
+    "eq:drv_pgqenn_b01_res_1b",
+    "eq:drv_pgqenn_b01_2b",
+    "eq:drv_pgqenn_b01_theorem_2b",
+    "eq:drv_pgqenn_b01_res_2b",
+    "eq:drv_pgqenn_b01_joint",
+    "eq:drv_pgqenn_b01_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/falsification_checks/test_prime_motif_parity_stability_functional_falsification.py"
+  ],
+  "first_label": "app:drv_pgqenn_b01",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/1b2b/prime_motif_boundedness_motif_induced_energy_divergence_flowpoint_parity_locking_parity_leakage.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/1b/prime_motif_boundedness_parity_locking_and_involution_law.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/2b/motif_induced_energy_divergence_leakage_from_off_diagonal_coupling_or_drift_law.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/1b2b/prime_motif_boundedness_motif_induced_energy_divergence_flowpoint_parity_locking_parity_leakage.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "positive non-cancelling two-source prime-graph residual energy",
+      "name": "prime_motif_parity_stability_functional",
+      "python_types": [
+        "PGQENNDerivedLaw"
+      ]
+    },
+    "domain": {
+      "description": "finite typed prime graph, aligned finite node features, positive K_D and residual weights",
+      "name": "PGQENN prime graph field",
+      "python_types": [
+        "PGQENNContractInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": null,
+    "operator": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.derived_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect.artificial_intelligence.pgqenn.contracts.contracts.<locals>.<lambda>",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "pgqenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/pgqenn",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_contract_suite.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py"
+  ],
+  "source_complex_id": "prime_motif_parity_stability_functional",
+  "source_complex_ids": [
+    "prime_motif_boundedness_motif_induced_energy_divergence",
+    "flowpoint_parity_locking_parity_leakage"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "tests/contracts/test_pgqenn_contracts.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/test/test_pgqenn.py",
+    "the_nothingness_effect/artificial_intelligence/pgqenn/theorem_complex/second_order_completeness/complex_001_prime_motif_parity_stability_functional/falsification_checks/test_prime_motif_parity_stability_functional_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Prime-Motif Boundedness <-> Motif-Induced Energy Divergence – Flowpoint Parity Locking <-> Parity Leakage",
+    "left": "Prime-Motif Boundedness – Parity Locking and Involution – Law",
+    "right": "Motif-Induced Energy Divergence – Leakage from Off-Diagonal Coupling or Drift – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Prime-Motif Boundedness $\\leftrightarrow$ Motif-Induced Energy Divergence -- Flowpoint Parity Locking $\\leftrightarrow$ Parity Leakage",
+    "left": "Prime-Motif Boundedness -- Parity Locking and Involution -- Law",
+    "right": "Motif-Induced Energy Divergence -- Leakage from Off-Diagonal Coupling or Drift -- Law"
+  }
+}

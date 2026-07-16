@@ -1,0 +1,128 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "artifact_manifests": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/artifacts/manifest.json",
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": [
+      "eq:tne_additive_qenn_b06_master",
+      "eq:tne_additive_qenn_b06_1b_definition",
+      "eq:tne_additive_qenn_b06_1b_theorem",
+      "eq:tne_additive_qenn_b06_1b_lemma",
+      "eq:tne_additive_qenn_b06_1b_synthesis",
+      "eq:tne_additive_qenn_b06_1b_principle",
+      "eq:tne_additive_qenn_b06_2b_definition"
+    ]
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "entropic_hyperparameter_stability_margin",
+  "component_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/1b/entropy_balanced_landscape_hyper_parameter_stability_wedge_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/2b/sharp_minima_trap_instability_lobe_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/1b2b/entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap_hyper_parameter_stability_wedge_ins.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_qenn_b06_product_carrier",
+    "eq:drv_qenn_b06_1b",
+    "eq:drv_qenn_b06_theorem_1b",
+    "eq:drv_qenn_b06_res_1b",
+    "eq:drv_qenn_b06_2b",
+    "eq:drv_qenn_b06_theorem_2b",
+    "eq:drv_qenn_b06_res_2b",
+    "eq:drv_qenn_b06_joint",
+    "eq:drv_qenn_b06_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/falsification_checks/test_entropic_hyperparameter_stability_margin_falsification.py"
+  ],
+  "first_label": "app:drv_qenn_b06",
+  "implementation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/1b2b/entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap_hyper_parameter_stability_wedge_ins.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/1b/entropy_balanced_landscape_hyper_parameter_stability_wedge_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/2b/sharp_minima_trap_instability_lobe_law.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/1b2b/entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap_hyper_parameter_stability_wedge_ins.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "qenn",
+  "owner_path": "the_nothingness_effect/artificial_intelligence/qenn",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py"
+  ],
+  "source_complex_id": "entropic_hyperparameter_stability_margin",
+  "source_complex_ids": [
+    "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap",
+    "hyper_parameter_stability_wedge_instability_lobe"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/artificial_intelligence/qenn/test/test_qenn.py",
+    "the_nothingness_effect/artificial_intelligence/qenn/theorem_complex/second_order_completeness/complex_006_entropic_hyperparameter_stability_margin/falsification_checks/test_entropic_hyperparameter_stability_margin_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Entropy-Balanced Landscape (No Sharp Minima) <-> Sharp-Minima Trap – Hyper-Parameter Stability Wedge <-> Instability Lobe",
+    "left": "Entropy-Balanced Landscape – Hyper-Parameter Stability Wedge – Law",
+    "right": "Sharp-Minima Trap – Instability Lobe – Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Entropy-Balanced Landscape (No Sharp Minima) $\\leftrightarrow$ Sharp-Minima Trap -- Hyper-Parameter Stability Wedge $\\leftrightarrow$ Instability Lobe",
+    "left": "Entropy-Balanced Landscape -- Hyper-Parameter Stability Wedge -- Law",
+    "right": "Sharp-Minima Trap -- Instability Lobe -- Law"
+  }
+}

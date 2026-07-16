@@ -1,0 +1,112 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 15,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_011_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati/1a/typed_gravitational_ripple_wavefront_compositional_closure.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_011_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati/2a/gravitational_ripple_dependency_localized_breakdown.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_011_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati/1a2a/complete_gravitational_ripple_cross_complex_closure_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:grw_cross_complex_chain_1a2a",
+    "eq:grw_meta_complex_set_1a2a",
+    "eq:grw_meta_dependency_graph_1a2a",
+    "eq:grw_meta_layer_projection_1a2a",
+    "eq:grw_meta_composite_domain_1a2a",
+    "eq:grw_meta_realization_tuple_1a",
+    "eq:grw_meta_composite_map_1a",
+    "eq:grw_meta_interface_commutation_1a",
+    "eq:grw_cross_complex_residual_vector_1a2a",
+    "eq:grw_cross_complex_total_residual_1a2a",
+    "eq:grw_meta_status_1a2a",
+    "eq:grw_cross_complex_audit_record_1a2a",
+    "eq:grw_meta_zero_equivalence_1a2a",
+    "eq:grw_meta_fault_residual_map_1a2a",
+    "eq:grw_meta_joint_closure_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_011_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati/falsification_checks/test_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati_falsification.py"
+  ],
+  "first_label": "app:grw_cross_complex_meta_closure_1a2a",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "elastic_pi_ripples",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py"
+  ],
+  "source_complex_id": "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_elastic_pi_ripples.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/test_gravitational_ripples_as_elastic_pi_wavefronts.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/theorem_complex/first_order_completeness/complex_011_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati/falsification_checks/test_appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsificati_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Gravitational-Ripple Cross-Complex Closure Classification",
+    "left": "Typed Gravitational-Ripple Wavefront Compositional Closure",
+    "right": "Gravitational-Ripple Dependency-Localized Breakdown"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Gravitational-Ripple Cross-Complex Closure Classification",
+    "left": "Typed Gravitational-Ripple Wavefront Compositional Closure",
+    "right": "Gravitational-Ripple Dependency-Localized Breakdown"
+  }
+}

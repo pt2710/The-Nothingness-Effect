@@ -1,0 +1,16 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "scheduled_spectral_history",
+      "directory": "complex_001_scheduled_spectral_history",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "phase_indexed_kernel_transport",
+      "directory": "complex_002_phase_indexed_kernel_transport",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint"
+}

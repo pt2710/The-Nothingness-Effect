@@ -1,0 +1,31 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "binary_supported_continuous_superposition_and_atom_phase_translation",
+      "directory": "complex_001_binary_supported_continuous_superposition_and_atom_phase_translation",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "prefix_tree_dense_reconstruction",
+      "directory": "complex_002_prefix_tree_dense_reconstruction",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "complement_invariant_fractal_skeleton_completion",
+      "directory": "complex_003_complement_invariant_fractal_skeleton_completion",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "boolean_decision_extension_consensus",
+      "directory": "complex_004_boolean_decisionextension_consensus",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization",
+      "directory": "complex_005_2_adic_canonical_domain_repair_and_euclidean_coverage_dualization",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/uncountable_infinity"
+}

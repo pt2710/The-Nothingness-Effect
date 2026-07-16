@@ -1,0 +1,121 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/manifest.json",
+    "docs/data/artifact_provenance_manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 9,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "autocorrelation_reconstruction_projector",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b/autocorrelation_reconstruction_projector_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/2b/autocorrelation_reconstruction_projector_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b2b/complete_autocorrelation_reconstruction_projector_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:drv_dtqc_b05_product_carrier",
+    "eq:drv_dtqc_b05_1b",
+    "eq:drv_dtqc_b05_theorem_1b",
+    "eq:drv_dtqc_b05_res_1b",
+    "eq:drv_dtqc_b05_2b",
+    "eq:drv_dtqc_b05_theorem_2b",
+    "eq:drv_dtqc_b05_res_2b",
+    "eq:drv_dtqc_b05_joint",
+    "eq:drv_dtqc_b05_exchange_square"
+  ],
+  "falsification": {
+    "execution_status": "executable_contract_suite",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/falsification_checks/test_autocorrelation_reconstruction_projector_falsification.py"
+  ],
+  "first_label": "app:drv_dtqc_b05",
+  "implementation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b2b/complete_autocorrelation_reconstruction_projector_classification.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b/autocorrelation_reconstruction_projector_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/2b/autocorrelation_reconstruction_projector_failure_law.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/1b2b/complete_autocorrelation_reconstruction_projector_classification.py"
+  ],
+  "known_limitations": [],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "description": "new summed operator with residual and non-cancellation margin",
+      "name": "derived additive law",
+      "python_types": [
+        "AdditiveDerivationResult"
+      ]
+    },
+    "domain": {
+      "description": "one finite common-shape response field for every declared A source",
+      "name": "complete additive source fields",
+      "python_types": [
+        "AdditiveDerivationInput"
+      ],
+      "shape": null
+    },
+    "exact_semantics": true,
+    "invariant": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_invariant",
+    "operator": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_operator",
+    "parameter_constraints": [],
+    "residual": "the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws.additive_residual",
+    "simulation_runner": null,
+    "source_removal_check_count": 2
+  },
+  "module": "dtqc",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py"
+  ],
+  "source_complex_id": "autocorrelation_reconstruction_projector",
+  "source_complex_ids": [
+    "autocorrelation_completeness_mixed_autocorrelation",
+    "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction"
+  ],
+  "status": "implemented",
+  "status_reason": "current appendix equations validated through a registered typed contract; legacy carrier/product labels are non-semantic",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_discrete_time_quasicrystals_in_the_flowpoint.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/test_evidence.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/theorem_complex/second_order_completeness/complex_005_autocorrelation_reconstruction_projector/falsification_checks/test_autocorrelation_reconstruction_projector_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Complete Autocorrelation Reconstruction Projector Classification",
+    "left": "Autocorrelation Reconstruction Projector Law",
+    "right": "Autocorrelation Reconstruction Projector Failure Law"
+  },
+  "theorem_titles_tex": {
+    "cross": "Complete Autocorrelation Reconstruction Projector Classification",
+    "left": "Autocorrelation Reconstruction Projector Law",
+    "right": "Autocorrelation Reconstruction Projector Failure Law"
+  }
+}

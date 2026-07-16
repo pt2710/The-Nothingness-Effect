@@ -1,0 +1,58 @@
+{
+  "modality_collapse_symmetry_operator": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Positive non-cancelling appendix residual energy uses both complete A sources with both-source removal witnesses.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  },
+  "motif_spectral_dual_regularity_law_for_soinets": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed SOInet modality source law with explicit domain, residual field, fail-closed boundary, and appendix-faithful B dependency.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  },
+  "motif_spectral_entropy_coupling_energy": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Positive non-cancelling appendix residual energy uses both complete A sources with both-source removal witnesses.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  },
+  "motif_spectral_modality_collapse_spatial_field": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Single modality-spatial field reports boundary, localization, reconstruction, coercivity, observability, both-B ablations, and numerical-candidate status.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  },
+  "soi_modality_dual_closure": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed SOInet modality source law with explicit domain, residual field, fail-closed boundary, and appendix-faithful B dependency.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  },
+  "soi_modality_invariant_convergence_and_collapse_completeness": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed SOInet modality source law with explicit domain, residual field, fail-closed boundary, and appendix-faithful B dependency.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  },
+  "soi_universal_entropy_plateau_theorem": {
+    "artifact_status": "generator_smoke_tested",
+    "decision_note": "Typed SOInet modality source law with explicit domain, residual field, fail-closed boundary, and appendix-faithful B dependency.",
+    "implementation_path": "the_nothingness_effect/artificial_intelligence/soinets/contracts.py",
+    "implementation_status": "implemented",
+    "simulation_path": "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_contract_suite.py",
+    "test_path": "tests/contracts/test_soinets_contracts.py"
+  }
+}

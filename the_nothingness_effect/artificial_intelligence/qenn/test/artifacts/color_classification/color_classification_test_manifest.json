@@ -1,0 +1,49 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "bidirectional_reconstruction": "class prototype, not exact source recovery",
+    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+  },
+  "capability_id": "color_classification",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "numerical_candidate",
+  "generated_files": [
+    "color_classification_test_results.csv",
+    "color_classification_test_figure.png",
+    "color_classification_test_manifest.json"
+  ],
+  "intended_output_group": "color classification",
+  "metrics": {
+    "accuracy": 1.0,
+    "mean_confidence": 0.9988223314285278
+  },
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "2fd8afcb80f176e0713658342f30bc51033bed21e2e91ac6d6d644e543640686",
+  "parameters": {
+    "capability": "color_classification",
+    "mode": "test",
+    "producer_architecture": "qenn",
+    "seed": 0,
+    "synthetic_fixture": true
+  },
+  "producer_architecture": "qenn",
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.test.run_all_capabilities",
+  "related_theorem_complex_ids": [
+    "dfi_entropy_plateau_dfi_divergence_spiking",
+    "lyapunov_entropy_dissipation_functional"
+  ],
+  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

@@ -1,0 +1,26 @@
+{
+  "completeness_order": "third_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "observation_dimensional_binding_and_dimensional_non_binding",
+      "directory": "complex_001_observation_dimensional_binding_and_dimensional_non_binding",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "observable_locality_and_collapse_inaccessibility",
+      "directory": "complex_002_observable_locality_and_collapse_inaccessibility",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "local_horizon_boundary_and_non_locality_divergence",
+      "directory": "complex_003_local_horizon_boundary_and_non_locality_divergence",
+      "status": "proxy"
+    },
+    {
+      "complex_id": "closure_conditioned_spectral_outcome_field",
+      "directory": "complex_004_closure_conditioned_spectral_outcome_field",
+      "status": "proxy"
+    }
+  ],
+  "module": "the_nothingness_effect/foundational_architecture/observation_and_collapse"
+}

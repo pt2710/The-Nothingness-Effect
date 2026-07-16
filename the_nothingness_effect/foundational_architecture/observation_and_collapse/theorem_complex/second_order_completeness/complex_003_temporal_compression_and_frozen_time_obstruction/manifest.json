@@ -1,0 +1,126 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+  "artifact_manifests": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/artifacts/manifest.json",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 25,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "second_order_completeness",
+  "complex_id": "temporal_compression_and_frozen_time_obstruction",
+  "component_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_003_temporal_compression_and_frozen_time_obstruction/1b/temporal_compression_via_observation.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_003_temporal_compression_and_frozen_time_obstruction/2b/temporal_non_compression_and_frozen_time_obstruction.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_003_temporal_compression_and_frozen_time_obstruction/1b2b/temporal_compression_classification.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:temp_canonical_observation_collapse_1b2b",
+    "eq:temp_history_average_1b2b",
+    "eq:temp_source_dual_complexes_1b2b",
+    "eq:temp_source_branch_identification_1b2b",
+    "eq:temp_positive_branch_composition_1b",
+    "eq:temp_compression_map_1b2b",
+    "eq:temp_negative_branch_composition_2b",
+    "eq:temp_branch_exchange_1b2b",
+    "eq:temp_branch_exchange_closure_1b2b",
+    "eq:temp_common_limit_1b",
+    "eq:temp_allowed_perturbation_1b",
+    "eq:temp_compression_common_output_1b",
+    "eq:temp_compression_residual_1b",
+    "eq:temp_canonical_compressed_output_1b",
+    "eq:temp_error_bound_1b",
+    "eq:temp_synthesis_1b",
+    "eq:std_temp_principle_1b",
+    "eq:temp_defect_profile_2b",
+    "eq:temp_cauchy_defect_2b",
+    "eq:temp_synthesis_2b",
+    "eq:std_temp_principle_2b",
+    "eq:temp_joint_status_tuple_1b2b",
+    "eq:temp_cluster_translation_1b2b",
+    "eq:temp_joint_synthesis_1b2b",
+    "eq:std_temp_principle_joint"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "both-source necessity",
+      "additive interaction law",
+      "source-removal ablation",
+      "non-cancellation residual",
+      "inverse/reconstruction test"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_003_temporal_compression_and_frozen_time_obstruction/falsification_checks/test_temporal_compression_and_frozen_time_obstruction_falsification.py"
+  ],
+  "first_label": "app:obs_complex_07",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "B",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "observation_collapse",
+  "owner_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse",
+  "required_artifacts": [
+    "source-ablation table",
+    "interaction surface",
+    "residual heatmap",
+    "operator diagram"
+  ],
+  "required_tests": [
+    "both-source necessity",
+    "additive interaction law",
+    "source-removal ablation",
+    "non-cancellation residual",
+    "inverse/reconstruction test"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py"
+  ],
+  "source_complex_id": "temporal_compression_and_frozen_time_obstruction",
+  "source_complex_ids": [
+    "observation_induced_collapse_and_collapse_divergence",
+    "collapse_attractor_stability_and_attractor_instability",
+    "uniqueness_and_non_uniqueness_of_collapse"
+  ],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collaps.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/test_observation_and_collapse.py",
+    "the_nothingness_effect/foundational_architecture/observation_and_collapse/theorem_complex/second_order_completeness/complex_003_temporal_compression_and_frozen_time_obstruction/falsification_checks/test_temporal_compression_and_frozen_time_obstruction_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Temporal Compression Classification",
+    "left": "Temporal Compression via Observation",
+    "right": "Temporal Non-Compression and Frozen-Time Obstruction"
+  },
+  "theorem_titles_tex": {
+    "cross": "Temporal Compression Classification",
+    "left": "Temporal Compression via Observation",
+    "right": "Temporal Non-Compression and Frozen-Time Obstruction"
+  }
+}

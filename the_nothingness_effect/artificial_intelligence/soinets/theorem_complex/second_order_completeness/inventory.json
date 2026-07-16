@@ -1,0 +1,56 @@
+{
+  "completeness_order": "second_order_completeness",
+  "complexes": [
+    {
+      "complex_id": "motif_spectral_entropy_coupling_energy",
+      "directory": "complex_001_motifspectralentropy_coupling_energy",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "modality_collapse_symmetry_operator",
+      "directory": "complex_002_modalitycollapse_symmetry_operator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "cross_modal_generalization_collapse_transfer",
+      "directory": "complex_003_cross_modal_generalizationcollapse_transfer",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "modality_compositionality_collapse_connection",
+      "directory": "complex_004_modalitycompositionality_collapse_connection",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "error_entropy_dissipation_functional",
+      "directory": "complex_005_errorentropy_dissipation_functional",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "entropy_spectral_phase_locking_operator",
+      "directory": "complex_006_entropyspectral_phase_locking_operator",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "modality_spectrum_representation_coupling",
+      "directory": "complex_007_modalityspectrum_representation_coupling",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "expressivity_meta_learnability_stability_functional",
+      "directory": "complex_008_expressivitymeta_learnability_stability_functional",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "stack_domain_generalization_transport",
+      "directory": "complex_009_stackdomain_generalization_transport",
+      "status": "implemented"
+    },
+    {
+      "complex_id": "universalization_cloning_obstruction_functional",
+      "directory": "complex_010_universalizationcloning_obstruction_functional",
+      "status": "implemented"
+    }
+  ],
+  "module": "the_nothingness_effect/artificial_intelligence/soinets"
+}

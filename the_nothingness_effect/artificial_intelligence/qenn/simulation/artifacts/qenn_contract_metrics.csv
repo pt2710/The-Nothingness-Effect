@@ -1,0 +1,8 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics
+lyapunov_weight_lattice_fourier_pisot_spectral_purification,A,1.9123276472091675,open,True
+dfi_entropy_plateau_dfi_divergence_spiking,A,0.05395769327878952,open,True
+pv_inflation_pure_point_diffraction_non_pv_salem_leakage,A,3.652345895767212,open,True
+parseval_energy_bijection_for_epochs_energy_mass_imbalance,A,1.5522377490997314,open,True
+lyapunov_entropy_dissipation_functional,B,6.012013912200928,open,True
+pv_parseval_spectral_energy_lock,B,17.754825592041016,open,True
+lyapunov_parseval_training_isometry_closure,C,0.0008494138659063924,open,False

@@ -1,0 +1,104 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "artifact_manifests": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/artifacts/manifest.json",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/artifacts/manifest.json"
+  ],
+  "audit_label_discrepancy": {
+    "current_equation_label_count": 6,
+    "missing_audit_equation_labels": []
+  },
+  "carrier_violation": false,
+  "completeness_order": "first_order_completeness",
+  "complex_id": "simulation_consistency_breakdown_and_non_equivalence",
+  "component_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_010_simulation_consistencybreakdown_and_non_equivalence/1a/simulation_consistency_for_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_010_simulation_consistencybreakdown_and_non_equivalence/2a/simulation_breakdown_non_equivalence_theorem.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_010_simulation_consistencybreakdown_and_non_equivalence/1a2a/simulation_consistencybreakdown_and_non_equivalence_joint_closure.py"
+  ],
+  "dependency_status": "authoritative_cross_reference",
+  "equation_labels": [
+    "eq:bhhr10_simulation_consistency_order_parameter_1a",
+    "eq:bhhr10_simulation_consistency_branch_condition_1a",
+    "eq:bhhr10_simulation_consistency_order_parameter_2a",
+    "eq:bhhr10_simulation_consistency_branch_condition_2a",
+    "eq:bhhr10_simulation_consistency_status_1a2a",
+    "eq:bhhr10_simulation_consistency_joint_implications_1a2a"
+  ],
+  "falsification": {
+    "execution_status": "proxy",
+    "obligations": [
+      "domain/codomain guards",
+      "theorem law",
+      "failure-dual counterexample",
+      "property-based invariant",
+      "finite/NaN checks"
+    ]
+  },
+  "falsification_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_010_simulation_consistencybreakdown_and_non_equivalence/falsification_checks/test_simulation_consistency_breakdown_and_non_equivalence_falsification.py"
+  ],
+  "first_label": "app:bhhr_complex_10",
+  "implementation_modules": [],
+  "known_limitations": [
+    "retained from verified contract inventory"
+  ],
+  "level": "A",
+  "mathematical_contract": {
+    "closure_predicate": null,
+    "codomain": {
+      "status": "not_directly_computable"
+    },
+    "domain": {
+      "status": "not_directly_computable"
+    },
+    "exact_semantics": false,
+    "invariant": null,
+    "operator": null,
+    "parameter_constraints": [],
+    "residual": null,
+    "simulation_runner": null,
+    "source_removal_check_count": 0
+  },
+  "module": "black_hole_dynamics",
+  "owner_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons",
+  "required_artifacts": [
+    "JSON manifest",
+    "CSV metrics",
+    "NPZ trace",
+    "static theorem/failure plot"
+  ],
+  "required_tests": [
+    "domain/codomain guards",
+    "theorem law",
+    "failure-dual counterexample",
+    "property-based invariant",
+    "finite/NaN checks"
+  ],
+  "schema_version": "1.0",
+  "simulation_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py"
+  ],
+  "source_complex_id": "simulation_consistency_breakdown_and_non_equivalence",
+  "source_complex_ids": [],
+  "status": "proxy",
+  "status_reason": "retained from verified contract inventory",
+  "test_modules": [
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_animations.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_hole_dynamics.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/test_black_holes_hawking_radiation_and_observer_horizons.py",
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/theorem_complex/first_order_completeness/complex_010_simulation_consistencybreakdown_and_non_equivalence/falsification_checks/test_simulation_consistency_breakdown_and_non_equivalence_falsification.py"
+  ],
+  "theorem_titles": {
+    "cross": "Simulation Consistency–Breakdown and Non-Equivalence Joint Closure",
+    "left": "Simulation Consistency for Black Hole Dynamics",
+    "right": "Simulation Breakdown/Non-Equivalence Theorem"
+  },
+  "theorem_titles_tex": {
+    "cross": "Simulation Consistency--Breakdown and Non-Equivalence Joint Closure",
+    "left": "Simulation Consistency for Black Hole Dynamics",
+    "right": "Simulation Breakdown/Non-Equivalence Theorem"
+  }
+}

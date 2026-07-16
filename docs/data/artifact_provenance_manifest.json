@@ -24,7 +24,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -92,7 +92,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.03597560219624253
@@ -127,7 +127,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -162,7 +162,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -199,7 +199,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -402,7 +402,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -495,7 +495,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -616,7 +616,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -709,7 +709,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -834,7 +834,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -927,7 +927,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -961,7 +961,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -996,7 +996,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -1026,7 +1026,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1061,7 +1061,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1154,7 +1154,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1306,7 +1306,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.551115123125783e-17,
@@ -1345,7 +1345,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1438,7 +1438,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.36957279084941e-15,
@@ -1468,7 +1468,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.26932634432761415
@@ -1526,7 +1526,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1564,7 +1564,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.47745829820632935
@@ -1593,7 +1593,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [],
       "seed": 0,
@@ -1623,7 +1623,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.05395769327878952
@@ -1652,7 +1652,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.597583973135935e-17
@@ -1681,7 +1681,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1719,7 +1719,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.015338145196437836
@@ -1748,7 +1748,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -1778,7 +1778,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -1871,7 +1871,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2021,7 +2021,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2114,7 +2114,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2149,7 +2149,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.3252879519388773e-15,
@@ -2179,7 +2179,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -2209,7 +2209,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2301,7 +2301,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.551115123125783e-17,
@@ -2363,7 +2363,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2456,7 +2456,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2549,7 +2549,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2642,7 +2642,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2735,7 +2735,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2828,7 +2828,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -2921,7 +2921,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3014,7 +3014,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3106,7 +3106,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3140,7 +3140,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3237,7 +3237,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.5172543525695801
@@ -3267,7 +3267,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3388,7 +3388,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         -1.1102230246251565e-16,
@@ -3449,7 +3449,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3600,7 +3600,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.simulation.run_contract_suite --output <output-root>/elastic_dubler_effect",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3693,7 +3693,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.2415557069099854e-15,
@@ -3723,7 +3723,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3762,7 +3762,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -3854,7 +3854,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.26932634432761415
@@ -3884,7 +3884,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4005,7 +4005,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4098,7 +4098,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4190,7 +4190,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4428,7 +4428,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.030296081647354534
@@ -4513,7 +4513,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4552,7 +4552,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.1881279945373535
@@ -4582,7 +4582,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4680,7 +4680,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4710,7 +4710,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4745,7 +4745,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4775,7 +4775,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.0196387626502316e-14,
@@ -4806,7 +4806,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -4843,7 +4843,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4897,7 +4897,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -4927,7 +4927,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5020,7 +5020,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5093,7 +5093,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5152,7 +5152,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5182,7 +5182,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5275,7 +5275,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5368,7 +5368,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         7.993105823998126e-15,
@@ -5399,7 +5399,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.locality_driven_gravity.simulation.run_contract_suite --output <output-root>/locality_driven_gravity",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5494,7 +5494,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         6.012013912200928
@@ -5526,7 +5526,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.911589415878552e-08,
@@ -5559,7 +5559,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.9123276472091675
@@ -5589,7 +5589,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.270175824852434e-15,
@@ -5620,7 +5620,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -5738,7 +5738,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -5770,7 +5770,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         5.4259138107299805
@@ -5890,7 +5890,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         6.389484405517578
@@ -5922,7 +5922,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         53.855709075927734
@@ -5954,7 +5954,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.4169989387701207e-07,
@@ -6045,7 +6045,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6076,7 +6076,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6111,7 +6111,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6209,7 +6209,7 @@
         ]
       },
       "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output <output-root>/mathematical_closure",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6328,7 +6328,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6365,7 +6365,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6555,7 +6555,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6587,7 +6587,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.5522377490997314
@@ -6617,7 +6617,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite --output <output-root>/dtqc",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6709,7 +6709,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6738,7 +6738,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6767,7 +6767,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6796,7 +6796,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6825,7 +6825,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -6866,7 +6866,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -6896,7 +6896,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output <output-root>/elastic_dubler_interferometry",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7024,7 +7024,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7054,7 +7054,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7146,7 +7146,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7184,7 +7184,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7218,7 +7218,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         2.2055495207951026e-07,
@@ -7253,7 +7253,7 @@
         "node_count": 11
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output <output-root>/pgqenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         35.65712356567383
@@ -7283,7 +7283,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7326,7 +7326,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         3.652345895767212
@@ -7358,7 +7358,7 @@
         "module": "qenn"
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output <output-root>/qenn",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         17.754825592041016
@@ -7412,7 +7412,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7438,7 +7438,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7468,7 +7468,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         4.999702984597266e-15,
@@ -7499,7 +7499,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output <output-root>/black_hole_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7651,7 +7651,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         9.597583973135935e-17
@@ -7688,7 +7688,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7725,7 +7725,7 @@
         "kernel_offset": 0.25
       },
       "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output <output-root>/flowpoint",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7755,7 +7755,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7789,7 +7789,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         1.9737184047698975
@@ -7821,7 +7821,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.9907820820808411
@@ -7853,7 +7853,7 @@
         "spatial_samples": 18
       },
       "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output <output-root>/soinets",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.8860153555870056
@@ -7882,7 +7882,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/pdfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -7912,7 +7912,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output <output-root>/elastic_pi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         4.440892098500626e-16,
@@ -7942,7 +7942,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -7971,7 +7971,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output <output-root>/dfi",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8090,7 +8090,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8211,7 +8211,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8271,7 +8271,7 @@
         "carrier_size": 4
       },
       "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output <output-root>/duality",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0
@@ -8301,7 +8301,7 @@
         "state_dimension": 6
       },
       "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output <output-root>/completeness",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8347,7 +8347,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8406,7 +8406,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output <output-root>/elastic_pi_ripples",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8499,7 +8499,7 @@
         "sample_count": 64
       },
       "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.emergent_cosmological_spark_dynamics.simulation.run_contract_suite --output <output-root>/cosmological_spark_dynamics",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         0.0,
@@ -8620,7 +8620,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [],
       "seed": 0,
@@ -8647,7 +8647,7 @@
         "fixture": "deterministic-contract-v1"
       },
       "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output <output-root>/elastic_pi_norm",
-      "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+      "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
       "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
       "residual_vector": [
         -1.1102230246251565e-16,
@@ -9780,7 +9780,7 @@
     "the_nothingness_effect/the_completeness_theorem/test/artifacts/manifest.json",
     "the_nothingness_effect/the_completeness_theorem/test/artifacts/structure_evidence.json"
   ],
-  "repository_result_commit": "659faa050cc11104640f00ff2d463aa6186de286",
+  "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "schema_version": "1.0",
   "suites": [

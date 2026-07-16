@@ -1,7 +1,7 @@
 # TNE final QA report
 
 - Start commit: `b97a2da379ff9fc503c4c43185030674f887b85c`
-- QA source commit: `659faa050cc11104640f00ff2d463aa6186de286`
+- QA source commit: `983bcbd11c88fd1533236bf6fee5cc7581ff8605`
 - Branch: `codex/tne-architecture-and-theorem-complex-migration`
 - Changed files: 7242 (5129 new, 2113 modified/moved/deleted)
 - Tests: 827 passed, 0 failed, 0 skipped, 8 warnings in 627.79 seconds

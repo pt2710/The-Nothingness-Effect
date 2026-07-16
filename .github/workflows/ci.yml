@@ -121,6 +121,10 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
       - run: python -m pip install -e .
       - run: python tools/check_no_authoritative_appendices.py
+      - run: >-
+          python tools/export_effective_theorem_matrix.py
+          --output reports/effective_theorem_complex_implementation_matrix.csv
+          --report reports/effective_theorem_complex_implementation_matrix.json
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
 
@@ -144,6 +148,10 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
       - run: python -m pip install -e .
       - run: python -m pip check
+      - run: >-
+          python tools/export_effective_theorem_matrix.py
+          --output reports/effective_theorem_complex_implementation_matrix.csv
+          --report reports/effective_theorem_complex_implementation_matrix.json
       - run: python -m tools.qa_guards
       - name: Build and assert fail-closed final QA
         run: >-

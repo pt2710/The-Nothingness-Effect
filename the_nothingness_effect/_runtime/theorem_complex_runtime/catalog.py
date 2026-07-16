@@ -1,9 +1,9 @@
 """Lazy catalog for canonical theorem-complex contracts.
 
 The catalog lives inside the installed package so generated theorem-component
-modules never depend on repository-only tooling. A contract can remain as a
-quarantined legacy implementation while its current inventory status is
-``blocked`` or ``proxy``; only ``implemented`` inventory rows are active.
+modules never depend on repository-only tooling. Release activation is
+fail-closed: an inventory row requested as ``implemented`` is active only when
+all of its declared source contracts are active as well.
 """
 
 from __future__ import annotations
@@ -62,16 +62,92 @@ def _default_matrix() -> Path:
     return Path(__file__).resolve().parents[3] / "docs" / "data" / "theorem_complex_implementation_matrix.csv"
 
 
-def active_contracts(matrix_path: str | Path | None = None) -> tuple[ComplexContract, ...]:
+def _matrix_rows(matrix_path: str | Path | None = None) -> list[dict[str, str]]:
     path = Path(matrix_path) if matrix_path is not None else _default_matrix()
     with path.open(newline="", encoding="utf-8-sig") as handle:
-        active_ids = {
-            row["complex_id"]
-            for row in csv.DictReader(handle)
-            if row["implementation_status"] == "implemented"
-        }
+        return list(csv.DictReader(handle))
+
+
+def release_statuses(matrix_path: str | Path | None = None) -> dict[str, str]:
+    """Return dependency-closed release statuses for every inventory row.
+
+    Rows requested as ``implemented`` are recursively downgraded to ``proxy``
+    whenever at least one declared source contract is not itself release-active.
+    This prevents a partially closed dependency graph from being advertised as
+    a completed theorem-complex implementation.
+    """
+
+    rows = _matrix_rows(matrix_path)
+    requested = {
+        row["complex_id"]
+        for row in rows
+        if row["implementation_status"] == "implemented"
+    }
     catalog = {str(contract.complex_id): contract for contract in all_contracts()}
-    missing = active_ids - catalog.keys()
-    if missing:
-        raise RuntimeError(f"implemented inventory IDs lack contracts: {sorted(missing)[:5]}")
+    missing_contracts = requested - catalog.keys()
+    if missing_contracts:
+        raise RuntimeError(
+            f"implemented inventory IDs lack contracts: {sorted(missing_contracts)[:5]}"
+        )
+
+    active = set(requested)
+    while True:
+        invalid = {
+            identifier
+            for identifier in active
+            if any(str(source_id) not in active for source_id in catalog[identifier].source_ids)
+        }
+        if not invalid:
+            break
+        active.difference_update(invalid)
+
+    statuses: dict[str, str] = {}
+    for row in rows:
+        identifier = row["complex_id"]
+        requested_status = row["implementation_status"]
+        statuses[identifier] = (
+            "implemented"
+            if requested_status == "implemented" and identifier in active
+            else "proxy"
+            if requested_status == "implemented"
+            else requested_status
+        )
+    return statuses
+
+
+def dependency_downgrades(matrix_path: str | Path | None = None) -> tuple[dict[str, object], ...]:
+    """Describe every requested implementation removed by dependency closure."""
+
+    rows = _matrix_rows(matrix_path)
+    statuses = release_statuses(matrix_path)
+    catalog = {str(contract.complex_id): contract for contract in all_contracts()}
+    active = {
+        identifier for identifier, status in statuses.items() if status == "implemented"
+    }
+    downgraded: list[dict[str, object]] = []
+    for row in rows:
+        identifier = row["complex_id"]
+        if row["implementation_status"] != "implemented" or statuses[identifier] == "implemented":
+            continue
+        contract = catalog[identifier]
+        missing_sources = sorted(
+            str(source_id) for source_id in contract.source_ids if str(source_id) not in active
+        )
+        downgraded.append(
+            {
+                "complex_id": identifier,
+                "effective_status": "proxy",
+                "reason": "dependency_closure_not_satisfied",
+                "inactive_source_ids": missing_sources,
+            }
+        )
+    return tuple(sorted(downgraded, key=lambda item: str(item["complex_id"])))
+
+
+def active_contracts(matrix_path: str | Path | None = None) -> tuple[ComplexContract, ...]:
+    statuses = release_statuses(matrix_path)
+    active_ids = {
+        identifier for identifier, status in statuses.items() if status == "implemented"
+    }
+    catalog = {str(contract.complex_id): contract for contract in all_contracts()}
     return tuple(catalog[identifier] for identifier in sorted(active_ids))

@@ -8,6 +8,10 @@ from the_nothingness_effect.artificial_intelligence.pgqenn.mpl_tc_dependency imp
     MPLTCPrefix,
 )
 from the_nothingness_effect.artificial_intelligence.qenn.model import QENNModel
+from the_nothingness_effect.artificial_intelligence.multimodal import (
+    TNETrainableMultimodalModel,
+    make_synthetic_multimodal_dataset,
+)
 from the_nothingness_effect.artificial_intelligence.soinets.multimodal import (
     TNEMultimodalSOInet,
 )
@@ -130,3 +134,22 @@ def test_removing_multimodal_dubler_changes_named_domain_fusion():
     assert canonical_output.metadata["elastic_dubler_integration"] == "named_modality_domain_bridge"
     assert ablation_output.metadata["elastic_dubler_integration"] == "source_removal_ablation"
     assert not torch.allclose(canonical_output.fused_state, ablation_output.fused_state)
+
+
+def test_axis_rbm_and_cluster_sources_each_change_trainable_multimodal_hidden_state():
+    torch.manual_seed(37)
+    dataset = make_synthetic_multimodal_dataset(samples_per_class=5, seed=37)
+    model = TNETrainableMultimodalModel(hidden_dim=8)
+    model.eval()
+    complete = model(dataset.test.modalities).hidden
+
+    variants = (
+        ("axis_network_enabled", False),
+        ("energy_regulation_enabled", False),
+        ("cluster_context_enabled", False),
+    )
+    for attribute, removed in variants:
+        setattr(model, attribute, removed)
+        ablated = model(dataset.test.modalities).hidden
+        setattr(model, attribute, True)
+        assert not torch.allclose(complete, ablated), attribute

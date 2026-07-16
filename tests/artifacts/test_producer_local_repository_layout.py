@@ -91,6 +91,19 @@ def test_each_ai_architecture_owns_all_six_test_and_simulation_outputs() -> None
             assert aggregate["capability_count"] == 6
             assert tuple(aggregate["output_groups"]) == CAPABILITIES
             assert (output / f"{architecture}_{mode}_architecture_figure.png").is_file()
+            network_manifest = json.loads(
+                (output / f"{architecture}_{mode}_network_manifest.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            assert network_manifest["artifact_family"] == "network_topology_and_activation"
+            assert len(list(output.glob(f"{architecture}_{mode}_network_*.png"))) == 3
+            network_movies = list(output.glob(f"{architecture}_{mode}_network_*.gif"))
+            assert len(network_movies) == 3
+            for movie in network_movies:
+                with Image.open(movie) as image:
+                    assert image.is_animated
+                    assert image.n_frames >= 10
             for capability in CAPABILITIES:
                 capability_dir = output / capability
                 assert (capability_dir / f"{capability}_{mode}_results.csv").is_file()

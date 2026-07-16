@@ -8,11 +8,15 @@ The canonical trainable product is now directly visible at
 ```text
 multimodal/
   model.py
+  axes.py
+  rbm.py
+  growth.py
   data.py
   training.py
   validation.py
   evaluation.py
   artifacts.py
+  network_artifacts.py
   test/run_pipeline.py
   test/artifacts/
   simulation/run_pipeline.py
@@ -35,13 +39,32 @@ named raw modalities
   -> one shared encoder
   -> normalized DFI modality fields
   -> exact Elastic-pi and Elastic Dubler ratios
-  -> ratio-preserving modality weights
+  -> learned shared/private modality axes with forward/reverse cycle residual
+  -> local per-axis Gaussian-Bernoulli RBM energy states
+  -> Elastic-Dubler/RBM-regulated modality weights
+  -> bounded modality-specific prototype clusters and deterministic growth
+  -> global cross-axis RBM regulator
   -> weighted superposition and latent collapse
   -> SOInets(QENN, PGQENN)
   -> observation/collapse readout and shared token reconstructions
 ```
 
 The encoder and decoder are shared across color, sound, vision, or any other finite tensor modality. Modality names provide the explicit domains for the Dubler comparison; they do not select private feature extractors.
+
+The modality-axis network learns a shared comparison sector and a private
+coordinate sector for each named input. Pairwise transport is computed from
+the shared coordinates, while a reverse map exposes cycle and identity
+residuals. Local RBMs encode slow energy statistics per axis; a global RBM
+couples all axis latents and regulates the fusion precision. The RBM is an
+external numerical realization, not a TNE source law, and its free energy,
+contrastive-divergence quantity, and visible reconstruction residual remain
+explicit.
+
+`AdaptiveModalityClusterNetwork` grows bounded modality-specific prototypes
+when novelty crosses a declared threshold. Its centroids, assignments,
+connectivity, capacity, coverage residual, and spawn/update events are
+observable. Cluster context contributes to the final hidden state; it is not a
+diagnostic-only sidecar.
 
 The ratio-preserving fusion law is
 
@@ -60,7 +83,15 @@ It is evaluated without exponent clipping. Exchange, diagonal, additive log-cocy
 
 ## External design context
 
-The uploaded `tne_multimodal.zip` was inspected outside the Git root. It suggested the raw-observation → shared-encoder → Dubler-weighted-superposition organization. Its QENN, PGQENN, and clipped Elastic-pi implementations were proxy code and were not copied. The authoritative appendix laws and current typed repository runtime take precedence. The source ZIP hash and reuse boundary are recorded in `docs/data/multimodal_reference_context_manifest.json`.
+The uploaded `tne_multimodal.zip` was inspected outside the Git root. Its
+working RBM, axis-bank and modal-superposition prototypes, together with its
+explicitly labelled axis-graph and cluster-growth plans, supplied design
+context. The repository implementation was rebuilt independently: the axis
+transport is cycle-checked, cluster state affects inference, and canonical TNE
+operators replace clipped Elastic-pi and minimal QENN/PGQENN proxies. No source
+or artifact was copied. The authoritative appendix laws and current typed
+repository runtime take precedence. The source ZIP hash and reuse boundary are
+recorded in `docs/data/multimodal_reference_context_manifest.json`.
 
 ## Artifacts and commands
 
@@ -72,14 +103,19 @@ python -m the_nothingness_effect.artificial_intelligence.multimodal.test.run_pip
 python -m the_nothingness_effect.artificial_intelligence.multimodal.simulation.run_pipeline
 ```
 
-Each producer writes seven machine-readable tables, twelve static figures, five
-GIF animations, and one provenance manifest. Evidence includes loss and
+Each producer writes nine machine-readable tables, eighteen static figures,
+ten GIF animations, and two provenance manifests. Evidence includes loss and
 accuracy curves, gradient norms, modality-weight trajectories, held-out
 confusion, calibration, latent PCA, modality similarity, exact Elastic-Dubler
 ratios, reconstruction error, the TNE residual spectrum, and named
-observation/Elastic-Dubler source-removal comparisons. The animations show
+observation, Elastic-Dubler, modality-axis, RBM-regulator, and cluster-context
+source-removal comparisons. The additional network evidence includes the full
+executable topology, axis transport and cycle matrices, a local/global RBM
+bipartite graph, cluster topology, and the RBM energy landscape. The animations show
 loss, latent geometry, modality weights, confusion, and cross-modal token
-reconstruction across training.
+reconstruction across training, plus topology activation, network assembly,
+axis learning, cluster self-growth, and visible-hidden-visible RBM
+reconstruction.
 
 The test producer uses 12 epochs; the simulation producer uses 40. With seed 0
 the current deterministic synthetic fixture reaches 100% held-out

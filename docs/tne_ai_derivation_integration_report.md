@@ -34,3 +34,18 @@ per-sample task readout and shared token decoder over the SOInet backbone so
 training, validation, calibration, confusion, latent geometry, reconstruction,
 gradient, residual, and source-removal evidence are all executable rather than
 represented by one batch-aggregate demonstration.
+
+The trainable forward graph now also contains learned shared/private modality
+axes, explicit forward/reverse transport residuals, local per-axis and global
+cross-axis Gaussian-Bernoulli RBMs, and bounded modality-specific cluster
+growth. RBM energy changes the modality precision and global hidden context;
+cluster prototypes also contribute to the hidden state. Both therefore remain
+source-removable runtime components rather than detached diagnostics. RBM is
+recorded as an external numerical realization and is never promoted to an
+appendix theorem-complex source law.
+
+QENN, PGQENN, and SOInets each generate architecture-local network topology,
+connectivity, node-activation, signal-propagation, topology-growth, and
+recurrent-activation evidence in both test and simulation directories. The
+multimodal producer adds modality-axis, RBM, cluster, and complete-network
+views and animations.

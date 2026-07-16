@@ -27,6 +27,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
 from .data import make_synthetic_multimodal_dataset
 from .evaluation import evaluate_multimodal_model, evaluate_source_removals
 from .model import TNETrainableMultimodalModel
+from .network_artifacts import generate_multimodal_network_artifacts
 from .training import MultimodalTrainingRun, train_multimodal_model
 
 
@@ -49,6 +50,7 @@ def _history_arrays(run: MultimodalTrainingRun) -> dict[str, np.ndarray]:
         "train_reconstruction": np.array(
             [item.train_reconstruction_loss for item in run.history]
         ),
+        "train_energy": np.array([item.train_energy_loss for item in run.history]),
         "validation_loss": np.array([item.validation_loss for item in run.history]),
         "train_accuracy": np.array([item.train_accuracy for item in run.history]),
         "validation_accuracy": np.array(
@@ -58,6 +60,10 @@ def _history_arrays(run: MultimodalTrainingRun) -> dict[str, np.ndarray]:
         "weights": np.array([item.modality_weights for item in run.history]),
         "confusion": np.array([item.confusion_matrix for item in run.history]),
         "latent": np.array([item.latent_snapshot for item in run.history]),
+        "axis": np.array([item.axis_snapshot for item in run.history]),
+        "cluster_count": np.array([item.cluster_count for item in run.history]),
+        "local_energy": np.array([item.local_free_energy for item in run.history]),
+        "global_energy": np.array([item.global_free_energy for item in run.history]),
     }
 
 
@@ -85,6 +91,7 @@ def _write_tables(
                 "train_total_loss": item.train_total_loss,
                 "train_task_loss": item.train_task_loss,
                 "train_reconstruction_loss": item.train_reconstruction_loss,
+                "train_energy_loss": item.train_energy_loss,
                 "train_closure_penalty": item.train_closure_penalty,
                 "train_accuracy": item.train_accuracy,
                 "validation_loss": item.validation_loss,
@@ -433,7 +440,14 @@ def run_multimodal_pipeline_artifacts(
         dataset.train.labels,
     )
     movies = _animations(output, arrays, evaluation, names, dataset.train.labels)
+    network = generate_multimodal_network_artifacts(
+        model, run, evaluation, output, seed=seed, simulation=simulation
+    )
+    tables.extend(network["tables"])
+    figures.extend(network["figures"])
+    movies.extend(network["animations"])
     generated = [path.name for path in (*tables, *figures, *movies)]
+    generated.append(network["manifest"].name)
     parameters = {
         "architecture": "TNE Trainable Multimodal SOInet",
         "seed": seed,
@@ -473,4 +487,5 @@ def run_multimodal_pipeline_artifacts(
         "figures": figures,
         "animations": movies,
         "manifest": manifest,
+        "network": network,
     }

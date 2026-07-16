@@ -64,6 +64,7 @@ def _animation_generators() -> list[Path]:
         *Path("the_nothingness_effect/artificial_intelligence").glob("**/simulation/run_all_capabilities.py"),
         *Path("the_nothingness_effect/artificial_intelligence").glob("**/simulation/run_pipeline.py"),
         *Path("the_nothingness_effect/artificial_intelligence").glob("**/test/run_pipeline.py"),
+        *Path("the_nothingness_effect/artificial_intelligence").glob("**/network_artifacts.py"),
     }
     return sorted(candidates)
 

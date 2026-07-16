@@ -17,13 +17,17 @@ def test_multimodal_pipeline_writes_diverse_training_validation_evaluation_evide
         simulation=False,
     )
 
-    assert len(result["tables"]) == 7
-    assert len(result["figures"]) == 12
-    assert len(result["animations"]) == 5
+    assert len(result["tables"]) == 9
+    assert len(result["figures"]) == 18
+    assert len(result["animations"]) == 10
     assert all(path.is_file() for path in result["tables"])
     assert all(path.is_file() for path in result["figures"])
     assert all(path.is_file() for path in result["animations"])
     payload = json.loads(result["manifest"].read_text(encoding="utf-8"))
     assert payload["source_status"] == "synthetic_deterministic_training_fixture"
-    assert len(payload["generated_files"]) == 24
+    assert len(payload["generated_files"]) == 38
+    assert result["network"]["manifest"].is_file()
+    assert any(path.name.endswith("network_topology.png") for path in result["figures"])
+    assert any(path.name.endswith("cluster_growth.gif") for path in result["animations"])
+    assert any(path.name.endswith("rbm_reconstruction.gif") for path in result["animations"])
     assert "not a formal proof substitute" in payload["claim_boundary"]

@@ -261,13 +261,16 @@ def build_reports(qa: dict[str, object]) -> None:
         + ", ".join(f"{count} `{name}`" for name, count in sorted(ai_counts.items()))
         + ".\n\n"
         "Every row now records its source theorem's current implementation status. No row carries the retired carrier-conflict classification. Typed availability does not by itself claim that every target architecture consumes the source; target-specific wiring remains explicit in the evidence column.\n\n"
-        "Canonical AI execution is CPU-testable, fail-closed for non-finite values, and uses deterministic seeds. PGQENN random sampling remains only a named ablation/comparison mode.\n",
+        "Canonical AI execution is CPU-testable, fail-closed for non-finite values, and uses deterministic seeds. PGQENN random sampling remains only a named ablation/comparison mode.\n\n"
+        "The executable dependency chain is DTQC -> QENN, QENN + pinned MPL-TC -> PGQENN, and QENN + PGQENN -> SOInets. QENN also composes Flowpoint projectors, normalized DFI, pDFI, exact unclipped Elastic-pi, Elastic Dubler, observation/collapse, spectral memory, Parseval, and completeness residuals.\n\n"
+        "The visible trainable multimodal package adds learned shared/private modality axes, forward/reverse transport residuals, local per-axis and global cross-axis Gaussian-Bernoulli RBMs, and bounded modality-specific prototype growth over the canonical SOInet backbone. Axis, RBM, and cluster contexts affect inference and have independent source-removal modes. RBM is an external numerical realization, not an appendix source law. The uploaded multimodal ZIP remains external design context; none of its source or artifacts was copied.\n\n"
+        "QENN, PGQENN, and SOInets each own static topology, directed-connectivity, and activation/residual views plus signal-propagation, topology-growth, and recurrent-activation GIFs in both test and simulation directories. Multimodal producers additionally own axis-learning, cluster-growth, RBM bipartite, energy-landscape, and RBM-reconstruction evidence.\n",
         encoding="utf-8",
     )
     (DOCS / "tne_artifact_provenance_report.md").write_text(
         "# TNE artifact provenance report\n\n"
         f"The aggregate manifest covers all **{artifact_summary['theorem_manifests']}** implemented theorem contracts with no missing or duplicate ID. It indexes **{artifact_summary['generated_tables']}** tables, **{artifact_summary['generated_static_figures']}** static figures, **{artifact_summary['producer_local_animations']}** tracked GIF animations, **{artifact_summary['producer_local_audio_files']}** audio files, and **{artifact_summary['animation_generators']}** animation generators.\n\n"
-        "Result files live beneath the producing module's `test/artifacts` or `simulation/artifacts` directory. Large regenerable frame dumps and videos remain external. Every theorem manifest records checksum, start/result commit, seed, tolerances, residual vector, closure status, generated files, regeneration command, and the finite-evidence claim boundary.\n",
+        f"Result files live beneath the producing module's `test/artifacts` or `simulation/artifacts` directory. Producer-local evidence contains **{artifact_summary['producer_local_manifests']}** manifests. Each multimodal mode owns nine tables, eighteen figures, ten compact GIFs, and two manifests. Large regenerable frame dumps and videos remain external. Every theorem manifest records checksum, start/result commit, seed, tolerances, residual vector, closure status, generated files, regeneration command, and the finite-evidence claim boundary.\n",
         encoding="utf-8",
     )
     (DOCS / "tne_import_migration_report.md").write_text(
@@ -319,7 +322,8 @@ def build_reports(qa: dict[str, object]) -> None:
         f"- Duplicate IDs / carrier conflicts / blocked B / blocked C: 0 / 0 / 0 / 0\n"
         f"- Tracked `.tex`: {len(qa['tracked_tex_files'])}\n"
         f"- Unresolved implemented dependencies: {len(qa['unresolved_internal_dependencies'])}\n"
-        f"- Artifact manifests / tables / figures / animation generators: {artifact_summary['theorem_manifests']} / {artifact_summary['generated_tables']} / {artifact_summary['generated_static_figures']} / {artifact_summary['animation_generators']}\n\n"
+        f"- Theorem manifests / producer-local manifests: {artifact_summary['theorem_manifests']} / {artifact_summary['producer_local_manifests']}\n"
+        f"- Tables / figures / tracked GIFs / animation generators: {artifact_summary['generated_tables']} / {artifact_summary['generated_static_figures']} / {artifact_summary['producer_local_animations']} / {artifact_summary['animation_generators']}\n\n"
         "Source-law regression status: passed. Appendix checksum verification: passed for all seven authoritative sources.\n",
         encoding="utf-8",
     )

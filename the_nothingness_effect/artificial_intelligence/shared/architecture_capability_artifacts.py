@@ -14,6 +14,9 @@ import torch
 from the_nothingness_effect.artificial_intelligence.shared.capability_artifacts import CAPABILITIES, run_capability
 from the_nothingness_effect._runtime.artifacts.io import save_csv, save_figure, write_metadata
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import git_commit, parameter_hash
+from the_nothingness_effect.artificial_intelligence.shared.network_artifacts import (
+    generate_architecture_network_artifacts,
+)
 
 
 START_COMMIT = "b97a2da379ff9fc503c4c43185030674f887b85c"
@@ -69,6 +72,14 @@ def run_architecture_capability_suite(
     output.mkdir(parents=True, exist_ok=True)
     mode = "simulation" if simulation else "test"
     architecture_result = _evaluate_architecture(architecture, model_type, seed)
+    network = generate_architecture_network_artifacts(
+        architecture,
+        output,
+        observation=architecture_result["observation"],
+        residuals=architecture_result["residuals"],
+        seed=seed,
+        simulation=simulation,
+    )
     capability_results: dict[str, dict[str, Any]] = {}
     for offset, capability in enumerate(CAPABILITIES):
         capability_results[capability] = run_capability(
@@ -105,6 +116,15 @@ def run_architecture_capability_suite(
     plt.close(figure_handle)
 
     generated = [summary.name, figure.name]
+    generated.extend(
+        path.name
+        for path in (
+            *network["figures"],
+            network["table"],
+            *network["animations"],
+            network["manifest"],
+        )
+    )
     for capability, result in capability_results.items():
         generated.extend(
             f"{capability}/{Path(path).name}"
@@ -144,4 +164,5 @@ def run_architecture_capability_suite(
         "summary": summary,
         "figure": figure,
         "manifest": manifest,
+        "network": network,
     }

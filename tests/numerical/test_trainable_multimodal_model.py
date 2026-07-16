@@ -22,6 +22,20 @@ def test_visible_multimodal_model_has_per_sample_predictions_and_gradients():
         dataset.train.labels.numel(),
         6,
     )
+    assert output.axis_state.mapped_axes.shape[:2] == (
+        dataset.train.labels.numel(),
+        3,
+    )
+    assert output.local_rbm_state.hidden_probability.shape[0] == (
+        dataset.train.labels.numel() * 3
+    )
+    assert output.global_rbm_state.hidden_probability.shape[0] == dataset.train.labels.numel()
+    assert output.cluster_state.active_clusters >= 3
+    assert torch.allclose(
+        output.regulated_modality_weights.sum(dim=-1),
+        torch.ones(dataset.train.labels.numel()),
+        atol=1e-6,
+    )
     assert output.metadata["dependency_chain"] == (
         "DTQC->QENN",
         "QENN+MPL-TC->PGQENN",

@@ -18,6 +18,7 @@ class MultimodalEpoch:
     train_total_loss: float
     train_task_loss: float
     train_reconstruction_loss: float
+    train_energy_loss: float
     train_closure_penalty: float
     train_accuracy: float
     validation_loss: float
@@ -26,6 +27,12 @@ class MultimodalEpoch:
     modality_weights: tuple[float, ...]
     confusion_matrix: tuple[tuple[int, ...], ...]
     latent_snapshot: tuple[tuple[float, ...], ...]
+    axis_snapshot: tuple[tuple[float, ...], ...]
+    local_free_energy: float
+    global_free_energy: float
+    cluster_count: int
+    growth_event_count: int
+    cluster_centroids: tuple[tuple[float, ...], ...]
 
 
 @dataclass(frozen=True)
@@ -39,16 +46,24 @@ class MultimodalTrainingRun:
 def _loss_components(
     output: TNETrainableMultimodalOutput,
     labels: torch.Tensor,
-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
     task = functional.cross_entropy(output.readout, labels)
     target = output.backbone_output.modality_tokens.mean(dim=1)
     reconstruction = functional.mse_loss(output.reconstructed_fused_tokens, target)
+    if output.local_rbm_state is None or output.global_rbm_state is None:
+        raise RuntimeError("multimodal energy states are required during training")
+    energy = (
+        torch.abs(output.local_rbm_state.contrastive_divergence)
+        + torch.abs(output.global_rbm_state.contrastive_divergence)
+        + output.local_rbm_state.reconstruction_residual
+        + output.global_rbm_state.reconstruction_residual
+    )
     residual_vector = torch.stack(
         [torch.tanh(torch.abs(value)) for value in output.residuals.values()]
     )
     closure = residual_vector.mean()
-    total = task + 0.25 * reconstruction + 0.02 * closure
-    return total, task, reconstruction, closure
+    total = task + 0.25 * reconstruction + 0.03 * energy + 0.02 * closure
+    return total, task, reconstruction, energy, closure
 
 
 def train_multimodal_model(
@@ -71,7 +86,9 @@ def train_multimodal_model(
         model.train()
         optimizer.zero_grad(set_to_none=True)
         output = model(train_batch.modalities)
-        total, task, reconstruction, closure = _loss_components(output, train_batch.labels)
+        total, task, reconstruction, energy, closure = _loss_components(
+            output, train_batch.labels
+        )
         total.backward()
         gradient_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
         optimizer.step()
@@ -85,6 +102,7 @@ def train_multimodal_model(
                 train_total_loss=float(total.detach()),
                 train_task_loss=float(task.detach()),
                 train_reconstruction_loss=float(reconstruction.detach()),
+                train_energy_loss=float(energy.detach()),
                 train_closure_penalty=float(closure.detach()),
                 train_accuracy=float(train_accuracy.detach()),
                 validation_loss=validation.metrics["cross_entropy"],
@@ -98,6 +116,21 @@ def train_multimodal_model(
                 latent_snapshot=tuple(
                     tuple(float(value) for value in row)
                     for row in output.hidden.detach().cpu().tolist()
+                ),
+                axis_snapshot=tuple(
+                    tuple(float(value) for value in row)
+                    for row in output.axis_state.mapped_axes.detach()
+                    .reshape(output.hidden.shape[0], -1)
+                    .cpu()
+                    .tolist()
+                ),
+                local_free_energy=float(output.local_rbm_state.free_energy.mean().detach()),
+                global_free_energy=float(output.global_rbm_state.free_energy.mean().detach()),
+                cluster_count=output.cluster_state.active_clusters,
+                growth_event_count=len(output.cluster_state.events),
+                cluster_centroids=tuple(
+                    tuple(float(value) for value in row)
+                    for row in output.cluster_state.centroids.detach().cpu().tolist()
                 ),
             )
         )

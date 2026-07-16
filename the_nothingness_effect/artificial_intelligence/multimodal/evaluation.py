@@ -79,6 +79,15 @@ def evaluate_multimodal_model(
         ),
         "expected_calibration_error": _expected_calibration_error(probabilities, batch.labels),
         "mean_reconstruction_rmse": sum(reconstruction_rmse.values()) / len(reconstruction_rmse),
+        "mean_local_rbm_free_energy": float(output.local_rbm_state.free_energy.mean()),
+        "mean_global_rbm_free_energy": float(output.global_rbm_state.free_energy.mean()),
+        "local_rbm_reconstruction_rmse": float(
+            output.local_rbm_state.reconstruction_residual
+        ),
+        "global_rbm_reconstruction_rmse": float(
+            output.global_rbm_state.reconstruction_residual
+        ),
+        "active_clusters": float(output.cluster_state.active_clusters),
     }
     return MultimodalEvaluation(
         metrics,
@@ -99,19 +108,31 @@ def evaluate_source_removals(
     rows: list[dict[str, Any]] = []
     raw_observer = model.backbone.raw_observer
     elastic_dubler = model.backbone.elastic_dubler
+    axis_enabled = model.axis_network_enabled
+    energy_enabled = model.energy_regulation_enabled
+    cluster_enabled = model.cluster_context_enabled
     variants = (
-        ("complete", raw_observer, elastic_dubler),
-        ("observation_removed", None, elastic_dubler),
-        ("elastic_dubler_removed", raw_observer, None),
-        ("observation_and_dubler_removed", None, None),
+        ("complete", raw_observer, elastic_dubler, True, True, True),
+        ("observation_removed", None, elastic_dubler, True, True, True),
+        ("elastic_dubler_removed", raw_observer, None, True, True, True),
+        ("modality_axes_removed", raw_observer, elastic_dubler, False, True, True),
+        ("rbm_regulator_removed", raw_observer, elastic_dubler, True, False, True),
+        ("cluster_context_removed", raw_observer, elastic_dubler, True, True, False),
+        ("observation_and_dubler_removed", None, None, True, True, True),
     )
     try:
-        for name, observer, dubler in variants:
+        for name, observer, dubler, axes, energy, clusters in variants:
             model.backbone.raw_observer = observer
             model.backbone.elastic_dubler = dubler
+            model.axis_network_enabled = axes
+            model.energy_regulation_enabled = energy
+            model.cluster_context_enabled = clusters
             evaluation = evaluate_multimodal_model(model, batch)
             rows.append({"variant": name, **evaluation.metrics})
     finally:
         model.backbone.raw_observer = raw_observer
         model.backbone.elastic_dubler = elastic_dubler
+        model.axis_network_enabled = axis_enabled
+        model.energy_regulation_enabled = energy_enabled
+        model.cluster_context_enabled = cluster_enabled
     return rows

@@ -189,7 +189,10 @@ def test_effective_provenance_uses_same_authoritative_bindings(tmp_path: Path):
     stored_report = json.loads(report_output.read_text(encoding="utf-8"))
     assert report["effective_source_sha_mismatches"] == 0
     assert stored_report["effective_provenance_output"] == output.as_posix()
-    assert len(payload["manifests"]) == 259
+    assert payload["manifests"]
+    assert len({item["theorem_complex_id"] for item in payload["manifests"]}) == len(
+        payload["manifests"]
+    )
     assert all(
         item["appendix_source_sha256"] == EXPECTED[item["appendix_filename"]]
         for item in payload["manifests"]

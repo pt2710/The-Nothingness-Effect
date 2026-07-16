@@ -13,7 +13,10 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     provenance_binding_report,
     source_binding_report,
 )
-from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import all_contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
+    all_contracts,
+    release_statuses,
+)
 from tools.export_effective_theorem_matrix import export, export_provenance
 
 
@@ -31,6 +34,7 @@ EXPECTED = {
         "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3"
     ),
 }
+FOUNDATIONAL = "appendix_tne_foundational_closure_architecture.tex"
 
 
 def test_authoritative_manifest_exposes_latest_external_bindings():
@@ -42,6 +46,27 @@ def test_every_managed_runtime_contract_uses_authoritative_digest():
         expected = EXPECTED.get(contract.appendix)
         if expected is not None:
             assert contract.appendix_source_sha256 == expected
+
+
+def test_foundational_binding_does_not_promote_proxy_complexes():
+    statuses = release_statuses()
+    with Path("docs/data/theorem_complex_implementation_matrix.csv").open(
+        newline="",
+        encoding="utf-8-sig",
+    ) as handle:
+        rows = [
+            row
+            for row in csv.DictReader(handle)
+            if row["appendix_file"] == FOUNDATIONAL
+        ]
+    foundational_contracts = [
+        contract for contract in all_contracts() if contract.appendix == FOUNDATIONAL
+    ]
+
+    assert len(rows) == 79
+    assert len(foundational_contracts) == 14
+    assert sum(statuses[row["complex_id"]] == "implemented" for row in rows) == 14
+    assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 65
 
 
 def test_effective_matrix_has_no_authoritative_source_mismatch():

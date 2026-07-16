@@ -1,5 +1,29 @@
 # TNE multimodal architecture
 
+## Visible repository module
+
+The canonical trainable product is now directly visible at
+`the_nothingness_effect/artificial_intelligence/multimodal/`:
+
+```text
+multimodal/
+  model.py
+  data.py
+  training.py
+  validation.py
+  evaluation.py
+  artifacts.py
+  test/run_pipeline.py
+  test/artifacts/
+  simulation/run_pipeline.py
+  simulation/artifacts/
+```
+
+`TNETrainableMultimodalModel` adds per-sample classification and shared-token
+reconstruction heads over the complete `TNEMultimodalSOInet` backbone. The
+older `soinets/multimodal.py` location remains the typed backbone and
+compatibility import; it is no longer the only discoverable multimodal entry.
+
 ## Canonical dataflow
 
 `TNEMultimodalSOInet` implements the following bounded, differentiable chain:
@@ -40,11 +64,25 @@ The uploaded `tne_multimodal.zip` was inspected outside the Git root. It suggest
 
 ## Artifacts and commands
 
-The producers write only beneath the SOInets folders:
+The canonical train/validate/evaluate producers write beneath the visible
+multimodal package:
 
 ```bash
-python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_multimodal
-python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_multimodal
+python -m the_nothingness_effect.artificial_intelligence.multimodal.test.run_pipeline
+python -m the_nothingness_effect.artificial_intelligence.multimodal.simulation.run_pipeline
 ```
 
-Each producer writes a metrics table, Dubler ratio/weight figure, and provenance manifest. The simulation producer additionally writes a small modality-weight animation. Synthetic fixtures demonstrate finite computational behavior only; the untrained reconstruction residual remains visible and the aggregate model status remains open.
+Each producer writes seven machine-readable tables, twelve static figures, five
+GIF animations, and one provenance manifest. Evidence includes loss and
+accuracy curves, gradient norms, modality-weight trajectories, held-out
+confusion, calibration, latent PCA, modality similarity, exact Elastic-Dubler
+ratios, reconstruction error, the TNE residual spectrum, and named
+observation/Elastic-Dubler source-removal comparisons. The animations show
+loss, latent geometry, modality weights, confusion, and cross-modal token
+reconstruction across training.
+
+The test producer uses 12 epochs; the simulation producer uses 40. With seed 0
+the current deterministic synthetic fixture reaches 100% held-out
+classification accuracy after 40 epochs. This is pipeline evidence, not an
+empirical generalization claim: the calibration and reconstruction metrics
+remain explicit, and mathematical closure remains open.

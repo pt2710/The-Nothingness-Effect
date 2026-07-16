@@ -55,12 +55,18 @@ QENN, PGQENN, and SOInets also each own an architecture-level `test/` and
 native residuals and observation/collapse output, then run all six capability
 groups into architecture-local subdirectories.
 
-SOInets additionally owns a canonical multimodal wrapper. Named color, sound,
+SOInets additionally supplies the backbone for a canonical multimodal model. Named color, sound,
 vision, or other finite tensor modalities pass through observation/collapse,
 one shared encoder, exact Elastic-Dubler weighting, latent fusion/collapse,
 and the complete QENN/PGQENN SOInet backbone. Its metrics, figure, simulation
-GIF, and manifest are written under `soinets/test/artifacts/multimodal` and
-`soinets/simulation/artifacts/multimodal`.
+GIF, and manifest remain under `soinets/test/artifacts/multimodal` and
+`soinets/simulation/artifacts/multimodal` as compact backbone evidence.
+
+The separately discoverable trainable product lives at
+`artificial_intelligence/multimodal`. Its test and simulation producers train,
+validate, and evaluate batch-level classification plus shared-token
+reconstruction, and each writes 7 tables, 12 figures, 5 animations, and a
+provenance manifest beneath its own `artifacts` directory.
 
 ## Implemented semantics
 
@@ -120,4 +126,6 @@ python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_ca
 python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_all_capabilities
 python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_multimodal
 python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_multimodal
+python -m the_nothingness_effect.artificial_intelligence.multimodal.test.run_pipeline
+python -m the_nothingness_effect.artificial_intelligence.multimodal.simulation.run_pipeline
 ```

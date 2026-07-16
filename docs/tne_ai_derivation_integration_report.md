@@ -27,3 +27,10 @@ The seven implemented DTQC contracts plus the exact Elastic Dubler duality and t
 The canonical multimodal wrapper accepts named finite tensor modalities, applies observation/collapse before a single shared encoder, evaluates exact modality-level Elastic Dubler ratios, fuses the modality tokens, and runs the collapsed/fused carriers through SOInets. It therefore inherits the complete DTQC→QENN and QENN+MPL-TC→PGQENN chain. A shared decoder reconstructs finite modality tokens; it does not claim full-resolution world-model generation.
 
 The uploaded multimodal project was used only as external design context. Its archive SHA-256 is `EE6A04D89EBE5DA78D4F93950789A8833A904FF29A8F03DECDC97C621199ADB4`; no source or artifact from it was copied. The repository implementation replaces its clipped Elastic-π and minimal QENN/PGQENN proxies with current typed source laws. Details and regeneration commands are in `docs/tne_multimodal_architecture.md`.
+
+The trainable product is exposed directly as
+`artificial_intelligence.multimodal.TNETrainableMultimodalModel`. It adds a
+per-sample task readout and shared token decoder over the SOInet backbone so
+training, validation, calibration, confusion, latent geometry, reconstruction,
+gradient, residual, and source-removal evidence are all executable rather than
+represented by one batch-aggregate demonstration.

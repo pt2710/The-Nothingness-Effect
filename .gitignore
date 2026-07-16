@@ -92,6 +92,8 @@ empirical/cache/
 !equations/mathematical_closure/simulation/*.gif
 !equations/parity_dfi/test/*.gif
 !equations/parity_dfi/simulation/*.gif
+!the_nothingness_effect/artificial_intelligence/**/test/artifacts/**/*.gif
+!the_nothingness_effect/artificial_intelligence/**/simulation/artifacts/**/*.gif
 
 # Generated interactive visualization exports
 **/simulation/*.html

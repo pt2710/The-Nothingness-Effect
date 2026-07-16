@@ -10,8 +10,14 @@ from the_nothingness_effect.artificial_intelligence.shared.capability_artifacts 
     run_capability_test,
 )
 from the_nothingness_effect.artificial_intelligence.shared.soinet_capability_runtime import (
+    capability_dataset,
     evaluate_capability_with_soinet,
     multi_seed_benchmark,
+)
+from the_nothingness_effect.artificial_intelligence.shared.soinet_large_benchmark import (
+    PROFILE_NAME,
+    evaluate_large_capability,
+    large_capability_dataset,
 )
 
 
@@ -48,3 +54,27 @@ def test_multiseed_benchmark_covers_all_six_capabilities() -> None:
     assert {row["seed"] for row in rows} == {2, 5}
     assert all(row["metric_producer"] == "SOInet" for row in rows)
     assert all("generalization_gap" in row for row in rows)
+
+
+@pytest.mark.parametrize("capability", CAPABILITIES)
+def test_large_benchmark_profile_is_materially_larger_than_smoke(capability: str) -> None:
+    smoke = capability_dataset(capability, seed=3, simulation=False)
+    large = large_capability_dataset(capability, seed=3)
+
+    assert len(large.train_samples) > len(smoke.train_samples)
+    assert len(large.validation_samples) > len(smoke.validation_samples)
+    assert len(large.test_samples) > len(smoke.test_samples)
+
+
+def test_large_benchmark_metrics_are_still_soinet_coupled() -> None:
+    evaluation = evaluate_large_capability("sound_classification", seed=4)
+
+    assert evaluation.row["profile"] == PROFILE_NAME
+    assert evaluation.row["metric_producer"] == "SOInet"
+    assert evaluation.row["train_samples"] == 12
+    assert evaluation.row["validation_samples"] == 6
+    assert evaluation.row["test_samples"] == 6
+    assert "generalization_gap" in evaluation.row
+    assert evaluation.checkpoint["profile"] == PROFILE_NAME
+    assert evaluation.checkpoint["model_state_dict"]
+    assert evaluation.checkpoint["task_head"].ndim == 2

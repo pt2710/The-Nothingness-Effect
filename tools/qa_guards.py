@@ -14,7 +14,12 @@ if str(REPOSITORY_ROOT) not in sys.path:
 
 from tools.consistency_catalog import release_implemented_contracts
 from tools.verify_tne_repository_layout import verify
+from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
+    authoritative_bindings,
+    source_binding_report,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
+    all_contracts,
     dependency_downgrades,
     release_statuses,
 )
@@ -31,23 +36,56 @@ def main() -> int:
     if len(matrix) != 351 or len(set(identifiers)) != 351:
         raise SystemExit("inventory must contain 351 unique theorem-complex IDs")
 
-    levels = {level: sum(row["level"] == level for row in matrix) for level in ("A", "B", "C")}
+    levels = {
+        level: sum(row["level"] == level for row in matrix)
+        for level in ("A", "B", "C")
+    }
     if levels != {"A": 204, "B": 98, "C": 49}:
         raise SystemExit(f"invalid theorem inventory level counts: {levels}")
 
+    authority = source_binding_report()
+    if int(authority["effective_source_sha_mismatches"]):
+        raise SystemExit(
+            "effective theorem matrix contains authoritative source mismatches: "
+            f"{authority['effective_mismatches'][:3]}"
+        )
+    bindings = authoritative_bindings()
+    contract_mismatches = [
+        (
+            str(contract.complex_id),
+            contract.appendix,
+            contract.appendix_source_sha256,
+            bindings[contract.appendix],
+        )
+        for contract in all_contracts()
+        if contract.appendix in bindings
+        and contract.appendix_source_sha256 != bindings[contract.appendix]
+    ]
+    if contract_mismatches:
+        raise SystemExit(
+            "active contracts contain stale authoritative source bindings: "
+            f"{contract_mismatches[:3]}"
+        )
+
     requested_implemented = {
-        row["complex_id"] for row in matrix if row["implementation_status"] == "implemented"
+        row["complex_id"]
+        for row in matrix
+        if row["implementation_status"] == "implemented"
     }
     statuses = release_statuses()
     implemented = {
-        identifier for identifier, status in statuses.items() if status == "implemented"
+        identifier
+        for identifier, status in statuses.items()
+        if status == "implemented"
     }
     downgraded = dependency_downgrades()
 
     contracts = release_implemented_contracts()
     contract_ids = [str(contract.complex_id) for contract in contracts]
     if len(contract_ids) != len(set(contract_ids)) or set(contract_ids) != implemented:
-        raise SystemExit("active contract catalog does not exactly match dependency-closed inventory")
+        raise SystemExit(
+            "active contract catalog does not exactly match dependency-closed inventory"
+        )
 
     unresolved = sorted(
         (str(contract.complex_id), str(source_id))
@@ -62,18 +100,26 @@ def main() -> int:
         )
 
     provenance = json.loads(
-        Path("docs/data/artifact_provenance_manifest.json").read_text(encoding="utf-8")
+        Path("docs/data/artifact_provenance_manifest.json").read_text(
+            encoding="utf-8"
+        )
     )
     manifested = [item["theorem_complex_id"] for item in provenance["manifests"]]
     if len(manifested) != len(set(manifested)):
-        raise SystemExit("aggregate artifact provenance contains duplicate theorem-complex IDs")
+        raise SystemExit(
+            "aggregate artifact provenance contains duplicate theorem-complex IDs"
+        )
     manifested_set = set(manifested)
     if not implemented.issubset(manifested_set):
         missing = sorted(implemented - manifested_set)
-        raise SystemExit(f"active implementations lack artifact provenance: {missing[:5]}")
+        raise SystemExit(
+            f"active implementations lack artifact provenance: {missing[:5]}"
+        )
     if not manifested_set.issubset(requested_implemented):
         unknown = sorted(manifested_set - requested_implemented)
-        raise SystemExit(f"artifact provenance contains non-requested implementation IDs: {unknown[:5]}")
+        raise SystemExit(
+            f"artifact provenance contains non-requested implementation IDs: {unknown[:5]}"
+        )
     if any(
         item.get("claim_boundary")
         != "finite computational support; not a formal proof substitute"
@@ -94,11 +140,17 @@ def main() -> int:
             raise SystemExit(f"implemented canonical path missing: {relative}")
         text = path.read_text(encoding="utf-8")
         if "nan_to_num" in text:
-            raise SystemExit(f"NaN/Inf masking is forbidden in canonical source laws: {relative}")
-        position = text.find("np.where(np.isfinite")
-        if position >= 0 and "compatibility_mode" not in text[max(0, position - 1600):position]:
             raise SystemExit(
-                f"non-finite neutralization found outside explicit compatibility mode: {relative}"
+                f"NaN/Inf masking is forbidden in canonical source laws: {relative}"
+            )
+        position = text.find("np.where(np.isfinite")
+        if (
+            position >= 0
+            and "compatibility_mode" not in text[max(0, position - 1600) : position]
+        ):
+            raise SystemExit(
+                "non-finite neutralization found outside explicit compatibility mode: "
+                f"{relative}"
             )
 
     tracked = subprocess.run(
@@ -122,7 +174,9 @@ def main() -> int:
         f"qa_guards=passed total=351 requested_implemented={len(requested_implemented)} "
         f"release_implemented={len(implemented)} dependency_downgrades={len(downgraded)} "
         f"unresolved_dependencies=0 provenance_manifests={len(manifested)} "
-        f"layout_checks={len(layout.results)} tracked_tex=0"
+        f"authority_overrides={authority['source_binding_overrides']} "
+        f"authority_effective_mismatches=0 layout_checks={len(layout.results)} "
+        "tracked_tex=0"
     )
     return 0
 

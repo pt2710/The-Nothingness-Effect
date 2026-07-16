@@ -5,6 +5,7 @@
     "architecture": "QENN",
     "backend": "torch",
     "device": "cpu",
+    "dfi_scale_semantics": "canonical_similarity_invariant",
     "differentiable": true,
     "dtqc_closure_status": "numerical_candidate",
     "dtqc_complex_ids": [
@@ -34,6 +35,7 @@
       "definite_state_projection_and_state_ambiguity",
       "fixed_point_consistency_and_trivial_collapse_failure"
     ],
+    "soi_normalization": "W_tilde=gamma_t^-1 W_t",
     "soi_scale": 1.0,
     "source_dependencies": [
       "Flowpoint involution and invariant/anti-invariant projectors",
@@ -54,6 +56,7 @@
     "collapse_outcome_stability": 0.0,
     "collapse_projection_normalization": 0.0,
     "completeness": 9.559570571582299e-06,
+    "dfi_soi_rescaling_invariance": 0.0,
     "diophantine_parseval_locking_invariant": 7.152557373046875e-07,
     "dtqc::dual_support_equivalence_support_mismatch_leakage": 1.2622084000213363e-07,
     "elastic_dtqc_spectral_measure_dual_of_dtqc": 2.9606098905787803e-07,
@@ -73,6 +76,7 @@
     "parseval": 1.9073486328125e-06,
     "parseval_energy_bijection_l_2_energy_mismatch": 7.152557373046875e-07,
     "projector_reconstruction": 0.0,
+    "soi_carrier_reconstruction": 0.0,
     "spectral_reconstruction": 3.682203271182516e-07
   },
   "capability_count": 6,
@@ -141,7 +145,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_all_capabilities",
-  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
+  "repository_result_commit": "62e8a2ad29d5ea5f836be92538baca19404ddeb3",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "synthetic_deterministic_fixture"

@@ -97,8 +97,10 @@ def test_each_ai_architecture_owns_all_six_test_and_simulation_outputs() -> None
                 )
             )
             assert network_manifest["artifact_family"] == "network_topology_and_activation"
-            expected_network_figures = 9 if architecture == "pgqenn" else 3
-            expected_network_movies = 8 if architecture == "pgqenn" else 3
+            # PGQENN adds three signed-spectrum views and two signed-spectrum
+            # movies on top of the positive/triadic 3D growth family.
+            expected_network_figures = 12 if architecture == "pgqenn" else 3
+            expected_network_movies = 10 if architecture == "pgqenn" else 3
             assert len(list(output.glob(f"{architecture}_{mode}_network_*.png"))) == expected_network_figures
             network_movies = list(output.glob(f"{architecture}_{mode}_network_*.gif"))
             assert len(network_movies) == expected_network_movies

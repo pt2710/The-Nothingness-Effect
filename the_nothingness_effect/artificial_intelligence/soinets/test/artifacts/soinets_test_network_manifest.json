@@ -11,16 +11,17 @@
     "soinets_test_network_topology_growth.gif",
     "soinets_test_network_recurrent_activation.gif"
   ],
-  "parameter_hash": "fbc89f6650b58ef11abab0677862c83994fad104ab26bd741f305eed79f0b245",
+  "parameter_hash": "48e200e782e708be1ab6d86e5d0992ccff82d96fdb16cefde78b515a2f2d1c17",
   "parameters": {
     "architecture": "soinets",
     "edge_count": 11,
+    "executable_3d_growth": false,
     "mode": "test",
     "node_count": 10,
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities",
-  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
+  "repository_result_commit": "62e8a2ad29d5ea5f836be92538baca19404ddeb3",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "deterministic_network_state_visualization"

@@ -1,11 +1,11 @@
 node,layer,family,activation,out_degree,in_degree
-input,0,input,0.16688575240448325,1,0
-Flowpoint,1,tne,0.23838859645803295,2,1
-P+,2,projector,0.32534687948337176,1,1
-P-,2,projector,0.3926844118033382,1,1
-DFI/pDFI,3,tne,0.45844623976794613,1,1
-Elastic-pi,3,tne,0.5472755765083251,1,1
-DTQC clock,4,dtqc,0.636782021680955,2,2
-spectral memory,5,memory,0.7067986057702615,1,1
-closure layer,5,closure,0.7574067331055382,1,1
-observation,6,output,0.8243518098962724,0,2
+input,0,input,0.16688576674735175,1,0
+Flowpoint,1,tne,0.23838861080090146,2,1
+P+,2,projector,0.32534689382624027,1,1
+P-,2,projector,0.3926844261462067,1,1
+DFI/pDFI,3,tne,0.45844625411081463,1,1
+Elastic-pi,3,tne,0.5472755908511936,1,1
+DTQC clock,4,dtqc,0.6367820360238234,2,2
+spectral memory,5,memory,0.70679862011313,1,1
+closure layer,5,closure,0.7574067474484066,1,1
+observation,6,output,0.8243518242391409,0,2

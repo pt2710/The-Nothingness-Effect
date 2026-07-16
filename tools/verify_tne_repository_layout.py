@@ -335,9 +335,11 @@ def verify(appendix_root: Path | None) -> Verification:
 
     def artifact_paths() -> list[str]:
         failures: list[str] = []
+        transient_parts = {".git", ".qa_artifacts", ".pytest_cache", "__pycache__"}
         candidates = sorted(
             path for path in set(ROOT.rglob("*manifest*.json"))
             if path.name != "layout_verification_manifest.json"
+            and transient_parts.isdisjoint(path.relative_to(ROOT).parts)
         )
         for path in candidates:
             try:

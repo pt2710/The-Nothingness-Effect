@@ -26,6 +26,13 @@ appendix theorem ID -> typed contract -> invariant/residual -> tests
   classification, bidirectional color and sound classification, and color and
   sound cloning. See `docs/tne_ai_output_capabilities.md` for commands and
   claim boundaries.
+- The appendix-verified assessment of 280 AI mappings—including the 137 named
+  candidates in the external QENN/PGQENN/SOInets outline—is documented in
+  `docs/tne_ai_theorem_complex_usage_assessment.md`. Each mapping records a use
+  decision, optimization hypothesis, metric, and evidence boundary.
+- PGQENN combines the pinned positive MPL-TC streams with an explicitly
+  TNE-derived negative Flowpoint lift; the multimodal trainer performs joint
+  deterministic search over positive `K_D` and the SOI carrier scale.
 - `fields_of_physics_in_dev/the_nothingness_effect.py` is the argument-correct central facade; explicit
   compatibility wrappers retain bounded legacy behavior.
 - `tests/contracts`, `tests/invariants`, `tests/boundaries`,
@@ -127,8 +134,8 @@ The repository-level `conftest.py` sets Matplotlib to the headless `Agg` backend
 ## Missing Paper Figure Artifacts
 
 The repository also contains deterministic manuscript-linked computational
-support artifacts under the relevant `equations/<component>/test` and
-`equations/<component>/simulation` folders. See
+support artifacts under each canonical subject module's local `test/` and
+`simulation/` folders. See
 `docs/missing_paper_figures.md` for exact commands and generated paths.
 
 These outputs are finite illustrative simulations and numerical support

@@ -36,7 +36,7 @@
     "dfi_entropy_plateau_dfi_divergence_spiking",
     "lyapunov_entropy_dissipation_functional"
   ],
-  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
+  "repository_result_commit": "62e8a2ad29d5ea5f836be92538baca19404ddeb3",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,

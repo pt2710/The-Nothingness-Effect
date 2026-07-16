@@ -61,6 +61,26 @@ finite result alone is not improvement.
   signed-spectrum topology, asymmetric adjacency, signal propagation and
   source-removal comparisons.
 
+## Observed deterministic probe results
+
+| Run | Epochs / probes | `K_D` start -> end | `gamma` start -> end | Validation objective start -> end | Sum of accepted local-search improvement |
+| --- | ---: | --- | --- | --- | ---: |
+| test producer | 12 / 72 | 0.7200 -> 2.8329 | 1.2500 -> 1.5625 | 1.4595 -> 0.8168 | 0.01682 |
+| simulation producer | 40 / 220 | 0.7200 -> 2.8800 | 1.2500 -> 2.0480 | 1.4595 -> 0.1740 | 0.03075 |
+
+Every accepted coordinate-search step is compared with the unchanged local
+state at that epoch, so the recorded local improvement is attributable to the
+hyperparameter proposal. The larger end-to-end objective reduction also
+contains ordinary training progress and is therefore not attributed solely to
+`K_D` or `gamma`.
+
+Removing the signed negative-spectrum channel changed held-out cross entropy by
+`1.39e-5` in the short producer and `4.28e-6` in the longer producer. This is a
+non-zero dependency witness, but not evidence that the channel improves this
+small synthetic task. Its present benefit is structural expressivity and a
+falsifiable signed-growth mechanism; task-performance benefit remains an
+empirical question for a real multimodal dataset.
+
 These are deterministic synthetic QA experiments. They establish executable
 effects and falsifiable optimization hypotheses, not empirical generalization
 or formal theorem proof.

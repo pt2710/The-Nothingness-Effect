@@ -22,16 +22,16 @@
     "torch_version": "2.13.0+cpu"
   },
   "architecture_residuals": {
-    "bidirectional_memory": 0.8849707841873169,
+    "bidirectional_memory": 0.885201096534729,
     "collapse_idempotence": 0.0,
     "collapse_outcome_stability": 0.0,
     "collapse_projection_normalization": 0.0,
-    "local_observability": 1.6506156921386719,
+    "local_observability": 1.648729681968689,
     "observation_normalization": 0.0,
-    "spatial_boundary": 1.1221882104873657,
-    "spatial_reconstruction": 3.67872416973114e-08,
-    "spectral": 0.0,
-    "subnetwork_completeness": 3.425903560128063e-05
+    "spatial_boundary": 1.1208816766738892,
+    "spatial_reconstruction": 3.782190205470215e-08,
+    "spectral": 2.384185791015625e-07,
+    "subnetwork_completeness": 3.437824852881022e-05
   },
   "capability_count": 6,
   "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
@@ -88,7 +88,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities",
-  "repository_result_commit": "fc5a731479c804a1b34b236b30fe3054d5419933",
+  "repository_result_commit": "62e8a2ad29d5ea5f836be92538baca19404ddeb3",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "synthetic_deterministic_fixture"

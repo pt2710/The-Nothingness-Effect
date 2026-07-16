@@ -59,7 +59,7 @@ def test_all_fifteen_completeness_contracts_register_and_resolve_dependencies():
 
 
 def test_completeness_contracts_use_latest_authority_binding():
-    assert {contract.appendix_sha256 for contract in contracts()} == {
+    assert {contract.appendix_source_sha256 for contract in contracts()} == {
         APPENDIX_SHA256
     }
 

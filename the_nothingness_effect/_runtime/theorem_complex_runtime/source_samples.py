@@ -1,4 +1,4 @@
-"""Deterministic finite provenance witnesses for newly recertified A sources."""
+"""Deterministic finite provenance witnesses for recertified source laws."""
 
 from __future__ import annotations
 
@@ -33,6 +33,30 @@ from the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation
     DFIDecompositionInput,
     DFIFlowpointInterfaceInput,
     DFISimulationInput,
+)
+from the_nothingness_effect.foundational_architecture.spatiality.canonical_contracts import (
+    A1 as SPATIALITY_A1,
+    A2 as SPATIALITY_A2,
+    B1 as SPATIALITY_B1,
+    B2 as SPATIALITY_B2,
+    C1 as SPATIALITY_C1,
+    OrbitClassificationInput,
+    OrbitHarmonicInput,
+    PhaseSpatialityInput,
+    SpectralReconstructionInput,
+    SquareRootLiftInput,
+)
+from the_nothingness_effect.foundational_architecture.symmetry.canonical_contracts import (
+    A1 as SYMMETRY_A1,
+    A2 as SYMMETRY_A2,
+    B1 as SYMMETRY_B1,
+    B2 as SYMMETRY_B2,
+    C1 as SYMMETRY_C1,
+    GeneratorWordInput,
+    OrbitActionInput,
+    ScheduleParityInput,
+    ScheduleTransportInput,
+    ScheduleWordFieldInput,
 )
 
 
@@ -124,8 +148,38 @@ def _dfi_samples() -> dict[str, object]:
     }
 
 
+def _symmetry_samples() -> dict[str, object]:
+    tape = (1, 0, 1, 1)
+    state = np.asarray((1.0, -2.0, 0.5), dtype=float)
+    identity = np.eye(state.size)
+    return {
+        str(SYMMETRY_A1): ScheduleParityInput(tape, state),
+        str(SYMMETRY_A2): OrbitActionInput(state),
+        str(SYMMETRY_B1): ScheduleTransportInput(tape, state, 0, 2),
+        str(SYMMETRY_B2): GeneratorWordInput(state, (1, 0, 0), identity),
+        str(SYMMETRY_C1): ScheduleWordFieldInput(tape, state, identity),
+    }
+
+
+def _spatiality_samples() -> dict[str, object]:
+    point = 1.0 + 2.0j
+    order = 5
+    indices = np.arange(order)
+    samples = (
+        np.exp(2j * np.pi * indices / order)
+        + 0.2 * np.exp(4j * np.pi * indices / order)
+    )
+    return {
+        str(SPATIALITY_A1): OrbitClassificationInput(point, order),
+        str(SPATIALITY_A2): PhaseSpatialityInput(point, 0.7),
+        str(SPATIALITY_B1): SquareRootLiftInput(point, order),
+        str(SPATIALITY_B2): OrbitHarmonicInput(samples),
+        str(SPATIALITY_C1): SpectralReconstructionInput(samples),
+    }
+
+
 def sample_inputs() -> dict[str, object]:
-    """Return one deterministic typed witness for every promoted A source."""
+    """Return one deterministic typed witness for every promoted contract."""
 
     qenn = _qenn_sample()
     pgqenn = _pgqenn_sample()
@@ -135,7 +189,9 @@ def sample_inputs() -> dict[str, object]:
         **{str(identifier): pgqenn for identifier in PGQENN_SOURCE_IDS},
         **{str(identifier): soinets for identifier in SOINET_SOURCE_IDS},
         **_dfi_samples(),
+        **_symmetry_samples(),
+        **_spatiality_samples(),
     }
-    if len(result) != 31:
-        raise RuntimeError(f"expected 31 recertified source samples, found {len(result)}")
+    if len(result) != 41:
+        raise RuntimeError(f"expected 41 recertified samples, found {len(result)}")
     return result

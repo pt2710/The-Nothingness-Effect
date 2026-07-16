@@ -1,9 +1,4 @@
-"""Generate deterministic trajectory-derived DTQC evidence.
-
-The simulation keeps the historical ``simulation_inventory.json`` entry point,
-but it now also runs the neural operator, saves runtime diagnostics, and renders
-an animation from the actual returned trajectory tensors.
-"""
+"""Generate trajectory-derived DTQC and bounded Floquet-reference evidence."""
 
 from __future__ import annotations
 
@@ -20,6 +15,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
+from ..finite_floquet_reference import (
+    CLAIM_BOUNDARY,
+    finite_floquet_benchmark,
+    simulate_finite_floquet,
+)
 from ..neural_operator import DTQCInflationLayer
 
 
@@ -29,14 +29,22 @@ def _decagonal_field(size: int = 32) -> torch.Tensor:
     field = torch.zeros_like(x)
     for index in range(10):
         angle = 2.0 * torch.pi * index / 10.0
-        field = field + torch.cos(2.4 * (torch.cos(angle) * x + torch.sin(angle) * y))
+        field = field + torch.cos(
+            2.4 * (torch.cos(angle) * x + torch.sin(angle) * y)
+        )
     field = field / 10.0
-    return 0.25 + (field - field.amin()) / (field.amax() - field.amin()).clamp_min(1e-7)
+    return 0.25 + (field - field.amin()) / (
+        field.amax() - field.amin()
+    ).clamp_min(1e-7)
 
 
-def _save_summary_figure(path: Path, initial: np.ndarray, final: np.ndarray) -> None:
+def _save_summary_figure(
+    path: Path, initial: np.ndarray, final: np.ndarray
+) -> None:
     diffraction = np.fft.fftshift(np.abs(np.fft.fft2(final)))
-    figure, axes = plt.subplots(1, 3, figsize=(11.2, 3.5), constrained_layout=True)
+    figure, axes = plt.subplots(
+        1, 3, figsize=(11.2, 3.5), constrained_layout=True
+    )
     axes[0].imshow(initial, origin="lower", cmap="viridis")
     axes[0].set_title("initial decagonal carrier")
     axes[1].imshow(final, origin="lower", cmap="viridis")
@@ -60,8 +68,49 @@ def _save_animation(path: Path, frames: np.ndarray) -> None:
         title.set_text(f"DTQC trajectory — step {frame + 1}/{len(frames)}")
         return image, title
 
-    movie = animation.FuncAnimation(figure, update, frames=len(frames), interval=180, blit=True)
+    movie = animation.FuncAnimation(
+        figure, update, frames=len(frames), interval=180, blit=True
+    )
     movie.save(path, writer=animation.PillowWriter(fps=5))
+    plt.close(figure)
+
+
+def _save_floquet_figure(path: Path, canonical, ablation) -> None:
+    figure, axes = plt.subplots(
+        1, 2, figsize=(10.0, 3.8), constrained_layout=True
+    )
+    axes[0].plot(canonical.signal.detach().cpu().numpy(), label="near-pi drive")
+    axes[0].plot(
+        ablation.signal.detach().cpu().numpy(),
+        "--",
+        label="Flowpoint pulse removed",
+    )
+    axes[0].set(
+        title="Finite spin-chain stroboscopic magnetization",
+        xlabel="Floquet period",
+        ylabel="mean Z magnetization",
+    )
+    axes[0].legend()
+    axes[0].grid(alpha=0.25)
+    axes[1].plot(
+        canonical.frequencies.detach().cpu().numpy(),
+        canonical.temporal_power.detach().cpu().numpy(),
+        label="near-pi drive",
+    )
+    axes[1].plot(
+        ablation.frequencies.detach().cpu().numpy(),
+        ablation.temporal_power.detach().cpu().numpy(),
+        "--",
+        label="pulse removed",
+    )
+    axes[1].set(
+        title="Finite temporal power spectrum",
+        xlabel="cycles per period",
+        ylabel="power",
+    )
+    axes[1].legend()
+    axes[1].grid(alpha=0.25)
+    figure.savefig(path, dpi=155)
     plt.close(figure)
 
 
@@ -70,7 +119,11 @@ def run(output_dir=None):
         "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
         "discrete_time_quasicrystals_in_the_flowpoint"
     )
-    output = Path(output_dir) if output_dir else Path(__file__).resolve().parent / "artifacts"
+    output = (
+        Path(output_dir)
+        if output_dir
+        else Path(__file__).resolve().parent / "artifacts"
+    )
     output.mkdir(parents=True, exist_ok=True)
     theorem_root = Path(imported.__file__).resolve().parent / "theorem_complex"
     theorem_count = len(list(theorem_root.glob("*/*/manifest.json")))
@@ -89,6 +142,9 @@ def run(output_dir=None):
     summary_figure = output / "dtqc_runtime_summary.png"
     animation_path = output / "dtqc_runtime_trajectory.gif"
     trace_path = output / "dtqc_runtime_trace.csv"
+    floquet_path = output / "dtqc_finite_floquet_reference.csv"
+    floquet_figure = output / "dtqc_finite_floquet_reference.png"
+    floquet_manifest = output / "dtqc_finite_floquet_reference.json"
     manifest_path = output / "dtqc_runtime_manifest.json"
     inventory_path = output / "simulation_inventory.json"
     _save_summary_figure(summary_figure, initial.numpy(), trajectory[-1])
@@ -97,7 +153,13 @@ def run(output_dir=None):
     with trace_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
             handle,
-            fieldnames=("step", "flowpoint_sector", "drive_phase", "field_mean", "field_std"),
+            fieldnames=(
+                "step",
+                "flowpoint_sector",
+                "drive_phase",
+                "field_mean",
+                "field_std",
+            ),
         )
         writer.writeheader()
         for step, frame in enumerate(trajectory):
@@ -111,7 +173,40 @@ def run(output_dir=None):
                 }
             )
 
-    metrics = {name: float(value.detach().cpu()) for name, value in state.order_parameters.items()}
+    benchmark_rows = finite_floquet_benchmark(seeds=(0, 1, 2))
+    with floquet_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=tuple(benchmark_rows[0]))
+        writer.writeheader()
+        writer.writerows(benchmark_rows)
+    canonical = simulate_finite_floquet(seed=0, flowpoint_enabled=True)
+    ablation = simulate_finite_floquet(seed=0, flowpoint_enabled=False)
+    _save_floquet_figure(floquet_figure, canonical, ablation)
+    floquet_manifest.write_text(
+        json.dumps(
+            {
+                "source_status": "finite_many_body_floquet_reference",
+                "spin_count": canonical.spin_count,
+                "periods": canonical.periods,
+                "seed_count": len(benchmark_rows),
+                "unitarity_residual": float(canonical.unitarity_residual),
+                "period_two_correlation": float(canonical.period_two_correlation),
+                "subharmonic_fraction": float(canonical.subharmonic_fraction),
+                "flowpoint_ablation_subharmonic_fraction": float(
+                    ablation.subharmonic_fraction
+                ),
+                "claim_boundary": CLAIM_BOUNDARY,
+                "generated_files": [floquet_path.name, floquet_figure.name],
+            },
+            indent=2,
+            sort_keys=True,
+        ),
+        encoding="utf-8",
+    )
+
+    metrics = {
+        name: float(value.detach().cpu())
+        for name, value in state.order_parameters.items()
+    }
     manifest_path.write_text(
         json.dumps(
             {
@@ -124,7 +219,19 @@ def run(output_dir=None):
                 "time_steps": int(state.trajectory.shape[0]),
                 "order_parameters": metrics,
                 "input_leakage": float(state.input_leakage.detach().cpu()),
-                "generated_files": [summary_figure.name, animation_path.name, trace_path.name],
+                "finite_floquet_reference_manifest": floquet_manifest.name,
+                "claim_boundary": (
+                    "phenomenological DTQC trajectory plus bounded finite Floquet "
+                    "reference; not a formal physical existence proof"
+                ),
+                "generated_files": [
+                    summary_figure.name,
+                    animation_path.name,
+                    trace_path.name,
+                    floquet_path.name,
+                    floquet_figure.name,
+                    floquet_manifest.name,
+                ],
             },
             indent=2,
             sort_keys=True,
@@ -142,6 +249,7 @@ def run(output_dir=None):
                 "seed": 0,
                 "runtime_manifest": manifest_path.name,
                 "trajectory_frames": int(state.trajectory.shape[0]),
+                "finite_floquet_reference": floquet_manifest.name,
             },
             indent=2,
             sort_keys=True,

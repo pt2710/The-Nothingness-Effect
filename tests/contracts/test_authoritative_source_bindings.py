@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 import csv
 import json
 from pathlib import Path
@@ -41,6 +42,15 @@ PROMOTED_DFI = {
     "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
     "dfi_flowpoint_consistency_and_interface_inconsistency",
     "dfi_simulation_consistency_and_simulation_breakdown",
+}
+EXPECTED_PROMOTION_PATH_COUNTS = {
+    "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py": 8,
+    "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py": 6,
+    "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py": 14,
+    (
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/"
+        "dynamic_fluctuation_index/extended_contracts.py"
+    ): 3,
 }
 
 
@@ -84,29 +94,34 @@ def test_foundational_binding_does_not_promote_proxy_complexes():
     assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 65
 
 
-def test_dfi_promotions_are_named_auditable_and_dependency_closed():
+def test_all_source_promotions_are_named_auditable_and_dependency_closed():
     overrides = implementation_status_overrides()
     raw = _raw_matrix()
     effective = bind_inventory_rows(raw)
     effective_by_id = {row["complex_id"]: row for row in effective}
     statuses = release_statuses()
 
-    assert set(overrides) == PROMOTED_DFI
-    for identifier in PROMOTED_DFI:
+    assert len(overrides) == 31
+    assert Counter(
+        record["evidence_path"] for record in overrides.values()
+    ) == EXPECTED_PROMOTION_PATH_COUNTS
+    for identifier, override in overrides.items():
         row = effective_by_id[identifier]
         assert row["recorded_implementation_status"] == "proxy"
         assert row["implementation_status"] == "implemented"
         assert row["implementation_status_binding"] == "manifest_override"
-        assert row["implementation_status_override_reason"]
+        assert row["implementation_status_override_reason"] == override["reason"]
+        assert row["implementation_status_evidence_path"] == override["evidence_path"]
         assert Path(row["implementation_status_evidence_path"]).is_file()
         assert statuses[identifier] == "implemented"
 
+    assert PROMOTED_DFI.issubset(overrides)
     assert sum(
         row["implementation_status"] == "implemented" for row in effective
-    ) == 198
-    assert sum(status == "implemented" for status in statuses.values()) == 176
-    assert sum(status == "proxy" for status in statuses.values()) == 175
-    assert len(dependency_downgrades()) == 22
+    ) == 226
+    assert sum(status == "implemented" for status in statuses.values()) == 226
+    assert sum(status == "proxy" for status in statuses.values()) == 125
+    assert len(dependency_downgrades()) == 0
     assert statuses["flowpoint_certified_dfi_validation_functional"] == "implemented"
     assert statuses["spatially_localized_dfi_consistency_closure"] == "implemented"
 
@@ -118,10 +133,8 @@ def test_effective_matrix_has_no_authoritative_source_mismatch():
     assert report["managed_appendices"] == 4
     assert report["managed_rows"] == 108
     assert report["effective_source_sha_mismatches"] == 0
-    assert report["implementation_status_overrides"] == 3
-    assert {
-        item["complex_id"] for item in report["implementation_status_changes"]
-    } == PROMOTED_DFI
+    assert report["implementation_status_overrides"] == 31
+    assert len(report["implementation_status_changes"]) == 31
     assert not report["effective_mismatches"]
 
 
@@ -158,11 +171,11 @@ def test_effective_matrix_export_is_machine_readable(tmp_path: Path):
     stored_report = json.loads(report_output.read_text(encoding="utf-8"))
     assert len(rows) == 351
     assert report["effective_source_sha_mismatches"] == 0
-    assert report["implementation_status_overrides"] == 3
+    assert report["implementation_status_overrides"] == 31
     assert stored_report["effective_matrix_output"] == output.as_posix()
     assert sum(
         row["implementation_status"] == "implemented" for row in rows
-    ) == 198
+    ) == 226
     assert all(
         row["appendix_source_sha256"] == EXPECTED[row["appendix_file"]]
         for row in rows

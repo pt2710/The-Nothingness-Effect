@@ -1,6 +1,10 @@
-"""Typed Discrete-Time Quasicrystal contracts and neural operator."""
+"""Typed Discrete-Time Quasicrystal contracts and optional neural operator."""
 
-from .neural_operator import DTQC_COMPLEX_IDS, DTQCInflationLayer, DTQCNeuralState, fibonacci_word
+from __future__ import annotations
+
+from importlib import import_module
+from typing import Any
+
 from .recertified_contracts import (
     AutocorrelationInput,
     DFITailInput,
@@ -25,4 +29,33 @@ from .recertified_contracts import (
 )
 from .figure_provenance import evaluate_figure_backed_closure
 
-__all__ = [name for name in globals() if name.startswith("evaluate_") or name.endswith("Input") or name in {"DTQC_COMPLEX_IDS", "DTQCInflationLayer", "DTQCNeuralState", "fibonacci_word"}]
+
+_LAZY_EXPORTS = {
+    "DTQC_COMPLEX_IDS": (".neural_operator", "DTQC_COMPLEX_IDS"),
+    "DTQCInflationLayer": (".neural_operator", "DTQCInflationLayer"),
+    "DTQCNeuralState": (".neural_operator", "DTQCNeuralState"),
+    "fibonacci_word": (".neural_operator", "fibonacci_word"),
+}
+
+__all__ = [
+    *[
+        name
+        for name in globals()
+        if name.startswith("evaluate_") or name.endswith("Input")
+    ],
+    *_LAZY_EXPORTS,
+]
+
+
+def __getattr__(name: str) -> Any:
+    try:
+        module_name, attribute = _LAZY_EXPORTS[name]
+    except KeyError as exc:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}") from exc
+    value = getattr(import_module(module_name, __name__), attribute)
+    globals()[name] = value
+    return value
+
+
+def __dir__() -> list[str]:
+    return sorted((*globals(), *__all__))

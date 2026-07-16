@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
-from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import active_contracts
+from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
+    active_contracts,
+    release_active_contracts,
+)
 
 ARTIFACT_SUITES = (
     ("flowpoint", "the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation.run_suite"),
@@ -27,4 +30,12 @@ ARTIFACT_SUITES = (
 
 
 def implemented_contracts():
+    """Historical runtime inventory, preserved for simulations and artifacts."""
+
     return active_contracts()
+
+
+def release_implemented_contracts():
+    """Dependency-closed implementation set used exclusively by release gates."""
+
+    return release_active_contracts()

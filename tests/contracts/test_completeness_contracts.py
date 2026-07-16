@@ -90,10 +90,10 @@ def fixture() -> CompletenessInput:
             descent_data_fixed=True,
         ),
         TerminalData(
-            admissibility_representation_class=np.array([0.0, 0.0]),
-            invariance_conservation_class=np.array([0.0, 0.0]),
+            admissibility_representation_class=np.array([2.0, 2.0]),
+            invariance_conservation_class=np.array([2.0, 2.0]),
             observable_samples=np.array([3.0, 3.0, 3.0]),
-            endomorphism_samples=np.array([0.0, 0.0]),
+            endomorphism_samples=np.array([2.0, 2.0]),
         ),
     )
 
@@ -252,7 +252,7 @@ def test_complex_10_requires_fixed_overlap_data_and_the_cocycle_law():
 def test_terminal_observables_factor_through_the_unique_terminal_map():
     output = spatial_operator(1, INPUT)
     assert output.unique_terminal_map
-    assert output.terminal_point == pytest.approx(np.array([0.0]))
+    assert output.terminal_point == pytest.approx(np.array([2.0]))
     assert output.observable_constant == pytest.approx(3.0)
     assert output.terminal_factorization_residual == pytest.approx(0.0)
 

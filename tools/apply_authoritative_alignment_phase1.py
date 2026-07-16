@@ -59,10 +59,13 @@ def decode_payloads() -> None:
         chunks = sorted(PAYLOAD.glob(f"{prefix}.*.b64"))
         if not chunks:
             raise RuntimeError(f"missing payload chunks for {prefix}")
-        encoded = "".join(path.read_text(encoding="ascii").strip() for path in chunks)
+        decoded = b"".join(
+            base64.b64decode(path.read_text(encoding="ascii").strip(), validate=True)
+            for path in chunks
+        )
         target = ROOT / relative
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes(base64.b64decode(encoded, validate=True))
+        target.write_bytes(decoded)
 
 
 def replace_stale_digests() -> list[str]:

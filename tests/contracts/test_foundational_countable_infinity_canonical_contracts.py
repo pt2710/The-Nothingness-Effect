@@ -35,6 +35,7 @@ from the_nothingness_effect.foundational_architecture.countable_infinity.canonic
     shortlex_decode,
 )
 
+
 SAMPLES = {
     A1: CountableEnumerationInput(7, (0, 5, 2)),
     A2: CubicAccessibilityInput(
@@ -63,10 +64,7 @@ def test_contract_slice_has_exact_dependency_closed_shape():
     assert items[3].source_ids == (A1, A2)
     assert items[4].source_ids == (A2, A3)
     assert items[5].source_ids == (B1, B2)
-    assert all(
-        item.implementation_path.endswith("canonical_contracts.py")
-        for item in items
-    )
+    assert all(item.implementation_path.endswith("canonical_contracts.py") for item in items)
 
 
 def test_shortlex_code_is_an_exact_bijection_on_finite_words():
@@ -146,12 +144,11 @@ def test_every_higher_order_contract_requires_each_declared_source(contract):
     removals = tuple(check(value) for check in contract.source_removal_checks)
     assert len(removals) == len(contract.source_ids)
     assert {item.source_id for item in removals} == set(contract.source_ids)
-    assert all(
-        item.necessary and item.necessity_residual > 0.0 for item in removals
-    )
+    assert all(item.necessary and item.necessity_residual > 0.0 for item in removals)
 
 
 def test_countable_contracts_are_registered_in_the_canonical_catalog():
+    pytest.importorskip("torch")
     catalog = {item.complex_id: item for item in all_contracts()}
     assert {A1, A2, A3, B1, B2, C1} <= set(catalog)
 

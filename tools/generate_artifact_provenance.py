@@ -269,6 +269,7 @@ def generate(
     producer_animations = [path for path in producer_files if path.suffix == ".gif"]
     producer_audio = [path for path in producer_files if path.suffix == ".wav"]
     animation_generators = _animation_generators()
+    promoted_sample_count = len(promoted_source_sample_inputs())
 
     payload = {
         "schema_version": "1.2",
@@ -286,7 +287,7 @@ def generate(
             "producer_local_audio_files": len(producer_audio),
             "animation_generators": len(animation_generators),
             "deterministic_seed": 0,
-            "typed_promoted_source_samples": 31,
+            "typed_promoted_source_samples": promoted_sample_count,
         },
         "local_artifact_policy": (
             "Large frame dumps and videos remain outside Git; compact "

@@ -46,6 +46,7 @@ EXPECTED_PROMOTION_PATH_COUNTS = {
     "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py": 6,
     "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py": 17,
     "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py": 16,
+    "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py": 16,
 }
 EXPECTED_OVERRIDE_COUNT = sum(EXPECTED_PROMOTION_PATH_COUNTS.values())
 EXPECTED_IMPLEMENTED = BASE_IMPLEMENTED + EXPECTED_OVERRIDE_COUNT
@@ -83,8 +84,14 @@ def test_foundational_binding_promotes_only_reviewed_complexes():
     ]
     assert len(rows) == 79
     assert len(foundational_contracts) == EXPECTED_FOUNDATIONAL_IMPLEMENTED
-    assert sum(statuses[row["complex_id"]] == "implemented" for row in rows) == EXPECTED_FOUNDATIONAL_IMPLEMENTED
-    assert sum(statuses[row["complex_id"]] == "proxy" for row in rows) == 79 - EXPECTED_FOUNDATIONAL_IMPLEMENTED
+    assert (
+        sum(statuses[row["complex_id"]] == "implemented" for row in rows)
+        == EXPECTED_FOUNDATIONAL_IMPLEMENTED
+    )
+    assert (
+        sum(statuses[row["complex_id"]] == "proxy" for row in rows)
+        == 79 - EXPECTED_FOUNDATIONAL_IMPLEMENTED
+    )
 
 
 def test_all_promotions_are_named_auditable_and_dependency_closed():
@@ -94,7 +101,10 @@ def test_all_promotions_are_named_auditable_and_dependency_closed():
     statuses = release_statuses()
 
     assert len(overrides) == EXPECTED_OVERRIDE_COUNT
-    assert Counter(record["evidence_path"] for record in overrides.values()) == EXPECTED_PROMOTION_PATH_COUNTS
+    assert (
+        Counter(record["evidence_path"] for record in overrides.values())
+        == EXPECTED_PROMOTION_PATH_COUNTS
+    )
     for identifier, override in overrides.items():
         row = effective_by_id[identifier]
         assert row["recorded_implementation_status"] == "proxy"
@@ -106,8 +116,14 @@ def test_all_promotions_are_named_auditable_and_dependency_closed():
         assert statuses[identifier] == "implemented"
 
     assert PROMOTED_DFI.issubset(overrides)
-    assert sum(row["implementation_status"] == "implemented" for row in effective) == EXPECTED_IMPLEMENTED
-    assert sum(status == "implemented" for status in statuses.values()) == EXPECTED_IMPLEMENTED
+    assert (
+        sum(row["implementation_status"] == "implemented" for row in effective)
+        == EXPECTED_IMPLEMENTED
+    )
+    assert (
+        sum(status == "implemented" for status in statuses.values())
+        == EXPECTED_IMPLEMENTED
+    )
     assert sum(status == "proxy" for status in statuses.values()) == EXPECTED_PROXY
     assert len(dependency_downgrades()) == 0
     assert statuses["flowpoint_certified_dfi_validation_functional"] == "implemented"
@@ -126,15 +142,20 @@ def test_effective_matrix_has_no_authoritative_source_mismatch():
 
 
 def test_binding_preserves_recorded_digest_for_audit():
-    rows = [{
-        "complex_id": "fixture",
-        "appendix_file": "appendix_the_completeness_theorem.tex",
-        "appendix_source_sha256": "0" * 64,
-        "implementation_status": "proxy",
-    }]
+    rows = [
+        {
+            "complex_id": "fixture",
+            "appendix_file": "appendix_the_completeness_theorem.tex",
+            "appendix_source_sha256": "0" * 64,
+            "implementation_status": "proxy",
+        }
+    ]
     bound = bind_inventory_rows(rows, status_overrides={})
     assert bound[0]["recorded_appendix_source_sha256"] == "0" * 64
-    assert bound[0]["appendix_source_sha256"] == EXPECTED["appendix_the_completeness_theorem.tex"]
+    assert (
+        bound[0]["appendix_source_sha256"]
+        == EXPECTED["appendix_the_completeness_theorem.tex"]
+    )
     assert bound[0]["source_binding_status"] == "manifest_override"
     assert bound[0]["recorded_implementation_status"] == "proxy"
     assert bound[0]["implementation_status"] == "proxy"
@@ -152,7 +173,10 @@ def test_effective_matrix_export_is_machine_readable(tmp_path: Path):
     assert report["effective_source_sha_mismatches"] == 0
     assert report["implementation_status_overrides"] == EXPECTED_OVERRIDE_COUNT
     assert stored_report["effective_matrix_output"] == output.as_posix()
-    assert sum(row["implementation_status"] == "implemented" for row in rows) == EXPECTED_IMPLEMENTED
+    assert (
+        sum(row["implementation_status"] == "implemented" for row in rows)
+        == EXPECTED_IMPLEMENTED
+    )
     assert all(
         row["appendix_source_sha256"] == EXPECTED[row["appendix_file"]]
         for row in rows
@@ -169,7 +193,9 @@ def test_effective_provenance_uses_same_authoritative_bindings(tmp_path: Path):
     assert report["effective_source_sha_mismatches"] == 0
     assert stored_report["effective_provenance_output"] == output.as_posix()
     assert payload["manifests"]
-    assert len({item["theorem_complex_id"] for item in payload["manifests"]}) == len(payload["manifests"])
+    assert len({item["theorem_complex_id"] for item in payload["manifests"]}) == len(
+        payload["manifests"]
+    )
     assert all(
         item["appendix_source_sha256"] == EXPECTED[item["appendix_filename"]]
         for item in payload["manifests"]
@@ -178,15 +204,22 @@ def test_effective_provenance_uses_same_authoritative_bindings(tmp_path: Path):
 
 
 def test_provenance_binding_preserves_recorded_digest():
-    raw = {"manifests": [{
-        "theorem_complex_id": "fixture",
-        "appendix_filename": "appendix_the_completeness_theorem.tex",
-        "appendix_source_sha256": "0" * 64,
-    }]}
+    raw = {
+        "manifests": [
+            {
+                "theorem_complex_id": "fixture",
+                "appendix_filename": "appendix_the_completeness_theorem.tex",
+                "appendix_source_sha256": "0" * 64,
+            }
+        ]
+    }
     effective = bind_provenance_manifest(raw)
     report = provenance_binding_report()
     item = effective["manifests"][0]
     assert item["recorded_appendix_source_sha256"] == "0" * 64
-    assert item["appendix_source_sha256"] == EXPECTED["appendix_the_completeness_theorem.tex"]
+    assert (
+        item["appendix_source_sha256"]
+        == EXPECTED["appendix_the_completeness_theorem.tex"]
+    )
     assert item["source_binding_status"] == "manifest_override"
     assert report["effective_source_sha_mismatches"] == 0

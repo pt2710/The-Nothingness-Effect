@@ -6,9 +6,9 @@ The appendix law is
     V_i = V_0 sigma_i,
     S_i = V_0 (sigma_i - 1),
 
-with exact Lp scaling.  The executable witness uses the finite Euclidean
+with exact Lp scaling. The executable witness uses the finite Euclidean
 (L2) sector and treats non-finite multipliers, non-positive normalization, and
-exponential overflow as fail-closed domain/codomain failures.  It does not
+exponential overflow as fail-closed domain/codomain failures. It does not
 represent finite arrays as a proof of infinite-space integrability.
 """
 
@@ -41,12 +41,18 @@ def spectrum_dfi_regularity_law(value: DFIInput) -> LawCertificate:
     fluctuations = volumes - baseline
     centered = multipliers - 1.0
 
-    multiplier_norm = float(np.linalg.norm(centered, ord=2))
-    fluctuation_norm = float(np.linalg.norm(fluctuations, ord=2))
-    expected_norm = baseline * multiplier_norm
+    with np.errstate(over="ignore", invalid="ignore"):
+        multiplier_norm = float(np.linalg.norm(centered, ord=2))
+        fluctuation_norm = float(np.linalg.norm(fluctuations, ord=2))
+        expected_norm = baseline * multiplier_norm
+    if not np.isfinite(
+        np.asarray((multiplier_norm, fluctuation_norm, expected_norm))
+    ).all():
+        raise NonFiniteValueError("SOI--DFI L2 norm diverges outside the finite sector")
 
     try:
-        exponential_response = np.exp(fluctuations)
+        with np.errstate(over="raise", invalid="raise"):
+            exponential_response = np.exp(fluctuations)
     except FloatingPointError as exc:
         raise NonFiniteValueError("SOI--DFI exponential response overflow") from exc
     if not np.isfinite(exponential_response).all():

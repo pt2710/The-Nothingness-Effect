@@ -18,7 +18,20 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
-      - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
+      - name: Capture layout diagnostics
+        shell: bash
+        run: |
+          set +e
+          python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json > layout-diagnostic.log 2>&1
+          echo "$?" > layout-exit-code.txt
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: layout-diagnostic
+          path: |
+            layout-diagnostic.log
+            layout-exit-code.txt
+            reports/layout_verification_manifest.json
 
   theorem-first-failure:
     runs-on: ubuntu-latest
@@ -31,7 +44,19 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
-      - run: python -m pytest -q -x --tb=short tests/contracts tests/invariants tests/boundaries tests/source_removal
+      - name: Capture theorem diagnostics
+        shell: bash
+        run: |
+          set +e
+          python -m pytest -q -x --tb=long tests/contracts tests/invariants tests/boundaries tests/source_removal > theorem-diagnostic.log 2>&1
+          echo "$?" > theorem-exit-code.txt
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: theorem-diagnostic
+          path: |
+            theorem-diagnostic.log
+            theorem-exit-code.txt
 
   artifact-first-failure:
     runs-on: ubuntu-latest
@@ -44,7 +69,19 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
-      - run: python -m pytest -q -x --tb=short tests/artifacts
+      - name: Capture artifact diagnostics
+        shell: bash
+        run: |
+          set +e
+          python -m pytest -q -x --tb=long tests/artifacts > artifact-diagnostic.log 2>&1
+          echo "$?" > artifact-exit-code.txt
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifact-diagnostic
+          path: |
+            artifact-diagnostic.log
+            artifact-exit-code.txt
 
   core-first-failure:
     runs-on: ubuntu-latest
@@ -57,19 +94,31 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install -q -r requirements-dev.txt
-      - run: >-
-          python -m pytest -q -x --tb=short
-          --ignore=tests/numerical
-          --ignore=tests/contracts/test_qenn_contracts.py
-          --ignore=tests/contracts/test_pgqenn_contracts.py
-          --ignore=tests/contracts/test_soinets_contracts.py
-          --ignore=tests/contracts/test_mpl_tc_dependency.py
-          --ignore=tests/invariants/test_elastic_dubler_ai.py
-          --ignore=tests/invariants/test_observation_collapse_readout.py
-          --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py
-          --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py
-          --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py
-          --ignore=tests/artifacts/test_qenn_artifacts.py
-          --ignore=tests/artifacts/test_pgqenn_artifacts.py
-          --ignore=tests/artifacts/test_soinets_artifacts.py
-          --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/*
+      - name: Capture core diagnostics
+        shell: bash
+        run: |
+          set +e
+          python -m pytest -q -x --tb=long \
+            --ignore=tests/numerical \
+            --ignore=tests/contracts/test_qenn_contracts.py \
+            --ignore=tests/contracts/test_pgqenn_contracts.py \
+            --ignore=tests/contracts/test_soinets_contracts.py \
+            --ignore=tests/contracts/test_mpl_tc_dependency.py \
+            --ignore=tests/invariants/test_elastic_dubler_ai.py \
+            --ignore=tests/invariants/test_observation_collapse_readout.py \
+            --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py \
+            --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py \
+            --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py \
+            --ignore=tests/artifacts/test_qenn_artifacts.py \
+            --ignore=tests/artifacts/test_pgqenn_artifacts.py \
+            --ignore=tests/artifacts/test_soinets_artifacts.py \
+            --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/* \
+            > core-diagnostic.log 2>&1
+          echo "$?" > core-exit-code.txt
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: core-diagnostic
+          path: |
+            core-diagnostic.log
+            core-exit-code.txt

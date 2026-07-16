@@ -6,15 +6,74 @@
     "backend": "torch",
     "device": "cpu",
     "differentiable": true,
+    "dtqc_closure_status": "numerical_candidate",
+    "dtqc_complex_ids": [
+      "elastic_dtqc_spectral_measure_dual_of_dtqc",
+      "dtqc::dual_support_equivalence_support_mismatch_leakage",
+      "parseval_energy_bijection_l_2_energy_mismatch",
+      "irrational_drive_locking_commensurate_resonance_collapse",
+      "elastic_gain_support_transport_isomorphism",
+      "diophantine_parseval_locking_invariant",
+      "elastic_parseval_quasicrystal_isometry"
+    ],
+    "dtqc_input_leakage": 0.637932300567627,
+    "dtqc_integration": "canonical_runtime",
+    "elastic_dubler_integration": "feature_weight_window_bridge",
+    "elastic_dubler_source_ids": [
+      "elastic_dubler_duality_closure"
+    ],
+    "elastic_pi_norm_integration": "weighted_feature_transition_diagnostic",
+    "elastic_pi_norm_source_ids": [
+      "weighted_path_functional_and_norm_admissibility",
+      "elastic_field_ratios_and_weight_regularity"
+    ],
     "formal_proof_substitute": false,
+    "observation_collapse_integration": "canonical_runtime",
+    "observation_collapse_source_ids": [
+      "observation_induced_collapse_and_collapse_divergence",
+      "definite_state_projection_and_state_ambiguity",
+      "fixed_point_consistency_and_trivial_collapse_failure"
+    ],
     "soi_scale": 1.0,
+    "source_dependencies": [
+      "Flowpoint involution and invariant/anti-invariant projectors",
+      "normalized DFI and parity-conditioned pDFI",
+      "exact unclipped Elastic-pi",
+      "Elastic-pi weighted transition norm",
+      "exact Elastic Dubler ratio and log-shift",
+      "discrete-time quasicrystal inflation and spectral support",
+      "observation and collapse",
+      "spectral memory, Parseval, and completeness residual"
+    ],
     "torch_version": "2.13.0+cpu"
   },
   "architecture_residuals": {
+    "anti_invariant_sector": 0.0,
     "c2_equivariance": 0.0,
+    "collapse_idempotence": 0.0,
+    "collapse_outcome_stability": 0.0,
+    "collapse_projection_normalization": 0.0,
+    "completeness": 9.559570571582299e-06,
+    "diophantine_parseval_locking_invariant": 7.152557373046875e-07,
+    "dtqc::dual_support_equivalence_support_mismatch_leakage": 1.2622084000213363e-07,
+    "elastic_dtqc_spectral_measure_dual_of_dtqc": 2.9606098905787803e-07,
+    "elastic_dubler_cocycle": 9.559570571582299e-06,
+    "elastic_dubler_diagonal": 0.0,
+    "elastic_dubler_endpoint_exchange": 2.0356819732114673e-06,
+    "elastic_dubler_log_shift": 2.5791714506340213e-06,
+    "elastic_dubler_precision_normalization": 1.1920928955078125e-07,
+    "elastic_dubler_precision_ratio": 3.006934775839909e-06,
+    "elastic_dubler_ratio_identity": 2.9133200314390706e-06,
+    "elastic_gain_support_transport_isomorphism": 0.0,
+    "elastic_parseval_quasicrystal_isometry": 7.843306661925453e-07,
     "flowpoint_involution": 0.0,
-    "parseval": 3.814697265625e-06,
-    "spectral_reconstruction": 5.122362836118555e-07
+    "invariant_fixed_sector": 0.0,
+    "irrational_drive_locking_commensurate_resonance_collapse": 0.0,
+    "observation_normalization": 1.1920928955078125e-07,
+    "parseval": 1.9073486328125e-06,
+    "parseval_energy_bijection_l_2_energy_mismatch": 7.152557373046875e-07,
+    "projector_reconstruction": 0.0,
+    "spectral_reconstruction": 3.682203271182516e-07
   },
   "capability_count": 6,
   "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
@@ -63,7 +122,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.test.run_all_capabilities",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "synthetic_deterministic_fixture"

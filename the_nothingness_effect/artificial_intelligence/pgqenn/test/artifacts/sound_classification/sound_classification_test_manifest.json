@@ -35,11 +35,14 @@
     "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
     "pv_parseval_spectral_energy_lock"
   ],
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,
-    1.1920928955078125e-07
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0
   ],
   "seed": 1,
   "source_status": "synthetic_deterministic_fixture"

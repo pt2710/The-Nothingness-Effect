@@ -5,20 +5,33 @@
     "arbitration": "fail_closed",
     "architecture": "SOInet",
     "backend": "torch",
+    "dependency_chain": [
+      "DTQC->QENN",
+      "QENN+MPL-TC->PGQENN",
+      "QENN+PGQENN->SOInet"
+    ],
     "device": "cpu",
     "differentiable": true,
     "formal_proof_substitute": false,
+    "mpl_tc_commits": [
+      "056e346824e9ec9785ab45b642b3b842c88f6e56"
+    ],
+    "observation_collapse_integration": "canonical_meta_aggregation",
     "pgqenn_count": 2,
     "qenn_count": 2,
     "torch_version": "2.13.0+cpu"
   },
   "architecture_residuals": {
-    "bidirectional_memory": 1.3747204542160034,
-    "local_observability": 2.173861026763916,
-    "spatial_boundary": 1.4450068473815918,
-    "spatial_reconstruction": 2.2703375179844443e-08,
+    "bidirectional_memory": 0.8849707841873169,
+    "collapse_idempotence": 0.0,
+    "collapse_outcome_stability": 0.0,
+    "collapse_projection_normalization": 0.0,
+    "local_observability": 1.6506156921386719,
+    "observation_normalization": 0.0,
+    "spatial_boundary": 1.1221882104873657,
+    "spatial_reconstruction": 3.67872416973114e-08,
     "spectral": 0.0,
-    "subnetwork_completeness": 1.0636314982548356e-05
+    "subnetwork_completeness": 3.425903560128063e-05
   },
   "capability_count": 6,
   "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
@@ -67,7 +80,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "synthetic_deterministic_fixture"

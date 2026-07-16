@@ -1,0 +1,66 @@
+{
+  "architecture": "TNE Multimodal SOInet",
+  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "closure_status": "open",
+  "dependency_chain": [
+    "DTQC->QENN",
+    "QENN+MPL-TC->PGQENN",
+    "QENN+PGQENN->SOInet"
+  ],
+  "external_reference_context_sha256": "EE6A04D89EBE5DA78D4F93950789A8833A904FF29A8F03DECDC97C621199ADB4",
+  "external_reference_policy": "design context only; no source copied",
+  "generated_files": [
+    "multimodal_soinet_metrics.csv",
+    "multimodal_soinet_dubler_figure.png"
+  ],
+  "mpl_tc_commits": [
+    "056e346824e9ec9785ab45b642b3b842c88f6e56"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-05
+  },
+  "parameter_hash": "c8ad1de042055e6d7d6074f2f01ffd51b46670f08047612fd3b2f6fcdc6d3baa",
+  "parameters": {
+    "architecture": "TNE Multimodal SOInet",
+    "hidden_dim": 8,
+    "input_dim": 6,
+    "modalities": [
+      "color",
+      "sound",
+      "vision"
+    ],
+    "output_dim": 4,
+    "seed": 0,
+    "simulation": false
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_multimodal",
+  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    1.7881393432617188e-07,
+    0.0,
+    0.0,
+    0.0,
+    4.256623071796639e-07,
+    3.703150639466912e-07,
+    2.9310626814549323e-07,
+    4.362657364254119e-07,
+    0.0,
+    4.214684850012418e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    0.0,
+    0.20298518240451813,
+    2.6879079341888428
+  ],
+  "seed": 0,
+  "source_status": "synthetic_deterministic_fixture"
+}

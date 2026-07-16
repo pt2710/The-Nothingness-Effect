@@ -1,19 +1,33 @@
 {
   "architecture": "pgqenn",
-  "architecture_closure_status": "numerical_candidate",
+  "architecture_closure_status": "open",
   "architecture_metadata": {
     "architecture": "PGQENN",
+    "architecture_base": "QENN",
     "backend": "torch",
     "device": "cpu",
     "differentiable": true,
     "formal_proof_substitute": false,
-    "growth_mode": "canonical_prime_parity",
+    "growth_mode": "mpl_tc_prime_motif",
+    "mpl_tc_commit": "056e346824e9ec9785ab45b642b3b842c88f6e56",
+    "mpl_tc_module_sha256": "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9",
+    "mpl_tc_repository": "https://github.com/pt2710/MPL-TC.git",
+    "observation_collapse_integration": "canonical_runtime",
+    "qenn_dtqc_integration": "canonical_runtime",
+    "qenn_observation_collapse_integration": "canonical_runtime",
     "torch_version": "2.13.0+cpu"
   },
   "architecture_residuals": {
+    "collapse_idempotence": 0.0,
+    "collapse_outcome_stability": 0.0,
+    "collapse_projection_normalization": 0.0,
     "graph_symmetry": 0.0,
     "message_equivariance": 0.0,
-    "parseval": 9.5367431640625e-07,
+    "mpl_tc_dependency": 0.0,
+    "mpl_tc_motif_exhaustion": 0.0,
+    "observation_normalization": 0.0,
+    "parseval": 2.384185791015625e-07,
+    "qenn_backbone_completeness": 1.2477105883590411e-05,
     "self_loop": 0.0
   },
   "capability_count": 6,
@@ -63,7 +77,7 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_capabilities",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "synthetic_deterministic_fixture"

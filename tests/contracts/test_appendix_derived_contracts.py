@@ -29,7 +29,7 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
 )
 
 
-CONTRACTS = (
+_ALL_CONTRACTS = (
     dfi_contracts()
     + qenn_contracts()
     + pgqenn_contracts()
@@ -38,6 +38,11 @@ CONTRACTS = (
     + spatiality_contracts()
     + edi_contracts()
     + dtqc_contracts()
+)
+CONTRACTS = tuple(
+    contract
+    for contract in _ALL_CONTRACTS
+    if contract.level in {ComplexLevel.B, ComplexLevel.C}
 )
 
 

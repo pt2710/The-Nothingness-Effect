@@ -10,6 +10,8 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
     RippleInput,
 )
 
+CANONICAL_META_ID = "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i"
+
 
 def elastic_pi_ripple_sample() -> RippleInput:
     coordinate = np.linspace(0.0, 1.0, 9)
@@ -62,5 +64,5 @@ def elastic_pi_ripple_sample() -> RippleInput:
 
 def sample_inputs() -> dict[str, object]:
     sample = elastic_pi_ripple_sample()
-    identifiers = (*A_IDS, *(item[0] for item in B_SPECS), C_ID)
+    identifiers = (*A_IDS[:-1], CANONICAL_META_ID, *(item[0] for item in B_SPECS), C_ID)
     return {identifier: sample for identifier in identifiers}

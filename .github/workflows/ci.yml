@@ -162,7 +162,7 @@ jobs:
     env:
       AUTHORITY_ARCHIVE_URL: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_URL || vars.TNE_AUTHORITATIVE_ARCHIVE_URL }}
       AUTHORITY_ARCHIVE_KEY: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_KEY }}
-      AUTHORITY_ARCHIVE_EXPECTED_SHA256: 38901b612b0f868cf6e2bab95e4600378b46bab80dee5a6d55180ccca59ea11
+      AUTHORITY_ARCHIVE_EXPECTED_SHA256: 38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11
       AUTHORITY_ARCHIVE_ENCRYPTED_PATH: private_authority/TNE_Authoritative_Appendices.zip.enc
     steps:
       - uses: actions/checkout@v4
@@ -182,11 +182,14 @@ jobs:
           mkdir -p reports
           ARCHIVE_PATH="${RUNNER_TEMP}/TNE_Authoritative_Appendices.zip"
           cleanup() {
+            status=$?
+            trap - EXIT
             if command -v shred >/dev/null 2>&1; then
               shred -u "${ARCHIVE_PATH}" 2>/dev/null || rm -f "${ARCHIVE_PATH}"
             else
               rm -f "${ARCHIVE_PATH}"
             fi
+            exit "${status}"
           }
           trap cleanup EXIT
 

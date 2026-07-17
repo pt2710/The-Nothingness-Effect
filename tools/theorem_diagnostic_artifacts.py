@@ -1,16 +1,16 @@
-"""Materialize compact, deterministic theorem-complex diagnostic artifacts.
+"""Materialize compact deterministic theorem-complex diagnostic artifacts.
 
-The plots produced here are diagnostics, not physical geometry or proof objects.  A
-3-D or five-coordinate projection is emitted only to expose the numerical output,
-residual and source-necessity structure of an evaluated contract.  Every figure is
-labelled with that claim boundary.
+Plots are diagnostics, not physical geometry or proof objects. Source-removal rows
+represent only ablations executed in this diagnostic pass. When a domain-suite
+manifest is replayed without its original typed input, ablation applicability is
+recorded as false rather than fabricating a necessary source.
 """
 
 from __future__ import annotations
 
+import csv
 from dataclasses import fields, is_dataclass
 from enum import Enum
-import csv
 import hashlib
 import json
 from pathlib import Path
@@ -63,7 +63,10 @@ def _jsonable(value: Any) -> Any:
     if isinstance(value, np.generic):
         return value.item()
     if is_dataclass(value):
-        return {item.name: _jsonable(getattr(value, item.name)) for item in fields(value)}
+        return {
+            item.name: _jsonable(getattr(value, item.name))
+            for item in fields(value)
+        }
     if isinstance(value, dict):
         return {str(key): _jsonable(item) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
@@ -83,12 +86,14 @@ def _numeric_vector(value: Any, *, limit: int = 4096) -> np.ndarray:
             return
         if isinstance(item, np.ndarray):
             array = np.asarray(item)
-            if np.iscomplexobj(array):
-                flat = np.concatenate((np.real(array).ravel(), np.imag(array).ravel()))
-            else:
-                flat = array.astype(float, copy=False).ravel()
+            flat = (
+                np.concatenate((np.real(array).ravel(), np.imag(array).ravel()))
+                if np.iscomplexobj(array)
+                else array.astype(float, copy=False).ravel()
+            )
             finite = flat[np.isfinite(flat)]
-            collected.extend(float(number) for number in finite[: max(0, limit - len(collected))])
+            room = max(0, limit - len(collected))
+            collected.extend(float(number) for number in finite[:room])
             return
         if isinstance(item, np.generic):
             visit(item.item())
@@ -115,10 +120,11 @@ def _numeric_vector(value: Any, *, limit: int = 4096) -> np.ndarray:
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+    if not rows:
+        raise ValueError("CSV output requires at least one row")
     path.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = list(rows[0])
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
 
@@ -146,7 +152,7 @@ def materialize_contract_diagnostics(
     evaluation: ContractEvaluation,
     removals: Iterable[SourceRemovalResult],
 ) -> tuple[str, ...]:
-    """Write one compact evidence bundle and return generated relative names."""
+    """Write one compact evidence bundle and return generated file names."""
 
     identifier = str(contract.complex_id)
     safe = _safe(identifier)
@@ -165,25 +171,31 @@ def materialize_contract_diagnostics(
     )
 
     status_path = destination / f"{safe}_status.json"
-    status_payload = {
-        "schema_version": "1.0",
-        "theorem_complex_id": identifier,
-        "appendix_filename": contract.appendix,
-        "appendix_source_sha256": contract.appendix_source_sha256,
-        "level": contract.level.value,
-        "source_ids": [str(item) for item in contract.source_ids],
-        "closure_status": evaluation.status.value,
-        "exact_semantics": bool(evaluation.exact_semantics),
-        "detail": evaluation.detail,
-        "residual_norm": residual_norm,
-        "tolerance": tolerance,
-        "output_norm": output_norm,
-        "claim_boundary": CLAIM_BOUNDARY,
-        "input_summary": _jsonable(value),
-        "output_summary": _jsonable(evaluation.output),
-    }
     status_path.write_text(
-        json.dumps(status_payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        json.dumps(
+            {
+                "schema_version": "1.1",
+                "theorem_complex_id": identifier,
+                "appendix_filename": contract.appendix,
+                "appendix_source_sha256": contract.appendix_source_sha256,
+                "level": contract.level.value,
+                "source_ids": [str(item) for item in contract.source_ids],
+                "closure_status": evaluation.status.value,
+                "exact_semantics": bool(evaluation.exact_semantics),
+                "detail": evaluation.detail,
+                "residual_norm": residual_norm,
+                "tolerance": tolerance,
+                "output_norm": output_norm,
+                "source_removal_diagnostics_materialized": bool(removal_items),
+                "claim_boundary": CLAIM_BOUNDARY,
+                "input_summary": _jsonable(value),
+                "output_summary": _jsonable(evaluation.output),
+            },
+            indent=2,
+            sort_keys=True,
+            ensure_ascii=False,
+        )
+        + "\n",
         encoding="utf-8",
     )
 
@@ -195,7 +207,11 @@ def materialize_contract_diagnostics(
                 "values": residual.tolist(),
                 "norm": residual_norm,
                 "tolerance": tolerance,
-                "passed": residual_norm <= tolerance if tolerance > 0.0 else residual_norm == 0.0,
+                "passed": (
+                    residual_norm <= tolerance
+                    if tolerance > 0.0
+                    else residual_norm == 0.0
+                ),
             },
             indent=2,
             sort_keys=True,
@@ -208,10 +224,12 @@ def materialize_contract_diagnostics(
         {
             "theorem_complex_id": identifier,
             "source_id": str(item.source_id),
+            "applicable": True,
             "baseline_response": item.baseline_response,
             "removed_response": item.removed_response,
             "necessity_residual": item.necessity_residual,
             "necessary": item.necessary,
+            "evidence_source": "typed_diagnostic_evaluation",
             "closure_status": evaluation.status.value,
         }
         for item in removal_items
@@ -220,11 +238,13 @@ def materialize_contract_diagnostics(
         removal_rows = [
             {
                 "theorem_complex_id": identifier,
-                "source_id": "A_SOURCE_LAW",
-                "baseline_response": output_norm,
-                "removed_response": output_norm,
+                "source_id": "",
+                "applicable": False,
+                "baseline_response": 0.0,
+                "removed_response": 0.0,
                 "necessity_residual": 0.0,
-                "necessary": True,
+                "necessary": False,
+                "evidence_source": "not_replayed_in_diagnostic_wrapper",
                 "closure_status": evaluation.status.value,
             }
         ]
@@ -265,10 +285,12 @@ def materialize_contract_diagnostics(
         output_vector=output,
         residual_vector=residual,
         source_removal_residuals=np.asarray(
-            [item.necessity_residual for item in removal_items], dtype=float
+            [item.necessity_residual for item in removal_items],
+            dtype=float,
         ),
         source_removed_responses=np.asarray(
-            [item.removed_response for item in removal_items], dtype=float
+            [item.removed_response for item in removal_items],
+            dtype=float,
         ),
     )
 
@@ -281,10 +303,18 @@ def materialize_contract_diagnostics(
     if tolerance > 0.0:
         axis.axhline(tolerance, linestyle="--", label="declared tolerance")
         axis.legend()
-    axis.set_yscale("log" if np.any(values > 0.0) and np.max(values) / max(np.min(values[values > 0.0]), 1e-300) > 100 else "linear")
+    positive = values[values > 0.0]
+    dynamic_range = (
+        np.max(values) / max(np.min(positive), 1e-300)
+        if positive.size
+        else 1.0
+    )
+    axis.set_yscale("log" if dynamic_range > 100 else "linear")
     axis.set_xlabel("residual component")
     axis.set_ylabel("absolute residual")
-    axis.set_title(f"{identifier}\nstatus={evaluation.status.value}; exact={evaluation.exact_semantics}")
+    axis.set_title(
+        f"{identifier}\nstatus={evaluation.status.value}; exact={evaluation.exact_semantics}"
+    )
     axis.text(0.01, 0.01, CLAIM_BOUNDARY, transform=axis.transAxes, fontsize=7)
     figure.tight_layout()
     figure.savefig(plot_path, dpi=140)
@@ -294,7 +324,11 @@ def materialize_contract_diagnostics(
     if output.size >= 3:
         projection = output[: min(output.size, 256)]
         coordinate = np.arange(projection.size, dtype=float)
-        gradient = np.abs(np.gradient(projection)) if projection.size >= 3 else np.zeros_like(projection)
+        gradient = (
+            np.abs(np.gradient(projection))
+            if projection.size >= 3
+            else np.zeros_like(projection)
+        )
         path_3d = destination / f"{safe}_diagnostic_3d.png"
         figure = plt.figure(figsize=(9, 6))
         axis = figure.add_subplot(111, projection="3d")
@@ -317,7 +351,11 @@ def materialize_contract_diagnostics(
             "status_code",
         )
         matrix = np.asarray(
-            [[float(row[column]) for column in columns] for row in metrics_rows], dtype=float
+            [
+                [float(row[column]) for column in columns]
+                for row in metrics_rows
+            ],
+            dtype=float,
         )
         minimum = np.min(matrix, axis=0)
         span = np.max(matrix, axis=0) - minimum
@@ -326,8 +364,18 @@ def materialize_contract_diagnostics(
         path_5d = destination / f"{safe}_diagnostic_5d_parallel.png"
         figure, axis = plt.subplots(figsize=(10, 5))
         for index, row in enumerate(normalized):
-            axis.plot(np.arange(len(columns)), row, marker="o", label=metrics_rows[index]["probe"])
-        axis.set_xticks(np.arange(len(columns)), columns, rotation=20, ha="right")
+            axis.plot(
+                np.arange(len(columns)),
+                row,
+                marker="o",
+                label=metrics_rows[index]["probe"],
+            )
+        axis.set_xticks(
+            np.arange(len(columns)),
+            columns,
+            rotation=20,
+            ha="right",
+        )
         axis.set_ylim(-0.05, 1.05)
         axis.set_ylabel("per-axis normalized value")
         axis.set_title(f"{identifier}\nfive-coordinate diagnostic projection")

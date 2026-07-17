@@ -149,6 +149,12 @@ jobs:
           python tools/export_effective_theorem_matrix.py
           --output reports/effective_theorem_complex_implementation_matrix.csv
           --report reports/effective_theorem_complex_implementation_matrix.json
+      - name: Build equation-to-implementation alignment
+        run: >-
+          python tools/build_equation_implementation_alignment.py
+          --matrix reports/effective_theorem_complex_implementation_matrix.csv
+          --csv-output reports/equation_implementation_alignment.csv
+          --json-output reports/equation_implementation_alignment.json
       - name: Generate complete effective artifact provenance
         run: >-
           python tools/generate_complete_theorem_artifacts.py
@@ -167,6 +173,14 @@ jobs:
           path: |
             reports/effective_theorem_complex_implementation_matrix.csv
             reports/effective_theorem_complex_implementation_matrix.json
+          if-no-files-found: error
+      - name: Upload equation-to-implementation alignment
+        uses: actions/upload-artifact@v4
+        with:
+          name: equation-implementation-alignment
+          path: |
+            reports/equation_implementation_alignment.csv
+            reports/equation_implementation_alignment.json
           if-no-files-found: error
       - name: Upload effective artifact provenance
         uses: actions/upload-artifact@v4
@@ -303,6 +317,10 @@ jobs:
         with:
           name: source-faithful-convergence
           path: reports/source_faithful_convergence
+      - uses: actions/download-artifact@v4
+        with:
+          name: equation-implementation-alignment
+          path: reports
       - run: >-
           python tools/export_effective_theorem_matrix.py
           --output reports/effective_theorem_complex_implementation_matrix.csv
@@ -344,6 +362,7 @@ jobs:
           --closure-obligations reports/closure_obligation_ledger.json
           --multimodal-robustness reports/multimodal_robustness/multiseed_robustness_manifest.json
           --source-faithful-convergence reports/source_faithful_convergence/source_faithful_convergence_manifest.json
+          --equation-implementation-alignment reports/equation_implementation_alignment.json
           --result-commit "${{ github.event.pull_request.head.sha || github.sha }}"
           --branch "${{ github.head_ref || github.ref_name }}"
           --ci-conclusion success
@@ -363,6 +382,8 @@ jobs:
             reports/effective_theorem_complex_implementation_matrix.json
             reports/effective_artifact_provenance_manifest.json
             reports/effective_artifact_provenance_binding.json
+            reports/equation_implementation_alignment.csv
+            reports/equation_implementation_alignment.json
             reports/theorem_artifact_coverage.json
             reports/release_status_dimensions.csv
             reports/release_status_dimensions.json

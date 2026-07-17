@@ -59,6 +59,8 @@ def test_ci_materializes_private_envelope_and_never_uploads_plaintext():
     assert "private_authoritative_archive_delivery.py decrypt" in workflow
     assert "verify_authoritative_archive.py" in workflow
     assert "shred -u" in workflow
+    assert "status=$?" in workflow
+    assert 'exit "${status}"' in workflow
     artifact_block = workflow.split("name: authoritative-archive-byte-evidence", 1)[1]
     artifact_block = artifact_block.split("name: Enforce authoritative archive byte gate", 1)[0]
     assert "TNE_Authoritative_Appendices.zip" not in artifact_block

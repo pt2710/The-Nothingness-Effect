@@ -168,6 +168,8 @@ jobs:
         with:
           python-version: "3.11"
       - name: Fetch and verify actual authoritative ZIP bytes
+        id: archive_verify
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
@@ -180,13 +182,19 @@ jobs:
           fi
           python tools/verify_authoritative_archive.py \
             --archive "${ARCHIVE_PATH}" \
-            --output reports/authoritative_archive_byte_verification.json
+            --output reports/authoritative_archive_byte_verification.json \
+            --check
       - name: Upload authoritative archive byte evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: authoritative-archive-byte-evidence
           path: reports/authoritative_archive_byte_verification.json
           if-no-files-found: error
+      - name: Enforce authoritative archive byte gate
+        if: always()
+        shell: bash
+        run: test "${{ steps.archive_verify.outcome }}" = "success"
 
   release-qa:
     needs:
@@ -196,6 +204,14 @@ jobs:
       - ai-cpu
       - security-and-provenance-guards
       - authoritative-archive-byte-evidence
+    if: >-
+      always() &&
+      needs.core.result == 'success' &&
+      needs.theorem-contracts.result == 'success' &&
+      needs.artifact-smoke.result == 'success' &&
+      needs.ai-cpu.result == 'success' &&
+      needs.security-and-provenance-guards.result == 'success' &&
+      needs.authoritative-archive-byte-evidence.result != 'cancelled'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -232,7 +248,7 @@ jobs:
       - run: python -m tools.qa_guards
       - name: Build repository final QA evidence
         run: >-
-          python tools/build_final_qa_manifest.py
+          python tools/build_final_qa_manifest_recertified.py
           --output reports/repository_final_qa_manifest.json
           --python-version 3.11
           --dependency-status "pip check passed"
@@ -265,6 +281,7 @@ jobs:
             reports/effective_theorem_complex_implementation_matrix.csv
             reports/effective_theorem_complex_implementation_matrix.json
             reports/effective_artifact_provenance_manifest.json
+            reports/effective_artifact_provenance_binding.json
             reports/release_status_dimensions.csv
             reports/release_status_dimensions.json
             reports/repository_final_qa_manifest.json

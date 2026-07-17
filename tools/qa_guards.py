@@ -36,6 +36,13 @@ def _rows(path: Path):
         return list(csv.DictReader(handle))
 
 
+def _report_count(report: dict[str, object], current: str, legacy: str) -> int:
+    value = report.get(current, report.get(legacy, 0))
+    if isinstance(value, list):
+        return len(value)
+    return int(value)
+
+
 def main() -> int:
     raw_matrix = _rows(
         Path("docs/data/theorem_complex_implementation_matrix.csv")
@@ -55,10 +62,19 @@ def main() -> int:
         raise SystemExit(f"invalid theorem inventory level counts: {levels}")
 
     authority = source_binding_report()
-    if int(authority["effective_source_sha_mismatches"]):
+    authority_mismatches = _report_count(
+        authority,
+        "effective_source_mismatch_count",
+        "effective_source_sha_mismatches",
+    )
+    authority_mismatch_records = authority.get(
+        "effective_source_mismatches",
+        authority.get("effective_mismatches", []),
+    )
+    if authority_mismatches:
         raise SystemExit(
             "effective theorem matrix contains authoritative source mismatches: "
-            f"{authority['effective_mismatches'][:3]}"
+            f"{authority_mismatch_records[:3]}"
         )
     bindings = authoritative_bindings()
     contract_mismatches = [
@@ -218,6 +234,11 @@ def main() -> int:
             f"{first['failures'][:3]}"
         )
 
+    implementation_override_count = _report_count(
+        authority,
+        "implementation_status_change_count",
+        "implementation_status_overrides",
+    )
     print(
         f"qa_guards=passed total=351 "
         f"requested_implemented={len(requested_implemented)} "
@@ -225,8 +246,7 @@ def main() -> int:
         f"dependency_downgrades={len(downgraded)} "
         f"unresolved_dependencies=0 provenance_manifests={len(manifested)} "
         f"matrix_authority_overrides={authority['source_binding_overrides']} "
-        f"implementation_status_overrides="
-        f"{authority['implementation_status_overrides']} "
+        f"implementation_status_overrides={implementation_override_count} "
         f"provenance_authority_overrides="
         f"{provenance_authority['source_binding_overrides']} "
         f"provenance_source_recertifications="

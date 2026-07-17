@@ -1,6 +1,11 @@
 """Explicit 79-contract Foundational recertification against authority bytes."""
 from __future__ import annotations
+
 from dataclasses import replace
+
+from the_nothingness_effect._runtime.theorem_complex_runtime.recertified_catalog import (
+    contracts as recertified_source_contracts,
+)
 
 from .duality.contracts import duality_contracts
 from .symmetry.derived_contracts import contracts as symmetry_derived_contracts
@@ -18,6 +23,11 @@ APPENDIX_SHA256 = "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c925118
 
 def contracts():
     source = (
+        *(
+            contract
+            for contract in recertified_source_contracts()
+            if contract.appendix == APPENDIX
+        ),
         *duality_contracts(),
         *symmetry_derived_contracts(),
         *symmetry_canonical_contracts(),

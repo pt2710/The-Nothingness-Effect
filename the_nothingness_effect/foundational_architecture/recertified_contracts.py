@@ -1,4 +1,4 @@
-"""Explicit 79-contract Foundational recertification against authority bytes."""
+"""Validate the 79-contract Foundational slice and return its supplemental registry."""
 from __future__ import annotations
 
 from dataclasses import replace
@@ -22,7 +22,7 @@ APPENDIX_SHA256 = "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c925118
 
 
 def contracts():
-    source = (
+    already_registered = (
         *(
             contract
             for contract in recertified_source_contracts()
@@ -33,14 +33,35 @@ def contracts():
         *symmetry_canonical_contracts(),
         *spatiality_derived_contracts(),
         *spatiality_canonical_contracts(),
+    )
+    supplemental = (
         *countable_contracts(),
         *uncountable_contracts(),
         *observation_contracts(),
         *spectrum_contracts(),
     )
-    by_id = {str(contract.complex_id): contract for contract in source}
-    if len(by_id) != 79:
-        raise RuntimeError(f"Foundational recertification expected 79 unique contracts, found {len(by_id)}")
-    if any(contract.appendix != APPENDIX for contract in by_id.values()):
+
+    registered_by_id = {
+        str(contract.complex_id): contract for contract in already_registered
+    }
+    supplemental_by_id = {
+        str(contract.complex_id): contract for contract in supplemental
+    }
+    overlap = sorted(registered_by_id.keys() & supplemental_by_id.keys())
+    if overlap:
+        raise RuntimeError(
+            f"Foundational supplemental registry duplicates active contracts: {overlap}"
+        )
+
+    complete = {**registered_by_id, **supplemental_by_id}
+    if len(complete) != 79:
+        raise RuntimeError(
+            f"Foundational recertification expected 79 unique contracts, found {len(complete)}"
+        )
+    if any(contract.appendix != APPENDIX for contract in complete.values()):
         raise RuntimeError("Foundational recertification encountered a foreign appendix")
-    return tuple(replace(contract, appendix_source_sha256=APPENDIX_SHA256) for _, contract in sorted(by_id.items()))
+
+    return tuple(
+        replace(contract, appendix_source_sha256=APPENDIX_SHA256)
+        for _, contract in sorted(supplemental_by_id.items())
+    )

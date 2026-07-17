@@ -20,6 +20,8 @@ def _arguments(
     *,
     archive_passed: bool = True,
     evidence_commit: str = RESULT_COMMIT,
+    artifact_passed: bool = True,
+    ledger_complete: bool = True,
 ) -> argparse.Namespace:
     final_qa = _write(
         tmp_path / "final.json",
@@ -47,8 +49,10 @@ def _arguments(
                 "source_exactness": {"exact": 1},
                 "closure_status": {"open": 1},
                 "validation_status": {"synthetic": 1},
+                "artifact_status": {"complete_core_bundle": 1},
             },
             "open_and_numerical_candidate_preserved": 1,
+            "artifact_core_bundle_gaps": 0,
         },
     )
     matrix = _write(tmp_path / "matrix.json", {"summary": {"rows": 1}})
@@ -59,6 +63,23 @@ def _arguments(
             "manifests": [{"theorem_complex_id": "fixture"}],
         },
     )
+    artifact_coverage = _write(
+        tmp_path / "artifact_coverage.json",
+        {
+            "theorem_complexes": 1,
+            "complete_core_artifact_bundles": 1 if artifact_passed else 0,
+            "diagnostic_bundles_enriched": 1,
+            "passed": artifact_passed,
+        },
+    )
+    closure_obligations = _write(
+        tmp_path / "closure_obligations.json",
+        {
+            "open_or_numerical_candidate_count": 1 if ledger_complete else 0,
+            "counts": {"open": 1 if ledger_complete else 0},
+            "all_open_states_represented": ledger_complete,
+        },
+    )
     archive_manifest = _write(tmp_path / "archive_manifest.json", {"fixture": True})
     recertification = _write(tmp_path / "recertification.json", {"fixture": True})
     return argparse.Namespace(
@@ -67,6 +88,8 @@ def _arguments(
         status_dimensions=status,
         matrix_report=matrix,
         provenance=provenance,
+        artifact_coverage=artifact_coverage,
+        closure_obligations=closure_obligations,
         archive_manifest=archive_manifest,
         recertification_manifest=recertification,
         result_commit=RESULT_COMMIT,
@@ -84,17 +107,15 @@ def test_immutable_release_qa_preserves_open_as_independent_dimension(tmp_path: 
     assert payload["release_blockers"] == []
     assert payload["repository_final_qa_commit"] == RESULT_COMMIT
     assert payload["artifact_provenance_commit"] == RESULT_COMMIT
-    assert payload["release_status_dimensions"][
-        "open_and_numerical_candidate_preserved"
-    ] == 1
+    assert payload["release_status_dimensions"]["open_and_numerical_candidate_preserved"] == 1
+    assert payload["theorem_artifact_coverage"]["complete_core_artifact_bundles"] == 1
+    assert payload["closure_obligation_ledger"]["all_open_states_represented"] is True
 
 
 def test_immutable_release_qa_fails_when_archive_bytes_are_unverified(tmp_path: Path):
     payload = build(_arguments(tmp_path, archive_passed=False))
     assert payload["immutable_release_qa_passed"] is False
-    assert "authoritative_archive_byte_verification_failed" in payload[
-        "release_blockers"
-    ]
+    assert "authoritative_archive_byte_verification_failed" in payload["release_blockers"]
     assert "authoritative_archive_sha256_mismatch" in payload["release_blockers"]
 
 
@@ -103,3 +124,17 @@ def test_immutable_release_qa_rejects_evidence_from_another_commit(tmp_path: Pat
     assert payload["immutable_release_qa_passed"] is False
     assert "repository_final_qa_commit_mismatch" in payload["release_blockers"]
     assert "artifact_provenance_commit_mismatch" in payload["release_blockers"]
+
+
+def test_immutable_release_qa_rejects_incomplete_artifact_coverage(tmp_path: Path):
+    payload = build(_arguments(tmp_path, artifact_passed=False))
+    assert payload["immutable_release_qa_passed"] is False
+    assert "theorem_artifact_coverage_failed" in payload["release_blockers"]
+    assert "theorem_artifact_coverage_incomplete" in payload["release_blockers"]
+
+
+def test_immutable_release_qa_rejects_missing_open_obligation(tmp_path: Path):
+    payload = build(_arguments(tmp_path, ledger_complete=False))
+    assert payload["immutable_release_qa_passed"] is False
+    assert "closure_obligation_ledger_incomplete" in payload["release_blockers"]
+    assert "closure_obligation_count_mismatch" in payload["release_blockers"]

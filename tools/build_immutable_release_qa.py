@@ -37,6 +37,7 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
     provenance = _load(arguments.provenance)
     artifact_coverage = _load(arguments.artifact_coverage)
     closure_obligations = _load(arguments.closure_obligations)
+    robustness = _load(arguments.multimodal_robustness)
 
     blockers: list[str] = []
     if not _SHA_RE.fullmatch(arguments.result_commit):
@@ -96,6 +97,18 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
     if ledger_count != open_count:
         blockers.append("closure_obligation_count_mismatch")
 
+    robustness_seeds = robustness.get("seeds", [])
+    robustness_scenarios = set(str(item) for item in robustness.get("scenarios", []))
+    required_scenarios = {"clean", "remove_color", "remove_sound", "remove_vision"}
+    if not isinstance(robustness_seeds, list) or len(set(robustness_seeds)) < 3:
+        blockers.append("multimodal_multiseed_coverage_incomplete")
+    if not required_scenarios <= robustness_scenarios:
+        blockers.append("multimodal_modality_removal_coverage_incomplete")
+    if not bool(robustness.get("all_metrics_finite")):
+        blockers.append("multimodal_robustness_nonfinite")
+    if "synthetic" not in str(robustness.get("claim_boundary", "")):
+        blockers.append("multimodal_robustness_claim_boundary_missing")
+
     matrix_summary = matrix.get("summary", matrix.get("counts", {}))
     provenance_manifests = provenance.get("manifests")
     provenance_count = (
@@ -112,11 +125,12 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         arguments.provenance,
         arguments.artifact_coverage,
         arguments.closure_obligations,
+        arguments.multimodal_robustness,
         arguments.archive_manifest,
         arguments.recertification_manifest,
     )
     payload = {
-        "schema_version": "1.2",
+        "schema_version": "1.3",
         "repository": "pt2710/The-Nothingness-Effect",
         "branch": arguments.branch,
         "result_commit": arguments.result_commit,
@@ -151,6 +165,14 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
                 "all_open_states_represented"
             ),
         },
+        "multimodal_robustness": {
+            "seeds": robustness_seeds,
+            "epochs": robustness.get("epochs"),
+            "scenarios": sorted(robustness_scenarios),
+            "records": robustness.get("records"),
+            "all_metrics_finite": robustness.get("all_metrics_finite"),
+            "claim_boundary": robustness.get("claim_boundary"),
+        },
         "effective_matrix_summary": matrix_summary,
         "provenance_manifest_count": provenance_count,
         "input_records": [_file_record(path) for path in inputs],
@@ -160,7 +182,7 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
             "Runtime implementation, byte-exact source binding, closure status, "
             "artifact completeness and validation status remain independent release "
             "dimensions. OPEN and NUMERICAL_CANDIDATE are preserved and are not "
-            "promoted by this QA."
+            "promoted by this QA. Synthetic robustness is not empirical validation."
         ),
     }
     return payload
@@ -175,6 +197,7 @@ def main() -> int:
     parser.add_argument("--provenance", type=Path, required=True)
     parser.add_argument("--artifact-coverage", type=Path, required=True)
     parser.add_argument("--closure-obligations", type=Path, required=True)
+    parser.add_argument("--multimodal-robustness", type=Path, required=True)
     parser.add_argument(
         "--archive-manifest",
         type=Path,

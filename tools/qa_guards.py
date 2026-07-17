@@ -167,7 +167,8 @@ def main() -> int:
     canonical_paths = sorted(
         {
             row["implementation_status_evidence_path"]
-            if row.get("implementation_status_binding") == "manifest_override"
+            if row.get("implementation_status_binding")
+            in {"manifest_override", "reviewed_override"}
             else row["implementation_path"]
             for row in matrix
             if statuses[row["complex_id"]] == "implemented"

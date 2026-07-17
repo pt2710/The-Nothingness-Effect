@@ -135,11 +135,12 @@ jobs:
           python tools/export_effective_theorem_matrix.py
           --output reports/effective_theorem_complex_implementation_matrix.csv
           --report reports/effective_theorem_complex_implementation_matrix.json
-      - name: Generate effective artifact provenance
+      - name: Generate complete effective artifact provenance
         run: >-
-          python tools/generate_artifact_provenance.py
+          python tools/generate_complete_theorem_artifacts.py
           --output-root "${RUNNER_TEMP}/artifact-provenance"
           --aggregate reports/effective_artifact_provenance_manifest.json
+          --coverage reports/theorem_artifact_coverage.json
       - name: Upload effective theorem matrix
         uses: actions/upload-artifact@v4
         with:
@@ -152,7 +153,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: effective-artifact-provenance
-          path: reports/effective_artifact_provenance_manifest.json
+          path: |
+            reports/effective_artifact_provenance_manifest.json
+            reports/theorem_artifact_coverage.json
+          if-no-files-found: error
+      - name: Upload theorem diagnostic artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: theorem-diagnostic-artifacts-${{ github.event.pull_request.head.sha || github.sha }}
+          retention-days: 90
+          path: ${{ runner.temp }}/artifact-provenance
           if-no-files-found: error
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
@@ -269,6 +279,7 @@ jobs:
           python tools/build_release_status_dimensions.py
           --matrix reports/effective_theorem_complex_implementation_matrix.csv
           --provenance reports/effective_artifact_provenance_manifest.json
+          --artifact-coverage reports/theorem_artifact_coverage.json
           --csv-output reports/release_status_dimensions.csv
           --json-output reports/release_status_dimensions.json
       - run: python -m tools.qa_guards
@@ -308,6 +319,7 @@ jobs:
             reports/effective_theorem_complex_implementation_matrix.json
             reports/effective_artifact_provenance_manifest.json
             reports/effective_artifact_provenance_binding.json
+            reports/theorem_artifact_coverage.json
             reports/release_status_dimensions.csv
             reports/release_status_dimensions.json
             reports/repository_final_qa_manifest.json

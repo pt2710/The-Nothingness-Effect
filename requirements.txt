@@ -5,6 +5,7 @@ matplotlib>=3.8
 scipy>=1.13
 sympy>=1.12
 tqdm>=4.66
+cryptography>=43,<46
 
 # Visualization and artifact generation
 plotly>=5.20

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+from pathlib import Path
 
 import pytest
 
@@ -49,3 +50,16 @@ def test_private_archive_rejects_wrong_expected_archive_hash():
     archive = b"PK\x03\x04authority"
     with pytest.raises(DeliveryError, match="mismatch before encryption"):
         encrypt_archive_bytes(archive, generate_key(), "0" * 64)
+
+
+def test_ci_materializes_private_envelope_and_never_uploads_plaintext():
+    workflow = Path(".github/workflows/ci.yml").read_text(encoding="utf-8")
+    assert "TNE_AUTHORITATIVE_ARCHIVE_KEY" in workflow
+    assert "private_authority/TNE_Authoritative_Appendices.zip.enc" in workflow
+    assert "private_authoritative_archive_delivery.py decrypt" in workflow
+    assert "verify_authoritative_archive.py" in workflow
+    assert "shred -u" in workflow
+    artifact_block = workflow.split("name: authoritative-archive-byte-evidence", 1)[1]
+    artifact_block = artifact_block.split("name: Enforce authoritative archive byte gate", 1)[0]
+    assert "TNE_Authoritative_Appendices.zip" not in artifact_block
+    assert ".tex" not in artifact_block

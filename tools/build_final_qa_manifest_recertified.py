@@ -13,6 +13,9 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
+from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
+    source_binding_report as _source_binding_report,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
     bind_provenance_manifest,
     provenance_binding_report,
@@ -20,8 +23,30 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authorit
 from tools import build_final_qa_manifest as _base
 
 
-# The preserved final-QA builder imports the historical authority API. Replace
-# only its provenance hooks with the observational, recertification-aware API.
+def _compat_source_binding_report(*args: Any, **kwargs: Any) -> dict[str, object]:
+    """Expose legacy read aliases without reintroducing SHA overwrite semantics."""
+
+    report = dict(_source_binding_report(*args, **kwargs))
+    appendix_counts = report.get("appendix_counts", {})
+    total_rows = sum(
+        int(item.get("rows", 0))
+        for item in appendix_counts.values()
+        if isinstance(item, dict)
+    ) if isinstance(appendix_counts, dict) else 0
+    report.setdefault("total_rows", total_rows)
+    report.setdefault("managed_appendices", len(appendix_counts) if isinstance(appendix_counts, dict) else 0)
+    report.setdefault("managed_rows", total_rows)
+    report.setdefault("raw_source_sha_mismatches", report.get("raw_source_mismatch_count", 0))
+    report.setdefault("effective_source_sha_mismatches", report.get("effective_source_mismatch_count", 0))
+    report.setdefault("effective_mismatches", report.get("effective_source_mismatches", []))
+    report.setdefault("source_recertifications", report.get("historical_recertification_count", 0))
+    report.setdefault("implementation_status_overrides", report.get("implementation_status_change_count", 0))
+    return report
+
+
+# The preserved final-QA builder imports historical field names. Replace only its
+# read adapters; the authority layer itself remains observational and fail closed.
+_base.source_binding_report = _compat_source_binding_report
 _base.bind_provenance_manifest = bind_provenance_manifest
 _base.provenance_binding_report = provenance_binding_report
 

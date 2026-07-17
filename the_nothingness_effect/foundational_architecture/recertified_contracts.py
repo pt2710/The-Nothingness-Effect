@@ -1,4 +1,4 @@
-"""Validate the 79-contract Foundational slice and return its supplemental registry."""
+"""Validate and register the 79-contract Foundational authority slice."""
 from __future__ import annotations
 
 from dataclasses import replace
@@ -22,46 +22,45 @@ APPENDIX_SHA256 = "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c925118
 
 
 def contracts():
-    already_registered = (
-        *(
-            contract
-            for contract in recertified_source_contracts()
-            if contract.appendix == APPENDIX
-        ),
+    externally_registered = {
+        str(contract.complex_id): contract
+        for contract in recertified_source_contracts()
+        if contract.appendix == APPENDIX
+    }
+    local_source = (
         *duality_contracts(),
         *symmetry_derived_contracts(),
         *symmetry_canonical_contracts(),
         *spatiality_derived_contracts(),
         *spatiality_canonical_contracts(),
-    )
-    supplemental = (
         *countable_contracts(),
         *uncountable_contracts(),
         *observation_contracts(),
         *spectrum_contracts(),
     )
+    local_by_id = {str(contract.complex_id): contract for contract in local_source}
 
-    registered_by_id = {
-        str(contract.complex_id): contract for contract in already_registered
-    }
-    supplemental_by_id = {
-        str(contract.complex_id): contract for contract in supplemental
-    }
-    overlap = sorted(registered_by_id.keys() & supplemental_by_id.keys())
+    overlap = sorted(externally_registered.keys() & local_by_id.keys())
     if overlap:
         raise RuntimeError(
-            f"Foundational supplemental registry duplicates active contracts: {overlap}"
+            f"Foundational local registry duplicates recertified source adapters: {overlap}"
         )
-
-    complete = {**registered_by_id, **supplemental_by_id}
-    if len(complete) != 79:
+    complete = {**externally_registered, **local_by_id}
+    if len(externally_registered) != 5:
         raise RuntimeError(
-            f"Foundational recertification expected 79 unique contracts, found {len(complete)}"
+            "Foundational recertification expected five external source adapters, "
+            f"found {len(externally_registered)}"
+        )
+    if len(local_by_id) != 74 or len(complete) != 79:
+        raise RuntimeError(
+            "Foundational recertification expected 5 external + 74 local = 79 "
+            f"unique contracts, found {len(externally_registered)} + "
+            f"{len(local_by_id)} = {len(complete)}"
         )
     if any(contract.appendix != APPENDIX for contract in complete.values()):
         raise RuntimeError("Foundational recertification encountered a foreign appendix")
 
     return tuple(
         replace(contract, appendix_source_sha256=APPENDIX_SHA256)
-        for _, contract in sorted(supplemental_by_id.items())
+        for _, contract in sorted(local_by_id.items())
     )

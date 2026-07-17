@@ -61,7 +61,9 @@ def _jsonable(value: Any) -> Any:
             }
         return value.tolist()
     if isinstance(value, np.generic):
-        return value.item()
+        return _jsonable(value.item())
+    if isinstance(value, complex):
+        return {"real": float(value.real), "imag": float(value.imag)}
     if is_dataclass(value):
         return {
             item.name: _jsonable(getattr(value, item.name))
@@ -97,6 +99,12 @@ def _numeric_vector(value: Any, *, limit: int = 4096) -> np.ndarray:
             return
         if isinstance(item, np.generic):
             visit(item.item())
+            return
+        if isinstance(item, complex):
+            if np.isfinite(item.real):
+                collected.append(float(item.real))
+            if len(collected) < limit and np.isfinite(item.imag):
+                collected.append(float(item.imag))
             return
         if isinstance(item, (int, float)):
             number = float(item)

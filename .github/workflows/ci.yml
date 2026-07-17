@@ -104,6 +104,7 @@ jobs:
           tests/numerical/test_multimodal_soinet_model.py
           tests/numerical/test_trainable_multimodal_model.py
           tests/numerical/test_multimodal_robustness_benchmark.py
+          tests/numerical/test_source_faithful_convergence_benchmark.py
           tests/contracts/test_mpl_tc_dependency.py
           tests/invariants/test_observation_collapse_readout.py
           tests/source_removal/test_ai_architecture_dependency_removal.py
@@ -154,6 +155,11 @@ jobs:
           --output-root "${RUNNER_TEMP}/artifact-provenance"
           --aggregate reports/effective_artifact_provenance_manifest.json
           --coverage reports/theorem_artifact_coverage.json
+      - name: Run source-faithful grid convergence benchmark
+        run: >-
+          python tools/run_source_faithful_convergence_benchmark.py
+          --output reports/source_faithful_convergence
+          --resolutions 9 17 33
       - name: Upload effective theorem matrix
         uses: actions/upload-artifact@v4
         with:
@@ -176,6 +182,12 @@ jobs:
           name: theorem-diagnostic-artifacts-${{ github.event.pull_request.head.sha || github.sha }}
           retention-days: 90
           path: ${{ runner.temp }}/artifact-provenance
+          if-no-files-found: error
+      - name: Upload source-faithful convergence evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-faithful-convergence
+          path: reports/source_faithful_convergence
           if-no-files-found: error
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
@@ -287,6 +299,10 @@ jobs:
         with:
           name: multimodal-robustness
           path: reports/multimodal_robustness
+      - uses: actions/download-artifact@v4
+        with:
+          name: source-faithful-convergence
+          path: reports/source_faithful_convergence
       - run: >-
           python tools/export_effective_theorem_matrix.py
           --output reports/effective_theorem_complex_implementation_matrix.csv
@@ -327,6 +343,7 @@ jobs:
           --artifact-coverage reports/theorem_artifact_coverage.json
           --closure-obligations reports/closure_obligation_ledger.json
           --multimodal-robustness reports/multimodal_robustness/multiseed_robustness_manifest.json
+          --source-faithful-convergence reports/source_faithful_convergence/source_faithful_convergence_manifest.json
           --result-commit "${{ github.event.pull_request.head.sha || github.sha }}"
           --branch "${{ github.head_ref || github.ref_name }}"
           --ci-conclusion success
@@ -352,6 +369,7 @@ jobs:
             reports/closure_obligation_ledger.csv
             reports/closure_obligation_ledger.json
             reports/multimodal_robustness
+            reports/source_faithful_convergence
             reports/repository_final_qa_manifest.json
             reports/immutable_final_qa_manifest.json
             docs/data/authoritative_archive_manifest.json

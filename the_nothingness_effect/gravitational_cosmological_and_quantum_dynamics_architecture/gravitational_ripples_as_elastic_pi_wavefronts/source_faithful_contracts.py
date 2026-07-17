@@ -1,8 +1,9 @@
 """Source-faithful finite realizations of Elastic-pi Ripple B/C laws.
 
-Ablations are evaluated by rerunning the declared operator with exactly one typed
-source channel disabled. They are not fabricated by comparing the complete output
-with a zero array.
+The B operators consume the actual registered A-law outputs: memory imprint and
+Flowpoint-converted mode; shock indicator and stochastic tilt; environmental group
+velocity and source-transport detection. Ablations rerun the law with one typed
+source disabled instead of replacing a complete response with zero.
 """
 from __future__ import annotations
 from functools import partial
@@ -22,46 +23,55 @@ def _memory_transfer(value,active=(True,True)):
     x=np.asarray(value.coordinate,dtype=float)
     kernel=np.asarray(value.memory_kernel,dtype=float)
     kernel=kernel/float(np.sum(kernel))
-    tau=float(np.sum((x-x[0])*kernel)) if active[0] else 0.0
-    gamma=float(np.linalg.norm(np.asarray(value.memory_imprint,dtype=float))) if active[0] else 0.0
+    tau=float(np.sum((x-x[0])*kernel))
+    memory=np.asarray(value.memory_imprint,dtype=float) if active[0] else np.zeros_like(x)
+    mode=np.asarray(value.converted_mode,dtype=float) if active[1] else np.zeros_like(x)
     omega=2.0*np.pi*np.asarray(value.frequency,dtype=float)
-    spectral_rate=np.fft.fft(np.gradient(np.asarray(value.waveform,dtype=float),x,edge_order=2))
-    mode=np.asarray(value.transport_matrix,dtype=float)@np.asarray(value.source,dtype=float)
-    if not active[1]: mode=np.zeros_like(mode)
-    response=mode*gamma*spectral_rate/(1.0-1j*omega*tau)
-    rhs=np.abs(mode)**2*gamma**2*np.abs(spectral_rate)**2/(1.0+omega**2*tau**2)
-    return response,np.abs(response)**2-rhs,np.asarray((gamma,tau)),mode
+    memory_spectrum=np.fft.fft(memory)
+    response=mode*memory_spectrum/(1.0-1j*omega*tau)
+    rhs=np.abs(mode)**2*np.abs(memory_spectrum)**2/(1.0+omega**2*tau**2)
+    residual=np.abs(response)**2-rhs
+    return response,residual,memory,mode
 
 
 def _shock_tilt(value,active=(True,True)):
     x=np.asarray(value.coordinate,dtype=float)
     amplitude=np.asarray(value.amplitude,dtype=float)
-    k=np.asarray(value.frequency,dtype=float)
-    gamma=float(np.mean(np.asarray(value.memory_kernel,dtype=float)))
-    gradient=np.gradient(amplitude,x,edge_order=2)
-    dispersion=abs(float(value.base_velocity))
-    sigma=np.maximum(np.abs(gradient)-(dispersion*k**3+gamma*k**2),0.0)
-    if not active[0]: sigma=np.zeros_like(sigma)
-    gate=(sigma>0.0).astype(float)
-    tilt_rate=np.gradient(np.asarray(value.stochastic_tilt,dtype=float),x,edge_order=2)
-    if not active[1]: tilt_rate=np.zeros_like(tilt_rate)
-    observed=np.asarray(value.shock_indicator,dtype=float)
-    residual=observed-sigma if active[0] else observed
-    return gate*tilt_rate,residual,sigma,tilt_rate
+    expected_shock=np.maximum(
+        np.abs(np.gradient(amplitude,x,edge_order=2))-value.shock_threshold,0.0
+    )
+    shock=np.asarray(value.shock_indicator,dtype=float) if active[0] else np.zeros_like(x)
+    expected_tilt=np.gradient(
+        np.log(np.asarray(value.stochastic_spectrum,dtype=float)),
+        np.log(np.asarray(value.frequency,dtype=float)),edge_order=2,
+    )
+    tilt=np.asarray(value.stochastic_tilt,dtype=float) if active[1] else np.zeros_like(x)
+    response=shock*tilt
+    residual=np.concatenate((
+        shock-expected_shock if active[0] else np.zeros_like(shock),
+        tilt-expected_tilt if active[1] else np.zeros_like(tilt),
+    ))
+    return response,residual,shock,tilt
 
 
 def _environment_information(value,active=(True,True)):
     x=np.asarray(value.coordinate,dtype=float)
     environment=np.asarray(value.environment,dtype=float)
-    derivative=np.gradient(environment,x,edge_order=2)
-    if not active[0]: derivative=np.zeros_like(derivative)
-    transport=np.asarray(value.transport_matrix,dtype=float)
-    if not active[1]: transport=np.zeros_like(transport)
+    expected_velocity=value.base_velocity/(1.0+environment)
+    velocity=np.asarray(value.group_velocity,dtype=float) if active[0] else np.zeros_like(x)
+    transport=np.asarray(value.transport_matrix,dtype=float) if active[1] else np.zeros_like(value.transport_matrix,dtype=float)
+    derivative=np.gradient(velocity,x,edge_order=2)
     jacobian=transport*derivative[np.newaxis,:]
-    variance=np.maximum(np.asarray(value.group_velocity,dtype=float)**2,np.finfo(float).eps)
+    variance=np.maximum(velocity**2,np.finfo(float).eps)
     sigma_inv=np.diag(1.0/variance)
     information=jacobian.T@sigma_inv@jacobian
-    return information,information-information.T,derivative,transport
+    velocity_residual=velocity-expected_velocity if active[0] else np.zeros_like(velocity)
+    detection_residual=(
+        np.asarray(value.detected,dtype=float)-transport@np.asarray(value.source,dtype=float)
+        if active[1] else np.zeros_like(value.detected,dtype=float)
+    )
+    residual=np.concatenate((velocity_residual,detection_residual, np.ravel(information-information.T)))
+    return information,residual,velocity,transport
 
 
 def _b_operator(identifier,value,active=None):
@@ -82,8 +92,8 @@ def _reconstruct(value,active=(True,True,True)):
     identity=np.eye(n)
     kernel=np.asarray(value.memory_kernel,dtype=float)
     kernel=kernel/float(np.sum(kernel))
-    _,_,sigma,_=_shock_tilt(value)
-    shock_gate=(sigma>0.0).astype(float)
+    shock=np.asarray(value.shock_indicator,dtype=float)
+    shock_gate=(shock>value.tolerance).astype(float)
     blocks=((np.diag(kernel),np.asarray(value.memory_imprint,dtype=float)),(np.diag(shock_gate),np.asarray(value.stochastic_tilt,dtype=float)),(np.asarray(value.transport_matrix,dtype=float),np.asarray(value.detected,dtype=float)))
     matrices=[block[0] for flag,block in zip(active,blocks,strict=True) if flag]
     observations=[block[1] for flag,block in zip(active,blocks,strict=True) if flag]

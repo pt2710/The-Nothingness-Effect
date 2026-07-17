@@ -23,6 +23,7 @@ def _arguments(
     artifact_passed: bool = True,
     ledger_complete: bool = True,
     robustness_seeds: tuple[int, ...] = (0, 1, 2),
+    convergence_records: int = 69,
 ) -> argparse.Namespace:
     final_qa = _write(
         tmp_path / "final.json",
@@ -92,6 +93,21 @@ def _arguments(
             "claim_boundary": "synthetic multi-seed robustness evidence",
         },
     )
+    convergence = _write(
+        tmp_path / "convergence.json",
+        {
+            "families": [
+                "elastic_dubler",
+                "locality_driven_gravity",
+                "black_hole_dynamics",
+                "elastic_pi_ripples",
+            ],
+            "resolutions": [9, 17, 33],
+            "records": convergence_records,
+            "all_metrics_finite": True,
+            "claim_boundary": "finite grid-refinement diagnostic; not continuum convergence proof",
+        },
+    )
     archive_manifest = _write(tmp_path / "archive_manifest.json", {"fixture": True})
     recertification = _write(tmp_path / "recertification.json", {"fixture": True})
     return argparse.Namespace(
@@ -103,6 +119,7 @@ def _arguments(
         artifact_coverage=artifact_coverage,
         closure_obligations=closure_obligations,
         multimodal_robustness=robustness,
+        source_faithful_convergence=convergence,
         archive_manifest=archive_manifest,
         recertification_manifest=recertification,
         result_commit=RESULT_COMMIT,
@@ -124,6 +141,7 @@ def test_immutable_release_qa_preserves_open_as_independent_dimension(tmp_path: 
     assert payload["theorem_artifact_coverage"]["complete_core_artifact_bundles"] == 1
     assert payload["closure_obligation_ledger"]["all_open_states_represented"] is True
     assert payload["multimodal_robustness"]["seeds"] == [0, 1, 2]
+    assert payload["source_faithful_convergence"]["records"] == 69
 
 
 def test_immutable_release_qa_fails_when_archive_bytes_are_unverified(tmp_path: Path):
@@ -158,3 +176,9 @@ def test_immutable_release_qa_requires_three_robustness_seeds(tmp_path: Path):
     payload = build(_arguments(tmp_path, robustness_seeds=(0, 1)))
     assert payload["immutable_release_qa_passed"] is False
     assert "multimodal_multiseed_coverage_incomplete" in payload["release_blockers"]
+
+
+def test_immutable_release_qa_requires_all_69_convergence_records(tmp_path: Path):
+    payload = build(_arguments(tmp_path, convergence_records=68))
+    assert payload["immutable_release_qa_passed"] is False
+    assert "source_faithful_convergence_record_mismatch" in payload["release_blockers"]

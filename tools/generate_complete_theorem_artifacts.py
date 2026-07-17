@@ -1,11 +1,10 @@
-"""Generate aggregate provenance plus complete theorem diagnostic bundles.
+"""Generate complete theorem diagnostic bundles from current executable evidence.
 
-Existing domain-specific suite artifacts are preserved. Contracts whose generated
-files do not yet include machine-readable traces and an informative static plot are
-evaluated with deterministic typed samples. If an already executed A-level suite has
-no reusable typed input, its recorded residual/status manifest is replayed into the
-diagnostic bundle rather than inventing a domain input. Optional 3-D and
-five-coordinate projections are labelled as diagnostics, never physical geometry.
+Contracts with a registered typed input are evaluated directly. Contracts already
+executed by a domain suite but lacking a reusable typed input are represented by a
+strict replay of that suite manifest. The replay preserves status, residual,
+tolerance and exactness metadata; it never invents an incompatible generic domain
+object. Diagnostic projections remain finite evidence, not proof or physical geometry.
 """
 
 from __future__ import annotations
@@ -33,16 +32,11 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
     ContractEvaluation,
     evaluate_contract,
 )
-from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import (
-    AdditiveDerivationInput,
-    SpatialClosureInput,
-)
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
     provenance_binding_report,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
     ClosureStatus,
-    ComplexLevel,
     ResidualResult,
 )
 
@@ -64,6 +58,7 @@ def _replay_manifest_evaluation(
         status = ClosureStatus(raw_status)
     except ValueError:
         status = ClosureStatus.OPEN
+
     raw_residual = manifest.get("residual_vector", [])
     residual_values = (
         tuple(float(item) for item in raw_residual)
@@ -72,10 +67,13 @@ def _replay_manifest_evaluation(
     )
     if not residual_values:
         residual_values = (0.0,)
+
     tolerances = manifest.get("numeric_tolerances", {})
-    tolerance = 0.0
-    if isinstance(tolerances, dict) and tolerances:
-        tolerance = max(float(item) for item in tolerances.values())
+    tolerance = (
+        max(float(item) for item in tolerances.values())
+        if isinstance(tolerances, dict) and tolerances
+        else 0.0
+    )
     approximation = manifest.get("approximation_metadata", {})
     exact = (
         bool(approximation.get("exact_semantics", False))
@@ -89,12 +87,16 @@ def _replay_manifest_evaluation(
         max(tolerance, 0.0),
         passed,
         ClosureStatus.SATISFIED if passed else status,
-        {"source": "executed_domain_suite_manifest"},
+        {
+            "source": "executed_domain_suite_manifest",
+            "replay_only": True,
+        },
     )
     value = {
         "parameters": manifest.get("parameters", {}),
         "seed": manifest.get("seed", 0),
         "source": "executed_domain_suite_manifest",
+        "replay_only": True,
     }
     evaluation = ContractEvaluation(
         identifier,
@@ -114,11 +116,11 @@ def _write_provenance_binding(
 ) -> dict[str, object]:
     report = provenance_binding_report(aggregate_path)
     total = int(report.get("total_manifests", 0))
-    effective_mismatches = int(report.get("effective_source_sha_mismatches", 0))
-    if total != 351 or effective_mismatches:
+    mismatches = int(report.get("effective_source_sha_mismatches", 0))
+    if total != 351 or mismatches:
         raise RuntimeError(
             "fresh provenance binding is not release-clean: "
-            f"manifests={total} mismatches={effective_mismatches}"
+            f"manifests={total} mismatches={mismatches}"
         )
     report["effective_provenance_output"] = aggregate_path.as_posix()
     binding_path.parent.mkdir(parents=True, exist_ok=True)
@@ -144,6 +146,7 @@ def generate_complete(
     samples = _sample_inputs()
     enriched = 0
     replayed = 0
+    typed_evaluations = 0
     records: list[dict[str, object]] = []
 
     for manifest in manifests:
@@ -151,42 +154,25 @@ def generate_complete(
             raise RuntimeError("invalid theorem provenance manifest")
         identifier = str(manifest["theorem_complex_id"])
         files = [str(item) for item in manifest.get("generated_files", [])]
-        needs_bundle = not (
-            _has_suffix(files, ".npz")
-            and _has_suffix(files, ".csv")
-            and _has_suffix(files, ".json")
-            and _has_suffix(files, ".png")
+        needs_bundle = not all(
+            _has_suffix(files, suffix)
+            for suffix in (".json", ".csv", ".npz", ".png")
         )
+
         if needs_bundle:
             contract = catalog[identifier]
-            replay = False
             if identifier in samples:
                 value = samples[identifier]
                 evaluation = evaluate_contract(contract, value)
-            elif contract.level is ComplexLevel.B:
-                value = AdditiveDerivationInput(
-                    {
-                        str(source_id): np.full((6, 4), float(index + 1))
-                        for index, source_id in enumerate(contract.source_ids)
-                    }
-                )
-                evaluation = evaluate_contract(contract, value)
-            elif contract.level is ComplexLevel.C:
-                value = SpatialClosureInput(
-                    {
-                        str(source_id): np.full((6, 4), float(index + 1))
-                        for index, source_id in enumerate(contract.source_ids)
-                    }
-                )
-                evaluation = evaluate_contract(contract, value)
+                removals = [check(value) for check in contract.source_removal_checks]
+                diagnostic_source = "typed_contract_evaluation"
+                typed_evaluations += 1
             else:
                 value, evaluation = _replay_manifest_evaluation(identifier, manifest)
-                replay = True
-            removals = (
-                []
-                if replay
-                else [check(value) for check in contract.source_removal_checks]
-            )
+                removals = []
+                diagnostic_source = "executed_domain_suite_manifest"
+                replayed += 1
+
             destination = output_root / "theorem_diagnostics" / _safe(identifier)
             generated = materialize_contract_diagnostics(
                 destination,
@@ -195,11 +181,15 @@ def generate_complete(
                 evaluation,
                 removals,
             )
-            relative = [
-                (destination / name).relative_to(output_root).as_posix()
-                for name in generated
-            ]
-            files = sorted(set(files + relative))
+            files = sorted(
+                set(
+                    files
+                    + [
+                        (destination / name).relative_to(output_root).as_posix()
+                        for name in generated
+                    ]
+                )
+            )
             manifest["generated_files"] = files
             approximation = manifest.setdefault("approximation_metadata", {})
             if isinstance(approximation, dict):
@@ -207,13 +197,11 @@ def generate_complete(
                 approximation["diagnostic_projection_claim_boundary"] = (
                     "not physical geometry or empirical validation"
                 )
-                approximation["diagnostic_source"] = (
-                    "executed_domain_suite_manifest"
-                    if replay
-                    else "typed_contract_evaluation"
+                approximation["diagnostic_source"] = diagnostic_source
+                approximation["diagnostic_replay_only"] = (
+                    diagnostic_source == "executed_domain_suite_manifest"
                 )
             enriched += 1
-            replayed += int(replay)
 
         records.append(
             {
@@ -224,34 +212,35 @@ def generate_complete(
                 "has_png": _has_suffix(files, ".png"),
                 "has_gif": _has_suffix(files, ".gif"),
                 "complete_core_bundle": all(
-                    (
-                        _has_suffix(files, ".json"),
-                        _has_suffix(files, ".csv"),
-                        _has_suffix(files, ".npz"),
-                        _has_suffix(files, ".png"),
-                    )
+                    _has_suffix(files, suffix)
+                    for suffix in (".json", ".csv", ".npz", ".png")
                 ),
                 "generated_file_count": len(files),
             }
         )
 
     incomplete = [
-        record["theorem_complex_id"]
+        str(record["theorem_complex_id"])
         for record in records
         if not bool(record["complete_core_bundle"])
     ]
     summary = payload.setdefault("summary", {})
     if not isinstance(summary, dict):
         raise RuntimeError("aggregate provenance summary is invalid")
-    summary["complete_core_artifact_bundles"] = len(records) - len(incomplete)
-    summary["incomplete_core_artifact_bundles"] = len(incomplete)
-    summary["diagnostic_bundles_enriched"] = enriched
-    summary["suite_manifest_replays"] = replayed
-    summary["generated_npz_traces"] = sum(
-        1 for record in records if bool(record["has_npz"])
-    )
-    summary["generated_2d_or_static_plots"] = sum(
-        1 for record in records if bool(record["has_png"])
+    summary.update(
+        {
+            "complete_core_artifact_bundles": len(records) - len(incomplete),
+            "incomplete_core_artifact_bundles": len(incomplete),
+            "diagnostic_bundles_enriched": enriched,
+            "typed_contract_diagnostic_evaluations": typed_evaluations,
+            "suite_manifest_replays": replayed,
+            "generated_npz_traces": sum(
+                1 for record in records if bool(record["has_npz"])
+            ),
+            "generated_2d_or_static_plots": sum(
+                1 for record in records if bool(record["has_png"])
+            ),
+        }
     )
 
     aggregate_path.parent.mkdir(parents=True, exist_ok=True)
@@ -270,12 +259,13 @@ def generate_complete(
     )
 
     report = {
-        "schema_version": "1.1",
+        "schema_version": "1.2",
         "theorem_complexes": len(records),
         "complete_core_artifact_bundles": len(records) - len(incomplete),
         "incomplete_core_artifact_bundles": len(incomplete),
         "incomplete_ids": incomplete,
         "diagnostic_bundles_enriched": enriched,
+        "typed_contract_diagnostic_evaluations": typed_evaluations,
         "suite_manifest_replays": replayed,
         "provenance_binding_path": effective_binding_path.as_posix(),
         "provenance_binding_mismatches": binding_report.get(
@@ -325,6 +315,7 @@ def main() -> int:
         "theorem_artifact_coverage=passed "
         f"rows={report['theorem_complexes']} "
         f"enriched={report['diagnostic_bundles_enriched']} "
+        f"typed={report['typed_contract_diagnostic_evaluations']} "
         f"replayed={report['suite_manifest_replays']} "
         f"provenance_mismatches={report['provenance_binding_mismatches']}"
     )

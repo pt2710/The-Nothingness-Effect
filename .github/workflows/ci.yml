@@ -282,6 +282,13 @@ jobs:
           --artifact-coverage reports/theorem_artifact_coverage.json
           --csv-output reports/release_status_dimensions.csv
           --json-output reports/release_status_dimensions.json
+      - name: Build closure-obligation ledger
+        run: >-
+          python tools/build_closure_obligation_ledger.py
+          --status reports/release_status_dimensions.json
+          --provenance reports/effective_artifact_provenance_manifest.json
+          --csv-output reports/closure_obligation_ledger.csv
+          --json-output reports/closure_obligation_ledger.json
       - run: python -m tools.qa_guards
       - name: Build repository final QA evidence
         run: >-
@@ -300,6 +307,8 @@ jobs:
           --status-dimensions reports/release_status_dimensions.json
           --matrix-report reports/effective_theorem_complex_implementation_matrix.json
           --provenance reports/effective_artifact_provenance_manifest.json
+          --artifact-coverage reports/theorem_artifact_coverage.json
+          --closure-obligations reports/closure_obligation_ledger.json
           --result-commit "${{ github.event.pull_request.head.sha || github.sha }}"
           --branch "${{ github.head_ref || github.ref_name }}"
           --ci-conclusion success
@@ -322,6 +331,8 @@ jobs:
             reports/theorem_artifact_coverage.json
             reports/release_status_dimensions.csv
             reports/release_status_dimensions.json
+            reports/closure_obligation_ledger.csv
+            reports/closure_obligation_ledger.json
             reports/repository_final_qa_manifest.json
             reports/immutable_final_qa_manifest.json
             docs/data/authoritative_archive_manifest.json

@@ -156,6 +156,7 @@ jobs:
             --ignore=tests/artifacts \
             --ignore=tests/contracts/test_appendix_derived_contracts.py \
             --ignore=tests/contracts/test_authoritative_source_bindings.py \
+            --ignore=tests/contracts/test_promoted_source_sample_authority_bijection.py \
             --ignore=tests/contracts/test_foundational_symmetry_spatiality_canonical_contracts.py \
             --ignore=tests/contracts/test_qenn_contracts.py \
             --ignore=tests/contracts/test_pgqenn_contracts.py \

@@ -17,10 +17,12 @@ from tools.verify_tne_repository_layout import verify
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     authoritative_bindings,
     bind_inventory_rows,
-    bind_provenance_manifest,
     default_artifact_provenance,
-    provenance_binding_report,
     source_binding_report,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
+    bind_provenance_manifest,
+    provenance_binding_report,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
     all_contracts,
@@ -150,13 +152,14 @@ def main() -> int:
         (
             item.get("theorem_complex_id"),
             item.get("appendix_filename"),
-            item.get("appendix_source_sha256"),
+            item.get("recorded_appendix_source_sha256"),
+            item.get("recertified_appendix_source_sha256"),
             bindings[item["appendix_filename"]],
+            item.get("source_binding_status"),
         )
         for item in manifests
         if item.get("appendix_filename") in bindings
-        and item.get("appendix_source_sha256")
-        != bindings[item["appendix_filename"]]
+        and item.get("source_exactness") != "exact"
     ]
     if provenance_binding_mismatches:
         raise SystemExit(
@@ -226,6 +229,8 @@ def main() -> int:
         f"{authority['implementation_status_overrides']} "
         f"provenance_authority_overrides="
         f"{provenance_authority['source_binding_overrides']} "
+        f"provenance_source_recertifications="
+        f"{provenance_authority['source_recertifications']} "
         f"authority_effective_mismatches=0 "
         f"layout_checks={len(layout.results)} tracked_tex=0"
     )

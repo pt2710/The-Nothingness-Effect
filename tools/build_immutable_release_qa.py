@@ -38,6 +38,7 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
     artifact_coverage = _load(arguments.artifact_coverage)
     closure_obligations = _load(arguments.closure_obligations)
     robustness = _load(arguments.multimodal_robustness)
+    convergence = _load(arguments.source_faithful_convergence)
 
     blockers: list[str] = []
     if not _SHA_RE.fullmatch(arguments.result_commit):
@@ -109,6 +110,22 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
     if "synthetic" not in str(robustness.get("claim_boundary", "")):
         blockers.append("multimodal_robustness_claim_boundary_missing")
 
+    convergence_families = set(str(item) for item in convergence.get("families", []))
+    convergence_resolutions = tuple(int(item) for item in convergence.get("resolutions", []))
+    expected_families = {
+        "elastic_dubler", "locality_driven_gravity", "black_hole_dynamics", "elastic_pi_ripples"
+    }
+    if convergence_families != expected_families:
+        blockers.append("source_faithful_convergence_family_mismatch")
+    if convergence_resolutions != (9, 17, 33):
+        blockers.append("source_faithful_convergence_resolution_mismatch")
+    if int(convergence.get("records", 0)) != 69:
+        blockers.append("source_faithful_convergence_record_mismatch")
+    if not bool(convergence.get("all_metrics_finite")):
+        blockers.append("source_faithful_convergence_nonfinite")
+    if "not continuum convergence proof" not in str(convergence.get("claim_boundary", "")):
+        blockers.append("source_faithful_convergence_claim_boundary_missing")
+
     matrix_summary = matrix.get("summary", matrix.get("counts", {}))
     provenance_manifests = provenance.get("manifests")
     provenance_count = (
@@ -126,11 +143,12 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         arguments.artifact_coverage,
         arguments.closure_obligations,
         arguments.multimodal_robustness,
+        arguments.source_faithful_convergence,
         arguments.archive_manifest,
         arguments.recertification_manifest,
     )
     payload = {
-        "schema_version": "1.3",
+        "schema_version": "1.4",
         "repository": "pt2710/The-Nothingness-Effect",
         "branch": arguments.branch,
         "result_commit": arguments.result_commit,
@@ -173,6 +191,13 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
             "all_metrics_finite": robustness.get("all_metrics_finite"),
             "claim_boundary": robustness.get("claim_boundary"),
         },
+        "source_faithful_convergence": {
+            "families": sorted(convergence_families),
+            "resolutions": list(convergence_resolutions),
+            "records": convergence.get("records"),
+            "all_metrics_finite": convergence.get("all_metrics_finite"),
+            "claim_boundary": convergence.get("claim_boundary"),
+        },
         "effective_matrix_summary": matrix_summary,
         "provenance_manifest_count": provenance_count,
         "input_records": [_file_record(path) for path in inputs],
@@ -182,7 +207,8 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
             "Runtime implementation, byte-exact source binding, closure status, "
             "artifact completeness and validation status remain independent release "
             "dimensions. OPEN and NUMERICAL_CANDIDATE are preserved and are not "
-            "promoted by this QA. Synthetic robustness is not empirical validation."
+            "promoted by this QA. Synthetic robustness and finite grid refinement "
+            "are not empirical validation or continuum proof."
         ),
     }
     return payload
@@ -198,6 +224,7 @@ def main() -> int:
     parser.add_argument("--artifact-coverage", type=Path, required=True)
     parser.add_argument("--closure-obligations", type=Path, required=True)
     parser.add_argument("--multimodal-robustness", type=Path, required=True)
+    parser.add_argument("--source-faithful-convergence", type=Path, required=True)
     parser.add_argument(
         "--archive-manifest",
         type=Path,

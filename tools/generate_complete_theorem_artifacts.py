@@ -32,6 +32,9 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import
     AdditiveDerivationInput,
     SpatialClosureInput,
 )
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
+    provenance_binding_report,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
     ClosureStatus,
     ComplexLevel,
@@ -57,7 +60,11 @@ def _replay_manifest_evaluation(
     except ValueError:
         status = ClosureStatus.OPEN
     raw_residual = manifest.get("residual_vector", [])
-    residual_values = tuple(float(item) for item in raw_residual) if isinstance(raw_residual, list) else ()
+    residual_values = (
+        tuple(float(item) for item in raw_residual)
+        if isinstance(raw_residual, list)
+        else ()
+    )
     if not residual_values:
         residual_values = (0.0,)
     tolerances = manifest.get("numeric_tolerances", {})
@@ -65,7 +72,11 @@ def _replay_manifest_evaluation(
     if isinstance(tolerances, dict) and tolerances:
         tolerance = max(float(item) for item in tolerances.values())
     approximation = manifest.get("approximation_metadata", {})
-    exact = bool(approximation.get("exact_semantics", False)) if isinstance(approximation, dict) else False
+    exact = (
+        bool(approximation.get("exact_semantics", False))
+        if isinstance(approximation, dict)
+        else False
+    )
     passed = status in {ClosureStatus.SATISFIED, ClosureStatus.CLOSED}
     residual = ResidualResult(
         f"{identifier}:suite_manifest_replay",
@@ -92,10 +103,32 @@ def _replay_manifest_evaluation(
     return value, evaluation
 
 
+def _write_provenance_binding(
+    aggregate_path: Path,
+    binding_path: Path,
+) -> dict[str, object]:
+    report = provenance_binding_report(aggregate_path)
+    total = int(report.get("total_manifests", 0))
+    effective_mismatches = int(report.get("effective_source_sha_mismatches", 0))
+    if total != 351 or effective_mismatches:
+        raise RuntimeError(
+            "fresh provenance binding is not release-clean: "
+            f"manifests={total} mismatches={effective_mismatches}"
+        )
+    report["effective_provenance_output"] = aggregate_path.as_posix()
+    binding_path.parent.mkdir(parents=True, exist_ok=True)
+    binding_path.write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return report
+
+
 def generate_complete(
     output_root: Path,
     aggregate_path: Path,
     coverage_path: Path,
+    binding_path: Path | None = None,
 ) -> dict[str, object]:
     payload = generate_provenance(output_root, aggregate_path)
     manifests = payload.get("manifests")
@@ -144,9 +177,11 @@ def generate_complete(
             else:
                 value, evaluation = _replay_manifest_evaluation(identifier, manifest)
                 replay = True
-            removals = [] if replay else [
-                check(value) for check in contract.source_removal_checks
-            ]
+            removals = (
+                []
+                if replay
+                else [check(value) for check in contract.source_removal_checks]
+            )
             destination = output_root / "theorem_diagnostics" / _safe(identifier)
             generated = materialize_contract_diagnostics(
                 destination,
@@ -168,7 +203,9 @@ def generate_complete(
                     "not physical geometry or empirical validation"
                 )
                 approximation["diagnostic_source"] = (
-                    "executed_domain_suite_manifest" if replay else "typed_contract_evaluation"
+                    "executed_domain_suite_manifest"
+                    if replay
+                    else "typed_contract_evaluation"
                 )
             enriched += 1
             replayed += int(replay)
@@ -217,14 +254,29 @@ def generate_complete(
         json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
+    effective_binding_path = (
+        binding_path
+        if binding_path is not None
+        else aggregate_path.with_name("effective_artifact_provenance_binding.json")
+    )
+    binding_report = _write_provenance_binding(
+        aggregate_path,
+        effective_binding_path,
+    )
+
     report = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "theorem_complexes": len(records),
         "complete_core_artifact_bundles": len(records) - len(incomplete),
         "incomplete_core_artifact_bundles": len(incomplete),
         "incomplete_ids": incomplete,
         "diagnostic_bundles_enriched": enriched,
         "suite_manifest_replays": replayed,
+        "provenance_binding_path": effective_binding_path.as_posix(),
+        "provenance_binding_mismatches": binding_report.get(
+            "effective_source_sha_mismatches",
+            0,
+        ),
         "requirements": ["json", "csv", "npz", "png"],
         "claim_boundary": (
             "diagnostic 3-D and five-coordinate projections are not physical geometry, "
@@ -256,17 +308,20 @@ def main() -> int:
         type=Path,
         default=Path("reports/theorem_artifact_coverage.json"),
     )
+    parser.add_argument("--binding", type=Path)
     arguments = parser.parse_args()
     report = generate_complete(
         arguments.output_root.resolve(),
         arguments.aggregate.resolve(),
         arguments.coverage.resolve(),
+        arguments.binding.resolve() if arguments.binding is not None else None,
     )
     print(
         "theorem_artifact_coverage=passed "
         f"rows={report['theorem_complexes']} "
         f"enriched={report['diagnostic_bundles_enriched']} "
-        f"replayed={report['suite_manifest_replays']}"
+        f"replayed={report['suite_manifest_replays']} "
+        f"provenance_mismatches={report['provenance_binding_mismatches']}"
     )
     return 0
 

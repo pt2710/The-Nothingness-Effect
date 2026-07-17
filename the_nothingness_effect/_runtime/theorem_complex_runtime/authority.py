@@ -1,8 +1,8 @@
 """Strict byte-backed authority binding and reviewed implementation promotions.
 
-The authoritative source of truth is the committed immutable ZIP snapshot
-declared by ``docs/data/authoritative_archive_manifest.json``.  Binding is
-observational: source digests are compared and annotated, never overwritten.
+The authoritative source of truth is the immutable external ZIP snapshot declared
+by ``docs/data/authoritative_archive_manifest.json``. Binding is observational:
+source digests are compared and annotated, never overwritten.
 """
 
 from __future__ import annotations
@@ -19,6 +19,7 @@ from .types import ComplexContract
 
 
 _BASE_IMPLEMENTATION_STATUS_OVERRIDES = _impl.implementation_status_overrides
+_SUPPORTED_ARCHIVE_MANIFEST_SCHEMAS = {"2.0", "2.1"}
 
 
 def default_archive_manifest() -> Path:
@@ -28,8 +29,12 @@ def default_archive_manifest() -> Path:
 def load_archive_manifest(path: str | Path | None = None) -> dict[str, object]:
     manifest_path = Path(path) if path is not None else default_archive_manifest()
     payload = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if payload.get("schema_version") != "2.0":
-        raise RuntimeError("authoritative archive manifest must use schema version 2.0")
+    schema_version = str(payload.get("schema_version", ""))
+    if schema_version not in _SUPPORTED_ARCHIVE_MANIFEST_SCHEMAS:
+        raise RuntimeError(
+            "authoritative archive manifest must use a supported schema version: "
+            f"{sorted(_SUPPORTED_ARCHIVE_MANIFEST_SCHEMAS)}"
+        )
     members = payload.get("members")
     if not isinstance(members, dict) or not members:
         raise RuntimeError("authoritative archive manifest has no members")
@@ -50,6 +55,12 @@ def load_archive_manifest(path: str | Path | None = None) -> dict[str, object]:
             "canonical_input_order",
         }:
             raise RuntimeError(f"invalid archive role: {filename}")
+    delivery = payload.get("archive_delivery")
+    if schema_version == "2.1" and delivery not in {
+        "private_authenticated_envelope",
+        "external_ci_artifact_required",
+    }:
+        raise RuntimeError("schema 2.1 archive manifest has invalid delivery mode")
     return payload
 
 
@@ -348,81 +359,28 @@ def source_binding_report(
                         "authoritative_sha256": expected,
                     }
                 )
-        if raw.get("implementation_status") != effective.get("implementation_status"):
+        if effective.get("implementation_status_binding") == "reviewed_override":
             changes.append(
                 {
                     "complex_id": raw["complex_id"],
-                    "recorded_status": raw.get("implementation_status", ""),
-                    "effective_status": effective.get("implementation_status", ""),
+                    "from": raw.get("implementation_status", ""),
+                    "to": effective.get("implementation_status", ""),
                     "reason": effective.get("implementation_status_override_reason", ""),
                     "evidence_path": effective.get("implementation_status_evidence_path", ""),
                 }
             )
     return {
         "schema_version": "2.0",
-        "matrix_path": path.as_posix(),
-        "total_rows": len(raw_rows),
-        "managed_appendices": len(bindings),
-        "managed_rows": sum(int(item["rows"]) for item in counts.values()),
-        "raw_source_sha_mismatches": len(raw_mismatches),
-        "effective_source_sha_mismatches": len(effective_mismatches),
+        "authority_policy": "observational_no_sha_overwrite",
         "source_binding_overrides": 0,
-        "source_recertifications": len(recertified_source_bindings()),
-        "implementation_status_overrides": len(changes),
+        "bindings": bindings,
+        "appendix_counts": counts,
+        "raw_source_mismatches": raw_mismatches,
+        "raw_source_mismatch_count": len(raw_mismatches),
+        "historical_recertifications": recertifications,
+        "historical_recertification_count": len(recertifications),
+        "effective_source_mismatches": effective_mismatches,
+        "effective_source_mismatch_count": len(effective_mismatches),
         "implementation_status_changes": changes,
-        "raw_mismatches": raw_mismatches,
-        "recertifications": recertifications,
-        "effective_mismatches": effective_mismatches,
-        "appendices": dict(sorted(counts.items())),
+        "implementation_status_change_count": len(changes),
     }
-
-
-def provenance_binding_report(
-    provenance_path: str | Path | None = None,
-    manifest_path: str | Path | None = None,
-) -> dict[str, object]:
-    path = (
-        Path(provenance_path)
-        if provenance_path is not None
-        else _impl.default_artifact_provenance()
-    )
-    raw = json.loads(path.read_text(encoding="utf-8"))
-    bindings = authoritative_bindings(manifest_path)
-    effective = bind_provenance_manifest(raw, bindings)
-    items = effective.get("manifests")
-    assert isinstance(items, list)
-    mismatches = [
-        {
-            "theorem_complex_id": str(item.get("theorem_complex_id", "")),
-            "appendix_file": str(item.get("appendix_filename", "")),
-            "recorded_sha256": str(item.get("appendix_source_sha256", "")),
-            "authoritative_sha256": bindings.get(str(item.get("appendix_filename", "")), ""),
-        }
-        for item in items
-        if str(item.get("appendix_filename", "")) in bindings
-        and str(item.get("appendix_source_sha256", ""))
-        != bindings[str(item.get("appendix_filename", ""))]
-    ]
-    return {
-        "schema_version": "2.0",
-        "provenance_path": path.as_posix(),
-        "total_manifests": len(items),
-        "managed_appendices": len(bindings),
-        "effective_source_sha_mismatches": len(mismatches),
-        "raw_source_sha_mismatches": len(mismatches),
-        "source_binding_overrides": 0,
-        "effective_mismatches": mismatches,
-        "raw_mismatches": mismatches,
-    }
-
-
-# Patch the preserved implementation module because its report functions resolve
-# globals in that module at call time.
-_impl.authoritative_bindings = authoritative_bindings
-_impl.implementation_status_overrides = implementation_status_overrides
-_impl.bind_contract = bind_contract
-_impl.bind_contracts = bind_contracts
-_impl.bind_inventory_rows = bind_inventory_rows
-_impl.bind_provenance_manifest = bind_provenance_manifest
-_impl.source_binding_report = source_binding_report
-_impl.provenance_binding_report = provenance_binding_report

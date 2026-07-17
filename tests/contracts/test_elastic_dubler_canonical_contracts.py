@@ -58,7 +58,7 @@ def test_elastic_dubler_b_and_c_sources_are_individually_necessary():
     (
         lambda sample: replace(sample, elasticity=0.0),
         lambda sample: replace(sample, domain_elasticity=np.zeros_like(sample.domain_elasticity)),
-        lambda sample: replace(sample, parity=np.full_like(sample.parity, 0.5)),
+        lambda sample: replace(sample, parity=np.full(sample.parity.shape, 0.5, dtype=float)),
         lambda sample: replace(sample, coordinates=sample.coordinates[::-1]),
         lambda sample: replace(sample, pdfi=np.full_like(sample.pdfi, np.nan)),
     ),

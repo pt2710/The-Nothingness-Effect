@@ -26,8 +26,9 @@
     "appendix_tne_mathematical_closure_architecture.tex": {"sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0", "role": "theorem_runtime"},
     "appendix_tne_research_relations_implications.tex": {"sha256": "97ef1bea887e96dda531efa063ee630f89e3c7422c7c4ca306634afd1e51b585", "role": "research_relations"}
   },
-  "archive_delivery": "authenticated_encrypted_envelope_or_private_immutable_url",
+  "archive_delivery": "private_authenticated_envelope",
+  "archive_delivery_fallback": "private_immutable_url",
   "encrypted_envelope_path": "private_authority/TNE_Authoritative_Appendices.zip.enc",
   "encrypted_envelope_key_secret": "TNE_AUTHORITATIVE_ARCHIVE_KEY",
-  "archive_delivery_note": "CI decrypts only into runner temporary storage and passes the exact recovered ZIP bytes to the byte verifier. Hash-only evidence is never accepted."
+  "archive_delivery_note": "CI first decrypts the authenticated envelope into runner temporary storage. A private immutable URL may be used only as an external fallback. In both cases the exact recovered ZIP bytes are passed to the byte verifier; hash-only evidence is never accepted."
 }

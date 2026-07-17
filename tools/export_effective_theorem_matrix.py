@@ -121,6 +121,13 @@ def _unresolved_provenance_mismatches(
     return unresolved
 
 
+def _matrix_report_count(report: dict[str, object], current: str, legacy: str) -> int:
+    value = report.get(current, report.get(legacy, 0))
+    if isinstance(value, list):
+        return len(value)
+    return int(value)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -165,11 +172,28 @@ if __name__ == "__main__":
         json.dumps(provenance_result, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+    total_rows = _matrix_report_count(matrix_result, "total_rows", "total_rows")
+    if total_rows == 0:
+        total_rows = sum(
+            int(item.get("rows", 0))
+            for item in matrix_result.get("appendix_counts", {}).values()
+            if isinstance(item, dict)
+        )
+    status_overrides = _matrix_report_count(
+        matrix_result,
+        "implementation_status_change_count",
+        "implementation_status_overrides",
+    )
+    effective_mismatches = _matrix_report_count(
+        matrix_result,
+        "effective_source_mismatch_count",
+        "effective_source_sha_mismatches",
+    )
     print(
         "effective_authority_state_exported="
-        f"matrix={args.output} rows={matrix_result['total_rows']} "
+        f"matrix={args.output} rows={total_rows} "
         f"matrix_source_overrides={matrix_result['source_binding_overrides']} "
-        f"matrix_status_overrides={matrix_result['implementation_status_overrides']} "
+        f"matrix_status_overrides={status_overrides} "
         f"provenance={args.provenance_output} "
         f"provenance_overrides={provenance_result['source_binding_overrides']} "
         f"provenance_explicit_recertifications="
@@ -177,5 +201,5 @@ if __name__ == "__main__":
         f"provenance_unresolved="
         f"{provenance_result['unresolved_source_sha_mismatches']}"
     )
-    if int(matrix_result["effective_source_sha_mismatches"]) or unresolved_provenance:
+    if effective_mismatches or unresolved_provenance:
         raise SystemExit(1)

@@ -6,16 +6,14 @@ from dataclasses import replace
 import numpy as np
 import pytest
 
-from the_nothingness_effect._runtime.theorem_complex_runtime.types import DomainViolationError
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import TNEContractError
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.canonical_contracts import (
     A_IDS,
     B_SPECS,
     C_SPECS,
     contracts,
 )
-from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_elastic_dubler import (
-    elastic_dubler_sample,
-)
+from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_elastic_dubler import elastic_dubler_sample
 
 
 def test_explicit_elastic_dubler_inventory_and_dependencies():
@@ -67,7 +65,7 @@ def test_elastic_dubler_b_and_c_sources_are_individually_necessary():
 )
 def test_elastic_dubler_domain_boundaries_fail_closed(mutator):
     contract = contracts()[0]
-    with pytest.raises(DomainViolationError):
+    with pytest.raises(TNEContractError):
         contract.operator(mutator(elastic_dubler_sample()))
 
 

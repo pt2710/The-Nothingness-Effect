@@ -22,6 +22,7 @@ def _arguments(
     evidence_commit: str = RESULT_COMMIT,
     artifact_passed: bool = True,
     ledger_complete: bool = True,
+    robustness_seeds: tuple[int, ...] = (0, 1, 2),
 ) -> argparse.Namespace:
     final_qa = _write(
         tmp_path / "final.json",
@@ -80,6 +81,17 @@ def _arguments(
             "all_open_states_represented": ledger_complete,
         },
     )
+    robustness = _write(
+        tmp_path / "robustness.json",
+        {
+            "seeds": list(robustness_seeds),
+            "epochs": 3,
+            "scenarios": ["clean", "remove_color", "remove_sound", "remove_vision"],
+            "records": len(robustness_seeds) * 4,
+            "all_metrics_finite": True,
+            "claim_boundary": "synthetic multi-seed robustness evidence",
+        },
+    )
     archive_manifest = _write(tmp_path / "archive_manifest.json", {"fixture": True})
     recertification = _write(tmp_path / "recertification.json", {"fixture": True})
     return argparse.Namespace(
@@ -90,6 +102,7 @@ def _arguments(
         provenance=provenance,
         artifact_coverage=artifact_coverage,
         closure_obligations=closure_obligations,
+        multimodal_robustness=robustness,
         archive_manifest=archive_manifest,
         recertification_manifest=recertification,
         result_commit=RESULT_COMMIT,
@@ -110,6 +123,7 @@ def test_immutable_release_qa_preserves_open_as_independent_dimension(tmp_path: 
     assert payload["release_status_dimensions"]["open_and_numerical_candidate_preserved"] == 1
     assert payload["theorem_artifact_coverage"]["complete_core_artifact_bundles"] == 1
     assert payload["closure_obligation_ledger"]["all_open_states_represented"] is True
+    assert payload["multimodal_robustness"]["seeds"] == [0, 1, 2]
 
 
 def test_immutable_release_qa_fails_when_archive_bytes_are_unverified(tmp_path: Path):
@@ -138,3 +152,9 @@ def test_immutable_release_qa_rejects_missing_open_obligation(tmp_path: Path):
     assert payload["immutable_release_qa_passed"] is False
     assert "closure_obligation_ledger_incomplete" in payload["release_blockers"]
     assert "closure_obligation_count_mismatch" in payload["release_blockers"]
+
+
+def test_immutable_release_qa_requires_three_robustness_seeds(tmp_path: Path):
+    payload = build(_arguments(tmp_path, robustness_seeds=(0, 1)))
+    assert payload["immutable_release_qa_passed"] is False
+    assert "multimodal_multiseed_coverage_incomplete" in payload["release_blockers"]

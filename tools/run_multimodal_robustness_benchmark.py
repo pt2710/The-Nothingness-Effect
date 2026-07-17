@@ -11,7 +11,12 @@ import csv
 import json
 from pathlib import Path
 from statistics import mean, pstdev
+import sys
 from typing import Iterable
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 import matplotlib
 matplotlib.use("Agg")
@@ -74,6 +79,7 @@ def _write_csv(path: Path,rows: list[dict[str,object]]) -> None:
 
 def run(output: Path,seeds: Iterable[int],epochs: int) -> dict[str,object]:
     output.mkdir(parents=True,exist_ok=True)
+    seeds=tuple(seeds)
     scenarios=(
         "clean","gaussian_0.05","gaussian_0.15","remove_color","remove_sound",
         "remove_vision","sound_phase_shift","vision_occlusion",

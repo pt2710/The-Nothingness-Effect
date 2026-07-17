@@ -3,6 +3,7 @@ name: theorem-complex-ci
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -160,6 +161,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       AUTHORITY_ARCHIVE_URL: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_URL || vars.TNE_AUTHORITATIVE_ARCHIVE_URL }}
+      AUTHORITY_ARCHIVE_KEY: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_KEY }}
+      AUTHORITY_ARCHIVE_EXPECTED_SHA256: 38901b612b0f868cf6e2bab95e4600378b46bab80dee5a6d55180ccca59ea11
+      AUTHORITY_ARCHIVE_ENCRYPTED_PATH: private_authority/TNE_Authoritative_Appendices.zip.enc
     steps:
       - uses: actions/checkout@v4
         with:
@@ -167,7 +171,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Fetch and verify actual authoritative ZIP bytes
+          cache: pip
+      - run: python -m pip install "cryptography>=43,<46"
+      - name: Materialize and verify actual authoritative ZIP bytes
         id: archive_verify
         continue-on-error: true
         shell: bash
@@ -175,11 +181,28 @@ jobs:
           set -euo pipefail
           mkdir -p reports
           ARCHIVE_PATH="${RUNNER_TEMP}/TNE_Authoritative_Appendices.zip"
-          if [[ -n "${AUTHORITY_ARCHIVE_URL}" ]]; then
+          cleanup() {
+            if command -v shred >/dev/null 2>&1; then
+              shred -u "${ARCHIVE_PATH}" 2>/dev/null || rm -f "${ARCHIVE_PATH}"
+            else
+              rm -f "${ARCHIVE_PATH}"
+            fi
+          }
+          trap cleanup EXIT
+
+          if [[ -f "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" && -n "${AUTHORITY_ARCHIVE_KEY}" ]]; then
+            TNE_AUTHORITATIVE_ARCHIVE_KEY="${AUTHORITY_ARCHIVE_KEY}" \
+              python tools/private_authoritative_archive_delivery.py decrypt \
+                --encrypted "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" \
+                --output "${ARCHIVE_PATH}" \
+                --expected-sha256 "${AUTHORITY_ARCHIVE_EXPECTED_SHA256}" \
+                --key-env TNE_AUTHORITATIVE_ARCHIVE_KEY
+          elif [[ -n "${AUTHORITY_ARCHIVE_URL}" ]]; then
             curl --fail --location --retry 3 --retry-all-errors \
               "${AUTHORITY_ARCHIVE_URL}" \
               --output "${ARCHIVE_PATH}"
           fi
+
           python tools/verify_authoritative_archive.py \
             --archive "${ARCHIVE_PATH}" \
             --output reports/authoritative_archive_byte_verification.json \

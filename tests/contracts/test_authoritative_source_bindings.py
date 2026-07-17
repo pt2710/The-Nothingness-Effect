@@ -36,13 +36,13 @@ def test_binding_is_observational_and_never_overwrites_bad_digest():
 
 def test_101_historical_drift_rows_are_explicitly_recertified():
     report = source_binding_report()
-    assert report["total_rows"] == 351
-    assert report["managed_appendices"] == 7
-    assert report["managed_rows"] == 351
-    assert report["raw_source_sha_mismatches"] == 0
-    assert report["effective_source_sha_mismatches"] == 0
+    appendix_counts=report["appendix_counts"]
+    assert len(appendix_counts) == 7
+    assert sum(int(item["rows"]) for item in appendix_counts.values()) == 351
+    assert report["raw_source_mismatch_count"] == 0
+    assert report["effective_source_mismatch_count"] == 0
     assert report["source_binding_overrides"] == 0
-    assert report["source_recertifications"] == 101
+    assert report["historical_recertification_count"] == 101
 
     payload = json.loads(RECERTIFICATION.read_text(encoding="utf-8"))
     assert payload["total_complexes"] == 101

@@ -202,31 +202,61 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
       - run: python -m pip install -q -e .
-      - name: Rebuild matrix and complete provenance before guard
+      - name: Capture matrix and provenance rebuild
         shell: bash
         run: |
-          python tools/export_effective_theorem_matrix.py \
-            --output reports/effective_theorem_complex_implementation_matrix.csv \
-            --report reports/effective_theorem_complex_implementation_matrix.json
-          python tools/generate_complete_theorem_artifacts.py \
-            --output-root "${RUNNER_TEMP}/artifact-provenance" \
-            --aggregate reports/effective_artifact_provenance_manifest.json \
-            --coverage reports/theorem_artifact_coverage.json \
-            --binding reports/effective_artifact_provenance_binding.json
+          set +e
+          {
+            python tools/export_effective_theorem_matrix.py \
+              --output reports/effective_theorem_complex_implementation_matrix.csv \
+              --report reports/effective_theorem_complex_implementation_matrix.json
+            matrix_status=$?
+            echo "matrix_exit_code=${matrix_status}"
+            if [[ ${matrix_status} -eq 0 ]]; then
+              python tools/generate_complete_theorem_artifacts.py \
+                --output-root "${RUNNER_TEMP}/artifact-provenance" \
+                --aggregate reports/effective_artifact_provenance_manifest.json \
+                --coverage reports/theorem_artifact_coverage.json \
+                --binding reports/effective_artifact_provenance_binding.json
+              provenance_status=$?
+            else
+              provenance_status=99
+            fi
+            echo "provenance_exit_code=${provenance_status}"
+            if [[ ${matrix_status} -ne 0 ]]; then
+              exit ${matrix_status}
+            fi
+            exit ${provenance_status}
+          } > qa-rebuild-diagnostic.log 2>&1
+          echo "$?" > qa-rebuild-exit-code.txt
+          exit 0
       - name: Capture QA-guard diagnostics
         shell: bash
         run: |
           set +e
-          python -m tools.qa_guards > qa-guard-diagnostic.log 2>&1
-          echo "$?" > qa-guard-exit-code.txt
+          if [[ "$(cat qa-rebuild-exit-code.txt)" -eq 0 ]]; then
+            python -m tools.qa_guards > qa-guard-diagnostic.log 2>&1
+            echo "$?" > qa-guard-exit-code.txt
+          else
+            echo "QA guard skipped because rebuild failed." > qa-guard-diagnostic.log
+            echo "99" > qa-guard-exit-code.txt
+          fi
           exit 0
       - uses: actions/upload-artifact@v4
         with:
           name: qa-guard-diagnostic
           path: |
+            qa-rebuild-diagnostic.log
+            qa-rebuild-exit-code.txt
             qa-guard-diagnostic.log
             qa-guard-exit-code.txt
             reports/effective_theorem_complex_implementation_matrix.json
             reports/effective_artifact_provenance_manifest.json
             reports/effective_artifact_provenance_binding.json
             reports/theorem_artifact_coverage.json
+          if-no-files-found: warn
+      - name: Enforce rebuild and QA guard
+        shell: bash
+        run: |
+          test "$(cat qa-rebuild-exit-code.txt)" -eq 0
+          test "$(cat qa-guard-exit-code.txt)" -eq 0

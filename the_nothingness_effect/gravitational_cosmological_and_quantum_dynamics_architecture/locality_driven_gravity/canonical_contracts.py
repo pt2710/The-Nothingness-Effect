@@ -1,14 +1,8 @@
-"""Explicit executable contracts for the remaining Locality-Driven Gravity complexes.
-
-These operators provide finite typed witnesses for the appendix laws. They do
-not promote toy-field calculations to astrophysical validation or replace the
-appendix proofs and constitutive assumptions.
-"""
+"""Typed finite contracts for the remaining Locality-Driven Gravity complexes."""
 from __future__ import annotations
 
 from dataclasses import dataclass
 from functools import partial
-from typing import Callable
 
 import numpy as np
 
@@ -51,14 +45,12 @@ A_IDS = (
     "cosmic_web_emergence_homogenization_duality",
     "appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_interfac",
 )
-
 B_SPECS = (
     ("rotation_pitch_coupling_invariant", (A_IDS[0], A_IDS[1])),
     ("screened_halo_response", (A_IDS[2], A_IDS[3])),
     ("confined_filament_persistence", (A_IDS[4], A_IDS[5])),
     ("information_bearing_cluster_web_stability", (A_IDS[6], A_IDS[7], A_IDS[8])),
 )
-
 C_SPECS = (
     ("screened_rotation_halo_geometry", B_SPECS[0][0], B_SPECS[1][0]),
     ("information_preserving_cosmic_network_closure", B_SPECS[2][0], B_SPECS[3][0]),
@@ -153,7 +145,7 @@ def _validated(value: LocalityGravityInput) -> tuple[np.ndarray, ...]:
         raise DomainViolationError("screening mass must be finite and non-negative")
     if not np.isfinite(value.elasticity) or value.elasticity <= 0.0:
         raise DomainViolationError("elasticity must be finite and strictly positive")
-    if np.any(arrays[3:] < 0.0):
+    if any(np.any(item < 0.0) for item in arrays[3:]):
         raise DomainViolationError("density, velocity, pitch, halo, and structural fields must be non-negative")
     if not np.isfinite(value.tolerance) or value.tolerance < 0.0:
         raise DomainViolationError("tolerance must be finite and non-negative")
@@ -177,17 +169,16 @@ def _law(law_id: str, value: LocalityGravityInput) -> LocalityGravityLaw:
         step_array,
     ) = _validated(value)
     step = float(step_array)
-    grad_entropy = np.gradient(entropy, step, edge_order=2)
-    grad_potential = np.gradient(potential, step, edge_order=2)
-    curvature = np.gradient(grad_potential, step, edge_order=2)
+    grad_s = np.gradient(entropy, step, edge_order=2)
+    grad_phi = np.gradient(potential, step, edge_order=2)
+    curvature = np.gradient(grad_phi, step, edge_order=2)
 
     if law_id == A_IDS[0]:
-        response = radius * grad_potential
+        response = radius * grad_phi
         residual = velocity**2 - response
     elif law_id == A_IDS[1]:
-        ratio = np.abs(grad_entropy) / (1.0 + np.abs(grad_potential))
-        response = ratio
-        residual = np.tan(pitch) - ratio
+        response = np.abs(grad_s) / (1.0 + np.abs(grad_phi))
+        residual = np.tan(pitch) - response
     elif law_id == A_IDS[2]:
         kernel = np.exp(-value.screening_mass * np.abs(radius[:, None] - radius[None, :]))
         kernel /= np.sum(kernel, axis=1, keepdims=True)
@@ -199,8 +190,8 @@ def _law(law_id: str, value: LocalityGravityInput) -> LocalityGravityLaw:
         response = np.exp(-value.screening_mass * radius) * halo
         residual = response - np.exp(-value.screening_mass * radius) * halo
     elif law_id == A_IDS[4]:
-        response = np.abs(grad_entropy) * density
-        residual = response - np.abs(grad_entropy) * density
+        response = np.abs(grad_s) * density
+        residual = response - np.abs(grad_s) * density
     elif law_id == A_IDS[5]:
         response = confinement * np.exp(-(radius - radius[0]) / value.elasticity)
         residual = np.minimum(response, 0.0)
@@ -215,18 +206,9 @@ def _law(law_id: str, value: LocalityGravityInput) -> LocalityGravityLaw:
         response = web - float(np.mean(web))
         residual = np.full_like(response, float(np.sum(response)) / response.size)
     elif law_id == A_IDS[9]:
-        channels = (
-            velocity,
-            pitch,
-            halo,
-            filament,
-            confinement,
-            cluster,
-            information,
-            web,
-        )
-        response = sum(np.abs(channel) for channel in channels)
-        residual = response - sum(np.abs(channel) for channel in channels)
+        channels = (velocity, pitch, halo, filament, confinement, cluster, information, web)
+        response = sum((np.abs(channel) for channel in channels), np.zeros_like(radius))
+        residual = response - sum((np.abs(channel) for channel in channels), np.zeros_like(radius))
     else:
         raise ValueError(f"unknown Locality-Driven Gravity law {law_id}")
 
@@ -307,23 +289,16 @@ def _c_operator(c_id: str, b_a: str, b_b: str, value: LocalityGravityInput) -> L
 def _residual(name: str, values: np.ndarray | tuple[float, ...], tolerance: float) -> ResidualResult:
     vector = tuple(float(item) for item in np.ravel(values))
     passed = float(np.linalg.norm(vector)) <= tolerance
-    return ResidualResult(
-        name,
-        vector,
-        tolerance,
-        passed,
-        ClosureStatus.SATISFIED if passed else ClosureStatus.OPEN,
-    )
+    return ResidualResult(name, vector, tolerance, passed, ClosureStatus.SATISFIED if passed else ClosureStatus.OPEN)
 
 
 def _remove_a(b_id: str, source_ids: tuple[str, ...], removed_index: int, value: LocalityGravityInput) -> SourceRemovalResult:
     complete = _b_operator(b_id, source_ids, value)
     remaining = tuple(response for index, response in enumerate(complete.source_responses) if index != removed_index)
-    removed_response = _combine(remaining)
     return source_removal_result(
         ComplexId(source_ids[removed_index]),
         complete.combined_operator,
-        removed_response,
+        _combine(remaining),
         tolerance=max(value.tolerance, 1e-12),
     )
 
@@ -356,16 +331,11 @@ def contracts() -> tuple[ComplexContract, ...]:
     )
     result: list[ComplexContract] = []
     for identifier in A_IDS:
-        operator: Callable[[LocalityGravityInput], LocalityGravityLaw] = partial(_law, identifier)
         result.append(
             ComplexContract(
                 ComplexId(identifier), APPENDIX, APPENDIX_SHA256, ComplexLevel.A, (), domain,
-                CodomainSpec(
-                    f"{identifier} certificate",
-                    "typed finite Locality-Driven Gravity response and obstruction residual",
-                    (LocalityGravityLaw,),
-                ),
-                operator,
+                CodomainSpec(f"{identifier} certificate", "typed finite Locality response and obstruction residual", (LocalityGravityLaw,)),
+                partial(_law, identifier),
                 residual=lambda source, output, cid=identifier: _residual(cid, output.residual, source.tolerance),
                 implementation_path=IMPLEMENTATION_PATH,
             )
@@ -375,17 +345,10 @@ def contracts() -> tuple[ComplexContract, ...]:
             ComplexContract(
                 ComplexId(b_id), APPENDIX, APPENDIX_SHA256, ComplexLevel.B,
                 tuple(ComplexId(item) for item in source_ids), domain,
-                CodomainSpec(
-                    f"{b_id} additive synthesis",
-                    "genuine multi-source Locality interaction with non-cancellation energy",
-                    (LocalityGravitySynthesis,),
-                ),
+                CodomainSpec(f"{b_id} additive synthesis", "genuine multi-source Locality interaction", (LocalityGravitySynthesis,)),
                 partial(_b_operator, b_id, source_ids),
                 residual=lambda source, output, cid=b_id: _residual(cid, output.residual, source.tolerance),
-                source_removal_checks=tuple(
-                    partial(_remove_a, b_id, source_ids, index)
-                    for index in range(len(source_ids))
-                ),
+                source_removal_checks=tuple(partial(_remove_a, b_id, source_ids, index) for index in range(len(source_ids))),
                 artifact_spec=artifact,
                 implementation_path=IMPLEMENTATION_PATH,
             )
@@ -395,16 +358,10 @@ def contracts() -> tuple[ComplexContract, ...]:
             ComplexContract(
                 ComplexId(c_id), APPENDIX, APPENDIX_SHA256, ComplexLevel.C,
                 (ComplexId(b_a), ComplexId(b_b)), domain,
-                CodomainSpec(
-                    f"{c_id} spatial closure",
-                    "boundary-closed localized Locality field with exact finite reconstruction identity",
-                    (LocalityGravitySpatialClosure,),
-                ),
+                CodomainSpec(f"{c_id} spatial closure", "boundary-closed localized Locality field", (LocalityGravitySpatialClosure,)),
                 partial(_c_operator, c_id, b_a, b_b),
                 residual=lambda source, output, cid=c_id: _residual(
-                    cid,
-                    (output.boundary_residual, output.reconstruction_residual),
-                    source.tolerance,
+                    cid, (output.boundary_residual, output.reconstruction_residual), source.tolerance
                 ),
                 closure_predicate=lambda output, residual: output.status == "closed"
                 and output.coercivity > 0.0

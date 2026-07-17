@@ -35,6 +35,8 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
     status = _load(arguments.status_dimensions)
     matrix = _load(arguments.matrix_report)
     provenance = _load(arguments.provenance)
+    artifact_coverage = _load(arguments.artifact_coverage)
+    closure_obligations = _load(arguments.closure_obligations)
 
     blockers: list[str] = []
     if not _SHA_RE.fullmatch(arguments.result_commit):
@@ -74,6 +76,26 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
     ):
         blockers.append("source_exactness_incomplete")
 
+    artifact_total = int(artifact_coverage.get("theorem_complexes", 0))
+    complete_artifacts = int(
+        artifact_coverage.get("complete_core_artifact_bundles", 0)
+    )
+    if not bool(artifact_coverage.get("passed")):
+        blockers.append("theorem_artifact_coverage_failed")
+    if artifact_total != total or complete_artifacts != total:
+        blockers.append("theorem_artifact_coverage_incomplete")
+    if int(status.get("artifact_core_bundle_gaps", 0)) != 0:
+        blockers.append("release_status_reports_artifact_gaps")
+
+    open_count = int(status.get("open_and_numerical_candidate_preserved", 0))
+    ledger_count = int(
+        closure_obligations.get("open_or_numerical_candidate_count", -1)
+    )
+    if not bool(closure_obligations.get("all_open_states_represented")):
+        blockers.append("closure_obligation_ledger_incomplete")
+    if ledger_count != open_count:
+        blockers.append("closure_obligation_count_mismatch")
+
     matrix_summary = matrix.get("summary", matrix.get("counts", {}))
     provenance_manifests = provenance.get("manifests")
     provenance_count = (
@@ -88,11 +110,13 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         arguments.status_dimensions,
         arguments.matrix_report,
         arguments.provenance,
+        arguments.artifact_coverage,
+        arguments.closure_obligations,
         arguments.archive_manifest,
         arguments.recertification_manifest,
     )
     payload = {
-        "schema_version": "1.1",
+        "schema_version": "1.2",
         "repository": "pt2710/The-Nothingness-Effect",
         "branch": arguments.branch,
         "result_commit": arguments.result_commit,
@@ -109,8 +133,22 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         "release_status_dimensions": {
             "rows": status.get("rows"),
             "dimensions": dimensions,
-            "open_and_numerical_candidate_preserved": status.get(
-                "open_and_numerical_candidate_preserved"
+            "open_and_numerical_candidate_preserved": open_count,
+            "artifact_core_bundle_gaps": status.get("artifact_core_bundle_gaps"),
+        },
+        "theorem_artifact_coverage": {
+            "theorem_complexes": artifact_total,
+            "complete_core_artifact_bundles": complete_artifacts,
+            "diagnostic_bundles_enriched": artifact_coverage.get(
+                "diagnostic_bundles_enriched"
+            ),
+            "passed": artifact_coverage.get("passed"),
+        },
+        "closure_obligation_ledger": {
+            "open_or_numerical_candidate_count": ledger_count,
+            "counts": closure_obligations.get("counts", {}),
+            "all_open_states_represented": closure_obligations.get(
+                "all_open_states_represented"
             ),
         },
         "effective_matrix_summary": matrix_summary,
@@ -120,8 +158,9 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         "immutable_release_qa_passed": not blockers,
         "claim_boundary": (
             "Runtime implementation, byte-exact source binding, closure status, "
-            "and validation status remain independent release dimensions. OPEN "
-            "and NUMERICAL_CANDIDATE are preserved and are not promoted by this QA."
+            "artifact completeness and validation status remain independent release "
+            "dimensions. OPEN and NUMERICAL_CANDIDATE are preserved and are not "
+            "promoted by this QA."
         ),
     }
     return payload
@@ -134,6 +173,8 @@ def main() -> int:
     parser.add_argument("--status-dimensions", type=Path, required=True)
     parser.add_argument("--matrix-report", type=Path, required=True)
     parser.add_argument("--provenance", type=Path, required=True)
+    parser.add_argument("--artifact-coverage", type=Path, required=True)
+    parser.add_argument("--closure-obligations", type=Path, required=True)
     parser.add_argument(
         "--archive-manifest",
         type=Path,

@@ -12,7 +12,12 @@ import csv
 from dataclasses import fields, is_dataclass, replace
 import json
 from pathlib import Path
+import sys
 from typing import Any
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 import matplotlib
 matplotlib.use("Agg")

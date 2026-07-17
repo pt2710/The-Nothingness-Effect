@@ -7,7 +7,10 @@ from pathlib import Path
 
 import numpy as np
 
-from tools.theorem_diagnostic_artifacts import materialize_contract_diagnostics
+from tools.theorem_diagnostic_artifacts import (
+    _jsonable,
+    materialize_contract_diagnostics,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_elastic_dubler import elastic_dubler_sample
 from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.the_elastic_dubler_effect.source_faithful_contracts import contracts
@@ -20,6 +23,18 @@ def _fixture():
         if str(item.complex_id)=="parity_localized_pdfi_response_operator"
     )
     return sample,contract,evaluate_contract(contract,sample)
+
+
+def test_complex_scalars_are_explicitly_json_serializable():
+    payload={
+        "numpy":_jsonable(np.complex128(1.25-2.5j)),
+        "python":_jsonable(3.0+4.0j),
+    }
+    assert payload=={
+        "numpy":{"real":1.25,"imag":-2.5},
+        "python":{"real":3.0,"imag":4.0},
+    }
+    assert json.loads(json.dumps(payload))==payload
 
 
 def test_diagnostic_bundle_contains_machine_readable_and_visual_evidence(tmp_path: Path):

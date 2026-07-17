@@ -49,6 +49,7 @@ EXPECTED_PROMOTION_PATH_COUNTS = {
     "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_dfi.py": 1,
     "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_finitization.py": 1,
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py": 22,
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py": 16,
 }
 EXPECTED_OVERRIDE_COUNT = sum(EXPECTED_PROMOTION_PATH_COUNTS.values())
 EXPECTED_IMPLEMENTED = BASE_IMPLEMENTED + EXPECTED_OVERRIDE_COUNT
@@ -81,9 +82,7 @@ def test_every_managed_runtime_contract_uses_authoritative_digest():
 def test_foundational_binding_promotes_only_reviewed_complexes():
     statuses = release_statuses()
     rows = [row for row in _raw_matrix() if row["appendix_file"] == FOUNDATIONAL]
-    foundational_contracts = [
-        contract for contract in all_contracts() if contract.appendix == FOUNDATIONAL
-    ]
+    foundational_contracts = [contract for contract in all_contracts() if contract.appendix == FOUNDATIONAL]
     assert len(rows) == 79
     assert len(foundational_contracts) == EXPECTED_FOUNDATIONAL_IMPLEMENTED
     assert sum(statuses[row["complex_id"]] == "implemented" for row in rows) == EXPECTED_FOUNDATIONAL_IMPLEMENTED

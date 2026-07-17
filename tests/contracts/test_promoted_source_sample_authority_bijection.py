@@ -13,6 +13,6 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.source_samples impo
 def test_promoted_source_samples_are_bijective_with_authority_overrides():
     overrides = implementation_status_overrides()
     samples = sample_inputs()
-    assert len(overrides) == 118
-    assert len(samples) == 118
+    assert len(overrides) == 134
+    assert len(samples) == 134
     assert set(samples) == set(overrides)

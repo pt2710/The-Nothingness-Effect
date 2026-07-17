@@ -1,4 +1,4 @@
-"""Deterministic provenance witnesses with Spectrum-of-Infinities extension."""
+"""Deterministic provenance witnesses with Spectrum and Elastic-Dubler extensions."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import numpy as np
 
 from ._source_samples_uncountable_impl import *  # noqa: F401,F403
 from ._source_samples_uncountable_impl import sample_inputs as _base_sample_inputs
+from ._source_samples_elastic_dubler import sample_inputs as _elastic_dubler_samples
 
 from the_nothingness_effect.foundational_architecture.observation_and_collapse.canonical_contracts import (
     A1 as OBS_A1,
@@ -227,7 +228,8 @@ def sample_inputs() -> dict[str, object]:
         **_base_sample_inputs(),
         **_observation_samples(),
         **_spectrum_samples(),
+        **_elastic_dubler_samples(),
     }
-    if len(result) != 96:
-        raise RuntimeError(f"expected 96 recertified samples, found {len(result)}")
+    if len(result) != 118:
+        raise RuntimeError(f"expected 118 recertified samples, found {len(result)}")
     return result

@@ -14,12 +14,14 @@ if str(REPOSITORY_ROOT) not in sys.path:
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
     bind_inventory_rows,
-    bind_provenance_manifest,
     default_artifact_provenance,
     default_implementation_matrix,
-    provenance_binding_report,
     recertified_source_bindings,
     source_binding_report,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
+    bind_provenance_manifest,
+    provenance_binding_report,
 )
 
 
@@ -88,7 +90,7 @@ def export_provenance(
 def _unresolved_provenance_mismatches(
     report: dict[str, object],
 ) -> list[dict[str, str]]:
-    """Return mismatches not covered by the explicit 101-row recertification ledger."""
+    """Return raw mismatches not covered by the explicit recertification ledger."""
 
     recertified = recertified_source_bindings()
     raw = report.get("raw_mismatches", [])
@@ -99,7 +101,7 @@ def _unresolved_provenance_mismatches(
         if not isinstance(item, dict):
             raise RuntimeError("provenance mismatch record must be an object")
         identifier = str(item.get("theorem_complex_id", ""))
-        appendix = str(item.get("appendix_filename", ""))
+        appendix = str(item.get("appendix_file", ""))
         authoritative = str(item.get("authoritative_sha256", ""))
         record = recertified.get(identifier)
         if (
@@ -112,7 +114,7 @@ def _unresolved_provenance_mismatches(
         unresolved.append(
             {
                 "theorem_complex_id": identifier,
-                "appendix_filename": appendix,
+                "appendix_file": appendix,
                 "authoritative_sha256": authoritative,
             }
         )
@@ -151,9 +153,11 @@ if __name__ == "__main__":
         args.provenance,
     )
     unresolved_provenance = _unresolved_provenance_mismatches(provenance_result)
-    provenance_result["explicitly_recertified_mismatches"] = int(
-        provenance_result.get("effective_source_sha_mismatches", 0)
-    ) - len(unresolved_provenance)
+    raw_mismatch_count = int(provenance_result.get("raw_source_sha_mismatches", 0))
+    explicitly_recertified = raw_mismatch_count - len(unresolved_provenance)
+    if explicitly_recertified < 0:
+        raise RuntimeError("provenance recertification count is inconsistent")
+    provenance_result["explicitly_recertified_mismatches"] = explicitly_recertified
     provenance_result["unresolved_source_sha_mismatches"] = len(
         unresolved_provenance
     )

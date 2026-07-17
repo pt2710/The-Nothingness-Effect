@@ -123,7 +123,10 @@ def main() -> int:
     total_rows, status_overrides, effective_mismatches = _matrix_summary(matrix_result)
     if total_rows != 351 or effective_mismatches:
         raise RuntimeError(f"effective matrix is not release-clean: rows={total_rows} mismatches={effective_mismatches}")
-    if args.matrix_only:
+
+    # Provenance must be generated from the current catalog before it is rebound.
+    # A missing --provenance therefore intentionally means matrix-only operation.
+    if args.matrix_only or args.provenance is None:
         print(
             "effective_authority_matrix_exported="
             f"matrix={args.output} rows={total_rows} "

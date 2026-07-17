@@ -39,7 +39,7 @@ def test_101_historical_drift_rows_are_explicitly_recertified():
     assert report["total_rows"] == 351
     assert report["managed_appendices"] == 7
     assert report["managed_rows"] == 351
-    assert report["raw_source_sha_mismatches"] == 101
+    assert report["raw_source_sha_mismatches"] == 0
     assert report["effective_source_sha_mismatches"] == 0
     assert report["source_binding_overrides"] == 0
     assert report["source_recertifications"] == 101

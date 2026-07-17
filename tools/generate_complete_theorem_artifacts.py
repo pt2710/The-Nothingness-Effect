@@ -1,9 +1,10 @@
 """Generate aggregate provenance plus complete theorem diagnostic bundles.
 
-Existing domain-specific suite artifacts are preserved.  Contracts whose generated
+Existing domain-specific suite artifacts are preserved. Contracts whose generated
 files do not yet include machine-readable traces and an informative static plot are
-evaluated with the same deterministic typed samples used by provenance generation
-and receive a compact JSON/CSV/NPZ/2-D diagnostic bundle.  Optional 3-D and
+evaluated with deterministic typed samples. If an already executed A-level suite has
+no reusable typed input, its recorded residual/status manifest is replayed into the
+diagnostic bundle rather than inventing a domain input. Optional 3-D and
 five-coordinate projections are labelled as diagnostics, never physical geometry.
 """
 
@@ -24,13 +25,18 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
     active_contracts,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
+    ContractEvaluation,
     evaluate_contract,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import (
     AdditiveDerivationInput,
     SpatialClosureInput,
 )
-from the_nothingness_effect._runtime.theorem_complex_runtime.types import ComplexLevel
+from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
+    ClosureStatus,
+    ComplexLevel,
+    ResidualResult,
+)
 
 
 def _safe(identifier: str) -> str:
@@ -39,6 +45,51 @@ def _safe(identifier: str) -> str:
 
 def _has_suffix(files: list[str], suffix: str) -> bool:
     return any(str(item).lower().endswith(suffix) for item in files)
+
+
+def _replay_manifest_evaluation(
+    identifier: str,
+    manifest: dict[str, object],
+) -> tuple[dict[str, object], ContractEvaluation]:
+    raw_status = str(manifest.get("closure_status", "open"))
+    try:
+        status = ClosureStatus(raw_status)
+    except ValueError:
+        status = ClosureStatus.OPEN
+    raw_residual = manifest.get("residual_vector", [])
+    residual_values = tuple(float(item) for item in raw_residual) if isinstance(raw_residual, list) else ()
+    if not residual_values:
+        residual_values = (0.0,)
+    tolerances = manifest.get("numeric_tolerances", {})
+    tolerance = 0.0
+    if isinstance(tolerances, dict) and tolerances:
+        tolerance = max(float(item) for item in tolerances.values())
+    approximation = manifest.get("approximation_metadata", {})
+    exact = bool(approximation.get("exact_semantics", False)) if isinstance(approximation, dict) else False
+    passed = status in {ClosureStatus.SATISFIED, ClosureStatus.CLOSED}
+    residual = ResidualResult(
+        f"{identifier}:suite_manifest_replay",
+        residual_values,
+        max(tolerance, 0.0),
+        passed,
+        ClosureStatus.SATISFIED if passed else status,
+        {"source": "executed_domain_suite_manifest"},
+    )
+    value = {
+        "parameters": manifest.get("parameters", {}),
+        "seed": manifest.get("seed", 0),
+        "source": "executed_domain_suite_manifest",
+    }
+    evaluation = ContractEvaluation(
+        identifier,
+        np.asarray(residual_values, dtype=float),
+        status,
+        None,
+        residual,
+        exact,
+        "diagnostic replay of an already executed domain-specific suite manifest",
+    )
+    return value, evaluation
 
 
 def generate_complete(
@@ -54,6 +105,7 @@ def generate_complete(
     catalog = {str(contract.complex_id): contract for contract in active_contracts()}
     samples = _sample_inputs()
     enriched = 0
+    replayed = 0
     records: list[dict[str, object]] = []
 
     for manifest in manifests:
@@ -69,8 +121,10 @@ def generate_complete(
         )
         if needs_bundle:
             contract = catalog[identifier]
+            replay = False
             if identifier in samples:
                 value = samples[identifier]
+                evaluation = evaluate_contract(contract, value)
             elif contract.level is ComplexLevel.B:
                 value = AdditiveDerivationInput(
                     {
@@ -78,6 +132,7 @@ def generate_complete(
                         for index, source_id in enumerate(contract.source_ids)
                     }
                 )
+                evaluation = evaluate_contract(contract, value)
             elif contract.level is ComplexLevel.C:
                 value = SpatialClosureInput(
                     {
@@ -85,12 +140,13 @@ def generate_complete(
                         for index, source_id in enumerate(contract.source_ids)
                     }
                 )
+                evaluation = evaluate_contract(contract, value)
             else:
-                raise RuntimeError(
-                    f"A-level contract lacks deterministic typed sample: {identifier}"
-                )
-            evaluation = evaluate_contract(contract, value)
-            removals = [check(value) for check in contract.source_removal_checks]
+                value, evaluation = _replay_manifest_evaluation(identifier, manifest)
+                replay = True
+            removals = [] if replay else [
+                check(value) for check in contract.source_removal_checks
+            ]
             destination = output_root / "theorem_diagnostics" / _safe(identifier)
             generated = materialize_contract_diagnostics(
                 destination,
@@ -111,7 +167,11 @@ def generate_complete(
                 approximation["diagnostic_projection_claim_boundary"] = (
                     "not physical geometry or empirical validation"
                 )
+                approximation["diagnostic_source"] = (
+                    "executed_domain_suite_manifest" if replay else "typed_contract_evaluation"
+                )
             enriched += 1
+            replayed += int(replay)
 
         records.append(
             {
@@ -144,6 +204,7 @@ def generate_complete(
     summary["complete_core_artifact_bundles"] = len(records) - len(incomplete)
     summary["incomplete_core_artifact_bundles"] = len(incomplete)
     summary["diagnostic_bundles_enriched"] = enriched
+    summary["suite_manifest_replays"] = replayed
     summary["generated_npz_traces"] = sum(
         1 for record in records if bool(record["has_npz"])
     )
@@ -163,6 +224,7 @@ def generate_complete(
         "incomplete_core_artifact_bundles": len(incomplete),
         "incomplete_ids": incomplete,
         "diagnostic_bundles_enriched": enriched,
+        "suite_manifest_replays": replayed,
         "requirements": ["json", "csv", "npz", "png"],
         "claim_boundary": (
             "diagnostic 3-D and five-coordinate projections are not physical geometry, "
@@ -203,7 +265,8 @@ def main() -> int:
     print(
         "theorem_artifact_coverage=passed "
         f"rows={report['theorem_complexes']} "
-        f"enriched={report['diagnostic_bundles_enriched']}"
+        f"enriched={report['diagnostic_bundles_enriched']} "
+        f"replayed={report['suite_manifest_replays']}"
     )
     return 0
 

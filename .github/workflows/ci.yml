@@ -151,6 +151,36 @@ jobs:
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
 
+  authoritative-archive-byte-evidence:
+    runs-on: ubuntu-latest
+    env:
+      AUTHORITY_ARCHIVE_URL: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_URL || vars.TNE_AUTHORITATIVE_ARCHIVE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fetch and verify actual authoritative ZIP bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          ARCHIVE_PATH="${RUNNER_TEMP}/TNE_Authoritative_Appendices.zip"
+          if [[ -n "${AUTHORITY_ARCHIVE_URL}" ]]; then
+            curl --fail --location --retry 3 --retry-all-errors \
+              "${AUTHORITY_ARCHIVE_URL}" \
+              --output "${ARCHIVE_PATH}"
+          fi
+          python tools/verify_authoritative_archive.py \
+            --archive "${ARCHIVE_PATH}" \
+            --output reports/authoritative_archive_byte_verification.json
+      - name: Upload authoritative archive byte evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: authoritative-archive-byte-evidence
+          path: reports/authoritative_archive_byte_verification.json
+          if-no-files-found: error
+
   release-qa:
     needs:
       - core
@@ -158,6 +188,7 @@ jobs:
       - artifact-smoke
       - ai-cpu
       - security-and-provenance-guards
+      - authoritative-archive-byte-evidence
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -175,16 +206,64 @@ jobs:
         with:
           name: effective-artifact-provenance
           path: reports
+      - uses: actions/download-artifact@v4
+        with:
+          name: authoritative-archive-byte-evidence
+          path: reports
       - run: >-
           python tools/export_effective_theorem_matrix.py
           --output reports/effective_theorem_complex_implementation_matrix.csv
           --report reports/effective_theorem_complex_implementation_matrix.json
+      - name: Generate independent release-status dimensions
+        run: >-
+          python tools/build_release_status_dimensions.py
+          --matrix reports/effective_theorem_complex_implementation_matrix.csv
+          --provenance reports/effective_artifact_provenance_manifest.json
+          --csv-output reports/release_status_dimensions.csv
+          --json-output reports/release_status_dimensions.json
       - run: python -m tools.qa_guards
-      - name: Build and assert fail-closed final QA
+      - name: Build repository final QA evidence
         run: >-
           python tools/build_final_qa_manifest.py
-          --output "${RUNNER_TEMP}/final_qa_manifest.json"
+          --output reports/repository_final_qa_manifest.json
           --python-version 3.11
           --dependency-status "pip check passed"
           --source-law-regression-status passed
+      - name: Build immutable branch-head QA package
+        id: immutable
+        continue-on-error: true
+        run: >-
+          python tools/build_immutable_release_qa.py
+          --final-qa reports/repository_final_qa_manifest.json
+          --archive-qa reports/authoritative_archive_byte_verification.json
+          --status-dimensions reports/release_status_dimensions.json
+          --matrix-report reports/effective_theorem_complex_implementation_matrix.json
+          --provenance reports/effective_artifact_provenance_manifest.json
+          --result-commit "${{ github.event.pull_request.head.sha || github.sha }}"
+          --branch "${{ github.head_ref || github.ref_name }}"
+          --ci-conclusion success
+          --ci-run-id "${{ github.run_id }}"
+          --output reports/immutable_final_qa_manifest.json
           --check
+      - name: Upload immutable final-QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: immutable-final-qa-${{ github.event.pull_request.head.sha || github.sha }}
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            reports/authoritative_archive_byte_verification.json
+            reports/effective_theorem_complex_implementation_matrix.csv
+            reports/effective_theorem_complex_implementation_matrix.json
+            reports/effective_artifact_provenance_manifest.json
+            reports/release_status_dimensions.csv
+            reports/release_status_dimensions.json
+            reports/repository_final_qa_manifest.json
+            reports/immutable_final_qa_manifest.json
+            docs/data/authoritative_archive_manifest.json
+            docs/data/source_recertification/authoritative_recertification_101.json
+      - name: Enforce immutable release gate
+        if: always()
+        shell: bash
+        run: test "${{ steps.immutable.outcome }}" = "success"

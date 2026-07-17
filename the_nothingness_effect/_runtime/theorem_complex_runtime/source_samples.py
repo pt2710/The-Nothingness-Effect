@@ -1,4 +1,4 @@
-"""Deterministic provenance witnesses with Spectrum, Elastic-Dubler, and Locality extensions."""
+"""Deterministic provenance witnesses with Spectrum, Elastic-Dubler, Locality, and Black-Hole extensions."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ from ._source_samples_uncountable_impl import *  # noqa: F401,F403
 from ._source_samples_uncountable_impl import sample_inputs as _base_sample_inputs
 from ._source_samples_elastic_dubler import sample_inputs as _elastic_dubler_samples
 from ._source_samples_locality_gravity import sample_inputs as _locality_gravity_samples
+from ._source_samples_black_hole import sample_inputs as _black_hole_samples
 
 from the_nothingness_effect.foundational_architecture.observation_and_collapse.canonical_contracts import (
     A1 as OBS_A1,
@@ -231,7 +232,8 @@ def sample_inputs() -> dict[str, object]:
         **_spectrum_samples(),
         **_elastic_dubler_samples(),
         **_locality_gravity_samples(),
+        **_black_hole_samples(),
     }
-    if len(result) != 134:
-        raise RuntimeError(f"expected 134 recertified samples, found {len(result)}")
+    if len(result) != 145:
+        raise RuntimeError(f"expected 145 recertified samples, found {len(result)}")
     return result

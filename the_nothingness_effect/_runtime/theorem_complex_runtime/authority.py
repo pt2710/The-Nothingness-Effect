@@ -218,25 +218,35 @@ def bind_inventory_rows(
         identifier = row.get("complex_id", "")
         seen.add(identifier)
         recorded_digest = row.get("appendix_source_sha256", "")
-        expected = active.get(row.get("appendix_file", ""))
+        appendix = row.get("appendix_file", "")
+        expected = active.get(appendix)
         row["recorded_appendix_source_sha256"] = recorded_digest
         recertification = recertified.get(identifier)
+        historical_recertification = (
+            recertification is not None
+            and recertification["appendix_file"] == appendix
+            and recertification["authoritative_appendix_sha256"] == expected
+            and recertification["recertification_status"]
+            == "byte_verified_label_reaudited"
+        )
+        row["historical_recertification_status"] = (
+            "byte_verified_label_reaudited" if historical_recertification else ""
+        )
+        row["historical_recertification"] = (
+            "true" if historical_recertification else "false"
+        )
+        if historical_recertification and expected is not None:
+            row["recertified_appendix_source_sha256"] = expected
+
         if expected is None:
             row["source_binding_status"] = "unmanaged"
             row["source_exactness"] = "unverified"
         elif recorded_digest == expected:
             row["source_binding_status"] = "verified"
             row["source_exactness"] = "exact"
-        elif (
-            recertification is not None
-            and recertification["appendix_file"] == row.get("appendix_file", "")
-            and recertification["authoritative_appendix_sha256"] == expected
-            and recertification["recertification_status"]
-            == "byte_verified_label_reaudited"
-        ):
+        elif historical_recertification:
             row["source_binding_status"] = "recertified"
             row["source_exactness"] = "exact"
-            row["recertified_appendix_source_sha256"] = expected
         else:
             row["source_binding_status"] = "mismatch"
             row["source_exactness"] = "stale"
@@ -308,12 +318,17 @@ def source_binding_report(
         raw_rows = list(csv.DictReader(handle))
     bindings = authoritative_bindings(manifest_path)
     effective_rows = bind_inventory_rows(raw_rows, bindings)
+    historical = recertified_source_bindings()
     raw_mismatches = []
     effective_mismatches = []
     recertifications = []
     changes = []
     counts: dict[str, dict[str, int | str]] = {}
+    seen: set[str] = set()
+
     for raw, effective in zip(raw_rows, effective_rows, strict=True):
+        identifier = raw["complex_id"]
+        seen.add(identifier)
         appendix = raw["appendix_file"]
         expected = bindings.get(appendix)
         if expected is not None:
@@ -333,27 +348,41 @@ def source_binding_report(
             else:
                 raw_mismatches.append(
                     {
-                        "complex_id": raw["complex_id"],
+                        "complex_id": identifier,
                         "appendix_file": appendix,
                         "recorded_sha256": raw.get("appendix_source_sha256", ""),
                         "authoritative_sha256": expected,
                     }
                 )
-            if effective["source_binding_status"] == "recertified":
+
+            historical_record = historical.get(identifier)
+            historically_recertified = (
+                historical_record is not None
+                and historical_record["appendix_file"] == appendix
+                and historical_record["authoritative_appendix_sha256"] == expected
+                and historical_record["recertification_status"]
+                == "byte_verified_label_reaudited"
+            )
+            if historically_recertified:
                 summary["recertified"] = int(summary["recertified"]) + 1
                 recertifications.append(
                     {
-                        "complex_id": raw["complex_id"],
+                        "complex_id": identifier,
                         "appendix_file": appendix,
                         "recorded_sha256": raw.get("appendix_source_sha256", ""),
                         "authoritative_sha256": expected,
+                        "current_source_binding_status": effective[
+                            "source_binding_status"
+                        ],
+                        "recertification_status": "byte_verified_label_reaudited",
                     }
                 )
-            elif effective["source_binding_status"] == "mismatch":
+
+            if effective["source_binding_status"] == "mismatch":
                 summary["mismatches"] = int(summary["mismatches"]) + 1
                 effective_mismatches.append(
                     {
-                        "complex_id": raw["complex_id"],
+                        "complex_id": identifier,
                         "appendix_file": appendix,
                         "recorded_sha256": raw.get("appendix_source_sha256", ""),
                         "authoritative_sha256": expected,
@@ -362,15 +391,23 @@ def source_binding_report(
         if effective.get("implementation_status_binding") == "reviewed_override":
             changes.append(
                 {
-                    "complex_id": raw["complex_id"],
+                    "complex_id": identifier,
                     "from": raw.get("implementation_status", ""),
                     "to": effective.get("implementation_status", ""),
                     "reason": effective.get("implementation_status_override_reason", ""),
                     "evidence_path": effective.get("implementation_status_evidence_path", ""),
                 }
             )
+
+    missing_historical = sorted(set(historical) - seen)
+    if missing_historical:
+        raise RuntimeError(
+            "historical recertification references unknown matrix IDs: "
+            f"{missing_historical[:5]}"
+        )
+
     return {
-        "schema_version": "2.0",
+        "schema_version": "2.1",
         "authority_policy": "observational_no_sha_overwrite",
         "source_binding_overrides": 0,
         "bindings": bindings,

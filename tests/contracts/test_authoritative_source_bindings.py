@@ -51,6 +51,7 @@ EXPECTED_PROMOTION_PATH_COUNTS = {
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py": 22,
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py": 16,
     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py": 11,
+    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py": 11,
 }
 EXPECTED_OVERRIDE_COUNT = sum(EXPECTED_PROMOTION_PATH_COUNTS.values())
 EXPECTED_IMPLEMENTED = BASE_IMPLEMENTED + EXPECTED_OVERRIDE_COUNT

@@ -41,6 +41,14 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         blockers.append("invalid_result_commit")
     if arguments.ci_conclusion != "success":
         blockers.append("theorem_complex_ci_not_successful")
+
+    final_qa_commit = str(final_qa.get("repository_result_commit", ""))
+    provenance_commit = str(provenance.get("repository_result_commit", ""))
+    if final_qa_commit != arguments.result_commit:
+        blockers.append("repository_final_qa_commit_mismatch")
+    if provenance_commit != arguments.result_commit:
+        blockers.append("artifact_provenance_commit_mismatch")
+
     if not bool(final_qa.get("final_qa_passed")):
         blockers.append("repository_final_qa_failed")
     blockers.extend(
@@ -84,10 +92,12 @@ def build(arguments: argparse.Namespace) -> dict[str, Any]:
         arguments.recertification_manifest,
     )
     payload = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "repository": "pt2710/The-Nothingness-Effect",
         "branch": arguments.branch,
         "result_commit": arguments.result_commit,
+        "repository_final_qa_commit": final_qa_commit,
+        "artifact_provenance_commit": provenance_commit,
         "ci_conclusion": arguments.ci_conclusion,
         "ci_run_id": arguments.ci_run_id,
         "authority_archive_sha256": archive_qa.get("actual_archive_sha256"),

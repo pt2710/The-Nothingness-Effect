@@ -2,6 +2,7 @@
 
 Each source-removal witness is recomputed from the surviving typed source
 channels. No complete response is compared to an artificial all-zero result.
+The declared ``ablation_mode`` is therefore ``operator_recomputation``.
 """
 from __future__ import annotations
 from functools import partial
@@ -13,6 +14,7 @@ from . import canonical_contracts as legacy
 APPENDIX=legacy.APPENDIX
 APPENDIX_SHA256=legacy.APPENDIX_SHA256
 IMPLEMENTATION_PATH="the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/source_faithful_contracts.py"
+ABLATION_MODE="operator_recomputation"
 B_IDS=tuple(item[0] for item in legacy.B_SPECS)
 C_ID=legacy.C_ID
 
@@ -124,7 +126,7 @@ def _c_operator(value,active=(True,True,True)):
 def _residual(name,values,tolerance):
     vector=tuple(float(item) for item in np.ravel(np.real(values)))
     norm=float(np.linalg.norm(vector))
-    return ResidualResult(name,vector,tolerance,norm<=tolerance,ClosureStatus.SATISFIED if norm<=tolerance else ClosureStatus.OPEN,{"source_faithful":True,"independent_observed_reference":True})
+    return ResidualResult(name,vector,tolerance,norm<=tolerance,ClosureStatus.SATISFIED if norm<=tolerance else ClosureStatus.OPEN,{"source_faithful":True,"independent_observed_reference":True,"ablation_mode":ABLATION_MODE})
 
 
 def _remove_a(identifier,removed_index,value):

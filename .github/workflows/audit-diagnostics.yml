@@ -206,7 +206,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          {
+          (
             python tools/export_effective_theorem_matrix.py \
               --output reports/effective_theorem_complex_implementation_matrix.csv \
               --report reports/effective_theorem_complex_implementation_matrix.json
@@ -227,7 +227,7 @@ jobs:
               exit ${matrix_status}
             fi
             exit ${provenance_status}
-          } > qa-rebuild-diagnostic.log 2>&1
+          ) > qa-rebuild-diagnostic.log 2>&1
           echo "$?" > qa-rebuild-exit-code.txt
           exit 0
       - name: Capture QA-guard diagnostics

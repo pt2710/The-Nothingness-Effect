@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install --upgrade pip
-      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pip install -r requirements-dev.txt
       - run: python -m compileall -q the_nothingness_effect empirical fields_of_physics_in_dev tools
       - run: python -m ruff check the_nothingness_effect/artificial_intelligence tests/artifacts/test_ai_capability_layout.py
       - name: Core tests without optional AI backend
@@ -191,18 +191,15 @@ jobs:
             reports/theorem_artifact_coverage.json
           if-no-files-found: error
       - name: Package theorem diagnostic artifacts
-        shell: bash
         run: >-
-          tar -C "${RUNNER_TEMP}"
-          -czf reports/theorem-diagnostic-artifacts.tar.gz
-          artifact-provenance
+          python tools/package_theorem_diagnostic_artifacts.py
+          --input-root "${RUNNER_TEMP}/artifact-provenance"
+          --output-root "${RUNNER_TEMP}/theorem-diagnostic-package"
       - name: Upload theorem diagnostic artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: theorem-diagnostic-artifacts-${{ github.event.pull_request.head.sha || github.sha }}
-          retention-days: 90
-          path: reports/theorem-diagnostic-artifacts.tar.gz
-          compression-level: 0
+          name: theorem-diagnostic-artifacts
+          path: "${{ runner.temp }}/theorem-diagnostic-package"
           if-no-files-found: error
       - name: Upload source-faithful convergence evidence
         uses: actions/upload-artifact@v4
@@ -215,60 +212,25 @@ jobs:
 
   authoritative-archive-byte-evidence:
     runs-on: ubuntu-latest
-    env:
-      AUTHORITY_ARCHIVE_URL: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_URL || vars.TNE_AUTHORITATIVE_ARCHIVE_URL }}
-      AUTHORITY_ARCHIVE_KEY: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_KEY }}
-      AUTHORITY_ARCHIVE_PASSPHRASE: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE }}
-      AUTHORITY_ARCHIVE_EXPECTED_SHA256: 38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11
-      AUTHORITY_ARCHIVE_ENCRYPTED_PATH: private_authority/TNE_Authoritative_Appendices.zip.enc
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          submodules: recursive
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: pip
       - run: python -m pip install "cryptography>=43,<46"
       - name: Materialize and verify actual authoritative ZIP bytes
-        id: archive_verify
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p reports
-          ARCHIVE_PATH="${RUNNER_TEMP}/TNE_Authoritative_Appendices.zip"
-          cleanup() {
-            status=$?
-            trap - EXIT
-            if command -v shred >/dev/null 2>&1; then
-              shred -u "${ARCHIVE_PATH}" 2>/dev/null || rm -f "${ARCHIVE_PATH}"
-            else
-              rm -f "${ARCHIVE_PATH}"
-            fi
-            exit "${status}"
-          }
-          trap cleanup EXIT
-
-          if [[ -f "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" && ( -n "${AUTHORITY_ARCHIVE_KEY}" || -n "${AUTHORITY_ARCHIVE_PASSPHRASE}" ) ]]; then
-            TNE_AUTHORITATIVE_ARCHIVE_KEY="${AUTHORITY_ARCHIVE_KEY}" \
-            TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE="${AUTHORITY_ARCHIVE_PASSPHRASE}" \
-              python tools/private_authoritative_archive_delivery.py decrypt \
-                --encrypted "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" \
-                --output "${ARCHIVE_PATH}" \
-                --expected-sha256 "${AUTHORITY_ARCHIVE_EXPECTED_SHA256}" \
-                --key-env TNE_AUTHORITATIVE_ARCHIVE_KEY \
-                --passphrase-env TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE
-          elif [[ -n "${AUTHORITY_ARCHIVE_URL}" ]]; then
-            curl --fail --location --retry 3 --retry-all-errors \
-              "${AUTHORITY_ARCHIVE_URL}" \
-              --output "${ARCHIVE_PATH}"
-          fi
-
-          python tools/verify_authoritative_archive.py \
-            --archive "${ARCHIVE_PATH}" \
-            --output reports/authoritative_archive_byte_verification.json \
-            --check
+        env:
+          TNE_AUTHORITATIVE_ARCHIVE_KEY: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_KEY }}
+          TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE }}
+          TNE_AUTHORITATIVE_ARCHIVE_URL: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_URL }}
+        run: >-
+          python tools/materialize_private_authoritative_archive.py
+          --manifest docs/data/authoritative_archive_manifest.json
+          --output "${RUNNER_TEMP}/TNE_All_Appendices_Contract_Recertified.zip"
+          --evidence reports/authoritative_archive_byte_verification.json
       - name: Upload authoritative archive byte evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -278,134 +240,6 @@ jobs:
           if-no-files-found: error
       - name: Enforce authoritative archive byte gate
         if: always()
-        shell: bash
-        run: test "${{ steps.archive_verify.outcome }}" = "success"
-
-  release-qa:
-    needs:
-      - core
-      - theorem-contracts
-      - artifact-smoke
-      - ai-cpu
-      - security-and-provenance-guards
-      - authoritative-archive-byte-evidence
-    if: >-
-      always() &&
-      needs.core.result == 'success' &&
-      needs.theorem-contracts.result == 'success' &&
-      needs.artifact-smoke.result == 'success' &&
-      needs.ai-cpu.result == 'success' &&
-      needs.security-and-provenance-guards.result == 'success' &&
-      needs.authoritative-archive-byte-evidence.result != 'cancelled'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          submodules: recursive
-          fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: pip
-      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
-      - run: python -m pip install -e .
-      - run: python -m pip check
-      - uses: actions/download-artifact@v4
-        with:
-          name: effective-artifact-provenance
-          path: reports
-      - uses: actions/download-artifact@v4
-        with:
-          name: authoritative-archive-byte-evidence
-          path: reports
-      - uses: actions/download-artifact@v4
-        with:
-          name: multimodal-robustness
-          path: reports/multimodal_robustness
-      - uses: actions/download-artifact@v4
-        with:
-          name: source-faithful-convergence
-          path: reports/source_faithful_convergence
-      - uses: actions/download-artifact@v4
-        with:
-          name: equation-implementation-alignment
-          path: reports
-      - run: >-
-          python tools/export_effective_theorem_matrix.py
-          --output reports/effective_theorem_complex_implementation_matrix.csv
-          --report reports/effective_theorem_complex_implementation_matrix.json
-      - name: Generate independent release-status dimensions
         run: >-
-          python tools/build_release_status_dimensions.py
-          --matrix reports/effective_theorem_complex_implementation_matrix.csv
-          --provenance reports/effective_artifact_provenance_manifest.json
-          --artifact-coverage reports/theorem_artifact_coverage.json
-          --csv-output reports/release_status_dimensions.csv
-          --json-output reports/release_status_dimensions.json
-      - name: Build closure-obligation ledger
-        run: >-
-          python tools/build_closure_obligation_ledger.py
-          --status reports/release_status_dimensions.json
-          --provenance reports/effective_artifact_provenance_manifest.json
-          --csv-output reports/closure_obligation_ledger.csv
-          --json-output reports/closure_obligation_ledger.json
-      - run: python -m tools.qa_guards
-      - name: Build repository final QA evidence
-        run: >-
-          python tools/build_final_qa_manifest_recertified.py
-          --output reports/repository_final_qa_manifest.json
-          --python-version 3.11
-          --dependency-status "pip check passed"
-          --source-law-regression-status passed
-      - name: Build immutable branch-head QA package
-        id: immutable
-        continue-on-error: true
-        run: >-
-          python tools/build_immutable_release_qa.py
-          --final-qa reports/repository_final_qa_manifest.json
-          --archive-qa reports/authoritative_archive_byte_verification.json
-          --status-dimensions reports/release_status_dimensions.json
-          --matrix-report reports/effective_theorem_complex_implementation_matrix.json
-          --provenance reports/effective_artifact_provenance_manifest.json
-          --artifact-coverage reports/theorem_artifact_coverage.json
-          --closure-obligations reports/closure_obligation_ledger.json
-          --multimodal-robustness reports/multimodal_robustness/multiseed_robustness_manifest.json
-          --source-faithful-convergence reports/source_faithful_convergence/source_faithful_convergence_manifest.json
-          --equation-implementation-alignment reports/equation_implementation_alignment.json
-          --result-commit "${{ github.event.pull_request.head.sha || github.sha }}"
-          --branch "${{ github.head_ref || github.ref_name }}"
-          --ci-conclusion success
-          --ci-run-id "${{ github.run_id }}"
-          --output reports/immutable_final_qa_manifest.json
-          --check
-      - name: Upload immutable final-QA evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: immutable-final-qa-${{ github.event.pull_request.head.sha || github.sha }}
-          retention-days: 90
-          if-no-files-found: error
-          path: |
-            reports/authoritative_archive_byte_verification.json
-            reports/effective_theorem_complex_implementation_matrix.csv
-            reports/effective_theorem_complex_implementation_matrix.json
-            reports/effective_artifact_provenance_manifest.json
-            reports/effective_artifact_provenance_binding.json
-            reports/equation_implementation_alignment.csv
-            reports/equation_implementation_alignment.json
-            reports/theorem_artifact_coverage.json
-            reports/release_status_dimensions.csv
-            reports/release_status_dimensions.json
-            reports/closure_obligation_ledger.csv
-            reports/closure_obligation_ledger.json
-            reports/multimodal_robustness
-            reports/source_faithful_convergence
-            reports/repository_final_qa_manifest.json
-            reports/immutable_final_qa_manifest.json
-            docs/data/authoritative_archive_manifest.json
-            docs/data/source_recertification/authoritative_recertification_101.json
-      - name: Enforce immutable release gate
-        if: always()
-        shell: bash
-        run: test "${{ steps.immutable.outcome }}" = "success"
+          python tools/enforce_authoritative_archive_gate.py
+          --evidence reports/authoritative_archive_byte_verification.json

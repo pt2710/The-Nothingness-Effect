@@ -1,12 +1,14 @@
 {
-  "schema_version": "historical-pointer-1.1",
+  "schema_version": "historical-pointer-1.2",
   "status": "superseded_historical_snapshot",
   "historical_snapshot_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
   "current_authoritative_work_branch": "codex/tne-authoritative-source-recertification",
-  "current_verified_repository_head": "8976b7164697c0af49f21aa02101c364407dcad5",
-  "current_ci_run_id": "29624450045",
-  "current_audit_run_id": "29624450083",
-  "current_internal_qa": {
+  "current_repository_head": "363436da1854f4b943ba5da1b63c237880d39460",
+  "latest_fully_verified_implementation_head": "8976b7164697c0af49f21aa02101c364407dcad5",
+  "latest_verified_ci_run_id": "29624450045",
+  "latest_verified_audit_run_id": "29624450083",
+  "current_head_change_scope": "metadata_only_current_status_pointer",
+  "latest_verified_internal_qa": {
     "core": "passed",
     "theorem_contracts": "passed",
     "artifact_smoke": "passed",
@@ -16,7 +18,7 @@
     "qa_guards": "passed",
     "repository_final_qa": "passed"
   },
-  "current_effective_inventory": {
+  "latest_verified_effective_inventory": {
     "total": 351,
     "implemented": 351,
     "proxy": 0,
@@ -25,7 +27,7 @@
     "source_exact": 351,
     "artifact_core_bundles_complete": 351
   },
-  "current_closure_dimensions": {
+  "latest_verified_closure_dimensions": {
     "satisfied": 259,
     "closed": 14,
     "open": 49,
@@ -38,6 +40,6 @@
     "authoritative_archive_sha256_unavailable_in_ci"
   ],
   "authoritative_archive_expected_sha256": "38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11",
-  "current_immutable_qa_artifact": "immutable-final-qa-8976b7164697c0af49f21aa02101c364407dcad5",
-  "claim_boundary": "This file no longer reports the obsolete 195/156 workstate as current. The generated immutable QA artifact is authoritative for the current head. Runtime implementation, source exactness, closure status, validation status, and archive-byte release authority remain independent."
+  "latest_verified_immutable_qa_artifact": "immutable-final-qa-8976b7164697c0af49f21aa02101c364407dcad5",
+  "claim_boundary": "This file no longer reports the obsolete 195/156 workstate as current. Runtime implementation, source exactness, closure status, validation status, and archive-byte release authority remain independent. The metadata-only current head does not alter the verified implementation state."
 }

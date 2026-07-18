@@ -14,15 +14,24 @@ from the_nothingness_effect._runtime.theorem_complex_runtime import (
     SimulationResult,
     evaluate_contract,
 )
+from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_black_hole import (
+    sample_inputs as black_hole_samples,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_elastic_dubler import (
+    sample_inputs as elastic_dubler_samples,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_elastic_pi_ripples import (
+    sample_inputs as elastic_pi_ripple_samples,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime._source_samples_locality_gravity import (
+    sample_inputs as locality_gravity_samples,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.artifacts import (
     write_artifact_manifest,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     build_manifest,
     git_commit,
-)
-from the_nothingness_effect._runtime.theorem_complex_runtime.source_samples import (
-    sample_inputs,
 )
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts import (
     START_COMMIT,
@@ -55,6 +64,20 @@ def _sample_count(value: object) -> int:
     return 1
 
 
+def _physical_samples() -> dict[str, object]:
+    """Return only physical typed samples that have no optional AI backend."""
+
+    samples: dict[str, object] = {}
+    for factory in (
+        elastic_dubler_samples,
+        locality_gravity_samples,
+        black_hole_samples,
+        elastic_pi_ripple_samples,
+    ):
+        samples.update(factory())
+    return samples
+
+
 def _sample_for_contract(
     contract: ComplexContract,
     typed_samples: dict[str, object],
@@ -83,7 +106,7 @@ def run_active_suite(
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     fallback = fixture()
-    typed_samples = sample_inputs()
+    typed_samples = _physical_samples()
     active = tuple(contracts)
     evaluations = []
     for contract in active:
@@ -140,7 +163,7 @@ def run_active_suite(
             evaluation.status,
             {
                 "module": module,
-                "fixture": "contract-specific-authoritative-v4",
+                "fixture": "contract-specific-authoritative-v5",
                 "sample_type": type(value).__name__,
                 "sample_count": _sample_count(value),
             },

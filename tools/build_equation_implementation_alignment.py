@@ -17,6 +17,7 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.catalog import (
 
 DEFAULT_MATRIX=Path("docs/data/theorem_complex_implementation_matrix.csv")
 SOURCE_FAITHFUL_OVERRIDE=Path("docs/data/authority_overrides/source_faithful_higher_order.json")
+SPECIALIZED_EVIDENCE=Path("docs/data/authority_overrides/source_faithful_specialized_paths.json")
 
 
 def _callable_name(value: Any) -> tuple[str,str]:
@@ -34,6 +35,13 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
     override_payload=json.loads(SOURCE_FAITHFUL_OVERRIDE.read_text(encoding="utf-8"))
     correction_records=override_payload["implementation_status_overrides"]
     corrected_ids=set(correction_records)
+    specialized_payload=json.loads(SPECIALIZED_EVIDENCE.read_text(encoding="utf-8"))
+    specialized_paths=specialized_payload["specialized_evidence_paths"]
+    unknown_specialized=set(specialized_paths)-corrected_ids
+    if unknown_specialized:
+        raise RuntimeError(
+            f"specialized evidence without source-faithful correction: {sorted(unknown_specialized)}"
+        )
     records=[]
     errors=[]
     for row in rows:
@@ -50,7 +58,8 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
         equation_labels=[item.strip() for item in row.get("equation_labels","").split(";") if item.strip()]
         source_ids=[str(item) for item in contract.source_ids]
         declared_evidence_path=(
-            correction_records.get(identifier,{}).get("evidence_path","")
+            specialized_paths.get(identifier)
+            or correction_records.get(identifier,{}).get("evidence_path","")
         )
         evidence_path_exists=(
             bool(declared_evidence_path)
@@ -96,6 +105,7 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
         "schema_version":"1.1","rows":len(records),
         "complete_mappings":sum(bool(row["mapping_complete"]) for row in records),
         "source_faithful_corrections":sum(bool(row["source_faithful_formula_correction"]) for row in records),
+        "specialized_evidence_paths":len(specialized_paths),
         "first_labels":sum(bool(row["first_label"]) for row in records),
         "equation_labels":sum(int(row["equation_label_count"]) for row in records),
         "errors":errors,"passed":len(records)==351 and not errors,

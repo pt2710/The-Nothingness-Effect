@@ -3,7 +3,7 @@
   "status": "superseded_historical_snapshot",
   "historical_snapshot_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
   "current_authoritative_work_branch": "codex/tne-authoritative-source-recertification",
-  "current_repository_head": "363436da1854f4b943ba5da1b63c237880d39460",
+  "current_repository_head": "9aa52a2068b8ea71bf402f1c248db3d8972390b2",
   "latest_fully_verified_implementation_head": "8976b7164697c0af49f21aa02101c364407dcad5",
   "latest_verified_ci_run_id": "29624450045",
   "latest_verified_audit_run_id": "29624450083",

@@ -1,11 +1,11 @@
 from pathlib import Path
 import argparse
 
-from the_nothingness_effect.fluctuation_and_elastic_dynamics.artifacts import run_suite as _run
+from the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.authoritative_artifacts import run_suite as _run
 
 
 def run_suite(output_dir: str | Path, *, seed: int = 0):
-    return _run("elastic_pi_norm", output_dir, seed=seed)
+    return _run(output_dir, seed=seed)
 
 
 if __name__ == "__main__":

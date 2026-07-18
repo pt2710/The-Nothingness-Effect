@@ -17,10 +17,12 @@ def black_hole_sample() -> BlackHoleInput:
     elasticity = 2.0
     entropy = 1.0 - 0.2 * coordinate
     mass = 2.0 + 0.25 * coordinate
-    hawking_flux = np.exp(-entropy / elasticity) / mass**2
+    elastic_pi = np.exp(-entropy / elasticity)
+    hawking_flux = elastic_pi / mass**2
     relaxation_flux = np.maximum(-np.gradient(entropy, step, edge_order=2), 0.0)
     observer_signal = coordinate
-    threshold = 0.5
+    observer_gradient = np.abs(np.gradient(elastic_pi, coordinate, edge_order=2))
+    threshold = 0.5 * float(np.min(observer_gradient))
     visibility = 1.0 / (1.0 + np.exp(-(observer_signal - threshold) / elasticity))
     deformation = 0.1 + 0.04 * np.sin(2.0 * np.pi * coordinate)
     decay = np.exp(-(coordinate - coordinate[0]) / elasticity)

@@ -13,7 +13,7 @@ _DFI_OLD = (
 )
 _DFI_NEW = (
     "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "dynamic_fluctuation_index.recertified_contracts"
+    "dynamic_fluctuation_index.closure_contracts"
 )
 _FOUNDATIONAL_PREFIX = "the_nothingness_effect.foundational_architecture."
 _FOUNDATIONAL_RECERTIFIED = (

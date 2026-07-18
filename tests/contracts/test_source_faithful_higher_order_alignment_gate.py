@@ -68,5 +68,8 @@ def test_specialized_formula_evidence_has_exact_recomputation_and_negative_tests
         assert identifier == "parity_elastic_spectral_spatial_closure"
         assert test_path.is_file()
         test_text = test_path.read_text(encoding="utf-8")
-        assert "remains_open" in test_text
+        assert "ClosureStatus.OPEN" in test_text
+        assert "coefficient_residual > 0.0" in test_text
+        assert "not evaluation.residual.passed" in test_text
         assert "source_removal_checks" in test_text
+        assert "necessity_residual > 0.0" in test_text

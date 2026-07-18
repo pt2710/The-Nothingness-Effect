@@ -13,13 +13,14 @@ from .recertified_contracts import contracts as _recertified_contracts
 def run_suite(output_dir: str | Path, *, seed: int = 0):
     """Run the existing deterministic DFI producer with recertified contracts.
 
-    The base producer imports ``contracts`` at execution time.  The temporary
-    binding keeps all historical artifact formats stable while ensuring the
-    closure ledger is generated from the authoritative A04/B02 operators.
+    The recertified tuple is materialized before the temporary module binding.
+    This preserves the historical artifact format without making the adapter's
+    own ``contracts`` function recursively call itself.
     """
 
+    recertified = _recertified_contracts()
     original = _legacy_contracts.contracts
-    _legacy_contracts.contracts = _recertified_contracts
+    _legacy_contracts.contracts = lambda: recertified
     try:
         return _base.run_suite("dfi", output_dir, seed=seed)
     finally:

@@ -1,258 +1,43 @@
 {
-  "appendix_source_checksum_verification": {
-    "appendix_checksum_verified": true,
-    "appendix_counts": {
-      "appendix_canonical_self_negating_involution_flowpoint.tex": {
-        "A": 4,
-        "B": 2,
-        "C": 1,
-        "total": 7
-      },
-      "appendix_the_completeness_theorem.tex": {
-        "A": 9,
-        "B": 4,
-        "C": 2,
-        "total": 15
-      },
-      "appendix_tne_artificial_intelligence_architechture.tex": {
-        "A": 40,
-        "B": 21,
-        "C": 10,
-        "total": 71
-      },
-      "appendix_tne_fluctuation_and_elastic_dynamics.tex": {
-        "A": 22,
-        "B": 10,
-        "C": 4,
-        "total": 36
-      },
-      "appendix_tne_foundational_closure_architecture.tex": {
-        "A": 43,
-        "B": 22,
-        "C": 14,
-        "total": 79
-      },
-      "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": {
-        "A": 82,
-        "B": 37,
-        "C": 17,
-        "total": 136
-      },
-      "appendix_tne_mathematical_closure_architecture.tex": {
-        "A": 4,
-        "B": 2,
-        "C": 1,
-        "total": 7
-      }
-    },
-    "level_counts": {
-      "A": 204,
-      "B": 98,
-      "C": 49
-    },
-    "missing_equation_labels": 0,
-    "missing_first_labels": 0,
-    "verified_appendix_files": 7,
-    "verified_equation_labels": 3722,
-    "verified_first_labels": 351
+  "schema_version": "historical-pointer-1.0",
+  "status": "superseded_historical_snapshot",
+  "historical_snapshot_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
+  "current_authoritative_work_branch": "codex/tne-authoritative-source-recertification",
+  "current_verified_repository_head": "cd3e8ac7841f8e60906002a976c15c3e1e5a6d9b",
+  "current_ci_run_id": "29624077152",
+  "current_audit_run_id": "29624077153",
+  "current_internal_qa": {
+    "core": "passed",
+    "theorem_contracts": "passed",
+    "artifact_smoke": "passed",
+    "ai_cpu": "passed",
+    "security_and_provenance": "passed",
+    "layout": "passed",
+    "qa_guards": "passed",
+    "repository_final_qa": "passed"
   },
-  "artifact_summary": {
-    "animation_generators": 33,
-    "deterministic_seed": 0,
-    "generated_static_figures": 333,
-    "generated_tables": 299,
-    "producer_local_animations": 137,
-    "producer_local_audio_files": 20,
-    "producer_local_manifests": 202,
-    "theorem_manifests": 195
+  "current_effective_inventory": {
+    "total": 351,
+    "implemented": 351,
+    "proxy": 0,
+    "dependency_downgrades": 0,
+    "unresolved_implemented_dependencies": 0,
+    "source_exact": 351,
+    "artifact_core_bundles_complete": 351
   },
-  "changes": {
-    "modified_files": 2113,
-    "new_files": 5129,
-    "total_changed_files": 7242
+  "current_closure_dimensions": {
+    "satisfied": 259,
+    "closed": 14,
+    "open": 49,
+    "numerical_candidate": 29,
+    "open_and_numerical_candidate_preserved": 78
   },
-  "claim_boundary": "finite computational support; not a formal proof substitute",
-  "default_branch": "main",
-  "dependency_status": "pip check passed",
-  "entrypoint_execution": {
-    "simulation": {
-      "failed": 0,
-      "passed": 37,
-      "timeout": 0
-    },
-    "test": {
-      "failed": 0,
-      "passed": 37,
-      "timeout": 0
-    }
-  },
-  "python_version": "3.14.3",
-  "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
-  "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
-  "repository_revision_plan": {
-    "reviewed_partial_alternative": 27,
-    "reviewed_present": 9,
-    "reviewed_relocated": 130,
-    "reviewed_removed_superseded": 4
-  },
-  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
-  "result_commit_note": "This is the immutable implementation/artifact source commit immediately before the final QA report commit.",
-  "schema_version": "1.0",
-  "security_confirmation": "No authoritative appendix .tex file was copied into, tracked by, committed to, or pushed to the GitHub repository.",
-  "source_law_regression_status": "passed",
-  "tests": {
-    "failed": 0,
-    "passed": 827,
-    "runtime_seconds": 627.79,
-    "skipped": 0,
-    "warnings": 8
-  },
-  "theorem_inventory": {
-    "A": 204,
-    "B": 98,
-    "C": 49,
-    "blocked_B": 0,
-    "blocked_C": 0,
-    "carrier_conflicts": 0,
-    "duplicate_complex_ids": 0,
-    "implemented": 195,
-    "implemented_A": 101,
-    "implemented_B": 64,
-    "implemented_C": 30,
-    "not_implemented": 0,
-    "proxy_only": 156,
-    "total": 351
-  },
-  "tracked_tex_files": [],
-  "unresolved_internal_dependencies": [
-    {
-      "complex_id": "cross_modal_generalization_collapse_transfer",
-      "source_id": "soinet_cross_modal_transfer_generalization_and_dual_stability"
-    },
-    {
-      "complex_id": "cross_modal_generalization_collapse_transfer",
-      "source_id": "soi_cross_domain_generalization_and_collapse"
-    },
-    {
-      "complex_id": "entropic_hyperparameter_stability_margin",
-      "source_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap"
-    },
-    {
-      "complex_id": "entropic_hyperparameter_stability_margin",
-      "source_id": "hyper_parameter_stability_wedge_instability_lobe"
-    },
-    {
-      "complex_id": "entropy_spectral_phase_locking_operator",
-      "source_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet"
-    },
-    {
-      "complex_id": "entropy_spectral_phase_locking_operator",
-      "source_id": "spectral_phase_locking_and_collapse_in_soinet"
-    },
-    {
-      "complex_id": "epoch_support_commutator_closure",
-      "source_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing"
-    },
-    {
-      "complex_id": "epoch_support_commutator_closure",
-      "source_id": "epoch_operator_closure_backprop_optimiser_induced_resonance"
-    },
-    {
-      "complex_id": "error_entropy_dissipation_functional",
-      "source_id": "soinet_error_contraction_and_dual_error_orthogonality"
-    },
-    {
-      "complex_id": "error_entropy_dissipation_functional",
-      "source_id": "soi_entropy_minimization_and_entropic_catastrophe"
-    },
-    {
-      "complex_id": "exhaustion_parseval_coverage_energy",
-      "source_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift"
-    },
-    {
-      "complex_id": "exhaustion_parseval_coverage_energy",
-      "source_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch"
-    },
-    {
-      "complex_id": "expressivity_meta_learnability_stability_functional",
-      "source_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle"
-    },
-    {
-      "complex_id": "expressivity_meta_learnability_stability_functional",
-      "source_id": "soinet_meta_learnability_dual_closure"
-    },
-    {
-      "complex_id": "flowpoint_certified_dfi_validation_functional",
-      "source_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity"
-    },
-    {
-      "complex_id": "flowpoint_certified_dfi_validation_functional",
-      "source_id": "dfi_flowpoint_consistency_and_interface_inconsistency"
-    },
-    {
-      "complex_id": "flowpoint_certified_dfi_validation_functional",
-      "source_id": "dfi_simulation_consistency_and_simulation_breakdown"
-    },
-    {
-      "complex_id": "modality_compositionality_collapse_connection",
-      "source_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle"
-    },
-    {
-      "complex_id": "modality_spectrum_representation_coupling",
-      "source_id": "soinet_modality_invariant_learning_and_universal_adaptation"
-    },
-    {
-      "complex_id": "modality_spectrum_representation_coupling",
-      "source_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability"
-    },
-    {
-      "complex_id": "parity_orthogonal_shell_growth_connection",
-      "source_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination"
-    },
-    {
-      "complex_id": "parity_orthogonal_shell_growth_connection",
-      "source_id": "prime_shell_growth_regularity_shell_instability_phase_slips"
-    },
-    {
-      "complex_id": "parity_resolved_autocorrelation_operator",
-      "source_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component"
-    },
-    {
-      "complex_id": "parity_resolved_autocorrelation_operator",
-      "source_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines"
-    },
-    {
-      "complex_id": "quasicrystal_soi_annealing_transport",
-      "source_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage"
-    },
-    {
-      "complex_id": "quasicrystal_soi_annealing_transport",
-      "source_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
-    },
-    {
-      "complex_id": "stack_domain_generalization_transport",
-      "source_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality"
-    },
-    {
-      "complex_id": "stack_domain_generalization_transport",
-      "source_id": "soi_cross_domain_generalization_and_collapse"
-    },
-    {
-      "complex_id": "support_transport_drift_certificate",
-      "source_id": "qenn::dual_support_equivalence_support_mismatch_leakage"
-    },
-    {
-      "complex_id": "support_transport_drift_certificate",
-      "source_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift"
-    },
-    {
-      "complex_id": "universalization_cloning_obstruction_functional",
-      "source_id": "soinet_universal_generalization_principle_failure_brittleness_duality"
-    },
-    {
-      "complex_id": "universalization_cloning_obstruction_functional",
-      "source_id": "soinet_universal_cloning_principle_cloning_failure_duality"
-    }
+  "current_release_status": "blocked",
+  "current_release_blockers": [
+    "authoritative_archive_byte_verification_failed",
+    "authoritative_archive_sha256_unavailable_in_ci"
   ],
-  "work_branch": "codex/tne-architecture-and-theorem-complex-migration"
+  "authoritative_archive_expected_sha256": "38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11",
+  "current_immutable_qa_artifact": "immutable-final-qa-cd3e8ac7841f8e60906002a976c15c3e1e5a6d9b",
+  "claim_boundary": "This file no longer reports the obsolete 195/156 workstate as current. The generated immutable QA artifact is authoritative for the current head. Runtime implementation, source exactness, closure status, validation status, and archive-byte release authority remain independent."
 }

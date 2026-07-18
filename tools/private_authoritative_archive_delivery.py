@@ -1,8 +1,10 @@
 """Encrypt or decrypt the authoritative TNE appendix ZIP without publishing plaintext.
 
 The envelope uses AES-256-GCM. The exact authoritative ZIP bytes are encrypted
-locally, and only the authenticated ciphertext is tracked. The 256-bit key is
-stored in a GitHub Actions secret and is never written to the repository.
+locally, and only the authenticated ciphertext is tracked. Actions may obtain
+the AES key either from a dedicated URL-safe base64 key secret or derive it
+from the existing high-entropy archive passphrase. Neither secret is written
+to the repository.
 """
 
 from __future__ import annotations
@@ -22,6 +24,9 @@ MAGIC = b"TNEAUTH1"
 NONCE_BYTES = 12
 KEY_BYTES = 32
 AAD_PREFIX = b"TNE authoritative appendix archive\x00"
+KDF_CONTEXT = b"TNE authoritative appendix archive passphrase\x00"
+KDF_ITERATIONS = 600_000
+MIN_PASSPHRASE_CHARACTERS = 32
 
 
 class DeliveryError(RuntimeError):
@@ -52,11 +57,37 @@ def decode_key(value: str) -> bytes:
     return key
 
 
-def associated_data(expected_sha256: str) -> bytes:
+def _normalized_sha256(expected_sha256: str) -> str:
     normalized = expected_sha256.strip().lower()
     if len(normalized) != 64 or any(ch not in "0123456789abcdef" for ch in normalized):
         raise DeliveryError("expected archive SHA-256 must be 64 lowercase hex characters")
-    return AAD_PREFIX + normalized.encode("ascii")
+    return normalized
+
+
+def derive_key_from_passphrase(passphrase: str, expected_sha256: str) -> bytes:
+    """Derive the AES-256 key from the private Actions passphrase.
+
+    The deterministic salt is domain-separated and bound to the authoritative
+    archive SHA. The passphrase itself is never stored in the envelope.
+    """
+
+    if len(passphrase) < MIN_PASSPHRASE_CHARACTERS:
+        raise DeliveryError(
+            f"archive passphrase must contain at least {MIN_PASSPHRASE_CHARACTERS} characters"
+        )
+    normalized = _normalized_sha256(expected_sha256)
+    salt = KDF_CONTEXT + bytes.fromhex(normalized)
+    return hashlib.pbkdf2_hmac(
+        "sha256",
+        passphrase.encode("utf-8"),
+        salt,
+        KDF_ITERATIONS,
+        dklen=KEY_BYTES,
+    )
+
+
+def associated_data(expected_sha256: str) -> bytes:
+    return AAD_PREFIX + _normalized_sha256(expected_sha256).encode("ascii")
 
 
 def encrypt_archive_bytes(archive_bytes: bytes, key: bytes, expected_sha256: str) -> bytes:
@@ -113,14 +144,39 @@ def decrypt_file(encrypted: Path, output: Path, key: bytes, expected_sha256: str
     _secure_write(output, decrypt_archive_bytes(encrypted.read_bytes(), key, expected_sha256))
 
 
+def _environment_value(explicit: str | None, variable: str | None) -> str | None:
+    if explicit:
+        return explicit
+    if variable:
+        return os.environ.get(variable)
+    return None
+
+
+def _resolve_key(arguments: argparse.Namespace, *, allow_generate: bool) -> tuple[bytes, bool]:
+    key_value = _environment_value(arguments.key, arguments.key_env)
+    passphrase_value = _environment_value(arguments.passphrase, arguments.passphrase_env)
+    if key_value and passphrase_value:
+        raise DeliveryError("provide either an archive key or a passphrase, not both")
+    if key_value:
+        return decode_key(key_value), False
+    if passphrase_value:
+        return derive_key_from_passphrase(passphrase_value, arguments.expected_sha256), False
+    if allow_generate:
+        return generate_key(), True
+    raise DeliveryError("authoritative archive decryption secret is unavailable")
+
+
 def _command_encrypt(arguments: argparse.Namespace) -> int:
-    key = generate_key() if arguments.key is None else decode_key(arguments.key)
+    key, generated = _resolve_key(arguments, allow_generate=True)
     encrypt_file(arguments.archive, arguments.output, key, arguments.expected_sha256)
-    encoded = encode_key(key)
-    if arguments.key_output:
-        _secure_write(arguments.key_output, (encoded + "\n").encode("ascii"))
-    else:
-        print(encoded)
+    if generated:
+        encoded = encode_key(key)
+        if arguments.key_output:
+            _secure_write(arguments.key_output, (encoded + "\n").encode("ascii"))
+        else:
+            print(encoded)
+    elif arguments.key_output:
+        raise DeliveryError("--key-output is valid only when a random key is generated")
     print(
         f"encrypted_archive={arguments.output} encrypted_sha256={sha256_bytes(arguments.output.read_bytes())}",
         file=sys.stderr,
@@ -129,22 +185,23 @@ def _command_encrypt(arguments: argparse.Namespace) -> int:
 
 
 def _command_decrypt(arguments: argparse.Namespace) -> int:
-    value = arguments.key
-    if value is None and arguments.key_env:
-        value = os.environ.get(arguments.key_env)
-    if not value:
-        raise DeliveryError("authoritative archive decryption key is unavailable")
-    decrypt_file(
-        arguments.encrypted,
-        arguments.output,
-        decode_key(value),
-        arguments.expected_sha256,
-    )
+    key, _ = _resolve_key(arguments, allow_generate=False)
+    decrypt_file(arguments.encrypted, arguments.output, key, arguments.expected_sha256)
     print(
         f"decrypted_archive={arguments.output} archive_sha256={sha256_bytes(arguments.output.read_bytes())}",
         file=sys.stderr,
     )
     return 0
+
+
+def _add_secret_arguments(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--key")
+    parser.add_argument("--key-env", default="TNE_AUTHORITATIVE_ARCHIVE_KEY")
+    parser.add_argument("--passphrase")
+    parser.add_argument(
+        "--passphrase-env",
+        default="TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE",
+    )
 
 
 def main() -> int:
@@ -155,7 +212,7 @@ def main() -> int:
     encrypt_parser.add_argument("--archive", type=Path, required=True)
     encrypt_parser.add_argument("--output", type=Path, required=True)
     encrypt_parser.add_argument("--expected-sha256", required=True)
-    encrypt_parser.add_argument("--key")
+    _add_secret_arguments(encrypt_parser)
     encrypt_parser.add_argument("--key-output", type=Path)
     encrypt_parser.set_defaults(handler=_command_encrypt)
 
@@ -163,8 +220,7 @@ def main() -> int:
     decrypt_parser.add_argument("--encrypted", type=Path, required=True)
     decrypt_parser.add_argument("--output", type=Path, required=True)
     decrypt_parser.add_argument("--expected-sha256", required=True)
-    decrypt_parser.add_argument("--key")
-    decrypt_parser.add_argument("--key-env", default="TNE_AUTHORITATIVE_ARCHIVE_KEY")
+    _add_secret_arguments(decrypt_parser)
     decrypt_parser.set_defaults(handler=_command_decrypt)
 
     arguments = parser.parse_args()

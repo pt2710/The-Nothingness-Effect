@@ -107,7 +107,7 @@ def test_each_b_source_is_necessary_for_the_spatial_zero_set():
     assert len(removals) == 3
     assert {str(item.source_id) for item in removals} == set(SOURCE_IDS)
     assert all(item.necessary for item in removals)
-    assert all(item.complete_response > item.removed_response for item in removals)
+    assert all(item.baseline_response > item.removed_response for item in removals)
     assert all(item.necessity_residual > 0.0 for item in removals)
 
 

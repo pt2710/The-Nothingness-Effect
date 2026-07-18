@@ -68,12 +68,22 @@ def test_derived_law_uses_every_source_and_is_not_a_passive_carrier(contract):
     else:
         value = SpatialClosureInput(fields)
         evaluation = evaluate_contract(contract, value)
-        assert isinstance(evaluation.output, SpatialClosureResult)
-        assert evaluation.output.local_operator.shape == next(iter(fields.values())).shape
-        assert evaluation.output.boundary_trace_residual == 0.0
-        assert evaluation.output.reconstruction_residual == 0.0
-        assert evaluation.output.coercivity_ratio > 0.0
-        assert evaluation.status is ClosureStatus.NUMERICAL_CANDIDATE
+        if isinstance(evaluation.output, SpatialClosureResult):
+            assert evaluation.output.local_operator.shape == next(iter(fields.values())).shape
+            assert evaluation.output.boundary_trace_residual == 0.0
+            assert evaluation.output.reconstruction_residual == 0.0
+            assert evaluation.output.coercivity_ratio > 0.0
+            assert evaluation.status is ClosureStatus.NUMERICAL_CANDIDATE
+        else:
+            # Specialized C implementations may retain SpatialClosureInput as a
+            # provenance-compatible adapter while returning their own typed exact
+            # certificate.  They must then pass their independent residual and
+            # exact closure predicate rather than masquerade as the generic
+            # numerical spatial carrier.
+            assert contract.exact_semantics is True
+            assert evaluation.residual is not None and evaluation.residual.passed
+            assert getattr(evaluation.output, "closure_status", None) == "closed"
+            assert evaluation.status is ClosureStatus.CLOSED
 
     removals = tuple(check(value) for check in contract.source_removal_checks)
     assert len(removals) == len(contract.source_ids)

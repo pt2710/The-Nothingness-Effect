@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install --upgrade pip
-      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
       - run: python -m compileall -q the_nothingness_effect empirical fields_of_physics_in_dev tools
       - run: python -m ruff check the_nothingness_effect/artificial_intelligence tests/artifacts/test_ai_capability_layout.py
       - name: Core tests without optional AI backend
@@ -190,12 +190,19 @@ jobs:
             reports/effective_artifact_provenance_manifest.json
             reports/theorem_artifact_coverage.json
           if-no-files-found: error
+      - name: Package theorem diagnostic artifacts
+        shell: bash
+        run: >-
+          tar -C "${RUNNER_TEMP}"
+          -czf reports/theorem-diagnostic-artifacts.tar.gz
+          artifact-provenance
       - name: Upload theorem diagnostic artifacts
         uses: actions/upload-artifact@v4
         with:
           name: theorem-diagnostic-artifacts-${{ github.event.pull_request.head.sha || github.sha }}
           retention-days: 90
-          path: ${{ runner.temp }}/artifact-provenance
+          path: reports/theorem-diagnostic-artifacts.tar.gz
+          compression-level: 0
           if-no-files-found: error
       - name: Upload source-faithful convergence evidence
         uses: actions/upload-artifact@v4
@@ -211,6 +218,7 @@ jobs:
     env:
       AUTHORITY_ARCHIVE_URL: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_URL || vars.TNE_AUTHORITATIVE_ARCHIVE_URL }}
       AUTHORITY_ARCHIVE_KEY: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_KEY }}
+      AUTHORITY_ARCHIVE_PASSPHRASE: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE }}
       AUTHORITY_ARCHIVE_EXPECTED_SHA256: 38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11
       AUTHORITY_ARCHIVE_ENCRYPTED_PATH: private_authority/TNE_Authoritative_Appendices.zip.enc
     steps:
@@ -242,13 +250,15 @@ jobs:
           }
           trap cleanup EXIT
 
-          if [[ -f "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" && -n "${AUTHORITY_ARCHIVE_KEY}" ]]; then
+          if [[ -f "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" && ( -n "${AUTHORITY_ARCHIVE_KEY}" || -n "${AUTHORITY_ARCHIVE_PASSPHRASE}" ) ]]; then
             TNE_AUTHORITATIVE_ARCHIVE_KEY="${AUTHORITY_ARCHIVE_KEY}" \
+            TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE="${AUTHORITY_ARCHIVE_PASSPHRASE}" \
               python tools/private_authoritative_archive_delivery.py decrypt \
                 --encrypted "${AUTHORITY_ARCHIVE_ENCRYPTED_PATH}" \
                 --output "${ARCHIVE_PATH}" \
                 --expected-sha256 "${AUTHORITY_ARCHIVE_EXPECTED_SHA256}" \
-                --key-env TNE_AUTHORITATIVE_ARCHIVE_KEY
+                --key-env TNE_AUTHORITATIVE_ARCHIVE_KEY \
+                --passphrase-env TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE
           elif [[ -n "${AUTHORITY_ARCHIVE_URL}" ]]; then
             curl --fail --location --retry 3 --retry-all-errors \
               "${AUTHORITY_ARCHIVE_URL}" \

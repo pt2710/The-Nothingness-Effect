@@ -1,4 +1,4 @@
-"""Run the existing deterministic pDFI artifact producer with active contracts."""
+"""Run the deterministic pDFI artifact producer with active contracts."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from pathlib import Path
 from the_nothingness_effect.fluctuation_and_elastic_dynamics import artifacts
 
 from . import contracts as legacy_contracts
-from .closure_contracts import contracts as active_contracts
+from .normalized_closure_contracts import contracts as active_contracts
 
 
 def run_suite(output_dir: str | Path, *, seed: int = 0):

@@ -55,6 +55,23 @@ def _sample_count(value: object) -> int:
     return 1
 
 
+def _sample_for_contract(
+    contract: ComplexContract,
+    typed_samples: dict[str, object],
+    fallback: object,
+) -> object:
+    direct = typed_samples.get(str(contract.complex_id))
+    accepted = contract.domain.python_types
+    if direct is not None and (not accepted or isinstance(direct, accepted)):
+        return direct
+    if not accepted or isinstance(fallback, accepted):
+        return fallback
+    for sample in typed_samples.values():
+        if isinstance(sample, accepted):
+            return sample
+    return fallback
+
+
 def run_active_suite(
     module: str,
     contracts: Iterable[ComplexContract],
@@ -70,7 +87,7 @@ def run_active_suite(
     active = tuple(contracts)
     evaluations = []
     for contract in active:
-        value = typed_samples.get(str(contract.complex_id), fallback)
+        value = _sample_for_contract(contract, typed_samples, fallback)
         evaluations.append((contract, value, evaluate_contract(contract, value)))
 
     records = [
@@ -123,7 +140,7 @@ def run_active_suite(
             evaluation.status,
             {
                 "module": module,
-                "fixture": "contract-specific-authoritative-v3",
+                "fixture": "contract-specific-authoritative-v4",
                 "sample_type": type(value).__name__,
                 "sample_count": _sample_count(value),
             },

@@ -32,7 +32,8 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
     rows=bind_inventory_rows(source_rows)
     registry={str(contract.complex_id):contract for contract in active_contracts()}
     override_payload=json.loads(SOURCE_FAITHFUL_OVERRIDE.read_text(encoding="utf-8"))
-    corrected_ids=set(override_payload["implementation_status_overrides"])
+    correction_records=override_payload["implementation_status_overrides"]
+    corrected_ids=set(correction_records)
     records=[]
     errors=[]
     for row in rows:
@@ -48,9 +49,20 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
         first_label=row.get("first_label","").strip()
         equation_labels=[item.strip() for item in row.get("equation_labels","").split(";") if item.strip()]
         source_ids=[str(item) for item in contract.source_ids]
+        declared_evidence_path=(
+            correction_records.get(identifier,{}).get("evidence_path","")
+        )
+        evidence_path_exists=(
+            bool(declared_evidence_path)
+            and Path(declared_evidence_path).is_file()
+        )
+        evidence_path_matches=(
+            identifier not in corrected_ids
+            or implementation_path == declared_evidence_path
+        )
         source_faithful=(
             identifier not in corrected_ids
-            or implementation_path.endswith("/source_faithful_contracts.py")
+            or (evidence_path_exists and evidence_path_matches)
         )
         mapping_complete=all((
             bool(first_label),path_exists,bool(operator_module),bool(operator_name),
@@ -71,6 +83,9 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
             "residual_module":residual_module,"residual_qualname":residual_name,
             "exact_semantics":bool(contract.exact_semantics),
             "source_faithful_formula_correction":identifier in corrected_ids,
+            "declared_evidence_path":declared_evidence_path,
+            "evidence_path_exists":evidence_path_exists,
+            "evidence_path_matches":evidence_path_matches,
             "mapping_complete":mapping_complete,
         })
     csv_output.parent.mkdir(parents=True,exist_ok=True)
@@ -78,13 +93,13 @@ def build(matrix_path: Path,csv_output: Path,json_output: Path) -> dict[str,obje
         writer=csv.DictWriter(handle,fieldnames=list(records[0]))
         writer.writeheader(); writer.writerows(records)
     report={
-        "schema_version":"1.0","rows":len(records),
+        "schema_version":"1.1","rows":len(records),
         "complete_mappings":sum(bool(row["mapping_complete"]) for row in records),
         "source_faithful_corrections":sum(bool(row["source_faithful_formula_correction"]) for row in records),
         "first_labels":sum(bool(row["first_label"]) for row in records),
         "equation_labels":sum(int(row["equation_label_count"]) for row in records),
         "errors":errors,"passed":len(records)==351 and not errors,
-        "claim_boundary":"callable and label binding; not a formal equivalence proof",
+        "claim_boundary":"callable, label, and declared evidence-path binding; not a formal equivalence proof",
         "records":records,
     }
     json_output.parent.mkdir(parents=True,exist_ok=True)

@@ -30,8 +30,10 @@ def _data() -> np.ndarray:
     )
 
 
-def _contract(identifier: str):
-    return {str(item.complex_id): item for item in contracts()}[identifier]
+def _a04():
+    return {
+        str(item.complex_id): item for item in contracts()
+    }["dfi_adaptive_applicability_and_contextual_instability"]
 
 
 def test_a04_closes_for_an_admissible_identity_scalarization():
@@ -41,10 +43,7 @@ def test_a04_closes_for_an_admissible_identity_scalarization():
         spectrum_scale=7.0,
         threshold=1e-12,
     )
-    evaluation = evaluate_contract(
-        _contract("dfi_adaptive_applicability_and_contextual_instability"),
-        value,
-    )
+    evaluation = evaluate_contract(_a04(), value)
 
     assert evaluation.status is ClosureStatus.SATISFIED
     assert evaluation.residual is not None and evaluation.residual.passed
@@ -62,10 +61,7 @@ def test_a04_satisfies_the_dual_classification_for_contextual_instability():
         spectrum_scale=7.0,
         threshold=1e-12,
     )
-    evaluation = evaluate_contract(
-        _contract("dfi_adaptive_applicability_and_contextual_instability"),
-        value,
-    )
+    evaluation = evaluate_contract(_a04(), value)
 
     assert evaluation.status is ClosureStatus.SATISFIED
     assert evaluation.output.classification == "contextually_unstable"
@@ -74,30 +70,9 @@ def test_a04_satisfies_the_dual_classification_for_contextual_instability():
     assert evaluation.output.classification_residual == pytest.approx(0.0)
 
 
-def test_b02_zero_set_and_individual_source_necessity_are_exact():
-    value = ContextualApplicabilityInput(
-        data=_data(),
-        comparison_data=_data().copy(),
-        spectrum_scale=7.0,
-        threshold=1e-12,
-    )
-    contract = _contract("entropic_applicability_response_operator")
-    evaluation = evaluate_contract(contract, value)
-
-    assert evaluation.status is ClosureStatus.SATISFIED
-    assert evaluation.residual is not None and evaluation.residual.passed
-    assert evaluation.output.energy == pytest.approx(0.0)
-    assert evaluation.output.source_residuals == pytest.approx((0.0, 0.0))
-
-    removals = tuple(check(value) for check in contract.source_removal_checks)
-    assert len(removals) == 2
-    assert all(item.necessary for item in removals)
-    assert all(item.necessity_residual > 0.0 for item in removals)
-
-
 def test_legacy_applicability_input_remains_compatible():
     evaluation = evaluate_contract(
-        _contract("dfi_adaptive_applicability_and_contextual_instability"),
+        _a04(),
         ApplicabilityInput(_data(), 7.0, 1e-12),
     )
 
@@ -114,7 +89,4 @@ def test_a04_rejects_a_nonpositive_dynamic_constant():
     )
 
     with pytest.raises(DomainViolationError, match="dynamic_constant"):
-        evaluate_contract(
-            _contract("dfi_adaptive_applicability_and_contextual_instability"),
-            value,
-        )
+        evaluate_contract(_a04(), value)

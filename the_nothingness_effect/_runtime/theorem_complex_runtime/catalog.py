@@ -23,6 +23,22 @@ _PDFI_NEW = (
     "the_nothingness_effect.fluctuation_and_elastic_dynamics."
     "parity_adapted_dynamic_fluctuation_index.authoritative_product_contracts"
 )
+_ELASTIC_PI_OLD = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "elastic_pi.contracts"
+)
+_ELASTIC_PI_NEW = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "elastic_pi.authoritative_product_contracts"
+)
+_ELASTIC_PI_NORM_OLD = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "elastic_pi_norm.contracts"
+)
+_ELASTIC_PI_NORM_NEW = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "elastic_pi_norm.authoritative_product_contracts"
+)
 _FOUNDATIONAL_PREFIX = "the_nothingness_effect.foundational_architecture."
 _FOUNDATIONAL_RECERTIFIED = (
     "the_nothingness_effect.foundational_architecture.recertified_contracts",
@@ -41,6 +57,10 @@ for module_name, factory_name in _impl.CONTRACT_MODULES:
         rebuilt.append((_DFI_NEW, factory_name))
     elif module_name == _PDFI_OLD:
         rebuilt.append((_PDFI_NEW, factory_name))
+    elif module_name == _ELASTIC_PI_OLD:
+        rebuilt.append((_ELASTIC_PI_NEW, factory_name))
+    elif module_name == _ELASTIC_PI_NORM_OLD:
+        rebuilt.append((_ELASTIC_PI_NORM_NEW, factory_name))
     else:
         rebuilt.append((module_name, factory_name))
 

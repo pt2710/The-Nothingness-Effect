@@ -21,6 +21,9 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     build_manifest,
     git_commit,
 )
+from the_nothingness_effect._runtime.theorem_complex_runtime.source_samples import (
+    sample_inputs,
+)
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts import (
     START_COMMIT,
     fixture,
@@ -33,6 +36,25 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
 )
 
 
+def _sample_count(value: object) -> int:
+    for name in (
+        "source",
+        "coordinate",
+        "coordinates",
+        "radius",
+        "trajectory",
+        "data",
+        "entropy",
+    ):
+        candidate = getattr(value, name, None)
+        if candidate is not None:
+            try:
+                return len(candidate)
+            except TypeError:
+                continue
+    return 1
+
+
 def run_active_suite(
     module: str,
     contracts: Iterable[ComplexContract],
@@ -43,11 +65,14 @@ def run_active_suite(
     spec = SPECS[module]
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
-    value = fixture()
+    fallback = fixture()
+    typed_samples = sample_inputs()
     active = tuple(contracts)
-    evaluations = [
-        (contract, evaluate_contract(contract, value)) for contract in active
-    ]
+    evaluations = []
+    for contract in active:
+        value = typed_samples.get(str(contract.complex_id), fallback)
+        evaluations.append((contract, value, evaluate_contract(contract, value)))
+
     records = [
         {
             "theorem_complex_id": str(contract.complex_id),
@@ -57,13 +82,14 @@ def run_active_suite(
             ),
             "closure_status": evaluation.status.value,
             "exact_semantics": contract.exact_semantics,
+            "sample_type": type(value).__name__,
         }
-        for contract, evaluation in evaluations
+        for contract, value, evaluation in evaluations
     ]
     metrics = save_csv(output / f"{module}_contract_metrics.csv", records)
     c_output = next(
         evaluation.output
-        for contract, evaluation in evaluations
+        for contract, _value, evaluation in evaluations
         if str(contract.complex_id) == spec.c_id
     )
     figure_object, axis = plt.subplots(
@@ -90,15 +116,16 @@ def run_active_suite(
 
     commit = git_commit(Path(__file__).resolve().parents[1])
     manifests = []
-    for contract, evaluation in evaluations:
+    for contract, value, evaluation in evaluations:
         residual = () if evaluation.residual is None else evaluation.residual.vector
         simulation = SimulationResult(
             ComplexId(str(contract.complex_id)),
             evaluation.status,
             {
                 "module": module,
-                "fixture": "physical-field-v2",
-                "sample_count": len(value.source),
+                "fixture": "contract-specific-authoritative-v3",
+                "sample_type": type(value).__name__,
+                "sample_count": _sample_count(value),
             },
             seed,
             {"absolute": 1e-10},

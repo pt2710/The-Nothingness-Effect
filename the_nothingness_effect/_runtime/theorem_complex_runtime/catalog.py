@@ -7,6 +7,14 @@ _MATH_OLD = "the_nothingness_effect.mathematical_architecture.contracts"
 _MATH_NEW = "the_nothingness_effect.mathematical_architecture.recertified_contracts"
 _COMPLETENESS_OLD = "the_nothingness_effect.the_completeness_theorem.contracts"
 _COMPLETENESS_NEW = "the_nothingness_effect.the_completeness_theorem.recertified_contracts"
+_DFI_OLD = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "dynamic_fluctuation_index.contracts"
+)
+_DFI_NEW = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "dynamic_fluctuation_index.recertified_contracts"
+)
 _FOUNDATIONAL_PREFIX = "the_nothingness_effect.foundational_architecture."
 _FOUNDATIONAL_RECERTIFIED = (
     "the_nothingness_effect.foundational_architecture.recertified_contracts",
@@ -21,6 +29,8 @@ for module_name, factory_name in _impl.CONTRACT_MODULES:
         rebuilt.append((_MATH_NEW, factory_name))
     elif module_name == _COMPLETENESS_OLD:
         rebuilt.append((_COMPLETENESS_NEW, factory_name))
+    elif module_name == _DFI_OLD:
+        rebuilt.append((_DFI_NEW, factory_name))
     else:
         rebuilt.append((module_name, factory_name))
 

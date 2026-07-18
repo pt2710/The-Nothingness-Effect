@@ -200,7 +200,7 @@ def test_b01_compression_loss_is_visible_in_contract_status():
     assert not evaluation.output.authority_certificate.lossless
 
 
-def test_c_field_is_a_numerical_candidate_not_a_claimed_minimizer():
+def test_c_field_has_exact_quotient_and_field_mutual_inverses():
     contract = c_contracts()[0]
     value = SignedPolarFieldInput(
         2.0,
@@ -211,10 +211,15 @@ def test_c_field_is_a_numerical_candidate_not_a_claimed_minimizer():
         1.0,
     )
     evaluation = evaluate_contract(contract, value)
-    assert evaluation.status is ClosureStatus.NUMERICAL_CANDIDATE
+    assert contract.exact_semantics is True
+    assert evaluation.status is ClosureStatus.CLOSED
     assert evaluation.output.times == (0.0, 0.5, 1.0)
-    assert evaluation.residual.metadata["candidate_not_minimizer"] is True
+    assert evaluation.output.closure_status == "closed"
+    assert evaluation.output.quotient_reconstruction_residual <= 1e-10
+    assert evaluation.output.field_inverse_residual <= 1e-10
+    assert evaluation.residual.metadata["mutual_inverse_checked"] is True
     assert evaluation.residual.metadata["quotient_gauge_checked"] is True
+    assert evaluation.residual.metadata["zero_radius_canonicalized"] is True
     assert isinstance(
         evaluation.output.authority_certificate,
         SignedPolarClosureCertificate,

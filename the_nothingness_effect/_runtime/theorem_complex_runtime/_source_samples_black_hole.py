@@ -15,7 +15,9 @@ def black_hole_sample() -> BlackHoleInput:
     coordinate = np.linspace(0.0, 1.0, 9)
     step = float(coordinate[1] - coordinate[0])
     elasticity = 2.0
-    entropy = 1.0 - 0.2 * coordinate
+    # The convex term gives a non-zero entropic curvature, so the Hawking-flux
+    # source remains observable in both its B law and the terminal C ablation.
+    entropy = 1.0 - 0.2 * coordinate + 0.08 * coordinate**2
     mass = 2.0 + 0.25 * coordinate
     elastic_pi = np.exp(-entropy / elasticity)
     hawking_flux = elastic_pi / mass**2

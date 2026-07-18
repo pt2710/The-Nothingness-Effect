@@ -15,6 +15,14 @@ _DFI_NEW = (
     "the_nothingness_effect.fluctuation_and_elastic_dynamics."
     "dynamic_fluctuation_index.closure_contracts"
 )
+_PDFI_OLD = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "parity_adapted_dynamic_fluctuation_index.contracts"
+)
+_PDFI_NEW = (
+    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
+    "parity_adapted_dynamic_fluctuation_index.closure_contracts"
+)
 _FOUNDATIONAL_PREFIX = "the_nothingness_effect.foundational_architecture."
 _FOUNDATIONAL_RECERTIFIED = (
     "the_nothingness_effect.foundational_architecture.recertified_contracts",
@@ -31,6 +39,8 @@ for module_name, factory_name in _impl.CONTRACT_MODULES:
         rebuilt.append((_COMPLETENESS_NEW, factory_name))
     elif module_name == _DFI_OLD:
         rebuilt.append((_DFI_NEW, factory_name))
+    elif module_name == _PDFI_OLD:
+        rebuilt.append((_PDFI_NEW, factory_name))
     else:
         rebuilt.append((module_name, factory_name))
 

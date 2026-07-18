@@ -1,11 +1,11 @@
 {
-  "schema_version": "historical-pointer-1.0",
+  "schema_version": "historical-pointer-1.1",
   "status": "superseded_historical_snapshot",
   "historical_snapshot_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
   "current_authoritative_work_branch": "codex/tne-authoritative-source-recertification",
-  "current_verified_repository_head": "cd3e8ac7841f8e60906002a976c15c3e1e5a6d9b",
-  "current_ci_run_id": "29624077152",
-  "current_audit_run_id": "29624077153",
+  "current_verified_repository_head": "8976b7164697c0af49f21aa02101c364407dcad5",
+  "current_ci_run_id": "29624450045",
+  "current_audit_run_id": "29624450083",
   "current_internal_qa": {
     "core": "passed",
     "theorem_contracts": "passed",
@@ -38,6 +38,6 @@
     "authoritative_archive_sha256_unavailable_in_ci"
   ],
   "authoritative_archive_expected_sha256": "38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11",
-  "current_immutable_qa_artifact": "immutable-final-qa-cd3e8ac7841f8e60906002a976c15c3e1e5a6d9b",
+  "current_immutable_qa_artifact": "immutable-final-qa-8976b7164697c0af49f21aa02101c364407dcad5",
   "claim_boundary": "This file no longer reports the obsolete 195/156 workstate as current. The generated immutable QA artifact is authoritative for the current head. Runtime implementation, source exactness, closure status, validation status, and archive-byte release authority remain independent."
 }

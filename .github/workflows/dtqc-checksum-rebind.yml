@@ -1,9 +1,7 @@
 name: DTQC checksum rebind
 
 on:
-  push:
-    branches:
-      - codex/tne-authoritative-source-recertification
+  pull_request:
     paths:
       - .github/workflows/dtqc-checksum-rebind.yml
 
@@ -16,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -79,4 +77,4 @@ jobs:
             exit 0
           fi
           git commit -m "Rebind DTQC checksums to tracked artifact bytes"
-          git push origin "HEAD:${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"

@@ -20,10 +20,18 @@ from the_nothingness_effect.artificial_intelligence.comprehensive_no_local_plots
 )
 from the_nothingness_effect.artificial_intelligence.multimodal import training as training_module
 from the_nothingness_effect.artificial_intelligence.multimodal.evaluation import (
-    evaluate_multimodal_model,
+    evaluate_multimodal_model as base_evaluate_multimodal_model,
 )
 from the_nothingness_effect.artificial_intelligence.multimodal.geometric_model import (
     TNEGeometricMultimodalModel,
+)
+from the_nothingness_effect.artificial_intelligence.pgqenn.training_evaluation import (
+    apply_pgqenn_module_metrics,
+    attach_latest_module_metrics,
+    augment_pgqenn_evaluation,
+    finalize_pgqenn_graph_evidence,
+    fit_pgqenn_graph_heads,
+    reset_pgqenn_graph_evidence,
 )
 
 
@@ -39,6 +47,10 @@ _original_loss_components = training_module._loss_components
 _original_validation_objective = training_module.validation_objective
 _original_train = comprehensive_evaluation.train_multimodal_model
 _original_source_removals = comprehensive_evaluation.source_removals
+_original_module_rows = comprehensive_evaluation.build_module_rows
+_base_run_comprehensive_ai_evaluation = (
+    comprehensive_evaluation.run_comprehensive_ai_evaluation
+)
 
 
 def _strong_qenn_loss(output, labels):
@@ -116,7 +128,9 @@ def _fit_qenn_readouts(model, train_batch, validation_batch) -> tuple[float, ...
         train_features = train_state.spectral_reconstruction
         validation_features = validation_state.spectral_reconstruction
         if train_features is None or validation_features is None:
-            raise RuntimeError("QENN spectral reconstruction is required for ridge fine-tuning")
+            raise RuntimeError(
+                "QENN spectral reconstruction is required for ridge fine-tuning"
+            )
         classes = module.readout_layer.out_features
         best_score = math.inf
         best_beta: torch.Tensor | None = None
@@ -192,7 +206,11 @@ def _fit_decoder(model, train_batch, validation_batch) -> float:
             validation_hidden.to(torch.float64) @ beta[:-1] + beta[-1]
         )
         rmse = float(
-            torch.sqrt(torch.mean((reconstruction - validation_target.to(torch.float64)) ** 2))
+            torch.sqrt(
+                torch.mean(
+                    (reconstruction - validation_target.to(torch.float64)) ** 2
+                )
+            )
         )
         if rmse < best_rmse:
             best_rmse = rmse
@@ -233,6 +251,12 @@ def _train_with_temperature_selection(
         **kwargs,
     )
     _fit_qenn_readouts(model, train_batch, validation_batch)
+    fit_pgqenn_graph_heads(
+        model,
+        train_batch,
+        validation_batch,
+        seed=int(kwargs.get("seed", 0)),
+    )
     _fit_decoder(model, train_batch, validation_batch)
     if not hasattr(model, "calibration_temperature"):
         model.register_buffer("calibration_temperature", torch.ones(()))
@@ -242,7 +266,7 @@ def _train_with_temperature_selection(
     with torch.no_grad():
         for candidate in candidates:
             model.calibration_temperature.fill_(candidate)
-            evaluation = evaluate_multimodal_model(model, validation_batch)
+            evaluation = base_evaluate_multimodal_model(model, validation_batch)
             score = (
                 float(evaluation.metrics["cross_entropy"])
                 + 0.35 * float(evaluation.metrics["expected_calibration_error"])
@@ -254,15 +278,49 @@ def _train_with_temperature_selection(
     return run
 
 
+def _evaluate_with_pgqenn_graph_metrics(model, batch):
+    evaluation = base_evaluate_multimodal_model(model, batch)
+    evaluation = augment_pgqenn_evaluation(model, batch, evaluation)
+    attach_latest_module_metrics(model, evaluation)
+    return evaluation
+
+
+def _module_rows_with_pgqenn(seed, evaluation, labels):
+    rows = _original_module_rows(seed, evaluation, labels)
+    return apply_pgqenn_module_metrics(rows, evaluation)
+
+
 # The comprehensive module imports collaborators eagerly. Replace the selected
 # callbacks with the audited no-local-RBM training and reporting surfaces.
 training_module._loss_components = _strong_qenn_loss
 training_module.validation_objective = _module_aware_validation_objective
 comprehensive_evaluation.TNEGeometricMultimodalModel = CalibratedNoLocalRBMModel
 comprehensive_evaluation.train_multimodal_model = _train_with_temperature_selection
+comprehensive_evaluation.evaluate_multimodal_model = (
+    _evaluate_with_pgqenn_graph_metrics
+)
 comprehensive_evaluation.source_removals = _source_removals_without_legacy_name
+comprehensive_evaluation.build_module_rows = _module_rows_with_pgqenn
 comprehensive_evaluation.plot_training_diagnostics = plot_training_diagnostics
-run_comprehensive_ai_evaluation = comprehensive_evaluation.run_comprehensive_ai_evaluation
+
+
+def run_comprehensive_ai_evaluation(
+    output_dir: str | Path,
+    *,
+    seeds=(0, 1, 2),
+    epochs: int = 60,
+    samples_per_class: int = 24,
+):
+    """Run the integrated evaluation plus explicit PGQENN graph evidence."""
+
+    reset_pgqenn_graph_evidence()
+    report = _base_run_comprehensive_ai_evaluation(
+        output_dir,
+        seeds=seeds,
+        epochs=epochs,
+        samples_per_class=samples_per_class,
+    )
+    return finalize_pgqenn_graph_evidence(output_dir, report)
 
 
 def main() -> int:
@@ -287,12 +345,14 @@ def main() -> int:
         "comprehensive_ai_evaluation=passed "
         "local_rbm=removed "
         "qenn_auxiliary=supervised_and_ridge_finetuned "
+        "pgqenn_graph=validation_selected_ridge_and_temperature "
         "decoder=validation_ridge_finetuned "
         "temperature_calibration=validation_selected "
         f"seeds={len(seed_summary)} "
         f"artifacts={report['artifact_count']} "
         f"plots={report['plot_count']} "
-        f"mean_test_accuracy={mean_test_accuracy:.6f}"
+        f"mean_test_accuracy={mean_test_accuracy:.6f} "
+        f"pgqenn_graph_accuracy={report['pgqenn_graph_mean_test_accuracy']:.6f}"
     )
     return 0
 

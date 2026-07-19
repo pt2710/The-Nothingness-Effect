@@ -41,7 +41,7 @@ jobs:
           artifact_dir="the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/legacy_faithful"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$artifact_dir"
+          git add -f "$artifact_dir"
           if git diff --cached --quiet; then
             echo "Tracked DTQC artifact inventory already matches the deterministic generator"
             exit 0

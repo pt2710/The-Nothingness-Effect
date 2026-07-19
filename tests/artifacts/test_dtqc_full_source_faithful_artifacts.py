@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 from pathlib import Path
@@ -7,6 +8,10 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.canonical_artifact_suite import (
+    ANIMATED_FILES as CANONICAL_ANIMATED_FILES,
+    COMPLETE_CANONICAL_FILES,
+)
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.spatial_elastic_pi import (
     spatial_2d_diagnostics,
 )
@@ -52,11 +57,40 @@ EXPECTED_ROOT_FILES = {
     "parseval_energy_bijection_l_2_energy_mismatch_manifest.json",
     "qc_contour.png",
     "wavelet_central_row.png",
-}
+} | set(COMPLETE_CANONICAL_FILES)
 
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _validate_complete_canonical_classes(artifact_dir: Path) -> None:
+    for name in COMPLETE_CANONICAL_FILES:
+        assert (artifact_dir / name).is_file(), name
+
+    for name in CANONICAL_ANIMATED_FILES:
+        with Image.open(artifact_dir / name) as movie:
+            assert movie.is_animated, name
+            assert movie.n_frames >= 8, name
+
+    with np.load(artifact_dir / "dtqc_state.npz") as state:
+        assert state["axis_components"].shape[0] == 5
+        assert state["axis_dfi"].shape[0] == 5
+        assert state["axis_elastic_pi"].shape[0] == 5
+        assert state["scatter_reference_5d"].shape[1] == 5
+        assert state["scatter_elastic_pi_gains"].shape == state["scatter_reference_5d"].shape
+        assert state["scatter_projection_3d"].shape == (3, 5)
+        assert np.all(np.isfinite(state["axis_elastic_pi"]))
+        assert np.all(state["axis_elastic_pi"] > 0.0)
+
+    with (artifact_dir / "dtqc_axis_source_removal.csv").open(
+        newline="",
+        encoding="utf-8",
+    ) as handle:
+        rows = list(csv.DictReader(handle))
+    assert [row["axis_name"] for row in rows] == ["x", "y", "z", "w", "u"]
+    assert all(float(row["source_removal_residual"]) > 0.0 for row in rows)
+    assert all(row["necessary"] in {"True", "true", "1"} for row in rows)
 
 
 def _validate_full_tree(artifact_dir: Path) -> None:
@@ -147,6 +181,8 @@ def _validate_full_tree(artifact_dir: Path) -> None:
         with Image.open(artifact_dir / name) as movie:
             assert movie.is_animated
             assert movie.n_frames >= 8
+
+    _validate_complete_canonical_classes(artifact_dir)
 
 
 def test_full_pipeline_replaces_stale_root_and_regenerates_every_artifact_class(

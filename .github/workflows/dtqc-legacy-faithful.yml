@@ -1,0 +1,32 @@
+name: DTQC legacy-faithful validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  runtime-and-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - name: Validate legacy-faithful DTQC runtime and artifact bytes
+        run: >-
+          python -m pytest -q
+          tests/numerical/test_dtqc_legacy_faithful_runtime.py
+          tests/artifacts/test_dtqc_legacy_faithful_artifacts.py

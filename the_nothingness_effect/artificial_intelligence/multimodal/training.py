@@ -42,7 +42,8 @@ class MultimodalEpoch:
     confusion_matrix: tuple[tuple[int, ...], ...]
     latent_snapshot: tuple[tuple[float, ...], ...]
     axis_snapshot: tuple[tuple[float, ...], ...]
-    local_free_energy: float
+    modality_precision_entropy: float
+    local_free_energy: float | None
     global_free_energy: float
     cluster_count: int
     growth_event_count: int
@@ -61,6 +62,7 @@ class MultimodalTrainingRun:
     seed: int
     epochs: int
     learning_rate: float
+    weight_decay: float
     kd_probes: tuple[KDProbe, ...] = ()
     kd_selections: tuple[KDSelection, ...] = ()
     best_epoch: int = -1
@@ -76,6 +78,18 @@ class MultimodalTrainingRun:
         return self.kd_selections
 
 
+def _precision_entropy(output: TNETrainableMultimodalOutput) -> torch.Tensor:
+    precision = output.energy_precision
+    if precision is None:
+        raise RuntimeError("multimodal precision weights are required during training")
+    modalities = precision.shape[-1]
+    normalizer = math.log(float(modalities)) if modalities > 1 else 1.0
+    return -torch.sum(
+        precision * torch.log(precision.clamp_min(1e-9)),
+        dim=-1,
+    ).mean() / normalizer
+
+
 def _loss_components(
     output: TNETrainableMultimodalOutput,
     labels: torch.Tensor,
@@ -86,19 +100,28 @@ def _loss_components(
         output.reconstructed_fused_tokens,
         target,
     )
-    if output.local_rbm_state is None or output.global_rbm_state is None:
-        raise RuntimeError("multimodal energy states are required during training")
+    if output.global_rbm_state is None:
+        raise RuntimeError("global multimodal energy state is required during training")
     energy = (
-        torch.abs(output.local_rbm_state.contrastive_divergence)
-        + torch.abs(output.global_rbm_state.contrastive_divergence)
-        + output.local_rbm_state.reconstruction_residual
+        torch.abs(output.global_rbm_state.contrastive_divergence)
         + output.global_rbm_state.reconstruction_residual
     )
+    if output.local_rbm_state is not None:
+        energy = (
+            energy
+            + torch.abs(output.local_rbm_state.contrastive_divergence)
+            + output.local_rbm_state.reconstruction_residual
+        )
+    entropy_floor = torch.relu(
+        torch.tensor(0.55, dtype=task.dtype, device=task.device)
+        - _precision_entropy(output)
+    )
+    energy = energy + entropy_floor
     residual_vector = torch.stack(
         [torch.tanh(torch.abs(value)) for value in output.residuals.values()]
     )
     closure = residual_vector.mean()
-    total = task + 0.25 * reconstruction + 0.03 * energy + 0.02 * closure
+    total = task + 0.18 * reconstruction + 0.02 * energy + 0.015 * closure
     return total, task, reconstruction, energy, closure
 
 
@@ -117,25 +140,30 @@ def train_multimodal_model(
     validation_batch: MultimodalBatch,
     *,
     epochs: int = 8,
-    learning_rate: float = 0.015,
+    learning_rate: float = 0.01,
+    weight_decay: float = 1e-4,
     seed: int = 0,
     optimize_K_D: bool = False,
     adaptive_learning_rate: bool = False,
     kd_search: DynamicKDSearch | None = None,
 ) -> MultimodalTrainingRun:
-    if epochs < 1 or learning_rate <= 0:
-        raise ValueError("epochs and learning rate must be positive")
+    if epochs < 1 or learning_rate <= 0 or weight_decay < 0:
+        raise ValueError("epochs and learning rate must be positive; weight decay non-negative")
     train_batch.validate()
     validation_batch.validate()
     torch.manual_seed(seed)
-    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=learning_rate,
+        weight_decay=weight_decay,
+    )
     scheduler = (
         torch.optim.lr_scheduler.ReduceLROnPlateau(
             optimizer,
             mode="min",
-            factor=0.7,
-            patience=2,
-            min_lr=learning_rate * 0.08,
+            factor=0.6,
+            patience=3,
+            min_lr=learning_rate * 0.05,
         )
         if adaptive_learning_rate
         else None
@@ -213,8 +241,13 @@ def train_multimodal_model(
                     .cpu()
                     .tolist()
                 ),
-                local_free_energy=float(
-                    output.local_rbm_state.free_energy.mean().detach()
+                modality_precision_entropy=float(
+                    _precision_entropy(output).detach()
+                ),
+                local_free_energy=(
+                    float(output.local_rbm_state.free_energy.mean().detach())
+                    if output.local_rbm_state is not None
+                    else None
                 ),
                 global_free_energy=float(
                     output.global_rbm_state.free_energy.mean().detach()
@@ -251,6 +284,7 @@ def train_multimodal_model(
         seed=seed,
         epochs=epochs,
         learning_rate=learning_rate,
+        weight_decay=weight_decay,
         kd_probes=search.probes if search is not None else (),
         kd_selections=search.selections if search is not None else (),
         best_epoch=best_epoch,

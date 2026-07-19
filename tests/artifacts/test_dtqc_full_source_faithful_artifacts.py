@@ -21,16 +21,18 @@ def _sha256(path: Path) -> str:
 
 
 def _validate_root_inventory(artifact_dir: Path) -> None:
+    metadata = json.loads((artifact_dir / ROOT_METADATA_FILE).read_text(encoding="utf-8"))
     checksums = json.loads((artifact_dir / ROOT_CHECKSUM_FILE).read_text(encoding="utf-8"))
     assert checksums["schema_version"] == "3.0"
     assert checksums["algorithm"] == "sha256"
+    assert "theorem manifests are verified separately" in checksums["scope"]
 
     actual_files = {path.name for path in artifact_dir.iterdir() if path.is_file()}
-    assert actual_files == set(checksums["files"]) | {ROOT_CHECKSUM_FILE}
+    assert actual_files == set(metadata["root_inventory"])
+    assert set(checksums["files"]).issubset(actual_files)
     for name, expected in checksums["files"].items():
         assert _sha256(artifact_dir / name) == expected
 
-    metadata = json.loads((artifact_dir / ROOT_METADATA_FILE).read_text(encoding="utf-8"))
     assert metadata["schema_version"] == "3.0"
     assert metadata["suite"] == "dtqc_full_source_faithful_artifact_tree"
     assert "Fibonacci/Pisot/Floquet" in metadata["pipeline_partition"]["theorem_runtime"]

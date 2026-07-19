@@ -10,8 +10,17 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 if str(REPOSITORY_ROOT) not in sys.path:
     sys.path.insert(0, str(REPOSITORY_ROOT))
 
-from the_nothingness_effect.artificial_intelligence.comprehensive_evaluation import (
-    run_comprehensive_ai_evaluation,
+from the_nothingness_effect.artificial_intelligence import comprehensive_evaluation
+from the_nothingness_effect.artificial_intelligence.comprehensive_no_local_plots import (
+    plot_training_diagnostics,
+)
+
+# The comprehensive module imports its plotting functions eagerly.  Replace only
+# the training-diagnostic callback so direct result generation cannot emit a
+# misleading local-RBM plot after that component has been removed.
+comprehensive_evaluation.plot_training_diagnostics = plot_training_diagnostics
+run_comprehensive_ai_evaluation = (
+    comprehensive_evaluation.run_comprehensive_ai_evaluation
 )
 
 
@@ -24,11 +33,11 @@ def main() -> int:
         nargs="+",
         default=[0, 1, 2],
     )
-    parser.add_argument("--epochs", type=int, default=10)
+    parser.add_argument("--epochs", type=int, default=40)
     parser.add_argument(
         "--samples-per-class",
         type=int,
-        default=16,
+        default=24,
     )
     args = parser.parse_args()
     report = run_comprehensive_ai_evaluation(
@@ -44,6 +53,7 @@ def main() -> int:
     ) / len(seed_summary)
     print(
         "comprehensive_ai_evaluation=passed "
+        "local_rbm=removed "
         f"seeds={len(seed_summary)} "
         f"artifacts={report['artifact_count']} "
         f"plots={report['plot_count']} "

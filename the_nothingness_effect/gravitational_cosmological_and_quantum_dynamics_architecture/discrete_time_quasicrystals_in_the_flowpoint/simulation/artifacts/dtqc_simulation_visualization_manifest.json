@@ -1,7 +1,7 @@
 {
   "approximation_metadata": {
-    "elastic_pi_entropy": "local two-dimensional field energy, normalized DFI magnitude, and Hessian curvature; no axis slice or one-dimensional broadcast",
-    "field": "finite quasiperiodic projection of all four DTQC A-source responses",
+    "elastic_pi_entropy": "one independent entropy and Elastic-pi channel per intrinsic axis, built from axis carrier energy, directional DFI, and directional Hessian curvature; positive weighted geometric aggregation; the rendered surface height is the scalar response rather than an omitted spatial axis",
+    "field": "five intrinsic quasiperiodic carrier axes x,y,z,w,u projected into the rendered X-Y plane",
     "wavelet": "finite real Morlet-like diagnostic"
   },
   "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
@@ -11,14 +11,28 @@
     "wavelet_central_row.png",
     "dfi_surface.png",
     "elastic_pi_surface.png",
+    "elastic_pi_intrinsic_axes.png",
     "dtqc_phase_clock_animation.gif",
     "dtqc_simulation_phase_trace.csv"
   ],
+  "intrinsic_axis_model": {
+    "additional_axes_policy": "axis count is derived from the active carrier decomposition; every declared axis receives its own channel",
+    "all_axes_applied": true,
+    "count": 5,
+    "names": [
+      "x",
+      "y",
+      "z",
+      "w",
+      "u"
+    ]
+  },
   "module": "dtqc",
-  "parameter_hash": "72bcc82cf051318ba04f41cbc9435c75b31e8acc6abc20a161715067c96c3db7",
+  "parameter_hash": "82efc858c404a06eebf7cec3d95b2eec8dccbaf609b338562915868fc52bd760",
   "parameters": {
     "frame_count": 18,
     "grid_size": 96,
+    "intrinsic_axis_count": 5,
     "mode": "simulation",
     "module": "dtqc",
     "seed": 0
@@ -29,11 +43,84 @@
   "seed": 0,
   "source_status": "canonical_dtqc_contract_outputs",
   "spatial_regression": {
-    "axis_gradient_balance": 0.6204088815379344,
-    "column_broadcast_residual": 0.9073865472260312,
-    "effective_rank": 5.603492970091841,
-    "row_broadcast_residual": 0.8563009911472061,
-    "x_gradient_fraction": 0.382871810076172,
-    "y_gradient_fraction": 0.6171281899238279
+    "K_D": 0.49743876306418106,
+    "all_intrinsic_axes_applied": true,
+    "axis_application_residual": 1.38046101100346e-16,
+    "axis_count": 5,
+    "axis_elastic_pi_spans": [
+      0.7039839260690196,
+      0.7046423348779903,
+      0.7065397632904725,
+      0.7068710598103823,
+      0.705661715780138
+    ],
+    "axis_entropy_norms": [
+      48.70551159416264,
+      48.82983711454977,
+      48.82338800112506,
+      48.89736262163885,
+      48.77843978067923
+    ],
+    "axis_gradient_balance": 0.2550002477127109,
+    "axis_names": [
+      "x",
+      "y",
+      "z",
+      "w",
+      "u"
+    ],
+    "axis_projection_angles_degrees": [
+      0.0,
+      36.0,
+      72.0,
+      108.0,
+      144.0
+    ],
+    "axis_projection_angles_radians": [
+      0.0,
+      0.6283185307179586,
+      1.2566370614359172,
+      1.8849555921538759,
+      2.5132741228718345
+    ],
+    "axis_source_removal_residuals": [
+      0.14439699386932983,
+      0.12705278851743712,
+      0.6335082424199403,
+      0.1337613496391141,
+      0.1446260641220923
+    ],
+    "axis_weights": [
+      0.13312135762789423,
+      0.11738975524339981,
+      0.49275540203228485,
+      0.12361212746852691,
+      0.13312135762789423
+    ],
+    "column_broadcast_residual": 0.9927578837151532,
+    "dfi_axis_count": 5,
+    "dfi_axis_names": [
+      "x",
+      "y",
+      "z",
+      "w",
+      "u"
+    ],
+    "dfi_axis_norms": [
+      0.7231706703896879,
+      0.9083026131710076,
+      4.347434512755696,
+      1.1635056975953646,
+      1.6283090282767807
+    ],
+    "direct_law_residual": 1.38046101100346e-16,
+    "effective_rank": 4.463160657027282,
+    "minimum_axis_entropy_norm": 48.70551159416264,
+    "minimum_axis_source_removal_residual": 0.12705278851743712,
+    "minimum_dfi_axis_norm": 0.7231706703896879,
+    "row_broadcast_residual": 0.974579413382972,
+    "sign": -1.0,
+    "x_gradient_fraction": 0.20318740827140014,
+    "y_gradient_fraction": 0.7968125917286
   }
 }

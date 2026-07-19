@@ -33,40 +33,32 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           echo "HEAD_BRANCH=$HEAD_BRANCH" >> "$GITHUB_ENV"
           echo "LAST_SUBJECT=$(git log -1 --pretty=%s)" >> "$GITHUB_ENV"
-      - name: Apply full-field source correction
-        if: startsWith(env.LAST_SUBJECT, '[dtqc-control]')
-        run: |
-          python - <<'PY'
-          import base64
-          import zlib
-          from pathlib import Path
-          payload = Path("tools/dtqc_2d_repair.pyz.b64").read_text(encoding="ascii")
-          exec(compile(zlib.decompress(base64.b64decode(payload)), "dtqc_2d_repair.py", "exec"))
-          PY
-          python -m compileall -q             the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint             tests/numerical/test_dtqc_legacy_faithful_runtime.py             tests/artifacts/test_dtqc_legacy_faithful_artifacts.py             tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
-          python -m pytest -q tests/numerical/test_dtqc_legacy_faithful_runtime.py
-          git add             the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint             tests/numerical/test_dtqc_legacy_faithful_runtime.py             tests/artifacts/test_dtqc_legacy_faithful_artifacts.py             tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
-          git commit -m "[dtqc-2d-source] Apply Elastic-pi to the full two-dimensional DTQC field"
-          git push origin "HEAD:${HEAD_BRANCH}"
       - name: Regenerate complete corrected artifact tree
         if: startsWith(env.LAST_SUBJECT, '[dtqc-2d-source]')
         env:
           TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
         run: |
-          SOURCE_COMMIT="$(git rev-parse HEAD)"
-          python -m             the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence             --output "$TRACKED_DTQC"             --seed 0             --generation-source-commit "$SOURCE_COMMIT"
-          python -m pytest -q             tests/numerical/test_dtqc_legacy_faithful_runtime.py             tests/artifacts/test_dtqc_legacy_faithful_artifacts.py             tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
+          set +e
+          {
+            SOURCE_COMMIT="$(git rev-parse HEAD)"
+            python -m               the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence               --output "$TRACKED_DTQC"               --seed 0               --generation-source-commit "$SOURCE_COMMIT"
+            python -m pytest -q               tests/numerical/test_dtqc_legacy_faithful_runtime.py               tests/artifacts/test_dtqc_legacy_faithful_artifacts.py               tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
+          } > tools/dtqc_stage2.log 2>&1
+          STATUS=$?
+          set -e
+          if [ "$STATUS" -ne 0 ]; then
+            git add tools/dtqc_stage2.log
+            git commit -m "[dtqc-debug] Capture artifact regeneration failure"
+            git push origin "HEAD:${HEAD_BRANCH}"
+            exit "$STATUS"
+          fi
           cp tools/dtqc_legacy_faithful_final.yml .github/workflows/dtqc-legacy-faithful.yml
           rm tools/dtqc_2d_repair.pyz.b64 tools/dtqc_legacy_faithful_final.yml
           git add             .github/workflows/dtqc-legacy-faithful.yml             tools             "$TRACKED_DTQC"
           git commit -m "[dtqc-2d-artifacts] Regenerate full-field Elastic-pi DTQC artifacts"
           git push origin "HEAD:${HEAD_BRANCH}"
       - name: Reject unexpected phase
-        if: >-
-          !startsWith(env.LAST_SUBJECT, '[dtqc-control]') &&
-          !startsWith(env.LAST_SUBJECT, '[dtqc-2d-source]')
+        if: "!startsWith(env.LAST_SUBJECT, '[dtqc-2d-source]')"
         run: |
           echo "Unexpected one-shot repair phase: $LAST_SUBJECT"
           exit 1
-
-# Explicit user-actor trigger for the artifact phase.

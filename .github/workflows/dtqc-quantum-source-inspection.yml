@@ -1,0 +1,50 @@
+name: DTQC quantum source inspection
+
+on:
+  push:
+    branches:
+      - codex/tne-authoritative-source-recertification
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package-quantum-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          submodules: recursive
+          fetch-depth: 1
+      - name: Inventory quantum source domains
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="fields_of_physics_in_dev/quantum_mechanics"
+          for path in \
+            "$root/wave_functionality" \
+            "$root/fp_particle_models" \
+            "$root/entanglement"; do
+            test -d "$path"
+          done
+          mkdir -p "${RUNNER_TEMP}/quantum-source-inspection"
+          find "$root/wave_functionality" "$root/fp_particle_models" "$root/entanglement" \
+            -type f -printf '%p\n' | sort \
+            > "${RUNNER_TEMP}/quantum-source-inspection/inventory.txt"
+          while IFS= read -r file; do
+            sha256sum "$file"
+          done < "${RUNNER_TEMP}/quantum-source-inspection/inventory.txt" \
+            > "${RUNNER_TEMP}/quantum-source-inspection/sha256.txt"
+          cp -a "$root/wave_functionality" "${RUNNER_TEMP}/quantum-source-inspection/"
+          cp -a "$root/fp_particle_models" "${RUNNER_TEMP}/quantum-source-inspection/"
+          cp -a "$root/entanglement" "${RUNNER_TEMP}/quantum-source-inspection/"
+      - name: Upload exact quantum source bytes
+        uses: actions/upload-artifact@v4
+        with:
+          name: dtqc-quantum-source-inspection-${{ github.sha }}
+          path: ${{ runner.temp }}/quantum-source-inspection
+          if-no-files-found: error
+          compression-level: 9
+          retention-days: 3

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 
 import torch
@@ -90,9 +91,20 @@ def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
         "best_checkpoint_restored_all_seeds"
     )
     assert report["test_status"] == "held_out_evaluated_all_seeds"
+    assert report["pgqenn_graph_training_status"] == (
+        "validation_selected_ridge_finetuned_all_seeds"
+    )
+    assert report["pgqenn_graph_validation_status"] == (
+        "ridge_and_temperature_selected_on_validation_only"
+    )
+    assert report["pgqenn_graph_test_status"] == (
+        "held_out_graphs_evaluated_all_seeds"
+    )
+    assert 0.0 <= report["pgqenn_graph_mean_test_accuracy"] <= 1.0
+    assert 0.0 <= report["pgqenn_graph_mean_test_macro_f1"] <= 1.0
     assert report["all_metrics_finite"]
     assert report["all_splits_have_multiple_varied_points"]
-    assert report["plot_count"] >= 20
+    assert report["plot_count"] >= 23
 
     expected_tables = {
         "dataset_samples.csv",
@@ -108,6 +120,10 @@ def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
         "reconstruction_metrics.csv",
         "calibration_bins.csv",
         "module_metrics.csv",
+        "pgqenn_graph_metrics.csv",
+        "pgqenn_graph_predictions.csv",
+        "pgqenn_graph_hyperparameters.csv",
+        "pgqenn_graph_source_removal.csv",
     }
     assert expected_tables <= {
         path.name
@@ -115,8 +131,37 @@ def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
     }
     assert not (output / "plots" / "rbm_free_energy.png").exists()
     assert (output / "plots" / "global_rbm_free_energy.png").is_file()
+    assert (output / "plots" / "pgqenn_graph_accuracy.png").is_file()
+    assert (output / "plots" / "pgqenn_graph_cross_entropy.png").is_file()
+    assert (output / "plots" / "pgqenn_graph_confusion.png").is_file()
+
+    summary = json.loads(
+        (output / "pgqenn_graph_summary.json").read_text(encoding="utf-8")
+    )
+    assert summary["training_status"] == (
+        "validation_selected_ridge_finetuned_all_seeds"
+    )
+    assert summary["graph_semantics"] == (
+        "one_aligned_observation_with_named_modality_nodes"
+    )
+    assert isinstance(summary["source_removal_nondegenerate"], bool)
+
+    with (output / "module_metrics.csv").open(encoding="utf-8") as handle:
+        module_rows = list(csv.DictReader(handle))
+    pgqenn_rows = [row for row in module_rows if row["module"] == "PGQENN"]
+    assert pgqenn_rows
+    assert all(row["accuracy"] not in {"", "None"} for row in pgqenn_rows)
+    assert all(row["macro_f1"] not in {"", "None"} for row in pgqenn_rows)
+    assert all(
+        row["evaluation_scope"] == "graph_level_modality_node_classification"
+        for row in pgqenn_rows
+    )
+
     manifest_path = output / "artifact_manifest.json"
     assert manifest_path.is_file()
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    assert manifest["artifact_count"] >= 30
-    assert manifest["plot_count"] >= 20
+    assert manifest["artifact_count"] >= 37
+    assert manifest["plot_count"] >= 23
+    assert manifest["pgqenn_graph_evidence"]["test_status"] == (
+        "held_out_graphs_evaluated_all_seeds"
+    )

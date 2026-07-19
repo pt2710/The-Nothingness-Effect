@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 from typing import Any
 
 import torch
 from torch.nn import functional
-
 from the_nothingness_effect.artificial_intelligence.pgqenn.model import PGQENNModel
 
 from .data import MultimodalBatch
@@ -94,6 +94,22 @@ def _expected_calibration_error(
     return float(error)
 
 
+def _precision_metrics(output: TNETrainableMultimodalOutput) -> dict[str, float]:
+    precision = output.energy_precision
+    if precision is None:
+        return {}
+    normalizer = math.log(float(precision.shape[-1])) if precision.shape[-1] > 1 else 1.0
+    entropy = -torch.sum(
+        precision * torch.log(precision.clamp_min(1e-9)),
+        dim=-1,
+    ) / normalizer
+    return {
+        "mean_modality_precision_entropy": float(entropy.mean()),
+        "minimum_modality_precision": float(precision.min()),
+        "maximum_modality_precision": float(precision.max()),
+    }
+
+
 def evaluate_multimodal_model(
     model: TNETrainableMultimodalModel,
     batch: MultimodalBatch,
@@ -121,6 +137,8 @@ def evaluate_multimodal_model(
         batch.labels,
         num_classes=classes,
     ).to(probabilities.dtype)
+    if output.global_rbm_state is None:
+        raise RuntimeError("multimodal evaluation requires the global energy state")
     metrics = {
         "accuracy": float((predictions == batch.labels).float().mean()),
         "cross_entropy": float(functional.cross_entropy(output.readout, batch.labels)),
@@ -141,21 +159,27 @@ def evaluate_multimodal_model(
         ),
         "mean_reconstruction_rmse": sum(reconstruction_rmse.values())
         / len(reconstruction_rmse),
-        "mean_local_rbm_free_energy": float(
-            output.local_rbm_state.free_energy.mean()
-        ),
         "mean_global_rbm_free_energy": float(
             output.global_rbm_state.free_energy.mean()
-        ),
-        "local_rbm_reconstruction_rmse": float(
-            output.local_rbm_state.reconstruction_residual
         ),
         "global_rbm_reconstruction_rmse": float(
             output.global_rbm_state.reconstruction_residual
         ),
         "active_clusters": float(output.cluster_state.active_clusters),
+        **_precision_metrics(output),
         **classification_metrics_from_confusion(confusion),
     }
+    if output.local_rbm_state is not None:
+        metrics.update(
+            {
+                "mean_local_rbm_free_energy": float(
+                    output.local_rbm_state.free_energy.mean()
+                ),
+                "local_rbm_reconstruction_rmse": float(
+                    output.local_rbm_state.reconstruction_residual
+                ),
+            }
+        )
     return MultimodalEvaluation(
         metrics,
         confusion,
@@ -192,7 +216,7 @@ def evaluate_source_removals(
         ("observation_removed", None, elastic_dubler, True, True, True, True),
         ("elastic_dubler_removed", raw_observer, None, True, True, True, True),
         ("modality_axes_removed", raw_observer, elastic_dubler, False, True, True, True),
-        ("rbm_regulator_removed", raw_observer, elastic_dubler, True, False, True, True),
+        ("precision_regulator_removed", raw_observer, elastic_dubler, True, False, True, True),
         ("cluster_context_removed", raw_observer, elastic_dubler, True, True, False, True),
         ("signed_spectrum_removed", raw_observer, elastic_dubler, True, True, True, False),
         ("observation_and_dubler_removed", None, None, True, True, True, True),

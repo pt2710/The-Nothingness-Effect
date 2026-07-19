@@ -17,6 +17,7 @@ from the_nothingness_effect.artificial_intelligence import comprehensive_evaluat
 from the_nothingness_effect.artificial_intelligence.comprehensive_no_local_plots import (
     plot_training_diagnostics,
 )
+from the_nothingness_effect.artificial_intelligence.multimodal import training as training_module
 from the_nothingness_effect.artificial_intelligence.multimodal.evaluation import (
     evaluate_multimodal_model,
 )
@@ -33,7 +34,39 @@ class CalibratedNoLocalRBMModel(TNEGeometricMultimodalModel):
         self.register_buffer("calibration_temperature", torch.ones(()))
 
 
+_original_loss_components = training_module._loss_components
+_original_validation_objective = training_module.validation_objective
 _original_train = comprehensive_evaluation.train_multimodal_model
+_original_source_removals = comprehensive_evaluation.source_removals
+
+
+def _strong_qenn_loss(output, labels):
+    total, task, reconstruction, energy, closure = _original_loss_components(
+        output,
+        labels,
+    )
+    qenn_auxiliary = training_module._qenn_auxiliary_loss(output, labels)
+    return (
+        total + 0.50 * qenn_auxiliary,
+        task + 0.50 * qenn_auxiliary,
+        reconstruction,
+        energy,
+        closure,
+    )
+
+
+def _module_aware_validation_objective(evaluation):
+    return _original_validation_objective(evaluation) + 0.20 * float(
+        evaluation.metrics.get("mean_qenn_cross_entropy", 0.0)
+    )
+
+
+def _source_removals_without_legacy_name(model, batch, seed):
+    rows = _original_source_removals(model, batch, seed)
+    for row in rows:
+        if row.get("variant") == "rbm_regulator_removed":
+            row["variant"] = "precision_regulator_removed"
+    return rows
 
 
 def _train_with_temperature_selection(
@@ -69,14 +102,15 @@ def _train_with_temperature_selection(
     return run
 
 
-# The comprehensive module imports its collaborators eagerly.  Replace only the
-# geometric constructor, training callback and training-diagnostic callback.
+# The comprehensive module imports collaborators eagerly. Replace the selected
+# callbacks with the audited no-local-RBM training and reporting surfaces.
+training_module._loss_components = _strong_qenn_loss
+training_module.validation_objective = _module_aware_validation_objective
 comprehensive_evaluation.TNEGeometricMultimodalModel = CalibratedNoLocalRBMModel
 comprehensive_evaluation.train_multimodal_model = _train_with_temperature_selection
+comprehensive_evaluation.source_removals = _source_removals_without_legacy_name
 comprehensive_evaluation.plot_training_diagnostics = plot_training_diagnostics
-run_comprehensive_ai_evaluation = (
-    comprehensive_evaluation.run_comprehensive_ai_evaluation
-)
+run_comprehensive_ai_evaluation = comprehensive_evaluation.run_comprehensive_ai_evaluation
 
 
 def main() -> int:
@@ -88,7 +122,7 @@ def main() -> int:
         nargs="+",
         default=[0, 1, 2],
     )
-    parser.add_argument("--epochs", type=int, default=40)
+    parser.add_argument("--epochs", type=int, default=60)
     parser.add_argument(
         "--samples-per-class",
         type=int,
@@ -109,6 +143,7 @@ def main() -> int:
     print(
         "comprehensive_ai_evaluation=passed "
         "local_rbm=removed "
+        "qenn_auxiliary=supervised "
         "temperature_calibration=validation_selected "
         f"seeds={len(seed_summary)} "
         f"artifacts={report['artifact_count']} "

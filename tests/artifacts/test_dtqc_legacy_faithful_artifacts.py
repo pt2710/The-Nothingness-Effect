@@ -58,3 +58,24 @@ def test_legacy_faithful_suite_materializes_exact_byte_verified_inventory(tmp_pa
         with Image.open(tmp_path / name) as movie:
             assert movie.is_animated
             assert movie.n_frames >= 8
+
+
+def test_tracked_legacy_faithful_inventory_matches_committed_checksums() -> None:
+    repository_root = Path(__file__).resolve().parents[2]
+    artifact_dir = (
+        repository_root
+        / "the_nothingness_effect"
+        / "gravitational_cosmological_and_quantum_dynamics_architecture"
+        / "discrete_time_quasicrystals_in_the_flowpoint"
+        / "simulation"
+        / "artifacts"
+        / "legacy_faithful"
+    )
+
+    assert tuple(sorted(path.name for path in artifact_dir.iterdir() if path.is_file())) == tuple(
+        sorted(EXPECTED_INVENTORY)
+    )
+    checksums = json.loads((artifact_dir / CHECKSUM_FILE).read_text(encoding="utf-8"))
+    assert set(checksums["files"]) == set(EXPECTED_INVENTORY) - {CHECKSUM_FILE}
+    for name, expected in checksums["files"].items():
+        assert hashlib.sha256((artifact_dir / name).read_bytes()).hexdigest() == expected

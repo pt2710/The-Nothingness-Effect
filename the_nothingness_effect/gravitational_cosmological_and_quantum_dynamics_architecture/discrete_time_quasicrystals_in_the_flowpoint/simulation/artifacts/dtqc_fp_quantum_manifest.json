@@ -1,0 +1,57 @@
+{
+  "claim_boundary": "finite normalized computational quantum-wave evidence; not an empirical quantum validation or formal proof substitute",
+  "dtqc_binding": {
+    "carrier": "five intrinsic DTQC axes with independently applied Elastic-pi channels",
+    "clock": "two irrational discrete drive phases plus alternating Flowpoint sector",
+    "entanglement": "Schmidt-form pair state with von Neumann entropy, purity, concurrence, and Bell fidelity",
+    "wave": "six normalized complex quark modes and source-faithful interference"
+  },
+  "generated_files": [
+    "dtqc_fp_wave_interference.png",
+    "dtqc_fp_quark_modes.png",
+    "dtqc_fp_floquet_spectrum.png",
+    "dtqc_fp_wavefunction_probability.gif",
+    "dtqc_fp_wavefunction_phase.gif",
+    "dtqc_fp_entanglement.gif",
+    "dtqc_fp_quantum_state.npz",
+    "dtqc_fp_quantum_metrics.csv",
+    "dtqc_fp_quantum_source_removal.csv",
+    "dtqc_fp_quantum_manifest.json"
+  ],
+  "invariants": {
+    "density_trace_max_residual": 4.440892098500626e-16,
+    "minimum_concurrence": 0.4819312204014239,
+    "minimum_entanglement_entropy": 0.33492374147398246,
+    "wave_norm_max_residual": 6.661338147750939e-16
+  },
+  "schema_version": "1.0",
+  "source_domains": {
+    "entanglement": "legacy midpoint synchronizer upgraded to a normalized complex two-qubit state and reduced-density-matrix metrics",
+    "particle_models": [
+      "six quark masses",
+      "charges",
+      "frequency factors",
+      "spin"
+    ],
+    "wave_functionality": [
+      "fp_sine_wave",
+      "fp_pi_wave",
+      "two-wave interference",
+      "multi-axis fp waves"
+    ]
+  },
+  "source_removal": {
+    "fp_density_matrix_entanglement": 1.0,
+    "fp_particle_and_quark_modes": 0.16239322276174042,
+    "fp_wave_functionality": 0.41912463421943275
+  },
+  "source_sha256": {
+    "fields_of_physics_in_dev/quantum_mechanics/entanglement/entanglement_model.py": "6d79a92e188bc6c42b4027e050200f145c9e271e44143b60a420a14e56c75637",
+    "fields_of_physics_in_dev/quantum_mechanics/fp_particle_models/fp_quarks.py": "4612a6a6a5b543764375c8dd64afbec2ad0d54cffacc05d15b602ece33369382",
+    "fields_of_physics_in_dev/quantum_mechanics/fp_particle_models/particle_model.py": "0b4caf550cfd1f5231f431a532602c9f523137983ef2d3ea9f663717e1e62ce1",
+    "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_pi_wave/fp_pi_wave.py": "2e76ad10395694453d563ac2922e00b946c16840557d1ed60edff66c4de4b4d7",
+    "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_sine_wave/fp_sine_wave.py": "02c7bb5a42c87a4605e05bcd31851f9f855495db47de223e5596a28492973107",
+    "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_wave_Interference/fp_wave_with_interference.py": "5b8956a6e6422f3a7dae55c75fef6eff10156b10a30cdae14a831f396b08a41c",
+    "fields_of_physics_in_dev/quantum_mechanics/wave_functionality/fp_waves/fp_waves.py": "5ab658ef9baeadacd8888ac62604b1f7137ea8cb223243fa131cfd903cc73488"
+  }
+}

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
@@ -34,18 +34,10 @@ jobs:
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           import os
-          import subprocess
           from pathlib import Path
 
           metadata = Path(os.environ["TRACKED_DTQC"]) / "dtqc_artifact_metadata.json"
-          source = None
-          if metadata.is_file():
-              try:
-                  source = json.loads(metadata.read_text()).get("generation_source_commit")
-              except (OSError, json.JSONDecodeError):
-                  source = None
-          if not source:
-              source = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          source = json.loads(metadata.read_text())["generation_source_commit"]
           print(f"commit={source}")
           PY
       - name: Validate DTQC source-faithful runtime
@@ -53,16 +45,7 @@ jobs:
           python -m pytest -q
           tests/numerical/test_dtqc_legacy_faithful_runtime.py
           tests/artifacts/test_dtqc_legacy_faithful_artifacts.py
-      - name: Regenerate every tracked DTQC artifact producer in place
-        env:
-          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
-        run: >-
-          python -m
-          the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence
-          --output "$TRACKED_DTQC"
-          --seed 0
-          --generation-source-commit "${{ steps.source.outputs.commit }}"
-      - name: Validate regenerated tracked inventory and bytes
+      - name: Validate committed complete DTQC tree
         run: >-
           python -m pytest -q
           tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
@@ -111,25 +94,3 @@ jobs:
             cat "${{ runner.temp }}/dtqc-inventory-evidence/checksums.diff"
             exit 1
           fi
-      - name: Commit freshly regenerated tracked artifacts
-        if: >-
-          github.event_name == 'pull_request' &&
-          github.event.pull_request.head.repo.full_name == github.repository &&
-          !contains(github.event.pull_request.head.sha, '0000000000000000000000000000000000000000')
-        env:
-          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
-        run: |
-          git add the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
-          if git diff --cached --quiet; then
-            echo "Tracked DTQC artifacts already match the complete regenerated tree."
-            exit 0
-          fi
-          if git log -1 --pretty=%B | grep -Fq '[dtqc-artifacts]'; then
-            echo "Artifact commit still differs after deterministic regeneration."
-            git diff --cached --stat
-            exit 1
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "[dtqc-artifacts] Regenerate complete DTQC artifact tree"
-          git push origin "HEAD:${HEAD_BRANCH}"

@@ -45,10 +45,6 @@ jobs:
           python -m pytest -q
           tests/numerical/test_dtqc_legacy_faithful_runtime.py
           tests/artifacts/test_dtqc_legacy_faithful_artifacts.py
-      - name: Validate committed complete DTQC tree
-        run: >-
-          python -m pytest -q
-          tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
       - name: Independently regenerate the complete DTQC tree
         run: >-
           python -m
@@ -86,6 +82,10 @@ jobs:
           path: ${{ runner.temp }}/dtqc-inventory-evidence
           if-no-files-found: error
           retention-days: 14
+      - name: Validate committed complete DTQC tree
+        run: >-
+          python -m pytest -q
+          tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
       - name: Enforce recursive DTQC byte identity
         run: |
           if [ -s "${{ runner.temp }}/dtqc-inventory-evidence/inventory.diff" ] || [ -s "${{ runner.temp }}/dtqc-inventory-evidence/checksums.diff" ]; then

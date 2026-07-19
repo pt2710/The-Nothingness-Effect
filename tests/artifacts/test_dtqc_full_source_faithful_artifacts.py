@@ -14,24 +14,21 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
     ROOT_METADATA_FILE,
     run_suite,
 )
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_legacy_faithful_suite import (
+    ANIMATED_FILES,
+    EXPECTED_INVENTORY,
+    STATIC_FILES,
+)
 
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def _validate_root_inventory(artifact_dir: Path) -> None:
+def _validate_full_tree(artifact_dir: Path) -> None:
+    legacy_dir = artifact_dir / "legacy_faithful"
     metadata = json.loads((artifact_dir / ROOT_METADATA_FILE).read_text(encoding="utf-8"))
     checksums = json.loads((artifact_dir / ROOT_CHECKSUM_FILE).read_text(encoding="utf-8"))
-    assert checksums["schema_version"] == "3.0"
-    assert checksums["algorithm"] == "sha256"
-    assert "theorem manifests are verified separately" in checksums["scope"]
-
-    actual_files = {path.name for path in artifact_dir.iterdir() if path.is_file()}
-    assert actual_files == set(metadata["root_inventory"])
-    assert set(checksums["files"]).issubset(actual_files)
-    for name, expected in checksums["files"].items():
-        assert _sha256(artifact_dir / name) == expected
 
     assert metadata["schema_version"] == "3.0"
     assert metadata["suite"] == "dtqc_full_source_faithful_artifact_tree"
@@ -50,32 +47,33 @@ def _validate_root_inventory(artifact_dir: Path) -> None:
     )
     assert all(value > 0.0 for value in metadata["source_removal"].values())
 
-    assert (artifact_dir / ROOT_COMPATIBILITY_FIGURE).read_bytes() == (
-        artifact_dir / "dtqc_source_faithful_summary.png"
-    ).read_bytes()
-    assert not any(path.name.startswith("dtqc_legacy_") for path in artifact_dir.iterdir() if path.is_file())
+    actual_root_files = {path.name for path in artifact_dir.iterdir() if path.is_file()}
+    actual_legacy_files = {path.name for path in legacy_dir.iterdir() if path.is_file()}
+    assert actual_root_files == set(metadata["root_inventory"])
+    assert actual_legacy_files == set(metadata["legacy_faithful_inventory"])
+    assert actual_legacy_files == set(EXPECTED_INVENTORY)
 
-    for target_name in PROMOTED_ARTIFACTS.values():
+    assert checksums["schema_version"] == "3.0"
+    assert checksums["algorithm"] == "sha256"
+    assert "recursive DTQC source-faithful tree" in checksums["scope"]
+    for name, expected in checksums["root_files"].items():
+        assert _sha256(artifact_dir / name) == expected
+    for name, expected in checksums["legacy_faithful_files"].items():
+        assert _sha256(legacy_dir / name) == expected
+
+    for source_name, target_name in PROMOTED_ARTIFACTS.items():
+        assert (legacy_dir / source_name).is_file()
         assert (artifact_dir / target_name).is_file()
+        assert (artifact_dir / target_name).read_bytes() == (legacy_dir / source_name).read_bytes()
 
-    for name in (
-        "dtqc_source_faithful_summary.png",
-        "dtqc_quasicrystal_contour.png",
-        "dtqc_diffraction_fft.png",
-        "dtqc_dfi_surface.png",
-        "dtqc_elastic_pi_surface.png",
-        "dtqc_wavelet_ridges.png",
-    ):
-        with Image.open(artifact_dir / name) as image:
+    assert not any(path.name.startswith("dtqc_legacy_") for path in artifact_dir.iterdir() if path.is_file())
+    with Image.open(artifact_dir / ROOT_COMPATIBILITY_FIGURE) as image:
+        image.verify()
+    for name in STATIC_FILES:
+        with Image.open(legacy_dir / name) as image:
             image.verify()
-
-    for name in (
-        "dtqc_flowpoint_flicker.gif",
-        "dtqc_5d_scatter.gif",
-        "dtqc_elastic_pi_sphere.gif",
-        "dtqc_elastic_pi_half_sphere.gif",
-    ):
-        with Image.open(artifact_dir / name) as movie:
+    for name in ANIMATED_FILES:
+        with Image.open(legacy_dir / name) as movie:
             assert movie.is_animated
             assert movie.n_frames >= 8
 
@@ -92,9 +90,9 @@ def test_full_suite_replaces_stale_root_and_regenerates_all_artifact_classes(tmp
     )
 
     assert not (tmp_path / "stale_dtqc_visual.png").exists()
-    _validate_root_inventory(tmp_path)
+    _validate_full_tree(tmp_path)
 
-    with np.load(tmp_path / "dtqc_source_faithful_state.npz") as state:
+    with np.load(tmp_path / "legacy_faithful" / "dtqc_legacy_state.npz") as state:
         assert state["radial_profiles"].shape == (60, 64)
         assert state["flowpoint_frames"].shape == (12, 64, 64)
         assert state["scatter_trajectory_4d"].shape == (12, 600, 4)
@@ -103,12 +101,6 @@ def test_full_suite_replaces_stale_root_and_regenerates_all_artifact_classes(tmp
             np.linalg.norm(state["scatter_trajectory_4d"][1] - state["scatter_trajectory_4d"][0])
         ) > 1.0
         assert not np.allclose(state["elastic_pi"], state["canonical_elastic_pi"])
-
-    legacy_dir = tmp_path / "legacy_faithful"
-    assert legacy_dir.is_dir()
-    legacy_checksums = json.loads((legacy_dir / "dtqc_legacy_checksums.json").read_text(encoding="utf-8"))
-    for name, expected in legacy_checksums["files"].items():
-        assert _sha256(legacy_dir / name) == expected
 
 
 def test_tracked_full_dtqc_artifact_tree_matches_committed_checksums() -> None:
@@ -121,4 +113,4 @@ def test_tracked_full_dtqc_artifact_tree_matches_committed_checksums() -> None:
         / "simulation"
         / "artifacts"
     )
-    _validate_root_inventory(artifact_dir)
+    _validate_full_tree(artifact_dir)

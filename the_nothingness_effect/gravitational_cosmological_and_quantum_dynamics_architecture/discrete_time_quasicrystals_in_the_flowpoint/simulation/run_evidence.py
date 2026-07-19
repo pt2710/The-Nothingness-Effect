@@ -5,6 +5,9 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.canonical_artifact_suite import (
+    generate_complete_canonical_artifacts,
+)
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.contracts import (
     contracts,
 )
@@ -32,6 +35,11 @@ def run_all(
     )
     prepare_artifact_output(output)
     result = run_dtqc_evidence(run_suite, output, seed=seed, simulation=True)
+    result["complete_canonical_artifacts"] = generate_complete_canonical_artifacts(
+        output,
+        seed=seed,
+        simulation=True,
+    )
     result["artifact_tree"] = finalize_artifact_tree(
         output,
         generation_source_commit=generation_source_commit,

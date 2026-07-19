@@ -49,6 +49,28 @@ jobs:
           if-no-files-found: error
           compression-level: 9
           retention-days: 14
+      - name: Build DTQC inventory evidence
+        if: always()
+        env:
+          GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
+          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+          EVIDENCE_DIR: ${{ runner.temp }}/dtqc-inventory-evidence
+        run: |
+          mkdir -p "$EVIDENCE_DIR"
+          find "$GENERATED_DTQC" -maxdepth 2 -type f -printf '%P\n' | sort > "$EVIDENCE_DIR/generated-files.txt"
+          find "$TRACKED_DTQC" -maxdepth 2 -type f -printf '%P\n' | sort > "$EVIDENCE_DIR/tracked-files.txt"
+          (cd "$GENERATED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/generated-sha256.txt"
+          (cd "$TRACKED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/tracked-sha256.txt"
+          diff -u "$EVIDENCE_DIR/generated-files.txt" "$EVIDENCE_DIR/tracked-files.txt" > "$EVIDENCE_DIR/inventory.diff" || true
+          diff -u "$EVIDENCE_DIR/generated-sha256.txt" "$EVIDENCE_DIR/tracked-sha256.txt" > "$EVIDENCE_DIR/checksums.diff" || true
+      - name: Upload DTQC inventory evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dtqc-inventory-evidence-${{ github.sha }}
+          path: ${{ runner.temp }}/dtqc-inventory-evidence
+          if-no-files-found: error
+          retention-days: 14
       - name: Verify tracked root, subfolder, metadata, and exact bytes
         env:
           GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
@@ -70,22 +92,46 @@ jobs:
           tracked_metadata = json.loads((tracked / "dtqc_artifact_metadata.json").read_text())
           tracked_checksums = json.loads((tracked / "dtqc_artifact_checksums.json").read_text())
 
-          assert generated_metadata == tracked_metadata
-          assert generated_checksums == tracked_checksums
-          assert sorted(path.name for path in tracked.iterdir() if path.is_file()) == generated_metadata["root_inventory"]
+          if generated_metadata != tracked_metadata:
+              raise AssertionError(
+                  "generated/tracked DTQC metadata differ:\n"
+                  + json.dumps({"generated": generated_metadata, "tracked": tracked_metadata}, indent=2, sort_keys=True)
+              )
+          if generated_checksums != tracked_checksums:
+              raise AssertionError(
+                  "generated/tracked DTQC checksums differ:\n"
+                  + json.dumps({"generated": generated_checksums, "tracked": tracked_checksums}, indent=2, sort_keys=True)
+              )
+
+          tracked_root = sorted(path.name for path in tracked.iterdir() if path.is_file())
+          if tracked_root != generated_metadata["root_inventory"]:
+              raise AssertionError(
+                  f"root inventory mismatch: tracked={tracked_root}, expected={generated_metadata['root_inventory']}"
+              )
 
           for name, expected in generated_checksums["root_files"].items():
-              assert hashlib.sha256((generated / name).read_bytes()).hexdigest() == expected
-              assert hashlib.sha256((tracked / name).read_bytes()).hexdigest() == expected
+              generated_digest = hashlib.sha256((generated / name).read_bytes()).hexdigest()
+              tracked_digest = hashlib.sha256((tracked / name).read_bytes()).hexdigest()
+              if generated_digest != expected or tracked_digest != expected:
+                  raise AssertionError(
+                      f"root byte mismatch for {name}: generated={generated_digest}, tracked={tracked_digest}, expected={expected}"
+                  )
 
           generated_legacy = generated / "legacy_faithful"
           tracked_legacy = tracked / "legacy_faithful"
-          assert sorted(path.name for path in tracked_legacy.iterdir() if path.is_file()) == generated_metadata[
-              "legacy_faithful_inventory"
-          ]
+          tracked_legacy_names = sorted(path.name for path in tracked_legacy.iterdir() if path.is_file())
+          if tracked_legacy_names != generated_metadata["legacy_faithful_inventory"]:
+              raise AssertionError(
+                  "legacy inventory mismatch: "
+                  f"tracked={tracked_legacy_names}, expected={generated_metadata['legacy_faithful_inventory']}"
+              )
           for name, expected in generated_checksums["legacy_faithful_files"].items():
-              assert hashlib.sha256((generated_legacy / name).read_bytes()).hexdigest() == expected
-              assert hashlib.sha256((tracked_legacy / name).read_bytes()).hexdigest() == expected
+              generated_digest = hashlib.sha256((generated_legacy / name).read_bytes()).hexdigest()
+              tracked_digest = hashlib.sha256((tracked_legacy / name).read_bytes()).hexdigest()
+              if generated_digest != expected or tracked_digest != expected:
+                  raise AssertionError(
+                      f"legacy byte mismatch for {name}: generated={generated_digest}, tracked={tracked_digest}, expected={expected}"
+                  )
           PY
       - name: Validate committed full-tree inventory contracts
         run: >-

@@ -8,6 +8,14 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
     LegacyFaithfulConfig,
     generate_legacy_faithful_state,
 )
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.spatial_elastic_pi import (
+    backproject_directional_profiles,
+    spatial_2d_diagnostics,
+)
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.visualization import (
+    _elastic_pi_surface,
+    _quasicrystal_field,
+)
 
 
 def _config(**overrides: object) -> LegacyFaithfulConfig:
@@ -43,25 +51,33 @@ def test_source_faithful_state_is_finite_non_degenerate_and_typed() -> None:
 def test_legacy_visual_and_canonical_dubler_sign_conventions_are_separate() -> None:
     state = generate_legacy_faithful_state(_config(entropy_scale=2.25))
 
-    legacy_profile = np.exp(
-        np.clip(state.entropy_profiles / 2.25, -100.0, math.log(100.0))
-    ).mean(axis=0)
-    canonical_profile = np.exp(
-        np.clip(-state.entropy_profiles / 2.25, -100.0, math.log(100.0))
-    ).mean(axis=0)
-    np.testing.assert_allclose(
-        state.elastic_pi[0],
-        math.pi * legacy_profile,
-        rtol=1e-14,
-        atol=1e-14,
-    )
-    np.testing.assert_allclose(
-        state.canonical_elastic_pi[0],
-        math.pi * canonical_profile,
-        rtol=1e-14,
-        atol=1e-14,
-    )
+    entropy = backproject_directional_profiles(state.entropy_profiles, grid_size=64)
+    legacy = math.pi * np.exp(np.clip(entropy / 2.25, -100.0, math.log(100.0)))
+    canonical = math.pi * np.exp(np.clip(-entropy / 2.25, -100.0, math.log(100.0)))
+    np.testing.assert_allclose(state.entropy, entropy, rtol=1e-14, atol=1e-14)
+    np.testing.assert_allclose(state.elastic_pi, legacy, rtol=1e-14, atol=1e-14)
+    np.testing.assert_allclose(state.canonical_elastic_pi, canonical, rtol=1e-14, atol=1e-14)
     assert not np.allclose(state.elastic_pi, state.canonical_elastic_pi)
+
+
+def test_elastic_pi_fields_are_genuinely_two_dimensional() -> None:
+    state = generate_legacy_faithful_state(_config())
+    for surface in (state.entropy, state.elastic_pi, state.canonical_elastic_pi):
+        diagnostics = spatial_2d_diagnostics(surface)
+        assert diagnostics["row_broadcast_residual"] > 0.1
+        assert diagnostics["column_broadcast_residual"] > 0.1
+        assert diagnostics["axis_gradient_balance"] > 0.1
+        assert diagnostics["effective_rank"] > 1.5
+
+
+def test_canonical_dtqc_elastic_pi_surface_is_genuinely_two_dimensional() -> None:
+    _, _, field = _quasicrystal_field(64)
+    _, elastic_surface, diagnostics = _elastic_pi_surface(field)
+    assert elastic_surface.shape == (64, 64)
+    assert diagnostics["row_broadcast_residual"] > 0.1
+    assert diagnostics["column_broadcast_residual"] > 0.1
+    assert diagnostics["axis_gradient_balance"] > 0.1
+    assert diagnostics["effective_rank"] > 1.5
 
 
 def test_flicker_alternates_and_evolves_intrinsically() -> None:

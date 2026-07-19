@@ -7,6 +7,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.spatial_elastic_pi import (
+    spatial_2d_diagnostics,
+)
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite import (
     PROMOTED_ARTIFACTS,
     ROOT_CHECKSUM_FILE,
@@ -60,7 +63,7 @@ def _validate_full_tree(artifact_dir: Path) -> None:
     metadata = json.loads((artifact_dir / ROOT_METADATA_FILE).read_text(encoding="utf-8"))
     checksums = json.loads((artifact_dir / ROOT_CHECKSUM_FILE).read_text(encoding="utf-8"))
 
-    assert metadata["schema_version"] == "4.0"
+    assert metadata["schema_version"] == "5.0"
     assert metadata["suite"] == "dtqc_complete_recursive_artifact_pipeline"
     assert set(metadata["generator_inventory"]) == {
         "typed_contracts",
@@ -82,13 +85,22 @@ def _validate_full_tree(artifact_dir: Path) -> None:
         "discrete_quasi_crystal_visualization"
     )
     assert all(value > 0.0 for value in metadata["source_removal"].values())
+    assert metadata["spatial_regression"]["canonical"]["row_broadcast_residual"] > 0.1
+    assert metadata["spatial_regression"]["canonical"]["column_broadcast_residual"] > 0.1
+    assert metadata["spatial_regression"]["canonical"]["axis_gradient_balance"] > 0.1
+    assert metadata["spatial_regression"]["canonical"]["effective_rank"] > 1.5
+    for diagnostics in metadata["spatial_regression"]["legacy"].values():
+        assert diagnostics["row_broadcast_residual"] > 0.1
+        assert diagnostics["column_broadcast_residual"] > 0.1
+        assert diagnostics["axis_gradient_balance"] > 0.1
+        assert diagnostics["effective_rank"] > 1.5
 
     actual_root_files = {path.name for path in artifact_dir.iterdir() if path.is_file()}
     actual_legacy_files = {path.name for path in legacy_dir.iterdir() if path.is_file()}
     assert actual_root_files == set(metadata["root_inventory"]) == EXPECTED_ROOT_FILES
     assert actual_legacy_files == set(metadata["legacy_faithful_inventory"]) == set(EXPECTED_INVENTORY)
 
-    assert checksums["schema_version"] == "4.0"
+    assert checksums["schema_version"] == "5.0"
     assert checksums["algorithm"] == "sha256"
     assert "all tracked DTQC root payloads" in checksums["scope"]
     assert set(checksums["root_files"]) == EXPECTED_ROOT_FILES - {ROOT_CHECKSUM_FILE}
@@ -140,6 +152,12 @@ def test_full_pipeline_replaces_stale_root_and_regenerates_every_artifact_class(
             np.linalg.norm(state["scatter_trajectory_4d"][1] - state["scatter_trajectory_4d"][0])
         ) > 1.0
         assert not np.allclose(state["elastic_pi"], state["canonical_elastic_pi"])
+        for name in ("entropy", "elastic_pi", "canonical_elastic_pi"):
+            diagnostics = spatial_2d_diagnostics(state[name])
+            assert diagnostics["row_broadcast_residual"] > 0.1
+            assert diagnostics["column_broadcast_residual"] > 0.1
+            assert diagnostics["axis_gradient_balance"] > 0.1
+            assert diagnostics["effective_rank"] > 1.5
 
 
 def test_tracked_full_dtqc_artifact_tree_matches_committed_checksums() -> None:

@@ -18,6 +18,11 @@ import numpy as np
 from PIL import Image
 
 try:
+    from ..spatial_elastic_pi import spatial_2d_diagnostics
+except ImportError:  # pragma: no cover - direct local verification helper
+    from spatial_elastic_pi import spatial_2d_diagnostics
+
+try:
     from ..legacy_faithful_runtime import (
         CANONICAL_DUBLER_SOURCE,
         CLAIM_BOUNDARY,
@@ -261,14 +266,24 @@ def _sphere_animation(path: Path, state: LegacyFaithfulState, *, half: bool) -> 
 
 def _write_metrics(path: Path, state: LegacyFaithfulState) -> None:
     signed_static = state.flowpoint_sector[:, None, None] * state.flowpoint_frames[0][None, :, :]
+    legacy_spatial = spatial_2d_diagnostics(state.elastic_pi)
+    canonical_spatial = spatial_2d_diagnostics(state.canonical_elastic_pi)
     rows = (
         ("carrier_std", float(np.std(state.carrier))),
         ("diffraction_peak", float(np.max(state.diffraction))),
         ("radial_profile_count", float(state.radial_profiles.shape[0])),
         ("legacy_elastic_pi_min", float(np.min(state.elastic_pi))),
         ("legacy_elastic_pi_max", float(np.max(state.elastic_pi))),
+        ("legacy_elastic_pi_row_broadcast_residual", legacy_spatial["row_broadcast_residual"]),
+        ("legacy_elastic_pi_column_broadcast_residual", legacy_spatial["column_broadcast_residual"]),
+        ("legacy_elastic_pi_axis_gradient_balance", legacy_spatial["axis_gradient_balance"]),
+        ("legacy_elastic_pi_effective_rank", legacy_spatial["effective_rank"]),
         ("canonical_elastic_pi_min", float(np.min(state.canonical_elastic_pi))),
         ("canonical_elastic_pi_max", float(np.max(state.canonical_elastic_pi))),
+        ("canonical_elastic_pi_row_broadcast_residual", canonical_spatial["row_broadcast_residual"]),
+        ("canonical_elastic_pi_column_broadcast_residual", canonical_spatial["column_broadcast_residual"]),
+        ("canonical_elastic_pi_axis_gradient_balance", canonical_spatial["axis_gradient_balance"]),
+        ("canonical_elastic_pi_effective_rank", canonical_spatial["effective_rank"]),
         ("flicker_intrinsic_deformation", float(np.linalg.norm(state.flowpoint_frames - signed_static))),
         ("scatter_intrinsic_deformation", float(np.linalg.norm(state.scatter_trajectory_4d[-1] - state.scatter_trajectory_4d[0]))),
         ("scatter_reference_rank", float(np.linalg.matrix_rank(state.scatter_reference_4d))),
@@ -355,7 +370,7 @@ def run_legacy_faithful_suite(
     _write_source_removal(output / DATA_FILES[2], state)
 
     manifest = {
-        "schema_version": "2.0",
+        "schema_version": "3.0",
         "suite": "dtqc_legacy_faithful",
         "seed": seed,
         "grid_size": grid_size,
@@ -374,12 +389,17 @@ def run_legacy_faithful_suite(
             "carrier": "sum_{k=0}^{9} cos(2*pi*(cos(2*pi*k/10)*X + sin(2*pi*k/10)*Y)) / ptp",
             "diffraction": "log1p(abs(fftshift(fft2(field))))",
             "dfi": "sixty radial FFT profiles with the legacy DFI volume/entropy transform",
-            "legacy_visual_elastic_pi": "pi*mean_i(exp(S_i/K_D)); clipped exactly as the legacy visual generator",
-            "canonical_dubler_ratio": "exp(-delta_S/K_D); retained separately and not substituted into legacy reference images",
+            "spatial_entropy": "S_2D(x,y)=mean_i interp(S_i,(x*cos(theta_i)+y*sin(theta_i))/sqrt(2)) over all sixty directional channels",
+            "legacy_visual_elastic_pi": "pi*exp(+S_2D(x,y)/K_D); full-field directional backprojection with the legacy visual sign",
+            "canonical_dubler_ratio": "pi*exp(-S_2D(x,y)/K_D); full-field canonical Dubler sign retained separately",
             "flowpoint": "alternating sector applied to an intrinsically phase-evolving ten-wave field",
             "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view",
         },
         "source_removal": state.source_removal,
+        "spatial_regression": {
+            "legacy_visual_elastic_pi": spatial_2d_diagnostics(state.elastic_pi),
+            "canonical_dubler_elastic_pi": spatial_2d_diagnostics(state.canonical_elastic_pi),
+        },
         "generated_files": [*STATIC_FILES, *ANIMATED_FILES, *DATA_FILES, CHECKSUM_FILE],
         "claim_boundary": CLAIM_BOUNDARY,
     }
@@ -388,7 +408,7 @@ def run_legacy_faithful_suite(
 
     checksummed = (*STATIC_FILES, *ANIMATED_FILES, *DATA_FILES, MANIFEST_FILE)
     checksums = {
-        "schema_version": "2.0",
+        "schema_version": "3.0",
         "algorithm": "sha256",
         "files": {name: _digest(output / name) for name in checksummed},
     }

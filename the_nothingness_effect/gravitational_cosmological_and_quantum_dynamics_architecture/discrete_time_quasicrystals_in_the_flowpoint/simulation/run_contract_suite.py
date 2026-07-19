@@ -128,6 +128,7 @@ def _write_module_manifest(output: Path, generation_source_commit: str) -> Path:
                     "tracked_root_files_regenerated": True,
                     "legacy_visual_source_bound": True,
                     "fibonacci_pisot_floquet_runtime_preserved": True,
+                    "elastic_pi_full_field_2d_verified": True,
                 },
                 "module": (
                     "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/"
@@ -221,7 +222,7 @@ def finalize_artifact_tree(
     root_inventory = sorted([*root_payload_before_metadata, ROOT_METADATA_FILE, ROOT_CHECKSUM_FILE])
     legacy_inventory = sorted(path.name for path in legacy_output.iterdir() if path.is_file())
     metadata = {
-        "schema_version": "4.0",
+        "schema_version": "5.0",
         "suite": "dtqc_complete_recursive_artifact_pipeline",
         "generation_source_commit": generation_commit,
         "generator_inventory": {
@@ -244,8 +245,8 @@ def finalize_artifact_tree(
         },
         "pipeline_partition": {
             "theorem_runtime": "Fibonacci/Pisot/Floquet and typed theorem-contract runtime retained",
-            "canonical_visual_runtime": "finite canonical DTQC source-response projection and phase clock",
-            "legacy_visual_runtime": "legacy source-faithful decagonal/DFI/Elastic-pi/Flowpoint pipeline",
+            "canonical_visual_runtime": "finite canonical DTQC source-response projection with full-field two-axis Elastic-pi coupling and phase clock",
+            "legacy_visual_runtime": "legacy decagonal/DFI profiles backprojected through all sixty directions before Elastic-pi and Flowpoint rendering",
             "compatibility_figure": (
                 "dtqc_spatial_closure.png is rebound to legacy_faithful/dtqc_legacy_summary.png; "
                 "the stale generic FieldLaw line plot is not retained"
@@ -254,6 +255,12 @@ def finalize_artifact_tree(
         "source_audit": legacy_manifest["source_audit"],
         "mathematical_bindings": legacy_manifest["mathematical_bindings"],
         "source_removal": legacy_manifest["source_removal"],
+        "spatial_regression": {
+            "canonical": json.loads(
+                (output / "dtqc_simulation_visualization_manifest.json").read_text(encoding="utf-8")
+            )["spatial_regression"],
+            "legacy": legacy_manifest["spatial_regression"],
+        },
         "production_configuration": {
             key: legacy_manifest[key]
             for key in (
@@ -280,7 +287,7 @@ def finalize_artifact_tree(
         path.name for path in output.iterdir() if path.is_file() and path.name != ROOT_CHECKSUM_FILE
     )
     checksums = {
-        "schema_version": "4.0",
+        "schema_version": "5.0",
         "algorithm": "sha256",
         "scope": "all tracked DTQC root payloads plus the complete legacy_faithful subdirectory",
         "generation_source_commit": generation_commit,

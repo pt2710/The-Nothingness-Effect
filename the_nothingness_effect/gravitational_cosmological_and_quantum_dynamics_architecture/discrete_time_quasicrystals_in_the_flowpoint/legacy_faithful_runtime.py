@@ -25,6 +25,8 @@ import numpy as np
 from scipy.ndimage import map_coordinates
 from scipy.signal import fftconvolve
 
+from .spatial_elastic_pi import backproject_directional_profiles, require_true_2d
+
 
 CLAIM_BOUNDARY = (
     "finite deterministic source-faithful DTQC visualization evidence; "
@@ -162,13 +164,12 @@ def _legacy_and_canonical_elastic_pi(
     entropy_scale: float,
     grid_size: int,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    legacy_ratio = np.exp(np.clip(entropy_profiles / entropy_scale, -100.0, math.log(100.0)))
-    canonical_ratio = np.exp(np.clip(-entropy_profiles / entropy_scale, -100.0, math.log(100.0)))
-    legacy_profile = legacy_ratio.mean(axis=0)
-    canonical_profile = canonical_ratio.mean(axis=0)
-    legacy = np.tile(math.pi * legacy_profile, (grid_size, 1))
-    canonical = np.tile(math.pi * canonical_profile, (grid_size, 1))
-    entropy = np.tile(entropy_profiles.mean(axis=0), (grid_size, 1))
+    entropy = backproject_directional_profiles(entropy_profiles, grid_size=grid_size)
+    legacy = math.pi * np.exp(np.clip(entropy / entropy_scale, -100.0, math.log(100.0)))
+    canonical = math.pi * np.exp(np.clip(-entropy / entropy_scale, -100.0, math.log(100.0)))
+    require_true_2d(entropy, label="legacy DTQC entropy backprojection")
+    require_true_2d(legacy, label="legacy visual Elastic-pi field")
+    require_true_2d(canonical, label="canonical Dubler Elastic-pi field")
     return entropy, legacy, canonical
 
 

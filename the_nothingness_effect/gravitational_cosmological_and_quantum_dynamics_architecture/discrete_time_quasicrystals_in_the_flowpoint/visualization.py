@@ -15,6 +15,9 @@ import numpy as np
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.contracts import contracts
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.elastic_pi import evaluate_elastic_pi, require_elastic_pi_value
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts import fixture
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.spatial_elastic_pi import (
+    require_true_2d,
+)
 from the_nothingness_effect._runtime.artifacts.io import save_csv, save_figure, write_metadata
 from the_nothingness_effect._runtime.artifacts.module_evidence import run_module_evidence
 from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import evaluate_contract
@@ -45,10 +48,17 @@ def _quasicrystal_field(size: int, phase: float = 0.0) -> tuple[np.ndarray, np.n
     x_grid, y_grid = np.meshgrid(axis, axis, indexing="xy")
     angles = np.pi * np.arange(5) / 5.0
     frequencies = (1.0, np.sqrt(2.0), (1.0 + np.sqrt(5.0)) / 2.0, np.sqrt(3.0), np.sqrt(5.0))
+    raw_direction_weights = np.asarray(
+        [weights[index % len(weights)] for index in range(len(angles))],
+        dtype=float,
+    )
+    raw_direction_weights /= float(np.sum(raw_direction_weights))
+    direction_weights = 0.5 * raw_direction_weights + 0.5 / len(angles)
+
     field = np.zeros_like(x_grid)
     for index, (angle, frequency) in enumerate(zip(angles, frequencies, strict=True)):
         projection = x_grid * np.cos(angle) + y_grid * np.sin(angle)
-        weight = float(weights[index % len(weights)])
+        weight = float(direction_weights[index])
         source_phase = phases[index % len(phases)]
         field += weight * np.cos(frequency * projection + source_phase + phase * (index + 1) / 5.0)
     field -= float(np.mean(field))
@@ -72,14 +82,58 @@ def _wavelet_scalogram(row: np.ndarray) -> np.ndarray:
     return np.asarray(coefficients)
 
 
-def _static_visuals(output: Path, *, size: int) -> dict[str, Path]:
+def _normalize_nonnegative(value: np.ndarray) -> np.ndarray:
+    array = np.asarray(value, dtype=float)
+    array -= float(np.min(array))
+    span = float(np.max(array))
+    if span <= 0.0 or not np.isfinite(span):
+        raise ValueError("DTQC spatial entropy component is degenerate")
+    return array / span
+
+
+def _elastic_entropy_field(field: np.ndarray) -> np.ndarray:
+    """Construct a local 2-D entropy proxy from field energy, DFI, and curvature."""
+
+    gradient_y, gradient_x = np.gradient(field)
+    dfi = np.hypot(gradient_x, gradient_y)
+    gradient_yy, gradient_yx = np.gradient(gradient_y)
+    gradient_xy, gradient_xx = np.gradient(gradient_x)
+    mixed = 0.5 * (gradient_xy + gradient_yx)
+    curvature = np.sqrt(gradient_xx**2 + gradient_yy**2 + 2.0 * mixed**2)
+    entropy = (
+        0.45 * _normalize_nonnegative(np.square(field))
+        + 0.35 * _normalize_nonnegative(dfi)
+        + 0.20 * _normalize_nonnegative(curvature)
+    )
+    require_true_2d(entropy, label="canonical DTQC spatial entropy")
+    return entropy
+
+
+def _elastic_pi_surface(field: np.ndarray) -> tuple[np.ndarray, np.ndarray, dict[str, float]]:
+    entropy = _elastic_entropy_field(field)
+    elastic = evaluate_elastic_pi(
+        entropy.reshape(-1),
+        K_D=max(float(np.mean(entropy)), 1e-6),
+    )
+    elastic_surface = require_elastic_pi_value(elastic).reshape(entropy.shape)
+    diagnostics = require_true_2d(
+        elastic_surface,
+        label="canonical DTQC Elastic-pi surface",
+    )
+    return entropy, elastic_surface, diagnostics
+
+
+def _static_visuals(
+    output: Path,
+    *,
+    size: int,
+) -> tuple[dict[str, Path], dict[str, float]]:
     x_grid, y_grid, field = _quasicrystal_field(size)
     gradient_y, gradient_x = np.gradient(field)
     dfi = np.hypot(gradient_x, gradient_y)
     dfi_scale = float(np.max(dfi))
     dfi = dfi / dfi_scale if dfi_scale > 0.0 else dfi
-    elastic = evaluate_elastic_pi(dfi.reshape(-1), K_D=max(float(np.mean(dfi)), 1e-6))
-    elastic_surface = require_elastic_pi_value(elastic).reshape(dfi.shape)
+    _, elastic_surface, spatial_diagnostics = _elastic_pi_surface(field)
     diffraction = np.log1p(np.abs(np.fft.fftshift(np.fft.fft2(field))))
     scalogram = _wavelet_scalogram(field[field.shape[0] // 2])
     outputs: dict[str, Path] = {}
@@ -115,7 +169,7 @@ def _static_visuals(output: Path, *, size: int) -> dict[str, Path]:
         axis.set(title=title, xlabel="x", ylabel="y", zlabel=name)
         outputs[name] = save_figure(figure, output / f"{name}_surface.png", dpi=150)
         plt.close(figure)
-    return outputs
+    return outputs, spatial_diagnostics
 
 
 def _animation(output: Path, *, size: int, frame_count: int) -> Path:
@@ -150,7 +204,7 @@ def run_dtqc_evidence(
     base = run_module_evidence("dtqc", contract_runner, output, seed=seed, simulation=simulation)
     size = 96 if simulation else 64
     frame_count = 18 if simulation else 12
-    visuals = _static_visuals(output, size=size)
+    visuals, spatial_diagnostics = _static_visuals(output, size=size)
     movie = _animation(output, size=64 if simulation else 48, frame_count=frame_count)
     phases = np.linspace(0.0, 2.0 * np.pi, frame_count, endpoint=False)
     phase_data = save_csv(
@@ -179,8 +233,13 @@ def run_dtqc_evidence(
             "regeneration_command": f"python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.{mode}.run_evidence",
             "approximation_metadata": {
                 "field": "finite quasiperiodic projection of all four DTQC A-source responses",
+                "elastic_pi_entropy": (
+                    "local two-dimensional field energy, normalized DFI magnitude, "
+                    "and Hessian curvature; no axis slice or one-dimensional broadcast"
+                ),
                 "wavelet": "finite real Morlet-like diagnostic",
             },
+            "spatial_regression": spatial_diagnostics,
         },
     )
     return {**base, "visuals": visuals, "dtqc_animation": movie, "phase_data": phase_data, "visualization_manifest": manifest}

@@ -10,46 +10,84 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
 )
 
 
-def test_legacy_faithful_state_is_finite_non_degenerate_and_typed() -> None:
-    state = generate_legacy_faithful_state(LegacyFaithfulConfig(grid_size=48, point_count=500, seed=7))
+def _config(**overrides: object) -> LegacyFaithfulConfig:
+    values: dict[str, object] = {
+        "grid_size": 64,
+        "point_count": 600,
+        "seed": 7,
+        "time_steps": 12,
+        "sphere_resolution": 48,
+    }
+    values.update(overrides)
+    return LegacyFaithfulConfig(**values)
 
-    assert state.carrier.shape == (48, 48)
-    assert state.diffraction.shape == (48, 48)
-    assert state.dfi_channels.shape == (5, 48, 48)
-    assert state.flowpoint_frames.shape == (10, 48, 48)
-    assert state.projection_5d.shape == (500, 5)
-    assert state.projection_3d.shape == (500, 3)
-    assert state.wavelet_ridges.shape == (2, 48, 48)
+
+def test_source_faithful_state_is_finite_non_degenerate_and_typed() -> None:
+    state = generate_legacy_faithful_state(_config())
+
+    assert state.carrier.shape == (64, 64)
+    assert state.radial_profiles.shape == (60, 64)
+    assert state.dfi_volume_profiles.shape == (60, 64)
+    assert state.flowpoint_frames.shape == (12, 64, 64)
+    assert state.scatter_reference_4d.shape == (600, 4)
+    assert state.scatter_trajectory_4d.shape == (12, 600, 4)
+    assert state.projection_3d.shape == (12, 600, 3)
     assert np.isfinite(state.elastic_pi).all()
+    assert np.isfinite(state.canonical_elastic_pi).all()
     assert float(np.std(state.carrier)) > 1e-3
     assert float(np.std(state.diffraction)) > 1e-3
     assert np.all(state.elastic_pi > 0.0)
+    assert np.all(state.canonical_elastic_pi > 0.0)
 
 
-def test_flowpoint_recurrence_and_canonical_elastic_pi_are_exact() -> None:
-    config = LegacyFaithfulConfig(grid_size=48, point_count=400, seed=11, entropy_scale=2.25)
-    state = generate_legacy_faithful_state(config)
+def test_legacy_visual_and_canonical_dubler_sign_conventions_are_separate() -> None:
+    state = generate_legacy_faithful_state(_config(entropy_scale=2.25))
 
-    np.testing.assert_allclose(state.flowpoint_frames[1:], -state.flowpoint_frames[:-1], atol=0.0, rtol=0.0)
-    np.testing.assert_allclose(state.flowpoint_frames[2:], state.flowpoint_frames[:-2], atol=0.0, rtol=0.0)
+    legacy_profile = np.exp(
+        np.clip(state.entropy_profiles / 2.25, -100.0, math.log(100.0))
+    ).mean(axis=0)
+    canonical_profile = np.exp(
+        np.clip(-state.entropy_profiles / 2.25, -100.0, math.log(100.0))
+    ).mean(axis=0)
     np.testing.assert_allclose(
-        state.elastic_pi,
-        math.pi * np.exp(-state.entropy / config.entropy_scale),
+        state.elastic_pi[0],
+        math.pi * legacy_profile,
         rtol=1e-14,
         atol=1e-14,
     )
-    assert state.flowpoint_sector.tolist() == [1.0, -1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0]
+    np.testing.assert_allclose(
+        state.canonical_elastic_pi[0],
+        math.pi * canonical_profile,
+        rtol=1e-14,
+        atol=1e-14,
+    )
+    assert not np.allclose(state.elastic_pi, state.canonical_elastic_pi)
 
 
-def test_projection_sphere_and_source_removal_are_deterministic_and_non_degenerate() -> None:
-    config = LegacyFaithfulConfig(grid_size=48, point_count=450, seed=13)
-    first = generate_legacy_faithful_state(config)
-    second = generate_legacy_faithful_state(config)
+def test_flicker_alternates_and_evolves_intrinsically() -> None:
+    state = generate_legacy_faithful_state(_config())
 
-    np.testing.assert_array_equal(first.projection_5d, second.projection_5d)
+    assert state.flowpoint_sector.tolist() == [1.0, -1.0] * 6
+    assert state.legacy_frame_index.tolist() == list(range(0, 48, 4))
+    # Regression: the previous implementation only negated one frozen frame.
+    assert float(np.linalg.norm(state.flowpoint_frames[1] + state.flowpoint_frames[0])) > 1.0
+    assert float(
+        np.linalg.norm(np.abs(state.flowpoint_frames[1]) - np.abs(state.flowpoint_frames[0]))
+    ) > 1.0
+    assert state.source_removal["temporal_evolution"] > 0.0
+
+
+def test_scatter_cloud_deforms_intrinsically_and_is_deterministic() -> None:
+    first = generate_legacy_faithful_state(_config(seed=13))
+    second = generate_legacy_faithful_state(_config(seed=13))
+
+    np.testing.assert_array_equal(first.scatter_reference_4d, second.scatter_reference_4d)
+    np.testing.assert_array_equal(first.scatter_trajectory_4d, second.scatter_trajectory_4d)
     np.testing.assert_array_equal(first.projection_3d, second.projection_3d)
-    assert np.linalg.matrix_rank(first.projection_5d) == 5
-    assert first.sphere_points.shape[1] == 3
-    assert first.half_sphere_points.shape[1] == 3
-    assert 0 < len(first.half_sphere_points) < len(first.sphere_points)
+    assert np.linalg.matrix_rank(first.scatter_reference_4d) == 4
+    assert float(
+        np.linalg.norm(first.scatter_trajectory_4d[1] - first.scatter_trajectory_4d[0])
+    ) > 1.0
+    coordinate_spread = np.std(first.scatter_trajectory_4d, axis=1)
+    assert float(np.max(np.ptp(coordinate_spread, axis=0))) > 0.1
     assert all(residual > 0.0 for residual in first.source_removal.values())

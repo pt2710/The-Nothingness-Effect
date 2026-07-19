@@ -1,4 +1,6 @@
 source,necessity_residual,necessary
-dfi,9.9867928782658471,True
-elastic_pi,58.763710330218288,True
-flowpoint,136.98264190037349,True
+dfi,1.2030887933401784,True
+elastic_pi,91.598374165490839,True
+flowpoint,534.861083984375,True
+scatter_oscillation,474.21270751953125,True
+temporal_evolution,635.92244575516725,True

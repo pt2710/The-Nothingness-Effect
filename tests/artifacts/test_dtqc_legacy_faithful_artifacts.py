@@ -2,11 +2,9 @@ from __future__ import annotations
 
 import hashlib
 import json
-import math
-
-import numpy as np
 from pathlib import Path
 
+import numpy as np
 from PIL import Image
 
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_legacy_faithful_suite import (
@@ -20,31 +18,42 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
 
 
 def test_legacy_faithful_suite_materializes_exact_byte_verified_inventory(tmp_path: Path) -> None:
-    result = run_legacy_faithful_suite(tmp_path, seed=17, grid_size=48)
+    result = run_legacy_faithful_suite(
+        tmp_path,
+        seed=17,
+        grid_size=64,
+        time_steps=12,
+        point_count=600,
+        sphere_resolution=48,
+    )
 
     assert tuple(sorted(path.name for path in tmp_path.iterdir())) == tuple(sorted(EXPECTED_INVENTORY))
     assert result["manifest"] == tmp_path / MANIFEST_FILE
     manifest = json.loads((tmp_path / MANIFEST_FILE).read_text(encoding="utf-8"))
-    assert manifest["mathematical_bindings"]["elastic_pi"] == "pi*exp(-S/K_D)"
-    assert manifest["mathematical_bindings"]["flowpoint"] == "sigma_n=(-1)^n"
+    assert manifest["schema_version"] == "2.0"
+    assert manifest["radial_channels"] == 60
+    assert manifest["mathematical_bindings"]["legacy_visual_elastic_pi"].startswith(
+        "pi*mean_i(exp(S_i/K_D))"
+    )
+    assert manifest["mathematical_bindings"]["canonical_dubler_ratio"].startswith(
+        "exp(-delta_S/K_D)"
+    )
+    assert "intrinsically phase-evolving" in manifest["mathematical_bindings"]["flowpoint"]
     assert all(value > 0.0 for value in manifest["source_removal"].values())
     assert "not a formal proof" in manifest["claim_boundary"]
 
     with np.load(tmp_path / "dtqc_legacy_state.npz") as state:
-        np.testing.assert_allclose(
-            state["flowpoint_frames"][2:],
-            state["flowpoint_frames"][:-2],
-            atol=0.0,
-            rtol=0.0,
-        )
-        np.testing.assert_allclose(
-            state["elastic_pi"],
-            math.pi * np.exp(-state["entropy"] / manifest["entropy_scale"]),
-            rtol=1e-14,
-            atol=1e-14,
-        )
-        assert np.linalg.matrix_rank(state["projection_5d"]) == 5
-        assert 0 < len(state["half_sphere_points"]) < len(state["sphere_points"])
+        assert state["radial_profiles"].shape == (60, 64)
+        assert state["flowpoint_frames"].shape == (12, 64, 64)
+        assert state["scatter_trajectory_4d"].shape == (12, 600, 4)
+        assert state["projection_3d"].shape == (12, 600, 3)
+        assert float(
+            np.linalg.norm(state["flowpoint_frames"][1] + state["flowpoint_frames"][0])
+        ) > 1.0
+        assert float(
+            np.linalg.norm(state["scatter_trajectory_4d"][1] - state["scatter_trajectory_4d"][0])
+        ) > 1.0
+        assert not np.allclose(state["elastic_pi"], state["canonical_elastic_pi"])
 
     checksums = json.loads((tmp_path / CHECKSUM_FILE).read_text(encoding="utf-8"))
     assert set(checksums["files"]) == set(EXPECTED_INVENTORY) - {CHECKSUM_FILE}
@@ -76,6 +85,7 @@ def test_tracked_legacy_faithful_inventory_matches_committed_checksums() -> None
         sorted(EXPECTED_INVENTORY)
     )
     checksums = json.loads((artifact_dir / CHECKSUM_FILE).read_text(encoding="utf-8"))
+    assert checksums["schema_version"] == "2.0"
     assert set(checksums["files"]) == set(EXPECTED_INVENTORY) - {CHECKSUM_FILE}
     for name, expected in checksums["files"].items():
         assert hashlib.sha256((artifact_dir / name).read_bytes()).hexdigest() == expected

@@ -7,37 +7,18 @@ _MATH_OLD = "the_nothingness_effect.mathematical_architecture.contracts"
 _MATH_NEW = "the_nothingness_effect.mathematical_architecture.recertified_contracts"
 _COMPLETENESS_OLD = "the_nothingness_effect.the_completeness_theorem.contracts"
 _COMPLETENESS_NEW = "the_nothingness_effect.the_completeness_theorem.recertified_contracts"
-_DFI_OLD = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "dynamic_fluctuation_index.contracts"
-)
-_DFI_NEW = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "dynamic_fluctuation_index.authoritative_product_contracts"
-)
-_PDFI_OLD = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "parity_adapted_dynamic_fluctuation_index.contracts"
-)
-_PDFI_NEW = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "parity_adapted_dynamic_fluctuation_index.authoritative_product_contracts"
-)
-_ELASTIC_PI_OLD = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "elastic_pi.contracts"
-)
-_ELASTIC_PI_NEW = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "elastic_pi.authoritative_product_contracts"
-)
-_ELASTIC_PI_NORM_OLD = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "elastic_pi_norm.contracts"
-)
-_ELASTIC_PI_NORM_NEW = (
-    "the_nothingness_effect.fluctuation_and_elastic_dynamics."
-    "elastic_pi_norm.authoritative_product_contracts"
+_DFI_OLD = "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.contracts"
+_DFI_NEW = "the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.authoritative_product_contracts"
+_PDFI_OLD = "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.contracts"
+_PDFI_NEW = "the_nothingness_effect.fluctuation_and_elastic_dynamics.parity_adapted_dynamic_fluctuation_index.authoritative_product_contracts"
+_ELASTIC_PI_OLD = "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.contracts"
+_ELASTIC_PI_NEW = "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.authoritative_product_contracts"
+_ELASTIC_PI_NORM_OLD = "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.contracts"
+_ELASTIC_PI_NORM_NEW = "the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.authoritative_product_contracts"
+_QENN_PREFIX = "the_nothingness_effect.artificial_intelligence.qenn."
+_QENN_NEW = (
+    "the_nothingness_effect.artificial_intelligence.qenn.authoritative_closure_contracts",
+    "contracts",
 )
 _FOUNDATIONAL_PREFIX = "the_nothingness_effect.foundational_architecture."
 _FOUNDATIONAL_RECERTIFIED = (
@@ -46,8 +27,14 @@ _FOUNDATIONAL_RECERTIFIED = (
 )
 
 rebuilt = []
+qenn_inserted = False
 for module_name, factory_name in _impl.CONTRACT_MODULES:
     if module_name.startswith(_FOUNDATIONAL_PREFIX):
+        continue
+    if module_name.startswith(_QENN_PREFIX):
+        if not qenn_inserted:
+            rebuilt.append(_QENN_NEW)
+            qenn_inserted = True
         continue
     if module_name == _MATH_OLD:
         rebuilt.append((_MATH_NEW, factory_name))

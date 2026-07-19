@@ -12,6 +12,11 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
     ANIMATED_FILES as CANONICAL_ANIMATED_FILES,
     COMPLETE_CANONICAL_FILES,
 )
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.quantum_wave_bridge import (
+    ALL_FILES as FP_QUANTUM_FILES,
+    ANIMATED_FILES as FP_QUANTUM_ANIMATED_FILES,
+    STATIC_FILES as FP_QUANTUM_STATIC_FILES,
+)
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.spatial_elastic_pi import (
     spatial_2d_diagnostics,
 )
@@ -57,7 +62,7 @@ EXPECTED_ROOT_FILES = {
     "parseval_energy_bijection_l_2_energy_mismatch_manifest.json",
     "qc_contour.png",
     "wavelet_central_row.png",
-} | set(COMPLETE_CANONICAL_FILES)
+} | set(COMPLETE_CANONICAL_FILES) | set(FP_QUANTUM_FILES)
 
 
 def _sha256(path: Path) -> str:
@@ -91,6 +96,78 @@ def _validate_complete_canonical_classes(artifact_dir: Path) -> None:
     assert [row["axis_name"] for row in rows] == ["x", "y", "z", "w", "u"]
     assert all(float(row["source_removal_residual"]) > 0.0 for row in rows)
     assert all(row["necessary"] in {"True", "true", "1"} for row in rows)
+
+
+def _validate_fp_quantum_classes(artifact_dir: Path) -> None:
+    for name in FP_QUANTUM_FILES:
+        assert (artifact_dir / name).is_file(), name
+
+    for name in FP_QUANTUM_STATIC_FILES:
+        with Image.open(artifact_dir / name) as image:
+            image.verify()
+    for name in FP_QUANTUM_ANIMATED_FILES:
+        with Image.open(artifact_dir / name) as movie:
+            assert movie.is_animated, name
+            assert movie.n_frames >= 8, name
+
+    with np.load(artifact_dir / "dtqc_fp_quantum_state.npz") as state:
+        assert state["probabilities"].ndim == 3
+        assert state["wavefunctions"].shape == state["probabilities"].shape
+        assert state["quark_modes"].shape[:2] == (
+            state["probabilities"].shape[0],
+            6,
+        )
+        assert state["pair_states"].shape == (
+            state["probabilities"].shape[0],
+            4,
+        )
+        assert state["reduced_density_matrices"].shape == (
+            state["probabilities"].shape[0],
+            2,
+            2,
+        )
+        assert np.max(np.abs(state["norms"] - 1.0)) < 1e-12
+        assert np.allclose(
+            np.trace(
+                state["reduced_density_matrices"],
+                axis1=1,
+                axis2=2,
+            ),
+            1.0,
+            atol=1e-12,
+        )
+        assert np.all(state["entanglement_entropy"] > 0.0)
+        assert np.all(state["entanglement_entropy"] <= 1.0 + 1e-12)
+        assert np.all(state["concurrence"] > 0.0)
+        assert np.all(state["concurrence"] <= 1.0 + 1e-12)
+        assert state["quark_masses_gev"].shape == (6,)
+        assert state["quark_charges"].shape == (6,)
+        assert float(np.ptp(state["normalized_quark_frequencies"])) > 1.0
+
+    with (artifact_dir / "dtqc_fp_quantum_source_removal.csv").open(
+        newline="",
+        encoding="utf-8",
+    ) as handle:
+        rows = list(csv.DictReader(handle))
+    assert [row["source"] for row in rows] == [
+        "fp_wave_functionality",
+        "fp_particle_and_quark_modes",
+        "fp_density_matrix_entanglement",
+    ]
+    assert all(float(row["removal_residual"]) > 1e-4 for row in rows)
+    assert all(row["necessary"] in {"True", "true", "1"} for row in rows)
+
+    manifest = json.loads(
+        (artifact_dir / "dtqc_fp_quantum_manifest.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert set(manifest["generated_files"]) == set(FP_QUANTUM_FILES)
+    assert "reduced-density-matrix" in manifest["source_domains"]["entanglement"]
+    assert manifest["invariants"]["wave_norm_max_residual"] < 1e-12
+    assert manifest["invariants"]["density_trace_max_residual"] < 1e-12
+    assert manifest["invariants"]["minimum_entanglement_entropy"] > 0.0
+    assert manifest["invariants"]["minimum_concurrence"] > 0.0
 
 
 def _validate_full_tree(artifact_dir: Path) -> None:
@@ -167,7 +244,11 @@ def _validate_full_tree(artifact_dir: Path) -> None:
 
     with Image.open(artifact_dir / ROOT_COMPATIBILITY_FIGURE) as image:
         image.verify()
-    for name in ("dfi_surface.png", "elastic_pi_surface.png", "elastic_pi_intrinsic_axes.png"):
+    for name in (
+        "dfi_surface.png",
+        "elastic_pi_surface.png",
+        "elastic_pi_intrinsic_axes.png",
+    ):
         with Image.open(artifact_dir / name) as image:
             image.verify()
     for name in STATIC_FILES:
@@ -177,12 +258,16 @@ def _validate_full_tree(artifact_dir: Path) -> None:
         with Image.open(legacy_dir / name) as movie:
             assert movie.is_animated
             assert movie.n_frames >= 8
-    for name in ("dtqc_phase_clock_animation.gif", "dtqc_simulation_residual_animation.gif"):
+    for name in (
+        "dtqc_phase_clock_animation.gif",
+        "dtqc_simulation_residual_animation.gif",
+    ):
         with Image.open(artifact_dir / name) as movie:
             assert movie.is_animated
             assert movie.n_frames >= 8
 
     _validate_complete_canonical_classes(artifact_dir)
+    _validate_fp_quantum_classes(artifact_dir)
 
 
 def test_full_pipeline_replaces_stale_root_and_regenerates_every_artifact_class(
@@ -202,10 +287,23 @@ def test_full_pipeline_replaces_stale_root_and_regenerates_every_artifact_class(
         assert state["radial_profiles"].shape == (60, 240)
         assert state["flowpoint_frames"].shape == (48, 240, 240)
         assert state["scatter_trajectory_4d"].shape == (48, 8000, 4)
-        assert float(np.linalg.norm(state["flowpoint_frames"][1] + state["flowpoint_frames"][0])) > 1.0
-        assert float(
-            np.linalg.norm(state["scatter_trajectory_4d"][1] - state["scatter_trajectory_4d"][0])
-        ) > 1.0
+        assert (
+            float(
+                np.linalg.norm(
+                    state["flowpoint_frames"][1] + state["flowpoint_frames"][0]
+                )
+            )
+            > 1.0
+        )
+        assert (
+            float(
+                np.linalg.norm(
+                    state["scatter_trajectory_4d"][1]
+                    - state["scatter_trajectory_4d"][0]
+                )
+            )
+            > 1.0
+        )
         assert not np.allclose(state["elastic_pi"], state["canonical_elastic_pi"])
         for name in ("entropy", "elastic_pi", "canonical_elastic_pi"):
             diagnostics = spatial_2d_diagnostics(state[name])

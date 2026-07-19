@@ -139,8 +139,8 @@ def plot_summaries(
 
 
 # The CLI imports the comprehensive module first and then this specialized plot
-# module.  Rebind the summary callback here so artifact hashing sees the final,
+# module. Rebind the summary callback here so artifact hashing sees the final,
 # semantically correct figure bytes.
-from . import comprehensive_evaluation as _comprehensive_evaluation
+from . import comprehensive_evaluation as _comprehensive_evaluation  # noqa: E402
 
 _comprehensive_evaluation.plot_summaries = plot_summaries

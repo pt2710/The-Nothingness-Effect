@@ -8,6 +8,7 @@ from pathlib import Path
 import sys
 
 import torch
+from torch.nn import functional
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 if str(REPOSITORY_ROOT) not in sys.path:
@@ -69,6 +70,92 @@ def _source_removals_without_legacy_name(model, batch, seed):
     return rows
 
 
+def _ridge_solution(
+    features: torch.Tensor,
+    labels: torch.Tensor,
+    classes: int,
+    ridge: float,
+) -> torch.Tensor:
+    x = features.detach().to(torch.float64)
+    ones = torch.ones((x.shape[0], 1), dtype=x.dtype, device=x.device)
+    design = torch.cat((x, ones), dim=-1)
+    target = functional.one_hot(labels, num_classes=classes).to(torch.float64)
+    penalty = torch.eye(design.shape[-1], dtype=x.dtype, device=x.device)
+    penalty[-1, -1] = 0.0
+    system = design.T @ design + ridge * penalty
+    return torch.linalg.solve(system, design.T @ target)
+
+
+def _fit_qenn_readouts(model, train_batch, validation_batch) -> tuple[float, ...]:
+    """Fit only QENN last layers and select ridge strength on validation data."""
+
+    model.eval()
+    with torch.no_grad():
+        train_output = model(train_batch.modalities)
+        validation_output = model(validation_batch.modalities)
+    train_qenn = train_output.backbone_output.soinet_output.qenn_outputs
+    validation_qenn = validation_output.backbone_output.soinet_output.qenn_outputs
+    modules = model.backbone.soinet.ensemble.qenn
+    if not (len(train_qenn) == len(validation_qenn) == len(modules)):
+        raise RuntimeError("QENN ridge fine-tuning requires aligned ensemble outputs")
+
+    selected_lambdas: list[float] = []
+    candidates = (1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0)
+    for index, (module, train_state, validation_state) in enumerate(
+        zip(modules, train_qenn, validation_qenn, strict=True)
+    ):
+        train_features = train_state.spectral_reconstruction
+        validation_features = validation_state.spectral_reconstruction
+        if train_features is None or validation_features is None:
+            raise RuntimeError("QENN spectral reconstruction is required for ridge fine-tuning")
+        classes = module.readout_layer.out_features
+        best_score = math.inf
+        best_beta: torch.Tensor | None = None
+        best_ridge = candidates[0]
+        for ridge in candidates:
+            beta = _ridge_solution(
+                train_features,
+                train_batch.labels,
+                classes,
+                ridge,
+            )
+            logits = (
+                validation_features.to(torch.float64) @ beta[:-1]
+                + beta[-1]
+            )
+            loss = float(functional.cross_entropy(logits, validation_batch.labels))
+            accuracy = float(
+                (logits.argmax(dim=-1) == validation_batch.labels).float().mean()
+            )
+            score = loss + 0.25 * (1.0 - accuracy)
+            if score < best_score:
+                best_score = score
+                best_beta = beta
+                best_ridge = ridge
+        if best_beta is None:
+            raise RuntimeError("QENN ridge search did not produce a finite candidate")
+        with torch.no_grad():
+            module.readout_layer.weight.copy_(
+                best_beta[:-1].T.to(
+                    dtype=module.readout_layer.weight.dtype,
+                    device=module.readout_layer.weight.device,
+                )
+            )
+            module.readout_layer.bias.copy_(
+                best_beta[-1].to(
+                    dtype=module.readout_layer.bias.dtype,
+                    device=module.readout_layer.bias.device,
+                )
+            )
+        buffer_name = f"qenn_readout_ridge_lambda_{index}"
+        if hasattr(model, buffer_name):
+            getattr(model, buffer_name).fill_(best_ridge)
+        else:
+            model.register_buffer(buffer_name, torch.tensor(float(best_ridge)))
+        selected_lambdas.append(float(best_ridge))
+    return tuple(selected_lambdas)
+
+
 def _train_with_temperature_selection(
     model,
     train_batch,
@@ -81,6 +168,7 @@ def _train_with_temperature_selection(
         validation_batch,
         **kwargs,
     )
+    _fit_qenn_readouts(model, train_batch, validation_batch)
     if not hasattr(model, "calibration_temperature"):
         model.register_buffer("calibration_temperature", torch.ones(()))
     candidates = (0.55, 0.7, 0.85, 1.0, 1.15, 1.35, 1.6)
@@ -92,8 +180,7 @@ def _train_with_temperature_selection(
             evaluation = evaluate_multimodal_model(model, validation_batch)
             score = (
                 float(evaluation.metrics["cross_entropy"])
-                + 0.35
-                * float(evaluation.metrics["expected_calibration_error"])
+                + 0.35 * float(evaluation.metrics["expected_calibration_error"])
             )
             if score < selected_score:
                 selected_score = score
@@ -116,18 +203,9 @@ run_comprehensive_ai_evaluation = comprehensive_evaluation.run_comprehensive_ai_
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument(
-        "--seeds",
-        type=int,
-        nargs="+",
-        default=[0, 1, 2],
-    )
+    parser.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
     parser.add_argument("--epochs", type=int, default=60)
-    parser.add_argument(
-        "--samples-per-class",
-        type=int,
-        default=24,
-    )
+    parser.add_argument("--samples-per-class", type=int, default=24)
     args = parser.parse_args()
     report = run_comprehensive_ai_evaluation(
         args.output,
@@ -143,7 +221,7 @@ def main() -> int:
     print(
         "comprehensive_ai_evaluation=passed "
         "local_rbm=removed "
-        "qenn_auxiliary=supervised "
+        "qenn_auxiliary=supervised_and_ridge_finetuned "
         "temperature_calibration=validation_selected "
         f"seeds={len(seed_summary)} "
         f"artifacts={report['artifact_count']} "

@@ -1,0 +1,36 @@
+{
+  "claim_boundary": "finite deterministic legacy-faithful DTQC visualization evidence; not a formal proof, thermodynamic-limit existence result, or empirical validation",
+  "entropy_scale": 1.75,
+  "generated_files": [
+    "dtqc_legacy_summary.png",
+    "dtqc_legacy_quasicrystal_contour.png",
+    "dtqc_legacy_diffraction_fft.png",
+    "dtqc_legacy_dfi_surface.png",
+    "dtqc_legacy_elastic_pi_surface.png",
+    "dtqc_legacy_wavelet_ridges.png",
+    "dtqc_legacy_flowpoint_flicker.gif",
+    "dtqc_legacy_5d_scatter.gif",
+    "dtqc_legacy_elastic_pi_sphere.gif",
+    "dtqc_legacy_elastic_pi_half_sphere.gif",
+    "dtqc_legacy_metrics.csv",
+    "dtqc_legacy_state.npz",
+    "dtqc_legacy_source_removal.csv",
+    "dtqc_legacy_checksums.json"
+  ],
+  "grid_size": 72,
+  "mathematical_bindings": {
+    "carrier": "ten-direction decagonal plane-wave superposition",
+    "dfi": "radial multi-axis finite fluctuation decomposition",
+    "diffraction": "centered 2-D FFT intensity",
+    "elastic_pi": "pi*exp(-S/K_D)",
+    "flowpoint": "sigma_n=(-1)^n"
+  },
+  "schema_version": "1.0",
+  "seed": 0,
+  "source_removal": {
+    "dfi": 9.986792878265847,
+    "elastic_pi": 58.76371033021829,
+    "flowpoint": 136.9826419003735
+  },
+  "suite": "dtqc_legacy_faithful"
+}

@@ -44,7 +44,7 @@ DATA_FILES = (
     "dtqc_legacy_source_removal.csv",
 )
 CHECKSUM_FILE = "dtqc_legacy_checksums.json"
-MANIFEST_FILE = "dtqc_legacy_manifest.json"
+MANIFEST_FILE = "dtqc_legacy_metadata.json"
 EXPECTED_INVENTORY = (*STATIC_FILES, *ANIMATED_FILES, *DATA_FILES, CHECKSUM_FILE, MANIFEST_FILE)
 
 
@@ -155,7 +155,15 @@ def _sphere_animation(path: Path, points: np.ndarray, title: str) -> None:
     for angle in np.linspace(0.0, 330.0, 12):
         figure = plt.figure(figsize=(5.8, 5.4), constrained_layout=True)
         axis = figure.add_subplot(111, projection="3d")
-        scatter = axis.scatter(points[:, 0], points[:, 1], points[:, 2], c=values, cmap="plasma", s=5, alpha=0.72)
+        scatter = axis.scatter(
+            points[:, 0],
+            points[:, 1],
+            points[:, 2],
+            c=values,
+            cmap="plasma",
+            s=5,
+            alpha=0.72,
+        )
         axis.view_init(elev=20.0, azim=float(angle))
         axis.set(title=title, xlabel="X", ylabel="Y", zlabel="Z")
         axis.set_box_aspect((1, 1, 1))
@@ -222,7 +230,7 @@ def run_legacy_faithful_suite(
         "Multiscale wavelet-ridge proxy",
         "cividis",
         "ridge strength",
-    )
+     )
 
     _flowpoint_animation(output / ANIMATED_FILES[0], state)
     _scatter_animation(output / ANIMATED_FILES[1], state)

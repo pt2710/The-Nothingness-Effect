@@ -1,0 +1,37 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "authority_bound": true,
+    "evidence_class": "exact_finite_contract",
+    "exact_semantics": true,
+    "formal_proof_verified": false
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "qenn_authoritative_metrics.csv",
+    "qenn_dual_branch_classification.csv",
+    "qenn_authoritative_branch_map.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "deee56c6dee4add88c3925b860ca07278ac2251a47e228c937fba96c52c9ada6",
+  "parameters": {
+    "feature_count": 6,
+    "fixture": "authoritative-dual-product-v1",
+    "module": "qenn",
+    "sample_count": 16
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/qenn/simulation/artifacts",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "hyper_parameter_stability_wedge_instability_lobe"
+}

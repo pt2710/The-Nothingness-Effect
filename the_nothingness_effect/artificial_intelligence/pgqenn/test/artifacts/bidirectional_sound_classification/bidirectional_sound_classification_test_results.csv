@@ -1,10 +1,4 @@
-sample,true_index,true_label,predicted_index,predicted_label,confidence,correct,input_frequency_hz,reconstructed_frequency_hz
-0,0,low_250_hz,0,low_250_hz,0.9373869895935059,True,253.90625,250.0
-1,0,low_250_hz,0,low_250_hz,0.9409692287445068,True,250.0,250.0
-2,0,low_250_hz,0,low_250_hz,0.9414409399032593,True,246.09375,250.0
-3,1,middle_500_hz,1,middle_500_hz,0.951735258102417,True,496.09375,500.0
-4,1,middle_500_hz,1,middle_500_hz,0.9558389782905579,True,500.0,500.0
-5,1,middle_500_hz,1,middle_500_hz,0.9516889452934265,True,496.09375,500.0
-6,2,high_1000_hz,2,high_1000_hz,0.9988081455230713,True,1003.90625,1000.0
-7,2,high_1000_hz,2,high_1000_hz,0.9986687898635864,True,996.09375,1000.0
-8,2,high_1000_hz,2,high_1000_hz,0.9988061189651489,True,1003.90625,1000.0
+sample,true_index,true_label,predicted_index,predicted_label,confidence,correct,metric_producer
+0,0,low_250_hz,0,low_250_hz,0.36141878366470337,True,SOInet
+1,1,middle_500_hz,1,middle_500_hz,0.3594270944595337,True,SOInet
+2,2,high_1000_hz,2,high_1000_hz,0.4420109689235687,True,SOInet

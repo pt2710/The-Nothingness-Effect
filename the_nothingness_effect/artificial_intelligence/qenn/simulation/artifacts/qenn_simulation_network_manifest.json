@@ -1,7 +1,7 @@
 {
   "architecture": "qenn",
   "artifact_family": "network_topology_and_activation",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
+  "claim_boundary": "finite observed model state; not a formal proof substitute",
   "generated_files": [
     "qenn_simulation_network_topology.png",
     "qenn_simulation_network_connectivity.png",
@@ -32,19 +32,22 @@
     "qenn_simulation_network_3d_signed_spectrum_signal.gif",
     "qenn_simulation_network_3d_growth_manifest.json"
   ],
-  "parameter_hash": "002fb7cc1b02353cc1a72818ac50aa2cc869b7b43b2dee521bb28ef8a97e4ab5",
+  "parameter_hash": "e269f2f63b9a78dc7645df839323443070de2a48591287abae5f6d6e15373906",
   "parameters": {
     "architecture": "qenn",
     "architecture_specific_3d_semantics": true,
     "edge_count": 11,
     "executable_3d_growth": true,
+    "minimum_animation_frames": 10,
     "mode": "simulation",
+    "network_state_source": "runtime_derived_model_state",
     "node_count": 10,
+    "runtime_frame_count": 10,
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_all_capabilities",
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
-  "source_status": "deterministic_network_state_visualization"
+  "source_status": "runtime_derived_network_state"
 }

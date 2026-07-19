@@ -64,12 +64,14 @@ def test_completeness_contracts_use_latest_authority_binding():
     }
 
 
-def test_completeness_contracts_evaluate_without_promoting_finite_closure_to_proof():
+def test_completeness_contracts_close_exact_finite_certificates_without_proof_claim():
     evaluations = tuple(evaluate_contract(contract, INPUT) for contract in contracts())
 
     assert all(item.residual is None or item.residual.passed for item in evaluations)
-    assert evaluations[-2].status is ClosureStatus.NUMERICAL_CANDIDATE
-    assert evaluations[-1].status is ClosureStatus.NUMERICAL_CANDIDATE
+    assert evaluations[-2].status is ClosureStatus.CLOSED
+    assert evaluations[-1].status is ClosureStatus.CLOSED
+    assert evaluations[-2].exact_semantics
+    assert evaluations[-1].exact_semantics
     assert evaluations[0].output.obstruction_count > 0
     assert "proof" not in evaluations[-1].detail.lower()
 

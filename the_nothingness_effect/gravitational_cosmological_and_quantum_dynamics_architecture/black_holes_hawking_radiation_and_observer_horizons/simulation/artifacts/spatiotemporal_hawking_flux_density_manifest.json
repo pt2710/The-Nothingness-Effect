@@ -1,0 +1,39 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "approximation_metadata": {
+    "exact_semantics": false
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "generated_files": [
+    "black_hole_dynamics_contract_metrics.csv",
+    "black_hole_dynamics_spatial_closure.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "26d0f861e143ceed50377c16046005f820a3102a1d72e0ed9e5c833a84a02ed8",
+  "parameters": {
+    "fixture": "contract-specific-authoritative-v5",
+    "module": "black_hole_dynamics",
+    "sample_count": 9,
+    "sample_type": "BlackHoleInput"
+  },
+  "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.black_holes_hawking_radiation_and_observer_horizons.simulation.run_contract_suite --output the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/artifacts",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.15163266492815836,
+    0.1359589997014698,
+    0.1458265060721962,
+    0.130038817728699,
+    0.12169790485298573,
+    0.12391371602559909,
+    0.13358481580415058,
+    0.11761769400357866,
+    0.10381320363448812
+  ],
+  "seed": 0,
+  "theorem_complex_id": "spatiotemporal_hawking_flux_density"
+}

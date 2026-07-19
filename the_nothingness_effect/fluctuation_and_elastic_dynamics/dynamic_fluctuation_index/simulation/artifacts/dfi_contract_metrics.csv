@@ -1,0 +1,9 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics,source_count
+dfi_spectrum_normalized_existence_and_normalization_breakdown,A,0.0,satisfied,True,0
+dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence,A,9.597583973135935e-17,satisfied,True,0
+dfi_entropic_fluctuation_encoding_and_fluctuation_divergence,A,0.0,satisfied,True,0
+dfi_adaptive_applicability_and_contextual_instability,A,9.309503074677274e-17,satisfied,True,0
+scale_normalized_dfi_homogeneity_invariant,B,9.597583973135935e-17,satisfied,True,2
+entropic_applicability_response_operator,B,0.0,satisfied,True,2
+spatially_localized_dfi_consistency_closure,C,0.0,closed,True,3
+flowpoint_certified_dfi_validation_functional,B,0.0,satisfied,True,3

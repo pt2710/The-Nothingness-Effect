@@ -1,11 +1,12 @@
 {
   "appendix_filename": "appendix_tne_mathematical_closure_architecture.tex",
-  "appendix_source_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+  "appendix_source_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
   "approximation_metadata": {
-    "candidate_not_minimizer": true
+    "authority_bound": true,
+    "candidate_not_formal_attainment": false
   },
   "claim_boundary": "finite computational support; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "closure_status": "satisfied",
   "generated_files": [
     "mathematical_closure_metrics.csv",
     "mathematical_closure_trace.png"
@@ -25,10 +26,10 @@
     ]
   },
   "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation --output the_nothingness_effect/mathematical_architecture/simulation/artifacts",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0
+    2.0721127472279897e-15
   ],
   "seed": 0,
   "theorem_complex_id": "complex_phase_coordinates_and_fourier_reconstruction"

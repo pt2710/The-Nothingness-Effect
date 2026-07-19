@@ -1,0 +1,4 @@
+split,train_accuracy,validation_accuracy,accuracy,test_loss,mean_confidence,generalization_gap
+train,0.8333333134651184,,,,,
+validation,,0.8333333134651184,,,,
+test,0.8333333134651184,0.8333333134651184,0.8333333134651184,1.6220964193344116,0.20048069953918457,0.0

@@ -1,0 +1,8 @@
+theorem_complex_id,residual,closure_status,source_removal_a,source_removal_b
+self_negating_oscillation_and_eigenstructure,0.0,satisfied,not_applicable,not_applicable
+parity_to_bit_equivalence_and_2_adic_coding,0.0,satisfied,not_applicable,not_applicable
+kernel_fiber_integrability,0.0,satisfied,not_applicable,not_applicable
+phase_clock,0.0,satisfied,not_applicable,not_applicable
+scheduled_spectral_history,0.0,satisfied,tested,tested
+phase_indexed_kernel_transport,0.0,satisfied,tested,tested
+affine_history_field,0.0,closed,tested,tested

@@ -1,0 +1,3532 @@
+{
+  "claim_boundary": "diagnostic 3-D and five-coordinate projections are not physical geometry, formal proof, or empirical validation",
+  "complete_core_artifact_bundles": 351,
+  "diagnostic_bundles_enriched": 351,
+  "incomplete_core_artifact_bundles": 0,
+  "incomplete_ids": [],
+  "passed": true,
+  "provenance_binding_mismatches": 0,
+  "provenance_binding_path": "reports/effective_artifact_provenance_binding.json",
+  "records": [
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "2_adic_curvature_regularity_barrier"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "2_adic_history_accessibility_and_frozen_accessibility"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "addition_of_approximation_and_harmonic_geometry"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "addition_of_the_two_complete_b_level_operator_families"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "affine_history_field"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "affine_spatial_involution_orbit"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "algebraic_analytic_reconstruction_equivalence_non_invertible_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "appendix_wide_edi_cross_complex_closure_and_computational_falsification_interface"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "appendix_wide_elastic_dubler_cross_complex_closure_and_computational_falsification_interface"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_interfac"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "appendix_wide_symmetric_cosmology_cross_complex_closure_and_computational_falsification_interface"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "autocorrelation_completeness_mixed_autocorrelation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "autocorrelation_reconstruction_projector"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "bidirectional_integer_rays_and_finite_polarity_enumeration"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "binary_supported_continuous_superposition_and_atom_phase_translation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "black_hole_dynamics::elastic_black_hole_emergence_triviality_of_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "black_hole_observability_triviality_and_regularity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "boolean_decision_extension_consensus"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "borel_analytic_sufficiency_and_over_extension_beyond_measurability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "bridge_duality_and_the_2_adic_criterion"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "bridge_duality_dual_invariant_translation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "calibrated_pdfi_dubler_endpoint_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "causality_via_elastic_dubler_e_and_causal_symmetry"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "certified_multiscale_dtqc_reconstruction_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "certified_residual_memory_lower_bound"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "closure_conditioned_spectral_outcome_field"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "collapse_attractor_stability_and_attractor_instability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "collapse_spectral_selection_and_spectral_ambiguity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "common_potential_observation_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "complement_invariant_fractal_skeleton_completion"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "completeness_and_incompleteness_of_the_soi_l_p_structure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "completeness_of_parity_driven_fluctuation_synthesis_and_incompleteness_of_parity_driven_fluctuations"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "complex_phase_coordinates_and_fourier_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "confined_filament_persistence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "continuum_trajectory_cardinality_and_countable_phase_cell_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cosmic_matrix_address_and_ghost_spark_obstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cosmic_spark_decay_and_integrated_cosmological_memory"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cosmic_spark_flowpoint_correspondence_and_spectral_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cosmic_web_emergence_homogenization_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cross_modal_compositional_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cross_modal_generalization_collapse_transfer"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "curvature_certified_simulation_residual"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "curvature_driven_elastic_energy_production"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "damping_and_lag_corrected_harmonic_clock"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "decision_weighted_complex_coverage_and_dual_repair_field"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "definite_state_projection_and_state_ambiguity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dense_flowpoint_traces_and_nowhere_dense_quantized_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_adaptive_applicability_and_contextual_instability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_compatible_tail_control_tail_driven_mass_imbalance"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_elastic_equivalence_and_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_elastic_prime_curvature_coupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_entropic_fluctuation_encoding_and_fluctuation_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_entropy_plateau_dfi_divergence_spiking"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_invariance_under_soi_rescaling_and_spurious_scale_dependence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_log_curvature_reciprocity_law"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_plateau_for_pgqenn_dfi_divergence_spiking_under_motif_bias"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_simulation_consistency_and_simulation_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_spectrum_normalized_existence_and_normalization_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "diophantine_parseval_locking_invariant"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "distance_corrected_harmonic_coupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "drift_boundedness_criterion_unbounded_drift_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "drift_tail_figure_certification_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dtqc::dual_support_equivalence_support_mismatch_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dual_closure_idempotence_and_oscillatory_non_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dual_realizability_and_the_missing_dual_defect"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dual_realizability_invariant_closure_and_defect_repair"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dubler_entropy_conservation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "dubler_potential_current_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_calibration_completeness_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_cosmological_geometry_and_dubler_spectral_transfer"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_curvature_entropy_duality_and_decoupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_curvature_probing_and_incoherent_warping"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_curvature_smoothness_curvature_singularity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dtqc_spectral_measure_dual_of_dtqc"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_curvature_correspondence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_duality_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_e_curvature_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_effect::elastic_entropic_energy_equivalence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_interferometry::elastic_black_hole_emergence_triviality_of_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_interferometry::elastic_gravitational_memory_instant_relaxation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_dubler_pdfi_frequency_shift_dual_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_e_curvature_encoding_and_curvature_ambiguity_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_e_curvature_encoding_curvature_ambiguity_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_e_curvature_regularization_curvature_ambiguity_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_e_ripple_propagation_gr_linear_wave_recovery"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_entropic_stability_entropic_instability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_field_ratios_and_weight_regularity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_gain_ou_support_margin"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_gain_support_transport_isomorphism"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_geometric_consistency_geometric_degeneracy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_hawking_emission_radiative_stasis"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_invariance_of_support_nonlinear_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_log_curvature_energy_production_law"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_parseval_quasicrystal_isometry"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elastic_simulation_consistency_and_simulation_breakdown_non_equivalence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elasticity_scaled_spectral_operator_flow"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "elasticity_weighted_spatial_heterogeneity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "emergence_triviality_in_elastic_fields"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "emergent_spiral_density_wave_spiral_dissolution"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "end_compactified_additive_continuum_field"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_applicability_response_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_curvature_superposition_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_gradient_filament_formation_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_hyperparameter_stability_margin"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_localization_cluster_stability_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_q_factor_suppression_conserved_ringdown_quality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropic_screening_nonlocal_curvature_mixing"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropy_density_mapping_and_entropy_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropy_invariant_horizon_translation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropy_pdfi_calibrated_norm_residual"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "entropy_spectral_phase_locking_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "environment_dependent_group_velocity_mapping_uniform_propagation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "environment_tomography_information_metric"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "epoch_support_commutator_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "equivariant_orbit_spectral_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "ergodic_collapse_projection_and_non_convergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "error_entropy_dissipation_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "error_entropy_phase_locking_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "exhaustion_parseval_coverage_energy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "expressivity_meta_learnability_stability_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "factor_map_equivariance_and_limit_bias"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "figure_backed_closure_bragg_cwt_figure_contradicted_claims"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "finite_approximation_and_vanishing_residual_energy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "finitizable_infinity_and_the_non_finitization_boundary"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "fixed_point_consistency_and_trivial_collapse_failure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "floquet_free_robustness_dual_2_adic_criterionicity_disorder_reliant_stability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_certified_dfi_validation_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_parity_correspondence_and_decoupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_parity_locking_parity_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_resolved_cosmological_memory_resolvent"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_resolved_dfi_memory_transfer"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "flowpoint_unity_orientation_and_integer_unfolding"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "global_symmetry_and_kd_charge_conservation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "halo_structure_formation_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "hawking_radiation_as_entropic_relaxation_stasis"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "hilbert_projection_realization_and_projection_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "horizon_localized_observable_memory_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "hyper_parameter_stability_wedge_instability_lobe"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "idempotent_splitting_and_oscillation_obstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "information_bearing_cluster_web_stability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "information_calibrated_quantum_spectral_response"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "information_entropy_in_the_elastic_dubler_perspective"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "information_preserving_cosmic_network_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "invariant_anti_invariant_orbit_fields"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "invertible_source_transport_detection_map_non_invertible_degeneracy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "involution_to_chord_linearization"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "involutive_duality_c_2_action"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "involutive_generator_word_closure_and_conjugacy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "irrational_drive_locking_commensurate_resonance_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "kernel_alternator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "kernel_fiber_integrability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "kernel_recursion"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "local_gauge_symmetry_and_elastic_divergence_identity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "local_horizon_boundary_and_non_locality_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_confinement_stability_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_decomposition_nonlocal_entropic_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_driven_gravity::elastic_entropic_energy_equivalence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_driven_rotation_curve_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_energy_morphogenesis_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_nonlocality_in_the_dubler_pdfi_framework"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "locality_weighted_spiral_order"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "localized_curvature_information_preservation_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "lyapunov_entropy_dissipation_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "lyapunov_parseval_training_isometry_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "lyapunov_weight_lattice_fourier_pisot_spectral_purification"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "measurable_decomposition_and_non_measurable_obstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "memory_aware_phase_curvature_tomography"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "memory_resolved_horizon_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "memory_shock_environmental_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "metric_deformation_robustness_and_deformation_fragility"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "meyer_cut_and_project_structure_non_meyer_diffuse_support"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "minimal_two_state_involution_orbitwise_alternator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "modality_collapse_symmetry_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "modality_compositionality_collapse_connection"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "modality_spectrum_meta_learnability_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "modality_spectrum_representation_coupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "motif_spectral_dual_regularity_law_for_soinets"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "motif_spectral_entropy_coupling_energy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "motif_spectral_modality_collapse_spatial_field"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "multiscale_prime_shell_training_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "noether_constant_to_local_transgression"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "nonlinear_overtone_generation_spectral_purity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observable_conserved_directed_transport_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observable_entropy_redistribution_channel"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observable_hawking_memory_certification"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observable_locality_and_collapse_inaccessibility"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observable_locality_and_infinite_exposure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observation_definiteness_equivalence_and_closure_failure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observation_dimensional_binding_and_dimensional_non_binding"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observation_induced_collapse_and_collapse_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observer_accessible_curvature_memory"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "observer_horizon_threshold_infinite_visibility"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "operation_covariance_and_spectral_minimization"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "optimizer_stability_wedge_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "orbit_harmonic_phase_resolution"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "order_two_symmetry_recursion"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "ou_noise_5_d_scatter_robustness_noise_induced_smearing"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "outcome_conditioned_closure_instrument"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_definite_fluctuation_law_and_parity_indeterminate_fluctuation_law"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_elastic_spectral_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_flowpoint_transport_law"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_localized_pdfi_response_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_meyer_diffraction_decomposition"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_meyer_noise_stable_diffraction_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_orthogonal_shell_growth_connection"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_resolved_autocorrelation_operator"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_support_memory_field_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_symmetry_dubler_duality_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parity_to_bit_equivalence_and_2_adic_coding"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "parseval_energy_bijection_l_2_energy_mismatch"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pdfi_driven_meta_observation_and_collapse_under_meta_parity_breakdown"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pdfi_e_quantum_entanglement_interface"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pdfi_elastic_equivalence_and_decoupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pdfi_elastic_norm_equivalence_and_decoupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pdfi_elastic_norm_interface"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pdfi_entropic_predictability_and_fluctuation_ambiguity"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "phase_clock"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "phase_elliptic_curvature_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "phase_gated_compensation_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "phase_indexed_kernel_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "physical_singularity_absence_mathematical_failure_point_status"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "power_set_continuum_and_atomic_quotient_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "predictability_observation_parity_coupling"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "prefix_tree_dense_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "prime_motif_boundedness_motif_induced_energy_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "prime_motif_elastic_parity_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "prime_motif_parity_stability_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "protected_commuting_closure_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pv_inflation_pure_point_diffraction_non_pv_salem_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "pv_parseval_spectral_energy_lock"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "qenn::dual_support_equivalence_support_mismatch_leakage"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "quasicrystal_soi_annealing_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "reciprocal_orbit_double_cover"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "reciprocal_relation_action_groupoid"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "recurrent_cubical_cover_dynamics"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "reflected_cubical_address_space"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "regular_nonperforating_horizon_geometry"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "regular_observer_horizon_hypersurface"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "regularized_stable_geometric_reconstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "residual_deformation_memory_perfect_relaxation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "ridge_resolved_2_adic_robustness_certificate"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "rotation_pitch_coupling_invariant"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "scale_normalized_dfi_homogeneity_invariant"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "schedule_controlled_orbit_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "schedule_driven_generator_word_field"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "scheduled_spectral_history"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "screened_halo_response"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "screened_rotation_halo_geometry"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "self_negating_oscillation_and_eigenstructure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "sheaf_of_closure_certificates"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "shock_gated_stochastic_tilt_production"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "shock_onset_self_steepening_threshold_no_shock_propagation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "signed_shortlex_cubic_transduction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "simulation_consistency_breakdown_and_non_equivalence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_cross_domain_generalization_and_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_entropy_minimization_and_entropic_catastrophe"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_modality_dual_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_modality_invariant_convergence_and_collapse_completeness"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soi_universal_entropy_plateau_theorem"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_cross_modal_transfer_generalization_and_dual_stability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_error_contraction_and_dual_error_orthogonality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_meta_learnability_dual_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_modality_invariant_learning_and_universal_adaptation"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_universal_cloning_principle_cloning_failure_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "soinet_universal_generalization_principle_failure_brittleness_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatial_homogeneity_heterogeneity_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatial_parity_elastic_calibration_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatial_reciprocal_curvature_validation_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatial_weighted_calibration_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatially_calibrated_quantum_information_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatially_localized_dfi_consistency_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 11,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spatiotemporal_hawking_flux_density"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spectral_observability_indistinguishability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spectral_phase_locking_and_collapse_in_soinet"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spectrum_dfi_duality_and_dfi_divergence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spectrum_flowpoint_addressability_and_unaddressability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spectrum_normalization_and_normalization_obstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "spiral_pitch_angle_gradient_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 8,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "stability_conditioned_geometric_identifiability"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "stack_domain_cloning_spatial_closure"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "stack_domain_generalization_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "stochastic_background_tilt_n_e_standard_gr_tilt_n_t"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "subluminal_gw_transport_and_em_gw_lag_null_lag_correspondence"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 12,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "support_transport_drift_certificate"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "temporal_asymmetry_symmetry_in_pdfi_fields"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "temporal_compression_and_frozen_time_obstruction"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "temporal_directed_elastic_transport"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "terminal_quotient_of_closure_certificates"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "twisted_orbit_balance_bundle"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "two_state_free_cofree_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "typed_admissibility_instrument"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "uniform_entropy_reduction_and_entropic_reweighting_bounds"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "uniqueness_and_non_uniqueness_of_collapse"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "universal_domain_specific_k_d_duality"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "universal_elasticity_constant_k_d"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "universalization_cloning_obstruction_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "wave_energy_quality_invariant"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "wave_sector_and_expansion_sector_cosmological_projection"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "wavelet_ridge_locking_ridge_drift_shear"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "weighted_path_functional_and_norm_admissibility"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 10,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "weighted_path_ratio_regularity_functional"
+    },
+    {
+      "complete_core_bundle": true,
+      "generated_file_count": 9,
+      "has_csv": true,
+      "has_gif": false,
+      "has_json": true,
+      "has_npz": true,
+      "has_png": true,
+      "theorem_complex_id": "z_2_2_sign_symmetry_parity_bias_symmetry_breaking"
+    }
+  ],
+  "requirements": [
+    "json",
+    "csv",
+    "npz",
+    "png"
+  ],
+  "schema_version": "1.2",
+  "suite_manifest_replays": 125,
+  "theorem_complexes": 351,
+  "typed_contract_diagnostic_evaluations": 226
+}

@@ -39,6 +39,9 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import
     AdditiveDerivationInput,
     SpatialClosureInput,
 )
+from the_nothingness_effect._runtime.theorem_complex_runtime.exact_product_carrier import (
+    ExactProductInput,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import (
     build_manifest,
 )
@@ -149,6 +152,21 @@ def _generate_uncovered_contracts(
         }
         if identifier in samples:
             value = samples[identifier]
+        elif ExactProductInput in contract.domain.python_types:
+            source_ids = tuple(str(item) for item in contract.source_ids)
+            value = ExactProductInput(
+                first_states={
+                    source_id: np.asarray((index + 1.0, index + 2.0))
+                    for index, source_id in enumerate(source_ids)
+                },
+                second_states={
+                    source_id: np.asarray((index + 3.0, index + 4.0))
+                    for index, source_id in enumerate(source_ids)
+                },
+                first_residuals={source_id: 0.0 for source_id in source_ids},
+                second_residuals={source_id: 0.0 for source_id in source_ids},
+                tolerance=1e-8,
+            )
         elif contract.level is ComplexLevel.B:
             value = AdditiveDerivationInput(fields)
         elif contract.level is ComplexLevel.C:

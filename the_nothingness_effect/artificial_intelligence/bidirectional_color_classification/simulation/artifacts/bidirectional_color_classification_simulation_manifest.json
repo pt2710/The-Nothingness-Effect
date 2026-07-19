@@ -2,33 +2,46 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
-    "bidirectional_reconstruction": "class prototype, not exact source recovery",
-    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+    "bidirectional_decoder": "probability-weighted finite modality reconstruction",
+    "classification_scope": "bounded synthetic held-out color and tone fixtures",
+    "cloning_scope": "held-out coordinate regression through SOInet meta-states"
   },
+  "architecture_coupled_metrics": true,
   "capability_id": "bidirectional_color_classification",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "claim_boundary": "finite synthetic train/validation/test evidence; not a formal proof or a real-world generalization claim",
+  "closure_status": "open",
   "generated_files": [
     "bidirectional_color_classification_simulation_results.csv",
+    "bidirectional_color_classification_simulation_splits.csv",
     "bidirectional_color_classification_simulation_figure.png",
+    "bidirectional_color_classification_simulation_checkpoint.pt",
     "bidirectional_color_classification_simulation_animation.gif",
     "bidirectional_color_classification_simulation_manifest.json"
   ],
   "intended_output_group": "bidirectional color classification",
+  "metric_producer": "SOInet",
   "metrics": {
-    "accuracy": 1.0,
-    "modality_rmse": 0.035094767808914185,
-    "roundtrip_accuracy": 1.0
+    "accuracy": 0.9166666865348816,
+    "generalization_gap": 0.08333331346511841,
+    "mean_confidence": 0.2110946923494339,
+    "modality_rmse": 0.3549332916736603,
+    "roundtrip_accuracy": 0.4166666567325592,
+    "test_loss": 1.5716720819473267,
+    "train_accuracy": 1.0,
+    "validation_accuracy": 0.8333333134651184
   },
   "numeric_tolerances": {
-    "absolute": 1e-06
+    "finite_metrics": true
   },
-  "parameter_hash": "db511527151c933c8da5d8443bb004fb3ee469dca7d0ec01b6b99e197eaecc62",
+  "parameter_hash": "8e3876f4230b672a14e25f087726752b60d6e8cd69dff8f938b29e2f7388014c",
   "parameters": {
     "capability": "bidirectional_color_classification",
+    "checkpoint_format": 1,
+    "metric_producer": "SOInet",
     "mode": "simulation",
     "producer_architecture": null,
     "seed": 0,
+    "split_policy": "disjoint_train_validation_test",
     "synthetic_fixture": true
   },
   "producer_architecture": null,
@@ -38,12 +51,40 @@
     "soi_modality_dual_closure",
     "modality_collapse_symmetry_operator"
   ],
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0,
-    0.035094767808914185
+    0.7098560929298401,
+    0.7098818421363831,
+    0.6738580465316772,
+    0.6738560795783997,
+    0.7183969020843506,
+    0.718331515789032,
+    0.7182585000991821,
+    0.7190056443214417,
+    0.7487473487854004,
+    0.7495445013046265,
+    0.8134159445762634,
+    0.8131101131439209,
+    0.7099035978317261,
+    0.6740918755531311,
+    0.7194332480430603,
+    0.7175070643424988,
+    0.7497637867927551,
+    0.8131995797157288,
+    0.7098695039749146,
+    0.7102452516555786,
+    0.6729076504707336,
+    0.6739473342895508,
+    0.7178718447685242,
+    0.719775915145874,
+    0.7180288434028625,
+    0.7186077833175659,
+    0.749022901058197,
+    0.7495372295379639,
+    0.8135759830474854,
+    0.8132187724113464
   ],
   "seed": 0,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "soinet_architecture_coupled_train_validation_test"
 }

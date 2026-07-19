@@ -24,7 +24,10 @@ PACKAGE = ROOT / "the_nothingness_effect"
 
 def _subject_entrypoints(mode: str) -> list[tuple[Path, tuple[str, ...], str]]:
     if mode == "test":
-        return [(path, (sys.executable, str(path)), "producer_local_test") for path in sorted(PACKAGE.glob("**/test/generate_artifacts.py"))]
+        return [
+            (path, (sys.executable, str(path)), "producer_local_test")
+            for path in sorted(PACKAGE.glob("**/test/generate_artifacts.py"))
+        ]
 
     result: list[tuple[Path, tuple[str, ...], str]] = []
     for directory in sorted(PACKAGE.glob("**/simulation")):
@@ -84,7 +87,14 @@ def _ai_entrypoints(mode: str) -> list[tuple[Path, tuple[str, ...], str]]:
 def _run(path: Path, command: tuple[str, ...], execution_kind: str, timeout: float) -> dict[str, object]:
     started = time.perf_counter()
     environment = dict(os.environ)
-    environment.update({"MPLBACKEND": "Agg", "PYTHONHASHSEED": "0"})
+    existing_pythonpath = environment.get("PYTHONPATH", "")
+    environment.update(
+        {
+            "MPLBACKEND": "Agg",
+            "PYTHONHASHSEED": "0",
+            "PYTHONPATH": os.pathsep.join(item for item in (str(ROOT), existing_pythonpath) if item),
+        }
+    )
     try:
         completed = subprocess.run(
             command,
@@ -120,14 +130,38 @@ def _run(path: Path, command: tuple[str, ...], execution_kind: str, timeout: flo
         "status": status,
         "return_code": return_code,
         "runtime_seconds": round(time.perf_counter() - started, 6),
-        "output_tail": "" if status == "passed" else output[-2000:].replace(str(ROOT), "<repository-root>").replace(sys.executable, "<python>"),
+        "output_tail": ""
+        if status == "passed"
+        else output[-2000:].replace(str(ROOT), "<repository-root>").replace(sys.executable, "<python>"),
     }
 
 
-def run(mode: str, output: Path, timeout: float) -> dict[str, object]:
+def run(
+    mode: str,
+    output: Path,
+    timeout: float,
+    *,
+    retry_failed: bool = False,
+) -> dict[str, object]:
     entries = (*_subject_entrypoints(mode), *_ai_entrypoints(mode))
     unique = {entry[0]: entry for entry in entries}
-    results = [_run(path, command, execution_kind, timeout) for path, command, execution_kind in unique.values()]
+    previous: dict[str, dict[str, object]] = {}
+    if retry_failed and output.is_file():
+        payload = json.loads(output.read_text(encoding="utf-8"))
+        raw_entries = payload.get("entrypoints", [])
+        if isinstance(raw_entries, list):
+            previous = {
+                str(item.get("path")): item
+                for item in raw_entries
+                if isinstance(item, dict) and item.get("status") == "passed"
+            }
+    results = []
+    for path, command, execution_kind in unique.values():
+        identifier = path.relative_to(ROOT).as_posix()
+        if identifier in previous:
+            results.append(previous[identifier])
+        else:
+            results.append(_run(path, command, execution_kind, timeout))
     counts = {status: sum(item["status"] == status for item in results) for status in ("passed", "failed", "timeout")}
     payload = {
         "schema_version": "1.0",
@@ -136,6 +170,7 @@ def run(mode: str, output: Path, timeout: float) -> dict[str, object]:
         "python": sys.version.split()[0],
         "seed": 0,
         "entrypoint_count": len(results),
+        "retry_failed": retry_failed,
         "summary": counts,
         "claim_boundary": "finite computational support; not a formal proof substitute",
         "entrypoints": results,
@@ -172,6 +207,11 @@ if __name__ == "__main__":
     parser.add_argument("mode", choices=("test", "simulation", "inventory"))
     parser.add_argument("--output", type=Path)
     parser.add_argument("--timeout", type=float, default=120.0)
+    parser.add_argument(
+        "--retry-failed",
+        action="store_true",
+        help="reuse passed records in the existing output manifest and rerun the rest",
+    )
     parser.add_argument("--module")
     arguments = parser.parse_args()
     if arguments.mode == "inventory":
@@ -180,7 +220,17 @@ if __name__ == "__main__":
         run_inventory(arguments.module)
         raise SystemExit(0)
     destination = arguments.output or ROOT / "reports" / f"{arguments.mode}_execution_manifest.json"
-    result = run(arguments.mode, destination.resolve(), arguments.timeout)
-    print(json.dumps({"mode": result["mode"], "entrypoint_count": result["entrypoint_count"], **result["summary"]}, sort_keys=True))
+    result = run(
+        arguments.mode,
+        destination.resolve(),
+        arguments.timeout,
+        retry_failed=arguments.retry_failed,
+    )
+    print(
+        json.dumps(
+            {"mode": result["mode"], "entrypoint_count": result["entrypoint_count"], **result["summary"]},
+            sort_keys=True,
+        )
+    )
     if result["summary"]["failed"] or result["summary"]["timeout"]:
         raise SystemExit(1)

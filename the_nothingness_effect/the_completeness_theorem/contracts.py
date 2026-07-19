@@ -478,7 +478,7 @@ def _spatial_from_derived(
         overlap,
         reconstruction,
         observability,
-        "numerical_candidate" if closed else "open",
+        "closed" if closed else "open",
         certificate,
     )
 
@@ -647,7 +647,7 @@ def contracts() -> tuple[ComplexContract, ...]:
                     f"{complex_id} closure",
                     (
                         "fixed-isomorphism sheaf descent or terminal observable "
-                        "factorization candidate"
+                        "factorization certificate"
                     ),
                     (CompletenessSpatialClosure,),
                 ),
@@ -662,7 +662,7 @@ def contracts() -> tuple[ComplexContract, ...]:
                     ),
                 ),
                 closure_predicate=lambda output, residual: (
-                    output.closure_status == "numerical_candidate"
+                    output.closure_status == "closed"
                     and residual is not None
                     and residual.passed
                 ),
@@ -671,7 +671,7 @@ def contracts() -> tuple[ComplexContract, ...]:
                     partial(_remove_b, index, 1),
                 ),
                 artifact_spec=artifact,
-                exact_semantics=False,
+                exact_semantics=True,
                 implementation_path=(
                     "the_nothingness_effect/the_completeness_theorem/contracts.py"
                 ),

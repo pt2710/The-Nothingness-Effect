@@ -76,6 +76,14 @@ def _status_summary(entries: list[dict[str, Any]]) -> dict[str, object]:
     }
 
 
+def _portable_repository_path(value: object) -> str:
+    path = Path(str(value))
+    try:
+        return path.resolve().relative_to(REPOSITORY_ROOT.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
 def classify_simulation_evidence(
     manifest: dict[str, Any],
 ) -> dict[str, object]:
@@ -144,6 +152,25 @@ def main() -> int:
     arguments = parser.parse_args()
 
     payload = _base.build(arguments)
+    artifact_coverage = payload.get("artifact_provenance_coverage", {})
+    if isinstance(artifact_coverage, dict):
+        artifact_coverage["effective_manifest_path"] = _portable_repository_path(
+            artifact_coverage.get("effective_manifest_path", "")
+        )
+    provenance_binding = payload.get("artifact_provenance_source_binding", {})
+    if isinstance(provenance_binding, dict):
+        provenance_binding["provenance_path"] = _portable_repository_path(
+            provenance_binding.get("provenance_path", "")
+        )
+    release_status = json.loads(
+        Path("reports/release_status_dimensions.json").read_text(encoding="utf-8")
+    )
+    closure_obligations = json.loads(
+        Path("reports/closure_obligation_ledger.json").read_text(encoding="utf-8")
+    )
+    formal_proofs = json.loads(
+        Path("reports/formal_proof_coverage.json").read_text(encoding="utf-8")
+    )
     simulation_manifest = json.loads(
         Path("reports/simulation_execution_manifest.json").read_text(encoding="utf-8")
     )
@@ -164,9 +191,35 @@ def main() -> int:
         raise RuntimeError("final QA release blockers record is invalid")
     if not bool(classification["all_entrypoints_classified"]):
         blockers.append("unknown_simulation_execution_kind")
+    open_count = int(
+        release_status.get("open_and_numerical_candidate_preserved", -1)
+    )
+    if open_count != 0:
+        blockers.append("mathematical_closure_incomplete")
+    if int(closure_obligations.get("open_or_numerical_candidate_count", -1)) != 0:
+        blockers.append("closure_obligation_ledger_not_empty")
+    if not bool(formal_proofs.get("all_rows_classified")):
+        blockers.append("formal_proof_coverage_incomplete")
+    if int(formal_proofs.get("invalid_proof_claims", -1)) != 0:
+        blockers.append("invalid_formal_proof_claims_present")
     payload["release_blockers"] = sorted(set(str(item) for item in blockers))
     payload["final_qa_passed"] = not payload["release_blockers"]
-    payload["schema_version"] = "1.4"
+    payload["schema_version"] = "1.5"
+    payload["release_status_dimensions"] = release_status.get("dimensions", {})
+    payload["mathematical_closure"] = {
+        "open_and_numerical_candidate": open_count,
+        "closure_obligation_ledger_count": closure_obligations.get(
+            "open_or_numerical_candidate_count"
+        ),
+        "gate": "requires zero OPEN and zero NUMERICAL_CANDIDATE",
+    }
+    payload["formal_machine_proof_coverage"] = {
+        "rows": formal_proofs.get("rows"),
+        "counts": formal_proofs.get("counts", {}),
+        "verified_formal_proofs": formal_proofs.get("verified_formal_proofs"),
+        "invalid_proof_claims": formal_proofs.get("invalid_proof_claims"),
+        "policy": formal_proofs.get("policy"),
+    }
     payload["execution_evidence_claim_boundary"] = (
         "Only producer-local simulations and AI capability runs are counted as "
         "simulations. Typed contract suites and inventory fallbacks remain separate."

@@ -1,0 +1,26 @@
+{
+  "appendix_filename": "appendix_tne_foundational_closure_architecture.tex",
+  "appendix_source_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+  "approximation_metadata": {},
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "duality_metrics.csv",
+    "duality_orbit_field.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "e23b4afcc70af0dea234bd30c0dfca5c7b6c0d06b55457974b43cd6179a8b0db",
+  "parameters": {
+    "carrier_size": 4
+  },
+  "regeneration_command": "python -m the_nothingness_effect.foundational_architecture.duality.simulation --output the_nothingness_effect/foundational_architecture/duality/simulation/artifacts",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "minimal_two_state_involution_orbitwise_alternator"
+}

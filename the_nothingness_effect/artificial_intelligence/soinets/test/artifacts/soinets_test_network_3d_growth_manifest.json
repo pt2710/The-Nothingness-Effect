@@ -1,7 +1,7 @@
 {
   "architecture": "soinets",
   "artifact_family": "architecture_specific_3d_growth_matrix",
-  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "claim_boundary": "finite observed model state; not a formal proof substitute",
   "generated_files": [
     "soinets_test_network_3d_growth.png",
     "soinets_test_network_3d_matrix_occupancy.png",
@@ -24,30 +24,30 @@
     "soinets_test_network_3d_signed_spectrum_growth.gif",
     "soinets_test_network_3d_signed_spectrum_signal.gif"
   ],
-  "parameter_hash": "d6b737f17282406ca4d7ed7ca3c802eacd89798bb4cbcc5b299c662bf3510abd",
+  "parameter_hash": "8b885baaff52a25574f6487db11201f0a18f35a6bb8d9d1bd33651e360dd3f5b",
   "parameters": {
     "architecture": "soinets",
     "axis_labels": [
-      "subnetwork depth",
-      "modality exchange",
-      "meta-closure depth"
+      "subnetwork state",
+      "transfer state",
+      "meta-closure state"
     ],
-    "coordinate_asymmetry": 5.7915955161563994,
+    "coordinate_asymmetry": 0.0,
     "mode": "test",
-    "node_count": 18,
+    "node_count": 6,
     "partner_involution_residual": 0,
     "seed": 0,
     "signed_meaning": "forward/reverse closure orientation",
     "source_streams": [
       "qenn",
       "pgqenn",
-      "memory_transfer",
-      "meta_closure"
-    ]
+      "memory_transfer"
+    ],
+    "state_source": "runtime_derived_model_state"
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities",
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
-  "source_status": "SOInet runtime state: QENN/PGQENN subnetworks and meta-closure"
+  "source_status": "runtime_derived_spatial_state"
 }

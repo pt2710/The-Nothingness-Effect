@@ -2,32 +2,44 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
-    "bidirectional_reconstruction": "class prototype, not exact source recovery",
-    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+    "bidirectional_decoder": "probability-weighted finite modality reconstruction",
+    "classification_scope": "bounded synthetic held-out color and tone fixtures",
+    "cloning_scope": "held-out coordinate regression through SOInet meta-states"
   },
+  "architecture_coupled_metrics": true,
   "capability_id": "color_cloning",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "claim_boundary": "finite synthetic train/validation/test evidence; not a formal proof or a real-world generalization claim",
+  "closure_status": "open",
   "generated_files": [
     "color_cloning_simulation_results.csv",
+    "color_cloning_simulation_splits.csv",
     "color_cloning_simulation_figure.png",
+    "color_cloning_simulation_checkpoint.pt",
     "color_cloning_simulation_animation.gif",
     "color_cloning_simulation_manifest.json"
   ],
   "intended_output_group": "color cloning",
+  "metric_producer": "SOInet",
   "metrics": {
-    "peak_error": 2.384185791015625e-07,
-    "rmse": 6.016180265078219e-08
+    "generalization_gap": -0.00880502164363861,
+    "mae": 0.15013471245765686,
+    "rmse": 0.17933492362499237,
+    "snr_db": 10.204721450805664,
+    "train_rmse": 0.18813994526863098,
+    "validation_rmse": 0.22977371513843536
   },
   "numeric_tolerances": {
-    "absolute": 1e-06
+    "finite_metrics": true
   },
-  "parameter_hash": "34428e7ad8a1b0bb3f31c18a5be044adf563df6ff413173e7b3ac36d28acf49e",
+  "parameter_hash": "4473c69f70bb9278dc8633d42afe55f74c2373ab15a56cecc4a3772569477992",
   "parameters": {
     "capability": "color_cloning",
+    "checkpoint_format": 1,
+    "metric_producer": "SOInet",
     "mode": "simulation",
     "producer_architecture": "pgqenn",
     "seed": 4,
+    "split_policy": "disjoint_train_validation_test",
     "synthetic_fixture": true
   },
   "producer_architecture": "pgqenn",
@@ -36,14 +48,42 @@
     "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
     "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
   ],
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0,
-    6.016180265078219e-08,
-    1.4728315456125074e-08,
-    7.982044536447575e-08
+    0.9768446087837219,
+    0.9764593243598938,
+    1.0400664806365967,
+    0.9111487865447998,
+    1.1373631954193115,
+    1.2248209714889526,
+    1.0334631204605103,
+    0.9191833138465881,
+    1.2845889329910278,
+    1.125046730041504,
+    0.9067280292510986,
+    0.9254523515701294,
+    0.9463727474212646,
+    1.127653956413269,
+    0.949569821357727,
+    0.9148545861244202,
+    1.2643086910247803,
+    0.9529711008071899,
+    0.8796865344047546,
+    1.0693321228027344,
+    0.9506913423538208,
+    0.98978191614151,
+    0.8832060098648071,
+    0.9854544401168823,
+    0.9157914519309998,
+    1.0266151428222656,
+    0.9702548384666443,
+    1.012093424797058,
+    1.3639613389968872,
+    0.9361698031425476,
+    1.0024722814559937,
+    1.147118091583252
   ],
   "seed": 4,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "soinet_architecture_coupled_train_validation_test"
 }

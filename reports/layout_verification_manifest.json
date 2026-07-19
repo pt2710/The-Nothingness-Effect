@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "number": 1,
+      "name": "required top-level architecture packages",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 2,
+      "name": "required subject-module paths",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 3,
+      "name": "required package initializers",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 4,
+      "name": "obsolete implementation paths absent",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 5,
+      "name": "subject implementation/test/simulation/theorem structure",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 6,
+      "name": "theorem-complex manifests",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 7,
+      "name": "unique theorem-complex IDs",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 8,
+      "name": "verified 204A+98B+49C inventory",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 9,
+      "name": "implementation modules import",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 10,
+      "name": "manifest file references",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 11,
+      "name": "authoritative appendices not tracked",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 12,
+      "name": "appendix content not copied",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 13,
+      "name": "no undocumented empty subject placeholders",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 14,
+      "name": "implemented B laws are genuine additive derivations",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 15,
+      "name": "implemented C laws are genuine spatial closures",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 16,
+      "name": "artifact manifests use relative paths",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 17,
+      "name": "required test and simulation entrypoints",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "number": 18,
+      "name": "canonical imports are working-directory independent",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "passed": 18,
+  "failed": 0
+}

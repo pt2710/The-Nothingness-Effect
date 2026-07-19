@@ -161,6 +161,17 @@ jobs:
           --output-root "${RUNNER_TEMP}/artifact-provenance"
           --aggregate reports/effective_artifact_provenance_manifest.json
           --coverage reports/theorem_artifact_coverage.json
+          --binding reports/effective_artifact_provenance_binding.json
+      - name: Build independent release status dimensions
+        run: >-
+          python -m tools.build_release_status_dimensions
+          --artifact-coverage reports/theorem_artifact_coverage.json
+      - name: Enforce complete mathematical closure
+        run: >-
+          python -m tools.build_closure_obligation_ledger
+          --require-zero
+      - name: Audit formal machine-proof coverage
+        run: python -m tools.build_formal_proof_coverage
       - name: Run source-faithful grid convergence benchmark
         run: >-
           python tools/run_source_faithful_convergence_benchmark.py
@@ -188,7 +199,14 @@ jobs:
           name: effective-artifact-provenance
           path: |
             reports/effective_artifact_provenance_manifest.json
+            reports/effective_artifact_provenance_binding.json
             reports/theorem_artifact_coverage.json
+            reports/release_status_dimensions.csv
+            reports/release_status_dimensions.json
+            reports/closure_obligation_ledger.csv
+            reports/closure_obligation_ledger.json
+            reports/formal_proof_coverage.csv
+            reports/formal_proof_coverage.json
           if-no-files-found: error
       - name: Package theorem diagnostic artifacts
         run: >-

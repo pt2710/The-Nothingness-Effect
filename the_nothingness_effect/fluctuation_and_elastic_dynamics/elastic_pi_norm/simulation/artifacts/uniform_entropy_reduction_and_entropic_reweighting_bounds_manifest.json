@@ -2,6 +2,7 @@
   "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
   "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
   "approximation_metadata": {
+    "authority_bound": true,
     "exact_semantics": true
   },
   "claim_boundary": "finite computational support; not a formal proof substitute",
@@ -13,13 +14,13 @@
   "numeric_tolerances": {
     "absolute": 1e-10
   },
-  "parameter_hash": "14ab91d117922e52cb50a24c4a67f88067e129aa8beb1ca795b3b2bc2e952ae1",
+  "parameter_hash": "9b39d4866050f193e2e9bd8c4e262fa7f59463089b8b45ca81ba27fc7aedc466",
   "parameters": {
     "category": "elastic_pi_norm",
-    "fixture": "deterministic-contract-v1"
+    "fixture": "deterministic-contract-v2"
   },
-  "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi_norm.simulation.run_contract_suite --output the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/artifacts",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,

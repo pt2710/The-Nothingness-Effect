@@ -1,0 +1,4 @@
+theorem_complex_id,residual_norm,closure_status,source_registry
+dfi_uniqueness_of_decomposition_and_mapping_ambiguity,0.0,satisfied,extended_A
+dfi_flowpoint_consistency_and_interface_inconsistency,0.0,satisfied,extended_A
+dfi_simulation_consistency_and_simulation_breakdown,0.0,satisfied,extended_A

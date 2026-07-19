@@ -1,0 +1,37 @@
+{
+  "appendix_filename": "appendix_canonical_self_negating_involution_flowpoint.tex",
+  "appendix_source_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+  "approximation_metadata": {
+    "finite_prefix_digits": 6
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "flowpoint_metrics.csv",
+    "flowpoint_trace.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "31eb618891e3c889badb623bb999914d3867007b3cd28b63162a55e10ff551f7",
+  "parameters": {
+    "bits": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "history_amplitude": 1.0,
+    "kernel_offset": 0.25
+  },
+  "regeneration_command": "python -m the_nothingness_effect.canonical_self_negating_involution.the_flowpoint.simulation --output the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/artifacts",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "scheduled_spectral_history"
+}

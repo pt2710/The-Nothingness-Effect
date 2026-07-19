@@ -1,4 +1,5 @@
 """Fail closed if any of the 23 audited formula corrections regresses."""
+
 from __future__ import annotations
 
 import json
@@ -47,6 +48,7 @@ def test_shared_source_faithful_modules_declare_operator_recomputation():
         Path(record["evidence_path"])
         for identifier, record in payload["implementation_status_overrides"].items()
         if identifier not in SPECIALIZED_EVIDENCE_PATHS
+        and str(record["evidence_path"]).endswith("source_faithful_contracts.py")
     }
     assert len(paths) == 4
     for path in paths:
@@ -55,6 +57,26 @@ def test_shared_source_faithful_modules_declare_operator_recomputation():
         assert "removed=_" in text or "removed = _" in text
         assert "np.zeros_like(complete" not in text
         assert "ablation_mode" in text
+
+
+def test_promoted_product_evidence_uses_shared_exact_recomputation_runtime():
+    payload = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    paths = {
+        Path(record["evidence_path"])
+        for record in payload["implementation_status_overrides"].values()
+        if str(record["evidence_path"]).endswith("authoritative_product_contracts.py")
+    }
+    assert len(paths) == 4
+    for path in paths:
+        text = path.read_text(encoding="utf-8")
+        assert "promote_exact_products" in text
+
+    helper = Path("the_nothingness_effect/_runtime/theorem_complex_runtime/exact_declared_products.py").read_text(
+        encoding="utf-8"
+    )
+    assert "source_removal_result" in helper
+    assert "evaluate_exact_product(ablated_input" in helper
+    assert "np.zeros_like" in helper
 
 
 def test_specialized_formula_evidence_has_exact_recomputation_and_negative_tests():

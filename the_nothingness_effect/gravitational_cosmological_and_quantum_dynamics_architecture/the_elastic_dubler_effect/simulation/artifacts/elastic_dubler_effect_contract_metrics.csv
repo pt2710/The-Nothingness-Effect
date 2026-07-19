@@ -1,0 +1,8 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics
+elastic_dubler_duality_closure,A,0.0,satisfied,True
+elastic_dubler_pdfi_frequency_shift_dual_closure,A,0.0,satisfied,True
+elastic_dubler_e_curvature_duality,A,0.0,satisfied,True
+elastic_dubler_effect::elastic_entropic_energy_equivalence,A,0.0,satisfied,True
+calibrated_pdfi_dubler_endpoint_operator,B,0.0,satisfied,True
+elastic_log_curvature_energy_production_law,B,0.0,satisfied,True
+dubler_potential_current_spatial_closure,C,1.9863617540962226e-13,closed,True

@@ -1,0 +1,8 @@
+theorem_complex_id,level,residual_norm,closure_status,exact_semantics,source_count
+dfi_elastic_equivalence_and_breakdown,A,4.440892098500626e-16,satisfied,True,0
+elastic_e_curvature_encoding_and_curvature_ambiguity_divergence,A,1.2560739669470201e-15,satisfied,True,0
+elastic_curvature_entropy_duality_and_decoupling,A,5.117875266520903e-16,satisfied,True,0
+elastic_simulation_consistency_and_simulation_breakdown_non_equivalence,A,1.8619006149354548e-16,satisfied,True,0
+dfi_log_curvature_reciprocity_law,B,4.440892098500626e-16,satisfied,True,2
+curvature_certified_simulation_residual,B,5.721958498152797e-16,satisfied,True,2
+spatial_reciprocal_curvature_validation_closure,C,0.0,closed,True,2

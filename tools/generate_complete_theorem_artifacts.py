@@ -32,12 +32,31 @@ from the_nothingness_effect._runtime.theorem_complex_runtime.contracts import (
     ContractEvaluation,
     evaluate_contract,
 )
+from the_nothingness_effect._runtime.theorem_complex_runtime.exact_product_carrier import (
+    ExactProductInput,
+)
 from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
     provenance_binding_report,
 )
 from the_nothingness_effect._runtime.theorem_complex_runtime.types import (
     ClosureStatus,
     ResidualResult,
+)
+from the_nothingness_effect.artificial_intelligence.pgqenn.authoritative_contracts import (
+    A_IDS as PGQENN_A_IDS,
+    B_IDS as PGQENN_B_IDS,
+    C_IDS as PGQENN_C_IDS,
+)
+from the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite import (
+    fixture as pgqenn_fixture,
+)
+from the_nothingness_effect.artificial_intelligence.soinets.authoritative_contracts import (
+    A_IDS as SOINETS_A_IDS,
+    B_IDS as SOINETS_B_IDS,
+    C_IDS as SOINETS_C_IDS,
+)
+from the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite import (
+    fixture as soinets_fixture,
 )
 
 
@@ -47,6 +66,16 @@ def _safe(identifier: str) -> str:
 
 def _has_suffix(files: list[str], suffix: str) -> bool:
     return any(str(item).lower().endswith(suffix) for item in files)
+
+
+def _portable_repository_path(path: Path) -> str:
+    """Return a repository-relative path for reproducible generated reports."""
+
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(REPOSITORY_ROOT.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def _replay_manifest_evaluation(
@@ -110,11 +139,43 @@ def _replay_manifest_evaluation(
     return value, evaluation
 
 
+def _exact_product_sample(contract) -> ExactProductInput:
+    source_ids = tuple(str(item) for item in contract.source_ids)
+    return ExactProductInput(
+        first_states={
+            source_id: np.asarray((index + 1.0, index + 2.0))
+            for index, source_id in enumerate(source_ids)
+        },
+        second_states={
+            source_id: np.asarray((index + 3.0, index + 4.0))
+            for index, source_id in enumerate(source_ids)
+        },
+        first_residuals={source_id: 0.0 for source_id in source_ids},
+        second_residuals={source_id: 0.0 for source_id in source_ids},
+        tolerance=1e-8,
+    )
+
+
+def _evaluation_residual_vector(evaluation: ContractEvaluation) -> list[float]:
+    if evaluation.residual is not None:
+        return [float(item) for item in evaluation.residual.vector]
+    if evaluation.invariant is not None:
+        return [float(evaluation.invariant.residual)]
+    return [0.0]
+
+
 def _write_provenance_binding(
     aggregate_path: Path,
     binding_path: Path,
 ) -> dict[str, object]:
     report = provenance_binding_report(aggregate_path)
+    try:
+        portable_aggregate = aggregate_path.resolve().relative_to(
+            REPOSITORY_ROOT.resolve()
+        ).as_posix()
+    except ValueError:
+        portable_aggregate = aggregate_path.as_posix()
+    report["provenance_path"] = portable_aggregate
     total = int(report.get("total_manifests", 0))
     mismatches = int(report.get("effective_source_sha_mismatches", 0))
     if total != 351 or mismatches:
@@ -122,7 +183,7 @@ def _write_provenance_binding(
             "fresh provenance binding is not release-clean: "
             f"manifests={total} mismatches={mismatches}"
         )
-    report["effective_provenance_output"] = aggregate_path.as_posix()
+    report["effective_provenance_output"] = portable_aggregate
     binding_path.parent.mkdir(parents=True, exist_ok=True)
     binding_path.write_text(
         json.dumps(report, indent=2, sort_keys=True) + "\n",
@@ -144,6 +205,26 @@ def generate_complete(
 
     catalog = {str(contract.complex_id): contract for contract in active_contracts()}
     samples = _sample_inputs()
+    pgqenn_value = pgqenn_fixture()
+    soinets_value = soinets_fixture()
+    samples.update(
+        {
+            identifier: pgqenn_value
+            for identifier in (*PGQENN_A_IDS, *PGQENN_B_IDS, *PGQENN_C_IDS)
+        }
+    )
+    samples.update(
+        {
+            identifier: soinets_value
+            for identifier in (*SOINETS_A_IDS, *SOINETS_B_IDS, *SOINETS_C_IDS)
+        }
+    )
+    for identifier, contract in catalog.items():
+        if (
+            identifier not in samples
+            and ExactProductInput in contract.domain.python_types
+        ):
+            samples[identifier] = _exact_product_sample(contract)
     enriched = 0
     replayed = 0
     typed_evaluations = 0
@@ -159,19 +240,29 @@ def generate_complete(
             for suffix in (".json", ".csv", ".npz", ".png")
         )
 
+        contract = catalog[identifier]
+        if identifier in samples:
+            value = samples[identifier]
+            evaluation = evaluate_contract(contract, value)
+            removals = [check(value) for check in contract.source_removal_checks]
+            diagnostic_source = "typed_contract_evaluation"
+            typed_evaluations += 1
+            manifest["closure_status"] = evaluation.status.value
+            manifest["residual_vector"] = _evaluation_residual_vector(evaluation)
+            approximation = manifest.setdefault("approximation_metadata", {})
+            if isinstance(approximation, dict):
+                approximation["exact_semantics"] = evaluation.exact_semantics
+                approximation["active_catalog_evaluation"] = True
+                approximation["active_catalog_implementation"] = (
+                    contract.implementation_path
+                )
+        else:
+            value, evaluation = _replay_manifest_evaluation(identifier, manifest)
+            removals = []
+            diagnostic_source = "executed_domain_suite_manifest"
+            replayed += 1
+
         if needs_bundle:
-            contract = catalog[identifier]
-            if identifier in samples:
-                value = samples[identifier]
-                evaluation = evaluate_contract(contract, value)
-                removals = [check(value) for check in contract.source_removal_checks]
-                diagnostic_source = "typed_contract_evaluation"
-                typed_evaluations += 1
-            else:
-                value, evaluation = _replay_manifest_evaluation(identifier, manifest)
-                removals = []
-                diagnostic_source = "executed_domain_suite_manifest"
-                replayed += 1
 
             destination = output_root / "theorem_diagnostics" / _safe(identifier)
             generated = materialize_contract_diagnostics(
@@ -267,7 +358,7 @@ def generate_complete(
         "diagnostic_bundles_enriched": enriched,
         "typed_contract_diagnostic_evaluations": typed_evaluations,
         "suite_manifest_replays": replayed,
-        "provenance_binding_path": effective_binding_path.as_posix(),
+        "provenance_binding_path": _portable_repository_path(effective_binding_path),
         "provenance_binding_mismatches": binding_report.get(
             "effective_source_sha_mismatches",
             0,

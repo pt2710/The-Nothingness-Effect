@@ -1,0 +1,34 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "approximation_metadata": {
+    "authority_bound": true,
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "elastic_pi_contract_metrics.csv",
+    "elastic_pi_contract_residuals.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "d04e2b0769a66937e05aa026d607b14bfcc628f202c67a133fc8c59dfb7b9070",
+  "parameters": {
+    "category": "elastic_pi",
+    "fixture": "deterministic-contract-v2"
+  },
+  "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.elastic_pi.simulation.run_contract_suite --output the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/artifacts",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0,
+    4.440892098500626e-16,
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "dfi_elastic_equivalence_and_breakdown"
+}

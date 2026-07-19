@@ -50,9 +50,13 @@ def test_capability_artifacts_are_colocated_and_manifested() -> None:
             data = json.loads(manifest_path.read_text(encoding="utf-8"))
             manifest_count += 1
             assert data["capability_id"] == capability
-            assert data["closure_status"] == "numerical_candidate"
-            assert data["source_status"] == "synthetic_deterministic_fixture"
-            assert "not a formal proof substitute" in data["claim_boundary"]
+            # These are untrained synthetic capability diagnostics, not entries in
+            # the 351-row theorem-complex closure ledger. Their nonzero losses must
+            # remain truthfully OPEN rather than being promoted by the theorem gate.
+            assert data["closure_status"] == "open"
+            assert data["source_status"] == ("soinet_architecture_coupled_train_validation_test")
+            assert "synthetic" in data["claim_boundary"]
+            assert "not a formal proof" in data["claim_boundary"]
             assert len(data["appendix_source_sha256"]) == 64
             for filename in data["generated_files"]:
                 assert Path(filename).name == filename

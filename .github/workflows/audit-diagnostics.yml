@@ -223,10 +223,23 @@ jobs:
               provenance_status=99
             fi
             echo "provenance_exit_code=${provenance_status}"
+            if [[ ${provenance_status} -eq 0 ]]; then
+              python -m tools.build_release_status_dimensions \
+                --artifact-coverage reports/theorem_artifact_coverage.json && \
+              python -m tools.build_closure_obligation_ledger --require-zero && \
+              python -m tools.build_formal_proof_coverage
+              closure_audit_status=$?
+            else
+              closure_audit_status=99
+            fi
+            echo "closure_audit_exit_code=${closure_audit_status}"
             if [[ ${matrix_status} -ne 0 ]]; then
               exit ${matrix_status}
             fi
-            exit ${provenance_status}
+            if [[ ${provenance_status} -ne 0 ]]; then
+              exit ${provenance_status}
+            fi
+            exit ${closure_audit_status}
           ) > qa-rebuild-diagnostic.log 2>&1
           echo "$?" > qa-rebuild-exit-code.txt
           exit 0
@@ -254,6 +267,12 @@ jobs:
             reports/effective_artifact_provenance_manifest.json
             reports/effective_artifact_provenance_binding.json
             reports/theorem_artifact_coverage.json
+            reports/release_status_dimensions.csv
+            reports/release_status_dimensions.json
+            reports/closure_obligation_ledger.csv
+            reports/closure_obligation_ledger.json
+            reports/formal_proof_coverage.csv
+            reports/formal_proof_coverage.json
           if-no-files-found: warn
       - name: Enforce rebuild and QA guard
         shell: bash

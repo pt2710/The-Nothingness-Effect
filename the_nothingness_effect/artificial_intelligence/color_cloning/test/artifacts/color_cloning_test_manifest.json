@@ -2,31 +2,43 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
-    "bidirectional_reconstruction": "class prototype, not exact source recovery",
-    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+    "bidirectional_decoder": "probability-weighted finite modality reconstruction",
+    "classification_scope": "bounded synthetic held-out color and tone fixtures",
+    "cloning_scope": "held-out coordinate regression through SOInet meta-states"
   },
+  "architecture_coupled_metrics": true,
   "capability_id": "color_cloning",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "claim_boundary": "finite synthetic train/validation/test evidence; not a formal proof or a real-world generalization claim",
+  "closure_status": "open",
   "generated_files": [
     "color_cloning_test_results.csv",
+    "color_cloning_test_splits.csv",
     "color_cloning_test_figure.png",
+    "color_cloning_test_checkpoint.pt",
     "color_cloning_test_manifest.json"
   ],
   "intended_output_group": "color cloning",
+  "metric_producer": "SOInet",
   "metrics": {
-    "peak_error": 1.7881393432617188e-07,
-    "rmse": 4.6282416121812275e-08
+    "generalization_gap": 0.1299361139535904,
+    "mae": 0.2594156861305237,
+    "rmse": 0.305154412984848,
+    "snr_db": 6.660909175872803,
+    "train_rmse": 0.17521829903125763,
+    "validation_rmse": 0.29403364658355713
   },
   "numeric_tolerances": {
-    "absolute": 1e-06
+    "finite_metrics": true
   },
-  "parameter_hash": "c2f4fe934545736038ffa4e694f7bf70950e6a5ec483b362c99323626b0fd55a",
+  "parameter_hash": "753fa4acdbdf45259ea5a17d5f9ecd3ff01341b9bbbc109534927303c51ae0eb",
   "parameters": {
     "capability": "color_cloning",
+    "checkpoint_format": 1,
+    "metric_producer": "SOInet",
     "mode": "test",
     "producer_architecture": null,
     "seed": 0,
+    "split_policy": "disjoint_train_validation_test",
     "synthetic_fixture": true
   },
   "producer_architecture": null,
@@ -35,14 +47,26 @@
     "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
     "parseval_energy_bijection_for_epochs_energy_mass_imbalance"
   ],
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "8c87f5e9003c9844941e29b0f3e5cbe607c44e23",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0,
-    4.6282416121812275e-08,
-    1.7583406730636852e-08,
-    1.1018027379350315e-07
+    0.7970913648605347,
+    0.8403894901275635,
+    0.7994235754013062,
+    0.7715962529182434,
+    0.7935223579406738,
+    0.7468146681785583,
+    0.7673497796058655,
+    0.774661660194397,
+    0.9569523930549622,
+    0.7492650151252747,
+    0.8502956628799438,
+    0.8204618692398071,
+    0.7196430563926697,
+    0.8579350113868713,
+    0.8271636962890625,
+    0.7359275817871094
   ],
   "seed": 0,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "soinet_architecture_coupled_train_validation_test"
 }

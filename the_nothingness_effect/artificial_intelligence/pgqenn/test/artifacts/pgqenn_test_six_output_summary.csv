@@ -1,7 +1,7 @@
-architecture,mode,output_group,closure_status,residual_norm,accuracy,mean_confidence,roundtrip_accuracy,modality_rmse,rmse,peak_error,snr_db
-pgqenn,test,color_classification,numerical_candidate,1.1920928955078125e-07,1.0,0.9988223314285278,,,,,
-pgqenn,test,sound_classification,numerical_candidate,1.1920928955078125e-07,1.0,0.9648316502571106,,,,,
-pgqenn,test,bidirectional_color_classification,numerical_candidate,0.03486725315451622,1.0,,1.0,0.03486725315451622,,,
-pgqenn,test,bidirectional_sound_classification,numerical_candidate,0.6184673309326172,1.0,,1.0,0.6184673309326172,,,
-pgqenn,test,color_cloning,numerical_candidate,1.207929259830182e-07,,,,,4.6282416121812275e-08,1.7881393432617188e-07,
-pgqenn,test,sound_cloning,numerical_candidate,9.440100033606592e-08,,,,,5.685364712348928e-08,,135.29679637151423
+architecture,metric_producer,mode,output_group,closure_status,residual_norm,train_accuracy,validation_accuracy,accuracy,test_loss,mean_confidence,generalization_gap,roundtrip_accuracy,modality_rmse,train_rmse,validation_rmse,rmse,mae,snr_db
+pgqenn,SOInet,test,color_classification,open,3.1049775956049803,0.8333333134651184,0.8333333134651184,0.8333333134651184,1.6220964193344116,0.20048069953918457,0.0,,,,,,,
+pgqenn,SOInet,test,sound_classification,open,2.2104322806173142,1.0,1.0,1.0,1.002475380897522,0.3676181733608246,0.0,,,,,,,
+pgqenn,SOInet,test,bidirectional_color_classification,open,1.8512339256668235,0.5,0.5,0.5,1.6764379739761353,0.1907222867012024,0.0,0.3333333432674408,0.3683488667011261,,,,,
+pgqenn,SOInet,test,bidirectional_sound_classification,open,2.2136673550110686,1.0,1.0,1.0,0.952460765838623,0.38761892914772034,0.0,0.3333333432674408,0.6000039577484131,,,,,
+pgqenn,SOInet,test,color_cloning,open,4.0619621278396965,,,,,,0.008141666650772095,,,0.17633678019046783,0.21771976351737976,0.18447844684123993,0.1649416834115982,10.632109642028809
+pgqenn,SOInet,test,sound_cloning,open,2.7515796072336585,,,,,,-0.0114402174949646,,,0.459200918674469,0.2713049352169037,0.4477607011795044,0.36060547828674316,-1.2731791734695435

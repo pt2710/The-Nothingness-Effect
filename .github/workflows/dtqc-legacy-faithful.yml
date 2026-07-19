@@ -43,16 +43,17 @@ jobs:
             SOURCE_COMMIT="$(git rev-parse HEAD)"
             python -m               the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence               --output "$TRACKED_DTQC"               --seed 0               --generation-source-commit "$SOURCE_COMMIT"
             python -m pytest -q               tests/numerical/test_dtqc_legacy_faithful_runtime.py               tests/artifacts/test_dtqc_legacy_faithful_artifacts.py               tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
-          } > tools/dtqc_stage2.log 2>&1
+          } > tools/dtqc_stage2_failure.txt 2>&1
           STATUS=$?
           set -e
           if [ "$STATUS" -ne 0 ]; then
-            git add tools/dtqc_stage2.log
+            git add -f tools/dtqc_stage2_failure.txt
             git commit -m "[dtqc-debug] Capture artifact regeneration failure"
             git push origin "HEAD:${HEAD_BRANCH}"
             exit "$STATUS"
           fi
           cp tools/dtqc_legacy_faithful_final.yml .github/workflows/dtqc-legacy-faithful.yml
+          rm -f tools/dtqc_stage2_failure.txt
           rm tools/dtqc_2d_repair.pyz.b64 tools/dtqc_legacy_faithful_final.yml
           git add             .github/workflows/dtqc-legacy-faithful.yml             tools             "$TRACKED_DTQC"
           git commit -m "[dtqc-2d-artifacts] Regenerate full-field Elastic-pi DTQC artifacts"

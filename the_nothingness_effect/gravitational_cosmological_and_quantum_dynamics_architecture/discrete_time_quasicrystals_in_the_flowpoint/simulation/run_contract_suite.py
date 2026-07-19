@@ -6,6 +6,7 @@ import json
 import shutil
 from pathlib import Path
 
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance import git_commit
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts import (
     run_suite as _run,
 )
@@ -21,12 +22,19 @@ from .run_legacy_faithful_suite import (
 ROOT_METADATA_FILE = "dtqc_artifact_metadata.json"
 ROOT_CHECKSUM_FILE = "dtqc_artifact_checksums.json"
 ROOT_COMPATIBILITY_FIGURE = "dtqc_spatial_closure.png"
+ARTIFACT_POLICY_FILE = "artifact_policy.json"
+MODULE_MANIFEST_FILE = "manifest.json"
 
-# The full visual/data inventory remains in the verified legacy_faithful
-# subdirectory. The root compatibility figure is explicitly rebound so the
-# top-level artifact tree no longer exposes the stale generic FieldLaw plot.
 PROMOTED_ARTIFACTS = {
-    "dtqc_legacy_summary.png": ROOT_COMPATIBILITY_FIGURE,
+    "legacy_faithful/dtqc_legacy_summary.png": ROOT_COMPATIBILITY_FIGURE,
+}
+
+PRODUCTION_LEGACY_CONFIG = {
+    "seed": 1,
+    "grid_size": 240,
+    "time_steps": 48,
+    "point_count": 8000,
+    "sphere_resolution": 64,
 }
 
 
@@ -34,36 +42,199 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def _clear_root_files(output: Path) -> None:
+def prepare_artifact_output(output_dir: str | Path) -> Path:
+    """Remove every producer-owned root artifact before a full regeneration."""
+
+    output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     for existing in output.iterdir():
         if existing.is_file():
             existing.unlink()
+    return output
 
 
-def _bind_full_source_faithful_tree(output: Path, legacy_output: Path) -> dict[str, object]:
+def _normalize_manifest_commits(output: Path, generation_source_commit: str) -> None:
+    for path in sorted(output.glob("*.json")):
+        if path.name in {ROOT_METADATA_FILE, ROOT_CHECKSUM_FILE, ARTIFACT_POLICY_FILE}:
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            continue
+        if isinstance(payload, dict) and "repository_result_commit" in payload:
+            payload["repository_result_commit"] = generation_source_commit
+            path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _write_artifact_policy(output: Path) -> Path:
+    path = output / ARTIFACT_POLICY_FILE
+    path.write_text(
+        json.dumps(
+            {
+                "claim_boundary": "finite computational support; not a formal proof substitute",
+                "large_binary_policy": "tracked deterministic release artifacts plus CI regeneration evidence",
+                "mode": "simulation",
+                "module": (
+                    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/"
+                    "discrete_time_quasicrystals_in_the_flowpoint"
+                ),
+                "policy": "all tracked files in this artifact tree are producer-owned and regenerated together",
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return path
+
+
+def _write_module_manifest(output: Path, generation_source_commit: str) -> Path:
+    from ..contract_runtime import APPENDIX, APPENDIX_SHA256
+    from ..contracts import contracts
+
+    identifiers = [str(contract.complex_id) for contract in contracts()]
+    generated_files = sorted(
+        path.name
+        for path in output.iterdir()
+        if path.is_file() and path.name not in {MODULE_MANIFEST_FILE, ROOT_METADATA_FILE, ROOT_CHECKSUM_FILE}
+    )
+    path = output / MODULE_MANIFEST_FILE
+    path.write_text(
+        json.dumps(
+            {
+                "appendix_filename": APPENDIX,
+                "appendix_source_sha256": APPENDIX_SHA256,
+                "appendix_sources": [{"filename": APPENDIX, "sha256": APPENDIX_SHA256}],
+                "claim_boundary": "finite computational support; not a formal proof substitute",
+                "closure_status": "mixed_exact_and_finite_runtime_evidence",
+                "exact_or_approximate": "typed_runtime_plus_source_faithful_visualization",
+                "generated_files": generated_files,
+                "invariant_results": {
+                    "tracked_root_files_regenerated": True,
+                    "legacy_visual_source_bound": True,
+                    "fibonacci_pisot_floquet_runtime_preserved": True,
+                },
+                "module": (
+                    "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/"
+                    "discrete_time_quasicrystals_in_the_flowpoint"
+                ),
+                "numeric_tolerances": {"absolute": 1e-10},
+                "parameters": {
+                    "theorem_contract_seed": 0,
+                    "legacy_visual_seed": PRODUCTION_LEGACY_CONFIG["seed"],
+                    "legacy_grid_size": PRODUCTION_LEGACY_CONFIG["grid_size"],
+                    "legacy_time_steps": PRODUCTION_LEGACY_CONFIG["time_steps"],
+                },
+                "regeneration_command": (
+                    "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
+                    "discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence"
+                ),
+                "repository_result_commit": generation_source_commit,
+                "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+                "schema_version": "2.0",
+                "seed": 0,
+                "theorem_complex_id": "module_inventory",
+                "theorem_complex_ids": identifiers,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return path
+
+
+def run_suite(
+    output_dir: str | Path,
+    *,
+    seed: int = 0,
+    legacy_seed: int = 1,
+    grid_size: int = 240,
+    time_steps: int = 48,
+    point_count: int = 8000,
+    sphere_resolution: int = 64,
+):
+    """Generate typed contract artifacts and the independent legacy-faithful suite.
+
+    The complete root tree is finalized by :func:`finalize_artifact_tree` after
+    the canonical simulation visualizer has added its outputs.
+    """
+
+    output = Path(output_dir)
+    output.mkdir(parents=True, exist_ok=True)
+    result = dict(_run("dtqc", output, seed=seed))
+    legacy_result = run_legacy_faithful_suite(
+        output / "legacy_faithful",
+        seed=legacy_seed,
+        grid_size=grid_size,
+        time_steps=time_steps,
+        point_count=point_count,
+        sphere_resolution=sphere_resolution,
+    )
     shutil.copyfile(
-        legacy_output / STATIC_FILES[0],
+        Path(legacy_result["output_dir"]) / STATIC_FILES[0],
         output / ROOT_COMPATIBILITY_FIGURE,
     )
+    result["legacy_faithful"] = legacy_result
+    return result
+
+
+def finalize_artifact_tree(
+    output_dir: str | Path,
+    *,
+    generation_source_commit: str | None = None,
+) -> dict[str, object]:
+    """Finalize metadata, recursive inventory, and byte checksums after all generators."""
+
+    output = Path(output_dir)
+    legacy_output = output / "legacy_faithful"
+    generation_commit = generation_source_commit or git_commit(Path(__file__).resolve().parents[6])
+
+    _normalize_manifest_commits(output, generation_commit)
+    _write_artifact_policy(output)
+    _write_module_manifest(output, generation_commit)
 
     legacy_manifest = json.loads((legacy_output / LEGACY_MANIFEST_FILE).read_text(encoding="utf-8"))
     legacy_checksums = json.loads((legacy_output / LEGACY_CHECKSUM_FILE).read_text(encoding="utf-8"))
     legacy_checksum_scope = dict(legacy_checksums["files"])
     legacy_checksum_scope[LEGACY_CHECKSUM_FILE] = _sha256(legacy_output / LEGACY_CHECKSUM_FILE)
 
-    theorem_manifests = sorted(path.name for path in output.glob("*_manifest.json"))
-    root_payload_before_metadata = sorted(path.name for path in output.iterdir() if path.is_file())
-    root_inventory = sorted(
-        [*root_payload_before_metadata, ROOT_METADATA_FILE, ROOT_CHECKSUM_FILE]
+    theorem_manifests = sorted(
+        path.name
+        for path in output.glob("*_manifest.json")
+        if path.name not in {"dtqc_simulation_evidence_manifest.json", "dtqc_simulation_visualization_manifest.json"}
     )
+    root_payload_before_metadata = sorted(path.name for path in output.iterdir() if path.is_file())
+    root_inventory = sorted([*root_payload_before_metadata, ROOT_METADATA_FILE, ROOT_CHECKSUM_FILE])
     legacy_inventory = sorted(path.name for path in legacy_output.iterdir() if path.is_file())
     metadata = {
-        "schema_version": "3.0",
-        "suite": "dtqc_full_source_faithful_artifact_tree",
+        "schema_version": "4.0",
+        "suite": "dtqc_complete_recursive_artifact_pipeline",
+        "generation_source_commit": generation_commit,
+        "generator_inventory": {
+            "typed_contracts": (
+                "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
+                "contract_artifacts.run_suite"
+            ),
+            "canonical_simulation_visuals": (
+                "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
+                "discrete_time_quasicrystals_in_the_flowpoint.visualization.run_dtqc_evidence"
+            ),
+            "legacy_source_faithful_visuals": (
+                "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
+                "discrete_time_quasicrystals_in_the_flowpoint.simulation.run_legacy_faithful_suite"
+            ),
+            "full_orchestrator": (
+                "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
+                "discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence"
+            ),
+        },
         "pipeline_partition": {
-            "theorem_runtime": "existing Fibonacci/Pisot/Floquet and typed contract runtime retained",
-            "visual_runtime": "legacy source-faithful decagonal/DFI/Elastic-pi/Flowpoint pipeline",
+            "theorem_runtime": "Fibonacci/Pisot/Floquet and typed theorem-contract runtime retained",
+            "canonical_visual_runtime": "finite canonical DTQC source-response projection and phase clock",
+            "legacy_visual_runtime": "legacy source-faithful decagonal/DFI/Elastic-pi/Flowpoint pipeline",
             "compatibility_figure": (
                 "dtqc_spatial_closure.png is rebound to legacy_faithful/dtqc_legacy_summary.png; "
                 "the stale generic FieldLaw line plot is not retained"
@@ -94,35 +265,29 @@ def _bind_full_source_faithful_tree(output: Path, legacy_output: Path) -> dict[s
     metadata_path = output / ROOT_METADATA_FILE
     metadata_path.write_text(json.dumps(metadata, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
-    # The theorem manifests already carry their own provenance checks and embed
-    # the producing Git commit. The recursive stable checksum scope covers the
-    # root numerical/visual payload plus every file in legacy_faithful.
-    root_stable_payload = (
-        "dtqc_contract_metrics.csv",
-        ROOT_COMPATIBILITY_FIGURE,
-        ROOT_METADATA_FILE,
+    root_checksum_files = sorted(
+        path.name for path in output.iterdir() if path.is_file() and path.name != ROOT_CHECKSUM_FILE
     )
     checksums = {
-        "schema_version": "3.0",
+        "schema_version": "4.0",
         "algorithm": "sha256",
-        "scope": "stable recursive DTQC source-faithful tree; theorem manifests verified separately",
-        "root_files": {name: _sha256(output / name) for name in root_stable_payload},
+        "scope": "all tracked DTQC root payloads plus the complete legacy_faithful subdirectory",
+        "generation_source_commit": generation_commit,
+        "root_files": {name: _sha256(output / name) for name in root_checksum_files},
         "legacy_faithful_files": legacy_checksum_scope,
     }
     checksum_path = output / ROOT_CHECKSUM_FILE
     checksum_path.write_text(json.dumps(checksums, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     final_root_inventory = sorted(path.name for path in output.iterdir() if path.is_file())
+    final_legacy_inventory = sorted(path.name for path in legacy_output.iterdir() if path.is_file())
     if final_root_inventory != root_inventory:
         raise RuntimeError(
-            "unexpected root DTQC artifact inventory: "
-            f"actual={final_root_inventory}, expected={root_inventory}"
+            f"unexpected root DTQC artifact inventory: actual={final_root_inventory}, expected={root_inventory}"
         )
-    final_legacy_inventory = sorted(path.name for path in legacy_output.iterdir() if path.is_file())
     if final_legacy_inventory != legacy_inventory:
         raise RuntimeError(
-            "unexpected legacy DTQC artifact inventory: "
-            f"actual={final_legacy_inventory}, expected={legacy_inventory}"
+            f"unexpected legacy DTQC artifact inventory: actual={final_legacy_inventory}, expected={legacy_inventory}"
         )
 
     return {
@@ -133,51 +298,20 @@ def _bind_full_source_faithful_tree(output: Path, legacy_output: Path) -> dict[s
     }
 
 
-def run_suite(
-    output_dir: str | Path,
-    *,
-    seed: int = 1,
-    grid_size: int = 240,
-    time_steps: int = 48,
-    point_count: int = 8000,
-    sphere_resolution: int = 64,
-):
-    output = Path(output_dir)
-    _clear_root_files(output)
-
-    result = dict(_run("dtqc", output, seed=seed))
-    legacy_result = run_legacy_faithful_suite(
-        output / "legacy_faithful",
-        seed=seed,
-        grid_size=grid_size,
-        time_steps=time_steps,
-        point_count=point_count,
-        sphere_resolution=sphere_resolution,
-    )
-    result["legacy_faithful"] = legacy_result
-    result["source_faithful_tree"] = _bind_full_source_faithful_tree(
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--generation-source-commit")
+    args = parser.parse_args()
+    output = prepare_artifact_output(args.output)
+    result = run_suite(output, seed=args.seed)
+    result["artifact_tree"] = finalize_artifact_tree(
         output,
-        Path(legacy_result["output_dir"]),
+        generation_source_commit=args.generation_source_commit,
     )
-    return result
+    print(result)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--seed", type=int, default=1)
-    parser.add_argument("--grid-size", type=int, default=240)
-    parser.add_argument("--time-steps", type=int, default=48)
-    parser.add_argument("--point-count", type=int, default=8000)
-    parser.add_argument("--sphere-resolution", type=int, default=64)
-    args = parser.parse_args()
-    print(
-        run_suite(
-            args.output,
-            seed=args.seed,
-            grid_size=args.grid_size,
-            time_steps=args.time_steps,
-            point_count=args.point_count,
-            sphere_resolution=args.sphere_resolution,
-        )
-    )
+    main()

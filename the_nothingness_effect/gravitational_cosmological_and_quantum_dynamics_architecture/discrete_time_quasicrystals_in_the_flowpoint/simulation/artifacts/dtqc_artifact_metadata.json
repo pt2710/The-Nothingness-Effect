@@ -1,0 +1,83 @@
+{
+  "claim_boundary": "finite deterministic source-faithful DTQC visualization evidence; not a formal proof, thermodynamic-limit existence result, or empirical validation",
+  "legacy_faithful_inventory": [
+    "dtqc_legacy_5d_scatter.gif",
+    "dtqc_legacy_checksums.json",
+    "dtqc_legacy_dfi_surface.png",
+    "dtqc_legacy_diffraction_fft.png",
+    "dtqc_legacy_elastic_pi_half_sphere.gif",
+    "dtqc_legacy_elastic_pi_sphere.gif",
+    "dtqc_legacy_elastic_pi_surface.png",
+    "dtqc_legacy_flowpoint_flicker.gif",
+    "dtqc_legacy_metadata.json",
+    "dtqc_legacy_metrics.csv",
+    "dtqc_legacy_quasicrystal_contour.png",
+    "dtqc_legacy_source_removal.csv",
+    "dtqc_legacy_state.npz",
+    "dtqc_legacy_summary.png",
+    "dtqc_legacy_wavelet_ridges.png"
+  ],
+  "mathematical_bindings": {
+    "canonical_dubler_ratio": "exp(-delta_S/K_D); retained separately and not substituted into legacy reference images",
+    "carrier": "sum_{k=0}^{9} cos(2*pi*(cos(2*pi*k/10)*X + sin(2*pi*k/10)*Y)) / ptp",
+    "dfi": "sixty radial FFT profiles with the legacy DFI volume/entropy transform",
+    "diffraction": "log1p(abs(fftshift(fft2(field))))",
+    "flowpoint": "alternating sector applied to an intrinsically phase-evolving ten-wave field",
+    "legacy_visual_elastic_pi": "pi*mean_i(exp(S_i/K_D)); clipped exactly as the legacy visual generator",
+    "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view"
+  },
+  "pipeline_partition": {
+    "compatibility_figure": "dtqc_spatial_closure.png is rebound to legacy_faithful/dtqc_legacy_summary.png; the stale generic FieldLaw line plot is not retained",
+    "theorem_runtime": "existing Fibonacci/Pisot/Floquet and typed contract runtime retained",
+    "visual_runtime": "legacy source-faithful decagonal/DFI/Elastic-pi/Flowpoint pipeline"
+  },
+  "production_configuration": {
+    "entropy_scale": 3.141592653589793,
+    "grid_size": 240,
+    "legacy_frame_stride": 4,
+    "point_count": 8000,
+    "radial_channels": 60,
+    "represented_legacy_frames": 192,
+    "seed": 1,
+    "time_steps": 48
+  },
+  "promoted_artifacts": {
+    "dtqc_legacy_summary.png": "dtqc_spatial_closure.png"
+  },
+  "root_inventory": [
+    "diophantine_parseval_locking_invariant_manifest.json",
+    "dtqc__dual_support_equivalence_support_mismatch_leakage_manifest.json",
+    "dtqc_artifact_checksums.json",
+    "dtqc_artifact_metadata.json",
+    "dtqc_contract_metrics.csv",
+    "dtqc_spatial_closure.png",
+    "elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
+    "elastic_gain_support_transport_isomorphism_manifest.json",
+    "elastic_parseval_quasicrystal_isometry_manifest.json",
+    "irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
+    "parseval_energy_bijection_l_2_energy_mismatch_manifest.json"
+  ],
+  "schema_version": "3.0",
+  "source_audit": {
+    "canonical_dubler": "equations/elastic_dubler_effect/elastic_dubler_effect.py",
+    "visual_generator": "tne_concepts/flowpoint_elastic_pi/simulate_elastic_pi_quasi_crystals.py",
+    "visual_reference_directory": "tne_concepts/discrete_quasi_crystal_visualization"
+  },
+  "source_removal": {
+    "dfi": 1.2030887933401784,
+    "elastic_pi": 91.59837416549084,
+    "flowpoint": 534.861083984375,
+    "scatter_oscillation": 474.21270751953125,
+    "temporal_evolution": 635.9224457551672
+  },
+  "suite": "dtqc_full_source_faithful_artifact_tree",
+  "theorem_manifests": [
+    "diophantine_parseval_locking_invariant_manifest.json",
+    "dtqc__dual_support_equivalence_support_mismatch_leakage_manifest.json",
+    "elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
+    "elastic_gain_support_transport_isomorphism_manifest.json",
+    "elastic_parseval_quasicrystal_isometry_manifest.json",
+    "irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
+    "parseval_energy_bijection_l_2_energy_mismatch_manifest.json"
+  ]
+}

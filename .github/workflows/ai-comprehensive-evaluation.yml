@@ -49,7 +49,7 @@ jobs:
           python tools/run_comprehensive_ai_evaluation.py
           --output reports/artificial_intelligence_comprehensive
           --seeds 0 1 2
-          --epochs 40
+          --epochs 60
           --samples-per-class 24
       - name: Package complete AI evidence
         run: >-

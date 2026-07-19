@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 
 import numpy as np
+import pytest
 
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.legacy_faithful_runtime import (
     LegacyFaithfulConfig,
@@ -13,7 +14,10 @@ from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_arch
     spatial_2d_diagnostics,
 )
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.visualization import (
+    INTRINSIC_AXIS_COUNT,
+    _elastic_pi_bundle,
     _elastic_pi_surface,
+    _quasicrystal_axis_components,
     _quasicrystal_field,
 )
 
@@ -78,6 +82,58 @@ def test_canonical_dtqc_elastic_pi_surface_is_genuinely_two_dimensional() -> Non
     assert diagnostics["column_broadcast_residual"] > 0.1
     assert diagnostics["axis_gradient_balance"] > 0.1
     assert diagnostics["effective_rank"] > 1.5
+
+
+def test_elastic_pi_is_applied_independently_to_all_five_intrinsic_axes() -> None:
+    (
+        _,
+        _,
+        field,
+        axis_components,
+        _,
+        directions,
+        axis_names,
+    ) = _quasicrystal_axis_components(64)
+    weights = np.full(INTRINSIC_AXIS_COUNT, 1.0 / INTRINSIC_AXIS_COUNT)
+    _, elastic_surface, axis_surfaces, diagnostics = _elastic_pi_bundle(
+        field,
+        axis_components=axis_components,
+        directions=directions,
+        weights=weights,
+    )
+
+    assert axis_names == ("x", "y", "z", "w", "u")
+    assert axis_surfaces.shape == (5, 64, 64)
+    assert diagnostics["axis_count"] == 5
+    assert diagnostics["axis_names"] == ["x", "y", "z", "w", "u"]
+    assert diagnostics["all_intrinsic_axes_applied"] is True
+    assert diagnostics["minimum_axis_source_removal_residual"] > 1e-4
+    assert diagnostics["axis_application_residual"] < 1e-12
+    assert diagnostics["direct_law_residual"] < 1e-12
+    assert all(span > 1e-3 for span in diagnostics["axis_elastic_pi_spans"])
+    assert np.isfinite(elastic_surface).all()
+
+
+def test_missing_intrinsic_axis_fails_closed() -> None:
+    (
+        _,
+        _,
+        field,
+        axis_components,
+        _,
+        directions,
+        _,
+    ) = _quasicrystal_axis_components(48)
+    broken = axis_components.copy()
+    broken[3] = 0.0
+    weights = np.full(INTRINSIC_AXIS_COUNT, 1.0 / INTRINSIC_AXIS_COUNT)
+    with pytest.raises(ValueError, match="intrinsic axis 3"):
+        _elastic_pi_bundle(
+            field,
+            axis_components=broken,
+            directions=directions,
+            weights=weights,
+        )
 
 
 def test_flicker_alternates_and_evolves_intrinsically() -> None:

@@ -1,0 +1,8 @@
+metric,value
+intrinsic_axis_count,5
+minimum_axis_source_removal_residual,0.1271646951625596
+minimum_axis_dfi_norm,0.726768791377308
+direct_law_residual,1.3546999139135067e-16
+effective_rank,4.527902738987544
+flowpoint_flicker_intrinsic_axes,5
+scatter_dimension,5

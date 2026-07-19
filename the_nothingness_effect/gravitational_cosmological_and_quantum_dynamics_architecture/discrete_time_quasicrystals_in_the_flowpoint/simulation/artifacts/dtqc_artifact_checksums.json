@@ -1,0 +1,27 @@
+{
+  "algorithm": "sha256",
+  "legacy_faithful_files": {
+    "dtqc_legacy_5d_scatter.gif": "75e6c2f971587537a526d7c91b8102de30502725b42879e47bfead22b3516aad",
+    "dtqc_legacy_checksums.json": "94f588f0445af99b0fd904350699b4e1ae9378aa75f82ec5ba5e9d042483e097",
+    "dtqc_legacy_dfi_surface.png": "e4ac629a5a5e66d9a9319b7130cedcd4b0f225ac5ace4597b7c758f4569af42b",
+    "dtqc_legacy_diffraction_fft.png": "a0bac2a188b8fe51c4a849f22724e7743887c96284604db48264cb7cb83c74dd",
+    "dtqc_legacy_elastic_pi_half_sphere.gif": "5e21dcd1562a55213e896e52fb65e533d6bea5da71cf1b4eb656e740a29b186c",
+    "dtqc_legacy_elastic_pi_sphere.gif": "b5ed80eb20701084b1e5debceff4f54345d24159ea33c2117279cf94cf5c71bb",
+    "dtqc_legacy_elastic_pi_surface.png": "80d27ee64d8aee0f9de0fbbb37e6563a04de7239afa8db1b1e79f242a770f543",
+    "dtqc_legacy_flowpoint_flicker.gif": "25534204e3a2d2b779f356c0dea741b4d7710fc33ac9ec6c9c35258c847ea232",
+    "dtqc_legacy_metadata.json": "f2d5e4b04d033332a13f42c92f2090509fe7c842653533f58fe52b05a1005104",
+    "dtqc_legacy_metrics.csv": "af7801059fb7bba89f1e330880c0815feea0f780a35252c8624b1f1e9f84c420",
+    "dtqc_legacy_quasicrystal_contour.png": "d4e15ac48e0fc4c1ae6b4d880f738d1db86b02dbbe48d4b2a943f6f57816f9ae",
+    "dtqc_legacy_source_removal.csv": "df95d9c246a828f5c14d7972286de32abc9979d59e2b25ac28b773d98dd0b3af",
+    "dtqc_legacy_state.npz": "921fd9636b90054e921c5ce2d3d68bb1a2001d34294a99f3c143707618f05501",
+    "dtqc_legacy_summary.png": "18c50ab5195e41d3f0da17f5cc10e9f495b85c742b49750e47e84f35d143fd76",
+    "dtqc_legacy_wavelet_ridges.png": "ed37a53b6197aa9516e3134ae833e4af2abbf5918de274570450fa5c96aa5374"
+  },
+  "root_files": {
+    "dtqc_artifact_metadata.json": "b64a3da06217abbd24a5e324e1d1f9ddb34e757ef5aa8e0799d00de37f71d9e3",
+    "dtqc_contract_metrics.csv": "322ad01f33032da7ef0d82803ebd97a8ddf56348895a8f6e77bfcc32c79a1815",
+    "dtqc_spatial_closure.png": "18c50ab5195e41d3f0da17f5cc10e9f495b85c742b49750e47e84f35d143fd76"
+  },
+  "schema_version": "3.0",
+  "scope": "stable recursive DTQC source-faithful tree; theorem manifests verified separately"
+}

@@ -90,11 +90,30 @@ def _precision_entropy(output: TNETrainableMultimodalOutput) -> torch.Tensor:
     ).mean() / normalizer
 
 
+def _qenn_auxiliary_loss(
+    output: TNETrainableMultimodalOutput,
+    labels: torch.Tensor,
+) -> torch.Tensor:
+    soinet = output.backbone_output.soinet_output
+    if soinet is None or not soinet.qenn_outputs:
+        return torch.zeros((), dtype=output.readout.dtype, device=output.readout.device)
+    losses = []
+    for qenn in soinet.qenn_outputs:
+        if qenn.readout.ndim != 2 or qenn.readout.shape[0] != labels.shape[0]:
+            raise RuntimeError("QENN auxiliary readout must be per-sample")
+        if qenn.readout.shape[-1] != output.readout.shape[-1]:
+            raise RuntimeError("QENN auxiliary readout must share the task class domain")
+        losses.append(functional.cross_entropy(qenn.readout, labels))
+    return torch.stack(losses).mean()
+
+
 def _loss_components(
     output: TNETrainableMultimodalOutput,
     labels: torch.Tensor,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
-    task = functional.cross_entropy(output.readout, labels)
+    primary_task = functional.cross_entropy(output.readout, labels)
+    qenn_auxiliary = _qenn_auxiliary_loss(output, labels)
+    task = primary_task + 0.50 * qenn_auxiliary
     target = output.backbone_output.modality_tokens.mean(dim=1)
     reconstruction = functional.mse_loss(
         output.reconstructed_fused_tokens,
@@ -265,14 +284,10 @@ def train_multimodal_model(
                 learning_rate=current_learning_rate,
                 validation_objective=objective,
                 K_D_selection_improvement=(
-                    selection.improvement
-                    if selection is not None
-                    else 0.0
+                    selection.improvement if selection is not None else 0.0
                 ),
                 joint_hyperparameter_improvement=(
-                    selection.improvement
-                    if selection is not None
-                    else 0.0
+                    selection.improvement if selection is not None else 0.0
                 ),
             )
         )

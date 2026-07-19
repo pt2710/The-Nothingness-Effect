@@ -90,7 +90,7 @@ def _write_artifact_policy(output: Path) -> Path:
 
 
 def _write_module_manifest(output: Path, generation_source_commit: str) -> Path:
-    from ..contract_runtime import APPENDIX, APPENDIX_SHA256
+    from ...contract_runtime import APPENDIX, APPENDIX_SHA256
     from ..contracts import contracts
 
     identifiers = [str(contract.complex_id) for contract in contracts()]

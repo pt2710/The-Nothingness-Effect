@@ -34,7 +34,8 @@ def fixture(seed: int = 0) -> QENNContractInput:
 
 
 def run_suite(output_dir: str | Path, *, seed: int = 0):
-    output = Path(output_dir); output.mkdir(parents=True, exist_ok=True)
+    output = Path(output_dir)
+    output.mkdir(parents=True, exist_ok=True)
     value = fixture(seed)
     evaluations = [(contract, evaluate_contract(contract, value)) for contract in contracts()]
     rows = []

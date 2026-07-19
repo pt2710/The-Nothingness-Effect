@@ -91,6 +91,29 @@ def _precision_metrics(output: TNETrainableMultimodalOutput) -> dict[str, float]
     }
 
 
+def _qenn_metrics(
+    output: TNETrainableMultimodalOutput,
+    labels: torch.Tensor,
+) -> dict[str, float]:
+    soinet = output.backbone_output.soinet_output
+    if soinet is None or not soinet.qenn_outputs:
+        return {
+            "mean_qenn_accuracy": 0.0,
+            "mean_qenn_cross_entropy": 0.0,
+        }
+    accuracies: list[torch.Tensor] = []
+    losses: list[torch.Tensor] = []
+    for qenn in soinet.qenn_outputs:
+        if qenn.readout.ndim != 2 or qenn.readout.shape[0] != labels.shape[0]:
+            raise RuntimeError("QENN evaluation readout must be per-sample")
+        losses.append(functional.cross_entropy(qenn.readout, labels))
+        accuracies.append((qenn.readout.argmax(dim=-1) == labels).float().mean())
+    return {
+        "mean_qenn_accuracy": float(torch.stack(accuracies).mean()),
+        "mean_qenn_cross_entropy": float(torch.stack(losses).mean()),
+    }
+
+
 def _calibration_temperature(model: TNETrainableMultimodalModel) -> float:
     value = getattr(model, "calibration_temperature", 1.0)
     if isinstance(value, torch.Tensor):
@@ -111,11 +134,8 @@ def evaluate_multimodal_model(
         output = model(batch.modalities)
     temperature = _calibration_temperature(model)
     if temperature != 1.0:
-        calibrated_logits = output.readout / temperature
-        output.readout = calibrated_logits
-        output.observation = torch.softmax(calibrated_logits, dim=-1)
-        if output.sample_observation_state is not None:
-            output.sample_observation_state.probabilities.copy_(output.observation)
+        output.readout = output.readout / temperature
+        output.observation = torch.softmax(output.readout, dim=-1)
     probabilities = output.observation
     predictions = probabilities.argmax(dim=-1)
     classes = output.readout.shape[-1]
@@ -146,6 +166,7 @@ def evaluate_multimodal_model(
         "mean_global_rbm_free_energy": float(output.global_rbm_state.free_energy.mean()),
         "global_rbm_reconstruction_rmse": float(output.global_rbm_state.reconstruction_residual),
         "active_clusters": float(output.cluster_state.active_clusters),
+        **_qenn_metrics(output, batch.labels),
         **_precision_metrics(output),
         **classification_metrics_from_confusion(confusion),
     }

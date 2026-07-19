@@ -24,6 +24,10 @@ ROOT_CHECKSUM_FILE = "dtqc_artifact_checksums.json"
 ROOT_COMPATIBILITY_FIGURE = "dtqc_spatial_closure.png"
 ARTIFACT_POLICY_FILE = "artifact_policy.json"
 MODULE_MANIFEST_FILE = "manifest.json"
+CANONICAL_REGENERATION_COMMAND = (
+    "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
+    "discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence"
+)
 
 PROMOTED_ARTIFACTS = {
     "legacy_faithful/dtqc_legacy_summary.png": ROOT_COMPATIBILITY_FIGURE,
@@ -53,7 +57,9 @@ def prepare_artifact_output(output_dir: str | Path) -> Path:
     return output
 
 
-def _normalize_manifest_commits(output: Path, generation_source_commit: str) -> None:
+def _normalize_root_manifests(output: Path, generation_source_commit: str) -> None:
+    """Remove output-path and checkout-commit volatility from root JSON evidence."""
+
     for path in sorted(output.glob("*.json")):
         if path.name in {ROOT_METADATA_FILE, ROOT_CHECKSUM_FILE, ARTIFACT_POLICY_FILE}:
             continue
@@ -61,8 +67,16 @@ def _normalize_manifest_commits(output: Path, generation_source_commit: str) -> 
             payload = json.loads(path.read_text(encoding="utf-8"))
         except (UnicodeDecodeError, json.JSONDecodeError):
             continue
-        if isinstance(payload, dict) and "repository_result_commit" in payload:
+        if not isinstance(payload, dict):
+            continue
+        changed = False
+        if "repository_result_commit" in payload:
             payload["repository_result_commit"] = generation_source_commit
+            changed = True
+        if "regeneration_command" in payload:
+            payload["regeneration_command"] = CANONICAL_REGENERATION_COMMAND
+            changed = True
+        if changed:
             path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
@@ -126,10 +140,7 @@ def _write_module_manifest(output: Path, generation_source_commit: str) -> Path:
                     "legacy_grid_size": PRODUCTION_LEGACY_CONFIG["grid_size"],
                     "legacy_time_steps": PRODUCTION_LEGACY_CONFIG["time_steps"],
                 },
-                "regeneration_command": (
-                    "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture."
-                    "discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence"
-                ),
+                "regeneration_command": CANONICAL_REGENERATION_COMMAND,
                 "repository_result_commit": generation_source_commit,
                 "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
                 "schema_version": "2.0",
@@ -192,7 +203,7 @@ def finalize_artifact_tree(
     legacy_output = output / "legacy_faithful"
     generation_commit = generation_source_commit or git_commit(Path(__file__).resolve().parents[6])
 
-    _normalize_manifest_commits(output, generation_commit)
+    _normalize_root_manifests(output, generation_commit)
     _write_artifact_policy(output)
     _write_module_manifest(output, generation_commit)
 

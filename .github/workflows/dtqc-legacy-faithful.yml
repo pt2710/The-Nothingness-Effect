@@ -84,9 +84,10 @@ jobs:
           find "$TRACKED_DTQC" -maxdepth 2 -type f -printf '%P\n' | sort > "$EVIDENCE_DIR/tracked-files.txt"
           (cd "$GENERATED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/generated-sha256.txt"
           (cd "$TRACKED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/tracked-sha256.txt"
-          diff -u "$EVIDENCE_DIR/generated-files.txt" "$EVIDENCE_DIR/tracked-files.txt" > "$EVIDENCE_DIR/inventory.diff"
-          diff -u "$EVIDENCE_DIR/generated-sha256.txt" "$EVIDENCE_DIR/tracked-sha256.txt" > "$EVIDENCE_DIR/checksums.diff"
+          diff -u "$EVIDENCE_DIR/generated-files.txt" "$EVIDENCE_DIR/tracked-files.txt" > "$EVIDENCE_DIR/inventory.diff" || true
+          diff -u "$EVIDENCE_DIR/generated-sha256.txt" "$EVIDENCE_DIR/tracked-sha256.txt" > "$EVIDENCE_DIR/checksums.diff" || true
       - name: Upload complete regenerated DTQC tree
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: dtqc-full-artifacts-${{ github.sha }}
@@ -95,12 +96,21 @@ jobs:
           compression-level: 9
           retention-days: 14
       - name: Upload recursive DTQC byte evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: dtqc-inventory-evidence-${{ github.sha }}
           path: ${{ runner.temp }}/dtqc-inventory-evidence
           if-no-files-found: error
           retention-days: 14
+      - name: Enforce recursive DTQC byte identity
+        run: |
+          if [ -s "${{ runner.temp }}/dtqc-inventory-evidence/inventory.diff" ] || [ -s "${{ runner.temp }}/dtqc-inventory-evidence/checksums.diff" ]; then
+            echo "Generated and tracked DTQC trees differ."
+            cat "${{ runner.temp }}/dtqc-inventory-evidence/inventory.diff"
+            cat "${{ runner.temp }}/dtqc-inventory-evidence/checksums.diff"
+            exit 1
+          fi
       - name: Commit freshly regenerated tracked artifacts
         if: >-
           github.event_name == 'pull_request' &&

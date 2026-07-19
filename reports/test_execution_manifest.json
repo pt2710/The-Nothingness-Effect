@@ -11,7 +11,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/pgqenn/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.157533,
+      "runtime_seconds": 0.162035,
       "status": "passed"
     },
     {
@@ -23,7 +23,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/qenn/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.214804,
+      "runtime_seconds": 0.145454,
       "status": "passed"
     },
     {
@@ -35,7 +35,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/soinets/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.293934,
+      "runtime_seconds": 0.296528,
       "status": "passed"
     },
     {
@@ -47,7 +47,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.222071,
+      "runtime_seconds": 0.161749,
       "status": "passed"
     },
     {
@@ -59,7 +59,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.190196,
+      "runtime_seconds": 0.17911,
       "status": "passed"
     },
     {
@@ -71,7 +71,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.172795,
+      "runtime_seconds": 0.149843,
       "status": "passed"
     },
     {
@@ -83,7 +83,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.170742,
+      "runtime_seconds": 0.160315,
       "status": "passed"
     },
     {
@@ -95,7 +95,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.197087,
+      "runtime_seconds": 0.157282,
       "status": "passed"
     },
     {
@@ -107,7 +107,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/countable_infinity/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.143628,
+      "runtime_seconds": 0.171386,
       "status": "passed"
     },
     {
@@ -119,7 +119,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/duality/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.118339,
+      "runtime_seconds": 0.187798,
       "status": "passed"
     },
     {
@@ -131,7 +131,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.105863,
+      "runtime_seconds": 0.174334,
       "status": "passed"
     },
     {
@@ -143,7 +143,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/spatiality/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.093839,
+      "runtime_seconds": 0.184561,
       "status": "passed"
     },
     {
@@ -155,7 +155,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/symmetry/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.11258,
+      "runtime_seconds": 0.148691,
       "status": "passed"
     },
     {
@@ -167,7 +167,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.131686,
+      "runtime_seconds": 0.166372,
       "status": "passed"
     },
     {
@@ -179,7 +179,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.125837,
+      "runtime_seconds": 0.202592,
       "status": "passed"
     },
     {
@@ -191,7 +191,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.136302,
+      "runtime_seconds": 0.191032,
       "status": "passed"
     },
     {
@@ -203,7 +203,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.116565,
+      "runtime_seconds": 0.266632,
       "status": "passed"
     },
     {
@@ -215,7 +215,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.115665,
+      "runtime_seconds": 0.20231,
       "status": "passed"
     },
     {
@@ -227,7 +227,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.103493,
+      "runtime_seconds": 0.214634,
       "status": "passed"
     },
     {
@@ -239,7 +239,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.131689,
+      "runtime_seconds": 0.173018,
       "status": "passed"
     },
     {
@@ -251,7 +251,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.125603,
+      "runtime_seconds": 0.153907,
       "status": "passed"
     },
     {
@@ -263,7 +263,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.143983,
+      "runtime_seconds": 0.156991,
       "status": "passed"
     },
     {
@@ -275,7 +275,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.153059,
+      "runtime_seconds": 0.210801,
       "status": "passed"
     },
     {
@@ -287,7 +287,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.129607,
+      "runtime_seconds": 0.23643,
       "status": "passed"
     },
     {
@@ -299,7 +299,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.123842,
+      "runtime_seconds": 0.161276,
       "status": "passed"
     },
     {
@@ -311,7 +311,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/mathematical_architecture/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.125886,
+      "runtime_seconds": 0.133743,
       "status": "passed"
     },
     {
@@ -323,7 +323,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/the_completeness_theorem/noether_structure/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.124874,
+      "runtime_seconds": 0.19654,
       "status": "passed"
     },
     {
@@ -335,7 +335,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/the_completeness_theorem/test/generate_artifacts.py",
       "return_code": 0,
-      "runtime_seconds": 0.116607,
+      "runtime_seconds": 0.17146,
       "status": "passed"
     },
     {
@@ -347,7 +347,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/color_classification/test/test_capability.py",
       "return_code": 0,
-      "runtime_seconds": 7.654722,
+      "runtime_seconds": 21.250707,
       "status": "passed"
     },
     {
@@ -359,7 +359,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/sound_classification/test/test_capability.py",
       "return_code": 0,
-      "runtime_seconds": 10.229167,
+      "runtime_seconds": 7.535342,
       "status": "passed"
     },
     {
@@ -371,7 +371,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/test/test_capability.py",
       "return_code": 0,
-      "runtime_seconds": 14.57952,
+      "runtime_seconds": 8.117923,
       "status": "passed"
     },
     {
@@ -383,7 +383,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/bidirectional_sound_classification/test/test_capability.py",
       "return_code": 0,
-      "runtime_seconds": 16.877733,
+      "runtime_seconds": 9.424732,
       "status": "passed"
     },
     {
@@ -395,7 +395,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/color_cloning/test/test_capability.py",
       "return_code": 0,
-      "runtime_seconds": 11.588978,
+      "runtime_seconds": 8.990427,
       "status": "passed"
     },
     {
@@ -407,7 +407,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/sound_cloning/test/test_capability.py",
       "return_code": 0,
-      "runtime_seconds": 11.236119,
+      "runtime_seconds": 9.195363,
       "status": "passed"
     },
     {
@@ -419,7 +419,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/qenn/test/run_all_capabilities.py",
       "return_code": 0,
-      "runtime_seconds": 113.03319,
+      "runtime_seconds": 90.992693,
       "status": "passed"
     },
     {
@@ -431,7 +431,7 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/pgqenn/test/run_all_capabilities.py",
       "return_code": 0,
-      "runtime_seconds": 160.808587,
+      "runtime_seconds": 141.062915,
       "status": "passed"
     },
     {
@@ -443,13 +443,14 @@
       "output_tail": "",
       "path": "the_nothingness_effect/artificial_intelligence/soinets/test/run_all_capabilities.py",
       "return_code": 0,
-      "runtime_seconds": 63.760282,
+      "runtime_seconds": 83.698304,
       "status": "passed"
     }
   ],
-  "generated_at_utc": "2026-07-19T02:37:54.605661+00:00",
+  "generated_at_utc": "2026-07-19T04:10:37.577341+00:00",
   "mode": "test",
   "python": "3.14.3",
+  "retry_failed": false,
   "schema_version": "1.0",
   "seed": 0,
   "summary": {

@@ -80,8 +80,10 @@ class TNEGeometricMultimodalModel(TNETrainableMultimodalModel):
             weights.unsqueeze(-1) * axis.geometric_coordinates,
             dim=1,
         )
-        dual_pressure = torch.relu(-axis.observer_horizon)
-        dual_weights = weights * (1.0 + dual_pressure)
+        negative_horizon_pressure = torch.relu(
+            -axis.observer_horizon
+        )
+        dual_weights = weights * (1.0 + negative_horizon_pressure)
         dual_weights = dual_weights / dual_weights.sum(
             dim=-1,
             keepdim=True,
@@ -94,8 +96,8 @@ class TNEGeometricMultimodalModel(TNETrainableMultimodalModel):
             weights.unsqueeze(-1) * axis.mpl_tc_growth_vectors,
             dim=1,
         )
-        horizon = torch.sum(
-            weights * axis.observer_horizon,
+        horizon_pressure = torch.sum(
+            weights * negative_horizon_pressure,
             dim=1,
             keepdim=True,
         )
@@ -107,7 +109,9 @@ class TNEGeometricMultimodalModel(TNETrainableMultimodalModel):
         if self.dual_context_enabled:
             hidden = hidden + self.dual_projection(dual_geometry)
         if self.observer_horizon_growth_enabled:
-            hidden = hidden + self.horizon_projection(horizon)
+            hidden = hidden + self.horizon_projection(
+                horizon_pressure
+            )
         hidden = require_finite_tensor(
             torch.tanh(hidden),
             "geometry-aware multimodal hidden state",
@@ -118,7 +122,9 @@ class TNEGeometricMultimodalModel(TNETrainableMultimodalModel):
         )
         observation_state = self.sample_observation(logits)
         reconstruction = require_finite_tensor(
-            torch.nn.functional.softplus(self.shared_token_decoder(hidden)),
+            torch.nn.functional.softplus(
+                self.shared_token_decoder(hidden)
+            ),
             "geometry-aware shared reconstruction",
         )
 
@@ -135,27 +141,45 @@ class TNEGeometricMultimodalModel(TNETrainableMultimodalModel):
         output.residuals.update(
             {
                 "geometry::dual_involution": torch.max(
-                    torch.abs(axis.dual_coordinates + axis.geometric_coordinates)
+                    torch.abs(
+                        axis.dual_coordinates
+                        + axis.geometric_coordinates
+                    )
                 ),
                 "geometry::stream_normalization": torch.max(
-                    torch.abs(axis.mpl_tc_stream_weights.sum(dim=-1) - 1.0)
+                    torch.abs(
+                        axis.mpl_tc_stream_weights.sum(dim=-1)
+                        - 1.0
+                    )
                 ),
-                "geometry::horizon_finite": torch.max(
-                    torch.zeros_like(axis.observer_horizon)
+                "geometry::negative_horizon_pressure": torch.max(
+                    torch.relu(-horizon_pressure)
                 ),
             }
         )
-        output.closure_status = arbitrate(output.residuals, tolerance)
+        output.closure_status = arbitrate(
+            output.residuals,
+            tolerance,
+        )
         output.metadata.update(
             {
-                "geometric_architecture": "modality_rotated_three_dimensional",
-                "geometric_modalities": list(axis.modality_names),
-                "geometric_dual": "antipodal_positive_negative_carrier",
-                "observer_horizon": "negative_values_increase_dual_context",
-                "mpl_tc_growth": (
-                    "four_stream_tetrahedral_directions_rotated_by_modality_frame"
+                "geometric_architecture": (
+                    "modality_rotated_three_dimensional"
                 ),
-                "geometry_context_enabled": self.geometric_context_enabled,
+                "geometric_modalities": list(axis.modality_names),
+                "geometric_dual": (
+                    "antipodal_positive_negative_carrier"
+                ),
+                "observer_horizon": (
+                    "negative_only_pressure_increases_dual_context"
+                ),
+                "mpl_tc_growth": (
+                    "four_stream_tetrahedral_directions_"
+                    "rotated_by_modality_frame"
+                ),
+                "geometry_context_enabled": (
+                    self.geometric_context_enabled
+                ),
                 "dual_context_enabled": self.dual_context_enabled,
                 "observer_horizon_growth_enabled": (
                     self.observer_horizon_growth_enabled

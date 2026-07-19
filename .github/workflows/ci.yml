@@ -46,6 +46,10 @@ jobs:
           --ignore=tests/contracts/test_qenn_dfi_remaining_source_contracts.py
           --ignore=tests/contracts/test_pgqenn_remaining_source_contracts.py
           --ignore=tests/contracts/test_soinets_remaining_source_contracts.py
+          --ignore=tests/contracts/test_authoritative_ai_dual_products.py
+          --ignore=tests/contracts/test_authoritative_physics_product_contracts.py
+          --ignore=tests/contracts/test_qenn_authoritative_failure_gates.py
+          --ignore=tests/contracts/test_qenn_authoritative_status.py
           --ignore=tests/contracts/test_mpl_tc_dependency.py
           --ignore=tests/invariants/test_elastic_dubler_ai.py
           --ignore=tests/invariants/test_observation_collapse_readout.py

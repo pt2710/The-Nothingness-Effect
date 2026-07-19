@@ -74,25 +74,16 @@ jobs:
           assert generated_checksums == tracked_checksums
           assert sorted(path.name for path in tracked.iterdir() if path.is_file()) == generated_metadata["root_inventory"]
 
-          for name, expected in generated_checksums["files"].items():
-              tracked_digest = hashlib.sha256((tracked / name).read_bytes()).hexdigest()
-              generated_digest = hashlib.sha256((generated / name).read_bytes()).hexdigest()
-              assert generated_digest == expected
-              assert tracked_digest == expected
+          for name, expected in generated_checksums["root_files"].items():
+              assert hashlib.sha256((generated / name).read_bytes()).hexdigest() == expected
+              assert hashlib.sha256((tracked / name).read_bytes()).hexdigest() == expected
 
           generated_legacy = generated / "legacy_faithful"
           tracked_legacy = tracked / "legacy_faithful"
-          generated_legacy_checksums = json.loads(
-              (generated_legacy / "dtqc_legacy_checksums.json").read_text()
-          )
-          tracked_legacy_checksums = json.loads(
-              (tracked_legacy / "dtqc_legacy_checksums.json").read_text()
-          )
-          assert generated_legacy_checksums == tracked_legacy_checksums
-          assert sorted(path.name for path in tracked_legacy.iterdir() if path.is_file()) == sorted(
-              [*generated_legacy_checksums["files"], "dtqc_legacy_checksums.json"]
-          )
-          for name, expected in generated_legacy_checksums["files"].items():
+          assert sorted(path.name for path in tracked_legacy.iterdir() if path.is_file()) == generated_metadata[
+              "legacy_faithful_inventory"
+          ]
+          for name, expected in generated_checksums["legacy_faithful_files"].items():
               assert hashlib.sha256((generated_legacy / name).read_bytes()).hexdigest() == expected
               assert hashlib.sha256((tracked_legacy / name).read_bytes()).hexdigest() == expected
           PY

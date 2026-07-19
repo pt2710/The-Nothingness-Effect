@@ -4,7 +4,7 @@ import json
 
 import torch
 
-from the_nothingness_effect.artificial_intelligence.comprehensive_evaluation import (
+from tools.run_comprehensive_ai_evaluation import (
     run_comprehensive_ai_evaluation,
 )
 from the_nothingness_effect.artificial_intelligence.multimodal.axes import (
@@ -13,6 +13,12 @@ from the_nothingness_effect.artificial_intelligence.multimodal.axes import (
 from the_nothingness_effect.artificial_intelligence.multimodal.data import (
     dataset_variation_summary,
     make_synthetic_multimodal_dataset,
+)
+from the_nothingness_effect.artificial_intelligence.multimodal.geometric_model import (
+    TNEGeometricMultimodalModel,
+)
+from the_nothingness_effect.artificial_intelligence.multimodal.rbm import (
+    GaussianBernoulliEnergyLayer,
 )
 
 
@@ -59,6 +65,18 @@ def test_modality_axis_network_exposes_dual_3d_and_mpl_tc_geometry():
     )
 
 
+def test_geometric_model_contains_no_local_rbm_and_one_global_rbm():
+    model = TNEGeometricMultimodalModel()
+    energy_layers = [
+        module
+        for module in model.modules()
+        if isinstance(module, GaussianBernoulliEnergyLayer)
+    ]
+    assert not hasattr(model, "local_energy")
+    assert len(energy_layers) == 1
+    assert energy_layers[0] is model.global_energy
+
+
 def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
     output = tmp_path / "comprehensive-ai"
     report = run_comprehensive_ai_evaluation(
@@ -95,6 +113,8 @@ def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
         path.name
         for path in output.glob("*.csv")
     }
+    assert not (output / "plots" / "rbm_free_energy.png").exists()
+    assert (output / "plots" / "global_rbm_free_energy.png").is_file()
     manifest_path = output / "artifact_manifest.json"
     assert manifest_path.is_file()
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))

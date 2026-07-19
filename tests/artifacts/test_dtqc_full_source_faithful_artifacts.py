@@ -45,6 +45,7 @@ EXPECTED_ROOT_FILES = {
     "elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
     "elastic_gain_support_transport_isomorphism_manifest.json",
     "elastic_parseval_quasicrystal_isometry_manifest.json",
+    "elastic_pi_intrinsic_axes.png",
     "elastic_pi_surface.png",
     "irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
     "manifest.json",
@@ -72,9 +73,9 @@ def _validate_full_tree(artifact_dir: Path) -> None:
         "full_orchestrator",
     }
     assert "Fibonacci/Pisot/Floquet" in metadata["pipeline_partition"]["theorem_runtime"]
-    assert "stale generic FieldLaw line plot is not retained" in metadata["pipeline_partition"][
-        "compatibility_figure"
-    ]
+    assert "stale generic FieldLaw line plot is not retained" in metadata[
+        "pipeline_partition"
+    ]["compatibility_figure"]
     assert metadata["source_audit"]["visual_generator"].endswith(
         "flowpoint_elastic_pi/simulate_elastic_pi_quasi_crystals.py"
     )
@@ -85,10 +86,21 @@ def _validate_full_tree(artifact_dir: Path) -> None:
         "discrete_quasi_crystal_visualization"
     )
     assert all(value > 0.0 for value in metadata["source_removal"].values())
-    assert metadata["spatial_regression"]["canonical"]["row_broadcast_residual"] > 0.1
-    assert metadata["spatial_regression"]["canonical"]["column_broadcast_residual"] > 0.1
-    assert metadata["spatial_regression"]["canonical"]["axis_gradient_balance"] > 0.1
-    assert metadata["spatial_regression"]["canonical"]["effective_rank"] > 1.5
+
+    canonical = metadata["spatial_regression"]["canonical"]
+    assert canonical["row_broadcast_residual"] > 0.1
+    assert canonical["column_broadcast_residual"] > 0.1
+    assert canonical["axis_gradient_balance"] > 0.1
+    assert canonical["effective_rank"] > 1.5
+    assert canonical["axis_count"] == 5
+    assert canonical["axis_names"] == ["x", "y", "z", "w", "u"]
+    assert canonical["all_intrinsic_axes_applied"] is True
+    assert canonical["minimum_axis_source_removal_residual"] > 1e-4
+    assert canonical["minimum_dfi_axis_norm"] > 0.0
+    assert canonical["axis_application_residual"] < 1e-12
+    assert canonical["direct_law_residual"] < 1e-12
+    assert all(value > 1e-3 for value in canonical["axis_elastic_pi_spans"])
+
     for diagnostics in metadata["spatial_regression"]["legacy"].values():
         assert diagnostics["row_broadcast_residual"] > 0.1
         assert diagnostics["column_broadcast_residual"] > 0.1
@@ -98,7 +110,9 @@ def _validate_full_tree(artifact_dir: Path) -> None:
     actual_root_files = {path.name for path in artifact_dir.iterdir() if path.is_file()}
     actual_legacy_files = {path.name for path in legacy_dir.iterdir() if path.is_file()}
     assert actual_root_files == set(metadata["root_inventory"]) == EXPECTED_ROOT_FILES
-    assert actual_legacy_files == set(metadata["legacy_faithful_inventory"]) == set(EXPECTED_INVENTORY)
+    assert actual_legacy_files == set(metadata["legacy_faithful_inventory"]) == set(
+        EXPECTED_INVENTORY
+    )
 
     assert checksums["schema_version"] == "5.0"
     assert checksums["algorithm"] == "sha256"
@@ -119,6 +133,9 @@ def _validate_full_tree(artifact_dir: Path) -> None:
 
     with Image.open(artifact_dir / ROOT_COMPATIBILITY_FIGURE) as image:
         image.verify()
+    for name in ("dfi_surface.png", "elastic_pi_surface.png", "elastic_pi_intrinsic_axes.png"):
+        with Image.open(artifact_dir / name) as image:
+            image.verify()
     for name in STATIC_FILES:
         with Image.open(legacy_dir / name) as image:
             image.verify()
@@ -132,7 +149,9 @@ def _validate_full_tree(artifact_dir: Path) -> None:
             assert movie.n_frames >= 8
 
 
-def test_full_pipeline_replaces_stale_root_and_regenerates_every_artifact_class(tmp_path: Path) -> None:
+def test_full_pipeline_replaces_stale_root_and_regenerates_every_artifact_class(
+    tmp_path: Path,
+) -> None:
     (tmp_path / "stale_dtqc_visual.png").write_bytes(b"stale")
     run_all(
         tmp_path,

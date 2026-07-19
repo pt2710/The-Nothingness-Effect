@@ -70,20 +70,29 @@ def _source_removals_without_legacy_name(model, batch, seed):
     return rows
 
 
+def _ridge_regression(
+    features: torch.Tensor,
+    target: torch.Tensor,
+    ridge: float,
+) -> torch.Tensor:
+    x = features.detach().to(torch.float64)
+    y = target.detach().to(torch.float64)
+    ones = torch.ones((x.shape[0], 1), dtype=x.dtype, device=x.device)
+    design = torch.cat((x, ones), dim=-1)
+    penalty = torch.eye(design.shape[-1], dtype=x.dtype, device=x.device)
+    penalty[-1, -1] = 0.0
+    system = design.T @ design + ridge * penalty
+    return torch.linalg.solve(system, design.T @ y)
+
+
 def _ridge_solution(
     features: torch.Tensor,
     labels: torch.Tensor,
     classes: int,
     ridge: float,
 ) -> torch.Tensor:
-    x = features.detach().to(torch.float64)
-    ones = torch.ones((x.shape[0], 1), dtype=x.dtype, device=x.device)
-    design = torch.cat((x, ones), dim=-1)
-    target = functional.one_hot(labels, num_classes=classes).to(torch.float64)
-    penalty = torch.eye(design.shape[-1], dtype=x.dtype, device=x.device)
-    penalty[-1, -1] = 0.0
-    system = design.T @ design + ridge * penalty
-    return torch.linalg.solve(system, design.T @ target)
+    target = functional.one_hot(labels, num_classes=classes)
+    return _ridge_regression(features, target, ridge)
 
 
 def _fit_qenn_readouts(model, train_batch, validation_batch) -> tuple[float, ...]:
@@ -119,10 +128,7 @@ def _fit_qenn_readouts(model, train_batch, validation_batch) -> tuple[float, ...
                 classes,
                 ridge,
             )
-            logits = (
-                validation_features.to(torch.float64) @ beta[:-1]
-                + beta[-1]
-            )
+            logits = validation_features.to(torch.float64) @ beta[:-1] + beta[-1]
             loss = float(functional.cross_entropy(logits, validation_batch.labels))
             accuracy = float(
                 (logits.argmax(dim=-1) == validation_batch.labels).float().mean()
@@ -156,6 +162,64 @@ def _fit_qenn_readouts(model, train_batch, validation_batch) -> tuple[float, ...
     return tuple(selected_lambdas)
 
 
+def _inverse_softplus(value: torch.Tensor) -> torch.Tensor:
+    value = value.clamp_min(1e-6).to(torch.float64)
+    return value + torch.log(-torch.expm1(-value))
+
+
+def _fit_decoder(model, train_batch, validation_batch) -> float:
+    """Fit the decoder alone without changing the classification carriers."""
+
+    model.eval()
+    with torch.no_grad():
+        train_output = model(train_batch.modalities)
+        validation_output = model(validation_batch.modalities)
+    train_hidden = train_output.hidden
+    validation_hidden = validation_output.hidden
+    train_target = train_output.backbone_output.modality_tokens.mean(dim=1)
+    validation_target = validation_output.backbone_output.modality_tokens.mean(dim=1)
+    candidates = (1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0)
+    best_rmse = math.inf
+    best_beta: torch.Tensor | None = None
+    best_ridge = candidates[0]
+    for ridge in candidates:
+        beta = _ridge_regression(
+            train_hidden,
+            _inverse_softplus(train_target),
+            ridge,
+        )
+        reconstruction = functional.softplus(
+            validation_hidden.to(torch.float64) @ beta[:-1] + beta[-1]
+        )
+        rmse = float(
+            torch.sqrt(torch.mean((reconstruction - validation_target.to(torch.float64)) ** 2))
+        )
+        if rmse < best_rmse:
+            best_rmse = rmse
+            best_beta = beta
+            best_ridge = ridge
+    if best_beta is None:
+        raise RuntimeError("decoder ridge search did not produce a finite candidate")
+    with torch.no_grad():
+        model.shared_token_decoder.weight.copy_(
+            best_beta[:-1].T.to(
+                dtype=model.shared_token_decoder.weight.dtype,
+                device=model.shared_token_decoder.weight.device,
+            )
+        )
+        model.shared_token_decoder.bias.copy_(
+            best_beta[-1].to(
+                dtype=model.shared_token_decoder.bias.dtype,
+                device=model.shared_token_decoder.bias.device,
+            )
+        )
+    if hasattr(model, "decoder_ridge_lambda"):
+        model.decoder_ridge_lambda.fill_(best_ridge)
+    else:
+        model.register_buffer("decoder_ridge_lambda", torch.tensor(float(best_ridge)))
+    return float(best_ridge)
+
+
 def _train_with_temperature_selection(
     model,
     train_batch,
@@ -169,6 +233,7 @@ def _train_with_temperature_selection(
         **kwargs,
     )
     _fit_qenn_readouts(model, train_batch, validation_batch)
+    _fit_decoder(model, train_batch, validation_batch)
     if not hasattr(model, "calibration_temperature"):
         model.register_buffer("calibration_temperature", torch.ones(()))
     candidates = (0.55, 0.7, 0.85, 1.0, 1.15, 1.35, 1.6)
@@ -222,6 +287,7 @@ def main() -> int:
         "comprehensive_ai_evaluation=passed "
         "local_rbm=removed "
         "qenn_auxiliary=supervised_and_ridge_finetuned "
+        "decoder=validation_ridge_finetuned "
         "temperature_calibration=validation_selected "
         f"seeds={len(seed_summary)} "
         f"artifacts={report['artifact_count']} "

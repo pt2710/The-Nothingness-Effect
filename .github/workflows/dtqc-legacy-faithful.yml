@@ -68,3 +68,5 @@ jobs:
         run: |
           echo "Unexpected one-shot repair phase: $LAST_SUBJECT"
           exit 1
+
+# Explicit user-actor trigger for the artifact phase.

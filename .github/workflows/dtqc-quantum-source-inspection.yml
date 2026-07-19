@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - codex/tne-authoritative-source-recertification
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -15,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.sha }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
           fetch-depth: 1
       - name: Inventory quantum source domains
@@ -43,7 +44,7 @@ jobs:
       - name: Upload exact quantum source bytes
         uses: actions/upload-artifact@v4
         with:
-          name: dtqc-quantum-source-inspection-${{ github.sha }}
+          name: dtqc-quantum-source-inspection-${{ github.event.pull_request.head.sha || github.sha }}
           path: ${{ runner.temp }}/quantum-source-inspection
           if-no-files-found: error
           compression-level: 9

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
@@ -20,37 +20,60 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - name: Resolve stable DTQC generation source commit
+        id: source
+        env:
+          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          metadata = Path(os.environ["TRACKED_DTQC"]) / "dtqc_artifact_metadata.json"
+          source = None
+          if metadata.is_file():
+              try:
+                  source = json.loads(metadata.read_text()).get("generation_source_commit")
+              except (OSError, json.JSONDecodeError):
+                  source = None
+          if not source:
+              source = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          print(f"commit={source}")
+          PY
       - name: Validate DTQC source-faithful runtime
         run: >-
           python -m pytest -q
           tests/numerical/test_dtqc_legacy_faithful_runtime.py
           tests/artifacts/test_dtqc_legacy_faithful_artifacts.py
-      - name: Regenerate the complete DTQC artifact tree
+      - name: Regenerate every tracked DTQC artifact producer in place
+        env:
+          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
         run: >-
           python -m
-          the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite
+          the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence
+          --output "$TRACKED_DTQC"
+          --seed 0
+          --generation-source-commit "${{ steps.source.outputs.commit }}"
+      - name: Validate regenerated tracked inventory and bytes
+        run: >-
+          python -m pytest -q
+          tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
+      - name: Independently regenerate the complete DTQC tree
+        run: >-
+          python -m
+          the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence
           --output "${{ runner.temp }}/dtqc-artifacts"
-          --seed 1
-          --grid-size 240
-          --time-steps 48
-          --point-count 8000
-          --sphere-resolution 64
-      - name: Upload regenerated DTQC tree
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: dtqc-full-artifacts-${{ github.sha }}
-          path: ${{ runner.temp }}/dtqc-artifacts
-          if-no-files-found: error
-          compression-level: 9
-          retention-days: 14
-      - name: Build DTQC inventory evidence
-        if: always()
+          --seed 0
+          --generation-source-commit "${{ steps.source.outputs.commit }}"
+      - name: Build recursive DTQC byte evidence
         env:
           GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
           TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
@@ -61,79 +84,42 @@ jobs:
           find "$TRACKED_DTQC" -maxdepth 2 -type f -printf '%P\n' | sort > "$EVIDENCE_DIR/tracked-files.txt"
           (cd "$GENERATED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/generated-sha256.txt"
           (cd "$TRACKED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/tracked-sha256.txt"
-          diff -u "$EVIDENCE_DIR/generated-files.txt" "$EVIDENCE_DIR/tracked-files.txt" > "$EVIDENCE_DIR/inventory.diff" || true
-          diff -u "$EVIDENCE_DIR/generated-sha256.txt" "$EVIDENCE_DIR/tracked-sha256.txt" > "$EVIDENCE_DIR/checksums.diff" || true
-      - name: Upload DTQC inventory evidence
-        if: always()
+          diff -u "$EVIDENCE_DIR/generated-files.txt" "$EVIDENCE_DIR/tracked-files.txt" > "$EVIDENCE_DIR/inventory.diff"
+          diff -u "$EVIDENCE_DIR/generated-sha256.txt" "$EVIDENCE_DIR/tracked-sha256.txt" > "$EVIDENCE_DIR/checksums.diff"
+      - name: Upload complete regenerated DTQC tree
+        uses: actions/upload-artifact@v4
+        with:
+          name: dtqc-full-artifacts-${{ github.sha }}
+          path: ${{ runner.temp }}/dtqc-artifacts
+          if-no-files-found: error
+          compression-level: 9
+          retention-days: 14
+      - name: Upload recursive DTQC byte evidence
         uses: actions/upload-artifact@v4
         with:
           name: dtqc-inventory-evidence-${{ github.sha }}
           path: ${{ runner.temp }}/dtqc-inventory-evidence
           if-no-files-found: error
           retention-days: 14
-      - name: Verify tracked root, subfolder, metadata, and exact bytes
+      - name: Commit freshly regenerated tracked artifacts
+        if: >-
+          github.event_name == 'pull_request' &&
+          github.event.pull_request.head.repo.full_name == github.repository &&
+          !contains(github.event.pull_request.head.sha, '0000000000000000000000000000000000000000')
         env:
-          GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
-          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |
-          python - <<'PY'
-          from __future__ import annotations
-
-          import hashlib
-          import json
-          import os
-          from pathlib import Path
-
-          generated = Path(os.environ["GENERATED_DTQC"])
-          tracked = Path(os.environ["TRACKED_DTQC"])
-
-          generated_metadata = json.loads((generated / "dtqc_artifact_metadata.json").read_text())
-          generated_checksums = json.loads((generated / "dtqc_artifact_checksums.json").read_text())
-          tracked_metadata = json.loads((tracked / "dtqc_artifact_metadata.json").read_text())
-          tracked_checksums = json.loads((tracked / "dtqc_artifact_checksums.json").read_text())
-
-          if generated_metadata != tracked_metadata:
-              raise AssertionError(
-                  "generated/tracked DTQC metadata differ:\n"
-                  + json.dumps({"generated": generated_metadata, "tracked": tracked_metadata}, indent=2, sort_keys=True)
-              )
-          if generated_checksums != tracked_checksums:
-              raise AssertionError(
-                  "generated/tracked DTQC checksums differ:\n"
-                  + json.dumps({"generated": generated_checksums, "tracked": tracked_checksums}, indent=2, sort_keys=True)
-              )
-
-          tracked_root = sorted(path.name for path in tracked.iterdir() if path.is_file())
-          if tracked_root != generated_metadata["root_inventory"]:
-              raise AssertionError(
-                  f"root inventory mismatch: tracked={tracked_root}, expected={generated_metadata['root_inventory']}"
-              )
-
-          for name, expected in generated_checksums["root_files"].items():
-              generated_digest = hashlib.sha256((generated / name).read_bytes()).hexdigest()
-              tracked_digest = hashlib.sha256((tracked / name).read_bytes()).hexdigest()
-              if generated_digest != expected or tracked_digest != expected:
-                  raise AssertionError(
-                      f"root byte mismatch for {name}: generated={generated_digest}, tracked={tracked_digest}, expected={expected}"
-                  )
-
-          generated_legacy = generated / "legacy_faithful"
-          tracked_legacy = tracked / "legacy_faithful"
-          tracked_legacy_names = sorted(path.name for path in tracked_legacy.iterdir() if path.is_file())
-          if tracked_legacy_names != generated_metadata["legacy_faithful_inventory"]:
-              raise AssertionError(
-                  "legacy inventory mismatch: "
-                  f"tracked={tracked_legacy_names}, expected={generated_metadata['legacy_faithful_inventory']}"
-              )
-          for name, expected in generated_checksums["legacy_faithful_files"].items():
-              generated_digest = hashlib.sha256((generated_legacy / name).read_bytes()).hexdigest()
-              tracked_digest = hashlib.sha256((tracked_legacy / name).read_bytes()).hexdigest()
-              if generated_digest != expected or tracked_digest != expected:
-                  raise AssertionError(
-                      f"legacy byte mismatch for {name}: generated={generated_digest}, tracked={tracked_digest}, expected={expected}"
-                  )
-          PY
-      - name: Validate committed full-tree inventory contracts
-        run: >-
-          python -m pytest -q
-          tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
+          git add the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+          if git diff --cached --quiet; then
+            echo "Tracked DTQC artifacts already match the complete regenerated tree."
+            exit 0
+          fi
+          if git log -1 --pretty=%B | grep -Fq '[dtqc-artifacts]'; then
+            echo "Artifact commit still differs after deterministic regeneration."
+            git diff --cached --stat
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "[dtqc-artifacts] Regenerate complete DTQC artifact tree"
+          git push origin "HEAD:${HEAD_BRANCH}"

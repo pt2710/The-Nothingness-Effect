@@ -40,7 +40,7 @@ jobs:
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
       - run: python -m pip install -e .
-      - name: Verify extended dataset and geometric contracts
+      - name: Verify extended dataset and no-local-RBM geometric contracts
         run: >-
           python -m pytest -q
           tests/numerical/test_comprehensive_ai_evaluation.py
@@ -49,8 +49,8 @@ jobs:
           python tools/run_comprehensive_ai_evaluation.py
           --output reports/artificial_intelligence_comprehensive
           --seeds 0 1 2
-          --epochs 30
-          --samples-per-class 16
+          --epochs 40
+          --samples-per-class 24
       - name: Package complete AI evidence
         run: >-
           python -m zipfile -c

@@ -6,10 +6,14 @@ import argparse
 from pathlib import Path
 
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.canonical_artifact_suite import (
+    _bundle,
     generate_complete_canonical_artifacts,
 )
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.contracts import (
     contracts,
+)
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.quantum_wave_bridge import (
+    generate_fp_quantum_artifacts,
 )
 from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite import (
     finalize_artifact_tree,
@@ -38,6 +42,11 @@ def run_all(
     result["complete_canonical_artifacts"] = generate_complete_canonical_artifacts(
         output,
         seed=seed,
+        simulation=True,
+    )
+    result["fp_quantum_wave_artifacts"] = generate_fp_quantum_artifacts(
+        output,
+        lambda phase: _bundle(48, phase),
         simulation=True,
     )
     result["artifact_tree"] = finalize_artifact_tree(

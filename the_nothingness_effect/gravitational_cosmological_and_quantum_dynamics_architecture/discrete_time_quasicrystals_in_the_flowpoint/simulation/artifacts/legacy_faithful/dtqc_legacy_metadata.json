@@ -20,18 +20,19 @@
   "grid_size": 240,
   "legacy_frame_stride": 4,
   "mathematical_bindings": {
-    "canonical_dubler_ratio": "exp(-delta_S/K_D); retained separately and not substituted into legacy reference images",
+    "canonical_dubler_ratio": "pi*exp(-S_2D(x,y)/K_D); full-field canonical Dubler sign retained separately",
     "carrier": "sum_{k=0}^{9} cos(2*pi*(cos(2*pi*k/10)*X + sin(2*pi*k/10)*Y)) / ptp",
     "dfi": "sixty radial FFT profiles with the legacy DFI volume/entropy transform",
     "diffraction": "log1p(abs(fftshift(fft2(field))))",
     "flowpoint": "alternating sector applied to an intrinsically phase-evolving ten-wave field",
-    "legacy_visual_elastic_pi": "pi*mean_i(exp(S_i/K_D)); clipped exactly as the legacy visual generator",
-    "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view"
+    "legacy_visual_elastic_pi": "pi*exp(+S_2D(x,y)/K_D); full-field directional backprojection with the legacy visual sign",
+    "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view",
+    "spatial_entropy": "S_2D(x,y)=mean_i interp(S_i,(x*cos(theta_i)+y*sin(theta_i))/sqrt(2)) over all sixty directional channels"
   },
   "point_count": 8000,
   "radial_channels": 60,
   "represented_legacy_frames": 192,
-  "schema_version": "2.0",
+  "schema_version": "3.0",
   "seed": 1,
   "source_audit": {
     "canonical_dubler": "equations/elastic_dubler_effect/elastic_dubler_effect.py",
@@ -39,11 +40,29 @@
     "visual_reference_directory": "tne_concepts/discrete_quasi_crystal_visualization"
   },
   "source_removal": {
-    "dfi": 1.2030887933401784,
-    "elastic_pi": 91.59837416549084,
+    "dfi": 1.6987240477114334,
+    "elastic_pi": 91.52889854798258,
     "flowpoint": 534.861083984375,
     "scatter_oscillation": 474.21270751953125,
     "temporal_evolution": 635.9224457551672
+  },
+  "spatial_regression": {
+    "canonical_dubler_elastic_pi": {
+      "axis_gradient_balance": 0.8837368519025675,
+      "column_broadcast_residual": 0.6800915146204135,
+      "effective_rank": 5.460455411236501,
+      "row_broadcast_residual": 0.9045483419190924,
+      "x_gradient_fraction": 0.46914028942524344,
+      "y_gradient_fraction": 0.5308597105747564
+    },
+    "legacy_visual_elastic_pi": {
+      "axis_gradient_balance": 0.8822603919134786,
+      "column_broadcast_residual": 0.6795157321592458,
+      "effective_rank": 5.461636305624423,
+      "row_broadcast_residual": 0.9046690594504005,
+      "x_gradient_fraction": 0.4687238788553509,
+      "y_gradient_fraction": 0.5312761211446492
+    }
   },
   "suite": "dtqc_legacy_faithful",
   "time_steps": 48

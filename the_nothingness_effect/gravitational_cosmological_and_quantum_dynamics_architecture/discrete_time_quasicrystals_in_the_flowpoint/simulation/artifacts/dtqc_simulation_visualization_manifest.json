@@ -1,5 +1,6 @@
 {
   "approximation_metadata": {
+    "elastic_pi_entropy": "local two-dimensional field energy, normalized DFI magnitude, and Hessian curvature; no axis slice or one-dimensional broadcast",
     "field": "finite quasiperiodic projection of all four DTQC A-source responses",
     "wavelet": "finite real Morlet-like diagnostic"
   },
@@ -23,8 +24,16 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence",
-  "repository_result_commit": "663198ca6786121c99deb171a7f3b9b5e9a40387",
+  "repository_result_commit": "79ea28d30db746bdaf25cda43209de2a80fe796c",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
-  "source_status": "canonical_dtqc_contract_outputs"
+  "source_status": "canonical_dtqc_contract_outputs",
+  "spatial_regression": {
+    "axis_gradient_balance": 0.6204088815379344,
+    "column_broadcast_residual": 0.9073865472260312,
+    "effective_rank": 5.603492970091841,
+    "row_broadcast_residual": 0.8563009911472061,
+    "x_gradient_fraction": 0.382871810076172,
+    "y_gradient_fraction": 0.6171281899238279
+  }
 }

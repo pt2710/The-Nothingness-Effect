@@ -1,6 +1,6 @@
 {
   "claim_boundary": "finite deterministic source-faithful DTQC visualization evidence; not a formal proof, thermodynamic-limit existence result, or empirical validation",
-  "generation_source_commit": "663198ca6786121c99deb171a7f3b9b5e9a40387",
+  "generation_source_commit": "79ea28d30db746bdaf25cda43209de2a80fe796c",
   "generator_inventory": {
     "canonical_simulation_visuals": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.visualization.run_dtqc_evidence",
     "full_orchestrator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence",
@@ -25,18 +25,19 @@
     "dtqc_legacy_wavelet_ridges.png"
   ],
   "mathematical_bindings": {
-    "canonical_dubler_ratio": "exp(-delta_S/K_D); retained separately and not substituted into legacy reference images",
+    "canonical_dubler_ratio": "pi*exp(-S_2D(x,y)/K_D); full-field canonical Dubler sign retained separately",
     "carrier": "sum_{k=0}^{9} cos(2*pi*(cos(2*pi*k/10)*X + sin(2*pi*k/10)*Y)) / ptp",
     "dfi": "sixty radial FFT profiles with the legacy DFI volume/entropy transform",
     "diffraction": "log1p(abs(fftshift(fft2(field))))",
     "flowpoint": "alternating sector applied to an intrinsically phase-evolving ten-wave field",
-    "legacy_visual_elastic_pi": "pi*mean_i(exp(S_i/K_D)); clipped exactly as the legacy visual generator",
-    "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view"
+    "legacy_visual_elastic_pi": "pi*exp(+S_2D(x,y)/K_D); full-field directional backprojection with the legacy visual sign",
+    "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view",
+    "spatial_entropy": "S_2D(x,y)=mean_i interp(S_i,(x*cos(theta_i)+y*sin(theta_i))/sqrt(2)) over all sixty directional channels"
   },
   "pipeline_partition": {
-    "canonical_visual_runtime": "finite canonical DTQC source-response projection and phase clock",
+    "canonical_visual_runtime": "finite canonical DTQC source-response projection with full-field two-axis Elastic-pi coupling and phase clock",
     "compatibility_figure": "dtqc_spatial_closure.png is rebound to legacy_faithful/dtqc_legacy_summary.png; the stale generic FieldLaw line plot is not retained",
-    "legacy_visual_runtime": "legacy source-faithful decagonal/DFI/Elastic-pi/Flowpoint pipeline",
+    "legacy_visual_runtime": "legacy decagonal/DFI profiles backprojected through all sixty directions before Elastic-pi and Flowpoint rendering",
     "theorem_runtime": "Fibonacci/Pisot/Floquet and typed theorem-contract runtime retained"
   },
   "production_configuration": {
@@ -78,18 +79,46 @@
     "qc_contour.png",
     "wavelet_central_row.png"
   ],
-  "schema_version": "4.0",
+  "schema_version": "5.0",
   "source_audit": {
     "canonical_dubler": "equations/elastic_dubler_effect/elastic_dubler_effect.py",
     "visual_generator": "tne_concepts/flowpoint_elastic_pi/simulate_elastic_pi_quasi_crystals.py",
     "visual_reference_directory": "tne_concepts/discrete_quasi_crystal_visualization"
   },
   "source_removal": {
-    "dfi": 1.2030887933401784,
-    "elastic_pi": 91.59837416549084,
+    "dfi": 1.6987240477114334,
+    "elastic_pi": 91.52889854798258,
     "flowpoint": 534.861083984375,
     "scatter_oscillation": 474.21270751953125,
     "temporal_evolution": 635.9224457551672
+  },
+  "spatial_regression": {
+    "canonical": {
+      "axis_gradient_balance": 0.6204088815379344,
+      "column_broadcast_residual": 0.9073865472260312,
+      "effective_rank": 5.603492970091841,
+      "row_broadcast_residual": 0.8563009911472061,
+      "x_gradient_fraction": 0.382871810076172,
+      "y_gradient_fraction": 0.6171281899238279
+    },
+    "legacy": {
+      "canonical_dubler_elastic_pi": {
+        "axis_gradient_balance": 0.8837368519025675,
+        "column_broadcast_residual": 0.6800915146204135,
+        "effective_rank": 5.460455411236501,
+        "row_broadcast_residual": 0.9045483419190924,
+        "x_gradient_fraction": 0.46914028942524344,
+        "y_gradient_fraction": 0.5308597105747564
+      },
+      "legacy_visual_elastic_pi": {
+        "axis_gradient_balance": 0.8822603919134786,
+        "column_broadcast_residual": 0.6795157321592458,
+        "effective_rank": 5.461636305624423,
+        "row_broadcast_residual": 0.9046690594504005,
+        "x_gradient_fraction": 0.4687238788553509,
+        "y_gradient_fraction": 0.5312761211446492
+      }
+    }
   },
   "suite": "dtqc_complete_recursive_artifact_pipeline",
   "theorem_manifests": [

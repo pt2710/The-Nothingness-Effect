@@ -52,10 +52,9 @@ jobs:
             git push origin "HEAD:${HEAD_BRANCH}"
             exit "$STATUS"
           fi
-          cp tools/dtqc_legacy_faithful_final.yml .github/workflows/dtqc-legacy-faithful.yml
           rm -f tools/dtqc_stage2_failure.txt
           rm tools/dtqc_2d_repair.pyz.b64 tools/dtqc_legacy_faithful_final.yml
-          git add             .github/workflows/dtqc-legacy-faithful.yml             tools             "$TRACKED_DTQC"
+          git add             tools             "$TRACKED_DTQC"
           git commit -m "[dtqc-2d-artifacts] Regenerate full-field Elastic-pi DTQC artifacts"
           git push origin "HEAD:${HEAD_BRANCH}"
       - name: Reject unexpected phase

@@ -1,4 +1,4 @@
-name: DTQC legacy-faithful validation
+name: DTQC full source-faithful artifact validation
 
 on:
   push:
@@ -25,8 +25,78 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
-      - name: Validate legacy-faithful DTQC runtime and artifact bytes
+      - name: Validate DTQC source-faithful runtime
         run: >-
           python -m pytest -q
           tests/numerical/test_dtqc_legacy_faithful_runtime.py
           tests/artifacts/test_dtqc_legacy_faithful_artifacts.py
+      - name: Regenerate the complete DTQC artifact tree
+        run: >-
+          python -m
+          the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_contract_suite
+          --output "${{ runner.temp }}/dtqc-artifacts"
+          --seed 1
+          --grid-size 240
+          --time-steps 48
+          --point-count 8000
+          --sphere-resolution 64
+      - name: Upload regenerated DTQC tree
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dtqc-full-artifacts-${{ github.sha }}
+          path: ${{ runner.temp }}/dtqc-artifacts
+          if-no-files-found: error
+          compression-level: 9
+          retention-days: 14
+      - name: Verify tracked root, subfolder, metadata, and exact bytes
+        env:
+          GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
+          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          generated = Path(os.environ["GENERATED_DTQC"])
+          tracked = Path(os.environ["TRACKED_DTQC"])
+
+          generated_metadata = json.loads((generated / "dtqc_artifact_metadata.json").read_text())
+          generated_checksums = json.loads((generated / "dtqc_artifact_checksums.json").read_text())
+          tracked_metadata = json.loads((tracked / "dtqc_artifact_metadata.json").read_text())
+          tracked_checksums = json.loads((tracked / "dtqc_artifact_checksums.json").read_text())
+
+          assert generated_metadata == tracked_metadata
+          assert generated_checksums == tracked_checksums
+          assert sorted(path.name for path in tracked.iterdir() if path.is_file()) == generated_metadata["root_inventory"]
+
+          for name, expected in generated_checksums["files"].items():
+              tracked_digest = hashlib.sha256((tracked / name).read_bytes()).hexdigest()
+              generated_digest = hashlib.sha256((generated / name).read_bytes()).hexdigest()
+              assert generated_digest == expected
+              assert tracked_digest == expected
+
+          generated_legacy = generated / "legacy_faithful"
+          tracked_legacy = tracked / "legacy_faithful"
+          generated_legacy_checksums = json.loads(
+              (generated_legacy / "dtqc_legacy_checksums.json").read_text()
+          )
+          tracked_legacy_checksums = json.loads(
+              (tracked_legacy / "dtqc_legacy_checksums.json").read_text()
+          )
+          assert generated_legacy_checksums == tracked_legacy_checksums
+          assert sorted(path.name for path in tracked_legacy.iterdir() if path.is_file()) == sorted(
+              [*generated_legacy_checksums["files"], "dtqc_legacy_checksums.json"]
+          )
+          for name, expected in generated_legacy_checksums["files"].items():
+              assert hashlib.sha256((generated_legacy / name).read_bytes()).hexdigest() == expected
+              assert hashlib.sha256((tracked_legacy / name).read_bytes()).hexdigest() == expected
+          PY
+      - name: Validate committed full-tree inventory contracts
+        run: >-
+          python -m pytest -q
+          tests/artifacts/test_dtqc_full_source_faithful_artifacts.py

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
@@ -82,25 +82,6 @@ jobs:
           path: ${{ runner.temp }}/dtqc-inventory-evidence
           if-no-files-found: error
           retention-days: 14
-      - name: Commit FP quantum-wave DTQC artifacts
-        if: github.event_name == 'push'
-        env:
-          GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
-          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
-          HEAD_BRANCH: ${{ github.ref_name }}
-        run: |
-          rm -rf "$TRACKED_DTQC"
-          mkdir -p "$TRACKED_DTQC"
-          cp -a "$GENERATED_DTQC/." "$TRACKED_DTQC/"
-          if git diff --quiet -- "$TRACKED_DTQC"; then
-            echo "Tracked DTQC artifact tree already matches regeneration."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f "$TRACKED_DTQC"
-          git commit -m "[dtqc-fp-quantum] Regenerate wavefunction, quark-mode, Floquet, and entanglement artifacts"
-          git push origin "HEAD:${HEAD_BRANCH}"
       - name: Validate committed complete DTQC tree
         run: >-
           python -m pytest -q

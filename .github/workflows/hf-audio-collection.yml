@@ -9,6 +9,12 @@ on:
       - "docs/data/hf_audio_sources.json"
       - "tests/numerical/test_real_multimodal_data.py"
       - ".github/workflows/hf-audio-collection.yml"
+  pull_request:
+    paths:
+      - "tools/collect_hf_audio_datasets.py"
+      - "docs/data/hf_audio_sources.json"
+      - "tests/numerical/test_real_multimodal_data.py"
+      - ".github/workflows/hf-audio-collection.yml"
   workflow_dispatch:
     inputs:
       max_per_source:
@@ -24,7 +30,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref_name }}
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:
@@ -37,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.sha }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"

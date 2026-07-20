@@ -139,7 +139,10 @@ def _dataset(path: Path, dataset: str, seed: int) -> tuple[MultimodalDataset, di
     train_tensor = matrix[train_idx]
     centre = train_tensor.median(dim=0).values
     scale = (train_tensor - centre).abs().median(dim=0).values.clamp_min(1e-8)
-    scaled = ((matrix - centre) / scale).clamp(-20.0, 20.0).to(torch.float32)
+    standardized = ((matrix - centre) / scale).clamp(-20.0, 20.0).to(torch.float32)
+    scaled = 1.0 + torch.sigmoid(standardized)
+    if not bool(((scaled > 1.0) & (scaled < 2.0)).all()):
+        raise RuntimeError("bounded positive TNE carrier mapping left the interval (1,2)")
     groups = torch.tensor_split(torch.arange(scaled.shape[1]), 3)
 
     def batch(indices: list[int]) -> MultimodalBatch:
@@ -159,7 +162,10 @@ def _dataset(path: Path, dataset: str, seed: int) -> tuple[MultimodalDataset, di
         "train_rows": len(train_idx),
         "validation_rows": len(val_idx),
         "test_rows": len(test_idx),
-        "preprocessing": "training-only median and MAD scaling; clipped to [-20,20]",
+        "preprocessing": (
+            "training-only median/MAD standardization clipped to [-20,20], then "
+            "rank-preserving sigmoid mapping to the strict positive TNE carrier interval (1,2)"
+        ),
         "split_seed": seed,
     }
     return MultimodalDataset(train, validation, test, ("negative", "positive")), report

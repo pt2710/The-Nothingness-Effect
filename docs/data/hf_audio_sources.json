@@ -1,0 +1,30 @@
+[
+  {
+    "repo_id": "PolyAI/minds14",
+    "config": "en-US",
+    "split": "train",
+    "revision": "main",
+    "category": "speech",
+    "audio_column": "audio",
+    "license": "cc-by-4.0",
+    "max_items": 100
+  },
+  {
+    "repo_id": "storylinez/gtzan-music-genre-dataset",
+    "split": "train",
+    "revision": "main",
+    "category": "music",
+    "audio_column": "audio",
+    "license": "unknown_or_mixed",
+    "max_items": 100
+  },
+  {
+    "repo_id": "renumics/esc50",
+    "split": "train",
+    "revision": "main",
+    "category": "sound_effects",
+    "audio_column": "audio",
+    "license": "cc-by-nc-2.0",
+    "max_items": 100
+  }
+]

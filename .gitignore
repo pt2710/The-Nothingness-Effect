@@ -95,6 +95,10 @@ empirical/cache/
 !the_nothingness_effect/artificial_intelligence/**/test/artifacts/**/*.gif
 !the_nothingness_effect/artificial_intelligence/**/simulation/artifacts/**/*.gif
 
+# Deterministic legacy-faithful DTQC animations are release evidence and are
+# tracked alongside their generator, checksum manifest, and static artifacts.
+!the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts/legacy_faithful/*.gif
+
 # Generated interactive visualization exports
 **/simulation/*.html
 **/simulation.html

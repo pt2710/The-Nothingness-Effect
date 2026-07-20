@@ -1,0 +1,30 @@
+{
+  "appendix_filename": "appendix_the_completeness_theorem.tex",
+  "appendix_source_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+  "approximation_metadata": {
+    "exact_semantics": true,
+    "formal_proof_substitute": false
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "completeness_contract_metrics.csv",
+    "completeness_certificate_closures.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "90dc471e92b677115156cdb71e1f8474fbdf370cf2933019a18ac4fd3e4cab95",
+  "parameters": {
+    "fixture": "finite-completeness-v1",
+    "state_dimension": 6
+  },
+  "regeneration_command": "python -m the_nothingness_effect.the_completeness_theorem.simulation.run_contract_suite --output the_nothingness_effect/the_completeness_theorem/simulation/artifacts",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "global_symmetry_and_kd_charge_conservation"
+}

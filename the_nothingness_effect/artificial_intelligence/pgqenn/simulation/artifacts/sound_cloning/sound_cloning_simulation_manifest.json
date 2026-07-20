@@ -2,34 +2,46 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
-    "bidirectional_reconstruction": "class prototype, not exact source recovery",
-    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+    "bidirectional_decoder": "probability-weighted finite modality reconstruction",
+    "classification_scope": "bounded synthetic held-out color and tone fixtures",
+    "cloning_scope": "held-out coordinate regression through SOInet meta-states"
   },
+  "architecture_coupled_metrics": true,
   "capability_id": "sound_cloning",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "claim_boundary": "finite synthetic train/validation/test evidence; not a formal proof or a real-world generalization claim",
+  "closure_status": "open",
   "generated_files": [
     "sound_cloning_simulation_results.csv",
+    "sound_cloning_simulation_splits.csv",
     "sound_cloning_simulation_figure.png",
+    "sound_cloning_simulation_checkpoint.pt",
     "sound_cloning_simulation_animation.gif",
     "sound_cloning_input.wav",
     "sound_cloning_clone.wav",
     "sound_cloning_simulation_manifest.json"
   ],
   "intended_output_group": "sound cloning",
+  "metric_producer": "SOInet",
   "metrics": {
-    "rmse": 5.2972893627156736e-08,
-    "snr_db": 134.12113526197703
+    "generalization_gap": -0.06447169184684753,
+    "mae": 0.22165298461914062,
+    "rmse": 0.3266203999519348,
+    "snr_db": 0.008141267113387585,
+    "train_rmse": 0.39109209179878235,
+    "validation_rmse": 0.3384871780872345
   },
   "numeric_tolerances": {
-    "absolute": 1e-06
+    "finite_metrics": true
   },
-  "parameter_hash": "8b6ee7662e4fcf226db3a6daca0331f32dbb53f41e4d5971a5bd53b0e803912b",
+  "parameter_hash": "720c93b64dfbd194f80659322290dd0ae899028f27246d754d1229c1133dfa06",
   "parameters": {
     "capability": "sound_cloning",
+    "checkpoint_format": 1,
+    "metric_producer": "SOInet",
     "mode": "simulation",
     "producer_architecture": "pgqenn",
     "seed": 5,
+    "split_policy": "disjoint_train_validation_test",
     "synthetic_fixture": true
   },
   "producer_architecture": "pgqenn",
@@ -38,14 +50,42 @@
     "lyapunov_weight_lattice_fourier_pisot_spectral_purification",
     "pv_parseval_spectral_energy_lock"
   ],
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0,
-    5.2972893627156736e-08,
-    2.7906322586090937e-08,
-    0.0
+    0.6738230586051941,
+    0.6675805449485779,
+    0.6838400363922119,
+    0.6818759441375732,
+    0.6851027607917786,
+    0.7177979946136475,
+    0.6843515634536743,
+    0.6721072793006897,
+    0.6880935430526733,
+    0.726247251033783,
+    0.7003409266471863,
+    0.7003953456878662,
+    0.7019367814064026,
+    0.6841493844985962,
+    0.6869673132896423,
+    0.6880163550376892,
+    0.691141664981842,
+    0.6716184020042419,
+    0.6736398935317993,
+    0.6750476956367493,
+    0.6914133429527283,
+    0.68089359998703,
+    0.7135555744171143,
+    0.6923388838768005,
+    0.6701430678367615,
+    0.6606060862541199,
+    0.6977099776268005,
+    0.7021538615226746,
+    0.6782903075218201,
+    0.6575837135314941,
+    0.7043691277503967,
+    0.6938011646270752
   ],
   "seed": 5,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "soinet_architecture_coupled_train_validation_test"
 }

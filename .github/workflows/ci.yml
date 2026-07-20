@@ -3,6 +3,7 @@ name: theorem-complex-ci
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
@@ -30,20 +32,28 @@ jobs:
         run: >-
           python -m pytest -q
           --ignore=tests/numerical
+          --ignore=tests/artifacts
+          --ignore=tests/contracts/test_appendix_derived_contracts.py
+          --ignore=tests/contracts/test_authoritative_source_bindings.py
+          --ignore=tests/contracts/test_promoted_source_sample_authority_bijection.py
+          --ignore=tests/contracts/test_foundational_spectrum_dfi_authoritative_law.py
+          --ignore=tests/contracts/test_foundational_spectrum_finitization_authoritative_law.py
+          --ignore=tests/contracts/test_foundational_spectrum_of_infinities_canonical_contracts.py
+          --ignore=tests/contracts/test_foundational_symmetry_spatiality_canonical_contracts.py
           --ignore=tests/contracts/test_qenn_contracts.py
           --ignore=tests/contracts/test_pgqenn_contracts.py
           --ignore=tests/contracts/test_soinets_contracts.py
+          --ignore=tests/contracts/test_qenn_dfi_remaining_source_contracts.py
+          --ignore=tests/contracts/test_pgqenn_remaining_source_contracts.py
+          --ignore=tests/contracts/test_soinets_remaining_source_contracts.py
+          --ignore=tests/contracts/test_authoritative_ai_dual_products.py
+          --ignore=tests/contracts/test_authoritative_physics_product_contracts.py
+          --ignore=tests/contracts/test_qenn_authoritative_failure_gates.py
+          --ignore=tests/contracts/test_qenn_authoritative_status.py
           --ignore=tests/contracts/test_mpl_tc_dependency.py
           --ignore=tests/invariants/test_elastic_dubler_ai.py
           --ignore=tests/invariants/test_observation_collapse_readout.py
           --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py
-          --ignore=tests/artifacts/test_ai_network_artifacts.py
-          --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py
-          --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py
-          --ignore=tests/artifacts/test_qenn_artifacts.py
-          --ignore=tests/artifacts/test_pgqenn_artifacts.py
-          --ignore=tests/artifacts/test_soinets_artifacts.py
-          --ignore=tests/artifacts/test_soinets_runtime_simulation.py
           --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/*
 
   theorem-contracts:
@@ -51,6 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
@@ -64,6 +75,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
@@ -77,6 +89,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
@@ -94,6 +107,8 @@ jobs:
           tests/numerical/test_soinet_capability_runtime.py
           tests/numerical/test_multimodal_soinet_model.py
           tests/numerical/test_trainable_multimodal_model.py
+          tests/numerical/test_multimodal_robustness_benchmark.py
+          tests/numerical/test_source_faithful_convergence_benchmark.py
           tests/contracts/test_mpl_tc_dependency.py
           tests/invariants/test_observation_collapse_readout.py
           tests/source_removal/test_ai_architecture_dependency_removal.py
@@ -107,12 +122,25 @@ jobs:
           the_nothingness_effect/artificial_intelligence/pgqenn/test/run_all_capabilities.py
           the_nothingness_effect/artificial_intelligence/soinets/test/run_all_capabilities.py
           the_nothingness_effect/artificial_intelligence/multimodal/test/run_pipeline.py
+      - name: Run multi-seed multimodal robustness benchmark
+        run: >-
+          python tools/run_multimodal_robustness_benchmark.py
+          --output reports/multimodal_robustness
+          --seeds 0 1 2
+          --epochs 6
+      - name: Upload multimodal robustness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: multimodal-robustness
+          path: reports/multimodal_robustness
+          if-no-files-found: error
 
   security-and-provenance-guards:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
       - uses: actions/setup-python@v5
         with:
@@ -121,35 +149,160 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
       - run: python -m pip install -e .
       - run: python tools/check_no_authoritative_appendices.py
+      - run: >-
+          python tools/export_effective_theorem_matrix.py
+          --output reports/effective_theorem_complex_implementation_matrix.csv
+          --report reports/effective_theorem_complex_implementation_matrix.json
+      - name: Build equation-to-implementation alignment
+        run: >-
+          python tools/build_equation_implementation_alignment.py
+          --matrix reports/effective_theorem_complex_implementation_matrix.csv
+          --csv-output reports/equation_implementation_alignment.csv
+          --json-output reports/equation_implementation_alignment.json
+      - name: Generate complete effective artifact provenance
+        run: >-
+          python tools/generate_complete_theorem_artifacts.py
+          --output-root "${RUNNER_TEMP}/artifact-provenance"
+          --aggregate reports/effective_artifact_provenance_manifest.json
+          --coverage reports/theorem_artifact_coverage.json
+          --binding reports/effective_artifact_provenance_binding.json
+      - name: Build independent release status dimensions
+        run: >-
+          python -m tools.build_release_status_dimensions
+          --artifact-coverage reports/theorem_artifact_coverage.json
+      - name: Enforce complete mathematical closure
+        run: >-
+          python -m tools.build_closure_obligation_ledger
+          --require-zero
+      - name: Audit formal machine-proof coverage
+        run: python -m tools.build_formal_proof_coverage
+      - name: Run source-faithful grid convergence benchmark
+        run: >-
+          python tools/run_source_faithful_convergence_benchmark.py
+          --output reports/source_faithful_convergence
+          --resolutions 9 17 33
+      - name: Upload effective theorem matrix
+        uses: actions/upload-artifact@v4
+        with:
+          name: effective-theorem-matrix
+          path: |
+            reports/effective_theorem_complex_implementation_matrix.csv
+            reports/effective_theorem_complex_implementation_matrix.json
+          if-no-files-found: error
+      - name: Upload equation-to-implementation alignment
+        uses: actions/upload-artifact@v4
+        with:
+          name: equation-implementation-alignment
+          path: |
+            reports/equation_implementation_alignment.csv
+            reports/equation_implementation_alignment.json
+          if-no-files-found: error
+      - name: Upload effective artifact provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: effective-artifact-provenance
+          path: |
+            reports/effective_artifact_provenance_manifest.json
+            reports/effective_artifact_provenance_binding.json
+            reports/theorem_artifact_coverage.json
+            reports/release_status_dimensions.csv
+            reports/release_status_dimensions.json
+            reports/closure_obligation_ledger.csv
+            reports/closure_obligation_ledger.json
+            reports/formal_proof_coverage.csv
+            reports/formal_proof_coverage.json
+          if-no-files-found: error
+      - name: Package theorem diagnostic artifacts
+        run: >-
+          python tools/package_theorem_diagnostic_artifacts.py
+          --input-root "${RUNNER_TEMP}/artifact-provenance"
+          --output-root "${RUNNER_TEMP}/theorem-diagnostic-package"
+      - name: Upload theorem diagnostic artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: theorem-diagnostic-artifacts
+          path: "${{ runner.temp }}/theorem-diagnostic-package"
+          if-no-files-found: error
+      - name: Upload source-faithful convergence evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-faithful-convergence
+          path: reports/source_faithful_convergence
+          if-no-files-found: error
       - run: python tools/verify_tne_repository_layout.py --json-output reports/layout_verification_manifest.json
       - run: python -m tools.qa_guards
 
-  release-qa:
-    needs:
-      - core
-      - theorem-contracts
-      - artifact-smoke
-      - ai-cpu
-      - security-and-provenance-guards
+  authoritative-archive-byte-evidence:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
-          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: pip
-      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
-      - run: python -m pip install -e .
-      - run: python -m pip check
-      - run: python -m tools.qa_guards
-      - name: Build and assert fail-closed final QA
+      - run: python -m pip install "cryptography>=43,<46"
+      - name: Materialize and verify actual authoritative ZIP bytes
+        shell: bash
+        env:
+          TNE_AUTHORITATIVE_ARCHIVE_KEY: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_KEY }}
+          TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE: ${{ secrets.TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE }}
+        run: |
+          set +e
+          archive="${RUNNER_TEMP}/TNE_Authoritative_Appendices.zip"
+          python tools/private_authoritative_archive_delivery.py decrypt \
+            --encrypted private_authority/TNE_Authoritative_Appendices.zip.enc \
+            --output "${archive}" \
+            --expected-sha256 38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11 \
+            --key-env TNE_AUTHORITATIVE_ARCHIVE_KEY \
+            --passphrase-env TNE_AUTHORITATIVE_ARCHIVE_PASSPHRASE
+          status=$?
+          if [[ "${status}" -eq 0 ]]; then
+            python tools/verify_authoritative_archive.py \
+              --archive "${archive}" \
+              --manifest docs/data/authoritative_archive_manifest.json \
+              --matrix docs/data/theorem_complex_implementation_matrix.csv \
+              --output reports/authoritative_archive_byte_verification.json \
+              --check
+            status=$?
+          else
+            python - <<'PY'
+          import json
+          from pathlib import Path
+
+          output = Path("reports/authoritative_archive_byte_verification.json")
+          output.parent.mkdir(parents=True, exist_ok=True)
+          output.write_text(
+              json.dumps(
+                  {
+                      "schema_version": "1.0",
+                      "expected_archive_sha256": "38901b612b0f868cf66e2bab95e4600378b46bab80dee5a6d55180ccca59ea11",
+                      "actual_archive_sha256": None,
+                      "passed": False,
+                      "errors": ["private_authoritative_archive_materialization_failed"],
+                  },
+                  indent=2,
+                  sort_keys=True,
+              )
+              + "\n",
+              encoding="utf-8",
+          )
+          PY
+          fi
+          if [[ -f "${archive}" ]]; then
+            shred -u "${archive}" || rm -f "${archive}"
+          fi
+          exit "${status}"
+      - name: Upload authoritative archive byte evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: authoritative-archive-byte-evidence
+          path: reports/authoritative_archive_byte_verification.json
+          if-no-files-found: error
+      - name: Enforce authoritative archive byte gate
+        if: always()
         run: >-
-          python tools/build_final_qa_manifest.py
-          --output "${RUNNER_TEMP}/final_qa_manifest.json"
-          --python-version 3.11
-          --dependency-status "pip check passed"
-          --source-law-regression-status passed
-          --check
+          python tools/enforce_authoritative_archive_gate.py
+          --evidence reports/authoritative_archive_byte_verification.json

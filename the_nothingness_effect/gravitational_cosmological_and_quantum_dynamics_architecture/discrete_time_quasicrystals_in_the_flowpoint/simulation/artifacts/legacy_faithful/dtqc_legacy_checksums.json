@@ -1,0 +1,20 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "dtqc_legacy_5d_scatter.gif": "75e6c2f971587537a526d7c91b8102de30502725b42879e47bfead22b3516aad",
+    "dtqc_legacy_dfi_surface.png": "e4ac629a5a5e66d9a9319b7130cedcd4b0f225ac5ace4597b7c758f4569af42b",
+    "dtqc_legacy_diffraction_fft.png": "a5e583fe5b6d11e8f293702116763ea9a6ec8d9299e65f33927fe77b21439717",
+    "dtqc_legacy_elastic_pi_half_sphere.gif": "6629a1e5dc4f322df256da0dc92836cfa85cecd08c62e794ae986e56fbcca5e6",
+    "dtqc_legacy_elastic_pi_sphere.gif": "e74101a69c369e86b187fb5a39ef7abc956abd808c9529ed38cedf2cc26a8e26",
+    "dtqc_legacy_elastic_pi_surface.png": "21d195cef046d0e58ebc6f401819de86ce36fc51c0bfcf72fb36ea670cf6eb58",
+    "dtqc_legacy_flowpoint_flicker.gif": "25534204e3a2d2b779f356c0dea741b4d7710fc33ac9ec6c9c35258c847ea232",
+    "dtqc_legacy_metadata.json": "3120ee3ff80f561e14b62fa49d87443aa942416338d52d577a1946c9b3ecf131",
+    "dtqc_legacy_metrics.csv": "49c2a0cbe32e26ac872202410ab287194bcc289be699b99553049639008a9246",
+    "dtqc_legacy_quasicrystal_contour.png": "800bc101b2bdbabeb38520a894473a1f58e71c30a1b799c70e817ff9612a3ba9",
+    "dtqc_legacy_source_removal.csv": "f6e001ec2735a6580ad4780521702c68d8ed2fe923db17daaba40467351e90a5",
+    "dtqc_legacy_state.npz": "580e0573bf7450dc37787c7decb5a72d80f1d5cf71657309f31ff9fc62b596d7",
+    "dtqc_legacy_summary.png": "5b876a33a6fb2f4b976bbb884fb8841d649c63e6c29f77bb9cc90d8891c02ab4",
+    "dtqc_legacy_wavelet_ridges.png": "ebe3dda5093a2b5ea5bb5240c72e25343538c2a08a19a97a8e699a5f74b07897"
+  },
+  "schema_version": "3.0"
+}

@@ -1,0 +1,257 @@
+name: TNE full AI hyperparameter training and evaluation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - codex/tne-dtqc-ai-dynamics-recovery
+    paths:
+      - "tools/run_full_ai_hyperparameter_evaluation.py"
+      - "tools/run_multifidelity_full_ai_hyperparameter_evaluation.py"
+      - "tools/render_full_ai_tuning_artifacts.py"
+      - ".github/workflows/ai-full-hyperparameter-evaluation.yml"
+      - "tools/run_tabular_ai_evaluation.py"
+      - "tools/run_comprehensive_ai_evaluation.py"
+      - "the_nothingness_effect/artificial_intelligence/**"
+  push:
+    branches:
+      - codex/tne-authoritative-source-recertification
+    paths:
+      - "tools/run_full_ai_hyperparameter_evaluation.py"
+      - "tools/run_multifidelity_full_ai_hyperparameter_evaluation.py"
+      - "tools/render_full_ai_tuning_artifacts.py"
+      - ".github/workflows/ai-full-hyperparameter-evaluation.yml"
+      - "tools/run_tabular_ai_evaluation.py"
+      - "tools/run_comprehensive_ai_evaluation.py"
+      - "the_nothingness_effect/artificial_intelligence/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: >-
+    ai-full-hyperparameter-${{ github.event.pull_request.head.ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  tune-train-validate-evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dataset: fraud
+            url: https://www.kaggle.com/api/v1/datasets/download/mlg-ulb/creditcardfraud
+            filename: credit_card_fraud_detection.zip
+            seeds: "0 1 2"
+          - dataset: breast-cancer
+            url: https://www.kaggle.com/api/v1/datasets/download/uciml/breast-cancer-wisconsin-data
+            filename: breast_cancer_wisconsin.zip
+            seeds: "0 1 2 3 4"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project and visualization stack
+        run: |
+          python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+          python -m pip install -e .
+      - name: Verify tuning and visualization contracts
+        run: |
+          mkdir -p ci-logs
+          touch ci-logs/bootstrap.log
+          python -m py_compile \
+            tools/run_full_ai_hyperparameter_evaluation.py \
+            tools/run_multifidelity_full_ai_hyperparameter_evaluation.py \
+            tools/render_full_ai_tuning_artifacts.py
+          python - <<'PY'
+          import math
+          import numpy as np
+          from tools.render_full_ai_tuning_artifacts import metric_bundle, pca3
+          from tools.run_full_ai_hyperparameter_evaluation import Config, SPACE
+          from tools.run_multifidelity_full_ai_hyperparameter_evaluation import (
+              ORDERED_SPACE,
+              SCREENING_EPOCHS,
+          )
+
+          expected = {
+              "epochs", "learning_rate", "weight_decay", "hidden_dim", "K_D",
+              "soi_scale", "qenn_count", "pgqenn_count", "axis_dim",
+              "global_rbm_hidden", "global_rbm_weight_scale", "global_rbm_steps",
+              "global_rbm_loss_weight", "max_clusters", "dropout", "optimize_K_D",
+              "adaptive_learning_rate",
+          }
+          names = {name for name, _ in SPACE}
+          if names != expected:
+              raise SystemExit(f"public hyperparameter coverage mismatch: {names ^ expected}")
+          if set(Config.__dataclass_fields__) != expected:
+              raise SystemExit("Config and SPACE are not bijective")
+          if {name for name, _ in ORDERED_SPACE} != expected or ORDERED_SPACE[-1][0] != 'epochs':
+              raise SystemExit('multi-fidelity search does not cover every parameter')
+          if SCREENING_EPOCHS < 2:
+              raise SystemExit('screening fidelity is too low')
+          labels = np.asarray([0, 0, 1, 1], dtype=int)
+          probabilities = np.asarray(
+              [[0.9, 0.1], [0.6, 0.4], [0.3, 0.7], [0.1, 0.9]],
+              dtype=float,
+          )
+          metrics, matrix = metric_bundle(labels, probabilities)
+          required = {
+              "roc_auc", "pr_auc_average_precision", "matthews_correlation",
+              "specificity", "recall_sensitivity", "expected_calibration_error",
+          }
+          if matrix.shape != (2, 2) or not all(
+              math.isfinite(float(metrics[name])) for name in required
+          ):
+              raise SystemExit("extended binary metric smoke test failed")
+          if pca3(np.arange(8, dtype=float).reshape(4, 2)).shape != (4, 3):
+              raise SystemExit("three-dimensional projection contract failed")
+          PY
+      - name: Download public source archive
+        run: |
+          mkdir -p .ci-data
+          curl --fail --location --retry 4 --output ".ci-data/${{ matrix.filename }}" "${{ matrix.url }}"
+      - name: Extract breast-cancer CSV
+        if: matrix.dataset == 'breast-cancer'
+        run: |
+          python - <<'PY'
+          import zipfile
+          from pathlib import Path
+          archive = Path('.ci-data/breast_cancer_wisconsin.zip')
+          with zipfile.ZipFile(archive) as z:
+              names = [name for name in z.namelist() if name.endswith('.csv')]
+              if len(names) != 1:
+                  raise SystemExit(f'expected one CSV, got {names}')
+              Path('.ci-data/breast_cancer_wisconsin.csv').write_bytes(z.read(names[0]))
+          PY
+      - name: Tune, train, validate and evaluate every public hyperparameter
+        shell: bash
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          if [[ "${{ matrix.dataset }}" == "fraud" ]]; then
+            SOURCE=.ci-data/credit_card_fraud_detection.zip
+          else
+            SOURCE=.ci-data/breast_cancer_wisconsin.csv
+          fi
+          set +e
+          python tools/run_multifidelity_full_ai_hyperparameter_evaluation.py \
+            --source "$SOURCE" \
+            --dataset "${{ matrix.dataset }}" \
+            --output "reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}" \
+            --seeds ${{ matrix.seeds }} \
+            --passes 1 2>&1 | tee "ci-logs/${{ matrix.dataset }}.log"
+          status=${PIPESTATUS[0]}
+          set -e
+          exit "$status"
+      - name: Render extended metrics, 2D matrices, static 3D plots and 3D animations
+        shell: bash
+        run: |
+          if [[ "${{ matrix.dataset }}" == "fraud" ]]; then
+            SOURCE=.ci-data/credit_card_fraud_detection.zip
+          else
+            SOURCE=.ci-data/breast_cancer_wisconsin.csv
+          fi
+          python tools/render_full_ai_tuning_artifacts.py \
+            --source "$SOURCE" \
+            --dataset "${{ matrix.dataset }}" \
+            --root "reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}"
+      - name: Upload tuning diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tne-ai-full-tuning-diagnostics-${{ matrix.dataset }}-${{ github.sha }}
+          path: ci-logs
+          if-no-files-found: error
+          retention-days: 30
+      - name: Enforce complete model, global-RBM and visualization evidence
+        run: |
+          python - <<'PY'
+          import csv, json, math
+          from pathlib import Path
+
+          root = Path('reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}')
+          summary = json.loads((root / 'evaluation_summary.json').read_text())
+          required = {
+              "epochs", "learning_rate", "weight_decay", "hidden_dim", "K_D",
+              "soi_scale", "qenn_count", "pgqenn_count", "axis_dim",
+              "global_rbm_hidden", "global_rbm_weight_scale", "global_rbm_steps",
+              "global_rbm_loss_weight", "max_clusters", "dropout", "optimize_K_D",
+              "adaptive_learning_rate",
+          }
+          if set(summary['searched_hyperparameters']) != required:
+              raise SystemExit('incomplete outer hyperparameter search')
+          if set(summary['modules']) != {"QENN", "PGQENN", "SOInets"}:
+              raise SystemExit('missing module evaluation')
+          if not summary['integrated_multimodal']:
+              raise SystemExit('missing integrated multimodal evaluation')
+          rbm = summary.get('global_rbm', {})
+          required_rbm = {
+              'mean_parameter_update_l2',
+              'mean_test_reconstruction_rmse',
+              'mean_test_contrastive_divergence',
+              'mean_test_free_energy',
+              'mean_context_removal_probability_delta',
+          }
+          if not required_rbm <= set(rbm):
+              raise SystemExit('missing global RBM training/validation/evaluation evidence')
+          if not all(math.isfinite(float(rbm[name])) for name in required_rbm):
+              raise SystemExit('non-finite global RBM evidence')
+          if float(rbm['mean_parameter_update_l2']) <= 0.0:
+              raise SystemExit('global RBM was not trained')
+          with (root / 'hyperparameter_search.csv').open() as handle:
+              search_rows = list(csv.DictReader(handle))
+          if not search_rows or any(not row['objective'] for row in search_rows):
+              raise SystemExit('missing finite search evidence')
+          if {row['parameter'] for row in search_rows} != required:
+              raise SystemExit('multi-fidelity search omitted a public hyperparameter')
+          if not all(row.get('screening_epochs') for row in search_rows):
+              raise SystemExit('missing screening-fidelity provenance')
+          for filename in (
+              'global_rbm_metrics.csv',
+              'global_rbm_source_removal.csv',
+              'extended_model_metrics.csv',
+              'extended_prediction_records.csv',
+              'extended_confusion_matrices.csv',
+              'multimodal_latent_3d.csv',
+              'global_rbm_hidden_3d.csv',
+              'extended_evaluation_summary.json',
+              'artifact_manifest.json',
+          ):
+              if not (root / filename).is_file():
+                  raise SystemExit(f'missing {filename}')
+          extended = json.loads((root / 'extended_evaluation_summary.json').read_text())
+          if set(extended['models']) != {"QENN", "PGQENN", "SOInets", "Multimodal"}:
+              raise SystemExit('extended model coverage is incomplete')
+          required_metrics = {
+              'accuracy', 'balanced_accuracy', 'precision', 'recall_sensitivity',
+              'specificity', 'f1', 'matthews_correlation', 'roc_auc',
+              'pr_auc_average_precision', 'cross_entropy', 'brier_score',
+              'expected_calibration_error',
+          }
+          for row in extended['aggregate_metrics']:
+              if not required_metrics <= set(row):
+                  raise SystemExit(f"missing aggregate metrics for {row.get('model')}")
+              if not all(math.isfinite(float(row[name])) for name in required_metrics):
+                  raise SystemExit(f"non-finite aggregate metrics for {row.get('model')}")
+          if len(list((root / 'plots').glob('*.png'))) < 15:
+              raise SystemExit('fewer than 15 informative 2D/3D plots')
+          if len(list((root / 'animations').glob('*.gif'))) < 2:
+              raise SystemExit('fewer than two 3D animations')
+          if len(list((root / 'checkpoints').glob('*.pt'))) != len(summary['evaluation_seeds']):
+              raise SystemExit('checkpoint count does not match evaluation seeds')
+          PY
+      - name: Upload tuned metrics, checkpoints and artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tne-ai-full-tuning-${{ matrix.dataset }}-${{ github.sha }}
+          path: |
+            reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}
+            reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}.zip
+          if-no-files-found: error
+          retention-days: 90

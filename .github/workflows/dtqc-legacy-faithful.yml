@@ -1,0 +1,96 @@
+name: DTQC full source-faithful artifact validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  runtime-and-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          submodules: recursive
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt -r requirements-ai.txt
+      - name: Resolve stable DTQC generation source commit
+        id: source
+        env:
+          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+          from pathlib import Path
+
+          metadata = Path(os.environ["TRACKED_DTQC"]) / "dtqc_artifact_metadata.json"
+          source = json.loads(metadata.read_text())["generation_source_commit"]
+          print(f"commit={source}")
+          PY
+      - name: Validate DTQC source-faithful runtime
+        run: >-
+          python -m pytest -q
+          tests/numerical/test_dtqc_legacy_faithful_runtime.py
+          tests/artifacts/test_dtqc_legacy_faithful_artifacts.py
+      - name: Independently regenerate the complete DTQC tree
+        run: >-
+          python -m
+          the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence
+          --output "${{ runner.temp }}/dtqc-artifacts"
+          --seed 0
+          --generation-source-commit "${{ steps.source.outputs.commit }}"
+      - name: Build recursive DTQC byte evidence
+        env:
+          GENERATED_DTQC: ${{ runner.temp }}/dtqc-artifacts
+          TRACKED_DTQC: the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/artifacts
+          EVIDENCE_DIR: ${{ runner.temp }}/dtqc-inventory-evidence
+        run: |
+          mkdir -p "$EVIDENCE_DIR"
+          find "$GENERATED_DTQC" -maxdepth 2 -type f -printf '%P\n' | sort > "$EVIDENCE_DIR/generated-files.txt"
+          find "$TRACKED_DTQC" -maxdepth 2 -type f -printf '%P\n' | sort > "$EVIDENCE_DIR/tracked-files.txt"
+          (cd "$GENERATED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/generated-sha256.txt"
+          (cd "$TRACKED_DTQC" && find . -maxdepth 2 -type f -print0 | sort -z | xargs -0 sha256sum) > "$EVIDENCE_DIR/tracked-sha256.txt"
+          diff -u "$EVIDENCE_DIR/generated-files.txt" "$EVIDENCE_DIR/tracked-files.txt" > "$EVIDENCE_DIR/inventory.diff" || true
+          diff -u "$EVIDENCE_DIR/generated-sha256.txt" "$EVIDENCE_DIR/tracked-sha256.txt" > "$EVIDENCE_DIR/checksums.diff" || true
+      - name: Upload complete regenerated DTQC tree
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dtqc-full-artifacts-${{ github.sha }}
+          path: ${{ runner.temp }}/dtqc-artifacts
+          if-no-files-found: error
+          compression-level: 9
+          retention-days: 14
+      - name: Upload recursive DTQC byte evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dtqc-inventory-evidence-${{ github.sha }}
+          path: ${{ runner.temp }}/dtqc-inventory-evidence
+          if-no-files-found: error
+          retention-days: 14
+      - name: Validate committed complete DTQC tree
+        run: >-
+          python -m pytest -q
+          tests/artifacts/test_dtqc_full_source_faithful_artifacts.py
+      - name: Enforce recursive DTQC byte identity
+        run: |
+          if [ -s "${{ runner.temp }}/dtqc-inventory-evidence/inventory.diff" ] || [ -s "${{ runner.temp }}/dtqc-inventory-evidence/checksums.diff" ]; then
+            echo "Generated and tracked DTQC trees differ."
+            cat "${{ runner.temp }}/dtqc-inventory-evidence/inventory.diff"
+            cat "${{ runner.temp }}/dtqc-inventory-evidence/checksums.diff"
+            exit 1
+          fi

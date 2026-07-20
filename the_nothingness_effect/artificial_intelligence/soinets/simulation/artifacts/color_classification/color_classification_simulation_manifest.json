@@ -2,32 +2,44 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
-    "bidirectional_reconstruction": "class prototype, not exact source recovery",
-    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+    "bidirectional_decoder": "probability-weighted finite modality reconstruction",
+    "classification_scope": "bounded synthetic held-out color and tone fixtures",
+    "cloning_scope": "held-out coordinate regression through SOInet meta-states"
   },
+  "architecture_coupled_metrics": true,
   "capability_id": "color_classification",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "claim_boundary": "finite synthetic train/validation/test evidence; not a formal proof or a real-world generalization claim",
+  "closure_status": "open",
   "generated_files": [
     "color_classification_simulation_results.csv",
+    "color_classification_simulation_splits.csv",
     "color_classification_simulation_figure.png",
+    "color_classification_simulation_checkpoint.pt",
     "color_classification_simulation_animation.gif",
     "color_classification_simulation_manifest.json"
   ],
   "intended_output_group": "color classification",
+  "metric_producer": "SOInet",
   "metrics": {
-    "accuracy": 1.0,
-    "mean_confidence": 0.9988396763801575
+    "accuracy": 0.9166666865348816,
+    "generalization_gap": 0.08333331346511841,
+    "mean_confidence": 0.2110946923494339,
+    "test_loss": 1.5716720819473267,
+    "train_accuracy": 1.0,
+    "validation_accuracy": 0.8333333134651184
   },
   "numeric_tolerances": {
-    "absolute": 1e-06
+    "finite_metrics": true
   },
-  "parameter_hash": "fba950ac25a04388971a6c6e3654856540471212ab332923caeb59cc93759847",
+  "parameter_hash": "3918580d4d8d6a6a6388b13399e06230d516469fa5a626307110cc1721aa8eaa",
   "parameters": {
     "capability": "color_classification",
+    "checkpoint_format": 1,
+    "metric_producer": "SOInet",
     "mode": "simulation",
     "producer_architecture": "soinets",
     "seed": 0,
+    "split_policy": "disjoint_train_validation_test",
     "synthetic_fixture": true
   },
   "producer_architecture": "soinets",
@@ -36,15 +48,40 @@
     "dfi_entropy_plateau_dfi_divergence_spiking",
     "lyapunov_entropy_dissipation_functional"
   ],
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0,
-    1.1920928955078125e-07,
-    0.0,
-    0.0,
-    0.0
+    0.7098560929298401,
+    0.7098818421363831,
+    0.6738580465316772,
+    0.6738560795783997,
+    0.7183969020843506,
+    0.718331515789032,
+    0.7182585000991821,
+    0.7190056443214417,
+    0.7487473487854004,
+    0.7495445013046265,
+    0.8134159445762634,
+    0.8131101131439209,
+    0.7099035978317261,
+    0.6740918755531311,
+    0.7194332480430603,
+    0.7175070643424988,
+    0.7497637867927551,
+    0.8131995797157288,
+    0.7098695039749146,
+    0.7102452516555786,
+    0.6729076504707336,
+    0.6739473342895508,
+    0.7178718447685242,
+    0.719775915145874,
+    0.7180288434028625,
+    0.7186077833175659,
+    0.749022901058197,
+    0.7495372295379639,
+    0.8135759830474854,
+    0.8132187724113464
   ],
   "seed": 0,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "soinet_architecture_coupled_train_validation_test"
 }

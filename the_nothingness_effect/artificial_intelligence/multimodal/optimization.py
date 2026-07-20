@@ -1,5 +1,4 @@
 """Validation-driven dynamic-K_D search for the trainable multimodal model."""
-
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -72,9 +71,11 @@ def validation_objective(evaluation: MultimodalEvaluation) -> float:
 class DynamicKDSearch:
     """Deterministic coordinate search over positive K_D and SOI gain.
 
-    The historical class name remains a compatibility surface.  The canonical
-    search now evaluates the joint Elastic/SOI validation landscape while
-    preserving DFI similarity invariance.
+    The historical class name remains a compatibility surface. The canonical
+    search evaluates the joint Elastic/SOI validation landscape while
+    preserving DFI similarity invariance. Epoch zero is a mandatory warm-up:
+    probing an untrained real-data model previously caused every candidate to
+    fail closed before any optimizer update had occurred.
     """
 
     def __init__(
@@ -184,6 +185,17 @@ class DynamicKDSearch:
                 str(exc),
             )
 
+    @staticmethod
+    def _obstruction_details(probes: list[KDProbe]) -> str:
+        messages = sorted(
+            {
+                probe.obstruction.strip()
+                for probe in probes
+                if probe.obstruction.strip()
+            }
+        )
+        return "; ".join(messages) if messages else "no obstruction detail supplied"
+
     def select(
         self,
         model: TNETrainableMultimodalModel,
@@ -194,6 +206,22 @@ class DynamicKDSearch:
         validation_batch.validate()
         previous = dynamic_kd_state(model).value
         previous_soi = dynamic_soi_state(model).value
+
+        if epoch == 0:
+            selection = KDSelection(
+                epoch=epoch,
+                previous_K_D=previous,
+                selected_K_D=previous,
+                previous_soi_scale=previous_soi,
+                selected_soi_scale=previous_soi,
+                previous_objective=0.0,
+                selected_objective=0.0,
+                improvement=0.0,
+                probes=(),
+            )
+            self._selections.append(selection)
+            return selection
+
         kd_probes = [
             self._probe(
                 model,
@@ -212,7 +240,10 @@ class DynamicKDSearch:
         if not valid_kd:
             set_dynamic_kd(model, previous)
             set_dynamic_soi(model, previous_soi)
-            raise AIObstructionError("all dynamic K_D candidates were obstructed")
+            details = self._obstruction_details(kd_probes)
+            raise AIObstructionError(
+                f"all dynamic K_D candidates were obstructed at epoch {epoch}: {details}"
+            )
         selected_kd = min(
             valid_kd,
             key=lambda probe: (float(probe.objective), probe.K_D),
@@ -238,7 +269,10 @@ class DynamicKDSearch:
         if not valid_soi:
             set_dynamic_kd(model, previous)
             set_dynamic_soi(model, previous_soi)
-            raise AIObstructionError("all dynamic SOI candidates were obstructed")
+            details = self._obstruction_details(soi_probes)
+            raise AIObstructionError(
+                f"all dynamic SOI candidates were obstructed at epoch {epoch}: {details}"
+            )
         selected = min(
             valid_soi,
             key=lambda probe: (
@@ -272,5 +306,4 @@ class DynamicKDSearch:
         return selection
 
 
-# Explicit canonical name; the old name is retained for callers and manifests.
 DynamicKDSOISearch = DynamicKDSearch

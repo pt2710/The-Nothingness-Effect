@@ -3,11 +3,11 @@
   "closure_statuses": [
     "satisfied",
     "satisfied",
-    "numerical_candidate",
-    "numerical_candidate",
-    "numerical_candidate",
-    "numerical_candidate",
-    "numerical_candidate"
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "satisfied",
+    "closed"
   ],
   "generated_files": [
     "mathematical_closure_metrics.csv",
@@ -35,16 +35,16 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.mathematical_architecture.simulation.run_evidence",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,
     0.0,
-    0.030296081647354534,
+    0.0,
+    2.0721127472279897e-15,
     0.0,
     0.0,
-    0.03597560219624253,
-    0.0
+    2.220446049250313e-16
   ],
   "seed": 0,
   "source_status": "canonical_contract_evaluation"

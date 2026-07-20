@@ -13,14 +13,15 @@
   "numeric_tolerances": {
     "absolute": 1e-10
   },
-  "parameter_hash": "954b17c98202a40beab052e192735317baffa0b11b6d6db718a9323a977d77d8",
+  "parameter_hash": "390fb1d7f0f0d95d84b7902a084db47fd9a49572c8af72c4dafbbe2538ea065f",
   "parameters": {
-    "fixture": "physical-field-v1",
+    "fixture": "contract-specific-authoritative-v5",
     "module": "elastic_dubler_interferometry",
-    "sample_count": 64
+    "sample_count": 64,
+    "sample_type": "FieldLawInput"
   },
-  "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.simulation.run_contract_suite --output the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/artifacts",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.0,

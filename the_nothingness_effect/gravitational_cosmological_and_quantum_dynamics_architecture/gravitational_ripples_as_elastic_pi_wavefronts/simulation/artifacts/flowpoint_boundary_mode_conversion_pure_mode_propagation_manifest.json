@@ -1,0 +1,39 @@
+{
+  "appendix_filename": "appendix_tne_gravitational_cosmological_quantum_dynamics.tex",
+  "appendix_source_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+  "approximation_metadata": {
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "elastic_pi_ripples_contract_metrics.csv",
+    "elastic_pi_ripples_spatial_closure.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "8a6b7ae6bb1ea673aefdad6a92aaff6cacc4c5befa0ef2cd60bb3fc1edfbeec1",
+  "parameters": {
+    "fixture": "contract-specific-authoritative-v5",
+    "module": "elastic_pi_ripples",
+    "sample_count": 9,
+    "sample_type": "RippleInput"
+  },
+  "regeneration_command": "python -m the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.gravitational_ripples_as_elastic_pi_wavefronts.simulation.run_contract_suite --output the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/artifacts",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seed": 0,
+  "theorem_complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation"
+}

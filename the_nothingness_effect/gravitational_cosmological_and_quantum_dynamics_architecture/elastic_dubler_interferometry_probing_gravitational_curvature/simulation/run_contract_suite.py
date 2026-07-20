@@ -1,10 +1,12 @@
 from pathlib import Path
 import argparse
-from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts import run_suite as _run
+
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.authoritative_contract_artifacts import run_active_suite
+from the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.elastic_dubler_interferometry_probing_gravitational_curvature.contracts import contracts
 
 
 def run_suite(output_dir: str | Path, *, seed: int = 0):
-    return _run("elastic_dubler_interferometry", output_dir, seed=seed)
+    return run_active_suite("elastic_dubler_interferometry", contracts(), output_dir, seed=seed)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
   "architecture": "pgqenn",
-  "architecture_closure_status": "open",
+  "architecture_closure_status": "numerical_candidate",
   "architecture_metadata": {
     "architecture": "PGQENN",
     "architecture_base": "QENN",
@@ -17,7 +17,7 @@
     "growth_mode": "mpl_tc_prime_motif",
     "message_adjacency": "canonical_edges_localized_by_3d_growth_geometry",
     "mpl_tc_commit": "056e346824e9ec9785ab45b642b3b842c88f6e56",
-    "mpl_tc_module_sha256": "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9",
+    "mpl_tc_module_sha256": "484e8a6326e99657eacc3e3a02b245e4709d51e11c5f743208632e8993124046",
     "mpl_tc_repository": "https://github.com/pt2710/MPL-TC.git",
     "negative_spectrum_authority": "TNE Flowpoint neural lift; MPL-TC provenance is positive-only",
     "observation_collapse_integration": "canonical_runtime",
@@ -29,7 +29,7 @@
       "positive": 72
     },
     "signed_spectrum_integration": "tne_flowpoint_involution_lift",
-    "signed_spectrum_source_removal_delta": 0.18489010632038116,
+    "signed_spectrum_source_removal_delta": 0.0822005644440651,
     "torch_version": "2.13.0+cpu",
     "triadic_modality_semantics": "TC stream kind is a structural growth axis; modality remains the node feature field",
     "triadic_stream_counts": {
@@ -39,7 +39,7 @@
       "pure_even_lift": 6
     },
     "triadic_stream_integration": "experimental_finite_prefix_structural_bridge",
-    "triadic_stream_source_removal_delta": 0.7533350586891174,
+    "triadic_stream_source_removal_delta": 0.3373936712741852,
     "triadic_stream_types": [
       "pure_even_lift",
       "first_order_odd",
@@ -58,13 +58,14 @@
     "mpl_tc_dependency": 0.0,
     "mpl_tc_motif_exhaustion": 0.0,
     "observation_normalization": 0.0,
-    "parseval": 2.384185791015625e-07,
-    "qenn_backbone_completeness": 1.2477105883590411e-05,
+    "parseval": 1.1920928955078125e-07,
+    "qenn_backbone_completeness": 9.04394983081147e-06,
     "self_loop": 0.0,
     "signed_spectrum_value_involution": 0.0,
     "triadic_stream_adjacency_symmetry": 0.0
   },
   "capability_count": 6,
+  "capability_metric_producer": "SOInet",
   "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
   "generated_files": [
     "pgqenn_test_six_output_summary.csv",
@@ -101,22 +102,34 @@
     "pgqenn_test_network_3d_growth_manifest.json",
     "pgqenn_test_network_manifest.json",
     "color_classification/color_classification_test_results.csv",
+    "color_classification/color_classification_test_splits.csv",
     "color_classification/color_classification_test_figure.png",
+    "color_classification/color_classification_test_checkpoint.pt",
     "color_classification/color_classification_test_manifest.json",
     "sound_classification/sound_classification_test_results.csv",
+    "sound_classification/sound_classification_test_splits.csv",
     "sound_classification/sound_classification_test_figure.png",
+    "sound_classification/sound_classification_test_checkpoint.pt",
     "sound_classification/sound_classification_test_manifest.json",
     "bidirectional_color_classification/bidirectional_color_classification_test_results.csv",
+    "bidirectional_color_classification/bidirectional_color_classification_test_splits.csv",
     "bidirectional_color_classification/bidirectional_color_classification_test_figure.png",
+    "bidirectional_color_classification/bidirectional_color_classification_test_checkpoint.pt",
     "bidirectional_color_classification/bidirectional_color_classification_test_manifest.json",
     "bidirectional_sound_classification/bidirectional_sound_classification_test_results.csv",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_splits.csv",
     "bidirectional_sound_classification/bidirectional_sound_classification_test_figure.png",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_checkpoint.pt",
     "bidirectional_sound_classification/bidirectional_sound_classification_test_manifest.json",
     "color_cloning/color_cloning_test_results.csv",
+    "color_cloning/color_cloning_test_splits.csv",
     "color_cloning/color_cloning_test_figure.png",
+    "color_cloning/color_cloning_test_checkpoint.pt",
     "color_cloning/color_cloning_test_manifest.json",
     "sound_cloning/sound_cloning_test_results.csv",
+    "sound_cloning/sound_cloning_test_splits.csv",
     "sound_cloning/sound_cloning_test_figure.png",
+    "sound_cloning/sound_cloning_test_checkpoint.pt",
     "sound_cloning/sound_cloning_test_manifest.json"
   ],
   "output_groups": [
@@ -127,10 +140,12 @@
     "color_cloning",
     "sound_cloning"
   ],
-  "parameter_hash": "73aa008e67eda7c0f9cd60c867a7e78eef6c1a122ec78b57ed72f84c75a9c38c",
+  "parameter_hash": "6647bb71fcdbac367fe6b321d2c25db3a910c23cfb554f29768fa257e32dd498",
   "parameters": {
     "architecture": "pgqenn",
+    "capability_metric_producer": "SOInet",
     "mode": "test",
+    "network_state_source": "runtime_output_tensors",
     "output_groups": [
       "color_classification",
       "sound_classification",
@@ -142,8 +157,8 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_capabilities",
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "runtime_derived_architecture_state"
 }

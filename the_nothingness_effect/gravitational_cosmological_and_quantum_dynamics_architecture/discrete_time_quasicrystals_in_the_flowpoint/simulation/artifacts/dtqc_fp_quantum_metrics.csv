@@ -1,0 +1,9 @@
+metric,value
+frame_count,18
+wave_norm_max_residual,6.661338147750939e-16
+minimum_entanglement_entropy,0.33492374147398246
+maximum_entanglement_entropy,0.759953786602604
+minimum_concurrence,0.4819312204014239
+maximum_concurrence,0.8283343771738165
+quark_mode_count,6
+intrinsic_axis_count,5

@@ -6,4 +6,4 @@ pdfi_elastic_norm_interface,A,0.0,satisfied,True,0
 pdfi_elastic_norm_equivalence_and_decoupling,A,0.0,satisfied,True,0
 weighted_path_ratio_regularity_functional,B,1.9229626863835638e-16,satisfied,True,2
 entropy_pdfi_calibrated_norm_residual,B,0.0,satisfied,True,3
-spatial_weighted_calibration_closure,C,0.0,numerical_candidate,False,2
+spatial_weighted_calibration_closure,C,0.0,closed,True,2

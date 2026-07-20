@@ -1,7 +1,7 @@
 {
   "architecture": "qenn",
   "artifact_family": "architecture_specific_3d_growth_matrix",
-  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "claim_boundary": "finite observed model state; not a formal proof substitute",
   "generated_files": [
     "qenn_simulation_network_3d_growth.png",
     "qenn_simulation_network_3d_matrix_occupancy.png",
@@ -24,30 +24,31 @@
     "qenn_simulation_network_3d_signed_spectrum_growth.gif",
     "qenn_simulation_network_3d_signed_spectrum_signal.gif"
   ],
-  "parameter_hash": "63ab086a76bc1d9716f958a6e0f94bff8a8cec3d3702613344777f33817f7021",
+  "parameter_hash": "08ae044ebd3d525c550b5cbeb9bd21fff68640e78432084a708a48c8bde6b6ea",
   "parameters": {
     "architecture": "qenn",
     "axis_labels": [
-      "epoch depth",
-      "DTQC spectral phase",
-      "Flowpoint sector"
+      "runtime component 1",
+      "runtime component 2",
+      "runtime component 3"
     ],
-    "coordinate_asymmetry": 6.712002118585559,
+    "coordinate_asymmetry": 0.0,
     "mode": "simulation",
-    "node_count": 24,
+    "node_count": 12,
     "partner_involution_residual": 0,
     "seed": 0,
-    "signed_meaning": "positive/negative Flowpoint orientation",
+    "signed_meaning": "canonical positive/negative Flowpoint orientation",
     "source_streams": [
       "invariant",
       "anti_invariant",
       "dtqc_memory",
       "closure"
-    ]
+    ],
+    "state_source": "runtime_derived_model_state"
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.qenn.simulation.run_all_capabilities",
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
-  "source_status": "QENN runtime state: Flowpoint projectors plus DTQC memory"
+  "source_status": "runtime_derived_spatial_state"
 }

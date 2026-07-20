@@ -1,0 +1,244 @@
+"""Build final QA with explicit provenance and execution-evidence semantics."""
+
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+import json
+from pathlib import Path
+import sys
+from typing import Any
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
+
+from the_nothingness_effect._runtime.theorem_complex_runtime.authority import (
+    source_binding_report as _source_binding_report,
+)
+from the_nothingness_effect._runtime.theorem_complex_runtime.provenance_authority import (
+    bind_provenance_manifest,
+    provenance_binding_report,
+)
+from tools import build_final_qa_manifest as _base
+
+
+def _compat_source_binding_report(*args: Any, **kwargs: Any) -> dict[str, object]:
+    """Expose legacy read aliases without reintroducing SHA overwrite semantics."""
+
+    report = dict(_source_binding_report(*args, **kwargs))
+    appendix_counts = report.get("appendix_counts", {})
+    total_rows = sum(
+        int(item.get("rows", 0))
+        for item in appendix_counts.values()
+        if isinstance(item, dict)
+    ) if isinstance(appendix_counts, dict) else 0
+    report.setdefault("total_rows", total_rows)
+    report.setdefault("managed_appendices", len(appendix_counts) if isinstance(appendix_counts, dict) else 0)
+    report.setdefault("managed_rows", total_rows)
+    report.setdefault("raw_source_sha_mismatches", report.get("raw_source_mismatch_count", 0))
+    report.setdefault("effective_source_sha_mismatches", report.get("effective_source_mismatch_count", 0))
+    report.setdefault("effective_mismatches", report.get("effective_source_mismatches", []))
+    report.setdefault("source_recertifications", report.get("historical_recertification_count", 0))
+    report.setdefault("implementation_status_overrides", report.get("implementation_status_change_count", 0))
+    return report
+
+
+# The preserved final-QA builder imports historical field names. Replace only its
+# read adapters; the authority layer itself remains observational and fail closed.
+_base.source_binding_report = _compat_source_binding_report
+_base.bind_provenance_manifest = bind_provenance_manifest
+_base.provenance_binding_report = provenance_binding_report
+
+
+_EXECUTION_CLASSES = {
+    "producer_local_simulation": "actual_simulation",
+    "ai_six_output_or_capability_suite": "actual_simulation",
+    "typed_contract_or_evidence_suite": "contract_evidence",
+    "bounded_contract_inventory_fallback": "inventory_fallback",
+}
+
+
+def _status_summary(entries: list[dict[str, Any]]) -> dict[str, object]:
+    statuses = Counter(str(item.get("status", "unknown")) for item in entries)
+    return {
+        "entrypoints": len(entries),
+        "passed": statuses.get("passed", 0),
+        "failed": statuses.get("failed", 0),
+        "timeout": statuses.get("timeout", 0),
+        "other": sum(
+            count
+            for status, count in statuses.items()
+            if status not in {"passed", "failed", "timeout"}
+        ),
+        "runtime_seconds": sum(float(item.get("runtime_seconds", 0.0)) for item in entries),
+        "paths": [str(item.get("path", "")) for item in entries],
+    }
+
+
+def _portable_repository_path(value: object) -> str:
+    path = Path(str(value))
+    try:
+        return path.resolve().relative_to(REPOSITORY_ROOT.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def classify_simulation_evidence(
+    manifest: dict[str, Any],
+) -> dict[str, object]:
+    """Separate actual simulations, contract evidence and inventory fallbacks."""
+
+    raw_entries = manifest.get("entrypoints")
+    if not isinstance(raw_entries, list):
+        raise RuntimeError("simulation execution manifest lacks entrypoint list")
+    grouped: dict[str, list[dict[str, Any]]] = {
+        "actual_simulation": [],
+        "contract_evidence": [],
+        "inventory_fallback": [],
+        "unknown": [],
+    }
+    for item in raw_entries:
+        if not isinstance(item, dict):
+            raise RuntimeError("simulation execution entry must be an object")
+        target = _EXECUTION_CLASSES.get(str(item.get("execution_kind", "")), "unknown")
+        grouped[target].append(item)
+
+    summaries = {name: _status_summary(entries) for name, entries in grouped.items()}
+    classified_total = sum(int(summary["entrypoints"]) for summary in summaries.values())
+    if classified_total != len(raw_entries):
+        raise RuntimeError("simulation evidence classification cardinality mismatch")
+    return {
+        "schema_version": "1.0",
+        "registered_entrypoints": len(raw_entries),
+        "actual_simulation": summaries["actual_simulation"],
+        "contract_evidence": summaries["contract_evidence"],
+        "inventory_fallback": summaries["inventory_fallback"],
+        "unknown": summaries["unknown"],
+        "all_entrypoints_classified": int(summaries["unknown"]["entrypoints"]) == 0,
+        "policy": (
+            "bounded_contract_inventory_fallback is inventory evidence and is not "
+            "counted as a simulation; typed contract suites are contract evidence"
+        ),
+    }
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("docs/data/final_qa_manifest.json"),
+    )
+    parser.add_argument("--passed", type=int)
+    parser.add_argument("--failed", type=int)
+    parser.add_argument("--skipped", type=int)
+    parser.add_argument("--warnings", type=int)
+    parser.add_argument("--runtime-seconds", type=float)
+    parser.add_argument("--python-version", default="3.14.3")
+    parser.add_argument(
+        "--dependency-status",
+        default="pip check passed",
+    )
+    parser.add_argument(
+        "--source-law-regression-status",
+        default="passed",
+    )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Return non-zero when any release blocker is present.",
+    )
+    arguments = parser.parse_args()
+
+    payload = _base.build(arguments)
+    artifact_coverage = payload.get("artifact_provenance_coverage", {})
+    if isinstance(artifact_coverage, dict):
+        artifact_coverage["effective_manifest_path"] = _portable_repository_path(
+            artifact_coverage.get("effective_manifest_path", "")
+        )
+    provenance_binding = payload.get("artifact_provenance_source_binding", {})
+    if isinstance(provenance_binding, dict):
+        provenance_binding["provenance_path"] = _portable_repository_path(
+            provenance_binding.get("provenance_path", "")
+        )
+    release_status = json.loads(
+        Path("reports/release_status_dimensions.json").read_text(encoding="utf-8")
+    )
+    closure_obligations = json.loads(
+        Path("reports/closure_obligation_ledger.json").read_text(encoding="utf-8")
+    )
+    formal_proofs = json.loads(
+        Path("reports/formal_proof_coverage.json").read_text(encoding="utf-8")
+    )
+    simulation_manifest = json.loads(
+        Path("reports/simulation_execution_manifest.json").read_text(encoding="utf-8")
+    )
+    classification = classify_simulation_evidence(simulation_manifest)
+    entrypoint_execution = payload.setdefault("entrypoint_execution", {})
+    if not isinstance(entrypoint_execution, dict):
+        raise RuntimeError("final QA entrypoint execution record is invalid")
+    legacy_summary = entrypoint_execution.get("simulation", {})
+    entrypoint_execution["registered_simulation_paths"] = legacy_summary
+    entrypoint_execution["simulation"] = classification["actual_simulation"]
+    entrypoint_execution["contract_evidence"] = classification["contract_evidence"]
+    entrypoint_execution["inventory_fallback"] = classification["inventory_fallback"]
+    entrypoint_execution["unknown_execution_kind"] = classification["unknown"]
+    entrypoint_execution["classification_policy"] = classification["policy"]
+
+    blockers = payload.setdefault("release_blockers", [])
+    if not isinstance(blockers, list):
+        raise RuntimeError("final QA release blockers record is invalid")
+    if not bool(classification["all_entrypoints_classified"]):
+        blockers.append("unknown_simulation_execution_kind")
+    open_count = int(
+        release_status.get("open_and_numerical_candidate_preserved", -1)
+    )
+    if open_count != 0:
+        blockers.append("mathematical_closure_incomplete")
+    if int(closure_obligations.get("open_or_numerical_candidate_count", -1)) != 0:
+        blockers.append("closure_obligation_ledger_not_empty")
+    if not bool(formal_proofs.get("all_rows_classified")):
+        blockers.append("formal_proof_coverage_incomplete")
+    if int(formal_proofs.get("invalid_proof_claims", -1)) != 0:
+        blockers.append("invalid_formal_proof_claims_present")
+    payload["release_blockers"] = sorted(set(str(item) for item in blockers))
+    payload["final_qa_passed"] = not payload["release_blockers"]
+    payload["schema_version"] = "1.5"
+    payload["release_status_dimensions"] = release_status.get("dimensions", {})
+    payload["mathematical_closure"] = {
+        "open_and_numerical_candidate": open_count,
+        "closure_obligation_ledger_count": closure_obligations.get(
+            "open_or_numerical_candidate_count"
+        ),
+        "gate": "requires zero OPEN and zero NUMERICAL_CANDIDATE",
+    }
+    payload["formal_machine_proof_coverage"] = {
+        "rows": formal_proofs.get("rows"),
+        "counts": formal_proofs.get("counts", {}),
+        "verified_formal_proofs": formal_proofs.get("verified_formal_proofs"),
+        "invalid_proof_claims": formal_proofs.get("invalid_proof_claims"),
+        "policy": formal_proofs.get("policy"),
+    }
+    payload["execution_evidence_claim_boundary"] = (
+        "Only producer-local simulations and AI capability runs are counted as "
+        "simulations. Typed contract suites and inventory fallbacks remain separate."
+    )
+
+    arguments.output.parent.mkdir(parents=True, exist_ok=True)
+    arguments.output.write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    print(
+        f"final_qa_manifest={arguments.output} "
+        f"final_qa_passed={payload['final_qa_passed']} "
+        f"actual_simulations={classification['actual_simulation']['entrypoints']} "
+        f"inventory_fallbacks={classification['inventory_fallback']['entrypoints']} "
+        f"release_blockers={payload['release_blockers']}"
+    )
+    return 1 if arguments.check and not payload["final_qa_passed"] else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

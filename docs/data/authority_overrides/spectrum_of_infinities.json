@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "scope": "Foundational Spectrum-of-Infinities explicit 10A -> 3B -> 3C implementation",
+  "implementation_status_overrides": {
+    "spectrum_normalization_and_normalization_obstruction": {
+      "status": "implemented",
+      "reason": "Typed finite normalization coordinate, absolute-scale transport, unit-mass, scale-covariance, and obstruction residuals.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "spectrum_dfi_duality_and_dfi_divergence": {
+      "status": "implemented",
+      "reason": "Authoritative finite SOI-DFI law V0=Omega/n, Vi=V0 sigma_i, Si=V0(sigma_i-1), exact L2 scaling, and fail-closed norm/exponential divergence boundaries.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_dfi.py"
+    },
+    "measurable_decomposition_and_non_measurable_obstruction": {
+      "status": "implemented",
+      "reason": "Typed measurable partition with reconstruction, conservation, disjointness, and non-measurable frontier residuals.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "completeness_and_incompleteness_of_the_soi_l_p_structure": {
+      "status": "implemented",
+      "reason": "Typed finite Lp transport witness with exact norm scaling, reconstruction, and declared completion boundary.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "entropy_density_mapping_and_entropy_divergence": {
+      "status": "implemented",
+      "reason": "Typed normalized entropy-density transfer with finite-alphabet, normalization, and absolute-scale residuals.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "finitizable_infinity_and_the_non_finitization_boundary": {
+      "status": "implemented",
+      "reason": "Authoritative finite L1 approximation with monotone relative error and exact absolute SOI scaling ||e||_Omega=Omega||e||_1, including backward-compatible Omega=1 witnesses.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_finitization.py"
+    },
+    "dual_realizability_and_the_missing_dual_defect": {
+      "status": "implemented",
+      "reason": "Typed coordinate factorization with pseudoinverse reconstruction, orthogonal projection, and missing-dual residual.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "soi_measure_preserving_normalization_and_spectrum_obstruction": {
+      "status": "implemented",
+      "reason": "Typed finite pushforward measure transfer with unit mass, target calibration, and absolute SOI scaling.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "borel_analytic_sufficiency_and_over_extension_beyond_measurability": {
+      "status": "implemented",
+      "reason": "Typed declared measurable-scope transfer with omitted-set and exact frontier residuals.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "factor_map_equivariance_and_limit_bias": {
+      "status": "implemented",
+      "reason": "Typed source/target factor map with operator equivariance, Cesaro-limit transfer, and calibration residuals.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "spectrum_flowpoint_addressability_and_unaddressability": {
+      "status": "implemented",
+      "reason": "Additive normalization/measurability/realizability address synthesis with collision, gap, calibration, reconstruction, and source-removal gates.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "metric_deformation_robustness_and_deformation_fragility": {
+      "status": "implemented",
+      "reason": "Additive normalization/Lp/entropy/factor/realizability deformation synthesis with metric, transport, obstruction, and five-source gates.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "2_adic_history_accessibility_and_frozen_accessibility": {
+      "status": "implemented",
+      "reason": "Additive schedule, normalization, measurability, factor, ergodic, and realizability history synthesis with six-source gates.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "cosmic_matrix_address_and_ghost_spark_obstruction": {
+      "status": "implemented",
+      "reason": "Spatial cosmic-event ledger from address and history operators with unique reconstruction, ghost obstruction, and both-source gates.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "observable_locality_and_infinite_exposure": {
+      "status": "implemented",
+      "reason": "Spatial local readout from Observation temporal compression and spectral selection with projector, exterior, boundary, and source-removal gates.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    },
+    "elastic_curvature_probing_and_incoherent_warping": {
+      "status": "implemented",
+      "reason": "Spatial Elastic-pi curvature probe from metric deformation and Observation spectral selection with localization, boundary, and both-source gates.",
+      "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py"
+    }
+  }
+}

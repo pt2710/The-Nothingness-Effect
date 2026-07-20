@@ -2,6 +2,7 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
+    "authority_bound": true,
     "device": "cpu",
     "exact_semantics": true
   },
@@ -14,17 +15,18 @@
   "numeric_tolerances": {
     "absolute": 1e-06
   },
-  "parameter_hash": "b405532432e021cddbe08dc7e4d18293f8e674038a832cee70a10852738f7c36",
+  "parameter_hash": "5c14d02a8333062b9ca0518bf1dc0228487562bc230ad09638982b706d9de256",
   "parameters": {
-    "fixture": "prime-graph-v1",
+    "fixture": "prime-graph-v2",
     "growth_mode": "mpl_tc_prime_motif",
     "module": "pgqenn",
     "mpl_tc_commit": "056e346824e9ec9785ab45b642b3b842c88f6e56",
-    "mpl_tc_module_sha256": "016e7476606ba4c364dc5daa8ac1bcd77a418b1d5e244137559609e157f04dc9",
-    "node_count": 11
+    "mpl_tc_module_sha256": "484e8a6326e99657eacc3e3a02b245e4709d51e11c5f743208632e8993124046",
+    "node_count": 11,
+    "source_registry": "base"
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/pgqenn/simulation/artifacts",
-  "repository_result_commit": "77f64bbca7c006bb676b41e0bce6c1d29f153462",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     5.1881279945373535

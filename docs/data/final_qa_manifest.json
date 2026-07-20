@@ -56,39 +56,2616 @@
     "verified_equation_labels": 3722,
     "verified_first_labels": 351
   },
+  "artifact_provenance_coverage": {
+    "effective_manifest_path": "reports/effective_artifact_provenance_manifest.json",
+    "manifested": 351,
+    "missing_release_implementations": [],
+    "nonrequested_manifests": [],
+    "release_implemented": 351,
+    "requested_implemented": 351
+  },
+  "artifact_provenance_source_binding": {
+    "effective_mismatches": [],
+    "effective_source_sha_mismatches": 0,
+    "managed_appendices": 7,
+    "provenance_path": "reports/effective_artifact_provenance_manifest.json",
+    "raw_mismatches": [
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "addition_of_approximation_and_harmonic_geometry"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "addition_of_the_two_complete_b_level_operator_families"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "complex_phase_coordinates_and_fourier_reconstruction"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "dual_closure_idempotence_and_oscillatory_non_closure"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "finite_approximation_and_vanishing_residual_energy"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "flowpoint_unity_orientation_and_integer_unfolding"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "global_symmetry_and_kd_charge_conservation"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "idempotent_splitting_and_oscillation_obstruction"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "invariant_anti_invariant_orbit_fields"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "involutive_duality_c_2_action"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "local_gauge_symmetry_and_elastic_divergence_identity"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "minimal_two_state_involution_orbitwise_alternator"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "noether_constant_to_local_transgression"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "operation_covariance_and_spectral_minimization"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "protected_commuting_closure_transport"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "reciprocal_orbit_double_cover"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "reciprocal_relation_action_groupoid"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "sheaf_of_closure_certificates"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "terminal_quotient_of_closure_certificates"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "two_state_free_cofree_duality"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "typed_admissibility_instrument"
+      }
+    ],
+    "raw_source_sha_mismatches": 28,
+    "recertifications": [
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "addition_of_approximation_and_harmonic_geometry"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "addition_of_the_two_complete_b_level_operator_families"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "complex_phase_coordinates_and_fourier_reconstruction"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "dual_closure_idempotence_and_oscillatory_non_closure"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "finite_approximation_and_vanishing_residual_energy"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "flowpoint_unity_orientation_and_integer_unfolding"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "global_symmetry_and_kd_charge_conservation"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "idempotent_splitting_and_oscillation_obstruction"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "invariant_anti_invariant_orbit_fields"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "involutive_duality_c_2_action"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "local_gauge_symmetry_and_elastic_divergence_identity"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "minimal_two_state_involution_orbitwise_alternator"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "noether_constant_to_local_transgression"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "recorded_sha256": "3cd520d5b025f6f241c7eb09417528276f0c6904e07aa088057c7b57803bf011",
+        "theorem_complex_id": "operation_covariance_and_spectral_minimization"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "protected_commuting_closure_transport"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "reciprocal_orbit_double_cover"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "reciprocal_relation_action_groupoid"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "sheaf_of_closure_certificates"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "terminal_quotient_of_closure_certificates"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "recorded_sha256": "5e459eed3eca36d1342bc879fc8ac3962f3c801bfd1aab733f3db081a7ed0c69",
+        "theorem_complex_id": "two_state_free_cofree_duality"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "recorded_sha256": "1a186b3350f16c284b3cb54f7dfb63d6729d98142e9fb8b53c6de4d9ce3d84f3",
+        "theorem_complex_id": "typed_admissibility_instrument"
+      }
+    ],
+    "schema_version": "2.1",
+    "source_binding_overrides": 0,
+    "source_recertifications": 28,
+    "total_manifests": 351
+  },
   "artifact_summary": {
     "animation_generators": 33,
+    "complete_core_artifact_bundles": 351,
     "deterministic_seed": 0,
-    "generated_static_figures": 333,
-    "generated_tables": 299,
-    "producer_local_animations": 137,
+    "diagnostic_bundles_enriched": 351,
+    "generated_2d_or_static_plots": 351,
+    "generated_npz_traces": 351,
+    "generated_static_figures": 353,
+    "generated_tables": 441,
+    "incomplete_core_artifact_bundles": 0,
+    "producer_local_animations": 147,
     "producer_local_audio_files": 20,
-    "producer_local_manifests": 202,
-    "theorem_manifests": 195
+    "producer_local_manifests": 348,
+    "suite_manifest_replays": 125,
+    "theorem_manifests": 351,
+    "typed_contract_diagnostic_evaluations": 226,
+    "typed_promoted_source_samples": 156
+  },
+  "authoritative_source_binding": {
+    "appendix_counts": {
+      "appendix_canonical_self_negating_involution_flowpoint.tex": {
+        "authoritative_sha256": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+        "mismatches": 0,
+        "raw_exact": 7,
+        "recertified": 0,
+        "rows": 7
+      },
+      "appendix_the_completeness_theorem.tex": {
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "mismatches": 0,
+        "raw_exact": 15,
+        "recertified": 15,
+        "rows": 15
+      },
+      "appendix_tne_artificial_intelligence_architechture.tex": {
+        "authoritative_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+        "mismatches": 0,
+        "raw_exact": 71,
+        "recertified": 0,
+        "rows": 71
+      },
+      "appendix_tne_fluctuation_and_elastic_dynamics.tex": {
+        "authoritative_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+        "mismatches": 0,
+        "raw_exact": 36,
+        "recertified": 0,
+        "rows": 36
+      },
+      "appendix_tne_foundational_closure_architecture.tex": {
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "mismatches": 0,
+        "raw_exact": 79,
+        "recertified": 79,
+        "rows": 79
+      },
+      "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": {
+        "authoritative_sha256": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+        "mismatches": 0,
+        "raw_exact": 136,
+        "recertified": 0,
+        "rows": 136
+      },
+      "appendix_tne_mathematical_closure_architecture.tex": {
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "mismatches": 0,
+        "raw_exact": 7,
+        "recertified": 7,
+        "rows": 7
+      }
+    },
+    "authority_policy": "observational_no_sha_overwrite",
+    "bindings": {
+      "appendix_canonical_self_negating_involution_flowpoint.tex": "5c44d82b34cd4c5d05d01253a62987f2f6099d582bf954a4cbdbc13b52b52206",
+      "appendix_the_completeness_theorem.tex": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+      "appendix_tne_artificial_intelligence_architechture.tex": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+      "appendix_tne_fluctuation_and_elastic_dynamics.tex": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+      "appendix_tne_foundational_closure_architecture.tex": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+      "appendix_tne_gravitational_cosmological_quantum_dynamics.tex": "5cb9526f26767ca245f32a70a8f5a12138d374b3f4bb9821db155b9eece35062",
+      "appendix_tne_mathematical_closure_architecture.tex": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+    },
+    "effective_mismatches": [],
+    "effective_source_mismatch_count": 0,
+    "effective_source_mismatches": [],
+    "effective_source_sha_mismatches": 0,
+    "historical_recertification_count": 101,
+    "historical_recertifications": [
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "flowpoint_unity_orientation_and_integer_unfolding",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "operation_covariance_and_spectral_minimization",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "finite_approximation_and_vanishing_residual_energy",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "complex_phase_coordinates_and_fourier_reconstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "addition_of_arithmetic_orientation_and_typed_operation_theory",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "addition_of_approximation_and_harmonic_geometry",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_mathematical_closure_architecture.tex",
+        "authoritative_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0",
+        "complex_id": "addition_of_the_two_complete_b_level_operator_families",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "3f428e24ed9518655f94145dcd8667f979aa03c74f75695d8273da273e2538d0"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "kernel_alternator",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "necessity_and_sufficiency_of_2_adic_mirror_history_coding_and_coordinatewise_reflection_closure_nece",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "reciprocal_relation_action_groupoid",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "minimal_two_state_involution_orbitwise_alternator",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "involutive_duality_c_2_action",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "reciprocal_orbit_double_cover",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "two_state_free_cofree_duality",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "invariant_anti_invariant_orbit_fields",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "kernel_recursion",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "schedule_controlled_orbit_transport",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "involutive_generator_word_closure_and_conjugacy",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "schedule_driven_generator_word_field",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "order_two_symmetry_recursion",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "phase_gated_compensation_transport",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "orbit_harmonic_phase_resolution",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "equivariant_orbit_spectral_reconstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "affine_spatial_involution_orbit",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "involution_to_chord_linearization",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "twisted_orbit_balance_bundle",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "bidirectional_integer_rays_and_finite_polarity_enumeration",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "signed_shortlex_cubic_transduction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "recurrent_cubical_cover_dynamics",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "reflected_cubical_address_space",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "continuum_trajectory_cardinality_and_countable_phase_cell_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "power_set_continuum_and_atomic_quotient_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "dense_flowpoint_traces_and_nowhere_dense_quantized_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "dual_realizability_invariant_closure_and_defect_repair",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "binary_supported_continuous_superposition_and_atom_phase_translation",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "prefix_tree_dense_reconstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "complement_invariant_fractal_skeleton_completion",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "boolean_decision_extension_consensus",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "end_compactified_additive_continuum_field",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "decision_weighted_complex_coverage_and_dual_repair_field",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "spectrum_normalization_and_normalization_obstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "spectrum_dfi_duality_and_dfi_divergence",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "measurable_decomposition_and_non_measurable_obstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "completeness_and_incompleteness_of_the_soi_l_p_structure",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "entropy_density_mapping_and_entropy_divergence",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "finitizable_infinity_and_the_non_finitization_boundary",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "dual_realizability_and_the_missing_dual_defect",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "borel_analytic_sufficiency_and_over_extension_beyond_measurability",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "factor_map_equivariance_and_limit_bias",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "spectrum_flowpoint_addressability_and_unaddressability",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "metric_deformation_robustness_and_deformation_fragility",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "2_adic_history_accessibility_and_frozen_accessibility",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "cosmic_matrix_address_and_ghost_spark_obstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "observable_locality_and_infinite_exposure",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "elastic_curvature_probing_and_incoherent_warping",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "observation_induced_collapse_and_collapse_divergence",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "collapse_attractor_stability_and_attractor_instability",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "uniqueness_and_non_uniqueness_of_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "hilbert_projection_realization_and_projection_breakdown",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "fixed_point_consistency_and_trivial_collapse_failure",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "observation_definiteness_equivalence_and_closure_failure",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "definite_state_projection_and_state_ambiguity",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "ergodic_collapse_projection_and_non_convergence",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "outcome_conditioned_closure_instrument",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "temporal_compression_and_frozen_time_obstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "collapse_spectral_selection_and_spectral_ambiguity",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "observation_dimensional_binding_and_dimensional_non_binding",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "observable_locality_and_collapse_inaccessibility",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "local_horizon_boundary_and_non_locality_divergence",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_tne_foundational_closure_architecture.tex",
+        "authoritative_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea",
+        "complex_id": "closure_conditioned_spectral_outcome_field",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "2679b61a1d98100ed3a13669c16c299cd9b09807bc3847d383d559c9251189ea"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "g_delian_provability_boundary_and_declared_dual_carrier_completion",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "2_adic_criterion_of_theoremhood_and_typed_dual_infinity",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "non_manifestability_of_the_anti_circle_and_observation_collapse",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "dual_closure_idempotence_and_oscillatory_non_closure",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "karoubi_envelope_equivalence_and_missing_idempotent_splittings",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "commutation_of_closure_with_parity_soi_and_misaligned_closures",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "conservativity_of_dual_closure_over_base_theory_and_trivialization_overreach",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "typed_admissibility_instrument",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "idempotent_splitting_and_oscillation_obstruction",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "protected_commuting_closure_transport",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "global_symmetry_and_kd_charge_conservation",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "local_gauge_symmetry_and_elastic_divergence_identity",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "noether_constant_to_local_transgression",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "sheaf_of_closure_certificates",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      },
+      {
+        "appendix_file": "appendix_the_completeness_theorem.tex",
+        "authoritative_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b",
+        "complex_id": "terminal_quotient_of_closure_certificates",
+        "current_source_binding_status": "verified",
+        "recertification_status": "byte_verified_label_reaudited",
+        "recorded_sha256": "d711e5c4260fb61bff1ef3e7ea3be14ef093370a9ff22607d2a54e74ba8b166b"
+      }
+    ],
+    "implementation_status_change_count": 156,
+    "implementation_status_changes": [
+      {
+        "complex_id": "schedule_controlled_parity_coding_and_uniform_minimal_involution",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact binary schedule parity encoding, involutive state history, and decoder contract.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "bidirectional_orbit_invariance_and_minimal_involution_generated_c_2_action",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact minimal C2 orbit action with bidirectional invariance and nonzero-state boundary.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "schedule_controlled_orbit_transport",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact parity-cocycle orbit transport with identity, inverse, cocycle, and source-removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "involutive_generator_word_closure_and_conjugacy",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact generator-word parity reduction and conjugacy certificate with source-removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "schedule_driven_generator_word_field",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/symmetry/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact schedule-driven word-field recurrence, conjugacy, boundary, and source-removal closure.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "minimal_and_cyclic_spatiality_two_state_reflection_and_finite_cyclic_orbit_closure",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact reflection and finite cyclic orbit classification with closure residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "imaginary_and_phase_spatiality_quarter_turn_rotation_and_phase_conjugate_reflection",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact quarter-turn and phase-conjugate reflection law with involution and conjugacy residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "cyclic_square_root_lifting_and_phase_anchored_dihedralization",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact cyclic square-root double-cover lift with order, dihedral, and source-removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "orbit_harmonic_phase_resolution",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact orbit DFT, Parseval reconstruction, half-step phase resolution, and source-removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "equivariant_orbit_spectral_reconstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/spatiality/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact tight-frame reconstruction and cyclic-shift equivariance with source-removal closure.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "bidirectional_integer_rays_and_finite_polarity_enumeration",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact bidirectional ray reflection and finite six-letter shortlex encode/decode contract.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "combinatorial_cubic_generation_and_stochastic_polarity_accessibility",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact cubic parity evaluation, full finite orbit reachability, and positive finite-word probability contract.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "finitary_flip_invariance_and_null_recurrent_countable_exploration",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact finitary adjacent-flip inverse, lazy reflected-kernel normalization, reversibility, and resistance-increment certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "signed_shortlex_cubic_transduction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Parity-locked signed cubic transducer with exact action, reflection, canonical section, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "recurrent_cubical_cover_dynamics",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Parity-class cubical support path with positive Markov weight, reversible kernel, resistance certificate, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "reflected_cubical_address_space",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/countable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Exact signed address graph, reflection quotient kernel, canonical section, orientation reconstruction, and both-source closure.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "continuum_trajectory_cardinality_and_countable_phase_cell_collapse",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Cantor-coordinate trajectory, phase-cell projection, and exact coding residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "power_set_continuum_and_atomic_quotient_collapse",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite characteristic-set, Cantor encoding, and least-atom quotient certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dense_flowpoint_traces_and_nowhere_dense_quantized_collapse",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed rational-anchor dense trace with exact quantized-cell projection and finite nowhere-dense certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "recursive_cantor_space_universality_and_finite_resolution_collapse",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed coherent Cantor-prefix tower with explicit tail bound, decoder, and finite-resolution residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "fractal_flowpoint_self_similarity_and_finite_depth_atomic_resolution",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed Cantor self-similarity, complement reflection, and finite-depth approximation certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "duality_completion_and_countable_realization_of_the_continuum_power_set_coding_inverse_limits_and_de",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed dense skeleton, coherent prefix inverse system, terminal bound, and decoder certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "complete_boolean_algebra_missing_complements_and_generated_completion",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Boolean completion with De Morgan, distributivity, and complement residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "operational_coarse_graining_and_persistence_of_unresolved_distinctions",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed prefix coarse-graining with resolved factorization and explicit unresolved extension family.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "2_adic_coded_continuum_coverage_and_singleton_collapse",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed binary/2-adic coordinate decoding, Euclidean coverage chart, and singleton-collapse certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dual_realizability_invariant_closure_and_defect_repair",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed involutive dual closure with explicit defect localization and minimal repair set.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "binary_supported_continuous_superposition_and_atom_phase_translation",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Additive pulse-field valuation with exact peak decoding, atom-phase translation, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "prefix_tree_dense_reconstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Coherent prefix-tree dense reconstruction with vanishing tail bound, quantized tower, decoder, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "complement_invariant_fractal_skeleton_completion",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Complement-invariant dense fractal skeleton with completion bounds, reflection exchange, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "boolean_decision_extension_consensus",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Boolean decision partition with resolved/unresolved extension consensus, involution, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "2_adic_canonical_domain_repair_and_euclidean_coverage_dualization",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Canonical binary-domain repair, Euclidean decoder, dual closure, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "end_compactified_additive_continuum_field",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Spatial end field combining reconstructed center and binary pulse tail with uniform convergence and both-source removal closure.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "decision_weighted_complex_coverage_and_dual_repair_field",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/uncountable_infinity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Decision-weighted complex coverage field with exact real projection, Klein-four saturation, consensus, repair, and three-source removal closure.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spectrum_normalization_and_normalization_obstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite normalization coordinate, absolute-scale transport, unit-mass, scale-covariance, and obstruction residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spectrum_dfi_duality_and_dfi_divergence",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_dfi.py",
+        "from": "proxy",
+        "reason": "Authoritative finite SOI-DFI law V0=Omega/n, Vi=V0 sigma_i, Si=V0(sigma_i-1), exact L2 scaling, and fail-closed norm/exponential divergence boundaries.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "measurable_decomposition_and_non_measurable_obstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed measurable partition with reconstruction, conservation, disjointness, and non-measurable frontier residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "completeness_and_incompleteness_of_the_soi_l_p_structure",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Lp transport witness with exact norm scaling, reconstruction, and declared completion boundary.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "entropy_density_mapping_and_entropy_divergence",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed normalized entropy-density transfer with finite-alphabet, normalization, and absolute-scale residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "finitizable_infinity_and_the_non_finitization_boundary",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/authoritative_finitization.py",
+        "from": "proxy",
+        "reason": "Authoritative finite L1 approximation with monotone relative error and exact absolute SOI scaling ||e||_Omega=Omega||e||_1, including backward-compatible Omega=1 witnesses.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dual_realizability_and_the_missing_dual_defect",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed coordinate factorization with pseudoinverse reconstruction, orthogonal projection, and missing-dual residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soi_measure_preserving_normalization_and_spectrum_obstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite pushforward measure transfer with unit mass, target calibration, and absolute SOI scaling.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "borel_analytic_sufficiency_and_over_extension_beyond_measurability",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed declared measurable-scope transfer with omitted-set and exact frontier residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "factor_map_equivariance_and_limit_bias",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed source/target factor map with operator equivariance, Cesaro-limit transfer, and calibration residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spectrum_flowpoint_addressability_and_unaddressability",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Additive normalization/measurability/realizability address synthesis with collision, gap, calibration, reconstruction, and source-removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "metric_deformation_robustness_and_deformation_fragility",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Additive normalization/Lp/entropy/factor/realizability deformation synthesis with metric, transport, obstruction, and five-source gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "2_adic_history_accessibility_and_frozen_accessibility",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Additive schedule, normalization, measurability, factor, ergodic, and realizability history synthesis with six-source gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "cosmic_matrix_address_and_ghost_spark_obstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Spatial cosmic-event ledger from address and history operators with unique reconstruction, ghost obstruction, and both-source gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observable_locality_and_infinite_exposure",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Spatial local readout from Observation temporal compression and spectral selection with projector, exterior, boundary, and source-removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "elastic_curvature_probing_and_incoherent_warping",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Spatial Elastic-pi curvature probe from metric deformation and Observation spectral selection with localization, boundary, and both-source gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observation_induced_collapse_and_collapse_divergence",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed Cesaro observation, fixed-component projection, convergence, Cauchy, and collapse-divergence residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "collapse_attractor_stability_and_attractor_instability",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed attractor-plus-perturbation averages with zero-mean, translated-attractor, and stability-bound certificates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "uniqueness_and_non_uniqueness_of_collapse",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed preparation-family collapse limits with pathwise, singleton-cluster, and ensemble-uniqueness residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "hilbert_projection_realization_and_projection_breakdown",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed involutive Hilbert projection pair with unitary, idempotence, orthogonality, and Cesaro-selection residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "fixed_point_consistency_and_trivial_collapse_failure",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite closure lattice with monotonicity, extensivity, idempotence, fixed-output, and fixed-set certificates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observation_definiteness_equivalence_and_closure_failure",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite observation transition with stabilization depths, eventual idempotence, and failure-set partition.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "definite_state_projection_and_state_ambiguity",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed PVM/Luders instrument with Born normalization, projector orthogonality, conditional-state normalization, and repeatability.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "ergodic_collapse_projection_and_non_convergence",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed involution-to-projector ergodic realization with algebraic, geometric, orthogonality, fixed-range, and convergence boundaries.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "outcome_conditioned_closure_instrument",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Outcome-conditioned closure/Luders update with support absorption, repeated-outcome idempotence, and both-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "involutive_collapse_spectral_pinning_and_spectral_drift",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Involutive spectral pinning with fixed/antifixed projectors, Cesaro selection, drift defects, and three-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "temporal_compression_and_frozen_time_obstruction",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Preparation-family temporal compression with common-limit, convergence, Cauchy, and three-source removal certificates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "collapse_spectral_selection_and_spectral_ambiguity",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Hermitian spectral selection with invariant projector, Cesaro multiplier, spectral weights, entropy, and three-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observation_dimensional_binding_and_dimensional_non_binding",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Commuting-projector common fixed-core field with dimension, projection, stability, and both-source closure gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observable_locality_and_collapse_inaccessibility",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Localized temporal/spectral observation field with exact support, projector, and both-source closure residuals.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "local_horizon_boundary_and_non_locality_divergence",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Finite family tail profile, individual/common horizon, leakage, tightness, and both-source removal closure.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "closure_conditioned_spectral_outcome_field",
+        "evidence_path": "the_nothingness_effect/foundational_architecture/observation_and_collapse/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Closure-conditioned invariant-sector PVM field with commutation, orthogonal reconstruction, repeated-update idempotence, and three-source removal gates.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity",
+        "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py",
+        "from": "proxy",
+        "reason": "Typed decomposition, permutation-covariance, additive-total, and reproducibility contract with positive and invalid-mapping tests.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dfi_flowpoint_consistency_and_interface_inconsistency",
+        "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py",
+        "from": "proxy",
+        "reason": "Typed feature-involution, component/total consistency, and commuting-interface contract with obstruction tests.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dfi_simulation_consistency_and_simulation_breakdown",
+        "evidence_path": "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/extended_contracts.py",
+        "from": "proxy",
+        "reason": "Typed canonical-versus-simulated DFI validation record with explicit component, total, maximum-error, and breakdown witnesses.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "parity_symmetry_dubler_duality_closure",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "locality_nonlocality_in_the_dubler_pdfi_framework",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "universal_elasticity_constant_k_d",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "emergence_triviality_in_elastic_fields",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spectral_observability_indistinguishability",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dubler_entropy_conservation",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "temporal_asymmetry_symmetry_in_pdfi_fields",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "causality_via_elastic_dubler_e_and_causal_symmetry",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "information_entropy_in_the_elastic_dubler_perspective",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "pdfi_e_quantum_entanglement_interface",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spatial_homogeneity_heterogeneity_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "universal_domain_specific_k_d_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "appendix_wide_elastic_dubler_cross_complex_closure_and_computational_falsification_interface",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Elastic Dubler source-law response with explicit invariant/obstruction residual and fail-closed domain validation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "parity_localized_pdfi_response_operator",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "elasticity_scaled_spectral_operator_flow",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observable_entropy_redistribution_channel",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "temporal_directed_elastic_transport",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "information_calibrated_quantum_spectral_response",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "elasticity_weighted_spatial_heterogeneity",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "parity_elastic_spectral_spatial_closure",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observable_conserved_directed_transport_closure",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spatially_calibrated_quantum_information_closure",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "locality_driven_rotation_curve_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite rotation-potential certificate with explicit radial residual and fail-closed field domain.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spiral_pitch_angle_gradient_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite pitch-gradient certificate with explicit ratio residual and fail-closed field domain.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "entropic_screening_nonlocal_curvature_mixing",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed screened local/nonlocal curvature decomposition with exact finite reconstruction residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "halo_structure_formation_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite screened halo-response law with explicit obstruction residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "entropic_gradient_filament_formation_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite entropy-gradient filament-production law with explicit residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "locality_confinement_stability_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite confinement persistence law with positivity obstruction and positive-elasticity gate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "entropic_localization_cluster_stability_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite entropic cluster-localization law with positivity obstruction.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "localized_curvature_information_preservation_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite curvature-weighted information law with exact reconstruction residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "cosmic_web_emergence_homogenization_duality",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite cosmic-web mean-removal and homogenization residual certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "appendix_wide_locality_driven_gravity_cross_complex_closure_and_computational_falsification_interfac",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed appendix-wide finite residual interface over all Locality structural channels.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "rotation_pitch_coupling_invariant",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "screened_halo_response",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "confined_filament_persistence",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "information_bearing_cluster_web_stability",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "screened_rotation_halo_geometry",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "information_preserving_cosmic_network_closure",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "elastic_hawking_emission_radiative_stasis",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite Hawking-like emission certificate with positive-mass/elasticity gates and explicit flux residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "hawking_radiation_as_entropic_relaxation_stasis",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite entropic-relaxation certificate with explicit temporal derivative residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observer_horizon_threshold_infinite_visibility",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed bounded observer-threshold visibility law with finite threshold and explicit residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "black_hole_dynamics::elastic_gravitational_memory_instant_relaxation",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite decaying deformation-memory integral with explicit reconstruction residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "residual_deformation_memory_perfect_relaxation",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite residual-memory lower field with positivity and exact relaxation residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "simulation_consistency_breakdown_and_non_equivalence",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite simulation-reference discrepancy certificate that preserves non-equivalence as an explicit witness.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "appendix_wide_black_hole_hawking_observer_horizon_cross_complex_closure_and_computational_falsificat",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed appendix-wide finite residual interface over emission, relaxation, visibility, memory, and simulation channels.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spatiotemporal_hawking_flux_density",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observer_accessible_curvature_memory",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "certified_residual_memory_lower_bound",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "observable_hawking_memory_certification",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "dfi_memory_kernel_in_waveforms_no_extra_memory_imprint",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite waveform-memory convolution with normalized non-negative kernel and explicit reconstruction residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "flowpoint_boundary_mode_conversion_pure_mode_propagation",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed binary-Flowpoint mode-conversion law with explicit conversion residual and fail-closed parity domain.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "shock_onset_self_steepening_threshold_no_shock_propagation",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite shock-threshold functional with explicit self-steepening residual and non-negative onset field.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "stochastic_background_tilt_n_e_standard_gr_tilt_n_t",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite logarithmic spectral-tilt law on strictly positive frequency and spectrum domains.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "environment_dependent_group_velocity_mapping_uniform_propagation",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite environment-dependent group-velocity map with positive transport domain and explicit residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "invertible_source_transport_detection_map_non_invertible_degeneracy",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite source-to-detection map with smallest-singular-value obstruction exposing non-invertible degeneracy.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "appendix_wide_gravitational_ripple_wavefront_cross_complex_closure_and_computational_falsification_i",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/canonical_contracts.py",
+        "from": "proxy",
+        "reason": "Typed appendix-wide finite residual interface over memory, mode, shock, tilt, velocity, and detection channels.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "flowpoint_resolved_dfi_memory_transfer",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "shock_gated_stochastic_tilt_production",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "environment_tomography_information_metric",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/source_faithful_contracts.py",
+        "from": "proxy",
+        "reason": "Source-faithful finite realization of the exact authoritative appendix operator, residual, domain conditions, and source-removal law.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "memory_shock_environmental_reconstruction",
+        "evidence_path": "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/authoritative_product_contracts.py",
+        "from": "proxy",
+        "reason": "Exact appendix-declared source-product certificate with independent residual and source-removal recomputation.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite autocorrelation and continuous-mass diagnostic with targeted failure-dual tests.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed Flowpoint parity spectral diagnostic with asymmetric-line failure witness.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "qenn::dual_support_equivalence_support_mismatch_leakage",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed dual-support intersection and leakage certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed bounded-remainder, memory, and drift diagnostic with perturbation tests.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed inflation-collapse support projection with nonlinear sideband leakage witness.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "epoch_operator_closure_backprop_optimiser_induced_resonance",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed epoch-operator spectral-radius certificate with expanding-trajectory obstruction test.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed curvature/entropy landscape certificate with explicit sharp-minimum defect.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "hyper_parameter_stability_wedge_instability_lobe",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/qenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed finite stability-wedge margin and instability-lobe residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed prime-graph/quasicrystal support intersection and leakage certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed joint energy/temperature scaling invariance certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed MPL-TC motif coverage and run-drift certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed layerwise Parseval energy certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed parity-sector orthogonality and cross-gradient contamination certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "prime_shell_growth_regularity_shell_instability_phase_slips",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/pgqenn/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed prime-shell reconstruction and 2-adic phase-slip certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_cross_modal_transfer_generalization_and_dual_stability",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed cross-modal Gram transfer and dual-stability certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_error_contraction_and_dual_error_orthogonality",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed error-contraction and adjacent-error orthogonality certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed entropy-spread and collapse-degeneracy certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_modality_invariant_learning_and_universal_adaptation",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed normalized modality-invariance and adaptation certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed expressivity-rank and entropy-minimal generalization certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed cross-modal associativity and invariant-collapse certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed hierarchical modality-stack transfer and collapse defect.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_universal_generalization_principle_failure_brittleness_duality",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed held-out spatial-regime brittleness certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_universal_cloning_principle_cloning_failure_duality",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed held-out-modality cloning and failure certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "spectral_phase_locking_and_collapse_in_soinet",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed dominant-spectrum phase-locking and collapse certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed spectral-centroid classification and degeneracy certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soi_cross_domain_generalization_and_collapse",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed leave-one-domain-out generalization and collapse certificate.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soi_entropy_minimization_and_entropic_catastrophe",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed modality entropy-minimization and catastrophe residual.",
+        "to": "implemented"
+      },
+      {
+        "complex_id": "soinet_meta_learnability_dual_closure",
+        "evidence_path": "the_nothingness_effect/artificial_intelligence/soinets/source_contracts.py",
+        "from": "proxy",
+        "reason": "Typed meta-state rank and condition certificate.",
+        "to": "implemented"
+      }
+    ],
+    "implementation_status_overrides": 156,
+    "managed_appendices": 7,
+    "managed_rows": 351,
+    "raw_source_mismatch_count": 0,
+    "raw_source_mismatches": [],
+    "raw_source_sha_mismatches": 0,
+    "schema_version": "2.1",
+    "source_binding_overrides": 0,
+    "source_recertifications": 101,
+    "total_rows": 351
   },
   "changes": {
-    "modified_files": 2113,
-    "new_files": 5129,
-    "total_changed_files": 7242
+    "modified_files": 2115,
+    "new_files": 5590,
+    "total_changed_files": 7705
   },
   "claim_boundary": "finite computational support; not a formal proof substitute",
   "default_branch": "main",
+  "dependency_downgrades": [],
   "dependency_status": "pip check passed",
   "entrypoint_execution": {
-    "simulation": {
+    "classification_policy": "bounded_contract_inventory_fallback is inventory evidence and is not counted as a simulation; typed contract suites are contract evidence",
+    "contract_evidence": {
+      "entrypoints": 18,
+      "failed": 0,
+      "other": 0,
+      "passed": 18,
+      "paths": [
+        "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/simulate_pgqenn.py",
+        "the_nothingness_effect/artificial_intelligence/qenn/simulation/simulate_qenn.py",
+        "the_nothingness_effect/artificial_intelligence/soinets/simulation/simulate_soinets.py",
+        "the_nothingness_effect/canonical_self_negating_involution/the_flowpoint/simulation/simulate_the_flowpoint.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/simulate_dynamic_fluctuation_index.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi/simulation/simulate_elastic_pi.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/elastic_pi_norm/simulation/simulate_elastic_pi_norm.py",
+        "the_nothingness_effect/fluctuation_and_elastic_dynamics/parity_adapted_dynamic_fluctuation_index/simulation/simulate_parity_adapted_dynamic_fluctuation_index.py",
+        "the_nothingness_effect/foundational_architecture/duality/simulation/simulate_duality.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/black_holes_hawking_radiation_and_observer_horizons/simulation/simulate_black_holes_hawking_radiation_and_observer_horizons.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/discrete_time_quasicrystals_in_the_flowpoint/simulation/simulate_discrete_time_quasicrystals_in_the_flowpoint.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/elastic_dubler_interferometry_probing_gravitational_curvature/simulation/simulate_elastic_dubler_interferometry_probing_gravitational_curvature.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/emergent_cosmological_spark_dynamics/simulation/simulate_emergent_cosmological_spark_dynamics.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/gravitational_ripples_as_elastic_pi_wavefronts/simulation/simulate_gravitational_ripples_as_elastic_pi_wavefronts.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/locality_driven_gravity/simulation/simulate_locality_driven_gravity.py",
+        "the_nothingness_effect/gravitational_cosmological_and_quantum_dynamics_architecture/the_elastic_dubler_effect/simulation/simulate_the_elastic_dubler_effect.py",
+        "the_nothingness_effect/mathematical_architecture/simulation/simulate_mathematical_architecture.py",
+        "the_nothingness_effect/the_completeness_theorem/simulation/simulate_the_completeness_theorem.py"
+      ],
+      "runtime_seconds": 80.026001,
+      "timeout": 0
+    },
+    "inventory_fallback": {
+      "entrypoints": 4,
+      "failed": 0,
+      "other": 0,
+      "passed": 4,
+      "paths": [
+        "the_nothingness_effect/foundational_architecture/countable_infinity/simulation/simulate_countable_infinity.py",
+        "the_nothingness_effect/foundational_architecture/spatiality/simulation/simulate_spatiality.py",
+        "the_nothingness_effect/foundational_architecture/symmetry/simulation/simulate_symmetry.py",
+        "the_nothingness_effect/foundational_architecture/uncountable_infinity/simulation/simulate_uncountable_infinity.py"
+      ],
+      "runtime_seconds": 8.052952,
+      "timeout": 0
+    },
+    "registered_simulation_paths": {
       "failed": 0,
       "passed": 37,
+      "timeout": 0
+    },
+    "simulation": {
+      "entrypoints": 15,
+      "failed": 0,
+      "other": 0,
+      "passed": 15,
+      "paths": [
+        "the_nothingness_effect/foundational_architecture/observation_and_collapse/simulation/simulate_observation_and_collapse.py",
+        "the_nothingness_effect/foundational_architecture/the_spectrum_of_infinities/simulation/simulate_the_spectrum_of_infinities.py",
+        "the_nothingness_effect/mathematical_architecture/flowpoint_math_operations/simulation/simulate_flowpoint_math_operations.py",
+        "the_nothingness_effect/mathematical_architecture/flowpoint_pi_approximation/simulation/simulate_flowpoint_pi_approximation.py",
+        "the_nothingness_effect/mathematical_architecture/flowpoint_trigonometry/simulation/simulate_flowpoint_trigonometry.py",
+        "the_nothingness_effect/the_completeness_theorem/noether_structure/simulation/simulate_noether_structure.py",
+        "the_nothingness_effect/artificial_intelligence/color_classification/simulation/run_simulation.py",
+        "the_nothingness_effect/artificial_intelligence/sound_classification/simulation/run_simulation.py",
+        "the_nothingness_effect/artificial_intelligence/bidirectional_color_classification/simulation/run_simulation.py",
+        "the_nothingness_effect/artificial_intelligence/bidirectional_sound_classification/simulation/run_simulation.py",
+        "the_nothingness_effect/artificial_intelligence/color_cloning/simulation/run_simulation.py",
+        "the_nothingness_effect/artificial_intelligence/sound_cloning/simulation/run_simulation.py",
+        "the_nothingness_effect/artificial_intelligence/qenn/simulation/run_all_capabilities.py",
+        "the_nothingness_effect/artificial_intelligence/pgqenn/simulation/run_all_capabilities.py",
+        "the_nothingness_effect/artificial_intelligence/soinets/simulation/run_all_capabilities.py"
+      ],
+      "runtime_seconds": 492.978785,
       "timeout": 0
     },
     "test": {
       "failed": 0,
       "passed": 37,
       "timeout": 0
+    },
+    "unknown_execution_kind": {
+      "entrypoints": 0,
+      "failed": 0,
+      "other": 0,
+      "passed": 0,
+      "paths": [],
+      "runtime_seconds": 0,
+      "timeout": 0
     }
   },
+  "execution_evidence_claim_boundary": "Only producer-local simulations and AI capability runs are counted as simulations. Typed contract suites and inventory fallbacks remain separate.",
+  "final_qa_passed": true,
+  "formal_machine_proof_coverage": {
+    "counts": {
+      "not_formally_proved": 351
+    },
+    "invalid_proof_claims": 0,
+    "policy": "tests, exact_semantics, simulations, and small residuals are not formal proofs without kernel-checked certificate evidence",
+    "rows": 351,
+    "verified_formal_proofs": 0
+  },
+  "layout_verification": {
+    "checks": [
+      {
+        "failures": [],
+        "name": "required top-level architecture packages",
+        "number": 1,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "required subject-module paths",
+        "number": 2,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "required package initializers",
+        "number": 3,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "obsolete implementation paths absent",
+        "number": 4,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "subject implementation/test/simulation/theorem structure",
+        "number": 5,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "theorem-complex manifests",
+        "number": 6,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "unique theorem-complex IDs",
+        "number": 7,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "verified 204A+98B+49C inventory",
+        "number": 8,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "implementation modules import",
+        "number": 9,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "manifest file references",
+        "number": 10,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "authoritative appendices not tracked",
+        "number": 11,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "appendix content not copied",
+        "number": 12,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "no undocumented empty subject placeholders",
+        "number": 13,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "implemented B laws are genuine additive derivations",
+        "number": 14,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "implemented C laws are genuine spatial closures",
+        "number": 15,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "artifact manifests use relative paths",
+        "number": 16,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "required test and simulation entrypoints",
+        "number": 17,
+        "passed": true
+      },
+      {
+        "failures": [],
+        "name": "canonical imports are working-directory independent",
+        "number": 18,
+        "passed": true
+      }
+    ],
+    "failed": 0,
+    "passed": 18
+  },
+  "mathematical_closure": {
+    "closure_obligation_ledger_count": 0,
+    "gate": "requires zero OPEN and zero NUMERICAL_CANDIDATE",
+    "open_and_numerical_candidate": 0
+  },
   "python_version": "3.14.3",
+  "release_blockers": [],
+  "release_status_dimensions": {
+    "artifact_status": {
+      "complete_core_bundle": 351
+    },
+    "closure_status": {
+      "closed": 49,
+      "satisfied": 302
+    },
+    "runtime_status": {
+      "implemented": 351
+    },
+    "source_exactness": {
+      "exact": 351
+    },
+    "validation_status": {
+      "synthetic": 351
+    }
+  },
   "repository": "https://github.com/pt2710/The-Nothingness-Effect.git",
-  "repository_result_commit": "983bcbd11c88fd1533236bf6fee5cc7581ff8605",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_revision_plan": {
     "reviewed_partial_alternative": 27,
     "reviewed_present": 9,
@@ -96,14 +2673,14 @@
     "reviewed_removed_superseded": 4
   },
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
-  "result_commit_note": "This is the immutable implementation/artifact source commit immediately before the final QA report commit.",
-  "schema_version": "1.0",
+  "result_commit_note": "Immutable implementation/artifact source commit used for this QA evaluation.",
+  "schema_version": "1.5",
   "security_confirmation": "No authoritative appendix .tex file was copied into, tracked by, committed to, or pushed to the GitHub repository.",
   "source_law_regression_status": "passed",
   "tests": {
     "failed": 0,
-    "passed": 827,
-    "runtime_seconds": 627.79,
+    "passed": 994,
+    "runtime_seconds": 539.76,
     "skipped": 0,
     "warnings": 8
   },
@@ -114,145 +2691,18 @@
     "blocked_B": 0,
     "blocked_C": 0,
     "carrier_conflicts": 0,
+    "dependency_downgraded_to_proxy": 0,
     "duplicate_complex_ids": 0,
-    "implemented": 195,
-    "implemented_A": 101,
-    "implemented_B": 64,
-    "implemented_C": 30,
+    "implemented": 351,
+    "implemented_A": 204,
+    "implemented_B": 98,
+    "implemented_C": 49,
     "not_implemented": 0,
-    "proxy_only": 156,
+    "proxy_only": 0,
+    "requested_implemented": 351,
     "total": 351
   },
   "tracked_tex_files": [],
-  "unresolved_internal_dependencies": [
-    {
-      "complex_id": "cross_modal_generalization_collapse_transfer",
-      "source_id": "soinet_cross_modal_transfer_generalization_and_dual_stability"
-    },
-    {
-      "complex_id": "cross_modal_generalization_collapse_transfer",
-      "source_id": "soi_cross_domain_generalization_and_collapse"
-    },
-    {
-      "complex_id": "entropic_hyperparameter_stability_margin",
-      "source_id": "entropy_balanced_landscape_no_sharp_minima_sharp_minima_trap"
-    },
-    {
-      "complex_id": "entropic_hyperparameter_stability_margin",
-      "source_id": "hyper_parameter_stability_wedge_instability_lobe"
-    },
-    {
-      "complex_id": "entropy_spectral_phase_locking_operator",
-      "source_id": "universal_entropy_minimization_and_collapse_degeneracy_duality_in_soinet"
-    },
-    {
-      "complex_id": "entropy_spectral_phase_locking_operator",
-      "source_id": "spectral_phase_locking_and_collapse_in_soinet"
-    },
-    {
-      "complex_id": "epoch_support_commutator_closure",
-      "source_id": "inflation_collapse_support_invariance_nonlinear_sideband_mixing"
-    },
-    {
-      "complex_id": "epoch_support_commutator_closure",
-      "source_id": "epoch_operator_closure_backprop_optimiser_induced_resonance"
-    },
-    {
-      "complex_id": "error_entropy_dissipation_functional",
-      "source_id": "soinet_error_contraction_and_dual_error_orthogonality"
-    },
-    {
-      "complex_id": "error_entropy_dissipation_functional",
-      "source_id": "soi_entropy_minimization_and_entropic_catastrophe"
-    },
-    {
-      "complex_id": "exhaustion_parseval_coverage_energy",
-      "source_id": "motif_exhaustion_completeness_coverage_bias_long_memory_drift"
-    },
-    {
-      "complex_id": "exhaustion_parseval_coverage_energy",
-      "source_id": "weight_energy_parseval_equivalence_layerwise_l_2_energy_mismatch"
-    },
-    {
-      "complex_id": "expressivity_meta_learnability_stability_functional",
-      "source_id": "soinet_universal_expressivity_bound_entropy_minimal_generalization_principle"
-    },
-    {
-      "complex_id": "expressivity_meta_learnability_stability_functional",
-      "source_id": "soinet_meta_learnability_dual_closure"
-    },
-    {
-      "complex_id": "flowpoint_certified_dfi_validation_functional",
-      "source_id": "dfi_uniqueness_of_decomposition_and_mapping_ambiguity"
-    },
-    {
-      "complex_id": "flowpoint_certified_dfi_validation_functional",
-      "source_id": "dfi_flowpoint_consistency_and_interface_inconsistency"
-    },
-    {
-      "complex_id": "flowpoint_certified_dfi_validation_functional",
-      "source_id": "dfi_simulation_consistency_and_simulation_breakdown"
-    },
-    {
-      "complex_id": "modality_compositionality_collapse_connection",
-      "source_id": "soinet_cross_modal_compositionality_modality_invariant_collapse_principle"
-    },
-    {
-      "complex_id": "modality_spectrum_representation_coupling",
-      "source_id": "soinet_modality_invariant_learning_and_universal_adaptation"
-    },
-    {
-      "complex_id": "modality_spectrum_representation_coupling",
-      "source_id": "soi_spectrum_learning_and_classification_soi_spectrum_degeneracy_dual_instability"
-    },
-    {
-      "complex_id": "parity_orthogonal_shell_growth_connection",
-      "source_id": "parity_orthogonal_optimization_cross_parity_gradient_contamination"
-    },
-    {
-      "complex_id": "parity_orthogonal_shell_growth_connection",
-      "source_id": "prime_shell_growth_regularity_shell_instability_phase_slips"
-    },
-    {
-      "complex_id": "parity_resolved_autocorrelation_operator",
-      "source_id": "autocorrelation_completeness_of_weight_trajectories_continuous_mixing_component"
-    },
-    {
-      "complex_id": "parity_resolved_autocorrelation_operator",
-      "source_id": "flowpoint_flip_parity_constraint_parity_broken_bias_spurious_lines"
-    },
-    {
-      "complex_id": "quasicrystal_soi_annealing_transport",
-      "source_id": "prime_quasicrystal_support_equivalence_support_mismatch_leakage"
-    },
-    {
-      "complex_id": "quasicrystal_soi_annealing_transport",
-      "source_id": "soi_scaled_annealing_invariance_soi_mis_scaling_spurious_entropy"
-    },
-    {
-      "complex_id": "stack_domain_generalization_transport",
-      "source_id": "hierarchical_soi_stack_transfer_cross_regime_collapse_duality"
-    },
-    {
-      "complex_id": "stack_domain_generalization_transport",
-      "source_id": "soi_cross_domain_generalization_and_collapse"
-    },
-    {
-      "complex_id": "support_transport_drift_certificate",
-      "source_id": "qenn::dual_support_equivalence_support_mismatch_leakage"
-    },
-    {
-      "complex_id": "support_transport_drift_certificate",
-      "source_id": "bounded_remainder_drift_in_updates_long_memory_heavy_tail_drift"
-    },
-    {
-      "complex_id": "universalization_cloning_obstruction_functional",
-      "source_id": "soinet_universal_generalization_principle_failure_brittleness_duality"
-    },
-    {
-      "complex_id": "universalization_cloning_obstruction_functional",
-      "source_id": "soinet_universal_cloning_principle_cloning_failure_duality"
-    }
-  ],
-  "work_branch": "codex/tne-architecture-and-theorem-complex-migration"
+  "unresolved_internal_dependencies": [],
+  "work_branch": "codex/tne-authoritative-source-recertification"
 }

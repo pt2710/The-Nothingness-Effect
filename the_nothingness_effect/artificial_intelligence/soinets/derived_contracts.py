@@ -1,17 +1,18 @@
-"""Appendix-derived SOInet B21--B28 and C30--C33 contracts."""
+"""Recertified SOInet A05--A18, B21--B28, and C30--C33 contracts."""
 
 from the_nothingness_effect._runtime.theorem_complex_runtime.derived_laws import (
     additive_contract,
     spatial_contract,
 )
 
+from .contracts import APPENDIX, APPENDIX_SHA256
+from .source_contracts import contracts as source_contracts
 
-APPENDIX = "appendix_tne_artificial_intelligence_architechture.tex"
-APPENDIX_SHA256 = "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a"
+
 IMPLEMENTATION = "the_nothingness_effect/artificial_intelligence/soinets/derived_contracts.py"
 
 # The native SOInet B blocks name their complete 1B/2B semantic sources rather
-# than cross-referencing A-complex labels.  These pairings follow the exact
+# than cross-referencing A-complex labels. These pairings follow the exact
 # left/right theorem subjects in B21--B28.
 B_SPECS = (
     (
@@ -82,7 +83,10 @@ C_SPECS = (
     ),
     (
         "error_entropy_phase_locking_spatial_closure",
-        ("error_entropy_dissipation_functional", "entropy_spectral_phase_locking_operator"),
+        (
+            "error_entropy_dissipation_functional",
+            "entropy_spectral_phase_locking_operator",
+        ),
     ),
     (
         "modality_spectrum_meta_learnability_spatial_closure",
@@ -93,28 +97,35 @@ C_SPECS = (
     ),
     (
         "stack_domain_cloning_spatial_closure",
-        ("stack_domain_generalization_transport", "universalization_cloning_obstruction_functional"),
+        (
+            "stack_domain_generalization_transport",
+            "universalization_cloning_obstruction_functional",
+        ),
     ),
 )
 
 
 def contracts():
-    return tuple(
-        additive_contract(
-            complex_id,
-            source_ids,
-            appendix=APPENDIX,
-            appendix_sha256=APPENDIX_SHA256,
-            implementation_path=IMPLEMENTATION,
-        )
-        for complex_id, source_ids in B_SPECS
-    ) + tuple(
-        spatial_contract(
-            complex_id,
-            source_ids,
-            appendix=APPENDIX,
-            appendix_sha256=APPENDIX_SHA256,
-            implementation_path=IMPLEMENTATION,
-        )
-        for complex_id, source_ids in C_SPECS
+    return (
+        *source_contracts(),
+        *(
+            additive_contract(
+                complex_id,
+                source_ids,
+                appendix=APPENDIX,
+                appendix_sha256=APPENDIX_SHA256,
+                implementation_path=IMPLEMENTATION,
+            )
+            for complex_id, source_ids in B_SPECS
+        ),
+        *(
+            spatial_contract(
+                complex_id,
+                source_ids,
+                appendix=APPENDIX,
+                appendix_sha256=APPENDIX_SHA256,
+                implementation_path=IMPLEMENTATION,
+            )
+            for complex_id, source_ids in C_SPECS
+        ),
     )

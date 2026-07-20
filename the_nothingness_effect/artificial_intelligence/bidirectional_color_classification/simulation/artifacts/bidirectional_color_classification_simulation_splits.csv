@@ -1,0 +1,4 @@
+split,train_accuracy,validation_accuracy,accuracy,test_loss,mean_confidence,generalization_gap,roundtrip_accuracy,modality_rmse
+train,1.0,,,,,,,
+validation,,0.8333333134651184,,,,,,
+test,1.0,0.8333333134651184,0.9166666865348816,1.5716720819473267,0.2110946923494339,0.08333331346511841,0.4166666567325592,0.3549332916736603

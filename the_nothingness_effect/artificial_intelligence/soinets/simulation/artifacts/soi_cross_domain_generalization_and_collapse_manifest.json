@@ -1,0 +1,34 @@
+{
+  "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
+  "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
+  "approximation_metadata": {
+    "authority_bound": true,
+    "device": "cpu",
+    "exact_semantics": false
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "open",
+  "generated_files": [
+    "soinets_contract_metrics.csv",
+    "soinets_spatial_closure.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-06
+  },
+  "parameter_hash": "96353c8fdb909341c4f2cf3e2029efbc0d0663b36a60484e1092de0141dc2329",
+  "parameters": {
+    "fixture": "modality-field-v2",
+    "modality_count": 3,
+    "module": "soinets",
+    "source_registry": "extended_A",
+    "spatial_samples": 18
+  },
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    1.4861732721328735
+  ],
+  "seed": 0,
+  "theorem_complex_id": "soi_cross_domain_generalization_and_collapse"
+}

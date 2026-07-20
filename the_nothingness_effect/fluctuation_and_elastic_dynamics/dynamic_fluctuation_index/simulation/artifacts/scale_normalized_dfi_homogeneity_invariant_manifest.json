@@ -1,0 +1,30 @@
+{
+  "appendix_filename": "appendix_tne_fluctuation_and_elastic_dynamics.tex",
+  "appendix_source_sha256": "63e5684e4c4bb016a2cc62d46574c2174fbe14eb5f50c16db825ca33b0836389",
+  "approximation_metadata": {
+    "authority_bound": true,
+    "exact_semantics": true
+  },
+  "claim_boundary": "finite computational support; not a formal proof substitute",
+  "closure_status": "satisfied",
+  "generated_files": [
+    "dfi_contract_metrics.csv",
+    "dfi_contract_residuals.png"
+  ],
+  "numeric_tolerances": {
+    "absolute": 1e-10
+  },
+  "parameter_hash": "dee3e7185f06231a71a1a122b94e4d8334cfe9021c7f84535e053ed4e83aeda1",
+  "parameters": {
+    "category": "dfi",
+    "fixture": "deterministic-contract-v2"
+  },
+  "regeneration_command": "python -m the_nothingness_effect.fluctuation_and_elastic_dynamics.dynamic_fluctuation_index.simulation.run_contract_suite --output the_nothingness_effect/fluctuation_and_elastic_dynamics/dynamic_fluctuation_index/simulation/artifacts",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
+  "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
+  "residual_vector": [
+    9.597583973135935e-17
+  ],
+  "seed": 0,
+  "theorem_complex_id": "scale_normalized_dfi_homogeneity_invariant"
+}

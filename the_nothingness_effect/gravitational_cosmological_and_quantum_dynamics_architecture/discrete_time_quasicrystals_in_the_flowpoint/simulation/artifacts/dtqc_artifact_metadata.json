@@ -1,0 +1,227 @@
+{
+  "claim_boundary": "finite deterministic source-faithful DTQC visualization evidence; not a formal proof, thermodynamic-limit existence result, or empirical validation",
+  "generation_source_commit": "79ea28d30db746bdaf25cda43209de2a80fe796c",
+  "generator_inventory": {
+    "canonical_simulation_visuals": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.visualization.run_dtqc_evidence",
+    "full_orchestrator": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_evidence",
+    "legacy_source_faithful_visuals": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.discrete_time_quasicrystals_in_the_flowpoint.simulation.run_legacy_faithful_suite",
+    "typed_contracts": "the_nothingness_effect.gravitational_cosmological_and_quantum_dynamics_architecture.contract_artifacts.run_suite"
+  },
+  "legacy_faithful_inventory": [
+    "dtqc_legacy_5d_scatter.gif",
+    "dtqc_legacy_checksums.json",
+    "dtqc_legacy_dfi_surface.png",
+    "dtqc_legacy_diffraction_fft.png",
+    "dtqc_legacy_elastic_pi_half_sphere.gif",
+    "dtqc_legacy_elastic_pi_sphere.gif",
+    "dtqc_legacy_elastic_pi_surface.png",
+    "dtqc_legacy_flowpoint_flicker.gif",
+    "dtqc_legacy_metadata.json",
+    "dtqc_legacy_metrics.csv",
+    "dtqc_legacy_quasicrystal_contour.png",
+    "dtqc_legacy_source_removal.csv",
+    "dtqc_legacy_state.npz",
+    "dtqc_legacy_summary.png",
+    "dtqc_legacy_wavelet_ridges.png"
+  ],
+  "mathematical_bindings": {
+    "canonical_dubler_ratio": "pi*exp(-S_2D(x,y)/K_D); full-field canonical Dubler sign retained separately",
+    "carrier": "sum_{k=0}^{9} cos(2*pi*(cos(2*pi*k/10)*X + sin(2*pi*k/10)*Y)) / ptp",
+    "dfi": "sixty radial FFT profiles with the legacy DFI volume/entropy transform",
+    "diffraction": "log1p(abs(fftshift(fft2(field))))",
+    "flowpoint": "alternating sector applied to an intrinsically phase-evolving ten-wave field",
+    "legacy_visual_elastic_pi": "pi*exp(+S_2D(x,y)/K_D); full-field directional backprojection with the legacy visual sign",
+    "scatter": "5-D integer cloud -> random 4-D projection -> phase-offset intrinsic 4-D oscillation -> OU-camera 3-D view",
+    "spatial_entropy": "S_2D(x,y)=mean_i interp(S_i,(x*cos(theta_i)+y*sin(theta_i))/sqrt(2)) over all sixty directional channels"
+  },
+  "pipeline_partition": {
+    "canonical_visual_runtime": "finite canonical DTQC source-response projection with full-field two-axis Elastic-pi coupling and phase clock",
+    "compatibility_figure": "dtqc_spatial_closure.png is rebound to legacy_faithful/dtqc_legacy_summary.png; the stale generic FieldLaw line plot is not retained",
+    "legacy_visual_runtime": "legacy decagonal/DFI profiles backprojected through all sixty directions before Elastic-pi and Flowpoint rendering",
+    "theorem_runtime": "Fibonacci/Pisot/Floquet and typed theorem-contract runtime retained"
+  },
+  "production_configuration": {
+    "entropy_scale": 3.141592653589793,
+    "grid_size": 240,
+    "legacy_frame_stride": 4,
+    "point_count": 8000,
+    "radial_channels": 60,
+    "represented_legacy_frames": 192,
+    "seed": 1,
+    "time_steps": 48
+  },
+  "promoted_artifacts": {
+    "legacy_faithful/dtqc_legacy_summary.png": "dtqc_spatial_closure.png"
+  },
+  "root_inventory": [
+    "artifact_policy.json",
+    "dfi_surface.png",
+    "diffraction_fft.png",
+    "diophantine_parseval_locking_invariant_manifest.json",
+    "dtqc_5d_scatter.gif",
+    "dtqc__dual_support_equivalence_support_mismatch_leakage_manifest.json",
+    "dtqc_artifact_checksums.json",
+    "dtqc_artifact_metadata.json",
+    "dtqc_axis_source_removal.csv",
+    "dtqc_contract_metrics.csv",
+    "dtqc_elastic_pi_half_sphere.gif",
+    "dtqc_elastic_pi_sphere.gif",
+    "dtqc_flowpoint_flicker.gif",
+    "dtqc_fp_entanglement.gif",
+    "dtqc_fp_floquet_spectrum.png",
+    "dtqc_fp_quantum_manifest.json",
+    "dtqc_fp_quantum_metrics.csv",
+    "dtqc_fp_quantum_source_removal.csv",
+    "dtqc_fp_quantum_state.npz",
+    "dtqc_fp_quark_modes.png",
+    "dtqc_fp_wave_interference.png",
+    "dtqc_fp_wavefunction_phase.gif",
+    "dtqc_fp_wavefunction_probability.gif",
+    "dtqc_intrinsic_axis_cycle.gif",
+    "dtqc_phase_clock_animation.gif",
+    "dtqc_simulation_evidence_manifest.json",
+    "dtqc_simulation_phase_trace.csv",
+    "dtqc_simulation_residual_animation.gif",
+    "dtqc_simulation_residual_trace.csv",
+    "dtqc_simulation_visualization_manifest.json",
+    "dtqc_spatial_closure.png",
+    "dtqc_state.npz",
+    "dtqc_summary.png",
+    "dtqc_visual_metrics.csv",
+    "elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
+    "elastic_gain_support_transport_isomorphism_manifest.json",
+    "elastic_parseval_quasicrystal_isometry_manifest.json",
+    "elastic_pi_intrinsic_axes.png",
+    "elastic_pi_surface.png",
+    "irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
+    "manifest.json",
+    "parseval_energy_bijection_l_2_energy_mismatch_manifest.json",
+    "qc_contour.png",
+    "wavelet_central_row.png"
+  ],
+  "schema_version": "5.0",
+  "source_audit": {
+    "canonical_dubler": "equations/elastic_dubler_effect/elastic_dubler_effect.py",
+    "visual_generator": "tne_concepts/flowpoint_elastic_pi/simulate_elastic_pi_quasi_crystals.py",
+    "visual_reference_directory": "tne_concepts/discrete_quasi_crystal_visualization"
+  },
+  "source_removal": {
+    "dfi": 1.6987240477114334,
+    "elastic_pi": 91.52889854798258,
+    "flowpoint": 534.861083984375,
+    "scatter_oscillation": 474.21270751953125,
+    "temporal_evolution": 635.9224457551672
+  },
+  "spatial_regression": {
+    "canonical": {
+      "K_D": 0.49743876306418106,
+      "all_intrinsic_axes_applied": true,
+      "axis_application_residual": 1.38046101100346e-16,
+      "axis_count": 5,
+      "axis_elastic_pi_spans": [
+        0.7039839260690196,
+        0.7046423348779903,
+        0.7065397632904725,
+        0.7068710598103823,
+        0.705661715780138
+      ],
+      "axis_entropy_norms": [
+        48.70551159416264,
+        48.82983711454977,
+        48.82338800112506,
+        48.89736262163885,
+        48.77843978067923
+      ],
+      "axis_gradient_balance": 0.2550002477127109,
+      "axis_names": [
+        "x",
+        "y",
+        "z",
+        "w",
+        "u"
+      ],
+      "axis_projection_angles_degrees": [
+        0.0,
+        36.0,
+        72.0,
+        108.0,
+        144.0
+      ],
+      "axis_projection_angles_radians": [
+        0.0,
+        0.6283185307179586,
+        1.2566370614359172,
+        1.8849555921538759,
+        2.5132741228718345
+      ],
+      "axis_source_removal_residuals": [
+        0.14439699386932983,
+        0.12705278851743712,
+        0.6335082424199403,
+        0.1337613496391141,
+        0.1446260641220923
+      ],
+      "axis_weights": [
+        0.13312135762789423,
+        0.11738975524339981,
+        0.49275540203228485,
+        0.12361212746852691,
+        0.13312135762789423
+      ],
+      "column_broadcast_residual": 0.9927578837151532,
+      "dfi_axis_count": 5,
+      "dfi_axis_names": [
+        "x",
+        "y",
+        "z",
+        "w",
+        "u"
+      ],
+      "dfi_axis_norms": [
+        0.7231706703896879,
+        0.9083026131710076,
+        4.347434512755696,
+        1.1635056975953646,
+        1.6283090282767807
+      ],
+      "direct_law_residual": 1.38046101100346e-16,
+      "effective_rank": 4.463160657027282,
+      "minimum_axis_entropy_norm": 48.70551159416264,
+      "minimum_axis_source_removal_residual": 0.12705278851743712,
+      "minimum_dfi_axis_norm": 0.7231706703896879,
+      "row_broadcast_residual": 0.974579413382972,
+      "sign": -1.0,
+      "x_gradient_fraction": 0.20318740827140014,
+      "y_gradient_fraction": 0.7968125917286
+    },
+    "legacy": {
+      "canonical_dubler_elastic_pi": {
+        "axis_gradient_balance": 0.8837368519025675,
+        "column_broadcast_residual": 0.6800915146204135,
+        "effective_rank": 5.460455411236501,
+        "row_broadcast_residual": 0.9045483419190924,
+        "x_gradient_fraction": 0.46914028942524344,
+        "y_gradient_fraction": 0.5308597105747564
+      },
+      "legacy_visual_elastic_pi": {
+        "axis_gradient_balance": 0.8822603919134786,
+        "column_broadcast_residual": 0.6795157321592458,
+        "effective_rank": 5.461636305624423,
+        "row_broadcast_residual": 0.9046690594504005,
+        "x_gradient_fraction": 0.4687238788553509,
+        "y_gradient_fraction": 0.5312761211446492
+      }
+    }
+  },
+  "suite": "dtqc_complete_recursive_artifact_pipeline",
+  "theorem_manifests": [
+    "diophantine_parseval_locking_invariant_manifest.json",
+    "dtqc__dual_support_equivalence_support_mismatch_leakage_manifest.json",
+    "dtqc_fp_quantum_manifest.json",
+    "elastic_dtqc_spectral_measure_dual_of_dtqc_manifest.json",
+    "elastic_gain_support_transport_isomorphism_manifest.json",
+    "elastic_parseval_quasicrystal_isometry_manifest.json",
+    "irrational_drive_locking_commensurate_resonance_collapse_manifest.json",
+    "parseval_energy_bijection_l_2_energy_mismatch_manifest.json"
+  ]
+}

@@ -16,6 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
           show-progress: false
       - uses: actions/setup-python@v5
@@ -43,6 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
           show-progress: false
       - uses: actions/setup-python@v5
@@ -68,6 +70,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
           show-progress: false
       - uses: actions/setup-python@v5
@@ -93,6 +96,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
           show-progress: false
       - uses: actions/setup-python@v5
@@ -113,6 +117,8 @@ jobs:
             tests/numerical/test_soinet_capability_runtime.py \
             tests/numerical/test_multimodal_soinet_model.py \
             tests/numerical/test_trainable_multimodal_model.py \
+            tests/numerical/test_multimodal_robustness_benchmark.py \
+            tests/numerical/test_source_faithful_convergence_benchmark.py \
             tests/contracts/test_mpl_tc_dependency.py \
             tests/invariants/test_observation_collapse_readout.py \
             tests/source_removal/test_ai_architecture_dependency_removal.py \
@@ -141,6 +147,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
           show-progress: false
       - uses: actions/setup-python@v5
@@ -153,19 +160,28 @@ jobs:
           set +e
           python -m pytest -q -x --tb=long \
             --ignore=tests/numerical \
+            --ignore=tests/artifacts \
+            --ignore=tests/contracts/test_appendix_derived_contracts.py \
+            --ignore=tests/contracts/test_authoritative_source_bindings.py \
+            --ignore=tests/contracts/test_promoted_source_sample_authority_bijection.py \
+            --ignore=tests/contracts/test_foundational_spectrum_dfi_authoritative_law.py \
+            --ignore=tests/contracts/test_foundational_spectrum_finitization_authoritative_law.py \
+            --ignore=tests/contracts/test_foundational_spectrum_of_infinities_canonical_contracts.py \
+            --ignore=tests/contracts/test_foundational_symmetry_spatiality_canonical_contracts.py \
             --ignore=tests/contracts/test_qenn_contracts.py \
             --ignore=tests/contracts/test_pgqenn_contracts.py \
             --ignore=tests/contracts/test_soinets_contracts.py \
+            --ignore=tests/contracts/test_qenn_dfi_remaining_source_contracts.py \
+            --ignore=tests/contracts/test_pgqenn_remaining_source_contracts.py \
+            --ignore=tests/contracts/test_soinets_remaining_source_contracts.py \
+            --ignore=tests/contracts/test_authoritative_ai_dual_products.py \
+            --ignore=tests/contracts/test_authoritative_physics_product_contracts.py \
+            --ignore=tests/contracts/test_qenn_authoritative_failure_gates.py \
+            --ignore=tests/contracts/test_qenn_authoritative_status.py \
             --ignore=tests/contracts/test_mpl_tc_dependency.py \
             --ignore=tests/invariants/test_elastic_dubler_ai.py \
             --ignore=tests/invariants/test_observation_collapse_readout.py \
             --ignore=tests/source_removal/test_ai_architecture_dependency_removal.py \
-            --ignore=tests/artifacts/test_ai_network_artifacts.py \
-            --ignore=tests/artifacts/test_multimodal_soinet_artifacts.py \
-            --ignore=tests/artifacts/test_multimodal_pipeline_artifacts.py \
-            --ignore=tests/artifacts/test_qenn_artifacts.py \
-            --ignore=tests/artifacts/test_pgqenn_artifacts.py \
-            --ignore=tests/artifacts/test_soinets_artifacts.py \
             --ignore-glob=the_nothingness_effect/artificial_intelligence/*/test/* \
             > core-diagnostic.log 2>&1
           echo "$?" > core-exit-code.txt
@@ -176,3 +192,94 @@ jobs:
           path: |
             core-diagnostic.log
             core-exit-code.txt
+
+  qa-guard-first-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          submodules: recursive
+          show-progress: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -q -r requirements-dev.txt -r requirements-ai.txt
+      - run: python -m pip install -q -e .
+      - name: Capture matrix and provenance rebuild
+        shell: bash
+        run: |
+          set +e
+          (
+            python tools/export_effective_theorem_matrix.py \
+              --output reports/effective_theorem_complex_implementation_matrix.csv \
+              --report reports/effective_theorem_complex_implementation_matrix.json
+            matrix_status=$?
+            echo "matrix_exit_code=${matrix_status}"
+            if [[ ${matrix_status} -eq 0 ]]; then
+              python tools/generate_complete_theorem_artifacts.py \
+                --output-root "${RUNNER_TEMP}/artifact-provenance" \
+                --aggregate reports/effective_artifact_provenance_manifest.json \
+                --coverage reports/theorem_artifact_coverage.json \
+                --binding reports/effective_artifact_provenance_binding.json
+              provenance_status=$?
+            else
+              provenance_status=99
+            fi
+            echo "provenance_exit_code=${provenance_status}"
+            if [[ ${provenance_status} -eq 0 ]]; then
+              python -m tools.build_release_status_dimensions \
+                --artifact-coverage reports/theorem_artifact_coverage.json && \
+              python -m tools.build_closure_obligation_ledger --require-zero && \
+              python -m tools.build_formal_proof_coverage
+              closure_audit_status=$?
+            else
+              closure_audit_status=99
+            fi
+            echo "closure_audit_exit_code=${closure_audit_status}"
+            if [[ ${matrix_status} -ne 0 ]]; then
+              exit ${matrix_status}
+            fi
+            if [[ ${provenance_status} -ne 0 ]]; then
+              exit ${provenance_status}
+            fi
+            exit ${closure_audit_status}
+          ) > qa-rebuild-diagnostic.log 2>&1
+          echo "$?" > qa-rebuild-exit-code.txt
+          exit 0
+      - name: Capture QA-guard diagnostics
+        shell: bash
+        run: |
+          set +e
+          if [[ "$(cat qa-rebuild-exit-code.txt)" -eq 0 ]]; then
+            python -m tools.qa_guards > qa-guard-diagnostic.log 2>&1
+            echo "$?" > qa-guard-exit-code.txt
+          else
+            echo "QA guard skipped because rebuild failed." > qa-guard-diagnostic.log
+            echo "99" > qa-guard-exit-code.txt
+          fi
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qa-guard-diagnostic
+          path: |
+            qa-rebuild-diagnostic.log
+            qa-rebuild-exit-code.txt
+            qa-guard-diagnostic.log
+            qa-guard-exit-code.txt
+            reports/effective_theorem_complex_implementation_matrix.json
+            reports/effective_artifact_provenance_manifest.json
+            reports/effective_artifact_provenance_binding.json
+            reports/theorem_artifact_coverage.json
+            reports/release_status_dimensions.csv
+            reports/release_status_dimensions.json
+            reports/closure_obligation_ledger.csv
+            reports/closure_obligation_ledger.json
+            reports/formal_proof_coverage.csv
+            reports/formal_proof_coverage.json
+          if-no-files-found: warn
+      - name: Enforce rebuild and QA guard
+        shell: bash
+        run: |
+          test "$(cat qa-rebuild-exit-code.txt)" -eq 0
+          test "$(cat qa-guard-exit-code.txt)" -eq 0

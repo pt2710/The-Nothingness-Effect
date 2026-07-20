@@ -1,0 +1,85 @@
+name: AI real tabular dataset evaluation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - codex/tne-authoritative-source-recertification
+    paths:
+      - "tools/run_tabular_ai_evaluation.py"
+      - ".github/workflows/ai-tabular-dataset-evaluation.yml"
+      - "the_nothingness_effect/artificial_intelligence/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-tabular-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  train-validate-evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dataset: fraud
+            url: https://www.kaggle.com/api/v1/datasets/download/mlg-ulb/creditcardfraud
+            filename: credit_card_fraud_detection.zip
+          - dataset: breast-cancer
+            url: https://www.kaggle.com/api/v1/datasets/download/uciml/breast-cancer-wisconsin-data
+            filename: breast_cancer_wisconsin.zip
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project
+        run: python -m pip install -e ".[ai,test]"
+      - name: Download public source archive
+        run: |
+          mkdir -p .ci-data
+          curl --fail --location --retry 4 --output ".ci-data/${{ matrix.filename }}" "${{ matrix.url }}"
+      - name: Extract breast-cancer CSV
+        if: matrix.dataset == 'breast-cancer'
+        run: |
+          python - <<'PY'
+          import zipfile
+          from pathlib import Path
+          archive = Path('.ci-data/breast_cancer_wisconsin.zip')
+          with zipfile.ZipFile(archive) as z:
+              names = [n for n in z.namelist() if n.endswith('.csv')]
+              if len(names) != 1:
+                  raise SystemExit(f'expected one CSV, got {names}')
+              Path('.ci-data/breast_cancer_wisconsin.csv').write_bytes(z.read(names[0]))
+          PY
+      - name: Tune, train, validate and evaluate fraud benchmark
+        if: matrix.dataset == 'fraud'
+        run: >-
+          python tools/run_tabular_ai_evaluation.py
+          --source .ci-data/credit_card_fraud_detection.zip
+          --dataset fraud
+          --output reports/artificial_intelligence_tabular/fraud
+          --seeds 0 1 2
+          --epochs 10 20 40
+          --clusters 24 40 64
+      - name: Tune, train, validate and evaluate breast-cancer benchmark
+        if: matrix.dataset == 'breast-cancer'
+        run: >-
+          python tools/run_tabular_ai_evaluation.py
+          --source .ci-data/breast_cancer_wisconsin.csv
+          --dataset breast-cancer
+          --output reports/artificial_intelligence_tabular/breast-cancer
+          --seeds 0 1 2 3 4
+          --epochs 10 20 40 80
+          --clusters 24 40 64
+      - name: Package metrics and artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tne-ai-tabular-${{ matrix.dataset }}-${{ github.sha }}
+          path: reports/artificial_intelligence_tabular/${{ matrix.dataset }}
+          if-no-files-found: error
+          retention-days: 30

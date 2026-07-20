@@ -1,0 +1,108 @@
+name: TNE bounded Hugging Face audio collection
+
+on:
+  push:
+    branches:
+      - codex/tne-authoritative-source-recertification
+    paths:
+      - "tools/collect_hf_audio_datasets.py"
+      - "tools/verify_hf_audio_collection.py"
+      - "docs/data/hf_audio_sources.json"
+      - "tests/numerical/test_real_multimodal_data.py"
+      - ".github/workflows/hf-audio-collection.yml"
+  pull_request:
+    paths:
+      - "tools/collect_hf_audio_datasets.py"
+      - "tools/verify_hf_audio_collection.py"
+      - "docs/data/hf_audio_sources.json"
+      - "tests/numerical/test_real_multimodal_data.py"
+      - ".github/workflows/hf-audio-collection.yml"
+  workflow_dispatch:
+    inputs:
+      max_per_source:
+        description: Maximum clips per source
+        required: false
+        default: "10"
+      max_total:
+        description: Maximum clips across all sources
+        required: false
+        default: "30"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  collect-audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      MAX_PER_SOURCE: ${{ inputs.max_per_source || '10' }}
+      MAX_TOTAL: ${{ inputs.max_total || '30' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements-dev.txt "datasets[audio]>=4.0,<5.0"
+      - run: python -m pip install -e .
+      - name: Verify collector boundaries without network fixtures
+        run: python -m pytest -q tests/numerical/test_real_multimodal_data.py
+      - name: Stream bounded speech, music and sound-effect sources
+        id: collect
+        continue-on-error: true
+        shell: bash
+        run: |
+          mkdir -p reports
+          set -o pipefail
+          python tools/collect_hf_audio_datasets.py \
+            --catalog docs/data/hf_audio_sources.json \
+            --output reports/hf_audio_collection \
+            --max-per-source "$MAX_PER_SOURCE" \
+            --max-total "$MAX_TOTAL" \
+            2>&1 | tee reports/hf_audio_collection.log
+      - name: Independently verify collected bytes and provenance
+        id: verify
+        if: always()
+        run: >-
+          python tools/verify_hf_audio_collection.py
+          --root reports/hf_audio_collection
+      - name: Package audio corpus and diagnostics
+        if: always()
+        run: >-
+          python -m zipfile -c
+          reports/hf_audio_collection.zip
+          reports/hf_audio_collection
+          reports/hf_audio_collection.log
+      - name: Upload license-partitioned audio evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tne-hf-audio-collection
+          path: |
+            reports/hf_audio_collection
+            reports/hf_audio_collection.log
+            reports/hf_audio_collection.zip
+          if-no-files-found: error
+      - name: Enforce fail-closed collection status
+        if: always()
+        shell: bash
+        run: |
+          if [[ "${{ steps.verify.outcome }}" != "success" ]]; then
+            echo "Independent byte/provenance verification failed."
+            exit 1
+          fi
+          if [[ "${{ steps.collect.outcome }}" != "success" ]]; then
+            if ! grep -q '^hf_audio_collection=completed ' reports/hf_audio_collection.log; then
+              echo "Collector failed before reporting a complete collection."
+              exit 1
+            fi
+            echo "::warning::Collector returned non-zero only after writing and reporting a byte-verified complete collection; accepting independent verification as the authoritative result."
+          fi

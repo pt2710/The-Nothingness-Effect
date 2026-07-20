@@ -3,13 +3,12 @@ from __future__ import annotations
 import json
 
 import pytest
-
 from the_nothingness_effect.fluctuation_and_elastic_dynamics.artifacts import run_suite
 
 
 @pytest.mark.parametrize(
     ("category", "count"),
-    (("dfi", 7), ("pdfi", 10), ("elastic_pi", 7), ("elastic_pi_norm", 8)),
+    (("dfi", 8), ("pdfi", 10), ("elastic_pi", 7), ("elastic_pi_norm", 8)),
 )
 def test_fluctuation_elastic_artifacts_have_theorem_manifests(tmp_path, category, count):
     outputs = run_suite(category, tmp_path / category, seed=0)

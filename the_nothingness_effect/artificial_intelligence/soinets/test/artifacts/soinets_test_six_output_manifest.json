@@ -22,18 +22,19 @@
     "torch_version": "2.13.0+cpu"
   },
   "architecture_residuals": {
-    "bidirectional_memory": 0.885201096534729,
+    "bidirectional_memory": 0.5795284509658813,
     "collapse_idempotence": 0.0,
     "collapse_outcome_stability": 0.0,
     "collapse_projection_normalization": 0.0,
-    "local_observability": 1.648729681968689,
+    "local_observability": 0.9392915368080139,
     "observation_normalization": 0.0,
-    "spatial_boundary": 1.1208816766738892,
-    "spatial_reconstruction": 3.782190205470215e-08,
-    "spectral": 2.384185791015625e-07,
-    "subnetwork_completeness": 3.437824852881022e-05
+    "spatial_boundary": 0.5447477102279663,
+    "spatial_reconstruction": 2.9736765938537246e-08,
+    "spectral": 1.1920928955078125e-07,
+    "subnetwork_completeness": 2.7647558454191312e-05
   },
   "capability_count": 6,
+  "capability_metric_producer": "SOInet",
   "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
   "generated_files": [
     "soinets_test_six_output_summary.csv",
@@ -68,22 +69,34 @@
     "soinets_test_network_3d_growth_manifest.json",
     "soinets_test_network_manifest.json",
     "color_classification/color_classification_test_results.csv",
+    "color_classification/color_classification_test_splits.csv",
     "color_classification/color_classification_test_figure.png",
+    "color_classification/color_classification_test_checkpoint.pt",
     "color_classification/color_classification_test_manifest.json",
     "sound_classification/sound_classification_test_results.csv",
+    "sound_classification/sound_classification_test_splits.csv",
     "sound_classification/sound_classification_test_figure.png",
+    "sound_classification/sound_classification_test_checkpoint.pt",
     "sound_classification/sound_classification_test_manifest.json",
     "bidirectional_color_classification/bidirectional_color_classification_test_results.csv",
+    "bidirectional_color_classification/bidirectional_color_classification_test_splits.csv",
     "bidirectional_color_classification/bidirectional_color_classification_test_figure.png",
+    "bidirectional_color_classification/bidirectional_color_classification_test_checkpoint.pt",
     "bidirectional_color_classification/bidirectional_color_classification_test_manifest.json",
     "bidirectional_sound_classification/bidirectional_sound_classification_test_results.csv",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_splits.csv",
     "bidirectional_sound_classification/bidirectional_sound_classification_test_figure.png",
+    "bidirectional_sound_classification/bidirectional_sound_classification_test_checkpoint.pt",
     "bidirectional_sound_classification/bidirectional_sound_classification_test_manifest.json",
     "color_cloning/color_cloning_test_results.csv",
+    "color_cloning/color_cloning_test_splits.csv",
     "color_cloning/color_cloning_test_figure.png",
+    "color_cloning/color_cloning_test_checkpoint.pt",
     "color_cloning/color_cloning_test_manifest.json",
     "sound_cloning/sound_cloning_test_results.csv",
+    "sound_cloning/sound_cloning_test_splits.csv",
     "sound_cloning/sound_cloning_test_figure.png",
+    "sound_cloning/sound_cloning_test_checkpoint.pt",
     "sound_cloning/sound_cloning_test_manifest.json"
   ],
   "output_groups": [
@@ -94,10 +107,12 @@
     "color_cloning",
     "sound_cloning"
   ],
-  "parameter_hash": "0ab5a8ced4884d382b1a6bf3d46511ba8071848100d9ef791365be2b98f1ddb4",
+  "parameter_hash": "7296f362efb7ae35ef426faab56a1a2d931d3fa7ba0e2d2c3a033bd5056c2615",
   "parameters": {
     "architecture": "soinets",
+    "capability_metric_producer": "SOInet",
     "mode": "test",
+    "network_state_source": "runtime_output_tensors",
     "output_groups": [
       "color_classification",
       "sound_classification",
@@ -109,8 +124,8 @@
     "seed": 0
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.test.run_all_capabilities",
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "runtime_derived_architecture_state"
 }

@@ -26,7 +26,7 @@
     "pgqenn_test_network_3d_signed_spectrum_growth.gif",
     "pgqenn_test_network_3d_signed_spectrum_signal.gif"
   ],
-  "parameter_hash": "856a68a7c86b868da1c3e3b0caf486a3f7520aca0dcd3f436953cfbd570f32a9",
+  "parameter_hash": "0c1b74854fc0187c333c01c3da4917728391b68adc9e336f1344085adcc4d3fa",
   "parameters": {
     "architecture": "PGQENN",
     "axis_labels": [
@@ -49,7 +49,7 @@
     "signed_value_involution_residual": 0.0,
     "triadic_bridge_status": "experimental_finite_prefix_structural_bridge",
     "triadic_finite_limit": 122,
-    "triadic_module_sha256": "28e92714bd17c83f03c1208758caf3313f6e6f0ca5c211a596d067893af80592",
+    "triadic_module_sha256": "1c988099a21e4c4440fca8220b11f3989408d5eb18e9f57e431d5732e5e2a6af",
     "triadic_stream_counts": {
       "first_order_odd": 17,
       "lpf_odd_composite": 31,
@@ -58,7 +58,7 @@
     }
   },
   "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.pgqenn.test.run_all_capabilities",
-  "repository_result_commit": "2966e0ab1b85fab393e0e8e5bf7a07d7953d39a6",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "seed": 0,
   "source_status": "verified positive MPL-TC growth plus TNE Flowpoint signed lift"

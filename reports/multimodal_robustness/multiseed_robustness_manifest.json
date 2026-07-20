@@ -1,0 +1,31 @@
+{
+  "all_metrics_finite": true,
+  "claim_boundary": "synthetic multi-seed robustness evidence; not empirical validation or theorem proof",
+  "epochs": 6,
+  "outputs": [
+    "multiseed_scenario_metrics.csv",
+    "multiseed_metric_summary.csv",
+    "multiseed_source_removal.csv",
+    "multiseed_accuracy_robustness.png",
+    "seed_calibration_reconstruction.png"
+  ],
+  "records": 27,
+  "scenarios": [
+    "clean",
+    "gaussian_0.05",
+    "gaussian_0.15",
+    "remove_color",
+    "remove_sound",
+    "remove_vision",
+    "sound_phase_shift",
+    "vision_occlusion",
+    "color_channel_permutation"
+  ],
+  "schema_version": "1.0",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_removal_records": 24
+}

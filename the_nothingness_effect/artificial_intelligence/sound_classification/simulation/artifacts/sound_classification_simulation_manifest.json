@@ -2,33 +2,45 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
-    "bidirectional_reconstruction": "class prototype, not exact source recovery",
-    "classification_scope": "bounded synthetic color patches and tonal waveforms"
+    "bidirectional_decoder": "probability-weighted finite modality reconstruction",
+    "classification_scope": "bounded synthetic held-out color and tone fixtures",
+    "cloning_scope": "held-out coordinate regression through SOInet meta-states"
   },
+  "architecture_coupled_metrics": true,
   "capability_id": "sound_classification",
-  "claim_boundary": "finite illustrative simulation; repository-linked computational artifact; not a formal proof substitute",
-  "closure_status": "numerical_candidate",
+  "claim_boundary": "finite synthetic train/validation/test evidence; not a formal proof or a real-world generalization claim",
+  "closure_status": "open",
   "generated_files": [
     "sound_classification_simulation_results.csv",
+    "sound_classification_simulation_splits.csv",
     "sound_classification_simulation_figure.png",
+    "sound_classification_simulation_checkpoint.pt",
     "sound_classification_simulation_animation.gif",
     "sound_classification_sample.wav",
     "sound_classification_simulation_manifest.json"
   ],
   "intended_output_group": "sound classification",
+  "metric_producer": "SOInet",
   "metrics": {
-    "accuracy": 1.0,
-    "mean_confidence": 0.963493287563324
+    "accuracy": 0.6666666865348816,
+    "generalization_gap": 0.0,
+    "mean_confidence": 0.3777117431163788,
+    "test_loss": 0.9796414375305176,
+    "train_accuracy": 0.6666666865348816,
+    "validation_accuracy": 0.6666666865348816
   },
   "numeric_tolerances": {
-    "absolute": 1e-06
+    "finite_metrics": true
   },
-  "parameter_hash": "958532db9e1a9e3cc396164ab82f5459eec3db9a767f8f101af714b400390fe3",
+  "parameter_hash": "30ed03e1454c12bd532ed03cad9ba907c75c8cf0375c30f0bb1820c61509de13",
   "parameters": {
     "capability": "sound_classification",
+    "checkpoint_format": 1,
+    "metric_producer": "SOInet",
     "mode": "simulation",
     "producer_architecture": null,
     "seed": 0,
+    "split_policy": "disjoint_train_validation_test",
     "synthetic_fixture": true
   },
   "producer_architecture": null,
@@ -37,12 +49,25 @@
     "pv_inflation_pure_point_diffraction_non_pv_salem_leakage",
     "pv_parseval_spectral_energy_lock"
   ],
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
-    0.0,
-    1.1920928955078125e-07
+    0.7086292505264282,
+    0.7057909965515137,
+    0.7102509140968323,
+    0.7097822427749634,
+    0.6716302037239075,
+    0.669039249420166,
+    0.7053236365318298,
+    0.7065093517303467,
+    0.667782723903656,
+    0.7065744400024414,
+    0.7067291140556335,
+    0.7089577913284302,
+    0.7102733850479126,
+    0.6689938306808472,
+    0.6723459362983704
   ],
   "seed": 0,
-  "source_status": "synthetic_deterministic_fixture"
+  "source_status": "soinet_architecture_coupled_train_validation_test"
 }

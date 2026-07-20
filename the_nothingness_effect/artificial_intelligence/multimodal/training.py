@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 
 import torch
 from torch.nn import functional
@@ -17,7 +18,12 @@ from the_nothingness_effect.artificial_intelligence.shared.dynamic_soi import (
 from .data import MultimodalBatch
 from .evaluation import evaluate_multimodal_model
 from .model import TNETrainableMultimodalModel, TNETrainableMultimodalOutput
-from .optimization import DynamicKDSearch, KDProbe, KDSelection, validation_objective
+from .optimization import (
+    DynamicKDSearch,
+    KDProbe,
+    KDSelection,
+    validation_objective,
+)
 
 
 @dataclass(frozen=True)
@@ -36,7 +42,8 @@ class MultimodalEpoch:
     confusion_matrix: tuple[tuple[int, ...], ...]
     latent_snapshot: tuple[tuple[float, ...], ...]
     axis_snapshot: tuple[tuple[float, ...], ...]
-    local_free_energy: float
+    modality_precision_entropy: float
+    local_free_energy: float | None
     global_free_energy: float
     cluster_count: int
     growth_event_count: int
@@ -55,8 +62,12 @@ class MultimodalTrainingRun:
     seed: int
     epochs: int
     learning_rate: float
+    weight_decay: float
     kd_probes: tuple[KDProbe, ...] = ()
     kd_selections: tuple[KDSelection, ...] = ()
+    best_epoch: int = -1
+    best_validation_objective: float = math.inf
+    restored_best_checkpoint: bool = False
 
     @property
     def hyperparameter_probes(self) -> tuple[KDProbe, ...]:
@@ -67,27 +78,79 @@ class MultimodalTrainingRun:
         return self.kd_selections
 
 
+def _precision_entropy(output: TNETrainableMultimodalOutput) -> torch.Tensor:
+    precision = output.energy_precision
+    if precision is None:
+        raise RuntimeError("multimodal precision weights are required during training")
+    modalities = precision.shape[-1]
+    normalizer = math.log(float(modalities)) if modalities > 1 else 1.0
+    return -torch.sum(
+        precision * torch.log(precision.clamp_min(1e-9)),
+        dim=-1,
+    ).mean() / normalizer
+
+
+def _qenn_auxiliary_loss(
+    output: TNETrainableMultimodalOutput,
+    labels: torch.Tensor,
+) -> torch.Tensor:
+    soinet = output.backbone_output.soinet_output
+    if soinet is None or not soinet.qenn_outputs:
+        return torch.zeros((), dtype=output.readout.dtype, device=output.readout.device)
+    losses = []
+    for qenn in soinet.qenn_outputs:
+        if qenn.readout.ndim != 2 or qenn.readout.shape[0] != labels.shape[0]:
+            raise RuntimeError("QENN auxiliary readout must be per-sample")
+        if qenn.readout.shape[-1] != output.readout.shape[-1]:
+            raise RuntimeError("QENN auxiliary readout must share the task class domain")
+        losses.append(functional.cross_entropy(qenn.readout, labels))
+    return torch.stack(losses).mean()
+
+
 def _loss_components(
     output: TNETrainableMultimodalOutput,
     labels: torch.Tensor,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
-    task = functional.cross_entropy(output.readout, labels)
+    primary_task = functional.cross_entropy(output.readout, labels)
+    qenn_auxiliary = _qenn_auxiliary_loss(output, labels)
+    task = primary_task + 0.50 * qenn_auxiliary
     target = output.backbone_output.modality_tokens.mean(dim=1)
-    reconstruction = functional.mse_loss(output.reconstructed_fused_tokens, target)
-    if output.local_rbm_state is None or output.global_rbm_state is None:
-        raise RuntimeError("multimodal energy states are required during training")
+    reconstruction = functional.mse_loss(
+        output.reconstructed_fused_tokens,
+        target,
+    )
+    if output.global_rbm_state is None:
+        raise RuntimeError("global multimodal energy state is required during training")
     energy = (
-        torch.abs(output.local_rbm_state.contrastive_divergence)
-        + torch.abs(output.global_rbm_state.contrastive_divergence)
-        + output.local_rbm_state.reconstruction_residual
+        torch.abs(output.global_rbm_state.contrastive_divergence)
         + output.global_rbm_state.reconstruction_residual
     )
+    if output.local_rbm_state is not None:
+        energy = (
+            energy
+            + torch.abs(output.local_rbm_state.contrastive_divergence)
+            + output.local_rbm_state.reconstruction_residual
+        )
+    entropy_floor = torch.relu(
+        torch.tensor(0.55, dtype=task.dtype, device=task.device)
+        - _precision_entropy(output)
+    )
+    energy = energy + entropy_floor
     residual_vector = torch.stack(
         [torch.tanh(torch.abs(value)) for value in output.residuals.values()]
     )
     closure = residual_vector.mean()
-    total = task + 0.25 * reconstruction + 0.03 * energy + 0.02 * closure
+    total = task + 0.18 * reconstruction + 0.02 * energy + 0.015 * closure
     return total, task, reconstruction, energy, closure
+
+
+def _clone_state_dict(
+    model: TNETrainableMultimodalModel,
+) -> dict[str, torch.Tensor]:
+    return {
+        name: value.detach().cpu().clone()
+        for name, value in model.state_dict().items()
+    }
 
 
 def train_multimodal_model(
@@ -96,27 +159,39 @@ def train_multimodal_model(
     validation_batch: MultimodalBatch,
     *,
     epochs: int = 8,
-    learning_rate: float = 0.015,
+    learning_rate: float = 0.01,
+    weight_decay: float = 1e-4,
     seed: int = 0,
     optimize_K_D: bool = False,
     adaptive_learning_rate: bool = False,
     kd_search: DynamicKDSearch | None = None,
 ) -> MultimodalTrainingRun:
-    if epochs < 1 or learning_rate <= 0:
-        raise ValueError("epochs and learning rate must be positive")
+    if epochs < 1 or learning_rate <= 0 or weight_decay < 0:
+        raise ValueError("epochs and learning rate must be positive; weight decay non-negative")
     train_batch.validate()
     validation_batch.validate()
     torch.manual_seed(seed)
-    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=learning_rate,
+        weight_decay=weight_decay,
+    )
     scheduler = (
         torch.optim.lr_scheduler.ReduceLROnPlateau(
-            optimizer, mode="min", factor=0.7, patience=2, min_lr=learning_rate * 0.08
+            optimizer,
+            mode="min",
+            factor=0.6,
+            patience=3,
+            min_lr=learning_rate * 0.05,
         )
         if adaptive_learning_rate
         else None
     )
     search = kd_search or (DynamicKDSearch() if optimize_K_D else None)
     history: list[MultimodalEpoch] = []
+    best_state: dict[str, torch.Tensor] | None = None
+    best_epoch = -1
+    best_objective = math.inf
     for epoch in range(epochs):
         selection = (
             search.select(model, validation_batch, epoch=epoch)
@@ -127,18 +202,33 @@ def train_multimodal_model(
         optimizer.zero_grad(set_to_none=True)
         output = model(train_batch.modalities)
         total, task, reconstruction, energy, closure = _loss_components(
-            output, train_batch.labels
+            output,
+            train_batch.labels,
         )
         total.backward()
-        gradient_norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0)
+        gradient_norm = torch.nn.utils.clip_grad_norm_(
+            model.parameters(),
+            5.0,
+        )
         optimizer.step()
         predictions = output.readout.argmax(dim=-1)
-        train_accuracy = (predictions == train_batch.labels).float().mean()
-        validation = evaluate_multimodal_model(model, validation_batch)
+        train_accuracy = (
+            predictions == train_batch.labels
+        ).float().mean()
+        validation = evaluate_multimodal_model(
+            model,
+            validation_batch,
+        )
         objective = validation_objective(validation)
+        if not math.isfinite(objective):
+            raise RuntimeError("validation objective became non-finite")
         current_learning_rate = float(optimizer.param_groups[0]["lr"])
         if scheduler is not None:
             scheduler.step(objective)
+        if objective < best_objective:
+            best_objective = float(objective)
+            best_epoch = epoch
+            best_state = _clone_state_dict(model)
         weights = output.backbone_output.modality_weights.mean(dim=0)
         history.append(
             MultimodalEpoch(
@@ -152,7 +242,9 @@ def train_multimodal_model(
                 validation_loss=validation.metrics["cross_entropy"],
                 validation_accuracy=validation.metrics["accuracy"],
                 gradient_norm=float(gradient_norm.detach()),
-                modality_weights=tuple(float(item) for item in weights.detach()),
+                modality_weights=tuple(
+                    float(item) for item in weights.detach()
+                ),
                 confusion_matrix=tuple(
                     tuple(int(value) for value in row)
                     for row in validation.confusion_matrix.tolist()
@@ -168,13 +260,24 @@ def train_multimodal_model(
                     .cpu()
                     .tolist()
                 ),
-                local_free_energy=float(output.local_rbm_state.free_energy.mean().detach()),
-                global_free_energy=float(output.global_rbm_state.free_energy.mean().detach()),
+                modality_precision_entropy=float(
+                    _precision_entropy(output).detach()
+                ),
+                local_free_energy=(
+                    float(output.local_rbm_state.free_energy.mean().detach())
+                    if output.local_rbm_state is not None
+                    else None
+                ),
+                global_free_energy=float(
+                    output.global_rbm_state.free_energy.mean().detach()
+                ),
                 cluster_count=output.cluster_state.active_clusters,
                 growth_event_count=len(output.cluster_state.events),
                 cluster_centroids=tuple(
                     tuple(float(value) for value in row)
-                    for row in output.cluster_state.centroids.detach().cpu().tolist()
+                    for row in output.cluster_state.centroids.detach()
+                    .cpu()
+                    .tolist()
                 ),
                 K_D=dynamic_kd_state(model).value,
                 soi_scale=dynamic_soi_state(model).value,
@@ -188,11 +291,18 @@ def train_multimodal_model(
                 ),
             )
         )
+    if best_state is None or best_epoch < 0:
+        raise RuntimeError("training did not produce a valid checkpoint")
+    model.load_state_dict(best_state)
     return MultimodalTrainingRun(
-        tuple(history),
-        seed,
-        epochs,
-        learning_rate,
-        search.probes if search is not None else (),
-        search.selections if search is not None else (),
+        history=tuple(history),
+        seed=seed,
+        epochs=epochs,
+        learning_rate=learning_rate,
+        weight_decay=weight_decay,
+        kd_probes=search.probes if search is not None else (),
+        kd_selections=search.selections if search is not None else (),
+        best_epoch=best_epoch,
+        best_validation_objective=best_objective,
+        restored_best_checkpoint=True,
     )

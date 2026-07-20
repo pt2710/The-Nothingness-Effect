@@ -2,6 +2,7 @@
   "appendix_filename": "appendix_tne_artificial_intelligence_architechture.tex",
   "appendix_source_sha256": "3a75d4bfdbf9779255d01dd3ae3db6a848a4dc1fa67455ca1f22d5abcadf866a",
   "approximation_metadata": {
+    "authority_bound": true,
     "device": "cpu",
     "exact_semantics": true
   },
@@ -14,15 +15,16 @@
   "numeric_tolerances": {
     "absolute": 1e-06
   },
-  "parameter_hash": "f94dd3cfa01d5fbbc7f345b6148c0d5063d425fa9f9c6f4e8e16d65ad0c520b0",
+  "parameter_hash": "101616f96093d3153cb84bc38d190b575c3b052af66c4f7e4baff8c9958cbb13",
   "parameters": {
-    "fixture": "modality-field-v1",
+    "fixture": "modality-field-v2",
     "modality_count": 3,
     "module": "soinets",
+    "source_registry": "base",
     "spatial_samples": 18
   },
-  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/soinets/simulation",
-  "repository_result_commit": "c19aec5b0b96177d3e9932e806d1e34b860e83f5",
+  "regeneration_command": "python -m the_nothingness_effect.artificial_intelligence.soinets.simulation.run_contract_suite --output the_nothingness_effect/artificial_intelligence/soinets/simulation/artifacts",
+  "repository_result_commit": "06f18f5f4743ccc1096c5d7a0bf90f0020e7d915",
   "repository_start_commit": "b97a2da379ff9fc503c4c43185030674f887b85c",
   "residual_vector": [
     0.8860153555870056

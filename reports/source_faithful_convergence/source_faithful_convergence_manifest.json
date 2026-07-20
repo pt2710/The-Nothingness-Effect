@@ -1,0 +1,25 @@
+{
+  "all_metrics_finite": true,
+  "claim_boundary": "finite grid-refinement diagnostic; not continuum convergence proof or empirical validation",
+  "families": [
+    "elastic_dubler",
+    "locality_driven_gravity",
+    "black_hole_dynamics",
+    "elastic_pi_ripples"
+  ],
+  "outputs": [
+    "source_faithful_grid_refinement.csv",
+    "source_faithful_grid_summary.csv",
+    "elastic_dubler_grid_refinement.png",
+    "locality_driven_gravity_grid_refinement.png",
+    "black_hole_dynamics_grid_refinement.png",
+    "elastic_pi_ripples_grid_refinement.png"
+  ],
+  "records": 69,
+  "resolutions": [
+    9,
+    17,
+    33
+  ],
+  "schema_version": "1.0"
+}

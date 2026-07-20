@@ -7,6 +7,7 @@ on:
       - codex/tne-dtqc-ai-dynamics-recovery
     paths:
       - "tools/run_full_ai_hyperparameter_evaluation.py"
+      - "tools/run_multifidelity_full_ai_hyperparameter_evaluation.py"
       - "tools/render_full_ai_tuning_artifacts.py"
       - ".github/workflows/ai-full-hyperparameter-evaluation.yml"
       - "tools/run_tabular_ai_evaluation.py"
@@ -17,6 +18,7 @@ on:
       - codex/tne-authoritative-source-recertification
     paths:
       - "tools/run_full_ai_hyperparameter_evaluation.py"
+      - "tools/run_multifidelity_full_ai_hyperparameter_evaluation.py"
       - "tools/render_full_ai_tuning_artifacts.py"
       - ".github/workflows/ai-full-hyperparameter-evaluation.yml"
       - "tools/run_tabular_ai_evaluation.py"
@@ -65,12 +67,17 @@ jobs:
           touch ci-logs/bootstrap.log
           python -m py_compile \
             tools/run_full_ai_hyperparameter_evaluation.py \
+            tools/run_multifidelity_full_ai_hyperparameter_evaluation.py \
             tools/render_full_ai_tuning_artifacts.py
           python - <<'PY'
           import math
           import numpy as np
           from tools.render_full_ai_tuning_artifacts import metric_bundle, pca3
           from tools.run_full_ai_hyperparameter_evaluation import Config, SPACE
+          from tools.run_multifidelity_full_ai_hyperparameter_evaluation import (
+              ORDERED_SPACE,
+              SCREENING_EPOCHS,
+          )
 
           expected = {
               "epochs", "learning_rate", "weight_decay", "hidden_dim", "K_D",
@@ -84,6 +91,10 @@ jobs:
               raise SystemExit(f"public hyperparameter coverage mismatch: {names ^ expected}")
           if set(Config.__dataclass_fields__) != expected:
               raise SystemExit("Config and SPACE are not bijective")
+          if {name for name, _ in ORDERED_SPACE} != expected or ORDERED_SPACE[-1][0] != 'epochs':
+              raise SystemExit('multi-fidelity search does not cover every parameter')
+          if SCREENING_EPOCHS < 2:
+              raise SystemExit('screening fidelity is too low')
           labels = np.asarray([0, 0, 1, 1], dtype=int)
           probabilities = np.asarray(
               [[0.9, 0.1], [0.6, 0.4], [0.3, 0.7], [0.1, 0.9]],
@@ -129,7 +140,7 @@ jobs:
             SOURCE=.ci-data/breast_cancer_wisconsin.csv
           fi
           set +e
-          python tools/run_full_ai_hyperparameter_evaluation.py \
+          python tools/run_multifidelity_full_ai_hyperparameter_evaluation.py \
             --source "$SOURCE" \
             --dataset "${{ matrix.dataset }}" \
             --output "reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}" \
@@ -197,6 +208,10 @@ jobs:
               search_rows = list(csv.DictReader(handle))
           if not search_rows or any(not row['objective'] for row in search_rows):
               raise SystemExit('missing finite search evidence')
+          if {row['parameter'] for row in search_rows} != required:
+              raise SystemExit('multi-fidelity search omitted a public hyperparameter')
+          if not all(row.get('screening_epochs') for row in search_rows):
+              raise SystemExit('missing screening-fidelity provenance')
           for filename in (
               'global_rbm_metrics.csv',
               'global_rbm_source_removal.csv',

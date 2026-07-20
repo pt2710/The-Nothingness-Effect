@@ -157,11 +157,24 @@ def _audio_bytes(value: object) -> tuple[bytes, str, dict[str, Any]]:
             metadata["storage"] = "original_bytes"
             return payload, suffix, metadata
         if path_value:
-            path = Path(str(path_value))
+            raw_path = str(path_value)
+            path = Path(raw_path)
             if path.is_file():
-                metadata["source_path"] = str(path)
+                metadata["source_path"] = raw_path
                 metadata["storage"] = "original_path_bytes"
                 return path.read_bytes(), path.suffix.lower() or ".bin", metadata
+            if raw_path.startswith("hf://"):
+                try:
+                    from huggingface_hub import HfFileSystem  # type: ignore
+                except ImportError as exc:
+                    raise RuntimeError(
+                        "remote hf:// audio paths require huggingface_hub"
+                    ) from exc
+                with HfFileSystem().open(raw_path, "rb") as handle:
+                    payload = handle.read()
+                metadata["source_path"] = raw_path
+                metadata["storage"] = "huggingface_hub_path_bytes"
+                return payload, Path(raw_path).suffix.lower() or ".bin", metadata
         if value.get("array") is not None and value.get("sampling_rate") is not None:
             array = np.asarray(value["array"], dtype=np.float32)
             if array.ndim == 2 and array.shape[0] < array.shape[1]:
@@ -195,7 +208,7 @@ def _audio_bytes(value: object) -> tuple[bytes, str, dict[str, Any]]:
 
 def _load_hf_stream(source: AudioSource) -> tuple[Iterable[Mapping[str, Any]], str]:
     try:
-        from datasets import Audio, load_dataset  # type: ignore
+        from datasets import load_dataset  # type: ignore
     except ImportError as exc:
         raise RuntimeError(
             "Hugging Face collection requires the optional 'datasets' package"
@@ -209,9 +222,10 @@ def _load_hf_stream(source: AudioSource) -> tuple[Iterable[Mapping[str, Any]], s
     if source.config is not None:
         kwargs["name"] = source.config
     stream = load_dataset(**kwargs)
-    features = getattr(stream, "features", None)
-    if features is not None and source.audio_column in features:
-        stream = stream.cast_column(source.audio_column, Audio(decode=False))
+    # Current Datasets releases decode Audio through TorchCodec by default.
+    # Streaming IterableDataset.decode(False) returns the raw {path, bytes}
+    # storage representation without importing TorchCodec or FFmpeg.
+    stream = stream.decode(False)
     info = getattr(stream, "info", None)
     observed_license = str(getattr(info, "license", "") or source.declared_license)
     return stream, observed_license
@@ -240,8 +254,7 @@ def collect_audio_sources(
     for source_index, source in enumerate(sources):
         if collected_total >= max_total:
             break
-        stream, observed_license = loader(source)
-        effective_license = observed_license or source.declared_license
+        effective_license = source.declared_license
         partition = license_partition(effective_license)
         source_limit = min(max_per_source, source.max_items or max_per_source)
         accepted = 0
@@ -249,8 +262,40 @@ def collect_audio_sources(
         rejected = 0
         scanned = 0
         errors: list[str] = []
-        for row_index, row in enumerate(stream):
-            if accepted >= source_limit or collected_total >= max_total:
+        try:
+            stream, observed_license = loader(source)
+            effective_license = observed_license or source.declared_license
+            partition = license_partition(effective_license)
+        except Exception as exc:
+            source_summaries.append(
+                {
+                    "repo_id": source.repo_id,
+                    "config": source.config,
+                    "split": source.split,
+                    "revision": source.revision,
+                    "category": source.category,
+                    "license_partition": partition,
+                    "observed_license": effective_license,
+                    "scanned": 0,
+                    "accepted": 0,
+                    "duplicates": 0,
+                    "rejected": 0,
+                    "errors": [f"loader: {type(exc).__name__}: {exc}"],
+                }
+            )
+            continue
+        iterator = iter(stream)
+        row_index = 0
+        while accepted < source_limit and collected_total < max_total:
+            try:
+                row = next(iterator)
+            except StopIteration:
+                break
+            except Exception as exc:
+                rejected += 1
+                errors.append(
+                    f"iteration {row_index}: {type(exc).__name__}: {exc}"
+                )
                 break
             scanned += 1
             try:
@@ -262,6 +307,7 @@ def collect_audio_sources(
                 digest = _sha256(payload)
                 if digest in observed_hashes:
                     duplicates += 1
+                    row_index += 1
                     continue
                 observed_hashes.add(digest)
                 directory = (
@@ -303,12 +349,11 @@ def collect_audio_sources(
                 records.append(record)
                 accepted += 1
                 collected_total += 1
-            except Exception as exc:
+            except Exception as exc:  # fail record, continue bounded source scan
                 rejected += 1
                 if len(errors) < 10:
-                    errors.append(
-                        f"row {row_index}: {type(exc).__name__}: {exc}"
-                    )
+                    errors.append(f"row {row_index}: {type(exc).__name__}: {exc}")
+            row_index += 1
         source_summaries.append(
             {
                 "repo_id": source.repo_id,
@@ -351,11 +396,6 @@ def collect_audio_sources(
     empty_sources = [
         row["repo_id"] for row in source_summaries if int(row["accepted"]) == 0
     ]
-    if empty_sources:
-        raise RuntimeError(
-            "audio collection produced zero accepted clips for: "
-            + ", ".join(str(value) for value in empty_sources)
-        )
     counts_by_partition: dict[str, int] = {}
     counts_by_category: dict[str, int] = {}
     for record in records:
@@ -373,6 +413,7 @@ def collect_audio_sources(
         "counts_by_license_partition": counts_by_partition,
         "counts_by_category": counts_by_category,
         "sources": source_summaries,
+        "empty_sources": empty_sources,
         "manifest": manifest_path.name,
         "claim_boundary": (
             "bounded corpus acquisition with source and license provenance; "
@@ -382,6 +423,11 @@ def collect_audio_sources(
     (output / "collection_summary.json").write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
+    if empty_sources:
+        raise RuntimeError(
+            "audio collection produced zero accepted clips for: "
+            + ", ".join(str(value) for value in empty_sources)
+        )
     return summary
 
 

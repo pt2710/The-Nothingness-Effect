@@ -176,6 +176,73 @@ def _fit_qenn_readouts(model, train_batch, validation_batch) -> tuple[float, ...
     return tuple(selected_lambdas)
 
 
+def _fit_main_task_head(model, train_batch, validation_batch) -> float:
+    """Fit the integrated SOInets task head and select ridge on validation only."""
+
+    model.eval()
+    with torch.no_grad():
+        train_hidden = model(train_batch.modalities).hidden
+        validation_hidden = model(validation_batch.modalities).hidden
+    if train_hidden.ndim != 2 or validation_hidden.ndim != 2:
+        raise RuntimeError("main task ridge fitting requires per-observation hidden states")
+    if train_hidden.shape[-1] != model.task_head.in_features:
+        raise RuntimeError("main task hidden domain does not match task_head input")
+    classes = int(model.task_head.out_features)
+    candidates = (1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0)
+    best_score = math.inf
+    best_beta: torch.Tensor | None = None
+    best_ridge = candidates[0]
+    best_accuracy = 0.0
+    best_loss = math.inf
+    for ridge in candidates:
+        beta = _ridge_solution(
+            train_hidden,
+            train_batch.labels,
+            classes,
+            ridge,
+        )
+        logits = validation_hidden.to(torch.float64) @ beta[:-1] + beta[-1]
+        loss = float(functional.cross_entropy(logits, validation_batch.labels))
+        accuracy = float(
+            (logits.argmax(dim=-1) == validation_batch.labels).float().mean()
+        )
+        score = loss + 0.25 * (1.0 - accuracy)
+        if score < best_score:
+            best_score = score
+            best_beta = beta
+            best_ridge = ridge
+            best_accuracy = accuracy
+            best_loss = loss
+    if best_beta is None:
+        raise RuntimeError("main task ridge search did not produce a finite candidate")
+    with torch.no_grad():
+        model.task_head.weight.copy_(
+            best_beta[:-1].T.to(
+                dtype=model.task_head.weight.dtype,
+                device=model.task_head.weight.device,
+            )
+        )
+        model.task_head.bias.copy_(
+            best_beta[-1].to(
+                dtype=model.task_head.bias.dtype,
+                device=model.task_head.bias.device,
+            )
+        )
+    selected = torch.tensor(float(best_ridge))
+    selected_accuracy = torch.tensor(float(best_accuracy))
+    selected_loss = torch.tensor(float(best_loss))
+    for name, value in (
+        ("main_task_ridge_lambda", selected),
+        ("main_task_validation_accuracy", selected_accuracy),
+        ("main_task_validation_cross_entropy", selected_loss),
+    ):
+        if hasattr(model, name):
+            getattr(model, name).copy_(value.to(getattr(model, name).device))
+        else:
+            model.register_buffer(name, value)
+    return float(best_ridge)
+
+
 def _inverse_softplus(value: torch.Tensor) -> torch.Tensor:
     value = value.clamp_min(1e-6).to(torch.float64)
     return value + torch.log(-torch.expm1(-value))
@@ -257,6 +324,7 @@ def _train_with_temperature_selection(
         validation_batch,
         seed=int(kwargs.get("seed", 0)),
     )
+    _fit_main_task_head(model, train_batch, validation_batch)
     _fit_decoder(model, train_batch, validation_batch)
     if not hasattr(model, "calibration_temperature"):
         model.register_buffer("calibration_temperature", torch.ones(()))
@@ -346,6 +414,7 @@ def main() -> int:
         "local_rbm=removed "
         "qenn_auxiliary=supervised_and_ridge_finetuned "
         "pgqenn_graph=validation_selected_ridge_and_temperature "
+        "main_task_readout=validation_selected_ridge "
         "decoder=validation_ridge_finetuned "
         "temperature_calibration=validation_selected "
         f"seeds={len(seed_summary)} "

@@ -4,12 +4,18 @@ from __future__ import annotations
 from dataclasses import asdict, replace
 import json
 import math
+from pathlib import Path
+import sys
 from typing import Any
 
 import torch
 
-import tools.run_full_ai_hyperparameter_evaluation as base
-from the_nothingness_effect.artificial_intelligence.multimodal.data import (
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import tools.run_full_ai_hyperparameter_evaluation as base  # noqa: E402
+from the_nothingness_effect.artificial_intelligence.multimodal.data import (  # noqa: E402
     MultimodalBatch,
     MultimodalDataset,
 )

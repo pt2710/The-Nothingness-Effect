@@ -3,7 +3,7 @@
     "repo_id": "PolyAI/minds14",
     "config": "en-US",
     "split": "train",
-    "revision": "main",
+    "revision": "refs/convert/parquet",
     "category": "speech",
     "audio_column": "audio",
     "license": "cc-by-4.0",

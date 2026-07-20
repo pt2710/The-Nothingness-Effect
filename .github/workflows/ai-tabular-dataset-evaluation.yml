@@ -13,6 +13,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ai-tabular-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   train-validate-evaluate:
     runs-on: ubuntu-latest

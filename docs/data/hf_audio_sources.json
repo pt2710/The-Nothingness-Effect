@@ -9,7 +9,7 @@
     "max_items": 100
   },
   {
-    "repo_id": "storylinez/gtzan-music-genre-dataset",
+    "repo_id": "confit/gtzan-parquet",
     "split": "train",
     "revision": "main",
     "category": "music",

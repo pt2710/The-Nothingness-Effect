@@ -88,18 +88,33 @@ jobs:
           PY
       - name: Tune, train, validate and evaluate every public hyperparameter
         shell: bash
+        env:
+          PYTHONUNBUFFERED: "1"
         run: |
+          mkdir -p .ci-logs
           if [[ "${{ matrix.dataset }}" == "fraud" ]]; then
             SOURCE=.ci-data/credit_card_fraud_detection.zip
           else
             SOURCE=.ci-data/breast_cancer_wisconsin.csv
           fi
+          set +e
           python tools/run_full_ai_hyperparameter_evaluation.py \
             --source "$SOURCE" \
             --dataset "${{ matrix.dataset }}" \
             --output "reports/artificial_intelligence_full_tuning/${{ matrix.dataset }}" \
             --seeds ${{ matrix.seeds }} \
-            --passes 1
+            --passes 1 2>&1 | tee ".ci-logs/${{ matrix.dataset }}.log"
+          status=${PIPESTATUS[0]}
+          set -e
+          exit "$status"
+      - name: Upload tuning diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tne-ai-full-tuning-diagnostics-${{ matrix.dataset }}-${{ github.sha }}
+          path: .ci-logs
+          if-no-files-found: warn
+          retention-days: 30
       - name: Enforce complete model and tuning evidence
         run: |
           python - <<'PY'

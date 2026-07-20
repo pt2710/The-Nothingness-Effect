@@ -140,7 +140,7 @@ def _dataset(path: Path, dataset: str, seed: int) -> tuple[MultimodalDataset, di
     centre = train_tensor.median(dim=0).values
     scale = (train_tensor - centre).abs().median(dim=0).values.clamp_min(1e-8)
     standardized = ((matrix - centre) / scale).clamp(-20.0, 20.0).to(torch.float32)
-    scaled = 1.0 + torch.sigmoid(standardized)
+    scaled = 1.1 + 0.8 * torch.sigmoid(standardized)
     if not bool(((scaled > 1.0) & (scaled < 2.0)).all()):
         raise RuntimeError("bounded positive TNE carrier mapping left the interval (1,2)")
     groups = torch.tensor_split(torch.arange(scaled.shape[1]), 3)
@@ -164,7 +164,7 @@ def _dataset(path: Path, dataset: str, seed: int) -> tuple[MultimodalDataset, di
         "test_rows": len(test_idx),
         "preprocessing": (
             "training-only median/MAD standardization clipped to [-20,20], then "
-            "rank-preserving sigmoid mapping to the strict positive TNE carrier interval (1,2)"
+            "rank-preserving sigmoid mapping to the positive TNE carrier interval [1.1,1.9]"
         ),
         "split_seed": seed,
     }

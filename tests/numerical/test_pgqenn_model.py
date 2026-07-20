@@ -55,6 +55,7 @@ def test_pgqenn_uses_equivariant_messages_pdfi_elastic_gain_and_gradients():
     features = (torch.rand((9, 5)) + 0.2).requires_grad_()
     output = model(features)
     assert output.graph is not None and output.graph.growth_mode == "mpl_tc_prime_motif"
+    assert output.graph_shards == (output.graph,)
     assert output.qenn_backbone_output is not None
     assert output.qenn_backbone_output.dtqc_state is not None
     assert output.qenn_backbone_output.observation_collapse_state is not None
@@ -72,6 +73,8 @@ def test_pgqenn_uses_equivariant_messages_pdfi_elastic_gain_and_gradients():
     assert float(output.signed_spectrum_source_removal_delta.detach()) > 0.0
     assert output.metadata["signed_spectrum_integration"] == "tne_flowpoint_involution_lift"
     assert output.metadata["signed_spectrum_counts"]["positive"] == output.metadata["signed_spectrum_counts"]["negative"]
+    assert output.metadata["mpl_tc_node_limit"] is None
+    assert output.metadata["mpl_tc_pooling"] == "none"
     assert output.pdfi is not None and torch.isfinite(output.pdfi)
     assert output.node_state is not None and output.node_state.shape == (9, 7)
     assert float(output.residuals["message_equivariance"].detach()) == 0.0
@@ -82,30 +85,17 @@ def test_pgqenn_uses_equivariant_messages_pdfi_elastic_gain_and_gradients():
     assert all(parameter.grad is not None for parameter in model.parameters())
 
 
-def test_feature_compression_consumes_every_row_and_preserves_gradients() -> None:
-    features = torch.arange(51, dtype=torch.float32).reshape(17, 3)
-    features.requires_grad_(True)
-
-    pooled, bucket_sizes = pgqenn_model._compress_feature_nodes(features, 5)
-
-    assert pooled.shape == (5, 3)
-    assert bucket_sizes == (4, 4, 3, 3, 3)
-    assert sum(bucket_sizes) == features.shape[0]
-    assert torch.allclose(pooled[0], features[:4].mean(dim=0))
-    assert torch.allclose(pooled[-1], features[-3:].mean(dim=0))
-
-    pooled.sum().backward()
-    assert features.grad is not None
-    assert torch.isfinite(features.grad).all()
-    assert bool((features.grad.abs().sum(dim=1) > 0).all())
+def test_finite_prefix_segmentation_preserves_every_node() -> None:
+    assert pgqenn_model._finite_prefix_segment_sizes(5, 5) == (5,)
+    assert pgqenn_model._finite_prefix_segment_sizes(7, 5) == (5, 2)
+    assert pgqenn_model._finite_prefix_segment_sizes(11, 5) == (5, 4, 2)
+    assert pgqenn_model._finite_prefix_segment_sizes(17, 5) == (5, 5, 5, 2)
 
 
-def test_pgqenn_forward_reduces_only_the_finite_graph_carrier(
-    monkeypatch,
-) -> None:
+def test_pgqenn_forward_has_no_300_node_model_limit(monkeypatch) -> None:
     monkeypatch.setattr(
         pgqenn_model,
-        "_mpl_tc_motif_capacity",
+        "_mpl_tc_finite_prefix_capacity",
         lambda _provider: 5,
     )
     model = PGQENNModel(
@@ -115,20 +105,30 @@ def test_pgqenn_forward_reduces_only_the_finite_graph_carrier(
         triadic_streams_enabled=False,
         signed_spectrum_enabled=False,
     )
-    features = torch.linspace(0.1, 2.8, 28).reshape(7, 4)
+    features = torch.linspace(0.1, 4.4, 44).reshape(11, 4).requires_grad_()
 
     output = model(features)
 
     assert output.graph is not None
-    assert output.hidden.shape[0] == 5
-    assert len(output.mpl_motifs) == 5
-    assert output.metadata["input_node_count"] == 7
-    assert output.metadata["graph_node_count"] == 5
-    assert output.metadata["mpl_tc_motif_capacity"] == 5
-    assert output.metadata["mpl_tc_capacity_reduction"] == (
-        "contiguous_mean_pool_all_rows"
+    assert tuple(len(graph.primes) for graph in output.graph_shards) == (5, 4, 2)
+    assert output.hidden.shape == (11, 6)
+    assert output.qenn_backbone_output is not None
+    assert output.qenn_backbone_output.hidden.shape[0] == 11
+    assert len(output.mpl_motifs) == 11
+    assert output.metadata["input_node_count"] == 11
+    assert output.metadata["graph_node_count"] == 11
+    assert output.metadata["graph_segment_count"] == 3
+    assert output.metadata["graph_segment_sizes"] == (5, 4, 2)
+    assert output.metadata["mpl_tc_finite_prefix_capacity"] == 5
+    assert output.metadata["mpl_tc_node_limit"] is None
+    assert output.metadata["mpl_tc_segmentation"] == (
+        "lossless_block_diagonal_finite_prefix_cover"
     )
-    assert output.metadata["mpl_tc_source_rows_consumed"] == 7
-    assert output.metadata["mpl_tc_pool_bucket_min"] == 1
-    assert output.metadata["mpl_tc_pool_bucket_max"] == 2
+    assert output.metadata["mpl_tc_source_nodes_consumed"] == 11
+    assert output.metadata["mpl_tc_pooling"] == "none"
     assert float(output.residuals["mpl_tc_motif_exhaustion"]) == 0.0
+
+    output.hidden.sum().backward()
+    assert features.grad is not None
+    assert torch.isfinite(features.grad).all()
+    assert bool((features.grad.abs().sum(dim=1) > 0).all())

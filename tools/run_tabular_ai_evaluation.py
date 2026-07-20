@@ -33,6 +33,22 @@ from the_nothingness_effect.artificial_intelligence.pgqenn.training_evaluation i
 )
 
 
+def _numeric_values(row: dict[str | None, str | list[str] | None], fields: list[str]) -> list[float] | None:
+    values: list[float] = []
+    for name in fields:
+        raw = row.get(name)
+        if raw is None or isinstance(raw, list):
+            return None
+        text = raw.strip()
+        if not text:
+            return None
+        try:
+            values.append(float(text))
+        except ValueError:
+            return None
+    return values
+
+
 def _read_rows(path: Path, dataset: str) -> tuple[list[list[float]], list[int], list[str]]:
     if dataset == "fraud":
         with zipfile.ZipFile(path) as archive:
@@ -42,22 +58,54 @@ def _read_rows(path: Path, dataset: str) -> tuple[list[list[float]], list[int], 
             handle = archive.open(names[0])
             text = (line.decode("utf-8") for line in handle)
             reader = csv.DictReader(text)
-            fields = [name for name in (reader.fieldnames or ()) if name != "Class"]
-            rows, labels = [], []
+            fields = [
+                name.strip()
+                for name in (reader.fieldnames or ())
+                if name is not None and name.strip() and name.strip() != "Class"
+            ]
+            rows: list[list[float]] = []
+            labels: list[int] = []
+            skipped = 0
             for row in reader:
-                rows.append([float(row[name]) for name in fields])
-                labels.append(int(row["Class"]))
+                values = _numeric_values(row, fields)
+                label_text = row.get("Class")
+                if values is None or not isinstance(label_text, str) or not label_text.strip():
+                    skipped += 1
+                    continue
+                rows.append(values)
+                labels.append(int(label_text))
+            if not rows:
+                raise RuntimeError("fraud CSV contains no complete numeric observations")
+            if skipped > max(5, int(0.001 * (len(rows) + skipped))):
+                raise RuntimeError(f"fraud CSV contains too many malformed observations: {skipped}")
             return rows, labels, fields
-    with path.open(newline="", encoding="utf-8") as handle:
+    with path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
         fields = [
-            name for name in (reader.fieldnames or ())
-            if name not in {"id", "diagnosis", "Unnamed: 32"}
+            name.strip()
+            for name in (reader.fieldnames or ())
+            if name is not None
+            and name.strip()
+            and name.strip() not in {"id", "diagnosis", "Unnamed: 32"}
         ]
-        rows, labels = [], []
+        rows: list[list[float]] = []
+        labels: list[int] = []
+        skipped = 0
         for row in reader:
-            rows.append([float(row[name]) for name in fields])
-            labels.append(1 if row["diagnosis"] == "M" else 0)
+            diagnosis = row.get("diagnosis")
+            diagnosis = diagnosis.strip() if isinstance(diagnosis, str) else ""
+            values = _numeric_values(row, fields)
+            if diagnosis not in {"M", "B"} or values is None:
+                skipped += 1
+                continue
+            rows.append(values)
+            labels.append(1 if diagnosis == "M" else 0)
+        if not rows:
+            raise RuntimeError("breast-cancer CSV contains no complete labeled observations")
+        if skipped > max(5, int(0.01 * (len(rows) + skipped))):
+            raise RuntimeError(
+                f"breast-cancer CSV contains too many malformed observations: {skipped}"
+            )
         return rows, labels, fields
 
 
@@ -77,7 +125,9 @@ def _indices(labels: list[int], seed: int, dataset: str) -> tuple[list[int], lis
     for values in selected.values():
         n = len(values)
         a, b = max(2, int(0.60 * n)), max(3, int(0.80 * n))
-        train.extend(values[:a]); validation.extend(values[a:b]); test.extend(values[b:])
+        train.extend(values[:a])
+        validation.extend(values[a:b])
+        test.extend(values[b:])
     return train, validation, test
 
 
@@ -162,7 +212,10 @@ def run(*, source: Path, dataset_name: str, output: Path, seeds: tuple[int, ...]
     def write_csv(name: str, rows: list[dict[str, Any]]) -> None:
         fields = list(dict.fromkeys(key for row in rows for key in row))
         with (output / name).open("w", newline="", encoding="utf-8") as handle:
-            writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore"); writer.writeheader(); writer.writerows(rows)
+            writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(rows)
+
     for name, rows in (("hyperparameter_search.csv", search_rows), ("split_metrics.csv", split_rows), ("module_metrics.csv", module_rows), ("pgqenn_graph_metrics.csv", pgqenn_rows), ("source_removal.csv", source_rows), ("seed_summary.csv", seed_rows)):
         write_csv(name, rows)
     result = {"dataset": dataset_name, "selected_hyperparameters": {"epochs": best[1], "max_clusters": best[2], "optimize_K_D": True, "adaptive_learning_rate": True}, "seeds": list(seeds), "training_status": "completed", "validation_status": "validation-selected", "test_status": "held-out", "claim_boundary": "finite deterministic tabular benchmark; not clinical deployment validation, financial deployment validation or formal theorem proof"}
@@ -184,6 +237,7 @@ def main() -> int:
     report = run(source=args.source, dataset_name=args.dataset, output=args.output, seeds=tuple(args.seeds), epochs=tuple(args.epochs), clusters=tuple(args.clusters))
     print(json.dumps(report, sort_keys=True))
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

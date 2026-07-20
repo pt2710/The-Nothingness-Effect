@@ -101,17 +101,33 @@ def train(config: Config, data, seed: int):
     return model, run
 
 
+def _finite(value: Any) -> bool:
+    return value is not None and math.isfinite(float(value))
+
+
 def score(model, data, seed: int) -> tuple[float, dict[str, Any], list[dict[str, Any]]]:
     evaluation = _evaluate_with_pgqenn_graph_metrics(model, data.validation)
     modules = _module_rows_with_pgqenn(seed, evaluation, data.validation.labels)
-    accuracies = [float(row["accuracy"]) for row in modules]
-    residuals = [math.tanh(abs(float(row["residual_l2"]))) for row in modules]
-    pg_losses = [float(row["cross_entropy"]) for row in modules if row["module"] == "PGQENN"]
+    qenn_accuracies = [
+        float(row["accuracy"])
+        for row in modules
+        if row.get("module") == "QENN" and _finite(row.get("accuracy"))
+    ]
+    accuracies = qenn_accuracies + [
+        float(evaluation.metrics["pgqenn_graph_accuracy"]),
+        float(evaluation.metrics["accuracy"]),
+    ]
+    residuals = [
+        math.tanh(abs(float(row["residual_l2"])))
+        for row in modules
+        if _finite(row.get("residual_l2"))
+    ]
+    pg_loss = float(evaluation.metrics["pgqenn_graph_cross_entropy"])
     value = (
         _objective(evaluation.metrics)
         + 0.35 * (1.0 - min(accuracies))
         + 0.04 * sum(residuals) / max(1, len(residuals))
-        + 0.10 * sum(pg_losses) / max(1, len(pg_losses))
+        + 0.10 * pg_loss
     )
     if not math.isfinite(value):
         raise RuntimeError("non-finite validation objective")
@@ -126,9 +142,11 @@ def search(data, seed: int, passes: int) -> tuple[Config, list[dict[str, Any]]]:
     def evaluate(config: Config):
         key = json.dumps(asdict(config), sort_keys=True)
         if key not in cache:
+            print(f"evaluating_config={key}", flush=True)
             model, run = train(config, data, seed)
             value, metrics, _ = score(model, data, seed)
             cache[key] = value, metrics, run
+            print(f"validation_objective={value:.12g}", flush=True)
         return cache[key]
 
     for pass_index in range(passes):
@@ -138,25 +156,39 @@ def search(data, seed: int, passes: int) -> tuple[Config, list[dict[str, Any]]]:
             for value in values:
                 candidate = replace(current, **{parameter: value})
                 objective, metrics, run = evaluate(candidate)
-                candidates.append((objective, json.dumps(asdict(candidate), sort_keys=True), candidate, metrics, run))
+                candidates.append(
+                    (
+                        objective,
+                        json.dumps(asdict(candidate), sort_keys=True),
+                        candidate,
+                        metrics,
+                        run,
+                    )
+                )
             candidates.sort(key=lambda item: (item[0], item[1]))
             selected = candidates[0][2]
             for objective, _, candidate, metrics, run in candidates:
-                rows.append({
-                    "pass": pass_index,
-                    "parameter": parameter,
-                    "candidate": getattr(candidate, parameter),
-                    "selected": candidate == selected,
-                    "objective": objective,
-                    "best_epoch": run.best_epoch,
-                    "validation_accuracy": metrics["accuracy"],
-                    "validation_macro_f1": metrics["macro_f1"],
-                    "validation_cross_entropy": metrics["cross_entropy"],
-                    "validation_ece": metrics["expected_calibration_error"],
-                    **asdict(candidate),
-                })
+                rows.append(
+                    {
+                        "pass": pass_index,
+                        "parameter": parameter,
+                        "candidate": getattr(candidate, parameter),
+                        "selected": candidate == selected,
+                        "objective": objective,
+                        "best_epoch": run.best_epoch,
+                        "validation_accuracy": metrics["accuracy"],
+                        "validation_macro_f1": metrics["macro_f1"],
+                        "validation_cross_entropy": metrics["cross_entropy"],
+                        "validation_ece": metrics["expected_calibration_error"],
+                        **asdict(candidate),
+                    }
+                )
             changed |= selected != current
             current = selected
+            print(
+                f"selected_parameter={parameter} selected_value={getattr(current, parameter)!r}",
+                flush=True,
+            )
         if not changed:
             break
     return current, rows
@@ -174,7 +206,28 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def run(source: Path, dataset_name: str, output: Path, seeds: tuple[int, ...], passes: int) -> dict[str, Any]:
+def _module_summary(module_rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
+    summary: dict[str, dict[str, float]] = {}
+    for module in ("QENN", "PGQENN", "SOInets"):
+        rows = [row for row in module_rows if row["module"] == module]
+        accuracies = [float(row["accuracy"]) for row in rows if _finite(row.get("accuracy"))]
+        macro_f1 = [float(row["macro_f1"]) for row in rows if _finite(row.get("macro_f1"))]
+        if not accuracies or not macro_f1:
+            raise RuntimeError(f"missing finite held-out metrics for {module}")
+        summary[module] = {
+            "mean_test_accuracy": sum(accuracies) / len(accuracies),
+            "mean_test_macro_f1": sum(macro_f1) / len(macro_f1),
+        }
+    return summary
+
+
+def run(
+    source: Path,
+    dataset_name: str,
+    output: Path,
+    seeds: tuple[int, ...],
+    passes: int,
+) -> dict[str, Any]:
     output.mkdir(parents=True, exist_ok=True)
     checkpoints = output / "checkpoints"
     checkpoints.mkdir(exist_ok=True)
@@ -199,25 +252,39 @@ def run(source: Path, dataset_name: str, output: Path, seeds: tuple[int, ...], p
         test = evaluations["test"]
         module_rows.extend(_module_rows_with_pgqenn(seed, test, data.test.labels))
         graph = evaluate_pgqenn_graph_heads(model, data.test)
-        graph_rows.append({"seed": seed, **{k: v for k, v in graph["metrics"].items() if k != "confusion_matrix"}})
+        graph_rows.append(
+            {
+                "seed": seed,
+                **{
+                    key: value
+                    for key, value in graph["metrics"].items()
+                    if key != "confusion_matrix"
+                },
+            }
+        )
         source_rows.extend(_source_removals_without_legacy_name(model, data.test, seed))
-        seed_rows.append({
-            "seed": seed,
-            "best_epoch": training.best_epoch,
-            "best_validation_objective": training.best_validation_objective,
-            "test_accuracy": test.metrics["accuracy"],
-            "test_macro_f1": test.metrics["macro_f1"],
-            "test_cross_entropy": test.metrics["cross_entropy"],
-            "test_ece": test.metrics["expected_calibration_error"],
-            **report,
-        })
-        torch.save({
-            "model_state_dict": model.state_dict(),
-            "selected_hyperparameters": asdict(selected),
-            "seed": seed,
-            "best_epoch": training.best_epoch,
-            "best_validation_objective": training.best_validation_objective,
-        }, checkpoints / f"seed_{seed}_best.pt")
+        seed_rows.append(
+            {
+                "seed": seed,
+                "best_epoch": training.best_epoch,
+                "best_validation_objective": training.best_validation_objective,
+                "test_accuracy": test.metrics["accuracy"],
+                "test_macro_f1": test.metrics["macro_f1"],
+                "test_cross_entropy": test.metrics["cross_entropy"],
+                "test_ece": test.metrics["expected_calibration_error"],
+                **report,
+            }
+        )
+        torch.save(
+            {
+                "model_state_dict": model.state_dict(),
+                "selected_hyperparameters": asdict(selected),
+                "seed": seed,
+                "best_epoch": training.best_epoch,
+                "best_validation_objective": training.best_validation_objective,
+            },
+            checkpoints / f"seed_{seed}_best.pt",
+        )
 
     for name, rows in (
         ("hyperparameter_search.csv", search_rows),
@@ -230,13 +297,6 @@ def run(source: Path, dataset_name: str, output: Path, seeds: tuple[int, ...], p
         write_csv(output / name, rows)
 
     test_rows = [row for row in split_rows if row["split"] == "test"]
-    module_summary = {
-        module: {
-            "mean_test_accuracy": sum(float(row["accuracy"]) for row in module_rows if row["module"] == module) / max(1, sum(row["module"] == module for row in module_rows)),
-            "mean_test_macro_f1": sum(float(row["macro_f1"]) for row in module_rows if row["module"] == module) / max(1, sum(row["module"] == module for row in module_rows)),
-        }
-        for module in ("QENN", "PGQENN", "SOInets")
-    }
     summary = {
         "schema_version": "1.0",
         "dataset": dataset_name,
@@ -246,21 +306,58 @@ def run(source: Path, dataset_name: str, output: Path, seeds: tuple[int, ...], p
         "search_seed": seeds[0],
         "evaluation_seeds": list(seeds),
         "integrated_multimodal": {
-            "mean_test_accuracy": sum(float(row["accuracy"]) for row in test_rows) / len(test_rows),
-            "mean_test_macro_f1": sum(float(row["macro_f1"]) for row in test_rows) / len(test_rows),
-            "mean_test_cross_entropy": sum(float(row["cross_entropy"]) for row in test_rows) / len(test_rows),
-            "mean_test_ece": sum(float(row["expected_calibration_error"]) for row in test_rows) / len(test_rows),
+            "mean_test_accuracy": sum(float(row["accuracy"]) for row in test_rows)
+            / len(test_rows),
+            "mean_test_macro_f1": sum(float(row["macro_f1"]) for row in test_rows)
+            / len(test_rows),
+            "mean_test_cross_entropy": sum(
+                float(row["cross_entropy"]) for row in test_rows
+            )
+            / len(test_rows),
+            "mean_test_ece": sum(
+                float(row["expected_calibration_error"]) for row in test_rows
+            )
+            / len(test_rows),
         },
-        "modules": module_summary,
-        "nested_validation_tuning": ["QENN ridge", "PGQENN graph ridge", "main-task ridge", "decoder ridge", "temperature", "dynamic K_D/SOI"],
-        "split_policy": "training-only preprocessing; validation-only selection; held-out test used after model selection",
+        "modules": _module_summary(module_rows),
+        "nested_validation_tuning": [
+            "QENN ridge",
+            "PGQENN graph ridge",
+            "main-task ridge",
+            "decoder ridge",
+            "temperature",
+            "dynamic K_D/SOI",
+        ],
+        "split_policy": (
+            "training-only preprocessing; validation-only selection; "
+            "held-out test used after model selection"
+        ),
         "search_ingestion": ingestion,
-        "claim_boundary": "finite tabular benchmark; not clinical/financial deployment validation or formal theorem proof",
+        "claim_boundary": (
+            "finite tabular benchmark; not clinical/financial deployment "
+            "validation or formal theorem proof"
+        ),
     }
-    (output / "evaluation_summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (output / "evaluation_summary.json").write_text(
+        json.dumps(summary, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     files = sorted(path for path in output.rglob("*") if path.is_file())
-    manifest = {"schema_version": "1.0", "files": [{"path": str(path.relative_to(output)), "bytes": path.stat().st_size, "sha256": digest(path)} for path in files]}
-    (output / "artifact_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    manifest = {
+        "schema_version": "1.0",
+        "files": [
+            {
+                "path": str(path.relative_to(output)),
+                "bytes": path.stat().st_size,
+                "sha256": digest(path),
+            }
+            for path in files
+        ],
+    }
+    (output / "artifact_manifest.json").write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     with zipfile.ZipFile(output.with_suffix(".zip"), "w", zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(output.rglob("*")):
             if path.is_file():
@@ -278,7 +375,18 @@ def main() -> int:
     args = parser.parse_args()
     if args.passes < 1:
         raise SystemExit("--passes must be positive")
-    print(json.dumps(run(args.source, args.dataset, args.output, tuple(args.seeds), args.passes), sort_keys=True))
+    print(
+        json.dumps(
+            run(
+                args.source,
+                args.dataset,
+                args.output,
+                tuple(args.seeds),
+                args.passes,
+            ),
+            sort_keys=True,
+        )
+    )
     return 0
 
 

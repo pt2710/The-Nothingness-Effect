@@ -2,10 +2,13 @@ from __future__ import annotations
 
 import csv
 import json
+from types import SimpleNamespace
 
 import torch
+from torch import nn
 
 from tools.run_comprehensive_ai_evaluation import (
+    _fit_main_task_head,
     run_comprehensive_ai_evaluation,
 )
 from the_nothingness_effect.artificial_intelligence.multimodal.axes import (
@@ -76,6 +79,58 @@ def test_geometric_model_contains_no_local_rbm_and_one_global_rbm():
     assert not hasattr(model, "local_energy")
     assert len(energy_layers) == 1
     assert energy_layers[0] is model.global_energy
+
+
+class _LinearHiddenFixture(nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.task_head = nn.Linear(2, 2)
+
+    def forward(self, modalities):
+        return SimpleNamespace(hidden=modalities["features"])
+
+
+def test_main_task_head_uses_validation_selected_ridge():
+    model = _LinearHiddenFixture()
+    train = SimpleNamespace(
+        modalities={
+            "features": torch.tensor(
+                [
+                    [-2.0, -1.0],
+                    [-1.5, -0.5],
+                    [-1.0, -1.5],
+                    [-0.5, -1.0],
+                    [0.5, 1.0],
+                    [1.0, 1.5],
+                    [1.5, 0.5],
+                    [2.0, 1.0],
+                ]
+            )
+        },
+        labels=torch.tensor([0, 0, 0, 0, 1, 1, 1, 1]),
+    )
+    validation = SimpleNamespace(
+        modalities={
+            "features": torch.tensor(
+                [
+                    [-1.75, -0.75],
+                    [-0.75, -1.25],
+                    [0.75, 1.25],
+                    [1.75, 0.75],
+                ]
+            )
+        },
+        labels=torch.tensor([0, 0, 1, 1]),
+    )
+    selected = _fit_main_task_head(model, train, validation)
+    with torch.no_grad():
+        predictions = model.task_head(
+            validation.modalities["features"]
+        ).argmax(dim=-1)
+    assert selected in {1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0}
+    assert torch.equal(predictions, validation.labels)
+    assert float(model.main_task_validation_accuracy) == 1.0
+    assert torch.isfinite(model.main_task_validation_cross_entropy)
 
 
 def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
@@ -156,6 +211,15 @@ def test_comprehensive_evaluation_writes_complete_visual_evidence(tmp_path):
         row["evaluation_scope"] == "graph_level_modality_node_classification"
         for row in pgqenn_rows
     )
+
+    checkpoint = torch.load(
+        output / "checkpoints" / "seed_0_best.pt",
+        map_location="cpu",
+        weights_only=False,
+    )
+    assert "main_task_ridge_lambda" in checkpoint["state_dict"]
+    assert "main_task_validation_accuracy" in checkpoint["state_dict"]
+    assert "main_task_validation_cross_entropy" in checkpoint["state_dict"]
 
     manifest_path = output / "artifact_manifest.json"
     assert manifest_path.is_file()

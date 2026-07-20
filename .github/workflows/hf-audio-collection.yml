@@ -54,22 +54,35 @@ jobs:
       - name: Verify collector boundaries without network fixtures
         run: python -m pytest -q tests/numerical/test_real_multimodal_data.py
       - name: Stream bounded speech, music and sound-effect sources
-        run: >-
-          python tools/collect_hf_audio_datasets.py
-          --catalog docs/data/hf_audio_sources.json
-          --output reports/hf_audio_collection
-          --max-per-source "$MAX_PER_SOURCE"
-          --max-total "$MAX_TOTAL"
-      - name: Package audio corpus and provenance
+        id: collect
+        continue-on-error: true
+        shell: bash
+        run: |
+          mkdir -p reports
+          set -o pipefail
+          python tools/collect_hf_audio_datasets.py \
+            --catalog docs/data/hf_audio_sources.json \
+            --output reports/hf_audio_collection \
+            --max-per-source "$MAX_PER_SOURCE" \
+            --max-total "$MAX_TOTAL" \
+            2>&1 | tee reports/hf_audio_collection.log
+      - name: Package audio corpus and diagnostics
+        if: always()
         run: >-
           python -m zipfile -c
           reports/hf_audio_collection.zip
           reports/hf_audio_collection
+          reports/hf_audio_collection.log
       - name: Upload license-partitioned audio evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: tne-hf-audio-collection
           path: |
             reports/hf_audio_collection
+            reports/hf_audio_collection.log
             reports/hf_audio_collection.zip
           if-no-files-found: error
+      - name: Enforce successful collection
+        if: steps.collect.outcome != 'success'
+        run: exit 1

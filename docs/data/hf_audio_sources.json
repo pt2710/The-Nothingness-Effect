@@ -1,7 +1,6 @@
 [
   {
     "repo_id": "PolyAI/minds14",
-    "config": "en-US",
     "split": "train",
     "revision": "refs/convert/parquet",
     "category": "speech",

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 import torch
 from torch import nn
@@ -39,8 +40,13 @@ from .message_passing import PrimeEquivariantMessagePassing
 from .mpl_tc_dependency import MPLTCDependencyError, MPLTCMotifProvider
 
 
-def _mpl_tc_motif_capacity(provider: MPLTCMotifProvider) -> int:
-    """Return the pinned finite MPL-TC motif capacity without changing it."""
+def _mpl_tc_finite_prefix_capacity(provider: MPLTCMotifProvider) -> int:
+    """Return the verified finite-prefix length exposed by pinned MPL-TC code.
+
+    This is an execution-tape length, not a PGQENN node limit and not a bound on
+    the unbounded MPL theory. Larger carriers are covered by multiple verified
+    finite-prefix graph segments without pooling or dropping source nodes.
+    """
 
     module = provider._load()
     law_class = getattr(module, "McCracknsPrimeLaw", None)
@@ -49,52 +55,52 @@ def _mpl_tc_motif_capacity(provider: MPLTCMotifProvider) -> int:
             "pinned MPL-TC checkout does not expose McCracknsPrimeLaw"
         )
     capacity = int(law_class.max_supported_primes())
-    if capacity < 2:
+    if capacity < 3:
         raise MPLTCDependencyError(
-            "pinned MPL-TC runtime must support at least two motifs"
+            "pinned MPL-TC runtime must support at least three motifs"
         )
     return capacity
 
 
-def _compress_feature_nodes(
-    features: torch.Tensor,
-    capacity: int,
-) -> tuple[torch.Tensor, tuple[int, ...]]:
-    """Mean-pool every source row into at most ``capacity`` graph nodes.
+def _finite_prefix_segment_sizes(
+    node_count: int,
+    finite_prefix_capacity: int,
+) -> tuple[int, ...]:
+    """Partition all nodes into valid finite-prefix segments without loss."""
 
-    The deterministic contiguous partition is differentiable and uses every
-    input row exactly once. It bounds only the finite MPL-TC graph carrier;
-    it does not subsample or discard the tabular training observations.
-    """
-
-    if features.ndim != 2:
-        raise ValueError("PGQENN graph compression requires a rank-2 feature field")
-    if capacity < 2:
-        raise ValueError("PGQENN graph compression capacity must be at least two")
-    node_count = int(features.shape[0])
     if node_count < 2:
         raise ValueError("PGQENN requires at least two feature nodes")
-    if node_count <= capacity:
-        return features, (1,) * node_count
+    if finite_prefix_capacity < 3:
+        raise ValueError("MPL-TC finite-prefix capacity must be at least three")
+    if node_count <= finite_prefix_capacity:
+        return (node_count,)
 
-    quotient, remainder = divmod(node_count, capacity)
-    pooled: list[torch.Tensor] = []
-    bucket_sizes: list[int] = []
-    start = 0
-    for index in range(capacity):
-        size = quotient + (1 if index < remainder else 0)
-        stop = start + size
-        pooled.append(features[start:stop].mean(dim=0))
-        bucket_sizes.append(size)
-        start = stop
-    if start != node_count or sum(bucket_sizes) != node_count:
-        raise RuntimeError("PGQENN graph compression did not consume every source row")
-    return torch.stack(pooled, dim=0), tuple(bucket_sizes)
+    full_segments, remainder = divmod(node_count, finite_prefix_capacity)
+    sizes = [finite_prefix_capacity] * full_segments
+    if remainder == 1:
+        sizes[-1] -= 1
+        sizes.append(2)
+    elif remainder > 1:
+        sizes.append(remainder)
+    if any(size < 2 or size > finite_prefix_capacity for size in sizes):
+        raise RuntimeError("invalid PGQENN finite-prefix graph segmentation")
+    if sum(sizes) != node_count:
+        raise RuntimeError("PGQENN graph segmentation did not preserve every node")
+    return tuple(sizes)
+
+
+def _sum_counts(rows: tuple[dict[str, int], ...]) -> dict[str, int]:
+    result: dict[str, int] = {}
+    for row in rows:
+        for name, value in row.items():
+            result[name] = result.get(name, 0) + int(value)
+    return result
 
 
 @dataclass
 class PGQENNOutput(TNEAIOutput):
     graph: PrimeGraph | None = None
+    graph_shards: tuple[PrimeGraph, ...] = ()
     pdfi: torch.Tensor | None = None
     node_state: torch.Tensor | None = None
     qenn_backbone_output: QENNOutput | None = None
@@ -141,6 +147,118 @@ class PGQENNModel(nn.Module):
         self.triadic_streams_enabled = bool(triadic_streams_enabled)
         self.signed_spectrum_enabled = bool(signed_spectrum_enabled)
 
+    def _segment_forward(
+        self,
+        qenn_hidden: torch.Tensor,
+        qenn_readout: torch.Tensor,
+        qenn_dfi: torch.Tensor,
+        graph: PrimeGraph,
+    ) -> dict[str, Any]:
+        hidden = self.message_passing(
+            qenn_hidden,
+            graph,
+            use_triadic_streams=self.triadic_streams_enabled,
+            use_signed_spectrum=self.signed_spectrum_enabled,
+        )
+        positive_spectrum_hidden = self.message_passing(
+            qenn_hidden,
+            graph,
+            use_triadic_streams=self.triadic_streams_enabled,
+            use_signed_spectrum=False,
+        )
+        prime_only_hidden = self.message_passing(
+            qenn_hidden,
+            graph,
+            use_triadic_streams=False,
+        )
+        triadic_delta = torch.linalg.vector_norm(hidden - prime_only_hidden)
+        signed_delta = torch.linalg.vector_norm(hidden - positive_spectrum_hidden)
+
+        adjacency = graph.adjacency.to(
+            dtype=qenn_hidden.dtype,
+            device=qenn_hidden.device,
+        )
+        spatial_adjacency = graph.message_adjacency.to(
+            dtype=qenn_hidden.dtype,
+            device=qenn_hidden.device,
+        )
+        coordinates = graph.coordinates_3d.to(
+            dtype=qenn_hidden.dtype,
+            device=qenn_hidden.device,
+        )
+        degree_sequence = adjacency.sum(dim=-1) + 1.0
+        parity_mask = torch.tensor(
+            [
+                (index + graph.two_adic_depths[index].value) % 2
+                for index in range(len(graph.primes) - 1)
+            ],
+            dtype=qenn_hidden.dtype,
+            device=qenn_hidden.device,
+        )
+        pdfi = parity_conditioned_dfi(degree_sequence, parity_mask)
+        elastic = self.elastic_gate(qenn_dfi.abs() + pdfi)
+        gain = torch.mean(elastic / torch.pi, dim=-1, keepdim=True)
+        node_state = require_finite_tensor(
+            0.5 * (hidden * gain + qenn_readout),
+            "PGQENN QENN-composed gated state",
+        )
+        logits = self.readout_layer(node_state.mean(dim=0, keepdim=True))
+
+        triadic = graph.triadic_growth
+        signed_triadic = graph.signed_triadic_growth
+        triadic_symmetry = (
+            torch.linalg.vector_norm(
+                triadic.spatial_adjacency - triadic.spatial_adjacency.T
+            ).to(dtype=qenn_hidden.dtype, device=qenn_hidden.device)
+            if triadic is not None
+            else torch.zeros((), dtype=qenn_hidden.dtype, device=qenn_hidden.device)
+        )
+        residuals = {
+            "message_equivariance": self.message_passing.equivariance_residual(
+                qenn_hidden,
+                graph,
+                use_triadic_streams=self.triadic_streams_enabled,
+                use_signed_spectrum=self.signed_spectrum_enabled,
+            ),
+            "graph_symmetry": torch.linalg.vector_norm(adjacency - adjacency.T),
+            "self_loop": torch.linalg.vector_norm(torch.diagonal(adjacency)),
+            "growth_3d_spatial_symmetry": torch.linalg.vector_norm(
+                spatial_adjacency - spatial_adjacency.T
+            ),
+            "growth_3d_axis_rank": torch.relu(
+                torch.tensor(3.0, dtype=qenn_hidden.dtype, device=qenn_hidden.device)
+                - torch.linalg.matrix_rank(
+                    coordinates - coordinates.mean(dim=0, keepdim=True)
+                ).to(dtype=qenn_hidden.dtype)
+            ),
+            "triadic_stream_adjacency_symmetry": triadic_symmetry,
+            "signed_spectrum_value_involution": torch.tensor(
+                signed_triadic.value_involution_residual
+                if signed_triadic is not None
+                else 0.0,
+                dtype=qenn_hidden.dtype,
+                device=qenn_hidden.device,
+            ),
+            "parseval": parseval_residual(node_state),
+            "mpl_tc_dependency": torch.zeros(
+                (), dtype=qenn_hidden.dtype, device=qenn_hidden.device
+            ),
+            "mpl_tc_motif_exhaustion": torch.tensor(
+                abs(len(graph.motifs) - qenn_hidden.shape[0]),
+                dtype=qenn_hidden.dtype,
+                device=qenn_hidden.device,
+            ),
+        }
+        return {
+            "node_state": node_state,
+            "elastic": elastic,
+            "pdfi": pdfi,
+            "logits": logits,
+            "triadic_delta": triadic_delta,
+            "signed_delta": signed_delta,
+            "residuals": residuals,
+        }
+
     def forward(
         self,
         features: torch.Tensor,
@@ -156,146 +274,115 @@ class PGQENNModel(nn.Module):
         ):
             raise ValueError("PGQENN input must have shape [nodes, input_dim]")
 
-        input_node_count = int(features.shape[0])
-        motif_capacity = input_node_count
-        bucket_sizes: tuple[int, ...] = (1,) * input_node_count
-        graph_features = features
-        reduction = "explicit_graph"
-        if graph is None:
-            motif_capacity = _mpl_tc_motif_capacity(self.growth.provider)
-            graph_features, bucket_sizes = _compress_feature_nodes(
-                features,
-                motif_capacity,
+        node_count = int(features.shape[0])
+        qenn_output = self.qenn_backbone(features, tolerance=tolerance)
+        finite_capacity = node_count
+        segmentation = "explicit_graph"
+        if graph is not None:
+            if graph.adjacency.shape[0] != node_count:
+                raise ValueError(
+                    "an explicit PGQENN graph must match the feature-node count"
+                )
+            segment_sizes = (node_count,)
+            graphs = (graph,)
+        else:
+            finite_capacity = _mpl_tc_finite_prefix_capacity(self.growth.provider)
+            segment_sizes = _finite_prefix_segment_sizes(node_count, finite_capacity)
+            segmentation = (
+                "identity_single_finite_prefix"
+                if len(segment_sizes) == 1
+                else "lossless_block_diagonal_finite_prefix_cover"
             )
-            reduction = (
-                "contiguous_mean_pool_all_rows"
-                if graph_features.shape[0] < features.shape[0]
-                else "identity"
-            )
-            graph = self.growth.build(
-                graph_features.shape[0],
-                dtype=features.dtype,
-            )
-        elif graph.adjacency.shape[0] != input_node_count:
-            raise ValueError(
-                "an explicit PGQENN graph must match the feature-node count"
-            )
+            graph_cache: dict[int, PrimeGraph] = {}
+            graph_rows: list[PrimeGraph] = []
+            for size in segment_sizes:
+                if size not in graph_cache:
+                    graph_cache[size] = self.growth.build(size, dtype=features.dtype)
+                graph_rows.append(graph_cache[size])
+            graphs = tuple(graph_rows)
 
-        qenn_output = self.qenn_backbone(graph_features, tolerance=tolerance)
-        hidden = self.message_passing(
-            qenn_output.hidden,
-            graph,
-            use_triadic_streams=self.triadic_streams_enabled,
-            use_signed_spectrum=self.signed_spectrum_enabled,
+        segment_outputs: list[dict[str, Any]] = []
+        start = 0
+        for size, segment_graph in zip(segment_sizes, graphs, strict=True):
+            stop = start + size
+            segment_outputs.append(
+                self._segment_forward(
+                    qenn_output.hidden[start:stop],
+                    qenn_output.readout[start:stop],
+                    qenn_output.dfi[start:stop],
+                    segment_graph,
+                )
+            )
+            start = stop
+        if start != node_count:
+            raise RuntimeError("PGQENN graph segments did not consume every node")
+
+        node_state = torch.cat(
+            [row["node_state"] for row in segment_outputs], dim=0
         )
-        positive_spectrum_hidden = self.message_passing(
-            qenn_output.hidden,
-            graph,
-            use_triadic_streams=self.triadic_streams_enabled,
-            use_signed_spectrum=False,
+        elastic = torch.cat([row["elastic"] for row in segment_outputs], dim=0)
+        weights = torch.tensor(
+            segment_sizes,
+            dtype=features.dtype,
+            device=features.device,
+        ) / float(node_count)
+        logits = torch.sum(
+            torch.cat([row["logits"] for row in segment_outputs], dim=0)
+            * weights.unsqueeze(-1),
+            dim=0,
+            keepdim=True,
         )
-        prime_only_hidden = self.message_passing(
-            qenn_output.hidden,
-            graph,
-            use_triadic_streams=False,
+        pdfi = torch.sum(
+            torch.stack([row["pdfi"] for row in segment_outputs]) * weights
         )
-        triadic_stream_delta = torch.linalg.vector_norm(hidden - prime_only_hidden)
-        signed_spectrum_delta = torch.linalg.vector_norm(
-            hidden - positive_spectrum_hidden
-        )
-        dfi = qenn_output.dfi
-        adjacency = graph.adjacency.to(
-            dtype=graph_features.dtype,
-            device=graph_features.device,
-        )
-        spatial_adjacency = graph.message_adjacency.to(
-            dtype=graph_features.dtype,
-            device=graph_features.device,
-        )
-        coordinates = graph.coordinates_3d.to(
-            dtype=graph_features.dtype,
-            device=graph_features.device,
-        )
-        degree_sequence = adjacency.sum(dim=-1) + 1.0
-        parity_mask = torch.tensor(
-            [
-                (index + graph.two_adic_depths[index].value) % 2
-                for index in range(len(graph.primes) - 1)
-            ],
-            dtype=graph_features.dtype,
-            device=graph_features.device,
-        )
-        pdfi = parity_conditioned_dfi(degree_sequence, parity_mask)
-        entropy = dfi.abs() + pdfi
-        elastic = self.elastic_gate(entropy)
-        gain = torch.mean(elastic / torch.pi, dim=-1, keepdim=True)
-        node_state = require_finite_tensor(
-            0.5 * (hidden * gain + qenn_output.readout),
-            "PGQENN QENN-composed gated state",
-        )
-        logits = self.readout_layer(node_state.mean(dim=0, keepdim=True))
         observation_state = self.observation_collapse(logits)
         observation = observation_state.probabilities
-        triadic = graph.triadic_growth
-        signed_triadic = graph.signed_triadic_growth
-        triadic_symmetry = (
-            torch.linalg.vector_norm(
-                triadic.spatial_adjacency - triadic.spatial_adjacency.T
-            ).to(dtype=graph_features.dtype, device=graph_features.device)
-            if triadic is not None
-            else torch.zeros(
-                (),
-                dtype=graph_features.dtype,
-                device=graph_features.device,
+
+        graph_residual_names = tuple(segment_outputs[0]["residuals"])
+        residuals = {
+            name: torch.stack(
+                [row["residuals"][name] for row in segment_outputs]
+            ).max()
+            for name in graph_residual_names
+        }
+        residuals["parseval"] = parseval_residual(node_state)
+        residuals["qenn_backbone_completeness"] = torch.stack(
+            tuple(qenn_output.residuals.values())
+        ).sum()
+        residuals.update(observation_state.residuals)
+        status = arbitrate(residuals, tolerance)
+
+        triadic_delta = torch.linalg.vector_norm(
+            torch.stack([row["triadic_delta"] for row in segment_outputs])
+        )
+        signed_delta = torch.linalg.vector_norm(
+            torch.stack([row["signed_delta"] for row in segment_outputs])
+        )
+        triadic_counts = _sum_counts(
+            tuple(
+                segment_graph.triadic_growth.stream_counts
+                if segment_graph.triadic_growth is not None
+                else {}
+                for segment_graph in graphs
             )
         )
-        residuals = {
-            "message_equivariance": self.message_passing.equivariance_residual(
-                qenn_output.hidden,
-                graph,
-                use_triadic_streams=self.triadic_streams_enabled,
-                use_signed_spectrum=self.signed_spectrum_enabled,
-            ),
-            "graph_symmetry": torch.linalg.vector_norm(adjacency - adjacency.T),
-            "self_loop": torch.linalg.vector_norm(torch.diagonal(adjacency)),
-            "growth_3d_spatial_symmetry": torch.linalg.vector_norm(
-                spatial_adjacency - spatial_adjacency.T
-            ),
-            "growth_3d_axis_rank": torch.relu(
-                torch.tensor(
-                    3.0,
-                    dtype=graph_features.dtype,
-                    device=graph_features.device,
-                )
-                - torch.linalg.matrix_rank(
-                    coordinates - coordinates.mean(dim=0, keepdim=True)
-                ).to(dtype=graph_features.dtype)
-            ),
-            "triadic_stream_adjacency_symmetry": triadic_symmetry,
-            "signed_spectrum_value_involution": torch.tensor(
-                signed_triadic.value_involution_residual
-                if signed_triadic is not None
-                else 0.0,
-                dtype=graph_features.dtype,
-                device=graph_features.device,
-            ),
-            "parseval": parseval_residual(node_state),
-            "qenn_backbone_completeness": torch.stack(
-                tuple(qenn_output.residuals.values())
-            ).sum(),
-            "mpl_tc_dependency": torch.zeros(
-                (),
-                dtype=graph_features.dtype,
-                device=graph_features.device,
-            ),
-            "mpl_tc_motif_exhaustion": torch.tensor(
-                abs(len(graph.motifs) - graph_features.shape[0]),
-                dtype=graph_features.dtype,
-                device=graph_features.device,
-            ),
-            **observation_state.residuals,
-        }
-        status = arbitrate(residuals, tolerance)
+        signed_counts = _sum_counts(
+            tuple(
+                segment_graph.signed_triadic_growth.spectrum_counts
+                if segment_graph.signed_triadic_growth is not None
+                else {}
+                for segment_graph in graphs
+            )
+        )
+        coordinate_asymmetry = max(
+            (
+                segment_graph.signed_triadic_growth.coordinate_asymmetry
+                if segment_graph.signed_triadic_growth is not None
+                else 0.0
+            )
+            for segment_graph in graphs
+        )
+        first_graph = graphs[0]
         metadata = {
             **backend_metadata(),
             "architecture": "PGQENN",
@@ -305,28 +392,34 @@ class PGQENNModel(nn.Module):
                 "observation_collapse_integration"
             ],
             "observation_collapse_integration": "canonical_runtime",
-            "growth_mode": graph.growth_mode,
-            "growth_geometry": "prime_shell_x_mpl_tc_motif_x_two_adic_run_depth",
-            "growth_axis_labels": graph.axis_labels,
-            "message_adjacency": (
-                "canonical_edges_localized_by_3d_growth_geometry"
+            "growth_mode": (
+                first_graph.growth_mode
+                if len(graphs) == 1
+                else "segmented_mpl_tc_prime_motif"
             ),
-            "input_node_count": input_node_count,
-            "graph_node_count": int(graph_features.shape[0]),
-            "mpl_tc_motif_capacity": motif_capacity,
-            "mpl_tc_capacity_reduction": reduction,
-            "mpl_tc_pool_bucket_count": len(bucket_sizes),
-            "mpl_tc_pool_bucket_min": min(bucket_sizes),
-            "mpl_tc_pool_bucket_max": max(bucket_sizes),
-            "mpl_tc_source_rows_consumed": sum(bucket_sizes),
+            "growth_geometry": "prime_shell_x_mpl_tc_motif_x_two_adic_run_depth",
+            "growth_axis_labels": first_graph.axis_labels,
+            "message_adjacency": (
+                "block_diagonal_canonical_edges_localized_by_3d_growth_geometry"
+                if len(graphs) > 1
+                else "canonical_edges_localized_by_3d_growth_geometry"
+            ),
+            "input_node_count": node_count,
+            "graph_node_count": node_count,
+            "graph_segment_count": len(segment_sizes),
+            "graph_segment_sizes": segment_sizes,
+            "mpl_tc_finite_prefix_capacity": finite_capacity,
+            "mpl_tc_node_limit": None,
+            "mpl_tc_segmentation": segmentation,
+            "mpl_tc_source_nodes_consumed": sum(segment_sizes),
+            "mpl_tc_pooling": "none",
+            "mpl_tc_unbounded_theory_claim": False,
             "triadic_stream_integration": (
                 "experimental_finite_prefix_structural_bridge"
                 if self.triadic_streams_enabled
                 else "source_removal_ablation"
             ),
-            "triadic_stream_counts": (
-                triadic.stream_counts if triadic is not None else {}
-            ),
+            "triadic_stream_counts": triadic_counts,
             "triadic_stream_types": (
                 "pure_even_lift",
                 "first_order_odd",
@@ -334,26 +427,18 @@ class PGQENNModel(nn.Module):
                 "mixed_even_composite",
             ),
             "triadic_stream_source_removal_delta": float(
-                triadic_stream_delta.detach().cpu()
+                triadic_delta.detach().cpu()
             ),
             "signed_spectrum_integration": (
                 "tne_flowpoint_involution_lift"
                 if self.signed_spectrum_enabled
                 else "positive_spectrum_ablation"
             ),
-            "signed_spectrum_counts": (
-                signed_triadic.spectrum_counts
-                if signed_triadic is not None
-                else {}
-            ),
+            "signed_spectrum_counts": signed_counts,
             "signed_spectrum_source_removal_delta": float(
-                signed_spectrum_delta.detach().cpu()
+                signed_delta.detach().cpu()
             ),
-            "signed_spectrum_coordinate_asymmetry": (
-                signed_triadic.coordinate_asymmetry
-                if signed_triadic is not None
-                else 0.0
-            ),
+            "signed_spectrum_coordinate_asymmetry": coordinate_asymmetry,
             "negative_spectrum_authority": (
                 "TNE Flowpoint neural lift; MPL-TC provenance is positive-only"
             ),
@@ -361,25 +446,28 @@ class PGQENNModel(nn.Module):
                 "TC stream kind is a structural growth axis; modality remains "
                 "the node feature field"
             ),
-            "mpl_tc_repository": graph.dependency_url,
-            "mpl_tc_commit": graph.dependency_commit,
-            "mpl_tc_module_sha256": graph.dependency_sha256,
+            "mpl_tc_repository": first_graph.dependency_url,
+            "mpl_tc_commit": first_graph.dependency_commit,
+            "mpl_tc_module_sha256": first_graph.dependency_sha256,
         }
         return PGQENNOutput(
             hidden=node_state,
             readout=logits,
             observation=observation,
-            dfi=dfi,
+            dfi=qenn_output.dfi,
             elastic_gain=elastic,
             residuals=residuals,
             closure_status=status,
             metadata=metadata,
-            graph=graph,
+            graph=first_graph,
+            graph_shards=graphs,
             pdfi=pdfi,
             node_state=node_state,
             qenn_backbone_output=qenn_output,
-            mpl_motifs=graph.motifs,
+            mpl_motifs=tuple(
+                motif for segment_graph in graphs for motif in segment_graph.motifs
+            ),
             observation_collapse_state=observation_state,
-            triadic_stream_source_removal_delta=triadic_stream_delta,
-            signed_spectrum_source_removal_delta=signed_spectrum_delta,
+            triadic_stream_source_removal_delta=triadic_delta,
+            signed_spectrum_source_removal_delta=signed_delta,
         )

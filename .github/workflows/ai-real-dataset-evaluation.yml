@@ -9,6 +9,7 @@ on:
       - "tools/download_verified_cifar_archives.py"
       - "tools/run_comprehensive_ai_evaluation.py"
       - "tools/run_real_data_ai_evaluation.py"
+      - "tools/verify_real_ai_performance.py"
       - "tests/numerical/test_comprehensive_ai_evaluation.py"
       - "tests/numerical/test_real_multimodal_data.py"
       - ".github/workflows/ai-real-dataset-evaluation.yml"
@@ -18,6 +19,7 @@ on:
       - "tools/download_verified_cifar_archives.py"
       - "tools/run_comprehensive_ai_evaluation.py"
       - "tools/run_real_data_ai_evaluation.py"
+      - "tools/verify_real_ai_performance.py"
       - "tests/numerical/test_comprehensive_ai_evaluation.py"
       - "tests/numerical/test_real_multimodal_data.py"
       - ".github/workflows/ai-real-dataset-evaluation.yml"
@@ -96,6 +98,10 @@ jobs:
           --epochs "$EPOCHS"
           --samples-per-class "$SAMPLES_PER_CLASS"
           --max-classes "$MAX_CLASSES"
+      - name: Enforce above-chance QENN, PGQENN and SOInets evidence
+        run: >-
+          python tools/verify_real_ai_performance.py
+          --root reports/artificial_intelligence_real
       - name: Package bounded real-data evidence
         run: |
           cp .ci-data/cifar_source_manifest.json reports/artificial_intelligence_real/

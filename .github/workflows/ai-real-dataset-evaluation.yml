@@ -7,14 +7,18 @@ on:
     paths:
       - "the_nothingness_effect/artificial_intelligence/multimodal/real_data.py"
       - "tools/download_verified_cifar_archives.py"
+      - "tools/run_comprehensive_ai_evaluation.py"
       - "tools/run_real_data_ai_evaluation.py"
+      - "tests/numerical/test_comprehensive_ai_evaluation.py"
       - "tests/numerical/test_real_multimodal_data.py"
       - ".github/workflows/ai-real-dataset-evaluation.yml"
   pull_request:
     paths:
       - "the_nothingness_effect/artificial_intelligence/multimodal/real_data.py"
       - "tools/download_verified_cifar_archives.py"
+      - "tools/run_comprehensive_ai_evaluation.py"
       - "tools/run_real_data_ai_evaluation.py"
+      - "tests/numerical/test_comprehensive_ai_evaluation.py"
       - "tests/numerical/test_real_multimodal_data.py"
       - ".github/workflows/ai-real-dataset-evaluation.yml"
   workflow_dispatch:
@@ -63,8 +67,11 @@ jobs:
           -r requirements-ai.txt
           "huggingface_hub>=0.30,<2"
       - run: python -m pip install -e .
-      - name: Verify CIFAR loader, deduplication and audio collector boundaries
-        run: python -m pytest -q tests/numerical/test_real_multimodal_data.py
+      - name: Verify shared readout, CIFAR loader, deduplication and audio boundaries
+        run: >-
+          python -m pytest -q
+          tests/numerical/test_comprehensive_ai_evaluation.py
+          tests/numerical/test_real_multimodal_data.py
       - name: Download byte-identical CIFAR Python archives
         run: >-
           python tools/download_verified_cifar_archives.py
